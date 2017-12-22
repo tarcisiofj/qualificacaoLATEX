@@ -1,0 +1,7 @@
+Compile o documento na seguinte ordem:
+
+  pdflatex dissertacao.tex
+  bibtex dissertacao.aux
+  makeindex dissertacao
+  latex2pdf dissertacao.tex
+  latex2pdf dissertacao.tex
