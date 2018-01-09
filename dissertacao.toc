@@ -16,6 +16,7 @@
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Trabalhos Correlatos}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Aprendizado de M\IeC {\'a}quina}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Aprendizado Supervisionado}{4}{subsection.1.2.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Materiais e M\IeC {\'e}todos}}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Considera\IeC {\c c}\IeC {\~o}es Finais}{5}{section.2.1}

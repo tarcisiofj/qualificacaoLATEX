@@ -26,7 +26,8 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
-Database file #2: bibliografia.bib
+Database file #2: mestradobib.bib
+Warning--I didn't find a database entry for "NBR6028:2003"
 Warning--I didn't find a database entry for "1"
 Warning--I didn't find a database entry for "3"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -40,43 +41,43 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 2 entries,
             6714 wiz_defined-function locations,
-            1219 strings with 9819 characters,
-and the built_in function-call counts, 1321 in all, are:
-= -- 229
-> -- 0
+            1222 strings with 9829 characters,
+and the built_in function-call counts, 1561 in all, are:
+= -- 246
+> -- 15
 < -- 0
-+ -- 46
-- -- 0
-* -- 64
-:= -- 217
-add.period$ -- 4
++ -- 51
+- -- 5
+* -- 77
+:= -- 271
+add.period$ -- 6
 call.type$ -- 2
 change.case$ -- 9
 chr.to.int$ -- 2
 cite$ -- 1
-duplicate$ -- 29
-empty$ -- 97
-format.name$ -- 0
-if$ -- 326
+duplicate$ -- 44
+empty$ -- 107
+format.name$ -- 23
+if$ -- 368
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 13
-num.names$ -- 0
-pop$ -- 40
+missing$ -- 29
+newline$ -- 14
+num.names$ -- 5
+pop$ -- 47
 preamble$ -- 1
 purify$ -- 6
 quote$ -- 0
-skip$ -- 107
+skip$ -- 113
 stack$ -- 1
 substring$ -- 66
-swap$ -- 11
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 3
+while$ -- 8
 width$ -- 0
-write$ -- 23
-(There were 2 warnings)
+write$ -- 25
+(There were 3 warnings)
