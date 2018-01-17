@@ -1,5 +1,9 @@
 \backcite {NBR6028:2003}{{1}{(document)}{Doc-Start}}
 \backcite {NBR6028:2003}{{1}{(document)}{Doc-Start}}
-\backcite {3}{{3}{1.1}{section.1.1}}
-\backcite {Mitchell1997}{{3}{1.2}{section.1.2}}
-\backcite {1}{{3}{1}{Hfootnote.1}}
+\backcite {Mitchell1997}{{3}{1.1}{section.1.1}}
+\backcite {RusselStuart.Norvig2013}{{3}{1.1}{section.1.1}}
+\backcite {Barber2011}{{4}{1.1.1}{subsection.1.1.1}}
+\backcite {RusselStuart.Norvig2013}{{4}{1.1.1}{subsection.1.1.1}}
+\backcite {Barber2011}{{5}{1.1.2}{subsection.1.1.2}}
+\backcite {Mitchell1997}{{5}{1.2}{section.1.2}}
+\backcite {Mitchell1997}{{5}{1}{Hfootnote.1}}

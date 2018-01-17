@@ -5,11 +5,24 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Barber 2011]{Barber2011}
+\abntrefinfo{Barber}{BARBER}{2011}
+{BARBER, D. \emph{{Bayesian Reasoning and Machine Learning}}. [s.n.], 2011.
+ISSN 9780521518147.
+ISBN 9780511804779. Dispon{\'\i}vel em:
+  \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
+
 \bibitem[Mitchell 1997]{Mitchell1997}
 \abntrefinfo{Mitchell}{MITCHELL}{1997}
 {MITCHELL, T.~M. \emph{{Machine learning}}. [S.l.]: McGraw-Hill
   Science/Engineering/Math, 1997. 432~p.
 ISSN 10450823.
 ISBN 9781577354260.}
+
+\bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
+\abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}
+{RUSSEL, S.; NORVIG, P. \emph{{Intelig{\^{e}}ncia Artificial}}.
+  3{\textordfeminine}. ed. Rio de Janeiro: [s.n.], 2013.
+ISBN 9780136042594.}
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  8 JAN 2018 23:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  16 JAN 2018 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1145,27 +1145,27 @@ Writing index file dissertacao.idx
 (./postextual/apendices.aux) (./postextual/anexos.aux))
 \openout1 = `dissertacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 88.
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 87.
+Package hyperref Info: Link coloring ON on input line 88.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1177,15 +1177,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 87.
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 \myptabbox=\box35
 \myptabboxwidth=\skip269
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 87.
+(lastpage)             ! on input line 88.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count187
@@ -1219,7 +1219,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 87.
+LaTeX Info: Redefining \microtypecontext on input line 88.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1265,37 +1265,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 2
 
 ])
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 102.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 103.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 102.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 103.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 102
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 103
 .
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 102
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 103
 .
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 102.
+(Font)              <12> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 102.
-LaTeX Font Info:    Try loading font information for U+msa on input line 102.
+(Font)              <6> on input line 103.
+LaTeX Font Info:    Try loading font information for U+msa on input line 103.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1303,7 +1303,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+LaTeX Font Info:    Try loading font information for U+msb on input line 103.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1311,7 +1311,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 102.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 103.
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1319,7 +1319,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 
+l.103 
        [1
 
 
@@ -1367,7 +1367,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \include{pretextual/catalografica}
+l.105 \include{pretextual/catalografica}
                                          [2
 
 ]
@@ -1434,7 +1434,7 @@ l.104 \include{pretextual/catalografica}
 
 ] (./dissertacao.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 35.
+(Font)              <14.4> on input line 38.
 ) [23] [24
 
 ]
@@ -1465,19 +1465,12 @@ l.47 \lipsum[35]
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.160 \include{capitulos/introducao}
+l.161 \include{capitulos/introducao}
                                      [2]
 \openout2 = `capitulos/referencialTeorico.aux'.
 
- (./capitulos/referencialTeorico.tex
-
-LaTeX Warning: Citation `1' on page 3 undefined on input line 7.
-
-
-LaTeX Warning: Citation `3' on page 3 undefined on input line 7.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
+ (./capitulos/referencialTeorico.texpdfTeX warning (ext4): destination with the
+ same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.18 
@@ -1485,37 +1478,71 @@ l.18
 
 
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.4}) ha
-s been already used, duplicate ignored
+]
+<figs/grafA.png, id=239, 142.28156pt x 87.32625pt>
+File: figs/grafA.png Graphic file (type png)
+<use figs/grafA.png>
+Package pdftex.def Info: figs/grafA.png  used on input line 41. on input line 4
+1.
+Package pdftex.def Info: Requested size: 113.8254pt x 69.86108pt on input line 
+41.
+
+Underfull \hbox (badness 7631) in paragraph at lines 41--41
+[][]|\T1/lmr/m/n/10 (+20) Ajuste po-li-no-mial de
+ []
+
+<figs/grafB.png, id=241, 142.28156pt x 85.06781pt>
+File: figs/grafB.png Graphic file (type png)
+<use figs/grafB.png>
+Package pdftex.def Info: figs/grafB.png  used on input line 45. on input line 4
+5.
+Package pdftex.def Info: Requested size: 113.8254pt x 68.05434pt on input line 
+45.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 \include{capitulos/referencialTeorico}
-                                             [4]
+l.56 
+      [4]pdfTeX warning (ext4): destination with the same identifier (name{page
+.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.82 \lipsum[34]
+                 [5 <./figs/grafA.png> <./figs/grafB.png>])pdfTeX warning (ext4
+): destination with the same identifier (name{page.6}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.166 \include{capitulos/referencialTeorico}
+                                             [6]
 \openout2 = `capitulos/ferramentas.aux'.
 
  (./capitulos/ferramentas.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7 \lipsum[23]
-                [5
-
-
-
-])pdfTeX warning (ext4): destination with the same identifier (name{page.6}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.167 \include{capitulos/ferramentas}
-                                      [6]
-\openout2 = `capitulos/resultados.aux'.
-
- (./capitulos/resultados.tex)pdfTeX warning (ext4): destination with the same i
 dentifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \include{capitulos/resultados}
-                                     [7
+l.7 \lipsum[23]
+                [7
+
+
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.8}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.168 \include{capitulos/ferramentas}
+                                      [8]
+\openout2 = `capitulos/resultados.aux'.
+
+ (./capitulos/resultados.tex)pdfTeX warning (ext4): destination with the same i
+dentifier (name{page.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.176 \include{capitulos/resultados}
+                                     [9
 
 
 
@@ -1523,28 +1550,28 @@ l.175 \include{capitulos/resultados}
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.texpdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.8}) has been already used, duplicate ignored
+ntifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            *{Conclusões e Trabalhos Futuros}\label{cap:conclusao} [8
+            *{Conclusões e Trabalhos Futuros}\label{cap:conclusao} [10
 
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 \lipsum[85]
-                 [9])pdfTeX warning (ext4): destination with the same identifie
-r (name{page.10}) has been already used, duplicate ignored
+                 [11])pdfTeX warning (ext4): destination with the same identifi
+er (name{page.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.176 \include{capitulos/conclusao}
-                                    [10] (./dissertacao.bbl (./dissertacao.brf)
+l.177 \include{capitulos/conclusao}
+                                    [12] (./dissertacao.bbl (./dissertacao.brf)
 \tf@brf=\write5
 \openout5 = `dissertacao.brf'.
 
@@ -1553,23 +1580,23 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-)pdfTeX warning (ext4): destination with the same identifier (name{page.11}) ha
+)pdfTeX warning (ext4): destination with the same identifier (name{page.13}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \include{postextual/apendices}
-                                     [11
+l.193 \include{postextual/apendices}
+                                     [13
 
 
 ]
 \openout2 = `postextual/apendices.aux'.
 
  (./postextual/apendices.texpdfTeX warning (ext4): destination with the same id
-entifier (name{page.12}) has been already used, duplicate ignored
+entifier (name{page.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 
-      [12
+      [14
 
 
 ]
@@ -1577,48 +1604,48 @@ l.12
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 12.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 
-      [13
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.14}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 
-      [14]pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 \chapter
-             {Perceba que o texto do título desse segundo apêndice é bem ...
-[15
+      [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.16}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.12 
+      [16]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.20 \chapter
              {Perceba que o texto do título desse segundo apêndice é bem ...
-[16
+[17
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.17}) h
+]pdfTeX warning (ext4): destination with the same identifier (name{page.18}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \chapter
+             {Perceba que o texto do título desse segundo apêndice é bem ...
+[18
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.19}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \include{postextual/apendices}
-                                     [17]
+l.193 \include{postextual/apendices}
+                                     [19]
 \openout2 = `postextual/anexos.aux'.
 
  (./postextual/anexos.texpdfTeX warning (ext4): destination with the same ident
-ifier (name{page.18}) has been already used, duplicate ignored
+ifier (name{page.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 
-      [18
+      [20
 
 
 
@@ -1627,38 +1654,33 @@ l.12
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 12.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.12 
-      [19
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.20}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 
-      [20]pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.19 \chapter
-             {Nome de Outro Anexo} [21
+      [21
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.22}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 \chapter
-             {Nome de Outro Anexo} [22
-
-])pdfTeX warning (ext4): destination with the same identifier (name{page.23}) h
-as been already used, duplicate ignored
+l.12 
+      [22]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.195 \include{postextual/anexos}
-                                  [23] 
+l.19 \chapter
+             {Nome de Outro Anexo} [23
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.24}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.19 \chapter
+             {Nome de Outro Anexo} [24
+
+]) [25] 
 AED: lastpage setting LastPage
 \tf@lof=\write6
 \openout6 = `dissertacao.lof'.
@@ -1669,8 +1691,8 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `dissertacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
 (./dissertacao.aux (./pretextual/capa.aux) (./pretextual/catalografica.aux)
 (./pretextual/assinaturas.aux) (./pretextual/dedicatoria.aux)
 (./pretextual/agradecimentos.aux) (./pretextual/epigrafe.aux)
@@ -1678,10 +1700,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
 (./capitulos/referencialTeorico.aux) (./capitulos/ferramentas.aux)
 (./capitulos/resultados.aux) (./capitulos/conclusao.aux)
 (./postextual/apendices.aux) (./postextual/anexos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
 Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: CD08544C90BF26C9E0A8E53F44E0A8AF;226.
+(rerunfilecheck)             Checksum: D56C1B83DAA4D38AEC25597FCBC1DA81;479.
 
 
 LaTeX Warning: There were undefined references.
@@ -1689,32 +1711,33 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 15482 strings out of 492985
- 230569 string characters out of 6138585
- 496858 words of memory out of 5000000
- 18485 multiletter control sequences out of 15000+600000
- 94448 words of font info for 134 fonts, out of 8000000 for 9000
+ 15547 strings out of 492985
+ 231816 string characters out of 6138585
+ 497964 words of memory out of 5000000
+ 18528 multiletter control sequences out of 15000+600000
+ 94607 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,42p,839b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,12n,51p,850b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
-nts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-d
-ist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/
-lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type
-1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></u
-sr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts
-/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12
-.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf-
-dist/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf-dist/fonts/type1/public
-/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on dissertacao.pdf (49 pages, 1288146 bytes).
+nts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.
+enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/
+lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1
+/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></us
+r/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/
+type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.
+pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf-dist/fonts/type1/public/
+lm/lmss17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on dissertacao.pdf (51 pages, 1318848 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 29974 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 31544 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -14,43 +14,46 @@
 \contentsline {section}{Objetivos}{2}{section*.20}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Trabalhos Correlatos}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Aprendizado de M\IeC {\'a}quina}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Aprendizado Supervisionado}{4}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.1}Aprendizado de M\IeC {\'a}quina}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Aprendizado Supervisionado}{4}{subsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1.1}Classificatio and Regression Trees - CART}{5}{subsubsection.1.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1.2}Naive Bayes}{5}{subsubsection.1.1.1.2}
+\contentsline {subsection}{\numberline {1.1.2}Aprendizado N\IeC {\~a}o Supervisionado}{5}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Trabalhos Correlatos}{5}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Materiais e M\IeC {\'e}todos}}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Considera\IeC {\c c}\IeC {\~o}es Finais}{5}{section.2.1}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Materiais e M\IeC {\'e}todos}}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Considera\IeC {\c c}\IeC {\~o}es Finais}{7}{section.2.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados e Discuss\IeC {\~a}o}}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Base de Dados}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{7}{section.3.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados e Discuss\IeC {\~a}o}}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Base de Dados}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{9}{section.3.2}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{9}{chapter*.21}
+\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{11}{chapter*.22}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{11}{section*.26}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{13}{section*.27}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{13}{section*.27}
+\contentsline {part}{\uppercase {Ap\^endices}}{15}{section*.28}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{15}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{17}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{17}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{19}{appendix.B}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{19}{section*.28}
+\contentsline {part}{\uppercase {Anexos}}{21}{section*.29}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Nome do Primeiro Anexo}}{21}{appendix.anexochapback.1}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Nome do Primeiro Anexo}}{23}{appendix.anexochapback.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Nome de Outro Anexo}}{23}{appendix.anexochapback.2}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Nome de Outro Anexo}}{25}{appendix.anexochapback.2}

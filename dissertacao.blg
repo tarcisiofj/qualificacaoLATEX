@@ -28,8 +28,6 @@ Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: mestradobib.bib
 Warning--I didn't find a database entry for "NBR6028:2003"
-Warning--I didn't find a database entry for "1"
-Warning--I didn't find a database entry for "3"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -39,45 +37,45 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 2 entries,
+You've used 4 entries,
             6714 wiz_defined-function locations,
-            1222 strings with 9829 characters,
-and the built_in function-call counts, 1561 in all, are:
-= -- 246
-> -- 15
-< -- 0
-+ -- 51
-- -- 5
-* -- 77
-:= -- 271
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 1
-duplicate$ -- 44
-empty$ -- 107
-format.name$ -- 23
-if$ -- 368
+            1239 strings with 10165 characters,
+and the built_in function-call counts, 4068 in all, are:
+= -- 529
+> -- 63
+< -- 53
++ -- 120
+- -- 20
+* -- 229
+:= -- 585
+add.period$ -- 17
+call.type$ -- 4
+change.case$ -- 26
+chr.to.int$ -- 7
+cite$ -- 3
+duplicate$ -- 281
+empty$ -- 238
+format.name$ -- 93
+if$ -- 896
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 14
-num.names$ -- 5
-pop$ -- 47
+missing$ -- 69
+newline$ -- 25
+num.names$ -- 15
+pop$ -- 98
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 13
 quote$ -- 0
-skip$ -- 113
+skip$ -- 342
 stack$ -- 1
-substring$ -- 66
-swap$ -- 19
-text.length$ -- 0
+substring$ -- 153
+swap$ -- 107
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 8
+while$ -- 21
 width$ -- 0
-write$ -- 25
-(There were 3 warnings)
+write$ -- 58
+(There was 1 warning)
