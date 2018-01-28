@@ -1,21 +1,22 @@
 \chapter{Metodologia / Materiais e Métodos}\label{cap:ferramentas}
-Esse capítulo abordará em uma sessão o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução. O objetivo ao final deste capítulo é poder resolucionar o problema exibindo seus passos e atribuindo a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
+Esse capítulo abordará em uma sessão o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução. O objetivo ao final deste capítulo é poder resolucionar o problema, exibindo seus passos, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
 
 \section{Considerações do Problema}
 
-A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \cite{Lopes}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, sessão \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, onde os grupos são criados a partir dos graus similaridade entre os elementos.
+A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \cite{Lopes}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, sessão \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, onde clusters são criados a partir dos graus similaridade entre os elementos.
 
-Muitas pesquisas realizadas na área de rotulação fazem referencia, de fato, a classificação do dados, e não da rotulação nos termos desse trabalho. Ao agrupar um conjunto de elementos por um derterminado critério, esta havendo uma classificação desses elementos escolhidos, mas pouco se sabe, qual é a compreensão desses grupos, já classificados. 
+Muitas pesquisas realizadas na área de rotulação fazem referencia, de fato, a classificação do dados, e não da rotulação, nos termos desse trabalho. Ao agrupar um conjunto de elementos por um derterminado critério, esta havendo uma classificação desses elementos escolhidos, mas pouco se sabe, qual é a compreensão desses grupos, já classificados. 
 
-Tem-se então o real problema de rotulação, contudo seria necessário ter um rótulo definido para os grupos classificados para melhor compreender o porquê daquele grupo formado. Esse rótulo seria apresentação dos atributo(s) de maior relevância junto com a faixa, onde estaria nessa faixa, seus valores mais frequentes.
+Existe uma importância na criação dos clusters, contudo para o espectador é interessante existir um rótulo, desse grupo formado, oferecendo elementos em alguma tomada de decisão em razão de seu significado(rótulo).
+
+Tem-se então o real problema de rotulação, contudo é necessário existir algum elemento definindo o porquê daquele grupo formado. O elemento é um rótulo composto por um, ou vários, atributo(s) de maior relevância no cluster, junto com uma faixa de valores. Essa faixa é um intervalo de valores definido pela discretização \ref{}, onde o intervalo escolhido, seria a faixa que apresenta os valores que se repetem com a maior frequência.
 
 O Problema de Rotulação é formalmente definido como segue abaixo:
-
-%\afterpage{
-    \begin{quotation}
-
-        \textit{ Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$.
-        }\footnotemark 
+\newtheorem{defprob}{Definição}
+    \begin{defprob}
+    Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$.
+        \footnotemark 
+        \footnotetext{Adaptada de \cite{Lopes}}
         \begin{itemize}[noitemsep]
             \item ${K}$ é o número de clusters;
             \item ${c_i}$ é o i-ésimo cluster qualquer;
@@ -23,13 +24,128 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
             \item ${\vec{e}_{n^{(c_i)}}}$ se refere ao j-ésimo elemento pertencente ao cluster ${c_i}$;
             \item ${m}$ é a dimensão do problema;
         \end{itemize}
-    \footnotetext{Extraída de \cite{Lopes}}
-    \end{quotation}
+    \label{teo:problema}
+    \end{defprob}
+
+%\afterpage{
+%    \begin{quotation}
+
+%        \textit{ Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$.
+%        }\footnotemark 
+
+%        \footnotetext{Extraída de \cite{Lopes}}
+%        \begin{itemize}[noitemsep]
+%            \item ${K}$ é o número de clusters;
+%            \item ${c_i}$ é o i-ésimo cluster qualquer;
+%            \item ${n^{c_i}}$ é o número de elementos do cluster ${c_i}$;
+%            \item ${\vec{e}_{n^{(c_i)}}}$ se refere ao j-ésimo elemento pertencente ao cluster ${c_i}$;
+%            \item ${m}$ é a dimensão do problema;
+%        \end{itemize}
+%    \end{quotation}
     %\footnotetext{Extraída de \cite{Lopes}}
 %}
 
+\section{O Modelo de Resolução}
 
-O estudo deste trabalho aproveita a perspectiva desse problema e cria um rótulo formado por seus atributos de mais relevância junto com os valores mais frequentes dess atribudo.
+Uma vez já conhecido a definição do problema - \textit{Definição ~\ref{teo:problema}} - é possível situar a abrangência abordada aqui nessa pesquisa, pois a intenção do estudo científico desenvolvido aqui é provar a realização de \textbf{rotulação de dados com qualquer algoritmo supervisionado}, utilizando as técnicas abordadas neste texto.
 
-Como apresentado na sessão \ref{sec:trabcorrel}, o autor foca em rotulação automática de grupos utilizando aprendizagem de máquina supervisionada
+O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivo intevalor, gerado a partir da frequência de valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
+    \begin{defprob}
+    Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$.
+        \footnotemark 
+        \footnotetext{Adaptada de \cite{Lopes}}
+        \begin{itemize}[noitemsep]
+            \item ${k}$ número de rótulos;
+            \item ${R}$ representa o conjunto de rótulos na saída do modelo;
+            \item ${a}$ é o atributo
+            \item ${c_i}$ é o i-ésimo cluster;
+            \item ${r_{c_i}}$ é o rótulo referente ao cluster ${c_i}$;
+            \item ${]p_{m^{(c_i)}},q_{m^{(c_i)}}]}$ representa o intervalo de valores do atributo ${a_{m^{(c_i)}} }$, onde ${ p_{m^{(c_i)}} }$  é o limite inferior e ${ q_{m^{(c_i)}} }$ é o limite superior;
+            \item ${m}$ é a dimensão do problema;
+        \end{itemize}
+    \label{teo:resolucao}
+    \end{defprob}
 
+Como apresentado na sessão \ref{sec:trabcorrel}, o autor foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada, e paradigma conexionista, para provar seu trabalho. Mas aqui nessa pesquisa foi aplicado no modelo um acréscimo de ${2 (dois)}$ algoritmos com paradigmas de aprendizado diferentes do que já foi utilizado, compondo uma base para afirmar, que a partir dessas amostras pode-se fazer rotulação com qualquer algoritmo supervisionada.
+
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.7]{figs/modeloResolucao.png}
+        \caption{Modelo de Resolução Proposto} \label{fig:modeloresolucao}
+\end{figure}
+
+O modelo, figura \ref{fig:modeloresolucao}, inicialmente mostra a Base de Dados  já classificada, pois o cerne desta pesquisa é conceder ao grupo um significado,a rotulação,  através da técnica de correlação entre atributos. Essa base poderá conter  valores contínuos ou discretos, contudo, conforme modelo será necessário aplicar o método de discretização (I).
+
+Uma vez com a base discretizada ocorre somente a separação dos clusters já classificados de acordo com a própria base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/ }. Isso é o funcionamento do fluxo (1), que nada mais é do que a separação da base em grupos que já classificados.
+
+No passo (II) é onde será executado o algoritmo de aprendizado de supervisionado, já visto nas sessões ~\ref{sssec:cart} e ~\ref{sssec:nbayes}. Nessa etapa ocorre umas das etapas mais importantes do método. O algoritmo supervisionado é aplicado várias vezes de acordo com o número de atributos do conjunto de dados. Onde o número de vezes será a quantidade de atributos da tabela, formando um conjunto de atributos importantes para cada grupo.
+
+Seguindo para o processo (III) acontecerá a escolha do atributo mais relevante com seu valor mais frequente gerando rótulos para os grupos.
+
+\begin{table}[!ht]
+\centering
+\caption{Base de Dados Modelo}
+\label{tab:bdm}
+\begin{tabular}{|lllll|}
+\hline 
+  & atr1 & atr2 & atr3 & classe \\ \hline
+1 & 2.08 & 92.11 & 22.07 & 2 \\ \hline
+2 & 1.26 & 85.03 & 20.45 & 1 \\ \hline
+3 & 2.00 & 108.36 & 22.68 & 2 \\ \hline
+4 & 1.74 & 43.78 & 18.72 & 3 \\ \hline
+5 & 1.82 & 100.20 & 23.09 & 2 \\ \hline
+6 & 1.43 & 77.59 & 21.80 & 1 \\ \hline
+7 & 1.53 & 44.01 & 20.98 & 3 \\ \hline
+8 & 1.14 & 107.77 & 18.99 & 2 \\ \hline
+9 & 1.97 & 98.00 & 22.32 & 2 \\ \hline
+10 & 1.50 & 39.67 & 21.78 & 3 \\ \hline
+11 & 1.74 & 55.86 & 20.31 & 3 \\ \hline
+12 & 1.80 & 65.72 & 19.62 & 1 \\ \hline
+13 & 1.33 & 82.01 & 19.82 & 1 \\ \hline
+14 & 1.66 & 103.93 & 21.10 & 2 \\ \hline
+15 & 1.42 & 66.14 & 21.61 & 1 \\ \hline
+16 & 1.87 & 88.36 & 22.45 & 2 \\ \hline
+17 & 1.11 & 107.82 & 19.32 & 2 \\ \hline
+18 & 2.08 & 67.66 & 20.74 & 1 \\ \hline
+19 & 1.85 & 82.65 & 20.35 & 1 \\ \hline
+20 & 1.04 & 102.62 & 19.46 & 2 \\ \hline
+21 & 1.97 & 100.37 & 21.94 & 2 \\ \hline
+22 & 1.95 & 45.70 & 22.10 & 3 \\ \hline
+23 & 1.77 & 50.04 & 20.16 & 3 \\ \hline
+24 & 1.97 & 81.57 & 19.83 & 1 \\ \hline
+25 & 1.52 & 93.13 & 20.61 & 2 \\ \hline
+  \end{tabular}
+  \begin{tabular}{ |lllll| }
+   
+\hline
+  & atr1 & atr2 & atr3 & classe \\ \hline
+26 & 1.42 & 53.51 & 19.64 & 3 \\ \hline
+27 & 1.12 & 62.71 & 19.07 & 1 \\ \hline
+28 & 2.09 & 60.58 & 20.20 & 1 \\ \hline
+29 & 1.95 & 69.23 & 19.68 & 1 \\ \hline
+30 & 1.03 & 47.81 & 19.47 & 3 \\ \hline
+31 & 1.75 & 90.92 & 21.39 & 2 \\ \hline
+32 & 1.72 & 42.35 & 22.89 & 3 \\ \hline
+33 & 1.47 & 101.77 & 19.20 & 2 \\ \hline
+34 & 1.53 & 41.16 & 22.67 & 3 \\ \hline
+35 & 1.44 & 93.61 & 21.03 & 2 \\ \hline
+36 & 1.51 & 98.65 & 19.24 & 2 \\ \hline
+37 & 1.06 & 68.82 & 21.68 & 1 \\ \hline
+38 & 1.48 & 80.40 & 21.43 & 1 \\ \hline
+39 & 1.14 & 61.59 & 19.90 & 1 \\ \hline
+40 & 1.08 & 91.93 & 20.81 & 2 \\ \hline
+41 & 1.62 & 79.21 & 18.43 & 1 \\ \hline
+42 & 1.68 & 80.87 & 18.42 & 1 \\ \hline
+43 & 1.81 & 98.24 & 22.13 & 2 \\ \hline
+44 & 1.30 & 69.27 & 18.83 & 1 \\ \hline
+45 & 1.80 & 101.21 & 21.61 & 2 \\ \hline
+46 & 1.79 & 72.02 & 22.02 & 1 \\ \hline
+47 & 1.56 & 81.71 & 22.10 & 1 \\ \hline
+48 & 1.98 & 77.16 & 21.71 & 1 \\ \hline
+49 & 1.86 & 89.12 & 22.84 & 2 \\ \hline
+50 & 1.55 & 76.01 & 19.74 & 1 \\ \hline
+\end{tabular}
+\end{table}
+
+Para melhor esclarecer as etapas, a tabela ~\ref{tab:bdm} contém uma base de dados que será utilizada para exemplificar todo o processo do modelo de resolução proposto nesta pesquisa. Logo na primeira coluna retém um índice da linha da tabela responsável por identificar cada registro da tabela. 
