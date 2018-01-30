@@ -27,37 +27,42 @@
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Metodologia / Materiais e M\IeC {\'e}todos}}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Considera\IeC {\c c}\IeC {\~o}es do Problema}{13}{section.2.1}
 \contentsline {section}{\numberline {2.2}O Modelo de Resolu\IeC {\c c}\IeC {\~a}o}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos }{15}{section.2.3}
+\contentsline {section}{\numberline {2.4}Exemplo com Base Modelo}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{16}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Processo (II) - Algoritmos Supervisionados}{18}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{20}{subsection.2.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados e Discuss\IeC {\~a}o}}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Base de Dados}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{17}{section.3.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados e Discuss\IeC {\~a}o}}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Base de Dados}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{23}{section.3.2}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{19}{chapter*.30}
+\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{25}{chapter*.36}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{21}{section*.35}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{27}{section*.41}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{23}{section*.36}
+\contentsline {part}{\uppercase {Ap\^endices}}{29}{section*.42}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{25}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{31}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{27}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{33}{appendix.B}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{29}{section*.37}
+\contentsline {part}{\uppercase {Anexos}}{35}{section*.43}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Nome do Primeiro Anexo}}{31}{appendix.anexochapback.1}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Nome do Primeiro Anexo}}{37}{appendix.anexochapback.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Nome de Outro Anexo}}{33}{appendix.anexochapback.2}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Nome de Outro Anexo}}{39}{appendix.anexochapback.2}
