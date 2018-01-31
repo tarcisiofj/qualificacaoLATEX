@@ -35,7 +35,9 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados}}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Implementa\IeC {\c c}\IeC {\~a}o}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{23}{section.3.2}
+\contentsline {section}{\numberline {3.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{23}{section.3.2}
+\contentsline {section}{\numberline {3.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{23}{section.3.3}
+\contentsline {section}{\numberline {3.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidro}{23}{section.3.4}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{25}{chapter*.36}
 \vspace {\cftbeforechapterskip }
