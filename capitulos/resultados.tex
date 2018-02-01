@@ -8,9 +8,143 @@ Então  a escolha da base de dados também tem influência direta em bons result
 
 Para conseguir gerar os resultados aqui escritos foram feitas implementações utilizando a ferramenta MATLAB \footnote{http://www.mathworks.com/products/matlab/}, onde junto  a ela é possível utilizar suas funções de aprendizado de máquina já prontas. MATLAB possui uma linguagem técnica, e de fácil implementação por já possuir uma gama de funções\footnote{versão: R2016a(9.0.0.341360); 64-bit (glnxa64)} preparadas para aprendizado de máquina. Por esses motivos essa ferramenta foi escolhida para colocar em prática essa pesquisa.
 
-Foram realizados vários testes com o intuito de tentar otimizar resultados e poder comparálos a outras pesquisas já escritas. Seguindo essa linha foi determinado a escolha de ${3(três)}$ bases de dados já conhecidas, onde na implementação de cada uma delas surgiu algumas alterações, dependendo da base, na variável(V), quantidade de faixas(R) e método de discretização. 
+Foram realizados vários testes com o intuito de tentar otimizar resultados e poder comparálos a outras pesquisas já escritas. Seguindo essa linha foi determinado a escolha de ${3(três)}$ bases de dados já conhecidas, onde na implementação de cada uma delas surgiu algumas alterações, dependendo da base, na variável(V), quantidade de faixas(R) e método de discretização. Essas mudanças para cada base serviram para otimizar os resultados. 
+
+Cada base de dados será aplicado dois algoritmos de aprendizado supervisionado que possuem paradigmas diferentes para servir de amostra e poder assim tirar conclusões sobre a rotulação em quaisquer algoritmos supervisionados.  
+
+Os algoritmos utilizados foram o Naive Bayes, sessão \ref{sssec:nbayes}, com paradigma estatístico. E também o algoritmo Classification e Regression Trees - CART, \ref{sssec:cart}, com paradigma simbólico de  árvore de decisão.
 
 \section{Seeds - Identificação de Tipos de Semente}
+Essa base de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} é composta por ${7(sete)}$ atributos definindo as características e mais ${1(um)}$ totalizando ${8(oito)}$ atributos, sendo este último um atributo classe, responsável por identificar o tipo de semente. E ainda possui um total de 210 registros classificados em ${3(três)}$ categorias:
+\begin{itemize}[noitemsep]
+ \item 70 elementos do tipo Kama;
+ \item 70 elementos do tipo Rosa;
+ \item 70 elementos do tipo Canadian.
+\end{itemize}
+Na configuração de implementação foi utilizado o método EFD de discretização com divisão em três faixas, ${R=3}$ para todos os atributos, e inserido o valor de variação ${V=3\%}$.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclss[xcolor=table]{beamer}
+\begin{table}[!h]
+\centering
+\caption{Resultado da aplicação do algoritmo Naive Bayes}
+\label{tab:rot:seeds:nb}
+\begin{tabular}{llrl}
+\hline \hline
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} \\ \hline \hline
+1                                            & area           & ] 12.78 $\sim$  16.14 ]           &    92\%                         \\  \hline
+                                             & area           & ] 16.14 $\sim$  21.18 ]           &    95\%                       \\ 
+\multirow{-2}{*}{2}                          & lkernel        & ] 5.826 $\sim$  6.675 ]           &    92\%                      \\  \hline
+3                                            & perimetro      & [ 12.41 $\sim$  13.73 ]           &    95\%                       \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Na tabela \ref{tab:rot:seeds:nb} é apresentado os resultados com a execução do algoritmo Naive Bayes. Ela é formada por uma coluna informando os Clusters, os Rótulos sugeridos compostos pelo Atributo e sua Faixa de valor, e também da coluna Relevância. Essa última coluna exibe a resposta do algoritmo em porcentagem, da correlação do atributo em relação aos outros atributos do cluster.
+
+A seleção dos atributos rótulos acontece em relação a variável ${V=3\%}$ variando do atributo de maior relevência. Caso essa variável sofra algum tipo de alteração, os rótulos dos clusters poderão sofrer alterações, pois poderá aumentar  ou diminuir o número de atributos, dependendo do valor inserido em ${V}$. Atravé da tabela XXX é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
+
+TABELA VET ACERTOS
+
+A tabela \ref{} é formada pelos clusters representado pela as linhas. E as colunas representam os atributos. Essa tabela é fruto do resultado da execução do Naive Bayes em cima dessa base de dados. Pode-se fazer uma análise e notar que algumas características são mais bem correlacionadas que  outras através de seus valores mais altos. 
+
+
+\begin{table}[!h]
+%\centering
+\caption{Legenda da Tabela}
+ 
+ 
+ \subfloat[Tabela da Esquerda]{
+
+   %\centering
+   \scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-4pt}
+     \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+        \hline
+        \cellcolor[HTML]{FFFFFF}                         &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+        \multicolumn{1}{|l}{}                            &   & area    & perimetro & compacteness & Lkernel & wkernel & asymetry & lkgroove \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 92.8571 & 87.1429   & 50.0000      & 75.7143 & 85.7143 & 60.000   & 657143   \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{}                           & 2 & 95.7143 & 91.4286   & 47.1429      & 92.8571 & 90.0000 & 28.5714  & 85.7143  \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4286 & 95.7143   & 71.4286      & 85.7143 & 91.4286 & 64.2857  & 58.5714  \\ \hline
+      \end{tabular}
+    }
+  
+ }
+% \hspace{3cm} %altera o espaçamento entre as tabelas
+ 
+ \subfloat[Tabela da Direita]{
+
+  %\centering
+ \scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-4pt}
+   \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+    \hline
+    \cellcolor[HTML]{FFFFFF}                         &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+    \multicolumn{1}{|l}{}                            &   & area    & perimetro & compacteness & Lkernel & wkernel & asymetry & lkgroove \\ \hline
+    \multicolumn{1}{|c|}{}                           & 1 & 92.8571 & 87.1429   & 50.0000      & 75.7143 & 85.7143 & 60.000   & 657143   \\ \cline{2-9} 
+    \multicolumn{1}{|c|}{}                           & 2 & 95.7143 & 91.4286   & 47.1429      & 92.8571 & 90.0000 & 28.5714  & 85.7143  \\ \cline{2-9} 
+    \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4286 & 95.7143   & 71.4286      & 85.7143 & 91.4286 & 64.2857  & 58.5714  \\ \hline
+   \end{tabular}
+  }
+    
+ }  
+ 
+\end{table}
+
+\begin{table}[t]
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \begin{tabular}{r | c c c}
+                $+$
+                  & 1 & 2 & 3 \\\hline
+                1 & 2 & 3 & 4 \\
+                2 & 3 & 4 & 5 \\
+                3 & 4 & 5 & 6
+            \end{tabular}
+            \caption{Addition}
+        \end{minipage}
+        \hfillx
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \begin{tabular}{r | c c c}
+                $\times$
+                  & 1 & 2 & 3 \\\hline
+                1 & 1 & 2 & 3 \\
+                2 & 2 & 4 & 6 \\
+                3 & 3 & 6 & 9
+            \end{tabular}
+            \caption{Multiplication}
+        \end{minipage}
+\end{table}
+
+Mesmo fazendo várias execuções do algoritmo é possível verificar que mesmo havendo  valores diferentes em algumas tabelas, a correlaçao dos atributos continua a mesma.
+
+explicar resultao, faixa e exibir rotulo
+
+
+
+
+
+
+\begin{table}[!h]
+\centering
+\caption{Resultado da aplicação do algoritmo CART}
+\label{tab:rot:seeds:cart}
+\begin{tabular}{llrl}
+\hline \hline
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} \\ \hline\hline
+                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          \\  
+\multirow{-2}{*}{1}                          & perimetro      & [ 13.73 $\sim$ 15.18 ]          & 94\%          \\ \hline
+                                             & area           & ] 16.14 $\sim$  21.18 ]          & 95\%          \\ 
+\multirow{-2}{*}{2}                          & perimetro      & ] 15.18 $\sim$  17.25 ]          & 98\%          \\  \hline
+                                             & perimetro      & [ 12.41 $\sim$  13.73 ]         & 95\%          \\
+\multirow{-2}{*}{3}                          & wkernel        & [ 12.63 $\sim$  3.049 ]         & 97\%          \\ \hline \hline
+\end{tabular}
+\end{table}
 
 \section{Iris - Identificação de Tipos de Plantas}
 
