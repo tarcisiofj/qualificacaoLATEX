@@ -23,9 +23,9 @@ Essa base foi extraída da UCI Machine Learning\footnote{http://archive.ics.uci.
 \end{itemize}
 Na configuração de implementação foi utilizado o método EFD de discretização com divisão em três faixas, ${R=3}$ para todos os atributos, e inserido o valor de variação ${V=3\%}$.
 
-Na tabela \ref{tab:rot:seeds:nb} e tabela \ref{tab:rot:seeds:cart} são  apresentados os resultados com a execução do algoritmo Naive Bayes e CART respectivamente. Elas são formadas por uma coluna informando os \textbf{Clusters}, \textbf{Rótulos}  compostos pelo \textbf{Atributo} e sua \textbf{Faixa} de valor. Junto também a coluna \textbf{Relevância} exibindo a resposta do algoritmo em porcentagem, da correlação do atributo em relação aos outros atributos do cluster, retirado da tabela \ref{tab:matrelevancia:seeds:nb} e da tabela \ref{tab:matrelevancia:seeds:cart} respectivamente. E por último a coluna \textbf{Elem Fora da Faixa} que mostra a quantidade de elementos que não estão dentro da faixa do rótulo.
+Na tabela \ref{tab:rot:seeds:nb} e tabela \ref{tab:rot:seeds:cart} são  apresentados os resultados com a execução do algoritmo Naive Bayes e CART respectivamente. Elas são formadas por uma coluna informando os \textbf{Clusters}, \textbf{Rótulos}  compostos pelo \textbf{Atributo} e sua \textbf{Faixa} de valor. Junto também a coluna \textbf{Relevância} exibindo a resposta do algoritmo em porcentagem, da correlação do atributo em relação aos outros atributos do cluster, retirado da tabela \ref{tab:matrelevancia:seeds:nb} e da tabela \ref{tab:matrelevancia:seeds:cart} respectivamente. E por último a coluna \textbf{Elem Fora da Faixa} que mostra a quantidade de elementos que não estão dentro da faixa do rótulo. Essa última coluna tem a função de exibir em números a quantidade de valores que não estão participando da porcentagem da coluna de \textbf{Relevância}. Para quem está analisando a tabela é interessante mais essa dado, pois pode compara com o total de elementos do grupo.
 
-\subsection{Naive Bayes}
+\subsection{Naive Bayes} \label{ssec:nb}
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage[table,xcdraw]{xcolor}
@@ -47,7 +47,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 
 
-Analisando a coluna rótulo da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  cluster 1 como também no cluster 2. A técnica envolve não só o rótulo como também a faixa que os valores mais se repetem dentro do atributo. Nesse caso pode-se observar que mesmo o atributo se repetindo entre os clusters. No cluster 2, a faixa de valores são direfentes, sem comentar que também nesse cluster existe outro atributo rótulo, \textbf{lkernel}.
+Analisando a coluna rótulo da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  cluster 1 como também no cluster 2. A técnica envolve não só o rótulo como também a faixa que os valores mais se repetem dentro do atributo. Nesse caso pode-se observar que o atributo se repete entre os clusters. Mas no cluster 1, a faixa de valores difere do cluster 2, sem comentar que no cluster 2 existe outro atributo compondo o rótulo, \textbf{lkernel}.
 
 A seleção dos atributos rótulos acontece da diferença da variável ${V=3\%}$ em relação ao atributo de maior relevência. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderá aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
 
@@ -136,9 +136,17 @@ A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado p
 
 Para conseguir ter uma idéia mais ampla dessas informações, na tabela \ref{tab:execucoes:seed:nb} é exposto o resultado de ${4(quatro)}$ execuções do Algoritmo Naive Bayes, e pode-se constatar que mesmo havendo algumas alterações em seus valores nos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area}, possui o melhor grau de correlacionamento em seu grupo, mesmo testado em quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
 
+Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds} com seus rótulos: 
+\begin{itemize}[noitemsep]
+ \item ${r_{c_1}=\{ (area, ]12.78 ~ 16.14]) \} }$  
+ \item ${r_{c_2}=\{ (area, ]16.14 ~ 21.18]), (Lkernel, ]5.826 ~ 6.675]) \} }$
+ \item ${r_{c_3}=\{ (perimetro, [12.41 ~ 13.73])\} }$
+\end{itemize}
+
+
 \subsection{CART}
 
-Já na tabela \ref{tab:rot:seeds:cart}, tem-se o resultado da aplicação de outro algoritmo supervisionado, mas dessa vez com paradigma simbólico. No MATLAB o algoritmo de árvore de decisão utilizado é o CART. 
+Já na tabela \ref{tab:rot:seeds:cart}, tem-se o resultado da aplicação de outro algoritmo supervisionado, mas dessa vez com paradigma simbólico e não mais no estatístico. No MATLAB o algoritmo de árvore de decisão utilizado é o CART. 
 
 \begin{table}[!h]
 \centering
@@ -157,12 +165,9 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{tabular}
 \end{table}
 
-Pode-se verificar na tabela \ref{tab:rot:seeds:cart} e tabela \ref{tab:rot:seeds:cart} que os clusters 1 e 2 possuem o mesmo conjunto de atributos selecionados no campo de rótulo. Mas isso não implica dizer que os dois grupos são identificados pelo mesmo rótulo. O rótulo é composto pelos atributos e pelas faixas, onde a faixa é escolhida pelo maior número de valores que se repetem. 
+Pode-se verificar na tabela \ref{tab:rot:seeds:cart} que os clusters 1 e 2 possuem o mesmo conjunto de atributos selecionados no campo de rótulo. Mas isso não implica dizer que os dois grupos são identificados pelo mesmo rótulo. O rótulo é composto pelos atributos e pelas faixas, onde a faixa é escolhida é a faixa onde se tem o maior número de valores que se repetem nessa faixa. Então, caso exista um vetor de elementos já discretizados, ${\vec{e}_{(c_i)}=\{1,1,1,2,2,2,2,3,3\}}$. Neste vetor o valor que mais se repete é o ${2}$ , então a faixa ${2}$ foi a que mais se repetiu e com isso é a escolhida para compor o rótulo com o atributo mais relevante.
 
-Para entender a escolha desses atributos no campo de rótulos, a tabela \ref{tab:matrelevancia:seeds:cart} exibe o resultado gerado na execução do algoritmo em cima da base. Cada valor desses é o resultado da aplicação do algoritmo enquanto o atributo era a classe da vez coforme figura \ref{fig:tecnicamodelocomp}. O atributo de maior valor junto com os atributos com diferença de ${V}$, são escolhidos para ser rótulos. Na linha(cluster) 1 o maior valor é o perimetro, e fazendo a diferença de ${V=3}$ o atributo area entra também como rótulo.
-
-
-
+Para entender a escolha desses atributos no campo de rótulos, a tabela \ref{tab:matrelevancia:seeds:cart} exibe o resultado gerado na execução do algoritmo em cima da base. Cada valor desses é o resultado da aplicação do algoritmo enquanto o atributo era a classe da vez coforme figura ~\ref{fig:tecnicamodelocomp}, sessão \ref{ssec:algsuper}. O atributo de maior valor junto com os atributos da diferença de ${V}$ com o mais relevante, são escolhidos para ser rótulos. Na linha(cluster) 1 o maior valor é o atributo perimetro. Pega o valor encontrado em perimetro, e subtrai de ${V=3}$. A partir daí o(s) atributo(s) que possuí(rem) um valor que está entre este resultado até o mais alto, irá compor o rótulo.
 
 \begin{table}[!h]
     
@@ -180,21 +185,77 @@ Para entender a escolha desses atributos no campo de rótulos, a tabela \ref{tab
     \label{tab:matrelevancia:seeds:cart} 
 \end{table}
 
-O resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds} tem como rótulos: 
+Foram realizadas vários teste, onde alguns deles estão na tabela \ref{tab:execucoes:seed:cart}}. Essas operações foram execuções do algoritmo CART em cima da base, para provar que a técnica de correlação de atributos, \ref{sec:tecnica} é funcional para este algoritmo. O mesmo pode ser visto no algoritmo de paradigma estatístico, sessão \ref{ssec:nb}, realizado nessa pesquisa. O  comportamento de ambos foram bem semelhantes, pois eles seguem o padrão de valores os quais não se alteram muito a cada iteração.
+
+\begin{table}[!h]
+\caption{Resultado de ${4(quatro)}$ iterações do algoritmo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}
+ \begin{tabular}{ll}
+%\rule{0}{50}
+
+  
+   %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-4pt}
+     \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+        \hline \hline
+                                 &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+       \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 91.4 & 94.2   & 58.5      & 80.0 & 74.2 & 55.7   & 60.0   \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 50.0      & 90.0 & 88.5 & 41.4  & 90.0  \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 92.8 & 95.7   & 80.0      & 88.5 & 97.1 & 55.7  & 77.1  \\ \hline
+      \end{tabular}
+    %}
+ &
+ %\hspace{1cm} %altera o espaçamento entre as tabelas
+ 
+   
+ %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-4pt}
+   \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+        \hline \hline
+                                 &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+       \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 &  91.4 & 94.2   & 62.8      & 78.5 & 81.4 & 61.4   & 57.1   \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 54.2      & 90.0 & 88.5 & 40.0  & 90.0  \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 92.8 & 95.7   & 80.0      & 88.5 & 97.1 & 60.0  & 77.1  \\ \hline
+      \end{tabular}
+  %}
+  \\  [8ex]
+ %\hspace{1cm} %altera o espaçamento entre as tabelas
+ %\rule{0}{50}
+ 
+ %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-4pt}
+   \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+        \hline \hline
+                                 &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+       \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 93.8 & 93.6   & 61.8      & 83.2 & 89.2 & 53.2   & 71.0   \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{}                           & 2 & 98.2 & 98.3   & 61.9      & 93.0 & 90.5 & 25.2  & 90.1  \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 95.5 & 96.3   & 82.4      & 90.9 & 97.7 & 59.3  & 77.0  \\ \hline
+   \end{tabular}
+    
+    &
+    
+       \small\addtolength{\tabcolsep}{-4pt}
+   \begin{tabular}{|cl|c|c|c|c|c|c|c|}
+        \hline \hline
+                                 &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
+       \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 94.2   & 60.0      & 80.0 & 84.2 & 64.2   & 60.0   \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 47.1      & 91.4 & 90.0 & 42.8  & 88.5  \\ \cline{2-9} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 80.0      & 88.5 & 97.1 & 55.7  & 77.1  \\ \hline
+   \end{tabular}
+   \\
+ 
+ \end{tabular}
+ \label{tab:execucoes:seed:cart}
+\end{table}
+
+O resultado do algoritmo CART na base de dados \textbf{Seeds} tem como rótulos: 
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (area, ]12.78 ~ 16.14]) \} }$  
- \item ${r_{c_2}=\{ (area, ]16.14 ~ 21.18]), (Lkernel, ]5.826 ~ 6.675]) \} }$
- \item ${r_{c_3}=\{ (perimetro, [12.41 ~ 13.73]\} }$
-\end{itemize}
-
-
-
-
-O resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds} tem como rótulos: 
-\begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (area, ]12.78 ~ 16.14]) \} }$  
- \item ${r_{c_2}=\{ (area, ]16.14 ~ 21.18]), (Lkernel, ]5.826 ~ 6.675]) \} }$
- \item ${r_{c_3}=\{ (perimetro, [12.41 ~ 13.73]\} }$
+ \item ${r_{c_1}=\{ (area, ]12.78 ~ 16.14]), (perimetro, ]13.73 ~ 15.18]) \} }$
+ \item ${r_{c_2}=\{ (area, ]16.14 ~ 21.18]), (perimetro, ]15.18 ~ 17.25]) \} }$
+ \item ${r_{c_3}=\{ (perimetro, [12.41 ~ 13.73]),  (wkernet, [2.63 ~ 3.049]) \} }$
 \end{itemize}
 
 

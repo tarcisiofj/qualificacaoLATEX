@@ -41,14 +41,14 @@
 \contentsline {section}{\numberline {3.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{27}{section.3.3}
 \contentsline {section}{\numberline {3.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidro}{27}{section.3.4}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{29}{chapter*.41}
+\contentsline {chapter}{Conclus\IeC {\~a}o e Trabalhos Futuros}{29}{chapter*.42}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{31}{section*.46}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{31}{section*.47}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{33}{section*.47}
+\contentsline {part}{\uppercase {Ap\^endices}}{33}{section*.48}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
@@ -61,7 +61,7 @@
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{39}{section*.48}
+\contentsline {part}{\uppercase {Anexos}}{39}{section*.49}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
