@@ -1,20 +1,23 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Breve explica\IeC {\c c}\IeC {\~a}o sobre a figura. Deve vir abaixo da mesma.\relax }}{1}{figure.caption.16}
-\contentsline {figure}{\numberline {2}{\ignorespaces Hip\IeC {\'o}teses ajustadas\relax }}{5}{figure.caption.21}
+\contentsline {figure}{\numberline {1}{\ignorespaces Breve explica\IeC {\c c}\IeC {\~a}o sobre a figura. Deve vir abaixo da mesma.\relax }}{1}{figure.caption.14}
+\contentsline {figure}{\numberline {2}{\ignorespaces Hip\IeC {\'o}teses ajustadas\relax }}{5}{figure.caption.19}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ajuste polinomial de grau 6}}}{5}{subfigure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Hip\IeC {\'o}tese linear}}}{5}{subfigure.2.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ponto de Corte (R-1)\relax }}{9}{figure.caption.23}
-\contentsline {figure}{\numberline {4}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD}}{10}{figure.caption.24}
-\contentsline {figure}{\numberline {5}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD}}{11}{figure.caption.25}
-\contentsline {figure}{\numberline {6}{\ignorespaces Modelo \cite {Lopes}\relax }}{11}{figure.caption.26}
-\contentsline {figure}{\numberline {7}{\ignorespaces Modelo \cite {Filho2015}\relax }}{12}{figure.caption.27}
-\contentsline {figure}{\numberline {8}{\ignorespaces Modelo de Resolu\IeC {\c c}\IeC {\~a}o Proposto\relax }}{15}{figure.caption.28}
-\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo da t\IeC {\'e}cnica aplicada ao atr1 sendo classe \relax }}{16}{figure.caption.29}
-\contentsline {figure}{\numberline {10}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o de atributos utilizando EFD com R = 3\relax }}{17}{figure.caption.31}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ponto de Corte (R-1)\relax }}{9}{figure.caption.21}
+\contentsline {figure}{\numberline {4}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD}}{10}{figure.caption.22}
+\contentsline {figure}{\numberline {5}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD}}{11}{figure.caption.23}
+\contentsline {figure}{\numberline {6}{\ignorespaces Modelo \cite {Lopes}\relax }}{11}{figure.caption.24}
+\contentsline {figure}{\numberline {7}{\ignorespaces Modelo \cite {Filho2015}\relax }}{12}{figure.caption.25}
+\contentsline {figure}{\numberline {8}{\ignorespaces Modelo de Resolu\IeC {\c c}\IeC {\~a}o Proposto\relax }}{15}{figure.caption.26}
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo da t\IeC {\'e}cnica aplicada ao atr1 sendo classe \relax }}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {10}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o de atributos utilizando EFD com R = 3\relax }}{17}{figure.caption.29}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr1}}}{17}{subfigure.10.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr2}}}{17}{subfigure.10.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr3}}}{17}{subfigure.10.3}
-\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo da t\IeC {\'e}cnica aplicada aos ${3 (tr\IeC {\^e}s)}$ atributos, cada um sendo classe em determinada itera\IeC {\c c}\IeC {\~a}o \relax }}{19}{figure.caption.33}
-\contentsline {figure}{\numberline {12}{\ignorespaces Resultado dos Algoritmos\relax }}{19}{figure.caption.34}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo da t\IeC {\'e}cnica aplicada aos ${3 (tr\IeC {\^e}s)}$ atributos, cada um sendo classe em determinada itera\IeC {\c c}\IeC {\~a}o \relax }}{19}{figure.caption.31}
+\contentsline {figure}{\numberline {12}{\ignorespaces Resultado dos Algoritmos\relax }}{19}{figure.caption.32}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do Naive Bayes}}}{19}{subfigure.12.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do algorimo de \IeC {\'A}rvore de Decis\IeC {\~a}o}}}{19}{subfigure.12.2}
+\contentsline {figure}{\numberline {13}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados Seed.\relax }}{32}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{32}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{32}{subfigure.13.2}

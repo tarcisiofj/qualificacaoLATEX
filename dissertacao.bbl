@@ -50,6 +50,11 @@ Dispon{\'\i}vel em:
 \emph{GESTS International Transactions on Computer Science and Engineering},
   v.~32, n.~1, p. 47--58, 2006.}
 
+\bibitem[Kotsiantis e Pintelas 2005]{kotsiantis2005logitboost}
+\abntrefinfo{Kotsiantis e Pintelas}{KOTSIANTIS; PINTELAS}{2005}
+{KOTSIANTIS, S.~B.; PINTELAS, P.~E. Logitboost of simple bayesian classifier.
+\emph{Informatica (Slovenia)}, v.~29, p.~53, 2005.}
+
 \bibitem[LIMA 2015]{Metodo2015}
 \abntrefinfo{LIMA}{LIMA}{2015}
 {LIMA, B. V.~A. {M{\'{e}}todo Semissupervisionado de Rotula{\c{c}}{\~{a}}o e
@@ -93,6 +98,12 @@ ISBN 9781577354260.}
 {RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
   Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
 2008.}
+
+\bibitem[Runkler 2016]{runkler2012}
+\abntrefinfo{Runkler}{RUNKLER}{2016}
+{RUNKLER, T.~A. \emph{Models and Algorithms for Intelligent Data Analysis}. 2.
+  ed. [S.l.]: Springer Vieweg, 2016.  (Data Analytics).
+ISBN 978-3-658-14075-5.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}

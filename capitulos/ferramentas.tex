@@ -1,7 +1,7 @@
 \chapter{Metodologia / Materiais e Métodos}\label{cap:ferramentas}
 Esse capítulo abordará em uma sessão o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução. O objetivo ao final deste capítulo é poder resolucionar o problema, exibindo seus passos, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
 
-\section{Considerações do Problema}
+\section{Considerações do Problema}\label{cap:ferramentas:sec:considproblema}
 
 A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \cite{Lopes}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, sessão \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, onde clusters são criados a partir dos graus similaridade entre os elementos.
 
@@ -45,7 +45,7 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
     %\footnotetext{Extraída de \cite{Lopes}}
 %}
 
-\section{O Modelo de Resolução}
+\section{O Modelo de Resolução}\label{cap:ferramentas:sec:modeloresolucao}
 
 Uma vez já conhecido a definição do problema - \textit{Definição ~\ref{teo:problema}} - é possível situar a abrangência abordada aqui nessa pesquisa, pois a intenção do estudo científico desenvolvido aqui é provar a realização de \textbf{rotulação de dados com qualquer algoritmo supervisionado}, utilizando as técnicas abordadas neste texto.
 
@@ -75,15 +75,15 @@ Como apresentado na sessão \ref{sec:trabcorrel}, o autor foca em rotulação au
         \caption{Modelo de Resolução Proposto} \label{fig:modeloresolucao}
 \end{figure}
 
-O modelo, figura \ref{fig:modeloresolucao}, inicialmente mostra a Base de Dados  já classificada, pois o cerne desta pesquisa é conceder ao grupo um significado,a rotulação,  através da técnica de correlação entre atributos, sessão ~\ref{sec:tecnica}. Essa base poderá conter  valores contínuos ou discretos, contudo, conforme modelo será necessário aplicar o método de discretização (I).
+O modelo, figura \ref{fig:modeloresolucao}, inicialmente mostra a Base de Dados  já classificada, pois o cerne desta pesquisa é conceder ao grupo um significado,a rotulação,  através da técnica de correlação entre atributos, sessão ~\ref{cap:ferramentas:sec:tecnica}. Essa base poderá conter  valores contínuos ou discretos, contudo, conforme modelo será necessário aplicar o método de discretização (I).
 
 Uma vez com a base discretizada ocorre somente a separação dos clusters já classificados de acordo com a própria base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/ }. Isso é o funcionamento do fluxo (a), que nada mais é do que a separação da base em grupos que já classificados.
 
-No passo (II) é onde serão executados os algoritmos de aprendizagem supervisionado, já visto nas sessões ~\ref{sssec:cart} e ~\ref{sssec:nbayes}. Essa etapa é umas das mais importantes do método. O algoritmo supervisionado é aplicado várias vezes de acordo com o número de atributos do conjunto de dados, expresso no vetor de tamanho ${m}$. Onde o número de vezes será a quantidade de atributos da tabela, formando um conjunto de atributos importantes para cada grupo.
+No passo (II) é onde serão executados os algoritmos de aprendizagem supervisionado, já visto nas sessões ~\ref{cap:refTeor:sssec:cart} e ~\ref{cap:refTeor:sssec:nbayes}. Essa etapa é umas das mais importantes do método. O algoritmo supervisionado é aplicado várias vezes de acordo com o número de atributos do conjunto de dados, expresso no vetor de tamanho ${m}$. Onde o número de vezes será a quantidade de atributos da tabela, formando um conjunto de atributos importantes para cada grupo.
 
 Seguindo para o processo (III) acontecerá a escolha do atributo mais relevante com seu valor mais frequente gerando rótulos para os grupos. Após essa etapa é criado um conjunto de rotulos para cada clusters. O fluxo (b) será utilizado caso houver algoritmo para ser executado.
 
-\section{Técnica de Correlação entre Atributos }\label{sec:tecnica}
+\section{Técnica de Correlação entre Atributos }\label{cap:ferramentas:sec:tecnica}
 
 Essa técnica \footnote{Extraída  de \cite{Lopes}} possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$. Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
 
@@ -100,7 +100,7 @@ Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torn
 \end{figure}
 
 
-\section{Exemplo com Base Modelo}
+\section{Exemplo com Base Modelo Fictícia} \label{cap:ferramentas:sec:exebasemodfic}
 
 Para melhor esclarecer as etapas da figura \ref{fig:modeloresolucao}, a tabela ~\ref{tab:bdm} contém uma base de dados que será utilizada para exemplificar todo o processo do modelo de resolução proposto nesta pesquisa. Logo na primeira coluna da tabela, retém um índice da linha da tabela responsável por identificar cada registro. Os outros campos são atributos que definem características do registro identificado pelo índice da primeira coluna.
 
@@ -171,7 +171,7 @@ Para melhor esclarecer as etapas da figura \ref{fig:modeloresolucao}, a tabela ~
 
 Seguindo a definição ~\ref{teo:problema} um elemento é expresso por um vetor  de dimensão ${m}$, com tamanho igual ao número de atributos. Um exemplo do elemento 2 da tabela ~\ref{tab:bdm}, pode ser representado por ${\vec{e}_{2}=(1.26,85.03, 20.45)}$.
 
-\subsection{Processo (I) - Discretização}
+\subsection{Processo (I) - Discretização} \label{cap:ferramentas:ssec:disc}
 
 Segundo \cite{Catlett2006, Hwang2002} o processo de discretização na etapa de treinamento pode aumentar a acurácia do algoritmo de aprendizado supervisionado. Dessa maneira a etapa de discretização ganha um papel importante no modelo, e também no processo de Rotulação (III), pois é utilizada uma inferência na faixa discretizada para encontrar o intervalo na faixa.
 
@@ -266,7 +266,7 @@ Através da figura \ref{fig:EFD_R_3} fica claro o conteúdo da faixa 1, contendo
 
 A tabela \ref{tab:bdmd} é o resultado após a discretização de todos os atributos. Contudo sabe-se que ao se lidar com valores discretos onde cada intervalo representa uma faixa de valores poderá o algoritmo está perdendo um pouco de informação, mas por outro lado essa decisão tornará o aprendizado mais fácil de interpretar e com respostas mais rápidas.
 
-\subsection{Processo (II) - Algoritmos Supervisionados}\label{ssec:algsuper}
+\subsection{Processo (II) - Algoritmos Supervisionados}\label{cap:ferramentas:ssec:algsuper}
 
 Ao chegar nessa etapa, Processo (II) da figura \ref{fig:modeloresolucao}, já se tem uma base discretizada e clusters formados, tabela \ref{tab:bdmd}. Agora é feita a execução do algorimo de aprendizado supervisionado e identificado os atributos de maior importância de cada cluster.
 

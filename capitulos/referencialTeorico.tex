@@ -8,7 +8,7 @@ O segundo ítem dissertará sobre a técnica de discretização adotada nesta pe
 
 
 
-\section{Aprendizado de Máquina}\label{sec:aprendMaq}
+\section{Aprendizado de Máquina}\label{cap:refTeor:sec:aprendMaq}
 
 Aprendizagem de máquina é a capacidade do aprendizado automático com utilização de algoritmos atuando em cima de uma base de dados.  Diz-se que o computador está aprendendo quando existe uma melhora de desempenho de tarefas que ele utilizou como exemplo \cite{Mitchell1997}. Um exemplo seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Não seria necessário a implementação de várias linhas de código informando que a cor dos olhos são azuis com orelhas e cabelos grandes, seriam de uma certa pessoa. Ao invés disso é observada várias fotos tituladas de uma certa pessoa, e após vários exemplos o computador seria capaz de predizer uma foto nova, se é, ou não, da determinada pessoa através de aprendizado anterior.
 
@@ -18,7 +18,7 @@ A partir desta síntese, tem-se uma observação. A classificação de dados no 
 
 Uma analogia referente do que foi dito acima seria um “problema”,  comparado a um “motor”, e os algoritmos disponíveis seriam as "ferramentas" para concertar esse motor. A partir daí a ferramenta que fosse mais eficaz, considerando métricas de desempenho, para fazer o motor funcionar, seria a ferramenta(algoritmo) escolhida. Tendo assim a escolha certa para um determinado problema.
 
-\subsection{Aprendizado Supervisionado}\label{ssec:aprendSup}
+\subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
 Nesta sessão será abordado um método que através de uma banco de dados já classificado por especialistas, será feita uma predição de novos registros com base em vários desses exemplos já classificados. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
 
@@ -59,7 +59,7 @@ A figura \ref{fig:graf1} mostra duas hipóteses que tentam se aproximar ao máxi
 Antes de falar dos algoritmos utilizados nesse texto a aprendizagem supervisionada detem dois tipos de caso: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
 
 
-\subsubsection{Algoritmo Classification and Regression Trees  - CART}\label{sssec:cart}
+\subsubsection{Algoritmo Classification and Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
 Esse algoritmo constroi modelos de previsão a partir de dados de treinamento onde seus resultados podem ser reprensentados em uma árvore de decisão. No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas. 
 
 Inicialmente todas as amostras se concentram no nó raiz, e a partir daí é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homeogêneos. Dependendo da questão as amostras iram para a folha esqueda ou direita do nó raiz.
@@ -119,7 +119,7 @@ Abaixo segue um algoritmo de como o critério Gini é aplicado nas variáveis \c
 \DecMargin{1em}
 
 
-\subsubsection{Algoritmo Naive Bayes}\label{sssec:nbayes}
+\subsubsection{Algoritmo Naive Bayes}\label{cap:refTeor:sssec:nbayes}
 É um algoritmo considerado rápido, em relação a outros algoritmos de classificação, mesmo com grandes volumes de dados em seu conjunto de treinamentos. Utiliza modelo probabilístico, Teorema de Bayes e possue a característica de independência dos atributos, onde as classes não dependem de recursos de outras. Essa independência condicionada  entre os atributos, os quais nem sempre ocorrem nos problemas reais, acabou sendo conhecida por Bayes ingênuo, ou Naive Bayes.
 
 Naive Bayes como classificador estatístico possue um modelo de simples construção, e ficou conhecido por ter bons resultados em relação a algoritmos mais sofisticados, mesmo trabalhando com grandes quantidades de dados. Ele agrupa objetos de uma certa classe em razão da probabilidade do objeto pertencer a esta classe. 
@@ -159,7 +159,7 @@ Quando o algoritmo encontram dados com mesma similaridade ele os agrupa formando
 Uma vez que no conjunto \ref{eq:aprendNSup} não existe classe ${y}$, encontrado em um conjunto de treinamento \ref{eq:aprendSup} o algoritmo precisa encontrar padrões nos atributos para fazer os agrupamentos.
 
 
-\section{Discretização}\label{sec:discret}
+\section{Discretização}\label{cap:refTeor:sec:discret}
 
 A discretização faz parte em duas etapas no modelo defendido nesse trabalho, por isso a preocupação na explanação de seu funcionamento aqui nesta sessão. O método de discretização faz a conversão de valores contínuos em valores discretos. 
 A partir de um atributo com valores contínuos, a discretização irá forçar um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos em cada atributo, será relacionado a faixa que aquele atributo pertence, definindo assim seu novo valor. O melhor método de discretização seria encontrar o conjunto de valores contínuos por faixa de intervalos pequenos \cite{Kotsiantis2006}
@@ -168,7 +168,7 @@ A partir de alguns autores \cite{Catlett2006,Hwang2002} a discretização melhor
 
 Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \cite{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
 
-\subsection{Discretização por Larguras Iguais - EWD}\label{subsec:ewd}
+\subsection{Discretização por Larguras Iguais - EWD}\label{cap:refTeor:subsec:ewd}
 
 O método de Discretização por Larguras Iguais (EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo em faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte figura \ref{fig:pontocorte}. 
 
@@ -212,7 +212,7 @@ O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índic
 
 
 
-\subsection{Discretização por Frequência Iguais - EFD}\label{subsec:ewd}
+\subsection{Discretização por Frequência Iguais - EFD}\label{cap:refTeor:subsec:efd}
 
 Esse outro método de discretização já possue uma abordagem diferente a do EWD, pois a idéia é manter a quantidade de elementos distintos, entre os pontos de corte, com o mesmo número. Dado um intervalo ${[a,b]}$ o número de faixas ${R}$ e a quantidade de valores distintos ${\xi}$ , onde ${\xi \geqslant R}$ o método EFD irá segmentar em  ${R}$ faixas de valores que possuem a mesma quantidade de elementos distintos ${\lambda}$. Então serão realizados ${R-1}$ pontos de corte gerando ${R}$ faixas de valores, ${(r_1,...,r_R)}$, com a mesma quantidade de elementos distintos ${\lambda}$. Para encontrar ${\lambda}$ calcula-se o valor inteiro da divisão entre a quantidade de elementos distintos ${\xi}$ pela quantidade de faixas de valores ${R}$, obtendo o número de elementos da faixa \ref{eq:qtdelemfaixaEFD}.
 
@@ -241,7 +241,7 @@ Como na sessão anterior do método EWD o valor que estiver no intervalo ${[a,c_
 \end{figure} 
 \footnotetext{Figura extraída de \cite{Lopes}}
 }
-\section{Trabalhos Correlatos}\label{sec:trabcorrel}
+\section{Trabalhos Correlatos}\label{cap:refTeor:sec:trabcorrel}
 
 Esta sessão propõe relacionar outros trabalhos servindo de complemento teórico, como também leitura imprescindível, para entender a variedade de aplicações referente ao assunto de rotulação de dados. Mas ao longo da escrita desta proposta de mestrado verificou-se uma carência de pesquisas no âmbito de rotulação de dados, referente ao tema aqui proposto neste trabalho, pois  acaba sendo redefinido o termo de rotulação.
 
