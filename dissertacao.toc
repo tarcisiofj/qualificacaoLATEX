@@ -7,10 +7,6 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter*.12}
-\contentsline {section}{figuras}{1}{section*.13}
-\contentsline {section}{tabelas}{1}{section*.15}
-\contentsline {section}{Motiva\IeC {\c c}\IeC {\~a}o}{2}{section*.17}
-\contentsline {section}{Objetivos}{2}{section*.18}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Aprendizado de M\IeC {\'a}quina}{3}{section.1.1}
@@ -41,34 +37,9 @@
 \contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{28}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}CART}{29}{subsection.3.3.2}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{Conclus\IeC {\~o}es}{31}{section*.45}
-\contentsline {section}{Trabalhos Futuros}{33}{section*.47}
-\contentsline {section}{Cronograma}{33}{section*.48}
+\contentsline {section}{Conclus\IeC {\~o}es}{31}{section*.39}
+\contentsline {section}{Trabalhos Futuros}{34}{section*.42}
+\contentsline {section}{Cronograma}{34}{section*.43}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.51}
-\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
-\cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{37}{section*.52}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{39}{appendix.A}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{41}{appendix.B}
-\cftinsert {AAA}
-\renewcommand *{\cftappendixname }{ANEXO \space }
-\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
-\cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{43}{section*.53}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Nome do Primeiro Anexo}}{45}{appendix.anexochapback.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Nome de Outro Anexo}}{47}{appendix.anexochapback.2}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.47}

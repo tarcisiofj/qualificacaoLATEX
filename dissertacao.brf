@@ -1,9 +1,8 @@
 \backcite {Lopes}{{15}{(document)}{Doc-Start}}
 \backcite {Filho2015}{{15}{(document)}{Doc-Start}}
-\backcite {NBR6028:2003}{{1}{(document)}{Doc-Start}}
 \backcite {Barber2011,Mitchell1997}{{1}{(document)}{Doc-Start}}
 \backcite {Barber2011,Mitchell1997}{{1}{(document)}{Doc-Start}}
-\backcite {NBR6028:2003}{{1}{(document)}{Doc-Start}}
+\backcite {Lopes}{{2}{(document)}{Doc-Start}}
 \backcite {Mitchell1997}{{3}{1.1}{section.1.1}}
 \backcite {RusselStuart.Norvig2013}{{3}{1.1}{section.1.1}}
 \backcite {Barber2011}{{4}{1.1.1}{subsection.1.1.1}}
@@ -25,11 +24,11 @@
 \backcite {Lopes}{{10}{1.3}{section.1.3}}
 \backcite {Lopes}{{10}{3}{Hfootnote.3}}
 \backcite {Lopes}{{11}{1.3}{section.1.3}}
-\backcite {Lopes}{{11}{6}{figure.caption.24}}
-\backcite {Filho2015}{{11}{1.3}{figure.caption.24}}
-\backcite {Metodo2015}{{11}{1.3}{figure.caption.24}}
+\backcite {Lopes}{{11}{5}{figure.caption.18}}
+\backcite {Filho2015}{{11}{1.3}{figure.caption.18}}
+\backcite {Metodo2015}{{11}{1.3}{figure.caption.18}}
 \backcite {Lopes}{{11}{4}{Hfootnote.4}}
-\backcite {Filho2015}{{12}{7}{figure.caption.25}}
+\backcite {Filho2015}{{12}{6}{figure.caption.19}}
 \backcite {Lopes}{{13}{2.1}{section.2.1}}
 \backcite {Lopes}{{13}{1}{Hfootnote.5}}
 \backcite {Lopes}{{14}{2}{Hfootnote.6}}
@@ -41,4 +40,4 @@
 \backcite {Lopes}{{27}{5}{Hfootnote.14}}
 \backcite {kotsiantis2005logitboost}{{27}{5}{Hfootnote.14}}
 \backcite {Filho2015}{{27}{5}{Hfootnote.14}}
-\backcite {Lopes}{{31}{3.3.2}{section*.45}}
+\backcite {Lopes}{{31}{3.3.2}{section*.39}}
