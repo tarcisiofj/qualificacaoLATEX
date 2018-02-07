@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  7 FEB 2018 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  7 FEB 2018 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1584,10 +1584,6 @@ l.20
 
 Package hyperref Warning: Suppressing empty link on input line 23.
 
-
-LaTeX Warning: Reference `cap:metodologia' on page 2 undefined on input line 27
-.
-
 )pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
@@ -2133,10 +2129,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
  ) 
 Here is how much of TeX's memory you used:
- 17768 strings out of 492985
- 265797 string characters out of 6138585
+ 17767 strings out of 492985
+ 265780 string characters out of 6138585
  568819 words of memory out of 5000000
- 20557 multiletter control sequences out of 15000+600000
+ 20556 multiletter control sequences out of 15000+600000
  113663 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,18n,51p,1213b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2163,7 +2159,7 @@ hare/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on dissertacao.pdf (60 pages, 1960646 bytes).
+Output written on dissertacao.pdf (60 pages, 1960911 bytes).
 PDF statistics:
  1047 PDF objects out of 1200 (max. 8388607)
  912 compressed objects within 10 object streams
