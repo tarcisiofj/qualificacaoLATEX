@@ -13,8 +13,6 @@ A level-1 auxiliary file: capitulos/referencialTeorico.aux
 A level-1 auxiliary file: capitulos/ferramentas.aux
 A level-1 auxiliary file: capitulos/resultados.aux
 A level-1 auxiliary file: capitulos/conclusao.aux
-A level-1 auxiliary file: postextual/apendices.aux
-A level-1 auxiliary file: postextual/anexos.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -27,8 +25,6 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: mestradobib.bib
-Warning--I didn't find a database entry for "NBR6028:2003"
-Warning--I didn't find a database entry for "quinlans"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -38,45 +34,44 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 19 entries,
+You've used 21 entries,
             6714 wiz_defined-function locations,
-            1341 strings with 13200 characters,
-and the built_in function-call counts, 18674 in all, are:
-= -- 1836
-> -- 540
-< -- 242
-+ -- 462
-- -- 164
-* -- 1246
-:= -- 2491
-add.period$ -- 75
-call.type$ -- 19
-change.case$ -- 185
-chr.to.int$ -- 43
-cite$ -- 18
-duplicate$ -- 1357
-empty$ -- 1034
-format.name$ -- 775
-if$ -- 4061
+            1350 strings with 13311 characters,
+and the built_in function-call counts, 20032 in all, are:
+= -- 1935
+> -- 571
+< -- 246
++ -- 472
+- -- 174
+* -- 1334
+:= -- 2679
+add.period$ -- 83
+call.type$ -- 21
+change.case$ -- 198
+chr.to.int$ -- 48
+cite$ -- 20
+duplicate$ -- 1439
+empty$ -- 1153
+format.name$ -- 821
+if$ -- 4381
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 340
-newline$ -- 106
-num.names$ -- 90
-pop$ -- 454
+missing$ -- 377
+newline$ -- 116
+num.names$ -- 100
+pop$ -- 495
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 79
 quote$ -- 0
-skip$ -- 1423
+skip$ -- 1497
 stack$ -- 1
-substring$ -- 662
-swap$ -- 537
-text.length$ -- 18
+substring$ -- 724
+swap$ -- 577
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 4
 warning$ -- 0
-while$ -- 125
+while$ -- 140
 width$ -- 0
-write$ -- 292
-(There were 2 warnings)
+write$ -- 325

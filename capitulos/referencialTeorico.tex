@@ -1,16 +1,18 @@
 \chapter{Referencial Teórico}\label{cap:refTeor}
 
+
+
 Será abordado neste capítulo o conteúdo base na compreensão deste trabalho dividido em 3 sessões: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
 
-A primeira sessão contempla os principais tipos de aprendizados indutivos, não incluindo aqui o aprendizado semi-supervisionado e sim dando ênfase a aprendizagem supervisionada, foco da proposta deste mestrado. O aprendizado indutivo utiliza uma amostra do todo para tirar uma conclusão. Caso os exemplos retirados de uma base de dados não forem suficientes, talvez o conhecimento derivado destes exemplos não mostrem a verdade. 
+A primeira seção contempla os principais tipos de aprendizados indutivos  dando ênfase ao aprendizagem supervisionada, foco da proposta deste mestrado. O aprendizado indutivo utiliza uma amostra do todo para tirar uma conclusão. Caso os exemplos retirados de uma base de dados não forem suficientes, talvez o conhecimento derivado destes exemplos não mostrem a verdade. 
 
-O segundo ítem dissertará sobre a técnica de discretização adotada nesta pesquisa. Possuindo grande contribuição para os resultados gerados, e ganhando assim uma sessão própria para explanação de como funciona essa técnica. E na terceira sessão serão abordados trabalhos com mesmas características particulares para melhor elucidar o motivo da elaboração dessa proposta de mestrado.
+O segundo ítem dissertará sobre a técnica de discretização adotada nesta pesquisa. Possuindo grande contribuição para os resultados gerados, e ganhando assim uma seção própria para explanação de como funciona essa técnica. Já na terceira seção, serão abordados trabalhos com mesmas características particulares para melhor elucidar o motivo da elaboração dessa proposta de mestrado.
 
 
 
 \section{Aprendizado de Máquina}\label{cap:refTeor:sec:aprendMaq}
 
-Aprendizagem de máquina é a capacidade do aprendizado automático com utilização de algoritmos atuando em cima de uma base de dados.  Diz-se que o computador está aprendendo quando existe uma melhora de desempenho de tarefas que ele utilizou como exemplo \cite{Mitchell1997}. Um exemplo seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Não seria necessário a implementação de várias linhas de código informando que a cor dos olhos são azuis com orelhas e cabelos grandes, seriam de uma certa pessoa. Ao invés disso é observada várias fotos tituladas de uma certa pessoa, e após vários exemplos o computador seria capaz de predizer uma foto nova, se é, ou não, da determinada pessoa através de aprendizado anterior.
+Aprendizagem de máquina é a capacidade do aprendizado automático com utilização de algoritmos atuando em cima de uma base de dados.  Diz-se que o computador está aprendendo quando existe uma melhora de desempenho de tarefas que ele utilizou como exemplo \cite{Mitchell1997}. Um exemplo seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Não seria necessário a implementação de várias linhas de código informando, que a cor dos olhos são azuis com orelhas e cabelos grandes seriam de uma certa pessoa. Ao invés disso é observada várias fotos tituladas de uma certa pessoa, e após vários exemplos o computador seria capaz de predizer uma foto nova, se é, ou não, da determinada pessoa através de aprendizado anterior.
 
 Existem alguns motivos, onde justificam, que não é possível simplismente exigir que o projetista implemente melhorias no sistema de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de  todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
 
@@ -20,7 +22,7 @@ Uma analogia referente do que foi dito acima seria um “problema”,  comparado
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
-Nesta sessão será abordado um método que através de uma banco de dados já classificado por especialistas, será feita uma predição de novos registros com base em vários desses exemplos já classificados. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
+Nesta seção será abordado um método que através de uma banco de dados já classificado por especialistas, será feita uma predição de novos registros com base em vários desses exemplos já classificados. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
 
 
 O termo "Supervisionado" indica que existe um supervisor para cada registro de entrada especificando uma saída para esse registro. Considerando uma base de dados de imagens de rostos, onde cada imagen possui uma saída representado por uma classe: masculino ou feminino. A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, uma vez que são inúmeras as diferenças que difere as faces masculinas e femininas. Mas uma alternativa seria dar exemplos de rostos com suas classificações de fazer que automaticamente a máquina "aprenda" uma regra para predizer se é masculino ou feminino \cite{Barber2011}.
@@ -56,15 +58,15 @@ Ja na figura \ref{fig:graf1:grafB} o ajuste da função se torna mais simples e 
 
 A figura \ref{fig:graf1} mostra duas hipóteses que tentam se aproximar ao máximo da função verdadeira, que é desconhecida. Mesmo parecendo que  na figura \ref{fig:graf1:grafA} obteve-se melhor resultado, pois todos os pontos são contemplados pela função, mas esta função ${h}$ acabou ficando muito específica e isso não retrata os dados em um mundo real. Então quanto mais  generalizado for ${h}$, melhor será para prevê os valores de ${y}$ para novos conjuntos de dados.
 
-Antes de falar dos algoritmos utilizados nesse texto a aprendizagem supervisionada detem dois tipos de caso: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
+Antes de falar dos algoritmos utilizados nesse texto a aprendizagem supervisionada detém dois tipos de caso: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
 
 
 \subsubsection{Algoritmo Classification and Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
 Esse algoritmo constroi modelos de previsão a partir de dados de treinamento onde seus resultados podem ser reprensentados em uma árvore de decisão. No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas. 
 
-Inicialmente todas as amostras se concentram no nó raiz, e a partir daí é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homeogêneos. Dependendo da questão as amostras iram para a folha esqueda ou direita do nó raiz.
+Inicialmente todas as amostras se concentram no nó raiz, e a partir daí é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homeogêneos. Dependendo da questão as amostras irão para a folha esquerda ou direita do nó raiz.
 
-O CART faz essa divisão em função da regra Gini\footnote{O CART pode utilizar outros critérios de divisão de dados como: entropia e critério de Twoing}\ref{Breiman1984}, parecida com a regra da entropia usada no algoritmo ID3\footnote{Algoritmo abordado por \cite{quinlans}}. O índice Gini varia de 0 a 1, definindo o grau de pureza do nó. 
+O CART faz essa divisão em função da regra Gini\footnote{O CART pode utilizar outros critérios de divisão de dados como: entropia e critério de Twoing} \cite{braiman1984}, parecida com a regra da entropia usada no algoritmo ID3\footnote{Algoritmo abordado por \cite{Quinlan1986}}. O índice Gini varia de 0 a 1, definindo o grau de pureza do nó. 
 \begin{equation}
 Gini(S)= 1 - \sum p^2(j/t)
  \label{eq:cartGini}
@@ -120,7 +122,7 @@ Abaixo segue um algoritmo de como o critério Gini é aplicado nas variáveis \c
 
 
 \subsubsection{Algoritmo Naive Bayes}\label{cap:refTeor:sssec:nbayes}
-É um algoritmo considerado rápido, em relação a outros algoritmos de classificação, mesmo com grandes volumes de dados em seu conjunto de treinamentos. Utiliza modelo probabilístico, Teorema de Bayes e possue a característica de independência dos atributos, onde as classes não dependem de recursos de outras. Essa independência condicionada  entre os atributos, os quais nem sempre ocorrem nos problemas reais, acabou sendo conhecida por Bayes ingênuo, ou Naive Bayes.
+É um algoritmo considerado rápido, em relação a outros algoritmos de classificação, mesmo com grandes volumes de dados no seu conjunto de treinamentos. Utiliza modelo probabilístico, Teorema de Bayes, e possue característica de independência dos atributos, onde as classes não dependem de recursos de outras. Essa independência condicionada  entre os atributos, os quais nem sempre ocorrem nos problemas reais, acabou deixando conhecida por Bayes ingênuo, ou Naive Bayes.
 
 Naive Bayes como classificador estatístico possue um modelo de simples construção, e ficou conhecido por ter bons resultados em relação a algoritmos mais sofisticados, mesmo trabalhando com grandes quantidades de dados. Ele agrupa objetos de uma certa classe em razão da probabilidade do objeto pertencer a esta classe. 
 
@@ -141,36 +143,36 @@ Naive Bayes como classificador estatístico possue um modelo de simples constru�
  \item ${P(x)}$  é a probabilidade original do preditor.
 \end{itemize}
 
-A utilização do algoritmo Naive Bayes já é bem difundida, e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \cite{ Madureira2017, Lucca2013, Wu2008, Mccallum1997}. Mas mesmo atingido popularidade existem pontos negativos. A suposição de ter preditores independentes não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramentes independentes. 
+A utilização do algoritmo Naive Bayes já é bem difundida, e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \cite{ Madureira2017, Lucca2013, Wu2008, Mccallum1997}. Mas mesmo atingido boa popularidade possui pontos negativos. A suposição de ter preditores independentes não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramentes independentes. 
 
-Outra situação é caso de existir uma variável categórica que não foi observada na amostra tirada para o conjunto de treinamento, então poderá o modelo atribuir probabilidade 0(zero), não sendo capaz de fazer uma previsão. Quando isso acontecer uma técnica de alisamento é aplicada, chamada estimativa de Laplace, utilizadas em probabilidades condicionadas.
+Outra situação é caso exista uma variável categórica que não foi observada na amostra tirada para o conjunto de treinamento, então poderá o modelo atribuir probabilidade 0(zero), não sendo capaz de fazer uma previsão. Quando isso acontecer uma técnica de alisamento é aplicada, chamada estimativa de Laplace, utilizadas em probabilidades condicionadas.
 
 
-\subsection{Aprendizado Não Supervisionado}\label{ssec:aprendNSup}
+\subsection{Aprendizado Não-Supervisionado}\label{ssec:aprendNSup}
 
-No Aprendizado Não Supervisionado , não existe uma tentativa de se encontrar uma função que se aproxime da real. Logo porque os registros não são classificados, então o conjunto de treinamento não possue informação da saída sobre determinada entrada . Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tenta agrupá-los de forma a ter algum sentido deles estarem juntos. 
+No Aprendizado Não-Supervisionado , não existe uma tentativa de se encontrar uma função que se aproxime da real. Logo porque os registros não são classificados, então o conjunto de treinamento não possue informação da saída sobre determinada entrada . Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tenta agrupá-los de forma a ter algum sentido deles estarem juntos. 
 
-Quando o algoritmo encontram dados com mesma similaridade ele os agrupa formando clusters. Os números de clusters encontrados irão depender de como os algoritmos funcionam, junto com o grau de dissimilaridade entre elementos de grupos diferentes. Como não existe uma variável classe no Aprendizado Não Supervisionado, então \cite{Barber2011} diz que o maior interesse seria em uma perspectiva probabilística de ditribuição ${p(x)}$ de um determinado conjunto de dados.
+Quando o algoritmo encontram dados com mesma similaridade ele os agrupa formando clusters. Os números de clusters encontrados irão depender de como os algoritmos funcionam, junto com o grau de dissimilaridade entre elementos de grupos diferentes. Como não existe uma variável classe no Aprendizado Não-Supervisionado, então \cite{Barber2011} diz que o maior interesse seria em uma perspectiva probabilística de ditribuição ${p(x)}$ de um determinado conjunto de dados.
 \begin{equation}
  D = \{x_{n},n=1,...,N\}
  \label{eq:aprendNSup}
 \end{equation}
 
-Uma vez que no conjunto \ref{eq:aprendNSup} não existe classe ${y}$, encontrado em um conjunto de treinamento \ref{eq:aprendSup} o algoritmo precisa encontrar padrões nos atributos para fazer os agrupamentos.
+Uma vez que no conjunto, \ref{eq:aprendNSup}, não existe classe ${y}$, encontrado em um conjunto de treinamento, \ref{eq:aprendSup}, o algoritmo precisa encontrar padrões nos atributos para fazer os agrupamentos.
 
 
 \section{Discretização}\label{cap:refTeor:sec:discret}
 
-A discretização faz parte em duas etapas no modelo defendido nesse trabalho, por isso a preocupação na explanação de seu funcionamento aqui nesta sessão. O método de discretização faz a conversão de valores contínuos em valores discretos. 
+A discretização acontece em duas etapas no modelo defendido nesse trabalho, por isso a preocupação na explanação de seu funcionamento aqui nesta seção. O método de discretização faz a conversão de valores contínuos em valores discretos. 
 A partir de um atributo com valores contínuos, a discretização irá forçar um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos em cada atributo, será relacionado a faixa que aquele atributo pertence, definindo assim seu novo valor. O melhor método de discretização seria encontrar o conjunto de valores contínuos por faixa de intervalos pequenos \cite{Kotsiantis2006}
 
-A partir de alguns autores \cite{Catlett2006,Hwang2002} a discretização melhora a precisão e deixa um modelo classificador mais rápido em seu conjunto de treinamento. Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
+A partir de alguns autores \cite{Catlett2006,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
 
 Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \cite{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
 
 \subsection{Discretização por Larguras Iguais - EWD}\label{cap:refTeor:subsec:ewd}
 
-O método de Discretização por Larguras Iguais (EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo em faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte figura \ref{fig:pontocorte}. 
+O método de Discretização por Larguras Iguais (EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo em faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte, figura \ref{fig:pontocorte}. 
 
 \begin{figure}[h]
         \centering
@@ -178,7 +180,7 @@ O método de Discretização por Larguras Iguais (EWD) faz a discretização de 
         \caption{Ponto de Corte (R-1)} \label{fig:pontocorte}
 \end{figure}
 
-Para haver o ponto de corte antes tem que ser realizado a ordenação dos dados. A largura de cada faixa ${r_1,...,r_R}$ na equação \ref{eq:largurafaixa} é representada por ${w}$ que é calculada pela diferença entre os limites superior e inferior do intervalo, dividido pela quantidade ${R}$ de valores a serem gerados.
+Para haver o ponto de corte antes tem que ser realizado a ordenação dos dados. A largura de cada faixa ${r_1,...,r_R}$ na equação \ref{eq:largurafaixa} é representada por ${w}$, que é calculada pela diferença entre os limites superior e inferior do intervalo, dividido pela quantidade ${R}$ de valores a serem gerados.
 
 \begin{equation}
  w = \frac{b-a}{R}
@@ -198,9 +200,9 @@ c_{i-1}+w,  & caso\, contrário &
  \label{eq:regratamfaixa}
 \end{equation}
 
-O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índice de sua faixa ${r_1}$. Então, um valor na faixa ${r_1}$ terá o valor reprensentado por ${1(um)}$, pois  ${i=1}$ é limite inferior mais largura da faixa, equação \ref{eq:regratamfaixa}. E seguindo o mesmo raciocínio o valor da faixa ${r_2=]c_1,c_2]}$ é reprensentado por ${2(dois)}$, e consequentemente o valor que se encontra em uma faixa qualquer ${r_i}$ será reprensentado por ${i}$.
+O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índice de sua faixa ${r_1}$. Então, um valor na faixa ${r_1}$ terá o valor reprensentado por ${1(um)}$, pois  ${i=1}$ é o limite inferior mais largura da faixa, equação \ref{eq:regratamfaixa}. E seguindo o mesmo raciocínio o valor da faixa ${r_2=]c_1,c_2]}$ é reprensentado por ${2(dois)}$, e consequentemente o valor que se encontra em uma faixa qualquer ${r_i}$ será reprensentado por ${i}$.
 
-\afterpage{
+%\afterpage{
 \begin{figure}[h] 
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEWD.png}
@@ -208,7 +210,7 @@ O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índic
         \label{fig:faixasEWD}
 \end{figure}
 \footnotetext{Figura extraída de \cite{Lopes}}
-}
+% }
 
 
 
@@ -221,18 +223,18 @@ Esse outro método de discretização já possue uma abordagem diferente a do EW
  \label{eq:qtdelemfaixaEFD}
 \end{equation}
 
-Uma observação nesse método é quando ocorrer nos casos de uma amostragem possuir uma má distribuição de valores de um dado atributo, como um número significativo de repetições, isso, irá causar um desiquilíbrio nas distribuições dos elementos.
+Uma observação nesse método é a ocorrência em amostras que possuem uma má distribuição de valores de um dado atributo. Como um número significativo de repetições, causando um desiquilíbrio nas distribuições dos elementos.
 
-Uma vez no intervalo ${[a,b]}$ de elemetos ordenado e calculado ${\lambda}$ contendo ${R}$ elementos ${(v_{[R]}}$  pode-se determinar os pontos de corte ${(c_1,...,c_{R-1})}$ que são os delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}}$ \ref{eq:pontocorteEFD}.
+Uma vez no intervalo ${[a,b]}$ de elemetos ordenado e calculado ${\lambda}$ contendo ${R}$ elementos ${v_{[R]}}$  pode-se determinar os pontos de corte ${(c_1,...,c_{R-1})}$ que são os delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}-ésimo}$ elemento, \ref{eq:pontocorteEFD}.
 
 \begin{equation}
-\lambda = \frac{\xi}{R}
+c_i = v_{[i\lambda]}
  \label{eq:pontocorteEFD}
 \end{equation}
 
-Como na sessão anterior do método EWD o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$ conforme figura \ref{fig:faixasEFD}. Então, caso o valor esteja na faixa ${r_2}$ ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor ${3(três)}$. Uma outra observação desse método é que diferente do EWD, as faixas podem assumir faixas com tamanhos diferentes.
+Como na seção anterior do método EWD o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$ conforme figura \ref{fig:faixasEFD}. Então, caso o valor esteja na faixa ${r_2}$ ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor ${3(três)}$. Uma outra observação desse método é que diferente do EWD, as faixas podem assumir faixas com tamanhos diferentes.
 
-\afterpage{
+%\afterpage{
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEFD.png}
@@ -240,12 +242,14 @@ Como na sessão anterior do método EWD o valor que estiver no intervalo ${[a,c_
         \label{fig:faixasEFD}
 \end{figure} 
 \footnotetext{Figura extraída de \cite{Lopes}}
-}
+%}
+
+
 \section{Trabalhos Correlatos}\label{cap:refTeor:sec:trabcorrel}
 
-Esta sessão propõe relacionar outros trabalhos servindo de complemento teórico, como também leitura imprescindível, para entender a variedade de aplicações referente ao assunto de rotulação de dados. Mas ao longo da escrita desta proposta de mestrado verificou-se uma carência de pesquisas no âmbito de rotulação de dados, referente ao tema aqui proposto neste trabalho, pois  acaba sendo redefinido o termo de rotulação.
+Esta seção propõe relacionar outros trabalhos servindo de complemento teórico, como também leitura imprescindível, para entender a variedade de aplicações referente ao assunto de rotulação de dados. Mas ao longo da escrita desta proposta de mestrado verificou-se uma carência de pesquisas no âmbito de rotulação de dados, referente ao tema aqui proposto neste trabalho, tema este, que acabou redefinindo o termo de rotulação, não mais sendo como um classificador, e sim um significado um grupo formado.
 
-O trabalho escrito por \cite{Lopes} fez um estudo abordando o tema de rotulação de dados bastante significativo. Foi aprensentado nesse trabalho o Problema de Rotulação, que representa também o problema proposto por esse trabalho, mas com abrangência e execução diferente do modelo \cite{Lopes}  na figura \ref{fig:modeloLOPES} . Na pesquisa de \cite{Lopes} é utilizado como entrada um conjunto  dados onde é feito um agrupamento automático formando os clusters, e aprensenta como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados pela faixa de valor em conjunto com os atributos mais relevantes.
+O trabalho escrito por \cite{Lopes} fez um estudo abordando o tema de rotulação de dados bastante significativo. Foi aprensentado nesse trabalho o Problema de Rotulação, que representa também o problema proposto por esse trabalho, mas com abrangência e execução diferente do modelo apresentado na figura \ref{fig:modeloLOPES} . Nessa pesquisa foi utilizado como entrada um conjunto  dados onde é feito um agrupamento automático, com algoritmos não-supervisionados formando os clusters. Logo após é utilizado algoritmos supervisionados nos grupos, e aprensentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados pela faixa de valor em conjunto com os atributos mais relevantes.
 
 \begin{figure}[h]
         \centering
@@ -254,16 +258,22 @@ O trabalho escrito por \cite{Lopes} fez um estudo abordando o tema de rotulaçã
         \label{fig:modeloLOPES}
 \end{figure}
 
-Outra pesquisa aplicada em rotulação está em \cite{Filho2015} onde aborda o mesmo Problema de Rotulação. Mas a atuação é diferenciada, pois o modelo, figura \ref{fig:modeloFilhoVilmar} procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. 
 
-
-Em \cite{Metodo2015} o problema em questão é fazer classificação e rotulação em uma base que possuem poucos elementos classificados. O método inicia com uma base dividida em elementos classificados(L) e não classificados(U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
-
-\begin{figure}[h]
+Em \cite{Metodo2015} o problema em questão é fazer classificação e rotulação em uma base que possuem poucos elementos classificados. O método inicia com uma base dividida em elementos classificados(L) e não classificados(U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U, \ref{fig:modeloVicente}. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
+\begin{figure}[!h]
         \centering
-        \includegraphics{figs/modeloRotFuzzy.png}
+        \includegraphics[scale=0.4]{figs/modeloVicente.png}
+        \caption{Comportamento da base de dados a cada iteração. Método \cite{Filho2015}} \label{fig:modeloVicente}
+\end{figure}
+
+Outra pesquisa aplicada em rotulação está em \cite{Filho2015} onde aborda o mesmo Problema de Rotulação. Mas a atuação é diferenciada, pois o modelo, figura \ref{fig:modeloFilhoVilmar} procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. 
+\begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.8]{figs/modeloRotFuzzy.png}
         \caption{Modelo \cite{Filho2015}} \label{fig:modeloFilhoVilmar}
 \end{figure}
+
+
 
 
 

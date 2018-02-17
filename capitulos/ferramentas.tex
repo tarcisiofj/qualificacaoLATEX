@@ -3,7 +3,7 @@ Esse capítulo abordará em uma sessão o problema proposto por esse trabalho, e
 
 \section{Considerações do Problema}\label{cap:ferramentas:sec:considproblema}
 
-A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \cite{Lopes}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, sessão \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, onde clusters são criados a partir dos graus similaridade entre os elementos.
+A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \cite{Lopes}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, sessão \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, e a criação de clusters a partir dos graus de  similaridade entre os elementos.
 
 Muitas pesquisas realizadas na área de rotulação fazem referencia, de fato, a classificação do dados, e não da rotulação, nos termos desse trabalho. Ao agrupar um conjunto de elementos por um derterminado critério, esta havendo uma classificação desses elementos escolhidos, mas pouco se sabe, qual é a compreensão desses grupos, já classificados. 
 
@@ -49,7 +49,7 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
 
 Uma vez já conhecido a definição do problema - \textit{Definição ~\ref{teo:problema}} - é possível situar a abrangência abordada aqui nessa pesquisa, pois a intenção do estudo científico desenvolvido aqui é provar a realização de \textbf{rotulação de dados com qualquer algoritmo supervisionado}, utilizando as técnicas abordadas neste texto.
 
-O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivo intevalor, gerado a partir da frequência de valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
+O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivos intevalos, gerados a partir das frequências dos valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
     \begin{defprob}
     Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, tem como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$.
         \footnotemark 
@@ -66,7 +66,7 @@ O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulo
     \label{teo:resolucao}
     \end{defprob}
 
-Como apresentado na sessão \ref{sec:trabcorrel}, o autor foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada, e paradigma conexionista, para provar seu trabalho. Mas aqui nessa pesquisa foi aplicado no modelo um acréscimo de ${2 (dois)}$ algoritmos com paradigmas de aprendizado diferentes do que já foi utilizado, compondo uma base para afirmar, que a partir dessas amostras pode-se fazer rotulação com qualquer algoritmo supervisionada.
+Como apresentado na sessão \ref{cap:refTeor:sec:trabcorrel}, o autor foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada, e paradigma conexionista, para provar seu trabalho. Mas aqui nessa pesquisa foi aplicado no modelo um acréscimo de ${2 (dois)}$ algoritmos com paradigmas de aprendizado diferente do que já foi utilizado, compondo uma base para afirmar, que a partir dessas amostras pode-se fazer rotulação com qualquer algoritmo supervisionado.
 
 
 \begin{figure}[h!]
@@ -79,13 +79,13 @@ O modelo, figura \ref{fig:modeloresolucao}, inicialmente mostra a Base de Dados 
 
 Uma vez com a base discretizada ocorre somente a separação dos clusters já classificados de acordo com a própria base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/ }. Isso é o funcionamento do fluxo (a), que nada mais é do que a separação da base em grupos que já classificados.
 
-No passo (II) é onde serão executados os algoritmos de aprendizagem supervisionado, já visto nas sessões ~\ref{cap:refTeor:sssec:cart} e ~\ref{cap:refTeor:sssec:nbayes}. Essa etapa é umas das mais importantes do método. O algoritmo supervisionado é aplicado várias vezes de acordo com o número de atributos do conjunto de dados, expresso no vetor de tamanho ${m}$. Onde o número de vezes será a quantidade de atributos da tabela, formando um conjunto de atributos importantes para cada grupo.
+No passo (II) é onde serão executados os algoritmos de aprendizagem supervisionado, já visto nas sessões ~\ref{cap:refTeor:sssec:cart} e ~\ref{cap:refTeor:sssec:nbayes}. Essa etapa é umas das mais importantes do método. O algoritmo supervisionado é aplicado várias vezes de acordo com o número de atributos do conjunto de dados, expresso no vetor de tamanho ${m}$. Onde o número de vezes será a quantidade de atributos da base de dados, formando uma tabela contendo valores de zero a cem, de acordo com a importância de cada atributo para o cluster.
 
-Seguindo para o processo (III) acontecerá a escolha do atributo mais relevante com seu valor mais frequente gerando rótulos para os grupos. Após essa etapa é criado um conjunto de rotulos para cada clusters. O fluxo (b) será utilizado caso houver algoritmo para ser executado.
+Seguindo para o processo (III) acontecerá a escolha do(s) atributo(s) mais relevante(s), selecionado na tabela de atributos importantes, junto com o valor mais frequente desse atributo. Após essa etapa é criado um conjunto de rotulos para cada clusters. O fluxo (b) será utilizado enquanto houver outros algoritmos para serem executados.
 
 \section{Técnica de Correlação entre Atributos }\label{cap:ferramentas:sec:tecnica}
 
-Essa técnica \footnote{Extraída  de \cite{Lopes}} possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$. Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
+Essa técnica \footnote{Desenvolvida também por \cite{Lopes}} possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$. Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
 
 
 Pegando como exemplo uma base com os seguintes atributos: \textbf{atr1,atr2,atr3,classe}. Exclui o atributo classe, obtêm-se os ${3 (três)}$ primeiros atributos, onde cada um deles será utilizado como classe em refência aos outros atributos. 
@@ -175,7 +175,7 @@ Seguindo a definição ~\ref{teo:problema} um elemento é expresso por um vetor 
 
 Segundo \cite{Catlett2006, Hwang2002} o processo de discretização na etapa de treinamento pode aumentar a acurácia do algoritmo de aprendizado supervisionado. Dessa maneira a etapa de discretização ganha um papel importante no modelo, e também no processo de Rotulação (III), pois é utilizada uma inferência na faixa discretizada para encontrar o intervalo na faixa.
 
-Para esse exemplo será utilizada a técnica de discretização por frequências iguais - EFD - e divisão de números de faixas, igual a R=3. Na figura\footnote{Figura adaptada de \cite{Lopes}} \ref{fig:EFD_R_3} poderá ser vizualizado como é feita a discretização.
+Para esse exemplo será utilizada a técnica de discretização por frequências iguais - EFD - e divisão de números de faixas igual a R=3. Na figura\footnote{Figura adaptada de \cite{Lopes}} \ref{fig:EFD_R_3} poderá ser vizualizado como é feita a discretização.
  \begin{figure}[h!]
     \centering
     \subfloat[Discretização em atr1]{

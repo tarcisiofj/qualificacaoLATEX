@@ -12,6 +12,11 @@ ISSN 9780521518147.
 ISBN 9780511804779. Dispon{\'\i}vel em:
   \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
 
+\bibitem[Breiman 1984]{braiman1984}
+\abntrefinfo{Breiman}{BREIMAN}{1984}
+{BREIMAN, L. \emph{Classification and Regression Trees}. [S.l.: s.n.], 1984.
+  (Chapman e Hall/CRC).}
+
 \bibitem[Catlett 2006]{Catlett2006}
 \abntrefinfo{Catlett}{CATLETT}{2006}
 {CATLETT, J. {Into Ordered Discrete Attributes}.
@@ -92,6 +97,12 @@ Tese (Doutorado) --- Fundacao Getulio Vargas, Rio de Janeiro, 2017.}
   Science/Engineering/Math, 1997. 432~p.
 ISSN 10450823.
 ISBN 9781577354260.}
+
+\bibitem[Quinlan 1986]{Quinlan1986}
+\abntrefinfo{Quinlan}{QUINLAN}{1986}
+{QUINLAN, J.~R. {Induction of Decision Trees}.
+\emph{Machine Learning}, v.~1, n.~1, p. 81--106, 1986.
+ISSN 15730565.}
 
 \bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
 \abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
