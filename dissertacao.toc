@@ -7,10 +7,6 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter*.12}
-\contentsline {section}{Motiva\IeC {\c c}\IeC {\~a}o}{1}{section*.13}
-\contentsline {chapter}{Objetivo}{2}{section*.14}
-\contentsline {chapter}{Rotula\IeC {\c c}\IeC {\~a}o}{2}{section*.15}
-\contentsline {chapter}{Disposi\IeC {\c c}\IeC {\~a}o do Documento}{3}{section*.16}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Aprendizado de M\IeC {\'a}quina}{5}{section.1.1}
@@ -41,9 +37,9 @@
 \contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{30}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}CART}{31}{subsection.3.3.2}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {section}{Conclus\IeC {\~o}es}{33}{section*.44}
-\contentsline {section}{Trabalhos Futuros}{36}{section*.47}
-\contentsline {section}{Cronograma}{36}{section*.48}
+\contentsline {chapter}{Conclus\IeC {\~o}es}{33}{section*.40}
+\contentsline {chapter}{Trabalhos Futuros}{36}{section*.43}
+\contentsline {chapter}{Cronograma}{36}{section*.44}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{37}{section*.52}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{37}{section*.48}

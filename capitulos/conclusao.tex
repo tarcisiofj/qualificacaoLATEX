@@ -2,17 +2,17 @@
 Aqui serão abordados as conclusões dessa  proposta de mestrado referentes aos resultados do capítulo ~\ref{cap:resultados},  bem como uma sessão de Trabalhos Futuros e  Cronograma. Em Trabalhos Futuros a pretenção é expor melhoriras e expansões de tudo que fora realizado  nesta pesquisa, e mostrar que existe uma continuidade para todo esse estudo aqui elaborado. Já no Cronograma, será criado uma tabela divida em meses definindo os passos a serem seguidos até a conclusão da dissertação.
 
 \section*{Conclusões}
-\addcontentsline{toc}{section}{Conclusões}
+\addcontentsline{toc}{chapter}{Conclusões}
 
 O que se pretende fazer aqui nesta sessão é comentar as conclusões aqui realizadas neste trabalho, capítulo ~\ref{cap:resultados}, onde nesse capítulo mostrou a aplicação dos algoritmos supervisionados em cima de algumas bases de dados, e de fato relatar se o objetivo foi satisfatório, ou não.
 
-Uma vez conhecido o problema, foi realizado a execução de dois algoritmos supervisionados, servindo de amostra para provar que era possível fazer rotulação de dados com quaisquer algoritmos supervisionados, tema deste trabalho. E já identificando alguns trabalhos que já haviam feito rotulação, ~\cite{Lopes}, utilizando algoritmos supervisionados, o intuito era executar outros algoritmos com paradigmas diferentes aos que foram realizados nessas pesquisas anteriores. 
+Uma vez conhecido o problema, foi realizado a execução de dois algoritmos supervisionados, servindo de amostra para provar que era possível fazer rotulação de dados com quaisquer algoritmos supervisionados, tema deste trabalho. E já identificando alguns trabalhos que já haviam feito rotulação, ~\cite{Lopes}, utilizando algoritmos supervisionados, o intuito era executar outros algoritmos com paradigmas diferentes aos que foram realizados em pesquisas anteriores. 
 
-Dos dois algoritmos apresentados, um pertencente ao paradigma simbólico e o outro estatístico. Ademais cada execução desses algoritmos resultarão respostas satisfatórias no âmbito da rotulação de dados. Embora cada um tenham suas peculiaridades.
+Dos dois algoritmos apresentados, um pertencente ao paradigma simbólico e o outro estatístico. Ademais cada execução desses algoritmos resultaram respostas satisfatórias no âmbito da rotulação de dados. Embora cada um tenham suas peculiaridades.
 
 No modelo de resolução proposto foi inicialmente utilizado Naive Bayes na base de dados Seeds\footnote{Sessão ~\ref{cap:resultados:ssec:seed:nb}}. Logo o resultado mostrou-se bem confiável pois o método consegue mostrar através da tabela ~\ref{tab:execucoes:seed:nb}, os valores de correlação entre os atributos, também exibido na coluna \textbf{Relevância} da tabela \ref{tab:rot:seeds:nb}. Dessa forma fica fácil identificar quais os atributos podem ser os rótulos dos clusters. Embora essa decisão possa ser modificada de acordo com o valor da variável ${V}$. Variável essa criada para melhor escolher os atributos do rótulo, e podendo assumir valores diferentes dependendo do comportamento da base de dados.
 
-Continuando com a base Seeds, após a escolha do atributo que fará parte do rótulo, o segundo passo é a escolha da faixa de valores do atributo. Essa segunda etapa é dependente totalmente da discretização\footnote{sessão ~\ref{cap:refTeor:sec:discret}} e independente da primeira etapa. O método é capaz de gerar a faixa de maior repetição de valores de qualquer atributo, mas aqui neste trabalho escolhemos o atributo rótulo. Para ter mais  confiabilidade  no rótulo o método escolhe a faixa de valores que mais se repetem. No caso desse algoritmo o resultado na tabela \ref{tab:rot:seeds:nb} consegue provar uma boa eficiência, pois em cada 70 elementos do cluster 1, somente 14, ficaram de fora dessa faixa. No cluster 2, somando os dois atributos rótulos tem-se 12 elementos que não estão dentro da representatividade do rótulo. Outro valor pequeno em relação aos 70 elementos. E no cluster 3, somente 5 elementos não estão dentro da faixa considerada rótulo.
+Continuando com a base Seeds, após a escolha do atributo que fará parte do rótulo, o segundo passo é a escolha da faixa de valores do atributo. Essa segunda etapa é dependente totalmente da discretização\footnote{sessão ~\ref{cap:refTeor:sec:discret}} e independente da primeira etapa. O método é capaz de gerar a faixa de maior repetição de valores de qualquer atributo, mas aqui neste trabalho o que importa é a faixa do atributo rótulo. Para ter mais  confiabilidade  no rótulo o método escolhe a faixa de valores que mais se repetem. No caso desse algoritmo o resultado na tabela \ref{tab:rot:seeds:nb} consegue provar uma boa eficiência, pois em cada 70 elementos do cluster 1, somente 14, ficaram de fora dessa faixa. No cluster 2, somando os dois atributos rótulos tem-se 12 elementos que não estão dentro da representatividade do rótulo. Outro valor pequeno em relação aos 70 elementos. E no cluster 3, somente 5 elementos não estão dentro da faixa considerada rótulo.
 
 
 \begin{figure}[h!]
@@ -57,7 +57,7 @@ Ja na base de dados Iris, os dois algoritmos supervisionados testados apresentar
 
 Nesta base Iris os algoritmos tem resultados nos gráficos, bastantes semelhantes, e logo se percebe que essa base contém características que possuem mais coerência com  a classe em relação ao da base SEEDS, pois nenhum atributo possui valor abaixo da linha 65(\%) de relacionamento entre eles. Embora no gráfico as  linhas referentes aos comportamentos dos atributos não sejam totalmentes iguais em cada algoritmo executado, não chegou a um valor que diferenciasse  para modificar o resultado dos rótulos como resposta.
 
-Na rotulação encontrada pelo dois algoritmos nos resultados da tabela \ref{tab:rot:iris:nb} e \ref{tab:rot:iris:cart} o rótulo escolhido no cluster 1 teve dois atributos, \textbf{petallength} e \textbf{petalwidth} e cada um deles definiram uma faixa onde foi possível abranger 100\% de elementos dentro das faixas escolhidas por cada um dos atributos. Já no cluster 2 os mesmos atributos são escolhidos mas com faixas de valores diferentes. Embora não tivesse fechado os mesmos valores do cluster 1, obteve um total, de 7 elementos do \textbf{petallength} e 8 do \textbf{petalwidth}, igual a 15 elementos que não estão dentro da faixa delimitada pelos rótulos. O cluster 2 possui um total de 50 elementos e 15 deles não são representados pelo rótulo do cluster. E no cluster 3 o atributo escolhido para compor o rótulo é mais uma vez o \textbf{petalwidth}. Logo se percebe a importância do atributo nos clusters, mas em nenhum deles a faixa é a mesma. Isso define bem o rótulo do cluster 3, pois o rótulo representa 45 elementos dentro do cluster, possuindo somente 5 elementos fora dessa faixa representada pelo atributo.
+Na rotulação encontrada pelo dois algoritmos nos resultados da tabela \ref{tab:rot:iris:nb} e \ref{tab:rot:iris:cart} o rótulo escolhido no cluster 1 teve dois atributos, \textbf{petallength} e \textbf{petalwidth} e cada um deles definiram uma faixa onde foi possível abranger 100\% de elementos dentro das faixas escolhidas por cada um dos atributos. Já no cluster 2 os mesmos atributos são escolhidos mas com faixas de valores diferentes. Embora não tivesse fechado os mesmos valores do cluster 1, obteve um total, de 7 elementos do \textbf{petallength} e 8 do \textbf{petalwidth}, totalizando 15 elementos que não estão dentro da faixa delimitada pelos rótulos. O cluster 2 possui um total de 50 elementos e 15 deles não são representados pelo rótulo do cluster. E no cluster 3 o atributo escolhido para compor o rótulo é mais uma vez o \textbf{petalwidth}. Logo se percebe a importância do atributo nos clusters, mas em nenhum deles a faixa é a mesma. Isso define bem o rótulo do cluster 3, pois o rótulo representa 45 elementos dentro do cluster, possuindo somente 5 elementos fora dessa faixa representada pelo atributo.
 
 A repetição do atributo \textbf{petalwidth} em todos os rótulos, acaba mostrando o grau de relevância desse atributo na base de dados. Para um especialista é interessante saber que esse atributo possue um grande referencial na base de dados. Nos rótulos esse atributo assumiu faixas diferentes conseguindo assim o método da um significado ao cluster. 
 
@@ -68,7 +68,7 @@ Com uma breve  análise já se constata que os resultados nos dois algoritmos su
 
 
 \section*{Trabalhos Futuros}
-\addcontentsline{toc}{section}{Trabalhos Futuros}
+\addcontentsline{toc}{chapter}{Trabalhos Futuros}
 
 A pesquisa ainda precisa de mais divulgação na esfera acadêmica, e para isso a plublicação de um artigo sobre os resultados apresentados aqui é uma consolidação dessa proposta de mestrado já voltada para a dissertação propriamente dita.
 
@@ -79,7 +79,7 @@ Outro ponto importante é inserir nos teste mais algoritmos, que pertençam a  p
 
 
 \section*{Cronograma}
-\addcontentsline{toc}{section}{Cronograma}
+\addcontentsline{toc}{chapter}{Cronograma}
 
 \definecolor{midgray}{gray}{.8}
 \begin{table}[!htbp]
