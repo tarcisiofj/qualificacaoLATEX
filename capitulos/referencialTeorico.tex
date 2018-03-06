@@ -2,30 +2,37 @@
 
 
 
-Será abordado neste capítulo o conteúdo base na compreensão deste trabalho dividido em 3 sessões: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
+Será abordado neste capítulo o conteúdo base para compreensão deste trabalho dividido em 3 seções: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
 
-A primeira seção contempla os principais tipos de aprendizados indutivos  dando ênfase ao aprendizagem supervisionada, foco da proposta deste mestrado. O aprendizado indutivo utiliza uma amostra do todo para tirar uma conclusão. Caso os exemplos retirados de uma base de dados não forem suficientes, talvez o conhecimento derivado destes exemplos não mostrem a verdade. 
+Na seção \ref{cap:refTeor:sec:aprendMaq} contempla os principais tipos de aprendizados indutivos  dando ênfase a aprendizagem supervisionada, foco da proposta deste mestrado. A indução é um tipo de inferência lógica, onde a partir de um pequeno número de observações pode-se ter uma conclusão geral de todo o conjunto. Então, caso a pequena amostra não tenha dados suficientes ou os dados da amostra não forem relevantes, o conhecimento induzido acaba sendo prejudicado por generalizar o conhecimento adquirido, dessa amostra, para todo o grupo de dados.
 
-O segundo ítem dissertará sobre a técnica de discretização adotada nesta pesquisa. Possuindo grande contribuição para os resultados gerados, e ganhando assim uma seção própria para explanação de como funciona essa técnica. Já na terceira seção, serão abordados trabalhos com mesmas características particulares para melhor elucidar o motivo da elaboração dessa proposta de mestrado.
+Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre a técnica de discretização adotada nesta pesquisa. Possuindo grande contribuição para os resultados gerados, e ganhando assim uma seção própria para explanação de como funciona essa técnica. E na seção \ref{cap:refTeor:sec:trabcorrel}, serão abordados trabalhos que possuam mesmas características desta pesquisa adicionando conhecimento ao tema.
 
 
 
 \section{Aprendizado de Máquina}\label{cap:refTeor:sec:aprendMaq}
 
-Aprendizagem de máquina é a capacidade do aprendizado automático com utilização de algoritmos atuando em cima de uma base de dados.  Diz-se que o computador está aprendendo quando existe uma melhora de desempenho de tarefas que ele utilizou como exemplo \cite{Mitchell1997}. Um exemplo seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Não seria necessário a implementação de várias linhas de código informando, que a cor dos olhos são azuis com orelhas e cabelos grandes seriam de uma certa pessoa. Ao invés disso é observada várias fotos tituladas de uma certa pessoa, e após vários exemplos o computador seria capaz de predizer uma foto nova, se é, ou não, da determinada pessoa através de aprendizado anterior.
+ A aprendizagem de máquina, diferente das metodologias tradicionais de implementação, utiliza sua experiência anterior, para melhorar suas respostas a partir de problemas em determinadas áreas. Segue sua definição segundo \citeonline{Mitchell1997}:
+ 
+ \newtheorem{defaprendmaq}{Definição}
+  \begin{defaprendmaq}
+   Um programa de computador aprende com a experiência E em relação a alguma classe de tarefas T e medida de desempenho P, se seu desempenho em tarefas em T, conforme medido por P, melhora com a experiência E
+   \label{teo:defaprendmaq}
+  \end{defaprendmaq}
+ 
+ Um exemplo, seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Seria inserida várias fotos tituladas de uma certa pessoa no banco de dados, e após vários exemplos o programa de computador seria capaz de predizer, se uma nova foto é de uma determinada pessoa através de aprendizado  anterior, ou melhor, fotos anteriormente inseridas .
 
-Existem alguns motivos, onde justificam, que não é possível simplismente exigir que o projetista implemente melhorias no sistema de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de  todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
+Alguns motivos justificam que não é possível simplismente exigir do projetista implementar melhorias no sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
 
-A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para solucionar essa classificação. E a escolha apropriada, desse algoritmo, se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
+A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para solucionar essa classificação. E a escolha apropriada desse algoritmo se dará através de métricas, que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
-Uma analogia referente do que foi dito acima seria um “problema”,  comparado a um “motor”, e os algoritmos disponíveis seriam as "ferramentas" para concertar esse motor. A partir daí a ferramenta que fosse mais eficaz, considerando métricas de desempenho, para fazer o motor funcionar, seria a ferramenta(algoritmo) escolhida. Tendo assim a escolha certa para um determinado problema.
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
-Nesta seção será abordado um método que através de uma banco de dados já classificado por especialistas, será feita uma predição de novos registros com base em vários desses exemplos já classificados. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
+Nesta seção será abordado um método que através de uma base de dados classificada, será realizado uma predição de novos registros com base em vários desses exemplos já classificados. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
 
 
-O termo "Supervisionado" indica que existe um supervisor para cada registro de entrada especificando uma saída para esse registro. Considerando uma base de dados de imagens de rostos, onde cada imagen possui uma saída representado por uma classe: masculino ou feminino. A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, uma vez que são inúmeras as diferenças que difere as faces masculinas e femininas. Mas uma alternativa seria dar exemplos de rostos com suas classificações de fazer que automaticamente a máquina "aprenda" uma regra para predizer se é masculino ou feminino \cite{Barber2011}.
+O termo ''Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe). Considerando uma base de dados de imagens de rostos, onde cada imagen possui uma saída representada por uma classe: masculino ou feminino. A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina ''aprender'' uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
 
 Em \cite{RusselStuart.Norvig2013} os autores fazem uma apresentação formal do funcionamento da aprendizagem supervisionada. Dado um conjunto de treinamento 
 \begin{equation}
@@ -34,7 +41,7 @@ Em \cite{RusselStuart.Norvig2013} os autores fazem uma apresentação formal do 
 \end{equation}
 onde cada ${y_{j}} $ foi gerado por ${y=f(x)}$ desconhecida. Encontrar uma função ${h}$ que se aproxime da função ${f}$ real.
 
-A função ${h}$ é uma hipótese onde prevê um melhor desempenho entre as hipóteses possíveis através dos conjuntos de exemplos, que são diferentes do conjunto de treinamento \ref{eq:aprendSup}.
+A função ${h}$ é uma hipótese onde prevê um melhor desempenho entre as hipóteses possíveis através dos conjuntos de exemplos, que são diferentes do conjunto de treinamento equação \ref{eq:aprendSup}.
 
  \begin{figure}[h!]
     \centering
@@ -58,7 +65,7 @@ Ja na figura \ref{fig:graf1:grafB} o ajuste da função se torna mais simples e 
 
 A figura \ref{fig:graf1} mostra duas hipóteses que tentam se aproximar ao máximo da função verdadeira, que é desconhecida. Mesmo parecendo que  na figura \ref{fig:graf1:grafA} obteve-se melhor resultado, pois todos os pontos são contemplados pela função, mas esta função ${h}$ acabou ficando muito específica e isso não retrata os dados em um mundo real. Então quanto mais  generalizado for ${h}$, melhor será para prevê os valores de ${y}$ para novos conjuntos de dados.
 
-Antes de falar dos algoritmos utilizados nesse texto a aprendizagem supervisionada detém dois tipos de caso: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
+Antes de falar dos algoritmos utilizados nesse texto, a aprendizagem supervisionada detém dois tipos de casos: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
 
 
 \subsubsection{Algoritmo Classification and Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
@@ -67,6 +74,7 @@ Esse algoritmo constroi modelos de previsão a partir de dados de treinamento on
 Inicialmente todas as amostras se concentram no nó raiz, e a partir daí é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homeogêneos. Dependendo da questão as amostras irão para a folha esquerda ou direita do nó raiz.
 
 O CART faz essa divisão em função da regra Gini\footnote{O CART pode utilizar outros critérios de divisão de dados como: entropia e critério de Twoing} \cite{braiman1984}, parecida com a regra da entropia usada no algoritmo ID3\footnote{Algoritmo abordado por \cite{Quinlan1986}}. O índice Gini varia de 0 a 1, definindo o grau de pureza do nó. 
+
 \begin{equation}
 Gini(S)= 1 - \sum p^2(j/t)
  \label{eq:cartGini}
@@ -150,15 +158,15 @@ Outra situação é caso exista uma variável categórica que não foi observada
 
 \subsection{Aprendizado Não-Supervisionado}\label{ssec:aprendNSup}
 
-No Aprendizado Não-Supervisionado , não existe uma tentativa de se encontrar uma função que se aproxime da real. Logo porque os registros não são classificados, então o conjunto de treinamento não possue informação da saída sobre determinada entrada . Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tenta agrupá-los de forma a ter algum sentido deles estarem juntos. 
+No Aprendizado Não-Supervisionado, não existe uma tentativa de se encontrar uma função que se aproxime da real. Logo porque os registros não são classificados, então o conjunto de treinamento não possue informação da saída sobre determinada entrada. Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tenta agrupá-los de forma a ter algum sentido deles estarem juntos. 
 
-Quando o algoritmo encontram dados com mesma similaridade ele os agrupa formando clusters. Os números de clusters encontrados irão depender de como os algoritmos funcionam, junto com o grau de dissimilaridade entre elementos de grupos diferentes. Como não existe uma variável classe no Aprendizado Não-Supervisionado, então \cite{Barber2011} diz que o maior interesse seria em uma perspectiva probabilística de ditribuição ${p(x)}$ de um determinado conjunto de dados.
+Quando o algoritmo encontra dados com mesma similaridade ele os agrupa formando clusters. Os números de clusters encontrados irão depender de como os algoritmos funcionam, junto com o grau de dissimilaridade entre elementos de grupos diferentes. Como não existe uma variável classe no Aprendizado Não-Supervisionado, então \cite{Barber2011} diz que o maior interesse seria em uma perspectiva probabilística de ditribuição ${p(x)}$ de um determinado conjunto de dados.
 \begin{equation}
  D = \{x_{n},n=1,...,N\}
  \label{eq:aprendNSup}
 \end{equation}
 
-Uma vez que no conjunto, \ref{eq:aprendNSup}, não existe classe ${y}$, encontrado em um conjunto de treinamento, \ref{eq:aprendSup}, o algoritmo precisa encontrar padrões nos atributos para fazer os agrupamentos.
+Uma vez que no conjunto (\ref{eq:aprendNSup}), não existe classe ${y}$, encontrado em um conjunto de treinamento, equação \ref{eq:aprendSup}, o algoritmo precisa encontrar padrões nos atributos para fazer os agrupamentos.
 
 
 \section{Discretização}\label{cap:refTeor:sec:discret}
@@ -166,7 +174,7 @@ Uma vez que no conjunto, \ref{eq:aprendNSup}, não existe classe ${y}$, encontra
 A discretização acontece em duas etapas no modelo defendido nesse trabalho, por isso a preocupação na explanação de seu funcionamento aqui nesta seção. O método de discretização faz a conversão de valores contínuos em valores discretos. 
 A partir de um atributo com valores contínuos, a discretização irá forçar um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos em cada atributo, será relacionado a faixa que aquele atributo pertence, definindo assim seu novo valor. O melhor método de discretização seria encontrar o conjunto de valores contínuos por faixa de intervalos pequenos \cite{Kotsiantis2006}
 
-A partir de alguns autores \cite{Catlett2006,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
+Segundo alguns autores \cite{Catlett2006,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
 
 Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \cite{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
 

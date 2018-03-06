@@ -1,14 +1,14 @@
 \select@language {brazil}
-\contentsline {table}{\numberline {1}{\ignorespaces Base de Dados Modelo\relax }}{19}{table.caption.23}
-\contentsline {table}{\numberline {2}{\ignorespaces Base de Dados Modelo Discretizada\relax }}{20}{table.caption.25}
-\contentsline {table}{\numberline {3}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{26}{table.caption.29}
-\contentsline {table}{\numberline {4}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{27}{table.caption.30}
-\contentsline {table}{\numberline {5}{\ignorespaces Resultado de ${4(quatro)}$ execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{27}{table.caption.31}
-\contentsline {table}{\numberline {6}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{28}{table.caption.32}
-\contentsline {table}{\numberline {7}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{29}{table.caption.33}
-\contentsline {table}{\numberline {8}{\ignorespaces Resultado de ${4(quatro)}$ itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{29}{table.caption.34}
-\contentsline {table}{\numberline {9}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{30}{table.caption.35}
-\contentsline {table}{\numberline {10}{\ignorespaces Resultado de ${4(quatro)}$ execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{31}{table.caption.36}
-\contentsline {table}{\numberline {11}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{32}{table.caption.37}
-\contentsline {table}{\numberline {12}{\ignorespaces Resultado de ${4(quatro)}$ itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{32}{table.caption.38}
-\contentsline {table}{\numberline {13}{\ignorespaces Cronograma de atividades\relax }}{36}{table.caption.45}
+\contentsline {table}{\numberline {1}{\ignorespaces Base de Dados Modelo\relax }}{18}{table.caption.23}
+\contentsline {table}{\numberline {2}{\ignorespaces Base de Dados Modelo Discretizada\relax }}{19}{table.caption.25}
+\contentsline {table}{\numberline {3}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{24}{table.caption.29}
+\contentsline {table}{\numberline {4}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{25}{table.caption.30}
+\contentsline {table}{\numberline {5}{\ignorespaces Resultado de ${4(quatro)}$ execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{25}{table.caption.31}
+\contentsline {table}{\numberline {6}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{26}{table.caption.32}
+\contentsline {table}{\numberline {7}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{27}{table.caption.33}
+\contentsline {table}{\numberline {8}{\ignorespaces Resultado de ${4(quatro)}$ itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{27}{table.caption.34}
+\contentsline {table}{\numberline {9}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{28}{table.caption.35}
+\contentsline {table}{\numberline {10}{\ignorespaces Resultado de ${4(quatro)}$ execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{29}{table.caption.36}
+\contentsline {table}{\numberline {11}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{30}{table.caption.37}
+\contentsline {table}{\numberline {12}{\ignorespaces Resultado de ${4(quatro)}$ itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{30}{table.caption.38}
+\contentsline {table}{\numberline {13}{\ignorespaces Cronograma de atividades\relax }}{34}{table.caption.43}

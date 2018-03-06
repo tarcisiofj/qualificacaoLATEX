@@ -5,18 +5,19 @@
 
 \chapter*[Introdução]{Introdução}
 \addcontentsline{toc}{chapter}{Introdução}
-Com a popularização da internet e mídias sociais, cada vez mais dados são processados, transportados e produzidos. E termo como Big Data, hoje, faz parte do contidiano de empresas e pessoas. De acordo com o autor \citeonline{Montgomery2013} Big Data são os dados que excedem a capacidade de sistemas de banco de dados. É nesse cenário com grandes volumes de dados, que, não só a formação de grupos é importante, mas também a compreensão, desses grupos de dados, se torna relevante.
+Com a popularização da internet e mídias sociais, cada vez mais dados são processados, transportados e produzidos. E hoje, termos como, Big Data, fazem parte do contidiano de empresas e pessoas. De acordo com o autor \citeonline{Montgomery2013} Big Data são os dados que excedem a capacidade de sistemas de banco de dados. É nesse cenário, com grandes volumes de dados, que não só a formação de grupos ganha importante, mas também a compreensão dos mesmos.
 
 Agrupamento de dados, ou clustering, é também determinado quando dois ou mais objetos pertencentes ao mesmo grupo, compartilham um conceito em comum \cite{Kumar2013}. Cluster é um termo bastante pesquisado e aplicada em vários contextos como segmentação de imagens, recuperação de informação e reconhecimento de objetos . Os algoritmos de agrupamento, conforme \citeonline{Kumar2013}, são aplicados em diferentes campos: Biologia (classificação de plantas e animais), Marketing (encontrar grupos de clientes com comportamentos semelhantes), planejamento de cidades (identificação de casas de acordo com seu tipo, valor e localização geográfica), entre outros.
 
-Apesar da utilização de grupos (clusters) de dados neste trabalho, pouco atenção é dada na criação dos mesmos, entretanto uma maior relevância é atribuída na compreensão dos grupos de dados já formados. 
+Apesar da utilização de grupos (clusters) de dados neste trabalho, pouco atenção é dada na criação dos mesmos, entretanto uma maior relevância é atribuída na rotulação dos grupos, isto é, na compreensão dos grupos de dados já formados. 
 
-O termo rotulação, neste trabalho, é discutido de forma diferente a classificação. Segundo \citeonline{LOPES2014} rotulação é defindida como: 
+O termo rotulação, neste trabalho, segue a definição conforme \citeonline{LOPES2014}: 
+
 \newtheorem{defprobLopes}{Definição}
     \begin{defprobLopes}
     Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$; o objetivo consite em apresentar um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$ associado.
-        \footnotemark 
-        \footnotetext{Definição retirada de \cite{LOPES2014}}
+        %\footnotemark 
+        %\footnotetext{Definição retirada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
             \item ${K}$ é o número de clusters;
             \item ${c_i}$ é o i-ésimo cluster qualquer;
@@ -30,21 +31,20 @@ O termo rotulação, neste trabalho, é discutido de forma diferente a classific
     \label{teo:lopes:problema}
     \end{defprobLopes}
 
-Em uma base de dados onde cada registro possua uma classe definida: macho, fêmea ou raça X, Y, Z, etc. E apesar que na criação desses clusters são realizadas por uma correlação das características do grupo, não fica claro qual característica se apresenta mais significativa dentro desses grupos. Na rotulação a intenção é definir para estes grupos algum significado, gerando um tipo de rótulo, ${ R=\{ r_{c1},...,r_{ck} \} }$, para melhor expressar o cluster ${c_i}$ associado (Definição \ref{teo:lopes:problema}).
+Em um exemplo, onde base de dados possuem classes já definidas: macho, fêmea ou raça X, Y, Z, etc. E que ao criar esses grupos sabe-se que existe uma correlação das características dos grupos, acabando por não deixar visível qual característica se apresenta mais significativa dentro desses grupos. Tem-se na rotulação a intenção de definir algum significado para estes grupos, gerando um tipo de rótulo, ${ R=\{ r_{c1},...,r_{ck} \} }$, para melhor expressar o cluster ${c_i}$ associado (Definição \ref{teo:lopes:problema}).
 
-Tecnicamente a informação do rótulo aplicada no cluster pode ajudar na tomada de decisão sobre algum contexto. A exemplo disso, supõe-se uma situação empregada na área urbana, onde pessoas circulam na cidade e imagina-se que os dados de controle de seus celulares estão sendo capturados pelas células das torres, e gravados em um base de dados pelas operadoras. Uma vez em posse desses dados, são criados clusters. Aplicando a rotulação pode-se personalizar alguns serviços para esses grupos já formados. 
+Tecnicamente a informação do rótulo aplicada no cluster pode ajudar na tomada de decisão em algum contexto. A exemplo disso, supõe-se uma situação empregada na área urbana, onde pessoas circulam na cidade e imagina-se que os dados de controle de seus celulares estão sendo capturados pelas células das torres, e gravados em um base de dados pelas operadoras. Uma vez em posse desses dados, são criados clusters podendo ser aplicado rotulação nestes grupos. E através dos rótulos pode-se personalizar alguns serviços para esses grupos já formados. 
 
-Então, caso o rótulo (${r_{c_i}}$) de um cluster (${c_i}$) fosse o  atributo localização, e os valores  desse atributo escolhido para compor o rótulo, fossem as coordenadas geográficas, o qual definiriam o tipo de localização. Logo percebe-se que os participante desse grupo possuem característica de frequentar alguma localização em comum. A interpretação deste rótulo poderá implicar em uma tomada de decisão personalizada para este grupo, objetivando otimizar um problema.
+Seguindo o exemplo dos dados capturados do celuldar, caso o rótulo (${r_{c_i}}$) de um cluster (${c_i}$) fosse o  atributo localização, e os valores  desse atributo escolhido para compor o rótulo, fossem as coordenadas geográficas, o qual definiriam o tipo de localização. Logo percebe-se que os participante desse grupo possuem característica de frequentar alguma localização em comum. A interpretação deste rótulo poderá implicar em uma tomada de decisão personalizada para este grupo, objetivando otimizar um problema.
 
-No contexto de rotulação esta pesquisa tem como foco a aplicação de dois algoritmos, com paradigmas diferentes, provando que a técnica de rotulação funciona para os dois  algoritmos supervisionados: Naive Bayes (paradigma estatístico) e o CART (paradigma simbólico).
+No contexto de rotulação esta pesquisa tem como foco a aplicação de algoritmos, com paradigmas diferentes, provando que é possível fazer rotulação utilizando dois  algoritmos supervisionados: Naive Bayes (paradigma estatístico) e o CART (paradigma simbólico).
 
-O método aplicado nesta pesquisa é utilizado algoritmos supervisionados para obter o  atributo  de maior relevância no cluster. Uma vez escolhido o atributo é definido o número de faixas de valores a ser dividida, e logo realizado a discretização. Após a discretização do atributo de maior relevância é escolhido a faixa de valor que mais se repete nesse atributo. 
+O método aplicado nesta pesquisa utiliza algoritmos supervisionados para obter o atributo de maior relevância no cluster. Uma vez escolhido o atributo é definido um número, o qual será a quantidade de faixas de valores a ser dividida, e logo realizado a discretização. Após a discretização do atributo de maior relevância é selecionada a faixa de valor que mais se repete nesse atributo. O resultado será o rótulo composto pelo atributo mais importante junto com a faixa selecionada.   
 
-Na seção \ref{cap:ferramentas:sec:considproblema} é abordada a definição do problema da pesquisa. A partir da definição do problema um modelo de resolução é apresentado através do fluxograma. Neste modelo é realizado a discretização da base de dados no Processos (I). No Processo (II) é aplicado o algoritmo supervisionado e no Processo (III) o resultado da rotulação. 
+Na capítulo \ref{cap:ferramentas} é abordada a definição do problema da pesquisa. A partir dessa definição um modelo de resolução é apresentado através de um fluxograma. Na seção \ref{cap:ferramentas:sec:tecnica} é demonstrado o funcionamento da técnica de correlação entre atributos. E na seção \ref{cap:ferramentas:sec:exebasemodfic} uma base de dados fictícia é utilizada para exemplificar a execução dos processos do modelo de resolução: discretização da base de dados no Processos (I), no Processo (II) é aplicado o algoritmo supervisionado e no Processo (III) o resultado da rotulação. 
 
-No capítulo \ref{cap:ferramentas}, uma base de dados fictícia é utilizada para exemplificar a execução dos processos do modelo de resolução. 
-No capítulo \ref{cap:resultados} resultados são apresentados por cada base de dados. Os algoritmos supervisionados são aplicados a cada base de dados e gerados os rótulos. 
-E no capítulo \ref{cap:conclusao} a conclusão onde é realizado uma interpretação dos resultados.
+No capítulo \ref{cap:resultados} os resultados são apresentados separados por cada base de dados. Os algoritmos supervisionados são aplicados a cada base de dados e gerados os rótulos. 
+E já no capítulo \ref{cap:conclusao} a conclusão, onde através dos resultados será exposto o desfecho de toda pesquisa realizada.
 
 % \section*{Motivação}\label{sec:motivacao}
 % \addcontentsline{toc}{section}{Motivação}

@@ -11,7 +11,8 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,					% tamanho da fonte
-	openright,				% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	%openright,				% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	openany,				% capítulos começam  qualquer pág (não insere página vazia caso preciso)
 	twoside,					% para impressão em verso e anverso. Oposto a oneside
 	a4paper,					% tamanho do papel. 
 	% -- opções da classe abntex2 --
@@ -164,18 +165,14 @@
 
 % Inclui cada capitulo da Dissertação
 \include{capitulos/introducao}
-
 % PARTE - Define a divisão do documento em partes (Não é obrigatório)
 %\part{Preparação da pesquisa}
 %\include{capitulos/referencias}
 \include{capitulos/referencialTeorico}
-
 \include{capitulos/ferramentas}
-
 % PARTE
 %\part{Proposta}
 %\include{capitulos/proposta}
-
 % PARTE
 %\part{Parte Final}
 \include{capitulos/resultados}
