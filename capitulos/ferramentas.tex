@@ -13,8 +13,8 @@ Existe uma importância na criação dos clusters, contudo para o espectador é 
 Tem-se então o real problema de rotulação, contudo é necessário existir algum elemento definindo o porquê daquele grupo formado. O elemento é um rótulo composto por um, ou vários, atributo(s) de maior relevância no cluster, junto com uma faixa de valores. Essa faixa é um intervalo de valores definido pela discretização \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que apresenta os valores que se repetem com a maior frequência.
 
 O Problema de Rotulação é formalmente definido como segue abaixo:
-\newtheorem{defprob}{Definição}
-    \begin{defprob}
+%\newtheorem{teorema}{Definição}
+    \begin{teorema}
     Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$.
         \footnotemark 
         \footnotetext{Adaptada de \cite{Lopes}}
@@ -26,7 +26,7 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
             \item ${m}$ é a dimensão do problema;
         \end{itemize}
     \label{teo:problema}
-    \end{defprob}
+    \end{teorema}
 
 %\afterpage{
 %    \begin{quotation}
@@ -51,7 +51,8 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
 Uma vez já conhecido a definição do problema - \textit{Definição ~\ref{teo:problema}} - é possível situar a abrangência abordada aqui nessa pesquisa, pois a intenção do estudo científico desenvolvido aqui é provar a realização de \textbf{rotulação de dados com qualquer algoritmo supervisionado}, utilizando as técnicas abordadas neste texto.
 
 O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivos intevalos, gerados a partir das frequências dos valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
-    \begin{defprob}
+%\newtheorem{teorema}{Definição}
+    \begin{teorema}
     Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, tem como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$.
         \footnotemark 
         \footnotetext{Adaptada de \cite{Lopes}}
@@ -65,7 +66,7 @@ O Modelo aqui proposto consiste em apresentar como saída um conjunto de rótulo
             \item ${m}$ é a dimensão do problema;
         \end{itemize}
     \label{teo:resolucao}
-    \end{defprob}
+    \end{teorema}
 
 Como apresentado na sessão \ref{cap:refTeor:sec:trabcorrel}, o autor foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada, e paradigma conexionista, para provar seu trabalho. Mas aqui nessa pesquisa foi aplicado no modelo um acréscimo de ${2 (dois)}$ algoritmos com paradigmas de aprendizado diferente do que já foi utilizado, compondo uma base para afirmar, que a partir dessas amostras pode-se fazer rotulação com qualquer algoritmo supervisionado.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  6 MAR 2018 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  7 MAR 2018 05:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1569,42 +1569,44 @@ Underfull \vbox (badness 3000) has occurred while \output is active []
 
  [21]
 [22]
+\c@teorema=\count276
 \openout2 = `capitulos/introducao.aux'.
 
  (./capitulos/introducao.tex
-\c@defprobLopes=\count276
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 22.
- (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 22.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30         \end{itemize}
-                           [1
+l.31     D
+          ado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$...
+[1
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 35.
+ (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 35.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 
+l.54 
       [2])pdfTeX warning (ext4): destination with the same identifier (name{pag
 e.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.167 \include{capitulos/introducao}
+l.168 \include{capitulos/introducao}
                                      [3]
 \openout2 = `capitulos/referencialTeorico.aux'.
 
- (./capitulos/referencialTeorico.tex
-\c@defaprendmaq=\count277
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
+ (./capitulos/referencialTeorico.texpdfTeX warning (ext4): destination with the
+ same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.27 A
@@ -1614,14 +1616,14 @@ l.27 A
 
 
 ]
-<figs/grafA.png, id=341, 142.28156pt x 87.32625pt>
+<figs/grafA.png, id=342, 142.28156pt x 87.32625pt>
 File: figs/grafA.png Graphic file (type png)
 <use figs/grafA.png>
 Package pdftex.def Info: figs/grafA.png  used on input line 50. on input line 5
 0.
 Package pdftex.def Info: Requested size: 113.8254pt x 69.86108pt on input line 
 50.
-<figs/grafB.png, id=343, 142.28156pt x 85.06781pt>
+<figs/grafB.png, id=344, 142.28156pt x 85.06781pt>
 File: figs/grafB.png Graphic file (type png)
 <use figs/grafB.png>
 Package pdftex.def Info: figs/grafB.png  used on input line 54. on input line 5
@@ -1675,7 +1677,7 @@ e.8}) has been already used, duplicate ignored
                    \relax 
 l.164 \begin{equation}
                        [8]
-<figs/faixaA-B_PontoCorte.png, id=441, 142.28156pt x 85.06781pt>
+<figs/faixaA-B_PontoCorte.png, id=442, 142.28156pt x 85.06781pt>
 File: figs/faixaA-B_PontoCorte.png Graphic file (type png)
 <use figs/faixaA-B_PontoCorte.png>
 Package pdftex.def Info: figs/faixaA-B_PontoCorte.png  used on input line 187. 
@@ -1695,7 +1697,7 @@ l.192
 
 LaTeX Warning: Command \' invalid in math mode on input line 206.
 
-<figs/discretizacaoEWD.png, id=454, 479.54156pt x 79.79813pt>
+<figs/discretizacaoEWD.png, id=455, 479.54156pt x 79.79813pt>
 File: figs/discretizacaoEWD.png Graphic file (type png)
 <use figs/discretizacaoEWD.png>
 Package pdftex.def Info: figs/discretizacaoEWD.png  used on input line 216. on 
@@ -1718,7 +1720,7 @@ LaTeX Warning: Command \' invalid in math mode on input line 236.
 
 LaTeX Warning: Command \^ invalid in math mode on input line 243.
 
-<figs/discretizacaoEFD.png, id=468, 487.06969pt x 94.10156pt>
+<figs/discretizacaoEFD.png, id=469, 487.06969pt x 94.10156pt>
 File: figs/discretizacaoEFD.png Graphic file (type png)
 <use figs/discretizacaoEFD.png>
 Package pdftex.def Info: figs/discretizacaoEFD.png  used on input line 248. on 
@@ -1740,7 +1742,7 @@ l.259
 
 Package hyperref Warning: Suppressing empty link on input line 260.
 
-<figs/modeloLopes.png, id=480, 264.99pt x 216.81pt>
+<figs/modeloLopes.png, id=481, 264.99pt x 216.81pt>
 File: figs/modeloLopes.png Graphic file (type png)
 <use figs/modeloLopes.png>
 Package pdftex.def Info: figs/modeloLopes.png  used on input line 264. on input
@@ -1753,7 +1755,7 @@ Package hyperref Warning: Suppressing empty link on input line 265.
 
 Package hyperref Warning: Suppressing empty link on input line 265.
 
-<figs/modeloVicente.png, id=486, 849.1725pt x 231.86626pt>
+<figs/modeloVicente.png, id=487, 849.1725pt x 231.86626pt>
 File: figs/modeloVicente.png Graphic file (type png)
 <use figs/modeloVicente.png>
 Package pdftex.def Info: figs/modeloVicente.png  used on input line 273. on inp
@@ -1763,7 +1765,7 @@ Package pdftex.def Info: Requested size: 339.66298pt x 92.74484pt on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/modeloRotFuzzy.png, id=494, 257.46187pt x 480.29437pt>
+<figs/modeloRotFuzzy.png, id=495, 257.46187pt x 480.29437pt>
 File: figs/modeloRotFuzzy.png Graphic file (type png)
 <use figs/modeloRotFuzzy.png>
 Package pdftex.def Info: figs/modeloRotFuzzy.png  used on input line 280. on in
@@ -1780,7 +1782,7 @@ ion with the same identifier (name{page.13}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.171 \include{capitulos/referencialTeorico}
+l.172 \include{capitulos/referencialTeorico}
                                              [13 <./figs/modeloVicente.png> <./
 figs/modeloRotFuzzy.png>]
 \openout2 = `capitulos/ferramentas.aux'.
@@ -1789,7 +1791,6 @@ figs/modeloRotFuzzy.png>]
 
 Package hyperref Warning: Suppressing empty link on input line 7.
 
-\c@defprob=\count278
 
 Package hyperref Warning: Suppressing empty link on input line 20.
 
@@ -1804,15 +1805,15 @@ l.23             \item $
 
 ]
 
-Package hyperref Warning: Suppressing empty link on input line 57.
+Package hyperref Warning: Suppressing empty link on input line 58.
 
-<figs/modeloResolucao.png, id=524, 446.66875pt x 288.07625pt>
+<figs/modeloResolucao.png, id=525, 446.66875pt x 288.07625pt>
 File: figs/modeloResolucao.png Graphic file (type png)
 <use figs/modeloResolucao.png>
-Package pdftex.def Info: figs/modeloResolucao.png  used on input line 75. on in
-put line 75.
+Package pdftex.def Info: figs/modeloResolucao.png  used on input line 76. on in
+put line 76.
 Package pdftex.def Info: Requested size: 312.66599pt x 201.65198pt on input lin
-e 75.
+e 76.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1820,120 +1821,120 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 
+l.81 
       [15]
 
-Package hyperref Warning: Suppressing empty link on input line 89.
+Package hyperref Warning: Suppressing empty link on input line 90.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.92 P
+l.93 P
       egando como exemplo uma base com os seguintes atributos: \textbf{atr1,...
 [16 <./figs/modeloResolucao.png>]
 
-LaTeX Warning: Command \^ invalid in math mode on input line 92.
+LaTeX Warning: Command \^ invalid in math mode on input line 93.
 
-<figs/tecnicamodelo.png, id=544, 322.20375pt x 91.34125pt>
+<figs/tecnicamodelo.png, id=545, 322.20375pt x 91.34125pt>
 File: figs/tecnicamodelo.png Graphic file (type png)
 <use figs/tecnicamodelo.png>
-Package pdftex.def Info: figs/tecnicamodelo.png  used on input line 99. on inpu
-t line 99.
+Package pdftex.def Info: figs/tecnicamodelo.png  used on input line 100. on inp
+ut line 100.
 Package pdftex.def Info: Requested size: 225.54108pt x 63.93843pt on input line
- 99.
+ 100.
 
-Package hyperref Warning: Suppressing empty link on input line 179.
+Package hyperref Warning: Suppressing empty link on input line 180.
 
-<figs/discretizacaoEFD_R_3_atr1.png, id=556, 468.24937pt x 54.2025pt>
+<figs/discretizacaoEFD_R_3_atr1.png, id=557, 468.24937pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr1.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr1.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr1.png  used on input line
- 184. on input line 184.
+ 185. on input line 185.
 Package pdftex.def Info: Requested size: 374.59999pt x 43.36205pt on input line
- 184.
-<figs/discretizacaoEFD_R_3_atr2.png, id=557, 471.26062pt x 54.2025pt>
+ 185.
+<figs/discretizacaoEFD_R_3_atr2.png, id=558, 471.26062pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr2.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr2.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr2.png  used on input line
- 188. on input line 188.
+ 189. on input line 189.
 Package pdftex.def Info: Requested size: 377.00902pt x 43.36205pt on input line
- 188.
-<figs/discretizacaoEFD_R_3_atr3.png, id=558, 472.01344pt x 51.94406pt>
+ 189.
+<figs/discretizacaoEFD_R_3_atr3.png, id=559, 472.01344pt x 51.94406pt>
 File: figs/discretizacaoEFD_R_3_atr3.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr3.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr3.png  used on input line
- 192. on input line 192.
+ 193. on input line 193.
 Package pdftex.def Info: Requested size: 377.61127pt x 41.55528pt on input line
- 192.
+ 193.
 pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 
+l.201 
        [17 <./figs/tecnicamodelo.png>]pdfTeX warning (ext4): destination with t
 he same identifier (name{page.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 
+l.201 
        [18 <./figs/discretizacaoEFD_R_3_atr1.png (PNG copy)> <./figs/discretiza
 caoEFD_R_3_atr2.png (PNG copy)> <./figs/discretizacaoEFD_R_3_atr3.png (PNG copy
 )>]
-<figs/tecnicamodeloComp.png, id=576, 348.30125pt x 343.2825pt>
+<figs/tecnicamodeloComp.png, id=577, 348.30125pt x 343.2825pt>
 File: figs/tecnicamodeloComp.png Graphic file (type png)
 <use figs/tecnicamodeloComp.png>
-Package pdftex.def Info: figs/tecnicamodeloComp.png  used on input line 277. on
- input line 277.
+Package pdftex.def Info: figs/tecnicamodeloComp.png  used on input line 278. on
+ input line 278.
 Package pdftex.def Info: Requested size: 243.8092pt x 240.2961pt on input line 
-277.
+278.
 
 
-LaTeX Warning: Command \^ invalid in math mode on input line 278.
+LaTeX Warning: Command \^ invalid in math mode on input line 279.
 
 
-LaTeX Warning: Command \^ invalid in math mode on input line 278.
+LaTeX Warning: Command \^ invalid in math mode on input line 279.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.280 
+l.281 
        [19]
-<figs/rotulacaoNB.png, id=582, 545.03625pt x 395.4775pt>
+<figs/rotulacaoNB.png, id=583, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoNB.png Graphic file (type png)
 <use figs/rotulacaoNB.png>
-Package pdftex.def Info: figs/rotulacaoNB.png  used on input line 287. on input
- line 287.
+Package pdftex.def Info: figs/rotulacaoNB.png  used on input line 288. on input
+ line 288.
 Package pdftex.def Info: Requested size: 163.51213pt x 118.64417pt on input lin
-e 287.
-<figs/rotulacaoDecisionTree.png, id=583, 545.03625pt x 395.4775pt>
+e 288.
+<figs/rotulacaoDecisionTree.png, id=584, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoDecisionTree.png Graphic file (type png)
 <use figs/rotulacaoDecisionTree.png>
-Package pdftex.def Info: figs/rotulacaoDecisionTree.png  used on input line 291
-. on input line 291.
+Package pdftex.def Info: figs/rotulacaoDecisionTree.png  used on input line 292
+. on input line 292.
 Package pdftex.def Info: Requested size: 163.51213pt x 118.64417pt on input lin
-e 291.
+e 292.
 pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.299 
+l.300 
        [20 <./figs/tecnicamodeloComp.png> <./figs/rotulacaoNB.png> <./figs/rotu
 lacaoDecisionTree.png>]
 
-LaTeX Warning: Command \c invalid in math mode on input line 331.
+LaTeX Warning: Command \c invalid in math mode on input line 332.
 
 
-LaTeX Warning: Command \~ invalid in math mode on input line 331.
+LaTeX Warning: Command \~ invalid in math mode on input line 332.
 
 
-LaTeX Warning: Command \c invalid in math mode on input line 334.
+LaTeX Warning: Command \c invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \~ invalid in math mode on input line 334.
+LaTeX Warning: Command \~ invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 344.
+LaTeX Warning: Command \' invalid in math mode on input line 345.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1942,13 +1943,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.172 \include{capitulos/ferramentas}
+l.173 \include{capitulos/ferramentas}
                                       [21]pdfTeX warning (ext4): destination wi
 th the same identifier (name{page.22}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.172 \include{capitulos/ferramentas}
+l.173 \include{capitulos/ferramentas}
                                       [22]
 \openout2 = `capitulos/resultados.aux'.
 
@@ -1996,28 +1997,28 @@ Package hyperref Warning: Suppressing empty link on input line 7.
 
 
 ]
-<figs/grafico_NB_SEED_exec_grp.png, id=734, 386.19281pt x 309.40594pt>
+<figs/grafico_NB_SEED_exec_grp.png, id=735, 386.19281pt x 309.40594pt>
 File: figs/grafico_NB_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_SEED_exec_grp.png  used on input line 
 20. on input line 20.
 Package pdftex.def Info: Requested size: 193.09592pt x 154.70259pt on input lin
 e 20.
-<figs/grafico_CART_SEED_exec_grp.png, id=735, 348.55219pt x 344.78813pt>
+<figs/grafico_CART_SEED_exec_grp.png, id=736, 348.55219pt x 344.78813pt>
 File: figs/grafico_CART_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_SEED_exec_grp.png  used on input lin
 e 24. on input line 24.
 Package pdftex.def Info: Requested size: 174.27565pt x 172.39363pt on input lin
 e 24.
-<figs/grafico_NB_IRIS_exec_grp.png, id=741, 395.22656pt x 255.95625pt>
+<figs/grafico_NB_IRIS_exec_grp.png, id=742, 395.22656pt x 255.95625pt>
 File: figs/grafico_NB_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_IRIS_exec_grp.png  used on input line 
 42. on input line 42.
 Package pdftex.def Info: Requested size: 197.6128pt x 127.9778pt on input line 
 42.
-<figs/grafico_CART_IRIS_exec_grp.png, id=742, 410.2828pt x 255.95625pt>
+<figs/grafico_CART_IRIS_exec_grp.png, id=743, 410.2828pt x 255.95625pt>
 File: figs/grafico_CART_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_IRIS_exec_grp.png  used on input lin
@@ -2091,29 +2092,29 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `dissertacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
  (./dissertacao.aux (./pretextual/capa.aux) (./pretextual/catalografica.aux) (.
 /pretextual/assinaturas.aux) (./pretextual/dedicatoria.aux)
 (./pretextual/agradecimentos.aux) (./pretextual/epigrafe.aux)
 (./pretextual/resumos.aux) (./capitulos/introducao.aux)
 (./capitulos/referencialTeorico.aux) (./capitulos/ferramentas.aux)
 (./capitulos/resultados.aux) (./capitulos/conclusao.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
 Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: 5E2A2CC0F494C556D51CBADB63555CDC;2459.
+(rerunfilecheck)             Checksum: 3F5DBEA469F500402E81CEDAC05C6107;2459.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
- 17835 strings out of 492985
- 266905 string characters out of 6138585
- 565884 words of memory out of 5000000
- 20606 multiletter control sequences out of 15000+600000
+ 17819 strings out of 492985
+ 266657 string characters out of 6138585
+ 565650 words of memory out of 5000000
+ 20590 multiletter control sequences out of 15000+600000
  111179 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,18n,51p,1217b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2140,10 +2141,10 @@ hare/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on dissertacao.pdf (60 pages, 1978414 bytes).
+Output written on dissertacao.pdf (60 pages, 1981045 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 946 compressed objects within 10 object streams
+ 1087 PDF objects out of 1200 (max. 8388607)
+ 948 compressed objects within 10 object streams
  219 named destinations out of 1000 (max. 500000)
  34746 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -5,41 +5,41 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter*.12}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{4}{chapter.1}
-\contentsline {section}{\numberline {1.1}Aprendizado de M\IeC {\'a}quina}{4}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Aprendizado Supervisionado}{5}{subsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1.1}Algoritmo Classification and Regression Trees - CART}{6}{subsubsection.1.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1.2}Algoritmo Naive Bayes}{7}{subsubsection.1.1.1.2}
-\contentsline {subsection}{\numberline {1.1.2}Aprendizado N\IeC {\~a}o-Supervisionado}{8}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}Discretiza\IeC {\c c}\IeC {\~a}o}{9}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Discretiza\IeC {\c c}\IeC {\~a}o por Larguras Iguais - EWD}{9}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Discretiza\IeC {\c c}\IeC {\~a}o por Frequ\IeC {\^e}ncia Iguais - EFD}{11}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Trabalhos Correlatos}{12}{section.1.3}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{1}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Metodologia}}{14}{chapter.2}
-\contentsline {section}{\numberline {2.1}Considera\IeC {\c c}\IeC {\~o}es do Problema}{14}{section.2.1}
-\contentsline {section}{\numberline {2.2}O Modelo de Resolu\IeC {\c c}\IeC {\~a}o}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos }{16}{section.2.3}
-\contentsline {section}{\numberline {2.4}Exemplo com Base Modelo Fict\IeC {\'\i }cia}{17}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{17}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Processo (II) - Algoritmos Supervisionados}{19}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{21}{subsection.2.4.3}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Aprendizado de M\IeC {\'a}quina}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Aprendizado Supervisionado}{5}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Algoritmo Classification and Regression Trees - CART}{6}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Algoritmo Naive Bayes}{7}{subsubsection.2.1.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Aprendizado N\IeC {\~a}o-Supervisionado}{8}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Discretiza\IeC {\c c}\IeC {\~a}o}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Discretiza\IeC {\c c}\IeC {\~a}o por Larguras Iguais - EWD}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Discretiza\IeC {\c c}\IeC {\~a}o por Frequ\IeC {\^e}ncia Iguais - EFD}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Trabalhos Correlatos}{12}{section.2.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Resultados}}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Implementa\IeC {\c c}\IeC {\~a}o}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{24}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Naive Bayes}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}CART}{26}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{27}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{28}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}CART}{29}{subsection.3.3.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Considera\IeC {\c c}\IeC {\~o}es do Problema}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}O Modelo de Resolu\IeC {\c c}\IeC {\~a}o}{15}{section.3.2}
+\contentsline {section}{\numberline {3.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos }{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Exemplo com Base Modelo Fict\IeC {\'\i }cia}{17}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{17}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{19}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{21}{subsection.3.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Conclus\IeC {\~o}es}}{31}{chapter.4}
-\contentsline {chapter}{Trabalhos Futuros}{34}{section*.41}
-\contentsline {chapter}{Cronograma}{34}{section*.42}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}CART}{26}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{28}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}CART}{29}{subsection.4.3.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es}}{31}{chapter.5}
+\contentsline {chapter}{Trabalhos Futuros}{34}{section*.40}
+\contentsline {chapter}{Cronograma}{34}{section*.41}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.46}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.45}

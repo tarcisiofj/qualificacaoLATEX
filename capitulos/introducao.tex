@@ -3,18 +3,31 @@
 % Capítulo sem numeração, mas presente no Sumário
 % ----------------------------------------------------------
 
-\chapter*[Introdução]{Introdução}
-\addcontentsline{toc}{chapter}{Introdução}
-Com a popularização da internet e mídias sociais, cada vez mais dados são processados, transportados e produzidos. E hoje, termos como, Big Data, fazem parte do contidiano de empresas e pessoas. De acordo com o autor \citeonline{Montgomery2013} Big Data são os dados que excedem a capacidade de sistemas de banco de dados. É nesse cenário, com grandes volumes de dados, que não só a formação de grupos ganha importante, mas também a compreensão dos mesmos.
+%\chapter*[Introdução]{Introdução}
+%\addcontentsline{toc}{chapter}{Introdução}
 
-Agrupamento de dados, ou clustering, é também determinado quando dois ou mais objetos pertencentes ao mesmo grupo, compartilham um conceito em comum \cite{Kumar2013}. Cluster é um termo bastante pesquisado e aplicada em vários contextos como segmentação de imagens, recuperação de informação e reconhecimento de objetos . Os algoritmos de agrupamento, conforme \citeonline{Kumar2013}, são aplicados em diferentes campos: Biologia (classificação de plantas e animais), Marketing (encontrar grupos de clientes com comportamentos semelhantes), planejamento de cidades (identificação de casas de acordo com seu tipo, valor e localização geográfica), entre outros.
+% ----------------------------------------------------------
+% Introdução 
+% Capítulo com numeração, mas presente no Sumário
+% ----------------------------------------------------------
+\chapter{Introdução}
 
-Apesar da utilização de grupos (clusters) de dados neste trabalho, pouco atenção é dada na criação dos mesmos, entretanto uma maior relevância é atribuída na rotulação dos grupos, isto é, na compreensão dos grupos de dados já formados. 
+Com a popularização da internet e mídias sociais, cada vez mais dados são processados, transportados e produzidos. E hoje, termo como, Big Data, faz parte do cotidiano de empresas e pessoas. De acordo com o autor \citeonline{Montgomery2013} Big Data são os dados que excedem a capacidade de sistemas de banco de dados. É nesse cenário, com grandes volumes de dados, que não só a formação de grupos ganha importância, mas também a compreensão dos mesmos, pois a interpretação dos grupos fornecerá informações úteis para análises desses clusters.
+
+Agrupamento de dados, ou clustering, é o termo que se usa para identificar dois ou mais objetos pertencentes ao mesmo grupo que compartilham um conceito em comum \cite{Kumar2013}. Cluster é um termo bastante pesquisado no aprendizado não-supervisionado (subárea do aprendizado de máquina) e  aplicada em vários contextos como segmentação de imagens, recuperação de informação e reconhecimento de objetos. Os algoritmos de agrupamento, conforme \citeonline{Kumar2013}, são aplicados em diferentes campos: Biologia (classificação de plantas e animais), Marketing (encontrar grupos de clientes com comportamentos semelhantes), planejamento de cidades (identificação de casas de acordo com seu tipo, valor e localização geográfica), entre outros.
+
+O grau de escalabilidade dos dados gradativamente aumentam no decorrer dos anos, e embora os estudos sobre o problema de agrupamento de dados estão bem avançados, fica cada vez mais complexo o entendimento dos clusters formados, pela razão do número crescentes de grupos criados. Quanto maiores são os números de grupos produzidos  mais  confuso são suas interpretações. 
+
+De acordo com o trabalho de \citeonline{LOPES2014} que realiza a interpretação de grupos através de rótulos com a utilização Redes Neurais, acredita-se que é possível diante desse problema de interpretação dos grupos a criação desses rótulos utilizando outros algoritmos supervisionados, antes não testados.  
+
+Diante desse contexto é que se extrai a temática desta proposta de mestrado qual seja - ''Rotulação automática de grupos através de algoritimos supervisionados baseados em árvores e estatísticos'' - o estudo em questão dedica-se em aplicar dois algoritimos supervisionados, com paradigmas diferentes,  em bases de dados distintas a fim de  definir a tupla atributo/valor de maior importância no cluster, determinando um significado para este cluster (rotulação).
+
+Apesar da utilização de grupos (clusters) de dados neste pesquisa, pouco atenção é dada na criação dos mesmos, entretanto uma maior relevância é atribuída na rotulação dos grupos, isto é, na compreensão dos grupos de dados já formados. 
 
 O termo rotulação, neste trabalho, segue a definição conforme \citeonline{LOPES2014}: 
 
-\newtheorem{defprobLopes}{Definição}
-    \begin{defprobLopes}
+%\newtheorem{teorema}{Definição}
+    \begin{teorema}
     Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\{0\} }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$; o objetivo consite em apresentar um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$ associado.
         %\footnotemark 
         %\footnotetext{Definição retirada de \cite{LOPES2014}}
@@ -29,7 +42,7 @@ O termo rotulação, neste trabalho, segue a definição conforme \citeonline{LO
             \item ${m}$ é a dimensão do problema;
         \end{itemize}
     \label{teo:lopes:problema}
-    \end{defprobLopes}
+    \end{teorema}
 
 Em um exemplo, onde base de dados possuem classes já definidas: macho, fêmea ou raça X, Y, Z, etc. E que ao criar esses grupos sabe-se que existe uma correlação das características dos grupos, acabando por não deixar visível qual característica se apresenta mais significativa dentro desses grupos. Tem-se na rotulação a intenção de definir algum significado para estes grupos, gerando um tipo de rótulo, ${ R=\{ r_{c1},...,r_{ck} \} }$, para melhor expressar o cluster ${c_i}$ associado (Definição \ref{teo:lopes:problema}).
 
@@ -37,9 +50,14 @@ Tecnicamente a informação do rótulo aplicada no cluster pode ajudar na tomada
 
 Seguindo o exemplo dos dados capturados do celuldar, caso o rótulo (${r_{c_i}}$) de um cluster (${c_i}$) fosse o  atributo localização, e os valores  desse atributo escolhido para compor o rótulo, fossem as coordenadas geográficas, o qual definiriam o tipo de localização. Logo percebe-se que os participante desse grupo possuem característica de frequentar alguma localização em comum. A interpretação deste rótulo poderá implicar em uma tomada de decisão personalizada para este grupo, objetivando otimizar um problema.
 
-No contexto de rotulação esta pesquisa tem como foco a aplicação de algoritmos, com paradigmas diferentes, provando que é possível fazer rotulação utilizando dois  algoritmos supervisionados: Naive Bayes (paradigma estatístico) e o CART (paradigma simbólico).
+O trabalho em questão visa como objetivo principal provar que é possível fazer rotulação de dados, em grupos já formados, utilizando dois algoritimos supervisionados distintos com paradigmas diferentes. Sendo um algoritmo com paradigma estatístico - Naive Bayes -  e outro com paradigma simbólico - Classification And Regression Tree (CART).
+ 
 
-O método aplicado nesta pesquisa utiliza algoritmos supervisionados para obter o atributo de maior relevância no cluster. Uma vez escolhido o atributo é definido um número, o qual será a quantidade de faixas de valores a ser dividida, e logo realizado a discretização. Após a discretização do atributo de maior relevância é selecionada a faixa de valor que mais se repete nesse atributo. O resultado será o rótulo composto pelo atributo mais importante junto com a faixa selecionada.   
+Para alcançar tal objetivo essa proposta de mestrado é estruturada da seguinte forma 
+
+
+
+O método aplicado nesta pesquisa utiliza a algoritmos supervisionados  para obter o atributo de maior relevância no cluster. De acordo com a base de dados é definido o número de faixas o qual os valores serão divididos, e logo realizado a discretização. Após a discretização é escolhido o atributo de maior relevância e selecionada a faixa de valor que mais se repete nesse atributo. O resultado será o rótulo composto pelo atributo mais importante junto com a faixa selecionada.   
 
 Na capítulo \ref{cap:ferramentas} é abordada a definição do problema da pesquisa. A partir dessa definição um modelo de resolução é apresentado através de um fluxograma. Na seção \ref{cap:ferramentas:sec:tecnica} é demonstrado o funcionamento da técnica de correlação entre atributos. E na seção \ref{cap:ferramentas:sec:exebasemodfic} uma base de dados fictícia é utilizada para exemplificar a execução dos processos do modelo de resolução: discretização da base de dados no Processos (I), no Processo (II) é aplicado o algoritmo supervisionado e no Processo (III) o resultado da rotulação. 
 
