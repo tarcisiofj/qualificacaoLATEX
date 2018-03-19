@@ -12,15 +12,11 @@ ISSN 9780521518147.
 ISBN 9780511804779. Dispon{\'\i}vel em:
   \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
 
-\bibitem[Breiman 1984]{braiman1984}
-\abntrefinfo{Breiman}{BREIMAN}{1984}
-{BREIMAN, L. \emph{Classification and Regression Trees}. [S.l.: s.n.], 1984.
-  (Chapman e Hall/CRC).}
-
-\bibitem[Catlett 2006]{Catlett2006}
-\abntrefinfo{Catlett}{CATLETT}{2006}
-{CATLETT, J. {Into Ordered Discrete Attributes}.
-v.~3, n.~1989, p.~2006, 2006.}
+\bibitem[Catlett 1991]{Catlett2006b}
+\abntrefinfo{Catlett}{CATLETT}{1991}
+{CATLETT, J. \emph{{On changing continuous attributes into ordered discrete
+  attributes}}. Springer, Berlin, Heidelberg: Lecture Notes in Computer Science
+  (Lecture Notes in Artificial Intelligence), 1991. 164--178~p.}
 
 \bibitem[Dougherty, Kohavi e Sahami 1995]{Dougherty1995}
 \abntrefinfo{Dougherty, Kohavi e Sahami}{DOUGHERTY; KOHAVI; SAHAMI}{1995}
@@ -33,8 +29,9 @@ Dispon{\'\i}vel em:
 
 \bibitem[Filho 2015]{Filho2015}
 \abntrefinfo{Filho}{FILHO}{2015}
-{FILHO, V. P.~R. \emph{{Rotulação de grupos utilizando conjuntos fuzzy}}.
-  2015.}
+{FILHO, V. P.~R.
+\emph{{Rotulação de grupos utilizando conjuntos fuzzy}}.
+Tese (Doutorado) --- Universidade Federal do Piau{\'{i}}, 2015.}
 
 \bibitem[Hwang e Li 2002]{Hwang2002}
 \abntrefinfo{Hwang e Li}{HWANG; LI}{2002}
@@ -53,11 +50,6 @@ Dispon{\'\i}vel em:
   survey}.
 \emph{GESTS International Transactions on Computer Science and Engineering},
   v.~32, n.~1, p. 47--58, 2006.}
-
-\bibitem[Kotsiantis e Pintelas 2005]{kotsiantis2005logitboost}
-\abntrefinfo{Kotsiantis e Pintelas}{KOTSIANTIS; PINTELAS}{2005}
-{KOTSIANTIS, S.~B.; PINTELAS, P.~E. Logitboost of simple bayesian classifier.
-\emph{Informatica (Slovenia)}, v.~29, p.~53, 2005.}
 
 \bibitem[Kumar, Andu e Thanamani 2013]{Kumar2013}
 \abntrefinfo{Kumar, Andu e Thanamani}{KUMAR; ANDU; THANAMANI}{2013}
@@ -119,23 +111,11 @@ ISBN 9781577354260.}
 ISSN 1098-6596.
 ISBN 9788578110796.}
 
-\bibitem[Quinlan 1986]{Quinlan1986}
-\abntrefinfo{Quinlan}{QUINLAN}{1986}
-{QUINLAN, J.~R. {Induction of Decision Trees}.
-\emph{Machine Learning}, v.~1, n.~1, p. 81--106, 1986.
-ISSN 15730565.}
-
 \bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
 \abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
 {RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
   Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
 2008.}
-
-\bibitem[Runkler 2016]{runkler2012}
-\abntrefinfo{Runkler}{RUNKLER}{2016}
-{RUNKLER, T.~A. \emph{Models and Algorithms for Intelligent Data Analysis}. 2.
-  ed. [S.l.]: Springer Vieweg, 2016.  (Data Analytics).
-ISBN 978-3-658-14075-5.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}
@@ -149,14 +129,5 @@ ISBN 9780136042594.}
   v.~14. 1--37~p.
 ISSN 02191377.
 ISBN 1011500701.}
-
-\bibitem[Yohannes e Webb 1999]{yohannes1999classification}
-\abntrefinfo{Yohannes e Webb}{YOHANNES; WEBB}{1999}
-{YOHANNES, Y.; WEBB, P. \emph{Classification and Regression Trees, CART: A User
-  Manual for Identifying Indicators of Vulnerability to Famine and Chronic Food
-  Insecurity}. International Food Policy Research Institute, 1999.
-  (Microcomputers in policy research).
-ISBN 9780896293373. Dispon{\'\i}vel em:
-  \url{https://books.google.com.br/books?id=7iuq4ikyNdoC}.}
 
 \end{thebibliography}
