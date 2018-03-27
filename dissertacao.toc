@@ -32,9 +32,9 @@
 \contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{24}{section.4.1}
 \contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{25}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}CART}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}CART}{28}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{29}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{30}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}CART}{31}{subsection.4.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es}}{33}{chapter.5}

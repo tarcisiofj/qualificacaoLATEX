@@ -1,25 +1,34 @@
 \chapter{Resultados}\label{cap:resultados}
 
-Neste capítulo foram realizados testes com bases de dados da UCI Machine Learning, repositório de dados a serviço da comunidade de aprendizado de máquina. As bases de dados escolhidas já estão classificadas e cada base possui em números de registos um total de 150 e 210 registros, denominadas SEEDS e IRIS respectivamente.
+Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/}, um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987 e até hoje é utilizado não só por estudantes mas também por educadores e pesquisadores como fonte primária de aprendizado de máquina. 
 
-\section{Implementação}
+As bases de dados foram escolhidas não só por critérios comparativos de outro trabalho que também já as utilizaram servindo  de referência para os resultados, como também, um cuidado de só escolher bases que estão classificadas, uma vez que esta pesquisa trabalhará com os clusters já formados e não na criação de grupos.
 
-Para conseguir gerar os resultados aqui escritos foram feitas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/}, onde junto  a ela é possível utilizar suas funções de aprendizado de máquina já desenvolvidas. MATLAB possui uma linguagem técnica, e de fácil implementação por já possuir uma gama de funções\footnote{versão: R2016a(9.0.0.341360); 64-bit (glnxa64)} preparadas para aprendizado de máquina. Por esses motivos essa ferramenta foi escolhida para colocar em prática essa pesquisa.
+A divisão deste capítulo de resultados iniciará por uma explanação da implementação do trabalho, e logo após, cada base de dados utilizada é destacada em uma seção. A cada seção referente a uma base de dados houve uma divisão de subseções de acordo com os algoritmos utilizados: Naive Bayes e CART.
 
-Ao longo da pesquisa foram realizados vários testes comparando a outros trabalhos realizados, porém, nesses testes houveram alterações de algumas variáveis e métodos de discretização, sempre tentando melhorar os resultados. Essas alterações dependendo da base de dados utilizadas são: variável ''V'', quantidade de faixas ''R'' e métodos de discretização ''EWD,EFD''. 
+\section{Implementação}\label{cap:resultados:sec:implement}
 
-Como dito na seção \ref{cap:ferramentas:ssec:algsuper} a variável ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando rótulos apresentarem o mesmo resultado: atributo e faixa de valor. O valor de ${V}$ é subjetivo e condicionado a análise da aplicação do algoritmo na bases de dados.
+Para conseguir gerar os resultados aqui escritos foram feitas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/}\footnote{versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, onde  foi possível utilizar suas funções de aprendizado de máquina já implementadas na Statistics and Machine Learning Toolbox, uma toolbox com implementações preparadas para aprendizado de máquina. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi escolhida para colocar em prática essa pesquisa.
 
-Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster. Essa situação é necessária após uma análise da tabela de correlação dos atributos (seção \ref{cap:ferramentas:sec:tecnica}), a exemplo da tabela \ref{tab:matrelevancia:seeds:nb}. Existindo valores muito próximos em relação a outros, e se necessário, utilizar esses atributos também como rótulos, a variável ${V}$ pode ser configurada com um valor que possa abranger esses atributos que possuem valor de porcentagem próximos ao do atributo mais relevante. 
+Ao longo da pesquisa foram realizados vários testes, porém, nesses testes houveram alterações de algumas variáveis, e métodos de discretização, sempre tentando melhorar os resultados. Essas alterações dependendo da base de dados utilizadas são: variável ''V'', quantidade de faixas ''R'' e métodos de discretização ''EWD,EFD''. 
 
-A composição da tabela de correlação de atributos é o resultado da aplicação do algoritmo enquanto o atributo era a classe da vez, coforme figura ~\ref{fig:tecnicamodelocomp}, sessão \ref{cap:ferramentas:ssec:algsuper}. O atributo de maior valor junto com os atributos da diferença de ${V}$ com o mais relevante, são escolhidos para ser rótulos. Na linha (cluster) 1 o maior valor é o atributo perimetro. Então o valor de perimetro subtraído de ${V=3}$ vai resultar no limete inferior. A partir daí o(s) atributo(s) que possuí(rem) um valor que está entre este resultado, limite inferior, até o de maior porcentagem, irá compor o rótulo.
+Como dito na subseção \ref{cap:ferramentas:ssec:algsuper} a variável ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando rótulos apresentarem os mesmos resultados: atributo e faixa de valor. Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster.
+
+Essa situação é necessária após uma análise da tabela de correlação dos atributos (seção \ref{cap:ferramentas:sec:tecnica}), a exemplo da tabela \ref{tab:matrelevancia:seeds:nb}. E existindo valores muito próximos em relação a outros, e se necessário, utilizar esses atributos também como rótulos, a variável ${V}$ pode ser configurada com um valor que possa abranger esses atributos que possuem valor de porcentagem próximos ao do atributo mais relevante. O valor de ${V}$ é subjetivo e sua adição é condicionada a análise da aplicação do algoritmo na bases de dados.
+
+A composição da tabela de correlação de atributos é o resultado da aplicação do algoritmo enquanto o atributo era a classe da vez, coforme figura \ref{fig:tecnicamodelocomp}, seção \ref{cap:ferramentas:ssec:algsuper}. O atributo de maior valor junto com os atributos da diferença de ${V}$ com o mais relevante, são escolhidos para ser rótulos. Na linha (cluster) 1 o maior valor é o atributo perimetro. Então o valor de perimetro subtraído de ${V=3}$ vai resultar no limete inferior. A partir daí o(s) atributo(s) que possuí(rem) um valor que está entre este resultado, limite inferior, até o de maior porcentagem, irá compor o rótulo.
+
+Na implementação onde é feita a composição da tabela de correlação de atributos é percorrido todos os atributos e a cada iteração um atributo será a saída, ou seja, o atributo classe conforme figura \ref{fig:tecnicamodelocomp}, seção \ref{cap:ferramentas:ssec:algsuper}. A cada iteração um valor da correlação do atributo classe com os demais atributos é gerado compondo a tabela de correlação.
+
+Após a tabela estar montada o atributo rótulo é selecionado a partir do maior valor em relação aos outros atributos, e caso seja necessário também é selecionado como rótulo os atributos que possuam o valor entre a diferença de ${V}$ com o mais relevante. Na linha (cluster) 1 o maior valor é o atributo perimetro. Então o valor de perimetro subtraído de ${V=3}$ vai resultar no limete inferior. A partir daí o(s) atributo(s) que possuí(rem) um valor que está entre este resultado, limite inferior, até o de maior porcentagem, irá compor o rótulo.
+
 
 A cada base de dados descritas nas seções, são configuradas as variáveis e método de discretização utilizados e implementado dois algoritmos de aprendizado supervisionado com paradigmas diferentes para fazer rotulação. Cada algoritmo terá como resultado um rótulo por cluster de dados servindo de amostra para testar a acurácia.
 
-Os algoritmos utilizados foram o Naive Bayes, sessão \ref{cap:refTeor:sssec:nbayes}, com paradigma estatístico. E também o algoritmo Classification e Regression Trees - CART, \ref{cap:refTeor:sssec:cart}, com paradigma simbólico de  árvore de decisão.
+Os algoritmos utilizados foram o Naive Bayes, subseção \ref{cap:refTeor:sssec:nbayes}, com paradigma estatístico. E também o algoritmo Classification e Regression Trees - CART, subseção \ref{cap:refTeor:sssec:cart}, com paradigma simbólico.
 
 \section{Seeds - Identificação de Tipos de Semente}
-Essa base pertence a UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/}, composta por sete  atributos definindo suas características e mais um atributo classe  responsável por identificar os tipos de sementes. Em seus atributos  não existem valores em branco, seus valores são todos contínuos possuindo um total de 210 registros classificados em três categorias:
+Essa base pertence a UCI Machine Learning, composta por sete  atributos definindo suas características e mais um atributo classe  responsável por identificar os tipos de sementes. Em seus atributos  seus valores são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias:
 \begin{itemize}[noitemsep]
  \item 70 elementos do tipo Kama;
  \item 70 elementos do tipo Rosa;
@@ -27,9 +36,11 @@ Essa base pertence a UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml
 \end{itemize}
 Para classificar as sementes, como Kama, Rosa e Canadian foi utilizada uma técnica de raio X, que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos expermentais, explorados no Instituo de Agrofísica da Academia Polonês de Ciências em Lublin.
 
-Na configuração de implementação foi utilizado o método EFD de discretização com divisão em três faixas, ${R=3}$ para todos os atributos, e inserido o valor de variação ${V=3\%}$.
+Como já mencionado neste capítulo, seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias. A primeira configuração é o método de discretização do tipo EFD, a segunda é a divisão dos valores dos atributos em faixas, ${R=3}$ para todos os atributos, e também o valor de variação ${V=0\%}$,  não obstante, esta variável ${V}$ só assumirar valor maior que zero após análise dos resultados caso haja ambiguidade.
 
-Na tabela \ref{tab:rot:seeds:nb} e tabela \ref{tab:rot:seeds:cart} são  apresentados os resultados de rotulação dos algoritmo Naive Bayes e CART respectivamente. Essas tabelas são formadas por colunas informando os \textbf{Clusters}, \textbf{Rótulos}  compostos pelo \textbf{Atributo} e sua \textbf{Faixa} de valor. Junto também a coluna \textbf{Relevância} exibindo a resposta do algoritmo de rotulação em porcentagem, informando a correlação do atributo em relação aos outros atributos do cluster, retirado da tabela \ref{tab:matrelevancia:seeds:nb} e da tabela \ref{tab:matrelevancia:seeds:cart} respectivamente. E por último a coluna \textbf{Elem Fora da Faixa} que mostra a quantidade de elementos que não estão dentro da faixa do rótulo. Essa última coluna tem a função de exibir, em números, a quantidade de valores que não estão participando da porcentagem da coluna de \textbf{Relevância}. Com esse dado pode-se ter a quantidade de elementos que fazem parte do rótulo comparando com o total de elementos do grupo.
+Na tabela \ref{tab:rot:seeds:nb} e tabela \ref{tab:rot:seeds:cart} são  apresentados os resultados de rotulação dos algoritmo Naive Bayes e CART respectivamente. Essas tabelas são compostas por colunas informando os número dos \textbf{Clusters}, \textbf{Rótulos}  integrando \textbf{Atributo} e sua \textbf{Faixa} de valor. Junto também a coluna \textbf{Relevância} exibindo a resposta do algoritmo de rotulação em porcentagem da correlação do atributo em relação aos outros atributos do cluster, retirado da tabela \ref{tab:matrelevancia:seeds:nb} e da tabela \ref{tab:matrelevancia:seeds:cart} respectivamente. E por último a coluna \textbf{Elem Fora da Faixa} que mostra a quantidade de elementos que não estão dentro da faixa designada pelo do rótulo encontrado.
+
+Essa última coluna, \textbf{Elem Fora da Faixa}, tem a função de exibir, em números, a quantidade de valores que não estão participando da porcentagem da coluna de \textbf{Relevância}. Através de expermentos percebeu-se o mérito de apresentar em números a quantidade de elementos que não estão sendo representados pelo rótulo gerando mais realidade as informações, ao invés de exibir em porcentagem.
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:seed:nb}
 % Please add the following required packages to your document preamble:
@@ -45,18 +56,20 @@ Na tabela \ref{tab:rot:seeds:nb} e tabela \ref{tab:rot:seeds:cart} são  apresen
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Elem fora da Faixa\\ \hline \hline
 1                                            & area           & ] 12.78 $\sim$  16.14 ]   & 92\%                               & 14\\  \hline
-                                             & area           & ] 16.14 $\sim$  21.18 ]   & 95\%                               & 6\\ 
-\multirow{-2}{*}{2}                          & lkernel        & ] 5.826 $\sim$  6.675 ]   & 92\%                               & 6\\  \hline
+2                                            & area           & ] 16.14 $\sim$  21.18 ]   & 95\%                               & 6\\ \hline
+%\multirow{-2}{*}{2}                          & lkernel        & ] 5.826 $\sim$  6.675 ]   & 92\%                               & 6\\  \hline
 3                                            & perimetro      & [ 12.41 $\sim$  13.73 ]   & 95\%                               & 5\\ \hline \hline
 \end{tabular}
 \end{table}
 
 
 
-Analisando a coluna rótulo da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  cluster 1 como também no cluster 2. A técnica envolve não só o atributo mais relevante como também a faixa que os valores mais se repetem dentro do atributo. Nesse caso pode-se observar que o atributo se repete entre os clusters. Mas no cluster 1, a faixa de valores difere do cluster 2, sem comentar que no cluster 2 existe outro atributo compondo o rótulo, \textbf{lkernel}.
+Analisando a coluna Rótulos da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  cluster 1 como também no cluster 2. A técnica envolve não só o atributo mais relevante, como também, a faixa que os valores mais se repetem dentro do atributo. Nesse caso pode-se observar que o atributo se repete entre os clusters, mas no cluster 1 a faixa de valores difere do cluster 2, sendo considerados rótulos distintos.
 
 
-A seleção dos atributos rótulos acontece da diferença da variável ${V=3\%}$ em relação ao atributo de maior relevência. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderá aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
+Caso os resultados gerados na tabela \ref{tab:matrelevancia:seeds:nb} expusessem clusters com rótulos ambíguos, poderia ser utilizado a variação de ${V}$. Quando houver ambiguidade dos rótulos a seleção dos atributos, que compõem os rótulos, acontecerá da diferença da variável ${V}$ em relação ao atributo de maior relevência do cluster. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderia aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
+
+Para exemplificar a utilização da variável ${V}$ pode-se utilizar como exemplo os dados do cluster 2 da tabela \ref{tab:matrelevancia:seeds:nb} e adotando ${V=3\%}$.  Neste exemplo não só o atributo de maior relevância, \textbf{area} com ${95.7\%}$ seria escolhido como rótulo, mas também o atributo \textbf{lkernel} com valor ${92.8\%}$, pois a diferença entre o valor de \textbf{area} com ${V}$ resultaria em ${92.7\%}$. Através dessa diferença todos os atributos que estivessem na faixa de ${92.7\%}$ a  ${95.7\%}$ seriam selecionados como atributos do rótulo.
 
 \begin{table}[!h]
     
@@ -74,7 +87,7 @@ A seleção dos atributos rótulos acontece da diferença da variável ${V=3\%}$
     \label{tab:matrelevancia:seeds:nb} 
 \end{table}
 
-A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado pelas linhas, e colunas representado por atributos. Essa tabela é fruto da implementação do Naive Bayes na base de dados \textbf{Seeds}, e foi  gerada para auxiliar a retirada dos atributo(s) rótulo(s). Uma análise pode ser feita através desses dados e ajudar a definir um valor para a variável ${V}$. Percebe-se que algumas características são mais bem correlacionadas que  outras, através de seus valores mais altos. Isso indica o grau de relacionamento entre os atributos após a aplicação do algoritmo. 
+A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado pelas linhas, e atributos representado por colunas. Essa tabela é fruto da implementação do Naive Bayes na base de dados \textbf{Seeds}, e foi  gerada para auxiliar a retirada dos atributo(s) rótulo(s). Uma análise pode ser feita através desses dados e ajudar a definir um valor para a variável ${V}$ caso necessário. Percebe-se que algumas características são mais bem correlacionadas que  outras, através de seus valores mais altos. Isso indica o grau de relacionamento entre os atributos após a aplicação do algoritmo. 
 
 
 \begin{table}[!h]
@@ -141,12 +154,12 @@ A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado p
  \label{tab:execucoes:seed:nb}
 \end{table}
 
-Para conseguir ter uma idéia mais ampla dessas informações, na tabela \ref{tab:execucoes:seed:nb} é exposto o resultado de ${4(quatro)}$ execuções do Algoritmo Naive Bayes, e pode-se constatar que mesmo havendo algumas alterações em seus valores nos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area}, possui o melhor grau de correlacionamento em seu grupo, mesmo testado em quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
+Para provar empiricamente os resultados, na tabela \ref{tab:execucoes:seed:nb} é exposto o resultado de ${4(quatro)}$ execuções do Algoritmo Naive Bayes, e pode-se constatar que mesmo havendo algumas alterações em seus valores nos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area} nos clusters 1 e 2, possuem o melhor grau de correlacionamento em seus grupos, mesmo nas quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
 
 Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds} com seus rótulos: 
 \begin{itemize}[noitemsep]
  \item ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$  
- \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]), (Lkernel, ]5.826 \sim 6.675]) \} }$
+ \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]) \} }$
  \item ${r_{c_3}=\{ (perimetro, [12.41 \sim 13.73])\} }$
 \end{itemize}
 
@@ -154,7 +167,7 @@ Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds
 \subsection{CART}\label{cap:resultados:ssec:seed:cart}
 
 
-Já na tabela \ref{tab:rot:seeds:cart}, tem-se o resultado da aplicação do algoritmo supervisionado CART na rotulação. Ele é um algoritmo de classificação de árvore de decisão utilizado pelo MATLAB. O intuito é testar a base de dados no paradigma simbólico. 
+Já na tabela \ref{tab:rot:seeds:cart}, tem-se o resultado da aplicação do algoritmo supervisionado na rotulação. Ele é um algoritmo de classificação de árvore de decisão utilizado pela toolbox do MATLAB. O intuito é testar a base de dados em diferentes paradigmas.
 
 \begin{table}[!h]
 \centering
@@ -164,17 +177,17 @@ Já na tabela \ref{tab:rot:seeds:cart}, tem-se o resultado da aplicação do alg
 
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} & Elem fora da Faixa \\ \hline \hline
-                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          & 14 \\  
-\multirow{-2}{*}{1}                          & perimetro      & [ 13.73 $\sim$ 15.18 ]          & 94\%          & 14\\ \hline
-                                             & area           & ] 16.14 $\sim$  21.18 ]          & 95\%         & 6 \\ 
+%                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          & 14 \\  
+1                                            & perimetro      & [ 13.73 $\sim$ 15.18 ]          & 94\%          & 14\\ \hline
+                                             & area           & ] 16.14 $\sim$  21.18 ]          & 98\%         & 6 \\ 
 \multirow{-2}{*}{2}                          & perimetro      & ] 15.18 $\sim$  17.25 ]          & 98\%         & 7\\  \hline
-                                             & perimetro      & [ 12.41 $\sim$  13.73 ]         & 95\%          & 5 \\
-\multirow{-2}{*}{3}                          & wkernel        & [ 2.63 $\sim$  3.049 ]         & 97\%           & 9\\ \hline \hline
+%                                             & perimetro      & [ 12.41 $\sim$  13.73 ]         & 95\%          & 5 \\
+3                                            & wkernel        & [ 2.63 $\sim$  3.049 ]         & 97\%           & 9\\ \hline \hline
 \end{tabular}
 \end{table}
 
-Pode-se verificar na tabela \ref{tab:rot:seeds:cart} que os clusters 1 e 2 possuem o mesmo conjunto de atributos selecionados no campo de rótulo. Mas isso não implica dizer que os dois grupos são identificados pelo mesmo rótulo. O rótulo é composto pelos atributos e pelas faixas, onde a faixa  dos cluster são distintas, garantindo um rótulo único para cada cluster.
 
+Foram realizadas vários teste, onde alguns desses testes estão na tabela \ref{tab:execucoes:seed:cart}. Essas operações foram execuções do algoritmo CART na base, para provar que a técnica de correlação de atributos, seção \ref{cap:ferramentas:sec:tecnica}, é funcional para este algoritmo. O mesmo comportamento entre execuções pode ser visto no algoritmo de paradigma estatístico, subseção \ref{cap:resultados:ssec:seed:nb}, realizado nessa pesquisa. O  comportamento de ambos foram bem semelhantes, como tambéms seus valores não se alteram muito a cada iteração.
 
 
 \begin{table}[!h]
@@ -192,8 +205,6 @@ Pode-se verificar na tabela \ref{tab:rot:seeds:cart} que os clusters 1 e 2 possu
     \end{tabular}
     \label{tab:matrelevancia:seeds:cart} 
 \end{table}
-
-Foram realizadas vários teste, onde alguns deles estão na tabela \ref{tab:execucoes:seed:cart}. Essas operações foram execuções do algoritmo CART na base, para provar que a técnica de correlação de atributos, \ref{cap:ferramentas:sec:tecnica}, é funcional para este algoritmo. O mesmo pode ser visto no algoritmo de paradigma estatístico, sessão \ref{cap:resultados:ssec:seed:nb}, realizado nessa pesquisa. O  comportamento de ambos foram bem semelhantes, pois eles seguem o padrão de valores os quais não se alteram muito a cada iteração.
 
 \begin{table}[!h]
 \caption{Resultado de ${4(quatro)}$ iterações do algoritmo CART; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}
@@ -261,16 +272,16 @@ Foram realizadas vários teste, onde alguns deles estão na tabela \ref{tab:exec
 
 O resultado da rotulaçao utilizando o algoritmo CART na base de dados \textbf{Seeds} tem como rótulos: 
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]), (perimetro, ]13.73 \sim 15.18]) \} }$
+ \item ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$
  \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]), (perimetro, ]15.18 \sim 17.25]) \} }$
- \item ${r_{c_3}=\{ (perimetro, [12.41 \sim 13.73]),  (wkernet, [2.63 \sim 3.049]) \} }$
+ \item ${r_{c_3}=\{ (wkernet, [2.63 \sim 3.049]) \} }$
 \end{itemize}
 
 
 \section{Iris - Identificação de Tipos de Plantas}
 
 
-A base de dados IRIS pertence a UCI\footnote{https://archive.ics.uci.edu/ml/} Machine Learning, é uma base conhecida em outras pesquisas\footnote{\cite{Lopes,kotsiantis2005logitboost,Filho2015} e outros}. Contêm 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. O atributo classe classifica o tipo de planta em 3 tipos, segundo \cite{runkler2012} :
+A base de dados \textbf{Iris}, também pertencente a UCI Machine Learning, é muito conhecida em outras pesquisas\footnote{\cite{LOPES2014,kotsiantis2005logitboost,Filho2015} e outros} como também na literatura em reconhecimentos de padrões por utilizar classes de plantas bem definidas. Contêm 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. O atributo classe classifica o tipo de planta em 3 tipos:
 
 \begin{itemize}[noitemsep]
  \item 50 elementos da classe Iris-setosa ;
@@ -281,13 +292,13 @@ A base de dados IRIS pertence a UCI\footnote{https://archive.ics.uci.edu/ml/} Ma
 Os atributos correspondentes são comprimento da sepala - SL, largura da sepala - SW, comprimento da pétala - PL e
 largura da pétala - PW. Através dessas características há uma classificação para dizer qual tipo de planta.
 
-Foi aplicado na configuração de execução dos algoritmos o método de discretização EFD\footnote{sessão \ref{cap:refTeor:subsec:efd}} com divisão de três faixas, R = 3 para todos os atributos, e inserido o valor de variação ${V=3\%}$. Mais uma vez, o valor ${V}$ é subjetivo do pesquisador e influenciado pelos valores de correlação dos atributos nos grupos, tabela \ref{tab:execucoes:iris:nb}.
+Foi aplicado na configuração de execução do algoritmo o método de discretização, tipo EFD\footnote{seção \ref{cap:refTeor:subsec:efd}}, a divisão de três faixas de valores R = 3 para todos os atributos, e inserido o valor de variação ${V=0\%}$. Mais uma vez, o valor ${V}$ existe para evitar ambiguidade dos rótulos, podendo ser utilizado pelo pesquisador quando necessário após análise dos valores de correlação dos atributos nos grupos, tabela \ref{tab:execucoes:iris:nb}.
 
-Seguindo a análise, semelhante da base de dados anterior, será realizado testes utilizando dois algoritmos\footnote{sessões \ref{cap:resultados:ssec:seed:nb},\ref{cap:resultados:ssec:seed:cart}}, e cada resultado será exibido em tabelas. Portando as colunas são formadas por \textbf{Clusters}, \textbf{Rótulos}, \textbf{Relevância} e \textbf{Elem fora da Faixa} representando os valores que não estão dentro da faixa escolhida como rótulo. Também foi posto nas tabelas ~\ref{tab:execucoes:iris:cart} e ~\ref{tab:execucoes:iris:nb} os resultados das correlações entre os atributos de cada grupo, servindo de informação para decisão do valor de ${V}$. E também apresentado os resultados de outras iterações de cada algoritmo, para mostrar o comportamento dos atributos entre eles no grupo.
+Seguindo a análise, semelhante da base de dados anterior, serão realizados testes utilizando dois algoritmos\footnote{sessões \ref{cap:resultados:ssec:seed:nb},\ref{cap:resultados:ssec:seed:cart}}, e cada resultado será exibido em tabelas. Portando as colunas são formadas por \textbf{Clusters}, \textbf{Rótulos}, \textbf{Relevância} e \textbf{Elem fora da Faixa} representando os valores que não estão dentro da faixa escolhida como rótulo. Também foi posto nas tabelas \ref{tab:execucoes:iris:cart} e \ref{tab:execucoes:iris:nb} os resultados das correlações entre os atributos de cada grupo, servindo de informação para decisão do valor de ${V}$, caso fosse necessário. E também apresentado os resultados de outras iterações de cada algoritmo, para mostrar o comportamento dos atributos entre eles no grupo.
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:iris:nb}
 
-Através da tabela \ref{tab:rot:iris:nb} os resultados da rotulação são exibidos após a aplicação do algoritmo. Com essa base de dados nota-se que no cluster 1 houve um acerto de 100\% da rotulação. O cluster 2 obteve os mesmo atributos do cluster 1, mas as faixas de valores são diferentes. E no cluster 3 somente um atributo foi selecionado, petalwidth, conseguindo ter uma relevância entre os outros atributos de 90\%.
+Através da tabela \ref{tab:rot:iris:nb} os resultados da rotulação são exibidos após a aplicação do algoritmo. Com essa base de dados nota-se que no cluster 1 houve um acerto de 100\% da rotulação. O cluster 2 e cluster 3 obtiveram rótulos distintos, cada um com com grau de relevância acima de 80\% em relação aos outros atributos de cada grupo.
 
 \begin{table}[!h]
 \centering
@@ -299,8 +310,8 @@ Através da tabela \ref{tab:rot:iris:nb} os resultados da rotulação são exibi
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Elem fora da Faixa\\ \hline \hline
                                              & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 \\  
 \multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 \\  \hline
-                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 84\%                               & 7\\ 
-\multirow{-2}{*}{2}                          & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 82\%                               & 8\\  \hline
+2                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 84\%                               & 7\\ \hline
+%\multirow{-2}{*}{2}                          & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 82\%                               & 8\\  \hline
 3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5\\ \hline \hline
 \end{tabular}
 \end{table}
@@ -371,21 +382,20 @@ Os valore na coluna de relevância não podem ser analisados isoladamente. Para 
  \label{tab:execucoes:iris:nb}
 \end{table}
 
-Nessa tabela \ref{tab:execucoes:iris:nb} foram inseridas quatro tabelas com os resultados de cada execução. Foi escolhida na tabela \ref{tab:execucoes:iris:nb} a 1a. execução para montar a tabela de rótulos, tabela \ref{tab:rot:iris:nb}. A partir dela o pesquisador poderá arbitrá sobre o valor de ${V}$ para melhor adaptá-lo a base.
-Das várias execuções expostas na tabela \ref{tab:execucoes:iris:nb}, percebe-se que não há muita diferença entre esses valores em cada execução. Isso mostra um padrão de valores de acordo com a base. No caso da 1a. execução os valores escolhidos como rótulo estão destacados em cada cluster.
+Na tabela \ref{tab:execucoes:iris:nb} foram inseridas quatro resultados de execuções do algoritmo. Foi escolhida na tabela \ref{tab:execucoes:iris:nb} a 1a. execução para montar a tabela de rótulos, tabela \ref{tab:rot:iris:nb}. A partir dessas execuções o pesquisador poderá arbitrá sobre o valor de ${V}$ para melhor adaptá-lo a base. Das várias execuções expostas na tabela \ref{tab:execucoes:iris:nb}, percebe-se que não há muita diferença entre os valores de cada execução. Isso mostra um padrão de valores de acordo com a base. No caso da 1a. execução os valores escolhidos como rótulo estão destacados em cada cluster.
 
-Se a tabela escolhida fosse a da 4a. execução, os valores de rótulos seriam modificados, em virtude da diferença do atributo de maior valor com a variável ${V}$. O atributo de maior valor, no cluster 2, é o PL com 86\%. Então a diferença desse valor com ${V=3}$ chega em 83\%. Tanto SL, SW e PW possuem valores inferiores a 83\%, com isso o atributo escolhido para compor o rótulo  no cluster 2 seria só o PL, diferente das outras tabelas que são o PL e PW.
+Se a tabela escolhida fosse a da 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
 
 Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dados abaixo:
 \begin{itemize}[noitemsep]
  \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
- \item ${r_{c_2}=\{ (petallength, ] 3.7 \sim 5.1]), (petalwidth,] 1.0 \sim 1.7 ] )\} }$
+ \item ${r_{c_2}=\{ (petallength, ] 3.7 \sim 5.1]) \} }$
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
 \subsection{CART} \label{cap:resultados:ssec:iris:cart}
 
-A aplicação do algoritmo CART na base de dados Iris gerou a tabela \ref{tab:rot:iris:cart} como resultado, e ao examinar pode-se observar uma semelhança com a sessão anterior \ref{cap:resultados:ssec:iris:nb} onde foi aplicado o Naive Bayes. 
+A aplicação do algoritmo CART na base de dados \textbf{Iris} gerou a tabela \ref{tab:rot:iris:cart} como resultado, e ao examinar pode-se observar uma semelhança com a subseção anterior \ref{cap:resultados:ssec:iris:nb} onde foi aplicado o Naive Bayes. 
 
 \begin{table}[!h]
 \centering
@@ -397,16 +407,14 @@ A aplicação do algoritmo CART na base de dados Iris gerou a tabela \ref{tab:ro
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Elem fora da Faixa\\ \hline \hline
                                              & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 \\  
 \multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 \\  \hline
-                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
-\multirow{-2}{*}{2}                          & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 90\%                               & 8\\  \hline
+%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
+2                                            & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 90\%                               & 8\\  \hline
 3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5\\ \hline \hline
 \end{tabular}
 \end{table}
 
-Ao observar a tabela, \ref{tab:rot:iris:cart}, percebe-se que o resultado de rotulação é idêntico ao do algoritmo anterior, mas na coluna de \textbf{Relevência} existe uma diferença no cluster 2, contudo essa diferença não chega  a modificar a rotulação desta base de dados Iris.
-Fazendo uma análise dessa diferença, na coluna de \textbf{Relevância}, valor esse, adquirido conforme a 1a. Execução da tabela \ref{tab:execucoes:iris:cart}, e já sabendo que a escolha do rótulo tem a influência do valor de relevância, e também do valor de ${V}$. É constatado que os valores podem até ser maiores, nessa caso aqui específico, e mesmo assim a rotulação seria a mesma. Então mesmo alterando o valor de ${V}$ até 12 , os rótulos continuariam os mesmo.
+Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotulação no cluster 1 e 3 são idênticos ao do algoritmo apresentado anteriormente, mas  no cluster 2 o rótulo é diferenciado pelo atributo petalwidth que atinge valores mais altos em todas as execuções, como mostra a tabela \ref{tab:execucoes:iris:nb}.
 
-Com o valor de ${V=3}$ ou até com ${V=12}$, como exemplo, e analisando as execuções da tabela \ref{tab:execucoes:iris:cart}, pode-se perceber que a diferença dos números dos rótulos são altos em relação aos outros atributos. Então a influência dos atributos escolhidos são bem fortes em relação aos que não são rótulos. Com estes resultados percebe-se que os atributos são bem correlacionado com as classes, gerando uma boa distinção dos rótulos.  
 
 
 \begin{table}[!h]
