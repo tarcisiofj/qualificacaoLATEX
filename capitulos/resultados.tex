@@ -489,8 +489,63 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado no algoritmo CA
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
-  
- 
-%\end{table}
 
-%\section{Glass - Identificação de Tipos de Vidro}
+\section{Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
+
+Essa base ficou conhecida por Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduzio pesquisas e teste de comparação em seu sistema baseado em regras determinando, se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque uma classificação corretamente identificada em uma cena de crime pode ser utilizada como prova.
+
+Possui um total de 214 instancias, caracterizados por 9 atributos (RI, Na, Mg, Al, Si, K, Ca, Ba e Fe), sendo que o atributo \textbf{RI} indica o índice de refração, e quanto aos demais atributos são valores correspondentes a porcentagem do óxido.
+
+Os tipos de vidro (atributo classe) foram divididos em 7 grupos distintos:
+\begin{itemize}
+ \item 1 janelas de construção - vidro temperado: 70 registros
+ \item 2 janelas de construção - vidro não-temperado: 76 registros
+ \item 3 janelas de veículos - vidro temperado: 17 registros
+ \item 4 janelas de veículos - vidro não-temperado: 0 registro
+ \item 5 recipientes: 13 registros
+ \item 6 louças de mesa: 9 registros
+ \item 7 lâmpadas: 29 registros
+\end{itemize}
+
+Para execução dos algoritmos terão que ser definidos em quantas em quantas faixas (${R}$) serão divididos os valores dos atributos, qual é o método de discretização e o valor de variação ${V}$ caso haja ambiguidade. Nos teste desenvolvidos nesta pesquisa os valore de referência foram, ${R=0}$, o método de discretização EFD e o valor de ${=0}$.
+
+
+\subsection{Naive Bayes} \label{cap:resultados:ssec:glass:nb}
+
+
+
+\begin{table}[!h]
+\centering
+\caption{Resultado da aplicação do algoritmo CART}
+\label{tab:rot:iris:cart}
+\begin{tabular}{llcrc} \hline
+ 
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Elem fora da Faixa\\ \hline \hline
+                                             & Mg    & [ 2.245 $\sim$  4.490     ]       & 100\%                               & 0 \\
+                                             & K     & [ 0.0 $\sim$  1.5525      ]       & 100\%                               & 0 \\  
+\multirow{-3}{*}{1}                          & Ba    & [ 0.0 $\sim$  0.7875     ]       & 100\%                               & 0 \\  \hline
+%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
+2                                            & K     & ] 0.0 $\sim$  1.5525 ]           & 100\%                               & 0\\  \hline
+                                            & Mg     & ]  2.245 $\sim$  4.490  ]              & 100\%                               & 0\\ 
+                                            & K     & ] 0.0 $\sim$  1.5525 ]               & 100\%                               & 0\\  
+                                            & Ca     & ] 8.12 $\sim$  10.81 ]       & 100\%                               & 0\\ 
+\multirow{-3}{*}{3}                          & Ba    & [ 0.0 $\sim$  0.7875     ]       & 100\%                               & 0 \\  \hline
+                                             & Al    & [ 1.0925 $\sim$  1.895 ]       & 92\%                               & 4 \\
+                                             & K     & [ 0.0 $\sim$  1.5525      ]       & 92\%                               & 3 \\  
+\multirow{-3}{*}{4}                          & Ba    & [ 0.0 $\sim$  0.7875     ]       & 92\%                               & 1 \\  \hline
+                                            & Na    & [14.055 $\sim$ 17.38  ]           & 100\%                             & 2 \\
+                                            & K     & [ 0.0 $\sim$  1.5525      ]       & 100\%                               & 0 \\  
+                                            & Ba    & [ 0.0 $\sim$  0.7875     ]       & 100\%                               & 0 \\   
+\multirow{-4}{*}{5}                          & Fe    & [ 0.0 $\sim$  0.1275     ]       & 100\%                               & 0 \\  \hline
+\hline
+
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+\subsection{Naive Bayes} \label{cap:resultados:ssec:glass:cart}
