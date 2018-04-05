@@ -38,12 +38,12 @@
 \contentsline {subsection}{\numberline {4.3.2}CART}{31}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{32}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Naive Bayes}{33}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}CART}{33}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{37}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{38}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{39}{section*.44}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{40}{section*.45}

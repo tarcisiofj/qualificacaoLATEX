@@ -67,7 +67,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 Analisando a coluna Rótulos da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  cluster 1 como também no cluster 2. A técnica envolve não só o atributo mais relevante, como também, a faixa que os valores mais se repetem dentro do atributo. Nesse caso pode-se observar que o atributo se repete entre os clusters, mas no cluster 1 a faixa de valores difere do cluster 2, sendo considerados rótulos distintos.
 
 
-Caso os resultados gerados na tabela \ref{tab:matrelevancia:seeds:nb} expusessem clusters com rótulos ambíguos, poderia ser utilizado a variação de ${V}$. Quando houver ambiguidade dos rótulos a seleção dos atributos, que compõem os rótulos, acontecerá da diferença da variável ${V}$ em relação ao atributo de maior relevência do cluster. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderia aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
+Caso os resultados gerados na tabela \ref{tab:matrelevancia:seeds:nb} expusessem clusters com rótulos ambíguos, poderia ser utilizado a variação de ${V}$. Quando houver ambiguidade dos rótulos, a seleção dos atributos que compõem os rótulos, acontecerá da diferença da variável ${V}$ em relação ao atributo de maior relevência do cluster. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderia aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
 
 Para exemplificar a utilização da variável ${V}$ pode-se utilizar como exemplo os dados do cluster 2 da tabela \ref{tab:matrelevancia:seeds:nb} e adotando ${V=3\%}$.  Neste exemplo não só o atributo de maior relevância, \textbf{area} com ${95.7\%}$ seria escolhido como rótulo, mas também o atributo \textbf{lkernel} com valor ${92.8\%}$, pois a diferença entre o valor de \textbf{area} com ${V}$ resultaria em ${92.7\%}$. Através dessa diferença todos os atributos que estivessem na faixa de ${92.7\%}$ a  ${95.7\%}$ seriam selecionados como atributos do rótulo.
 
@@ -87,7 +87,7 @@ Para exemplificar a utilização da variável ${V}$ pode-se utilizar como exempl
     \label{tab:matrelevancia:seeds:nb} 
 \end{table}
 
-A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado pelas linhas, e atributos representado por colunas. Essa tabela é fruto da implementação do Naive Bayes na base de dados \textbf{Seeds}, e foi  gerada para auxiliar a retirada dos atributo(s) rótulo(s). Uma análise pode ser feita através desses dados e ajudar a definir um valor para a variável ${V}$ caso necessário. Percebe-se que algumas características são mais bem correlacionadas que  outras, através de seus valores mais altos. Isso indica o grau de relacionamento entre os atributos após a aplicação do algoritmo. 
+A tabela \ref{tab:matrelevancia:seeds:nb} é formada por clusters representado pelas linhas, e atributos representado por colunas. Essa tabela é fruto da aplicação do Naive Bayes na base de dados \textbf{Seeds}, e foi  gerada para auxiliar a retirada dos atributo(s) rótulo(s). Uma análise pode ser feita através desses dados e ajudar a definir um valor para a variável ${V}$ caso necessário. Percebe-se que algumas características são mais bem correlacionadas que  outras, através de seus valores mais altos. Isso indica o grau de relacionamento entre os atributos após a aplicação do algoritmo. 
 
 
 \begin{table}[!h]
@@ -384,7 +384,7 @@ Os valore na coluna de relevância não podem ser analisados isoladamente. Para 
 
 Na tabela \ref{tab:execucoes:iris:nb} foram inseridas quatro resultados de execuções do algoritmo. Foi escolhida na tabela \ref{tab:execucoes:iris:nb} a 1a. execução para montar a tabela de rótulos, tabela \ref{tab:rot:iris:nb}. A partir dessas execuções o pesquisador poderá arbitrá sobre o valor de ${V}$ para melhor adaptá-lo a base. Das várias execuções expostas na tabela \ref{tab:execucoes:iris:nb}, percebe-se que não há muita diferença entre os valores de cada execução. Isso mostra um padrão de valores de acordo com a base. No caso da 1a. execução os valores escolhidos como rótulo estão destacados em cada cluster.
 
-Se a tabela escolhida fosse a da 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
+Se na tabela \ref{tab:execucoes:iris:nb} fosse escolhida a 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
 
 Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dados abaixo:
 \begin{itemize}[noitemsep]
@@ -492,7 +492,7 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado no algoritmo CA
 
 \section{Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
-Essa base ficou conhecida por Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduzio pesquisas e teste de comparação em seu sistema baseado em regras determinando, se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque uma classificação corretamente identificada em uma cena de crime pode ser utilizada como prova.
+Essa base ficou conhecida por Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduzio pesquisas e testes de comparação em seu sistema baseado em regras determinando, se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação.
 
 Possui um total de 214 instancias, caracterizados por 9 atributos (RI, Na, Mg, Al, Si, K, Ca, Ba e Fe), sendo que o atributo \textbf{RI} indica o índice de refração, e quanto aos demais atributos são valores correspondentes a porcentagem do óxido.
 
@@ -504,20 +504,24 @@ Os tipos de vidro (atributo classe) foram divididos em 7 grupos distintos:
  \item 4 janelas de veículos - vidro não-temperado: 0 registro
  \item 5 recipientes: 13 registros
  \item 6 louças de mesa: 9 registros
- \item 7 lâmpadas: 29 registros
+ \item 7 lâmpadas: 29 registros 
 \end{itemize}
 
-Para execução dos algoritmos terão que ser definidos em quantas em quantas faixas (${R}$) serão divididos os valores dos atributos, qual é o método de discretização e o valor de variação ${V}$ caso haja ambiguidade. Nos teste desenvolvidos nesta pesquisa os valore de referência foram, ${R=0}$, o método de discretização EFD e o valor de ${=0}$.
+Para execução dos algoritmos foram definidos a quantidade de faixas (${R}$) que serão divididos os valores dos atributos, qual o método de discretização e o valor de variação ${V}$ caso haja ambiguidade. Nos teste desenvolvidos nesta pesquisa os valores de referência foram, ${R=0}$ para o número de faixas, o método de discretização EWD e o valor  ${V=0}$.
 
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:glass:nb}
 
+Ao observar a tabela \ref{tab:rot:glass:nb} percebe-se que a coluna \textbf{Relevância} obteve porcentagens altas ressaltando nos rótulo de cada grupo os atributos que mais bem se relacionaram no cluster. E em específico no  \textbf{cluster 5} atributo \textbf{Na}, o valor da coluna de \textbf{Relevância = 100\%}, mas na coluna, \textbf{Elem fora da Faixa}, apresentam 2(dois) elementos que não estão sendo representados pelo rótulo. 
 
+Essa situação dita no parágrafo acima segue a Definição \ref{teo:resolucao}, mas é um exemplo prático que não aconteceu em outros testes das outras bases de dados. A definição é que cada rótulo específico é dado por um conjunto de pares de valores, tendo como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$. Então caso a coluna \textbf{Relevância} seja igual a 100\%, isso não implica que todos os elementos tenham que estar dentro da faixa ${ p_{m^{(c_i)}} }$ (limite inferior) e ${ q_{m^{(c_i)}} }$ (limite superior), e sim, a maioria dos elementos, mostrando que o rótulo é capaz de melhor representar o cluster.
+
+Por a base apresentar dados desbalenceados e verificando a quantidade de elementos do \textbf{Cluster 5} condicionado com somente nove elementos, onde entre esses elementos, nenhum participa da 1a. faixa, dois estão na 2a. faixa e os restantes (sete) estão na 3a. faixa. Dessa maneira justifica-se o porquê dos dois elementos estarem de fora do rótulo e mostrando que a maioria dos elementos estão sendo representada pelo rótulo.
 
 \begin{table}[!h]
 \centering
-\caption{Resultado da aplicação do algoritmo CART}
-\label{tab:rot:iris:cart}
+\caption{Resultado da aplicação do algoritmo Naive Bayes}
+\label{tab:rot:glass:nb}
 \begin{tabular}{llcrc} \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
@@ -538,6 +542,8 @@ Cluster                                      & Atributos      & \multicolumn{1}{
                                             & K     & [ 0.0 $\sim$  1.5525      ]       & 100\%                               & 0 \\  
                                             & Ba    & [ 0.0 $\sim$  0.7875     ]       & 100\%                               & 0 \\   
 \multirow{-4}{*}{5}                          & Fe    & [ 0.0 $\sim$  0.1275     ]       & 100\%                               & 0 \\  \hline
+6                                            & Fe    & [ 0.0 $\sim$  0.1275     ]       & 100\%                               & 0\\  \hline
+
 \hline
 
 \end{tabular}
@@ -545,7 +551,91 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 
 
+ 
+\begin{table}[!ht]
+\caption{Resultado de ${4(quatro)}$ execuções do algoritmo Naive Bayes.}
+ \begin{tabular}{ll}
+%\rule{0}{50}
+
+  
+   %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-5pt}
+    \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
+        \hline \hline
+            {\tiny 1a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
+       \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 87.1 & 92.8  & 100 & 81.4 & 82.8 & 100 & 90.0 & 100 & 78.5 \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 2 & 65.7 & 86.8  & 85.5& 82.8 & 56.5 & 100  & 73.6 &98.6 & 61.8  \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 3 & 82.3   & 82.3& 100  & 76.4 & 58.8 & 100  & 100 & 100 & 82.3  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 4 & 84.6   & 69.2& 30.76  & 92.3 & 76.9 & 92.3  & 76.9 & 92.3 & 69.2  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 100& 33.3  & 66.6 & 44.4 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 58.6 & 79.3& 79.3  & 72.4 & 79.3 & 93.1  & 93.1 & 13.7 & 100   \\ 
+        
+        \hline
+      \end{tabular}
+    %}
+ &
+ %\hspace{1cm} %altera o espaçamento entre as tabelas
+ 
+   
+ %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-5pt}
+    \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
+        \hline \hline
+            {\tiny 2a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
+       \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 87.1 & 92.8  & 100 & 81.4 & 81.4 & 100 & 90.0 & 100 & 78.5 \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 2 & 65.7 & 92.1  & 88.1& 82.8 & 63.1 & 100  & 72.3 &97.3 & 61.8  \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 3 & 72.4  & 82.3& 100  & 76.4 & 47 & 100  & 100 & 100 & 82.3  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 4 & 84.6   & 69.2& 23  & 92.3 & 76.9 & 92.3  & 76.9 & 92.3 & 61.5  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 100& 33.3  & 66.6 & 44.4 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 58.6   & 79.3 & 79.3  & 68.9 & 79.3 & 93.1  & 93.1 & 17.2 & 100  \\ 
+        
+        \hline
+      \end{tabular}
+  %}
+  \\  [15ex]
+ %\hspace{1cm} %altera o espaçamento entre as tabelas
+ %\rule{0}{50}
+ 
+ %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-5pt}
+     \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
+        \hline \hline
+            {\tiny 3a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
+       \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 87.1 & 92.8  & 100 & 81.4 & 84.2 & 100 & 90.0 & 100 & 78.5 \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 2 & 68.4 & 89.4  & 86.8& 84.2 & 60.5 & 100  & 72.3 &98.6 & 64.4  \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 3 & 76.4   & 82.3& 100  & 76.4 & 52.9 & 100  & 100 & 100 & 82.3  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 4 & 84.6   & 69.2& 23  & 92.3 & 76.9 & 92.3  & 76.9 & 92.3 & 76.9  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 100& 33.3  & 66.6 & 44.4 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 58.6 & 79.3& 79.3  & 68.9 & 79.3 & 93.1  & 89.6 & 13.7 & 100   \\ 
+        
+        \hline
+      \end{tabular}
+    
+    &
+    
+       \small\addtolength{\tabcolsep}{-5pt}
+    \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
+        \hline \hline
+            {\tiny 4a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
+       \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 87.1 & 92.8  & 100 & 81.4 & 84.2 & 100 & 90.0 & 100 & 78.5 \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 2 & 65.7 & 90.7  & 86.8& 82.8 & 59.2 & 100  & 76.3 &98.6 & 63.1  \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}                           & 3 & 76.4 & 82.3  & 100  & 76.4 & 52.4 & 100  & 100 & 100 & 82.3  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 4 & 84.6 & 53.8  & 23  & 92.3 & 76.9 & 92.3  & 76.9 & 92.3 & 69.2  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}                           & 5 & 77.7 & 100   & 33.3  & 66.6 & 44.4 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 58.6   & 82.7& 79.3  & 72.4 & 79.3 & 93.1  & 82.7 & 6.8 & 100  \\ 
+        
+        \hline
+      \end{tabular}
+   \\
+ 
+ \end{tabular}
+ \label{tab:execucoes:seed:nb}
+\end{table}
 
 
 
-\subsection{Naive Bayes} \label{cap:resultados:ssec:glass:cart}
+\subsection{CART} \label{cap:resultados:ssec:glass:cart}
