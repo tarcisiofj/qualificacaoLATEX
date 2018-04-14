@@ -30,7 +30,7 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{24}{chapter.4}
 \contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{25}{section.4.2}
+\contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{26}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{26}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}CART}{28}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{29}{section.4.3}
@@ -38,12 +38,12 @@
 \contentsline {subsection}{\numberline {4.3.2}CART}{31}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{32}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}CART}{33}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}CART}{35}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{38}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{38}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{40}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{40}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{40}{section*.45}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{42}{section*.47}
