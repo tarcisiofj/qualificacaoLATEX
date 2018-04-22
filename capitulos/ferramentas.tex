@@ -306,7 +306,7 @@ Uma forma de eliminar uma possível ambiguidade entre os clusters foi adicionar 
 
 O valor da variável ${V}$ é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em cima de um conjunto de dados. Nesse exemplo os atributos importantes com ${V=12}$ utilizando a figura \ref{fig:rotulacao:rotNB}, teriam os rótulos, por clusters, ${r_{c_i}}$ : ${r_{c_1}=\{atr2\}}$, ${r_{c_2}=\{atr2\}}$, ${r_{c_3}=\{atr2\}}$.
 
-\subsection{Processo (III) - Rotulação}
+\subsection{Processo (III) - Rotulação} \label{cap:ferramentas:ssec:rotulacao}
 
 Nesse processo de rotulação serão calculados os intervalos dos atributos que estão na figura \ref{fig:modeloresolucao} com o atributos de maior relevância  (maior porcentagem) selecionado na etapa anterior. Para compor o rótulo ${r_{c_i}}$ do cluster ${c_i}$ é calculado a faixa do atributo  que tiver maior frequência. 
 É possível verificar neste exemplo, da Base Modelo, o resultado da figura \ref{fig:rotulacao:rotNB}, onde o rótulo ${r_{c_1}}$ é o  \textbf{atr2=]67.66, 88.36]}, porque o valor da faixa de maior frequência do cluster ${c_1}$ em relação ao atributo \textbf{atr2} é a faixa 2 (figura \ref{fig:EFD_R_3:efd:atr2}), que representa o limite inferior ${]67.66}$s e o limite superior, ${88.36]}$.

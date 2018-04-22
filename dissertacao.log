@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  22 APR 2018 07:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  22 APR 2018 08:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2036,22 +2036,21 @@ Overfull \hbox (36.11859pt too wide) in paragraph at lines 782--783
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package hyperref Warning: Suppressing empty link on input line 8.
-
-[37
+ [37
 
 
 
 ]
-<figs/grafico_NB_SEED_exec_grp.png, id=796, 386.19281pt x 309.40594pt>
+<figs/grafico_NB_SEED_exec_grp.png, id=795, 386.19281pt x 309.40594pt>
 File: figs/grafico_NB_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_SEED_exec_grp.png  used on input line 
 21. on input line 21.
 Package pdftex.def Info: Requested size: 308.95465pt x 247.52509pt on input lin
 e 21.
-<figs/grafico_CART_SEED_exec_grp.png, id=797, 348.55219pt x 344.78813pt>
+<figs/grafico_CART_SEED_exec_grp.png, id=796, 348.55219pt x 344.78813pt>
 File: figs/grafico_CART_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_SEED_exec_grp.png  used on input lin
@@ -2062,14 +2061,14 @@ e 25.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/grafico_NB_IRIS_exec_grp.png, id=803, 395.22656pt x 255.95625pt>
+<figs/grafico_NB_IRIS_exec_grp.png, id=802, 395.22656pt x 255.95625pt>
 File: figs/grafico_NB_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_IRIS_exec_grp.png  used on input line 
 43. on input line 43.
 Package pdftex.def Info: Requested size: 316.18167pt x 204.76526pt on input lin
 e 43.
-<figs/grafico_CART_IRIS_exec_grp.png, id=804, 410.2828pt x 255.95625pt>
+<figs/grafico_CART_IRIS_exec_grp.png, id=803, 410.2828pt x 255.95625pt>
 File: figs/grafico_CART_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_IRIS_exec_grp.png  used on input lin
@@ -2080,7 +2079,7 @@ e 47.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 8132) has occurred while \output is active []
+Underfull \vbox (badness 2096) has occurred while \output is active []
 
  [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2167,7 +2166,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
 Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: 1F828508BF6DE2839ACD6AA8C1A3C45E;2373.
+(rerunfilecheck)             Checksum: 1712BB34190E189AA226FDE78ADD1464;2377.
 
 
 LaTeX Warning: There were undefined references.
@@ -2179,8 +2178,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
  17826 strings out of 492985
- 266606 string characters out of 6138585
- 584042 words of memory out of 5000000
+ 266630 string characters out of 6138585
+ 584121 words of memory out of 5000000
  20589 multiletter control sequences out of 15000+600000
  111092 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2208,10 +2207,10 @@ hare/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/lm/lmtt8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on dissertacao.pdf (68 pages, 2034096 bytes).
+Output written on dissertacao.pdf (68 pages, 2034451 bytes).
 PDF statistics:
- 1164 PDF objects out of 1200 (max. 8388607)
- 1013 compressed objects within 11 object streams
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 1014 compressed objects within 11 object streams
  228 named destinations out of 1000 (max. 500000)
  34783 words of extra memory for PDF output out of 35830 (max. 10000000)
 
