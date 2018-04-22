@@ -42,8 +42,8 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{40}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{40}{section.5.3}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{42}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{42}{section*.47}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{43}{section*.48}

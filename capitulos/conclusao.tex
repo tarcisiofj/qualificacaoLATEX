@@ -1,14 +1,15 @@
 \chapter{Conclusões, Trabalhos Futuros e Cronograma}\label{cap:conclusao} 
-Aqui serão abordados as conclusões dessa  proposta de mestrado referentes aos resultados do capítulo \ref{cap:resultados},  bem como uma seção de Trabalhos Futuros e  Cronograma. Em Trabalhos Futuros a pretenção é expor melhoriras e expansões de tudo que fora realizado  nesta pesquisa, e expor que existe uma continuidade para todo esse estudo aqui elaborado. Já no Cronograma, será criado uma tabela divida em meses definindo os passos a serem seguidos até a conclusão da dissertação.
+
+Este capítulo abordará as conclusões dessa  proposta de mestrado referentes aos resultados do capítulo \ref{cap:resultados},  bem como uma seção de Trabalhos Futuros e  Cronograma. Na seção de Conclusão serão feitas algumas considerações finais dos resultados de cada base de dados, e logo opós, na seção de Trabalhos Futuros tem a pretenção de melhorar e expandir tudo que fora realizado  nesta pesquisa, e expor que existe uma continuidade para todo esse estudo aqui elaborado. Já no Cronograma, será criado uma tabela temporal onde esta será divida em meses e tarefas definindo os passos a serem seguidos até a conclusão da dissertação.
 
 \section{Conclusão}\label{cond}
-Nesta seção serão realizadas as conclusões referentes aos resultados realizados neste trabalho. No capítulo \ref{cap:resultados} foi aplicado algoritmos supervisionados em algumas bases de dados a fim de provar se o problema proposto pelo trabalho foi solucionado, ou não.
+No capítulo \ref{cap:resultados} foi aplicado algoritmos supervisionados em algumas bases de dados a fim de provar se o problema proposto pelo trabalho foi solucionado, ou não.
 
 Uma vez conhecido o problema, foi realizado a execução de dois algoritmos supervisionados, servindo de amostra para provar que era possível fazer rotulação de dados com estes algoritmos supervisionados(Naive Bayes e CART), tema deste trabalho. E já identificando alguns trabalhos que já haviam feito rotulação, \cite{Lopes}, utilizando algoritmos supervisionados, o intuito era executar outros algoritmos com paradigmas diferentes aos que foram realizados em pesquisas anteriores. 
 
 Como o cerne desta pesquisa é a rotulação de dados foi apresentados dois algoritmos com paradigmas diferentes, e em ambos suas execuções em diferentes bases de dados resultaram em respostas satisfatórias no âmbito da rotulação. Embora os rótulos encontrados  em cada base de dados não tenham sido totalmente idênticos, tanto um algoritmo como outro mostraram semelhanças em vários rótulos gerados, como exemplo das bases Iris e Glass.
 
-No modelo de resolução proposto foi inicialmente utilizado Naive Bayes na base de dados Seeds\footnote{Seção \ref{cap:resultados:ssec:seed:nb}}. Logo o resultado mostrou-se bem confiável pois o método consegue mostrar através da tabela ~\ref{tab:execucoes:seed:nb}, os valores de correlação entre os atributos, também exibido na coluna \textbf{Relevância} da tabela \ref{tab:rot:seeds:nb}. Dessa forma fica fácil identificar quais os atributos podem ser os rótulos dos clusters. Embora essa decisão possa ser modificada de acordo com o valor da variável ${V}$. Variável essa criada para melhor escolher os atributos do rótulo, e podendo assumir valores diferentes dependendo do comportamento da base de dados.
+No modelo de resolução proposto foi inicialmente utilizado Naive Bayes na base de dados Seeds\footnote{Seção \ref{cap:resultados:ssec:seed:nb}}. Logo o resultado mostrou-se bem confiável pois o método consegue mostrar através da tabela ~\ref{tab:execucoes:seed:nb}, os valores de correlação entre os atributos, também exibido na coluna \textbf{Relevância} da tabela \ref{tab:rot:seeds:nb}. Dessa forma fica fácil identificar quais os atributos podem ser os rótulos dos clusters. Embora essa decisão possa ser modificada de acordo com o valor da variável ${V}$, variável essa criada para melhor escolher os atributos do rótulo, e podendo assumir valores diferentes dependendo do comportamento da base de dados.
 
 Continuando com a base Seeds, após a escolha do atributo que fará parte do rótulo, o segundo passo é a escolha da faixa de valores do atributo. Essa segunda etapa é dependente totalmente da discretização\footnote{seção ~\ref{cap:refTeor:sec:discret}} e independente da primeira etapa. O método é capaz de gerar a faixa de maior repetição de valores de qualquer atributo, mas aqui neste trabalho o que importa é a faixa do atributo rótulo. Para ter mais  confiabilidade  no rótulo o método escolhe a faixa de valores que mais se repetem. No caso desse algoritmo o resultado na tabela \ref{tab:rot:seeds:nb} consegue provar uma boa eficiência, pois em cada 70 elementos do cluster 1, somente 14, ficaram de fora dessa faixa. No cluster 2, somando os dois atributos rótulos tem-se 12 elementos que não estão dentro da representatividade do rótulo. Outro valor pequeno em relação aos 70 elementos. E no cluster 3, somente 5 elementos não estão dentro da faixa considerada rótulo.
 
@@ -16,11 +17,11 @@ Continuando com a base Seeds, após a escolha do atributo que fará parte do ró
 \begin{figure}[h!]
     \centering
     \subfloat[Naive Bayes]{
-        \includegraphics[scale=0.5]{figs/grafico_NB_SEED_exec_grp.png}
+        \includegraphics[scale=0.8]{figs/grafico_NB_SEED_exec_grp.png}
         \label{fig:execucoes:nb} }
     \quad
     \subfloat[CART]{
-        \includegraphics[scale=0.5]{figs/grafico_CART_SEED_exec_grp.png}
+        \includegraphics[scale=0.9]{figs/grafico_CART_SEED_exec_grp.png}
         \label{fig:execucoes:cart} }
     
     \caption{Gráfico de Execuções dos algoritmos supervisionados na base de dados SEEDS.} \label{fig:graf:SEED_NB_CART}
@@ -38,11 +39,11 @@ De acordo com o exposto acima pode-se dizer nesta análise, que o Naive Bayes ac
 \begin{figure}[h!]
     \centering
     \subfloat[Naive Bayes]{
-        \includegraphics[scale=0.5]{figs/grafico_NB_IRIS_exec_grp.png}
+        \includegraphics[scale=0.8]{figs/grafico_NB_IRIS_exec_grp.png}
         \label{fig:graf:IRIS_NB} }
     \quad
     \subfloat[CART]{
-        \includegraphics[scale=0.5]{figs/grafico_CART_IRIS_exec_grp.png}
+        \includegraphics[scale=0.9]{figs/grafico_CART_IRIS_exec_grp.png}
         \label{fig:graf:IRIS_CART} }
     
     \caption{Gráfico de Execuções dos algoritmos supervisionados na base de dados IRIS.} \label{fig:graf:IRIS_NB_CART}
@@ -59,7 +60,23 @@ Na rotulação encontrada pelo dois algoritmos nos resultados da tabela \ref{tab
 
 A repetição do atributo \textbf{petalwidth} em todos os rótulos, acaba mostrando o grau de relevância desse atributo na base de dados. Para um especialista é interessante saber que esse atributo possue um grande referencial na base de dados. Nos rótulos esse atributo assumiu faixas diferentes conseguindo assim o método da um significado ao cluster. 
 
-Com uma breve  análise já se constata que os resultados nos dois algoritmos supervisionados foram bem satisfatórios nas bases utilizadas, e  provando que é possível a rotulação de dados. Além de conseguir representar bem os clusters através dos rótulos encontrados. E uma obsevação técnica dos algoritmos utilizados é que o CART se mostrou bem mais rápido em relação ao Naive Bayes para gerar os resultados.
+Com uma breve  análise já se constata que os resultados nos dois algoritmos supervisionados foram bem satisfatórios nas bases utilizadas, conforme figura \ref{fig:graf:grafico_NB_CART_acuracia}, e  provando que é possível a rotulação de dados além de conseguir representar bem os clusters através dos rótulos encontrados. E uma obsevação técnica dos algoritmos utilizados é que o CART se mostrou bem mais rápido em relação ao Naive Bayes para gerar os resultados.
+
+\begin{figure}[h!]
+    \centering
+  %  \subfloat[Naive Bayes]{
+  %      \includegraphics[scale=0.8]{figs/grafico_NB_IRIS_exec_grp.png}
+  %      \label{fig:graf:IRIS_NB} }
+  %  \quad
+  %  \subfloat[CART]{
+  %      \includegraphics[scale=0.9]{figs/grafico_CART_IRIS_exec_grp.png}
+  %      \label{fig:graf:IRIS_CART} }
+  %  
+  %  \caption{Gráfico de Execuções dos algoritmos supervisionados na base de dados IRIS.} \label{fig:graf:IRIS_NB_CART}
+        
+  \includegraphics[scale=0.9]{figs/grafico_NB_CART_acuracia.png}
+  \caption{Acurácia por Clusters} \label{fig:graf:grafico_NB_CART_acuracia}
+\end{figure}
 
 
 
