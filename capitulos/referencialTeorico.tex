@@ -11,7 +11,7 @@ Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre a técnica de dis
 
 \section{Aprendizado de Máquina}\label{cap:refTeor:sec:aprendMaq}
 
- A aprendizagem de máquina, diferente das metodologias tradicionais de implementação, utiliza sua experiência anterior, para melhorar suas respostas a partir de problemas em determinadas áreas. Segue sua definição segundo \citeonline{Mitchell1997}:
+ A aprendizagem de máquina, diferente das metodologias tradicionais de implementação, utiliza sua experiência anterior, para melhorar suas respostas a partir de problemas em determinadas áreas. Segundo \citeonline{Mitchell1997}:
  
  %\newtheorem{defaprendmaq}{Definição}
   \begin{teorema}
@@ -19,11 +19,16 @@ Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre a técnica de dis
    \label{teo:defaprendmaq}
   \end{teorema}
  
- Um exemplo, seria a realização do reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Seria inserida várias fotos tituladas de uma certa pessoa no banco de dados, e após vários exemplos, o programa de computador seria capaz de predizer se uma nova foto é de uma determinada pessoa através de aprendizado  anterior, ou melhor, fotos anteriormente inseridas.
+Para melhor explicar a definição acima, destaca-se o  exemplo de considerar um reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Então caso fossem  inseridas várias fotos tituladas de uma certa pessoa (T) no banco de dados, e após vários exemplos (E), fotos dessa pessoa, o programa de computador seria capaz de predizer (P) se uma nova foto, ainda não inserida no banco de dados, seria dessa  determinada pessoa através de aprendizado  anterior (E), ou melhor, de fotos que foram anteriormente inseridas.
 
-Alguns motivos justificam que não é possível simplismente exigir do projetista implementar melhorias no sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
+O aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. Alguns motivos justificam que não é possível simplesmente exigir do projetista implementar melhorias no sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}, pois seria impossível um programador antecipar todas as situações possíveis de implementação.
 
-A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
+
+%Alguns motivos justificam que não é possível simplesmente exigir do projetista implementar melhorias no sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
+
+Quando um algoritmo pretende predizer uma determinada condição em base de dados, ele está fazendo uma classificação de dados. Essa classificação irá depender da base de dados como também do algoritmo utilizado para fazer essa classificação. Alguns  exemplos de algoritmos são:  redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. A escolha apropriada do algoritmo se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
+
+%A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
