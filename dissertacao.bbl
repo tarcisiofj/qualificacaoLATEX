@@ -12,6 +12,12 @@ ISSN 9780521518147.
 ISBN 9780511804779. Dispon{\'\i}vel em:
   \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
 
+\bibitem[Breiman et al. 1984]{braiman1984}
+\abntrefinfo{Breiman et al.}{BREIMAN et al.}{1984}
+{BREIMAN, L. et al. \emph{Classification and Regression Trees}. 1. ed. [S.l.]:
+  Chapman and Hall/CRC, 1984.  (Wadsworth Statistics/Probability).
+ISBN 0412048418.}
+
 \bibitem[Catlett 1991]{Catlett2006b}
 \abntrefinfo{Catlett}{CATLETT}{1991}
 {CATLETT, J. \emph{{On changing continuous attributes into ordered discrete
@@ -72,11 +78,6 @@ Disserta{\c{c}}{\~{a}}o (Mestrado em Ci{\^{e}}ncias da Computa{\c{c}}{\~{a}}o),
   \emph{{Rotula{\c{c}}{\~{a}}o Autom{\'{a}}tica de Grupos com Aprendizagem de
   M{\'{a}}quina Supervisionada}}. 2014. 73~p.}
 
-\bibitem[Lopes, Machado e Rabelo]{Lopes}
-\abntrefinfo{Lopes, Machado e Rabelo}{LOPES; MACHADO; RABELO}{}
-{LOPES, L.~A.; MACHADO, V.~P.; RABELO, R. D. A.~L. {Automatic Labeling of
-  Groupings through Supervised Machine Learning}.}
-
 \bibitem[Lucca et al. 2013]{Lucca2013}
 \abntrefinfo{Lucca et al.}{LUCCA et al.}{2013}
 {LUCCA, G. et al. {Uma implementa{\c{c}}{\~{a}}o do algoritmo Na{\"{i}}ve Bayes
@@ -103,6 +104,13 @@ Tese (Doutorado) --- Fundacao Getulio Vargas, Rio de Janeiro, 2017.}
 ISSN 10450823.
 ISBN 9781577354260.}
 
+\bibitem[Mohri, Rostamizadeh e Talwalkar 2012]{Mohri2012}
+\abntrefinfo{Mohri, Rostamizadeh e Talwalkar}{MOHRI; ROSTAMIZADEH;
+  TALWALKAR}{2012}
+{MOHRI, M.; ROSTAMIZADEH, A.; TALWALKAR, A. \emph{{Foundations Machine
+  Learning}}. [S.l.: s.n.], 2012.
+ISBN 9780262018258.}
+
 \bibitem[Montgomery 2013]{Montgomery2013}
 \abntrefinfo{Montgomery}{MONTGOMERY}{2013}
 {MONTGOMERY, K. \emph{{Big Data Now}}. 1. ed. [S.l.]: O'Reilly Media, Inc.,
@@ -110,12 +118,6 @@ ISBN 9781577354260.}
   1689--1699~p.
 ISSN 1098-6596.
 ISBN 9788578110796.}
-
-\bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
-\abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
-{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
-  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
-2008.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}
@@ -129,5 +131,14 @@ ISBN 9780136042594.}
   v.~14. 1--37~p.
 ISSN 02191377.
 ISBN 1011500701.}
+
+\bibitem[Yohannes e Webb 1999]{yohannes1999classification}
+\abntrefinfo{Yohannes e Webb}{YOHANNES; WEBB}{1999}
+{YOHANNES, Y.; WEBB, P. \emph{Classification and Regression Trees, CART: A User
+  Manual for Identifying Indicators of Vulnerability to Famine and Chronic Food
+  Insecurity}. International Food Policy Research Institute, 1999.
+  (Microcomputers in policy research).
+ISBN 9780896293373. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=7iuq4ikyNdoC}.}
 
 \end{thebibliography}

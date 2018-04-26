@@ -1,18 +1,18 @@
 \chapter{Metodologia} \label{cap:ferramentas}
 
-Esse capítulo abordará o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução para rotulação de dados utilizando dois algoritmos supervisionados baseados em paradigmas simbólico e estatístico . O objetivo ao final deste capítulo é poder resolucionar o problema de rotulação, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
+O texto a seguir abordará o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução para rotulação de dados utilizando dois algoritmos supervisionados baseados em paradigmas simbólico e estatístico . O objetivo ao final deste capítulo é poder resolucionar o problema de rotulação, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
 
 \section{Considerações do Problema}\label{cap:ferramentas:sec:considproblema}
 
 A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada por \citeonline{LOPES2014}, que seria o \textbf{Problema de Rotulação}. Esse conceito, rotulação de dados,  já é estudado na literatura na área de aprendizagem não-supervisionada, subseção \ref{ssec:aprendNSup}, onde é comum os algoritmos lidarem com os agrupamentos dos dados, e a criação de clusters a partir dos graus de  similaridade entre os elementos.
 
-Muitas pesquisas realizadas na área de rotulação fazem referencia, de fato, a classificação do dados e não da rotulação nos termos desse trabalho. Ao agrupar um conjunto de elementos por um derterminado critério, esta havendo uma classificação desses elementos escolhidos, mas pouco se sabe, qual é a compreensão desses grupos já classificados. 
+Muitas pesquisas realizadas na área de rotulação fazem referencia a classificação dos dados e não da rotulação, nos termos desse trabalho. Ao agrupar um conjunto de elementos por um derterminado critério, esta havendo uma classificação desses elementos de mesma similaridade, mas pouco se sabe, qual é a compreensão desses grupos já classificados. 
 
-Existe uma importância na criação dos clusters, contudo para o espectador é interessante existir um rótulo, desse grupo formado, oferecendo elementos em alguma tomada de decisão em razão de seu significado (rótulo).
+A importância do rótulo em um cluster é transparecer a compreensão do cluster formado, visto que, uma vez dos clusters já agrupados não fica claro o critério de criação desses grupos. Para o espectador é interessante existir um rótulo de um grupo oferecendo elementos que possam ajudar em alguma tomada de decisão em razão de seu significado (rótulo).
 
-Tem-se então o real problema de rotulação, contudo é necessário existir algum elemento definindo o porquê daquele grupo formado. O elemento é um rótulo composto por um, ou vários, atributos de maior relevância no cluster, junto com uma faixa de valores. 
+A criação do rótulo é a escolha do atributo que possui a maior relevância, valor de correlacionamento entre os outros atributos, junto com a faixa de valor que mais se repete desse atributo. Podendo o cluster ter mais de um atributo com suas faixas respectivamente. 
 
-Essa faixa, é um intervalo de valores definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que apresenta os valores que se repetem com a maior frequência. A exemplo, tem-se um vetor de elementos já discretizados, ${\vec{e}_{(c_i)}=\{1,1,1,2,2,2,2,3,3\}}$. Neste vetor o valor que mais se repete é o número 2, então, essa faixa  é a escolhida junto com o atributo mais relevante para compor o rótulo.
+Essa faixa, é um intervalo de valor definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que apresenta os valores que se repetem com a maior frequência. A exemplo, tem-se um vetor de elementos já discretizados, ${\vec{e}_{(c_i)}=\{1,1,1,2,2,2,2,3,3\}}$. Neste vetor o valor que mais se repete é o número 2, então, essa faixa  é a escolhida junto com o atributo mais relevante para compor o rótulo.
 
 O Problema de Rotulação é formalmente definido como segue abaixo:
 %\newtheorem{teorema}{Definição}
@@ -50,7 +50,8 @@ O Problema de Rotulação é formalmente definido como segue abaixo:
 
 \section{O Modelo de Resolução}\label{cap:ferramentas:sec:modeloresolucao}
 
-Uma vez já conhecido a definição do problema - \textit{Definição ~\ref{teo:problema}} - é possível situar a abrangência abordada aqui nessa pesquisa, pois a intenção do estudo científico desenvolvido aqui é provar a realização de rotulação de dados com os dois algoritmos supervisionados de paradigmas diferentes: Naive Bayes e CART, utilizando as técnicas abordadas neste texto.
+A partir da definição do problema - \textit{Definição ~\ref{teo:problema}} - um estudo científico foi desenvolvido nesta pesquisa, a fim de provar, que é possível a realização de rotulação de dados com dois algoritmos supervisionados de paradigmas diferentes: Naive Bayes e CART.
+
 
 Este modelo de resolução consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivos intevalos, gerados a partir das frequências dos valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
 %\newtheorem{teorema}{Definição}

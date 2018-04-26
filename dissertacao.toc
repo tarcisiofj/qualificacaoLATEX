@@ -15,9 +15,9 @@
 \contentsline {subsubsection}{\numberline {2.1.1.2}Algoritmo Naive Bayes}{8}{subsubsection.2.1.1.2}
 \contentsline {subsection}{\numberline {2.1.2}Aprendizado N\IeC {\~a}o-Supervisionado}{10}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Discretiza\IeC {\c c}\IeC {\~a}o}{10}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Discretiza\IeC {\c c}\IeC {\~a}o por Larguras Iguais - EWD}{11}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Discretiza\IeC {\c c}\IeC {\~a}o por Frequ\IeC {\^e}ncia Iguais - EFD}{12}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Trabalhos Correlatos}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.1}Discretiza\IeC {\c c}\IeC {\~a}o por Larguras Iguais - EWD}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Discretiza\IeC {\c c}\IeC {\~a}o por Frequ\IeC {\^e}ncia Iguais - EFD}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Trabalhos Correlatos}{12}{section.2.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Considera\IeC {\c c}\IeC {\~o}es do Problema}{15}{section.3.1}
@@ -46,4 +46,4 @@
 \contentsline {section}{\numberline {5.3}Cronograma}{43}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{44}{section*.49}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{44}{section*.47}
