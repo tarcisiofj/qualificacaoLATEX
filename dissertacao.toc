@@ -23,27 +23,27 @@
 \contentsline {section}{\numberline {3.1}Considera\IeC {\c c}\IeC {\~o}es do Problema}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}O Modelo de Resolu\IeC {\c c}\IeC {\~a}o}{16}{section.3.2}
 \contentsline {section}{\numberline {3.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos }{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Exemplo}{18}{section.3.4}
+\contentsline {section}{\numberline {3.4}Exemplo}{19}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{19}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{21}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{22}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}CART}{28}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{29}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}CART}{31}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{32}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}CART}{35}{subsection.4.4.2}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{27}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}CART}{29}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}CART}{32}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{33}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{34}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}CART}{36}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{42}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{43}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{38}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{43}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{44}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{44}{section*.47}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{45}{section*.48}
