@@ -1,6 +1,6 @@
 \chapter{Metodologia} \label{cap:ferramentas}
 
-O texto a seguir abordará o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução para rotulação de dados utilizando dois algoritmos supervisionados baseados em paradigmas simbólico e estatístico . O objetivo ao final deste capítulo é poder resolucionar o problema de rotulação, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
+O texto a seguir abordará o problema proposto por esse trabalho, e logo em seguida, será apresentado um modelo de resolução para rotulação de dados utilizando dois algoritmos supervisionados baseados em paradigmas simbólico e estatístico . O objetivo ao final deste capítulo é poder resolucionar o problema de rotulação, com utilização de dois algoritmos, e atribuir a qualquer outro pesquisador todo o conhecimento necessário para replicar este trabalho através das informações produzidas aqui.
 
 \section{Considerações do Problema}\label{cap:ferramentas:sec:considproblema}
 
@@ -12,7 +12,7 @@ A importância do rótulo em um cluster é transparecer a compreensão do cluste
 
 A criação do rótulo é a escolha de uma tupla \textbf{atributo} e \textbf{faixa de valor}, onde o atributo possui  o maior  valor de correlacionamento entre os outros atributos. E a faixa escolhida é aquela que  mais se repete desse atributo rótulo. Podendo o cluster ter mais de um rótulo contendo a tupla atributo e faixa.
 
-Essa faixa, é um intervalo de valor definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que representa os valores que se repetem com a maior frequência no atributo. A exemplo disso, tem-se um vetor de elementos já discretizados, ${\vec{a}_i=\{1,1,1,2,2,2,2,3,3\}}$, onde ${(\vec{a})}$ representa todos os elementos do  ${(a_i)}$ onde $i\leqslant m$. Neste vetor o valor que mais se repete é o número 2, então, a \textbf{faixa 2}  é a escolhida junto com o atributo ${(a_i)}$ para compor o rótulo.
+Essa faixa, é um intervalo de valor definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que representa os valores que se repetem com a maior frequência no atributo. A exemplo disso, tem-se um vetor de elementos já discretizados, ${\vec{a}_i=\{1,1,1,2,2,2,2,3,3\}}$, onde $i\leqslant m$ e ${(\vec{a})}$ representa todos os elementos da coluna representada pelo atributo  ${(a)}$. Neste vetor o valor que mais se repete é o número 2, então, a \textbf{faixa 2} do atributo rótulo é a escolhida para compor o rótulo.
 
 O Problema de Rotulação é formalmente definido como segue abaixo:
 %\newtheorem{teorema}{Definição}
@@ -85,7 +85,7 @@ O modelo (figura \ref{fig:modeloresolucao}) inicialmente mostra a Base de Dados 
 
 Uma vez com a base discretizada ocorre a divisão dos clusters já classificados de acordo com a própria base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/ }. Isso é o funcionamento do fluxo (a), que nada mais é do que a separação da base em grupos já classificados. 
 
-No passo (II) serão executados os algoritmos de aprendizagem supervisionados, já visto nas subseções \ref{cap:refTeor:sssec:cart} e \ref{cap:refTeor:sssec:nbayes}. Essa etapa utiliza uma técnica demonstrada na seção  \ref{cap:ferramentas:sec:tecnica} sendo uma das mais importantes do método. A quantidade de vezes que o algoritmo supervisionado é aplicado irá ser a mesma do número de atributos do conjunto de dados. Utilizando a figura \ref{fig:tecnicamodelocomp} como exemplo, o algoritmo supervisionado seria executado três vezes, sendo essa quantidade igual ao número de atributos: \textbf{atr1, atr2} e \textbf{atr3}. 
+No passo (II) serão executados os algoritmos de aprendizagem supervisionados, já visto nas subseções \ref{cap:refTeor:sssec:cart} e \ref{cap:refTeor:sssec:nbayes}. Essa etapa utiliza uma técnica demonstrada na seção  \ref{cap:ferramentas:sec:tecnica} sendo uma das mais importantes do método. A quantidade de vezes que o algoritmo supervisionado é aplicado - dimensão ${m}$ da Definição \ref{teo:problema} -  irá ser a mesma do número de atributos do conjunto de dados. Utilizando a figura \ref{fig:tecnicamodelocomp} como exemplo, o algoritmo supervisionado seria executado três vezes, sendo essa quantidade igual ao número de atributos: \textbf{atr1, atr2} e \textbf{atr3}. 
 
 \begin{figure}[h!]
         \centering

@@ -37,16 +37,16 @@ Utilizando a idéia do exemplo anterior, uma vez inserida uma foto no banco de d
 
 %A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
-Em aprendizado de máquina são vários os cenários encontrados, e segundo \citeonline{Mohri2012} são eles: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço e  muitos outros cenários intermediários e um pouco mais complexos podem existir. Todavia nesta pesquisa será comentado alguns cenários de referência para esse trabalho.
+Em aprendizado de máquina são vários os cenários encontrados, e segundo \citeonline{Mohri2012} são eles: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço e  muitos outros cenários intermediários e um pouco mais complexos podem existir. Todavia nesta pesquisa serão comentados somente alguns cenários de referência para esse trabalho.
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
 O estudo sobre aprendizado supervisionado é um método que através de uma base de dados classificada, será realizado uma predição de novos registros com base em vários desses exemplos já classificados, ou seja, é quando existir casos que possuem uma classificador disponível para determinados conjunto de dados (conjunto de treinamento), mas precisa ser previstos para outras instâncias. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
 
 
-O termo ''Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe). Seguindo o padrão de exemplo anterior considere: uma base de dados de imagens de rostos, onde cada imagen possui uma saída representada por uma classe (masculino ou feminino). A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, utilizando estruturas condicionais e laços, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina ''aprender'' uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
+O termo ``Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe). Seguindo o padrão de exemplo anterior considere: uma base de dados de imagens de rostos, onde cada imagen possui uma saída representada por uma classe (masculino ou feminino). A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, utilizando estruturas condicionais e laços, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina ``aprender'' uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
 
-Em \cite{RusselStuart.Norvig2013} é feito apresentação formal do funcionamento da aprendizagem supervisionada. Dado um conjunto de treinamento 
+Em \citeonline{RusselStuart.Norvig2013} é feito apresentação formal do funcionamento da aprendizagem supervisionada. Dado um conjunto de treinamento 
 \begin{equation}
  (x_{1},y_{2}),(x_{2},y_{2}),...(x_{n},y_{n}),
  \label{eq:aprendSup}
@@ -87,7 +87,7 @@ Esse algoritmo constroi modelos de previsão a partir de dados de treinamento on
 
 O algoritmo CART pode se tornar uma árvore de classificação ou também um árvore de regressão, o que irá definir seu tipo seria o atributo classe. Por exemplo, em um conjunto de dados de um paciente onde tenta prever se o mesmo possuirá câncer. A classe seria ``Terá Câncer'' ou ``Não terá Câncer''. Nesse exemplo o atributo assume duas classes.
 
-Mas ao contrário de uma árvore de classificação que prediz uma classe, o CART também pode assumir uma árvore de regressão, onde poderá prever um valor numérico ou contínuo, como período de tempo de internação do paciente, preço de uma cirurgia ou quantidade de água ingerida. 
+Mas ao contrário de uma árvore de classificação que prediz uma classe, o CART também pode assumir uma árvore de regressão, onde poderá prever um valor numérico ou contínuo, como: período de tempo de internação do paciente, preço de uma cirurgia ou quantidade de água ingerida. 
 
 No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas. 
 

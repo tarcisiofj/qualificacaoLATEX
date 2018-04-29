@@ -25,7 +25,7 @@
 \contentsline {section}{\numberline {3.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos }{18}{section.3.3}
 \contentsline {section}{\numberline {3.4}Exemplo}{19}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{19}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{21}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{22}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{25}{chapter.4}
