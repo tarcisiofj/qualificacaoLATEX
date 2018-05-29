@@ -1,10 +1,11 @@
 \backcite {LOPES2014}{{15}{(document)}{Doc-Start}}
 \backcite {Metodo2015}{{15}{(document)}{Doc-Start}}
+\backcite {LOPES2014}{{15}{(document)}{Doc-Start}}
+\backcite {Kumar2013}{{1}{1}{chapter.1}}
+\backcite {Kumar2013}{{1}{1}{chapter.1}}
 \backcite {Montgomery2013}{{1}{1}{chapter.1}}
-\backcite {Kumar2013}{{1}{1}{chapter.1}}
-\backcite {Kumar2013}{{1}{1}{chapter.1}}
-\backcite {LOPES2014}{{1}{1}{chapter.1}}
 \backcite {LOPES2014}{{2}{1}{chapter.1}}
+\backcite {LOPES2014}{{2}{1}{teorema.1}}
 \backcite {Mitchell1997}{{5}{2}{chapter.2}}
 \backcite {Mitchell1997}{{5}{2.1}{section.2.1}}
 \backcite {RusselStuart.Norvig2013}{{6}{2.1}{section.2.1}}
@@ -12,35 +13,36 @@
 \backcite {Barber2011}{{6}{2.1.1}{subsection.2.1.1}}
 \backcite {RusselStuart.Norvig2013}{{6}{2.1.1}{subsection.2.1.1}}
 \backcite {RusselStuart.Norvig2013}{{8}{2.1.1.1}{subsubsection.2.1.1.1}}
-\backcite {braiman1984}{{8}{2.1.1.1}{subsubsection.2.1.1.1}}
-\backcite {yohannes1999classification}{{8}{2.1.1.1}{equation.2.1.2}}
-\backcite {Mitchell1997}{{8}{2.1.1.2}{subsubsection.2.1.1.2}}
+\backcite {breiman1984}{{8}{2.1.1.1}{subsubsection.2.1.1.1}}
+\backcite {yohannes1999classification,Raimundo2008}{{8}{2.1.1.1}{equation.2.1.2}}
+\backcite {yohannes1999classification,Raimundo2008}{{8}{2.1.1.1}{equation.2.1.2}}
+\backcite {Mitchell1997}{{9}{2.1.1.2}{subsubsection.2.1.1.2}}
 \backcite {RusselStuart.Norvig2013}{{9}{2.1.1.2}{subsubsection.2.1.1.2}}
-\backcite { Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{9}{2.1.1.2}{equation.2.1.5}}
-\backcite { Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{9}{2.1.1.2}{equation.2.1.5}}
-\backcite { Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{9}{2.1.1.2}{equation.2.1.5}}
-\backcite { Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{9}{2.1.1.2}{equation.2.1.5}}
+\backcite {Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{10}{2.1.1.2}{equation.2.1.5}}
+\backcite {Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{10}{2.1.1.2}{equation.2.1.5}}
+\backcite {Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{10}{2.1.1.2}{equation.2.1.5}}
+\backcite {Madureira2017, Lucca2013, Wu2008, Mccallum1997}{{10}{2.1.1.2}{equation.2.1.5}}
 \backcite {Barber2011}{{10}{2.1.2}{subsection.2.1.2}}
-\backcite {Catlett2006b,Hwang2002}{{10}{2.2}{section.2.2}}
-\backcite {Catlett2006b,Hwang2002}{{10}{2.2}{section.2.2}}
-\backcite {Kotsiantis2006, Dougherty1995}{{10}{2.2}{section.2.2}}
-\backcite {Kotsiantis2006, Dougherty1995}{{10}{2.2}{section.2.2}}
-\backcite {LOPES2014}{{11}{3}{figure.caption.14}}
-\backcite {LOPES2014}{{12}{2.3}{section.2.3}}
-\backcite {LOPES2014}{{12}{2}{Hfootnote.2}}
+\backcite {Catlett2006b,Hwang2002}{{11}{2.2}{section.2.2}}
+\backcite {Catlett2006b,Hwang2002}{{11}{2.2}{section.2.2}}
+\backcite {Kotsiantis2006, Dougherty1995}{{11}{2.2}{section.2.2}}
+\backcite {Kotsiantis2006, Dougherty1995}{{11}{2.2}{section.2.2}}
+\backcite {LOPES2014}{{12}{3}{figure.caption.14}}
 \backcite {LOPES2014}{{13}{2.3}{section.2.3}}
-\backcite {LOPES2014}{{13}{5}{figure.caption.16}}
+\backcite {LOPES2014}{{13}{2.3}{section.2.3}}
 \backcite {Metodo2015}{{13}{2.3}{figure.caption.16}}
-\backcite {Metodo2015}{{13}{6}{figure.caption.17}}
+\backcite {LOPES2014}{{13}{2}{Hfootnote.2}}
+\backcite {LOPES2014}{{14}{5}{figure.caption.16}}
+\backcite {Metodo2015}{{14}{6}{figure.caption.17}}
 \backcite {Filho2015}{{14}{2.3}{figure.caption.17}}
-\backcite {LOPES2014}{{15}{3.1}{section.3.1}}
-\backcite {LOPES2014}{{16}{1}{Hfootnote.3}}
-\backcite {LOPES2014}{{16}{2}{Hfootnote.4}}
-\backcite {LOPES2014}{{17}{3.2}{teorema.3}}
-\backcite {LOPES2014}{{18}{4}{Hfootnote.6}}
-\backcite {Catlett2006b,Hwang2002}{{19}{3.4.1}{subsection.3.4.1}}
-\backcite {Catlett2006b,Hwang2002}{{19}{3.4.1}{subsection.3.4.1}}
-\backcite {LOPES2014}{{19}{5}{Hfootnote.7}}
-\backcite {LOPES2014,Filho2015}{{30}{4}{Hfootnote.11}}
-\backcite {LOPES2014,Filho2015}{{30}{4}{Hfootnote.11}}
+\backcite {LOPES2014}{{15}{3}{chapter.3}}
+\backcite {LOPES2014}{{16}{2}{teorema.2}}
+\backcite {LOPES2014}{{16}{3}{teorema.3}}
+\backcite {LOPES2014}{{17}{3.2}{figure.caption.18}}
+\backcite {LOPES2014}{{18}{3.3}{section.3.3}}
+\backcite {Catlett2006b,Hwang2002}{{20}{3.4.1}{subsection.3.4.1}}
+\backcite {Catlett2006b,Hwang2002}{{20}{3.4.1}{subsection.3.4.1}}
+\backcite {LOPES2014}{{21}{10}{figure.caption.22}}
+\backcite {LOPES2014,Filho2015}{{30}{4.3}{section.4.3}}
+\backcite {LOPES2014,Filho2015}{{30}{4.3}{section.4.3}}
 \backcite {LOPES2014}{{38}{5.1}{section.5.1}}

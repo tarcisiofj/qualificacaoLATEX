@@ -12,23 +12,25 @@ ISSN 9780521518147.
 ISBN 9780511804779. Dispon{\'\i}vel em:
   \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
 
-\bibitem[Breiman et al. 1984]{braiman1984}
+\bibitem[Breiman et al. 1984]{breiman1984}
 \abntrefinfo{Breiman et al.}{BREIMAN et al.}{1984}
-{BREIMAN, L. et al. \emph{Classification and Regression Trees}. 1. ed. [S.l.]:
-  Chapman and Hall/CRC, 1984.  (Wadsworth Statistics/Probability).
-ISBN 0412048418.}
+{BREIMAN, L. et al. \emph{Classification and Regression Trees}. Taylor \&
+  Francis, 1984.  (The Wadsworth and Brooks-Cole statistics-probability
+  series).
+ISBN 9780412048418. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=JwQx-WOmSyQC}.}
 
 \bibitem[Catlett 1991]{Catlett2006b}
 \abntrefinfo{Catlett}{CATLETT}{1991}
 {CATLETT, J. \emph{{On changing continuous attributes into ordered discrete
-  attributes}}. Springer, Berlin, Heidelberg: Lecture Notes in Computer Science
-  (Lecture Notes in Artificial Intelligence), 1991. 164--178~p.}
+  attributes}}. Springer, Berlin, Heidelberg: Springer Verlag, 1991.
+  164--178~p.}
 
 \bibitem[Dougherty, Kohavi e Sahami 1995]{Dougherty1995}
 \abntrefinfo{Dougherty, Kohavi e Sahami}{DOUGHERTY; KOHAVI; SAHAMI}{1995}
 {DOUGHERTY, J.; KOHAVI, R.; SAHAMI, M. {Supervised and Unsupervised
   Discretization of Continuous Features}.
-\emph{Machine Learning Proceedings 1995}, v.~0, p. 194--202, 1995.
+\emph{Machine Learning Proceedings 1995}, Stanford, v.~0, p. 194--202, 1995.
 ISSN 0717-6163.
 Dispon{\'\i}vel em:
   \url{http://linkinghub.elsevier.com/retrieve/pii/B9781558603776500323}.}
@@ -36,8 +38,9 @@ Dispon{\'\i}vel em:
 \bibitem[Filho 2015]{Filho2015}
 \abntrefinfo{Filho}{FILHO}{2015}
 {FILHO, V. P.~R.
-\emph{{Rotulação de grupos utilizando conjuntos fuzzy}}.
-Tese (Doutorado) --- Universidade Federal do Piau{\'{i}}, 2015.}
+Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
+  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{Rotulação de grupos
+  utilizando conjuntos fuzzy}}. Teresina: [s.n.], 2015. 25~p.}
 
 \bibitem[Hwang e Li 2002]{Hwang2002}
 \abntrefinfo{Hwang e Li}{HWANG; LI}{2002}
@@ -64,26 +67,30 @@ Dispon{\'\i}vel em:
 \emph{International Journal of Engineering Science Invention}, v.~2, n.~7,
   p.~1--8, 2013.}
 
-\bibitem[LIMA 2015]{Metodo2015}
-\abntrefinfo{LIMA}{LIMA}{2015}
-{LIMA, B. V.~A. {M{\'{e}}todo Semissupervisionado de Rotula{\c{c}}{\~{a}}o e
-  Classifica{\c{c}}{\~{a}}o Utilizando Agrupamento por Sementes e
-  Classificadores}.
-2015.}
+\bibitem[Lima 2015]{Metodo2015}
+\abntrefinfo{Lima}{LIMA}{2015}
+{LIMA, B. V.~A.
+Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
+  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{M{\'{e}}todo
+  Semissupervisionado de Rotula{\c{c}}{\~{a}}o e Classifica{\c{c}}{\~{a}}o
+  Utilizando Agrupamento por Sementes e Classificadores}}. Teresina - PI:
+  [s.n.], 2015. 47~p.}
 
-\bibitem[LOPES 2014]{LOPES2014}
-\abntrefinfo{LOPES}{LOPES}{2014}
+\bibitem[Lopes 2014]{LOPES2014}
+\abntrefinfo{Lopes}{LOPES}{2014}
 {LOPES, L.~A.
-Disserta{\c{c}}{\~{a}}o (Mestrado em Ci{\^{e}}ncias da Computa{\c{c}}{\~{a}}o),
-  \emph{{Rotula{\c{c}}{\~{a}}o Autom{\'{a}}tica de Grupos com Aprendizagem de
-  M{\'{a}}quina Supervisionada}}. 2014. 73~p.}
+Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
+  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{Rotula{\c{c}}{\~{a}}o
+  Autom{\'{a}}tica de Grupos com Aprendizagem de M{\'{a}}quina
+  Supervisionada}}. Teresina: [s.n.], 2014. 73~p.}
 
 \bibitem[Lucca et al. 2013]{Lucca2013}
 \abntrefinfo{Lucca et al.}{LUCCA et al.}{2013}
 {LUCCA, G. et al. {Uma implementa{\c{c}}{\~{a}}o do algoritmo Na{\"{i}}ve Bayes
-  para classifica{\c{c}}{\~{a}}o de texto}.
-\emph{Centro de Ci{\^{e}}ncias Computacionais - Universidade Federal do Rio
-  Grande (FURG) Rio Grande - RS - Brasil}, p.~1--4, 2013.}
+  para classifica{\c{c}}{\~{a}}o de texto}. In:  CENTRO DE CI{\^{E}}NCIAS
+  COMPUTACIONAIS DA UNIVERSIDADE FEDERAL DO RIO GRANDE. \emph{IX Escola
+  Regional de Banco de Dados – ERBD 2013}. Rio Grande - RS, 2013. p.~1--4.
+  Dispon{\'\i}vel em: \url{http://ifc-camboriu.edu.br/erbd2013}.}
 
 \bibitem[Madureira 2017]{Madureira2017}
 \abntrefinfo{Madureira}{MADUREIRA}{2017}
@@ -118,6 +125,12 @@ ISBN 9780262018258.}
   1689--1699~p.
 ISSN 1098-6596.
 ISBN 9788578110796.}
+
+\bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
+\abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
+{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
+  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
+2008.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}
