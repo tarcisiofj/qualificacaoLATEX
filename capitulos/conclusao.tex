@@ -3,15 +3,15 @@
 Este capítulo abordará as conclusões dessa  proposta de mestrado referentes aos resultados do capítulo \ref{cap:resultados},  bem como uma seção de Trabalhos Futuros e  Cronograma. Na seção de Conclusão serão feitas considerações finais dos resultados de cada base de dados apresentadas, e logo após, em Trabalhos Futuros tem a pretenção de melhorar e expandir tudo que fora realizado  nesta pesquisa, e expor que existe uma continuidade para todo esse estudo aqui elaborado. Já no Cronograma, será criado uma tabela temporal onde esta será divida em meses e tarefas definindo os passos a serem seguidos até a conclusão da dissertação.
 
 \section{Conclusão}\label{cond}
-No capítulo \ref{cap:resultados} foi aplicado algoritmos supervisionados em algumas bases de dados a fim de provar se o problema proposto por este  trabalho foi solucionado. Uma vez conhecido o problema, foi executado dois algoritmos supervisionados servindo de amostra para provar que era possível fazer rotulação de dados com estes algoritmos (Naive Bayes e CART), tema deste trabalho. E já identificando alguns trabalhos que já haviam feito rotulação, como \citeonline{LOPES2014}, utilizando algoritmos supervisionados, este estudo demonstra de forma empírica a execução de outros algoritmos com paradigmas diferentes, aos que já foram realizados em pesquisas anteriores. 
+No capítulo \ref{cap:resultados} foi aplicado algoritmos supervisionados em algumas bases de dados a fim de provar  o problema de rotulação visto por este  trabalho. Uma vez conhecido o problema, foi executado dois algoritmos supervisionados servindo de amostra para provar que era possível fazer rotulação de dados com estes algoritmos (Naive Bayes e CART), tema deste trabalho. E já identificando alguns trabalhos que já haviam feito rotulação, como \citeonline{LOPES2014}, que utilizou o algoritmo de Redes Neurais, este estudo demonstra de forma empírica a execução de outros algoritmos com paradigmas diferentes, para provar que essa técnica também funciona com outros algoritmos supervisionados testados.
 
 Como o cerne da pesquisa é a rotulação de dados foi apresentados dois algoritmos com paradigmas diferentes, e em ambos, suas execuções nas bases de dados resultaram em respostas satisfatórias no âmbito da rotulação. Embora os rótulos encontrados  em cada base de dados não tenham sido totalmente idênticos, tanto um algoritmo como outro mostraram semelhanças em vários rótulos gerados, como exemplo das bases IRIS e GLASS.
 
 O processo de rotulação é composto por um, ou vários atributos, de maior relevância entre eles junto com sua(s) faixa(s) de valor(es) que mais se repetem, contéudo já visto na subseção \ref{cap:ferramentas:ssec:rotulacao}. Seguindo esse modelo foram adicionadas a cada resultado tabelas mostrando em porcentagem o grau de correlacionamento entre os atributos. A importância desta informação é passar o comportamento destes atributos adquirindo uma idéia geral da correlação entre eles na escolha do atributo rótulo.
 
-No modelo de resolução proposto foi inicialmente utilizado na base de dados Seeds, seção \ref{cap:resultados:ssec:seed:nb}, o algoritmo Naive Bayes. O atributo escolhido em cada cluster para compor o rótulo foi o que obteve  na tabela \ref{tab:execucoes:seed:nb} o maior valor de porcentagem. Na base de dados IRIS os valores escolhidos como rótulo dos clusters  não ocorreram ambiguidades, portanto não houve necessidade de utilizar a variável ${V}$. Todos os três clusters somente tiveram um atributo cada, compondo o rótulo.
+No modelo de resolução proposto foi inicialmente utilizado na base de dados Seeds, seção \ref{cap:resultados:ssec:seed:nb}, o algoritmo Naive Bayes. O atributo escolhido em cada cluster para compor o rótulo foi o que obteve  na tabela \ref{tab:execucoes:seed:nb} com maior valor de porcentagem. Na base de dados IRIS os valores escolhidos como rótulo dos clusters   também não ocorreram ambiguidades, portanto não houve necessidade de utilizar a variável ${V}$.
 
-Continuando com a base Seeds, após a escolha do atributo que fará parte do rótulo, o segundo passo é a escolha da faixa de valores do atributo. Essa segunda etapa é dependente totalmente da discretização\footnote{seção ~\ref{cap:refTeor:sec:discret}} e independente da primeira etapa. O método é capaz de gerar a faixa de maior repetição de valores de qualquer atributo, mas aqui neste trabalho o que importa é a faixa do atributo rótulo. Para ter mais  confiabilidade  no rótulo o método escolhe a faixa de valores que mais se repetem. No caso desse algoritmo o resultado na tabela \ref{tab:rot:seeds:nb} consegue provar uma boa eficiência, pois em cada 70 elementos do cluster 1, somente 14, ficaram de fora dessa faixa. No cluster 2, somando os dois atributos rótulos tem-se 12 elementos que não estão dentro da representatividade do rótulo. Outro valor pequeno em relação aos 70 elementos. E no cluster 3, somente 5 elementos não estão dentro da faixa considerada rótulo.
+Continuando com a base Seeds, após a escolha do atributo que fará parte do rótulo, o segundo passo é a escolha da faixa de valores do atributo. Essa segunda etapa é dependente totalmente da discretização, visto na seção \ref{cap:refTeor:sec:discret}, e independente da primeira etapa. O método é capaz de gerar a faixa de maior repetição de valores de qualquer atributo, mas aqui neste trabalho o que importa é a faixa do atributo rótulo. Para ter mais  confiabilidade  no rótulo o método escolhe a faixa de valores que mais se repetem. No caso desse algoritmo o resultado na tabela \ref{tab:rot:seeds:nb} consegue provar uma boa eficiência, pois em cada 70 elementos do cluster 1, somente 14, ficaram de fora dessa faixa. No cluster 2, somando os dois atributos rótulos tem-se 12 elementos que não estão dentro da representatividade do rótulo. Outro valor pequeno em relação aos 70 elementos. E no cluster 3, somente 5 elementos não estão dentro da faixa considerada rótulo.
 
 
 \begin{figure}[h!]
@@ -61,17 +61,48 @@ Conforme resultados das tabelas \ref{tab:rot:iris:nb} e \ref{tab:rot:iris:cart} 
 %A repetição do atributo \textbf{petalwidth} em todos os rótulos, acaba mostrando o grau de relevância desse atributo na base de dados. Para um especialista é interessante saber que esse atributo possue um grande referencial na base de dados. Nos rótulos esse atributo assumiu faixas diferentes conseguindo assim o método da um significado ao cluster. 
 
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
-    \subfloat[Naive Bayes]{
-        \includegraphics[scale=.9]{figs/grafico_NB_Glass_exec_grp.png}
-        \label{fig:graf:GLASS_NB} }
-    \quad
-    \subfloat[CART]{
-        \includegraphics[scale=.9]{figs/grafico_CART_GLASS_exec_grp.png}
-        \label{fig:graf:GLASS_CART} }
+    \subfloat[Execução 1]{
+        \includegraphics[scale=.4]{figs/grafico_NB_Glass_exec_grp_1.png}
+        \label{fig:graf:GLASS_NB_1} }
+    \hspace{0.5cm}
+    \subfloat[Execução 2]{
+        \includegraphics[scale=.4]{figs/grafico_NB_Glass_exec_grp_2.png}
+        \label{fig:graf:GLASS_NB_2} }
+    \hspace{0.5cm}
+    \subfloat[Execução 3]{
+        \includegraphics[scale=.4]{figs/grafico_NB_Glass_exec_grp_3.png}
+        \label{fig:graf:GLASS_NB_3} }
+    \hspace{0.5cm}
+    \subfloat[Execução 4]{
+        \includegraphics[scale=.4]{figs/grafico_NB_Glass_exec_grp_4.png}
+        \label{fig:graf:GLASS_NB_3} }
+    \caption{Gráfico de Execuções do algoritmo supervisionado Naive Bayes na base de dados GLASS.} \label{fig:graf:NB}
+        
+        %\includegraphics[scale=0.4]{figs/grafB.png}
+        %\caption{Polinômio Superajustado} \label{grafB}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \subfloat[Execução 1]{
+        \includegraphics[scale=.4]{figs/grafico_CART_GLASS_exec_grp_1.png}
+        \label{fig:graf:GLASS_CART_1} }
+    \hspace{0.5cm}
+    \subfloat[Execução 2]{
+        \includegraphics[scale=.4]{figs/grafico_CART_GLASS_exec_grp_2.png}
+        \label{fig:graf:GLASS_CART_2} }
+    \hspace{0.5cm}
+    \subfloat[Execução 3]{
+        \includegraphics[scale=.4]{figs/grafico_CART_GLASS_exec_grp_3.png}
+        \label{fig:graf:GLASS_CART_3} }
+    \hspace{0.5cm}
+    \subfloat[Execução 4]{
+        \includegraphics[scale=.4]{figs/grafico_CART_GLASS_exec_grp_4.png}
+        \label{fig:graf:GLASS_CART_4} }
     
-    \caption{Gráfico de Execuções dos algoritmos supervisionados na base de dados GLASS.} \label{fig:graf:GLASS_NB_CART}
+    \caption{Gráfico de Execuções do algoritmo supervisionado CART na base de dados GLASS.} \label{fig:graf:CART}
         
         %\includegraphics[scale=0.4]{figs/grafB.png}
         %\caption{Polinômio Superajustado} \label{grafB}
@@ -81,9 +112,9 @@ A avaliação da base de dados GLASS referente a rotulação apresentada na tabe
 
 No cluster 4 em comparação aos dois algoritmos testados, houve umadiferença no Naive Bayes por apresentar três atributos compondo o rótulo, como pode ser visto na tabela \ref{tab:execucoes:glass:nb}, diferente do algoritmo CART que apresentou somente um atributo - \textbf{Ba} - também presente no rótulo do Naive Bayesno. No CART por aprensetar somente um atributo com sua faixa, acabou mitigando o erro e obtendo uma maior porcentagem de acurácia.
 
-Nos gráficos da figura \ref{fig:graf:GLASS_NB_CART} é aprensentado o comportamento de correlacionamento dos atributos rótulos do Naive Bayes e CART respectivamente, e mesmo havendo semelhança nos gráficos os valores de correlação dos atributos no CART foram melhores, e por conseguinte teve melhor acurácia comprovado no gráfico \ref{fig:graf:grafico_NB_CART_acuracia}.
+Nos gráficos da figura  \ref{fig:graf:NB} e \ref{fig:graf:CART} são aprensentados os comportamentos de correlacionamento dos atributos rótulos do Naive Bayes e CART respectivamente, e mesmo havendo semelhança nos gráficos os valores de correlação dos atributos no CART foram melhores, e por conseguinte teve melhor acurácia comprovado no gráfico \ref{fig:graf:grafico_NB_CART_acuracia}.
 
-Por fim, ao se analisar os resultados nos dois algoritmos supervisionados pode-se afirmar que  foram bem satisfatórios nas bases utilizadas, conforme figura \ref{fig:graf:grafico_NB_CART_acuracia}, que mostra uma acurácia de 80\% na maioria dos resultados e desta maneira provando que é possível a rotulação de dados com Naive Bayes e CART, portanto os rótulos encontrados representam bem os clusters testados. %E uma obsevação técnica dos algoritmos utilizados é que o CART se mostrou bem mais rápido em relação ao Naive Bayes para gerar os resultados.
+Por fim, ao se analisar os resultados nos dois algoritmos supervisionados pode-se afirmar que os resultados apresentados foram bem satisfatórios nas bases utilizadas, conforme figura \ref{fig:graf:grafico_NB_CART_acuracia}, que mostra uma acurácia de 80\% na maioria dos resultados. Desta maneira é possível provar que é possível a rotulação de dados com Naive Bayes e CART, através dos os rótulos encontrados que representam bem os clusters testados. %E uma obsevação técnica dos algoritmos utilizados é que o CART se mostrou bem mais rápido em relação ao Naive Bayes para gerar os resultados.
 
 \begin{figure}[h!]
     \centering
@@ -132,17 +163,17 @@ Outro ponto importante é inserir nos teste mais algoritmos, que pertençam a  p
 % %  \resizebox{\textwidth}{!}{ % abre resizebox, setar tabela da largura da página.
 
 \scalebox{1}{
-\begin{tabular}{p{6cm}lllcc}
+\begin{tabular}{p{6cm}lll}
 \hline
-\multicolumn{1}{c}{\multirow{2}{*}{Atividades}} & \multicolumn{5}{c}{Meses} \\ \cline{2-6}
-\multicolumn{1}{c}{} & Maio & Junho & Julho & Agosto & Setembro   \\ \hline \hline
+\multicolumn{1}{c}{\multirow{2}{*}{Atividades}} & \multicolumn{3}{c}{Meses} \\ \cline{2-4}
+\multicolumn{1}{c}{} & Junho & Julho & Agosto    \\ \hline \hline
 %\rowcolor[HTML]{EFEFEF}
-\footnotesize Testes com Novas Bases de Dados  & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~  \\ \hline
-\footnotesize Modificar Números de Faixa (R) & \cellcolor{midgray} ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ &~~~~~~~~~ & ~~~~~~~~~ \\ \hline
-\footnotesize Testar com outros Métodos de Discretização & \cellcolor{midgray}~~~~~~~~~ & \cellcolor{midgray}~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ \\ \hline
-\footnotesize Testar com outros Algoritmos com Paradigmas Diferentes &~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ \\ \hline
-\footnotesize Preparar Artigo   & ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray}  ~~~~~~~~~ \\ \hline
-\footnotesize Escrita da Dissertação & ~~~~~~~~~  & \cellcolor{midgray}~~~~~~~~~ & \cellcolor{midgray}~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ \\ \hline
+\footnotesize Testes com Novas Bases de Dados  & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & ~~~~~~~~~  \\ \hline
+\footnotesize Modificar Números de Faixa (R) & \cellcolor{midgray} ~~~~~~~~~ & ~~~~~~~~~ & ~~~~~~~~~  \\ \hline
+\footnotesize Testar com outros Métodos de Discretização & \cellcolor{midgray}~~~~~~~~~ & \cellcolor{midgray}~~~~~~~~~ & ~~~~~~~~~ \\ \hline
+\footnotesize Testar com outros Algoritmos com Paradigmas Diferentes &~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray} ~~~~~~~~~ \\ \hline
+\footnotesize Preparar Artigo   & ~~~~~~~~~  & \cellcolor{midgray} ~~~~~~~~~ & \cellcolor{midgray}  ~~~~~~~~~ \\ \hline
+\footnotesize Escrita da Dissertação & ~~~~~~~~~  & \cellcolor{midgray}~~~~~~~~~ & \cellcolor{midgray}~~~~~~~~~  \\ \hline
 \hline
 \end{tabular}
 } % fecha resizebox

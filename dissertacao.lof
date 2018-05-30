@@ -17,13 +17,20 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Resultado dos Algoritmos\relax }}{23}{figure.caption.25}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do Naive Bayes}}}{23}{subfigure.11.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do algorimo de \IeC {\'A}rvore de Decis\IeC {\~a}o}}}{23}{subfigure.11.2}
-\contentsline {figure}{\numberline {12}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados SEEDS.\relax }}{40}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{40}{subfigure.12.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{40}{subfigure.12.2}
-\contentsline {figure}{\numberline {13}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados IRIS.\relax }}{41}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{41}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{41}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados GLASS.\relax }}{42}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{42}{subfigure.14.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{42}{subfigure.14.2}
-\contentsline {figure}{\numberline {15}{\ignorespaces Acur\IeC {\'a}cia por Clusters (Os clusters est\IeC {\~a}o numerados em ordem crescente em cada Base de Dados\relax }}{43}{figure.caption.44}
+\contentsline {figure}{\numberline {12}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados SEEDS.\relax }}{41}{figure.caption.41}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{41}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{41}{subfigure.12.2}
+\contentsline {figure}{\numberline {13}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados IRIS.\relax }}{42}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{42}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{42}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado Naive Bayes na base de dados GLASS.\relax }}{43}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{43}{subfigure.14.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{43}{subfigure.14.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{43}{subfigure.14.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{43}{subfigure.14.4}
+\contentsline {figure}{\numberline {15}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado CART na base de dados GLASS.\relax }}{43}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{43}{subfigure.15.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{43}{subfigure.15.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{43}{subfigure.15.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{43}{subfigure.15.4}
+\contentsline {figure}{\numberline {16}{\ignorespaces Acur\IeC {\'a}cia por Clusters (Os clusters est\IeC {\~a}o numerados em ordem crescente em cada Base de Dados\relax }}{44}{figure.caption.45}

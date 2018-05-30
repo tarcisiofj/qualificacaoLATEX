@@ -26,6 +26,13 @@ ISBN 9780412048418. Dispon{\'\i}vel em:
   attributes}}. Springer, Berlin, Heidelberg: Springer Verlag, 1991.
   164--178~p.}
 
+\bibitem[Charytanowicz et al. 2010]{Charytanowicz2010}
+\abntrefinfo{Charytanowicz et al.}{CHARYTANOWICZ et al.}{2010}
+{CHARYTANOWICZ, M. et al. {Complete gradient clustering algorithm for features
+  analysis of X-ray images}.
+\emph{Advances in Intelligent and Soft Computing}, v.~69, p. 15--24, 2010.
+ISSN 18675662.}
+
 \bibitem[Dougherty, Kohavi e Sahami 1995]{Dougherty1995}
 \abntrefinfo{Dougherty, Kohavi e Sahami}{DOUGHERTY; KOHAVI; SAHAMI}{1995}
 {DOUGHERTY, J.; KOHAVI, R.; SAHAMI, M. {Supervised and Unsupervised
@@ -35,12 +42,28 @@ ISSN 0717-6163.
 Dispon{\'\i}vel em:
   \url{http://linkinghub.elsevier.com/retrieve/pii/B9781558603776500323}.}
 
+\bibitem[Evett e Spiehler 1988]{Evett:1989}
+\abntrefinfo{Evett e Spiehler}{EVETT; SPIEHLER}{1988}
+{EVETT, I.~W.; SPIEHLER, E.~J. Knowledge based systems. In:  DUFFIN, P.~H.
+  (Ed.). New York, NY, USA: Halsted Press, 1988. cap. Rule Induction in
+  Forensic Science, p. 152--160.
+ISBN 0-470-21260-8.
+Dispon{\'\i}vel em: \url{http://dl.acm.org/citation.cfm?id=67040.67055}.}
+
 \bibitem[Filho 2015]{Filho2015}
 \abntrefinfo{Filho}{FILHO}{2015}
 {FILHO, V. P.~R.
 Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
   Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{Rotulação de grupos
   utilizando conjuntos fuzzy}}. Teresina: [s.n.], 2015. 25~p.}
+
+\bibitem[FISHER 1936]{FISHER1936}
+\abntrefinfo{FISHER}{FISHER}{1936}
+{FISHER, R.~A. {the Use of Multiple Measurements in Taxonomic Problems}.
+\emph{Annals of Eugenics}, v.~7, n.~2, p. 179--188, 1936.
+ISSN 20501420.
+Dispon{\'\i}vel em:
+  \url{http://doi.wiley.com/10.1111/j.1469-1809.1936.tb02137.x}.}
 
 \bibitem[Hwang e Li 2002]{Hwang2002}
 \abntrefinfo{Hwang e Li}{HWANG; LI}{2002}
@@ -128,9 +151,8 @@ ISBN 9788578110796.}
 
 \bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
 \abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
-{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
-  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
-2008.}
+{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. \emph{{O Algoritmo de
+  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}}. 2008.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}
