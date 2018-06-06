@@ -5,32 +5,32 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Ponto de Corte (R-1)\relax }}{11}{figure.caption.13}
 \contentsline {figure}{\numberline {3}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD}}{12}{figure.caption.14}
 \contentsline {figure}{\numberline {4}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD}}{13}{figure.caption.15}
-\contentsline {figure}{\numberline {5}{\ignorespaces Modelo de \citeonline {LOPES2014}\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {5}{\ignorespaces Modelo de \citeonline {LOPES2014}\relax }}{13}{figure.caption.16}
 \contentsline {figure}{\numberline {6}{\ignorespaces Comportamento da base de dados a cada itera\IeC {\c c}\IeC {\~a}o. M\IeC {\'e}todo \cite {Metodo2015}\relax }}{14}{figure.caption.17}
-\contentsline {figure}{\numberline {7}{\ignorespaces Modelo de Resolu\IeC {\c c}\IeC {\~a}o Proposto\relax }}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada aos atributos atr1, atr2 e atr3 sendo classe \relax }}{18}{figure.caption.19}
-\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada ao atributo, atr1, sendo classe \relax }}{19}{figure.caption.20}
-\contentsline {figure}{\numberline {10}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o de atributos utilizando EFD com R = 3 (Figura adaptada de \citeonline {LOPES2014})\relax }}{21}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr1}}}{21}{subfigure.10.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr2}}}{21}{subfigure.10.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr3}}}{21}{subfigure.10.3}
-\contentsline {figure}{\numberline {11}{\ignorespaces Resultado dos Algoritmos\relax }}{23}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do Naive Bayes}}}{23}{subfigure.11.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do algorimo de \IeC {\'A}rvore de Decis\IeC {\~a}o}}}{23}{subfigure.11.2}
-\contentsline {figure}{\numberline {12}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados SEEDS.\relax }}{41}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{41}{subfigure.12.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{41}{subfigure.12.2}
-\contentsline {figure}{\numberline {13}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados IRIS.\relax }}{42}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{42}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{42}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado Naive Bayes na base de dados GLASS.\relax }}{43}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{43}{subfigure.14.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{43}{subfigure.14.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{43}{subfigure.14.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{43}{subfigure.14.4}
-\contentsline {figure}{\numberline {15}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado CART na base de dados GLASS.\relax }}{43}{figure.caption.44}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{43}{subfigure.15.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{43}{subfigure.15.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{43}{subfigure.15.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{43}{subfigure.15.4}
-\contentsline {figure}{\numberline {16}{\ignorespaces Acur\IeC {\'a}cia por Clusters (Os clusters est\IeC {\~a}o numerados em ordem crescente em cada Base de Dados\relax }}{44}{figure.caption.45}
+\contentsline {figure}{\numberline {7}{\ignorespaces Modelo de Resolu\IeC {\c c}\IeC {\~a}o Proposto\relax }}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada aos atributos atr1, atr2 e atr3 sendo classe \relax }}{20}{figure.caption.19}
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada ao atributo, atr1, sendo classe \relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {10}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o de atributos utilizando EFD com R = 3 (Figura adaptada de \citeonline {LOPES2014})\relax }}{23}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr1}}}{23}{subfigure.10.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr2}}}{23}{subfigure.10.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Discretiza\IeC {\c c}\IeC {\~a}o em atr3}}}{23}{subfigure.10.3}
+\contentsline {figure}{\numberline {11}{\ignorespaces Resultado dos Algoritmos\relax }}{25}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do Naive Bayes}}}{25}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do algorimo de \IeC {\'A}rvore de Decis\IeC {\~a}o}}}{25}{subfigure.11.2}
+\contentsline {figure}{\numberline {12}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados SEEDS.\relax }}{43}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{43}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{43}{subfigure.12.2}
+\contentsline {figure}{\numberline {13}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es dos algoritmos supervisionados na base de dados IRIS.\relax }}{44}{figure.caption.41}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Naive Bayes}}}{44}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CART}}}{44}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado Naive Bayes na base de dados GLASS.\relax }}{45}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{45}{subfigure.14.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{45}{subfigure.14.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{45}{subfigure.14.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{45}{subfigure.14.4}
+\contentsline {figure}{\numberline {15}{\ignorespaces Gr\IeC {\'a}fico de Execu\IeC {\c c}\IeC {\~o}es do algoritmo supervisionado CART na base de dados GLASS.\relax }}{45}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 1}}}{45}{subfigure.15.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 2}}}{45}{subfigure.15.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 3}}}{45}{subfigure.15.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o 4}}}{45}{subfigure.15.4}
+\contentsline {figure}{\numberline {16}{\ignorespaces Acur\IeC {\'a}cia por Clusters (Os clusters est\IeC {\~a}o numerados em ordem crescente em cada Base de Dados)\relax }}{46}{figure.caption.44}

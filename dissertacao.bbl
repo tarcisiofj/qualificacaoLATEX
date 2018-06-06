@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Ara{\'{u}}jo 2018]{Araujo2018}
+\abntrefinfo{Ara{\'{u}}jo}{ARA{\'{U}}JO}{2018}
+{ARA{\'{U}}JO, F. N.~C. \emph{{Rotula{\c{c}}{\~{a}}o Autom{\'{a}}tica de
+  Clusters Baseados em An{\'{a}}lise de Filogenias}}. Teresina - PI: [s.n.],
+  2018. 48~p.}
+
 \bibitem[Barber 2011]{Barber2011}
 \abntrefinfo{Barber}{BARBER}{2011}
 {BARBER, D. \emph{{Bayesian Reasoning and Machine Learning}}. [s.n.], 2011.
@@ -49,6 +55,12 @@ Dispon{\'\i}vel em:
   Forensic Science, p. 152--160.
 ISBN 0-470-21260-8.
 Dispon{\'\i}vel em: \url{http://dl.acm.org/citation.cfm?id=67040.67055}.}
+
+\bibitem[Filho 2018]{imperes2018}
+\abntrefinfo{Filho}{FILHO}{2018}
+{FILHO, I. \emph{{Rotula{\c{c}}{\~{a}}o de Grupos em Algoritmos de Agrupamento
+  Baseados em Dist{\^{a}}ncia Utilizando Grau de Pertin{\^{e}}ncia}}. 2018.
+  60~p.}
 
 \bibitem[Filho 2015]{Filho2015}
 \abntrefinfo{Filho}{FILHO}{2015}

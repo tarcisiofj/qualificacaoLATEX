@@ -216,7 +216,7 @@ Uma vez que no conjunto (\ref{eq:aprendNSup}), não existe classe ${y}$, encontr
 
 O método de discretização faz a conversão de valores contínuos em valores discretos. A partir de um atributo com valores contínuos, a discretização cria um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos os atributos possuiram novos contéudos no formato de faixas de valores.
 
-Segundo alguns autores \cite{Catlett2006b,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \cite{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
+Segundo alguns autores como \citeonline{Catlett2006b,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \citeonline{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
 
 %Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
 
@@ -290,10 +290,10 @@ Igual o que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEFD.png}
-        \caption[Discretização EFD]{Discretização EFD\footnotemark} 
+        \caption[Discretização EFD]{Discretização EFD baseada em \cite{LOPES2014}} 
         \label{fig:faixasEFD}
 \end{figure} 
-\footnotetext{Figura extraída de \cite{LOPES2014}}
+%\footnotetext{Figura extraída de \cite{LOPES2014}}
 %}
 
 
@@ -301,9 +301,7 @@ Igual o que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]
 
 Esta seção propõe relacionar outros trabalhos servindo de complemento teórico para entender a variedade de aplicações referente ao assunto de rotulação de dados.
 
-O trabalho escrito por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, tema este, proposto também por esta pesquisa, mas com abrangência e execução diferentes do modelo da figura \ref{fig:modeloLOPES} . No trabalho de \citeonline{LOPES2014} foi utilizado como entrada um conjunto de dados onde foi feito o agrupamento automático, com algoritmos não-supervisionados formando  clusters. Logo após é utilizado um algoritmo supervisionado (Redes Neurais) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados pela faixa de valor, que mais se repetem, em conjunto com os atributos mais relevantes.
-
-Pode-se verificar na figura \ref{fig:modeloLOPES} que na parte onde é aplicado o algoritmo  de redes neurais (processo III) é o local exato que esta pesquisa utiliza para testar outros algoritmos supervisionados, servindo para comprovar a hipótese desta proposta de mestrado e validação do modelo.
+O trabalho escrito por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, tema este, proposto também por esta pesquisa, mas com abrangência e execução diferentes do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático, com algoritmos não-supervisionados formando  clusters. Logo após a formação dos clusters e a discretização do dados é utilizado um algoritmo supervisionado (Redes Neurais) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
 
 \begin{figure}[h]
         \centering
@@ -312,8 +310,17 @@ Pode-se verificar na figura \ref{fig:modeloLOPES} que na parte onde é aplicado 
         \label{fig:modeloLOPES}
 \end{figure}
 
+Em analogia com este trabalho pode-se verificar na figura \ref{fig:modeloLOPES} que na parte onde é aplicado o algoritmo  de Redes Neurais (processo III) é o local exato que esta pesquisa utiliza para testar outros algoritmos supervisionados. Nesse modelo proposto o autor não só tem a preocupação de processar  a formação dos grupos como também aplicar um algoritmo supervisionado para rotular esses grupos formados.
 
-Em \citeonline{Metodo2015} o problema em questão é fazer classificação e rotulação em uma base que possuem poucos elementos classificados utilizando método semi-supervisionado. O método inicia com uma base dividida em elementos classificados(L) e não classificados(U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U, figura  \ref{fig:modeloVicente}. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
+
+
+
+O trabalho de \citeonline{Metodo2015} é baseado em fazer a classificação e rotulação em uma base que possuem poucos elementos classificados utilizando método semisupervisionado. Na aprendizagem de máquina semisupervisionada o foco é quando não há muitos exemplos em quantidade suficientes ao ponto de conseguir treinar um classificador que desempenhe bem seu papel. 
+
+O autor aplica a combinação de um classificador e um agrupador para desempenhar  a tarefa de classificação dos dados baseando-se nos algoritmos co-training e $k-means_ki$.
+
+
+O método inicia com uma base dividida em elementos classificados (L) e não classificados (U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U, figura  \ref{fig:modeloVicente}. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
 \begin{figure}[!h]
         \centering
         \includegraphics[scale=0.4]{figs/modeloVicente.png}
@@ -323,13 +330,36 @@ Em \citeonline{Metodo2015} o problema em questão é fazer classificação e rot
 O método proposto é uma combinação de um classificador com um método de agrupamento, onde a rotulação de um conjunto de dados é feita com conhecimento prévio de um outro conjunto menor rotulado. O classificador treina com a parte de dados rotulada e classifica os dados não-rotulados.
 
 
-Outra pesquisa sore rotulação está em \cite{Filho2015} onde aborda o mesmo Problema de Rotulação, mas a atuação é diferenciada, pois o modelo procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. 
+Outra pesquisa \cite{Filho2015}  aborda o mesmo Problema de Rotulação, mas a atuação é diferenciada, pois o modelo procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. 
+
+Através do algoritmo Fuzzy C-Means é criada uma tabela chamada de matriz U. Essa matriz contém um número relacionado a cada grupo chamado, Grau de Pertinência - GP, onde este número varia de 0 a 1 dependendo do grau de proximidade com o centróide de um grupo. Quanto mais próximo ao centróide, maior é seu grau de pertinência em relação ao grupo.
+
+Através dessa tabela criada com os valores de pertinência são escolhidos os atributos que farão parte de cada grupo. A cada atributo é verificado o GP de cada grupo, e o atributo pertencerá ao grupo que tiver o maior GP. Isso significa que quanto maior o valor de GP, mais próximo do centróide do grupo, consequentemente, mais pertencente ao grupo. 
+
+Nesse modelo proposto pelo autor existe duas variáveis onde são atribuídos parâmetros: Grau de Seleção - GS e Incremento do Grau de Seleção - IGS. O GS, serve de base para seleção dos elementos mais significativos na formação do rótulo e o IGS seria um incremento do parâmetro GS, sendo que, tanto GS quanto IGS podem variar de 0 a 1. Esses parâmetros são inicializados no início do modelo de resolução e são incrementados a cada iteração, que ocorre caso não exista pelo menos uma faixa de valor pertencente a cada grupo.
+
+O trabalho de \citeonline{imperes2018} realizou uma proposta de rotulação onde utilizou algoritmo de agrupamento baseado em distância como base. A partir deste ponto o trabalho foi desenvolvido transformando saída padrão em distância para que cada elemento da base de dados recebesse um Grau de Pertinência - GP. Esse GP é utilizado para selecionar os elementos relevantes em cada grupo.
+
+O modelo proposto pelo autor funciona em duas etapas, a primeira transforma as saídas em distâncias para GP, e a segunda etapa, formar as faixas de valores e exibir os rótulos.
+
+No início da primeira etapa são atribuidos os parâmetros do números de grupos, Grau de Pertinência, Grau de Seleção - GS e Incremento de Grau de Seleção - IGS. Após é carregado a base de dados e formados os grupos através de algoritmo baseado em distância (K-Means). Logo em seguida a transformação da saída de distância em Grau de Pertinência, por conseguinte os grupos já ficam atuliazados contendo GP.
+
+Na segunda etapa acontece a seleção dos elementos a partir da comparação do GP e do GS, e logo em seguida a escolha do menor e maior valor do atributo formando a faixa de valor. Caso haja pele menos uma faixa de valor pertencente a cada grupo os rótulos são exibidos, mas caso não ocorra, GS é incrementado pelo IGS refazendo a segunda etapa novamente. 
+
+Outro trabalho de rotulação é o de \citeonline{Araujo2018}, onde defende que a etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será  acurácia dos grupos encontrados.
+
+Nesse trabalho o autor utiliza em conjundo o DAMICORE e DAMICORE-2 no método de rotulação automática para rotular  grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de clusters ao qual o algoritmo é aplicado. 
+
+O modelo é dividio em cinco etapas até obter os rótulos. Nas etapas I e II preparam os dados e ajuda ao DAMICORE (etapa III) para melhor medir a similaridade dos elementos, oferecendo uma maior precisão. Como não é preciso informar o número de cluster na utilização do DAMICORE, os resultados na etapa III acabam por superar um número razoável de clusters para uma melhor compreensão. Em razão disso a etapa IV de mesclagem faz a junção de clusters para criação de super-clusters, que são clusters maiores representando um conceito mais geral e de mais fácil entedimento. Por fim, os super-clusters são submetidos ao método de rotulação automática (etapa V) permitindo identificar os atributos mais relevantes e seus respectivos faixas de valores.
+
+
 % \begin{figure}[!h]
 %         \centering
 %         \includegraphics[scale=0.8]{figs/modeloRotFuzzy.png}
 %         \caption{Modelo \cite{Filho2015}} \label{fig:modeloFilhoVilmar}
 % \end{figure}
 
+%Outras pesquisas encontradas estão sempre mais relacionadas a classificação dos dados, contudo o que se pretende é da significado, rotular um grupo, identificando através de uma tupla, atributo e faixa de valor, e não somente agrupar esses  dados.
 
 
 

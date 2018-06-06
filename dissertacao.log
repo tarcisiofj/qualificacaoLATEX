@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  30 MAY 2018 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  5 JUN 2018 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1619,14 +1619,14 @@ been already used, duplicate ignored
                    \relax 
 l.53 \end{equation}
                     [6]
-<figs/grafA.png, id=387, 142.28156pt x 87.32625pt>
+<figs/grafA.png, id=394, 142.28156pt x 87.32625pt>
 File: figs/grafA.png Graphic file (type png)
 <use figs/grafA.png>
 Package pdftex.def Info: figs/grafA.png  used on input line 64. on input line 6
 4.
 Package pdftex.def Info: Requested size: 113.8254pt x 69.86108pt on input line 
 64.
-<figs/grafB.png, id=389, 142.28156pt x 85.06781pt>
+<figs/grafB.png, id=396, 142.28156pt x 85.06781pt>
 File: figs/grafB.png Graphic file (type png)
 <use figs/grafB.png>
 Package pdftex.def Info: figs/grafB.png  used on input line 68. on input line 6
@@ -1661,7 +1661,7 @@ fier (name{page.10}) has been already used, duplicate ignored
                    \relax 
 l.218 
        [10]
-<figs/faixaA-B_PontoCorte.png, id=465, 142.28156pt x 85.06781pt>
+<figs/faixaA-B_PontoCorte.png, id=472, 142.28156pt x 85.06781pt>
 File: figs/faixaA-B_PontoCorte.png Graphic file (type png)
 <use figs/faixaA-B_PontoCorte.png>
 Package pdftex.def Info: figs/faixaA-B_PontoCorte.png  used on input line 231. 
@@ -1677,7 +1677,7 @@ l.246
 
 LaTeX Warning: Command \' invalid in math mode on input line 250.
 
-<figs/discretizacaoEWD.png, id=479, 479.54156pt x 79.79813pt>
+<figs/discretizacaoEWD.png, id=486, 479.54156pt x 79.79813pt>
 File: figs/discretizacaoEWD.png Graphic file (type png)
 <use figs/discretizacaoEWD.png>
 Package pdftex.def Info: figs/discretizacaoEWD.png  used on input line 260. on 
@@ -1696,72 +1696,78 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
                    \relax 
 l.288 
        [12 <./figs/discretizacaoEWD.png (PNG copy)>]
-<figs/discretizacaoEFD.png, id=493, 487.06969pt x 94.10156pt>
+<figs/discretizacaoEFD.png, id=500, 487.06969pt x 94.10156pt>
 File: figs/discretizacaoEFD.png Graphic file (type png)
 <use figs/discretizacaoEFD.png>
 Package pdftex.def Info: figs/discretizacaoEFD.png  used on input line 292. on 
 input line 292.
 Package pdftex.def Info: Requested size: 292.24405pt x 56.46136pt on input line
  292.
-<figs/modeloLopes.png, id=504, 264.99pt x 216.81pt>
+<figs/modeloLopes.png, id=508, 264.99pt x 216.81pt>
 File: figs/modeloLopes.png Graphic file (type png)
 <use figs/modeloLopes.png>
-Package pdftex.def Info: figs/modeloLopes.png  used on input line 310. on input
- line 310.
+Package pdftex.def Info: figs/modeloLopes.png  used on input line 308. on input
+ line 308.
 Package pdftex.def Info: Requested size: 211.99228pt x 173.44823pt on input lin
-e 310.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figs/modeloVicente.png, id=512, 849.1725pt x 231.86626pt>
-File: figs/modeloVicente.png Graphic file (type png)
-<use figs/modeloVicente.png>
-Package pdftex.def Info: figs/modeloVicente.png  used on input line 319. on inp
-ut line 319.
-Package pdftex.def Info: Requested size: 339.66298pt x 92.74484pt on input line
- 319.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+e 308.
 pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.324 
-       [13 <./figs/discretizacaoEFD.png (PNG copy)>])pdfTeX warning (ext4): des
-tination with the same identifier (name{page.14}) has been already used, duplic
-ate ignored
+l.314 
+       [13 <./figs/discretizacaoEFD.png (PNG copy)> <./figs/modeloLopes.png (PN
+G copy)>]
+<figs/modeloVicente.png, id=521, 849.1725pt x 231.86626pt>
+File: figs/modeloVicente.png Graphic file (type png)
+<use figs/modeloVicente.png>
+Package pdftex.def Info: figs/modeloVicente.png  used on input line 326. on inp
+ut line 326.
+Package pdftex.def Info: Requested size: 339.66298pt x 92.74484pt on input line
+ 326.
+pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.336 
+       [14 <./figs/modeloVicente.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.352 
+       [15])pdfTeX warning (ext4): destination with the same identifier (name{p
+age.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.173 \include{capitulos/referencialTeorico}
-                                             [14 <./figs/modeloLopes.png (PNG c
-opy)> <./figs/modeloVicente.png>]
+                                             [16]
 \openout2 = `capitulos/ferramentas.aux'.
 
  (./capitulos/ferramentas.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.15}) has been already used, duplicate ignored
+dentifier (name{page.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.21         \begin{itemize}[noitemsep]
-                                        [15
+                                        [17
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.16}) ha
+]pdfTeX warning (ext4): destination with the same identifier (name{page.18}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.74 
-      [16]
-<figs/modeloResolucao.png, id=552, 461.725pt x 333.245pt>
+      [18]
+<figs/modeloResolucao.png, id=568, 461.725pt x 333.245pt>
 File: figs/modeloResolucao.png Graphic file (type png)
 <use figs/modeloResolucao.png>
 Package pdftex.def Info: figs/modeloResolucao.png  used on input line 78. on in
 put line 78.
 Package pdftex.def Info: Requested size: 323.20529pt x 233.2699pt on input line
  78.
-<figs/tecnicamodeloComp.png, id=561, 348.30125pt x 343.2825pt>
+<figs/tecnicamodeloComp.png, id=577, 348.30125pt x 343.2825pt>
 File: figs/tecnicamodeloComp.png Graphic file (type png)
 <use figs/tecnicamodeloComp.png>
 Package pdftex.def Info: figs/tecnicamodeloComp.png  used on input line 97. on 
@@ -1772,45 +1778,45 @@ Package pdftex.def Info: Requested size: 243.8092pt x 240.2961pt on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 
-       [17 <./figs/modeloResolucao.png>]pdfTeX warning (ext4): destination with
- the same identifier (name{page.18}) has been already used, duplicate ignored
+       [19 <./figs/modeloResolucao.png>]pdfTeX warning (ext4): destination with
+ the same identifier (name{page.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.110 
-       [18 <./figs/tecnicamodeloComp.png>]
-<figs/tecnicamodelo.png, id=577, 322.20375pt x 91.34125pt>
+       [20 <./figs/tecnicamodeloComp.png>]
+<figs/tecnicamodelo.png, id=594, 322.20375pt x 91.34125pt>
 File: figs/tecnicamodelo.png Graphic file (type png)
 <use figs/tecnicamodelo.png>
 Package pdftex.def Info: figs/tecnicamodelo.png  used on input line 116. on inp
 ut line 116.
 Package pdftex.def Info: Requested size: 225.54108pt x 63.93843pt on input line
  116.
-pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.198 
-       [19 <./figs/tecnicamodelo.png>]
-<figs/discretizacaoEFD_R_3_atr1.png, id=596, 468.24937pt x 54.2025pt>
+       [21 <./figs/tecnicamodelo.png>]
+<figs/discretizacaoEFD_R_3_atr1.png, id=612, 468.24937pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr1.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr1.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr1.png  used on input line
  205. on input line 205.
 Package pdftex.def Info: Requested size: 374.59999pt x 43.36205pt on input line
  205.
-<figs/discretizacaoEFD_R_3_atr2.png, id=597, 471.26062pt x 54.2025pt>
+<figs/discretizacaoEFD_R_3_atr2.png, id=613, 471.26062pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr2.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr2.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr2.png  used on input line
  209. on input line 209.
 Package pdftex.def Info: Requested size: 377.00902pt x 43.36205pt on input line
  209.
-<figs/discretizacaoEFD_R_3_atr3.png, id=598, 472.01344pt x 51.94406pt>
+<figs/discretizacaoEFD_R_3_atr3.png, id=614, 472.01344pt x 51.94406pt>
 File: figs/discretizacaoEFD_R_3_atr3.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr3.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr3.png  used on input line
@@ -1824,31 +1830,26 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 4303) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.287 \end{table}
-                  [20]pdfTeX warning (ext4): destination with the same identifi
-er (name{page.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290 
-       [21 <./figs/discretizacaoEFD_R_3_atr1.png (PNG copy)> <./figs/discretiza
-caoEFD_R_3_atr2.png (PNG copy)> <./figs/discretizacaoEFD_R_3_atr3.png (PNG copy
-)>]
+                  [22] [23 <./figs/discretizacaoEFD_R_3_atr1.png (PNG copy)> <.
+/figs/discretizacaoEFD_R_3_atr2.png (PNG copy)> <./figs/discretizacaoEFD_R_3_at
+r3.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 294.
 
-<figs/rotulacaoNB.png, id=620, 545.03625pt x 395.4775pt>
+<figs/rotulacaoNB.png, id=637, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoNB.png Graphic file (type png)
 <use figs/rotulacaoNB.png>
 Package pdftex.def Info: figs/rotulacaoNB.png  used on input line 330. on input
  line 330.
 Package pdftex.def Info: Requested size: 163.51213pt x 118.64417pt on input lin
 e 330.
-<figs/rotulacaoDecisionTree.png, id=621, 545.03625pt x 395.4775pt>
+<figs/rotulacaoDecisionTree.png, id=638, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoDecisionTree.png Graphic file (type png)
 <use figs/rotulacaoDecisionTree.png>
 Package pdftex.def Info: figs/rotulacaoDecisionTree.png  used on input line 334
@@ -1858,13 +1859,7 @@ e 334.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.343 U
-       ma forma de eliminar uma possível ambiguidade entre os clusters foi ...
-[22] [23 <./figs/rotulacaoNB.png> <./figs/rotulacaoDecisionTree.png>]
+[24] [25 <./figs/rotulacaoNB.png> <./figs/rotulacaoDecisionTree.png>]
 
 LaTeX Warning: Command \c invalid in math mode on input line 384.
 
@@ -1887,210 +1882,210 @@ Overfull \hbox (18.44563pt too wide) in paragraph at lines 399--399
 
 LaTeX Warning: Command \' invalid in math mode on input line 399.
 
-) [24]
+) [26]
 \openout2 = `capitulos/resultados.aux'.
 
- (./capitulos/resultados.tex [25
+ (./capitulos/resultados.tex [27
 
 
 
-]
-Overfull \hbox (39.17061pt too wide) in paragraph at lines 54--63
- [][] 
- []
-
-[26]
+] [28]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 86.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27] [28]
-Overfull \hbox (39.17061pt too wide) in paragraph at lines 221--232
- [][] 
- []
+(Font)              <10.95> on input line 88.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [29] [30]
-Overfull \hbox (23.50427pt too wide) in paragraph at lines 422--432
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31] [32]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34] [35]
+Overfull \hbox (1.26154pt too wide) in paragraph at lines 815--816
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[31]
-Overfull \hbox (23.50427pt too wide) in paragraph at lines 588--598
- [][] 
- []
-
-[32] [33]
-Overfull \hbox (1.26154pt too wide) in paragraph at lines 807--808
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[34]
-Overfull \hbox (36.11859pt too wide) in paragraph at lines 992--993
-[]$[]$ 
- []
-
-
-Overfull \hbox (45.26904pt too wide) in paragraph at lines 994--995
-[]$[]$ 
- []
-
-[35]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [36]
-Overfull \hbox (36.11859pt too wide) in paragraph at lines 1219--1220
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (36.11859pt too wide) in paragraph at lines 1000--1002
 []$[]$ 
  []
 
-) [37] [38]
+
+Overfull \hbox (45.26904pt too wide) in paragraph at lines 1003--1004
+[]$[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (36.11859pt too wide) in paragraph at lines 1228--1229
+[]$[]$ 
+ []
+
+[37]) [38] [39] [40]
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.tex
 Underfull \vbox (badness 1484) has occurred while \output is active []
 
- [39
+ [41
 
 
 
 ]
-<figs/grafico_NB_SEED_exec_grp.png, id=824, 386.19281pt x 309.40594pt>
+<figs/grafico_NB_SEED_exec_grp.png, id=842, 386.19281pt x 309.40594pt>
 File: figs/grafico_NB_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_SEED_exec_grp.png  used on input line 
-21. on input line 21.
+19. on input line 19.
 Package pdftex.def Info: Requested size: 308.95465pt x 247.52509pt on input lin
-e 21.
-<figs/grafico_CART_SEED_exec_grp.png, id=825, 348.55219pt x 344.78813pt>
+e 19.
+<figs/grafico_CART_SEED_exec_grp.png, id=843, 348.55219pt x 344.78813pt>
 File: figs/grafico_CART_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_SEED_exec_grp.png  used on input lin
-e 25. on input line 25.
+e 23. on input line 23.
 Package pdftex.def Info: Requested size: 278.8421pt x 275.83087pt on input line
- 25.
+ 23.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/grafico_NB_IRIS_exec_grp.png, id=831, 395.22656pt x 255.95625pt>
+<figs/grafico_NB_IRIS_exec_grp.png, id=849, 395.22656pt x 255.95625pt>
 File: figs/grafico_NB_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_IRIS_exec_grp.png  used on input line 
-43. on input line 43.
+41. on input line 41.
 Package pdftex.def Info: Requested size: 355.7006pt x 230.35847pt on input line
- 43.
-<figs/grafico_CART_IRIS_exec_grp.png, id=832, 410.2828pt x 255.95625pt>
+ 41.
+<figs/grafico_CART_IRIS_exec_grp.png, id=850, 410.2828pt x 255.95625pt>
 File: figs/grafico_CART_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_IRIS_exec_grp.png  used on input lin
-e 47. on input line 47.
+e 45. on input line 45.
 Package pdftex.def Info: Requested size: 369.25111pt x 230.35847pt on input lin
-e 47.
+e 45.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [42]
 Underfull \vbox (badness 5217) has occurred while \output is active []
 
- [41 <./figs/grafico_NB_SEED_exec_grp.png (PNG copy)> <./figs/grafico_CART_SEED
+ [43 <./figs/grafico_NB_SEED_exec_grp.png (PNG copy)> <./figs/grafico_CART_SEED
 _exec_grp.png (PNG copy)>]
-<figs/grafico_NB_Glass_exec_grp_1.png, id=850, 456.20438pt x 256.70906pt>
+<figs/grafico_NB_Glass_exec_grp_1.png, id=869, 456.20438pt x 256.70906pt>
 File: figs/grafico_NB_Glass_exec_grp_1.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_1.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_1.png  used on input li
-ne 68. on input line 68.
+ne 66. on input line 66.
 Package pdftex.def Info: Requested size: 182.4785pt x 102.6818pt on input line 
-68.
-<figs/grafico_NB_Glass_exec_grp_2.png, id=851, 455.45157pt x 255.20343pt>
+66.
+<figs/grafico_NB_Glass_exec_grp_2.png, id=870, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_2.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_2.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_2.png  used on input li
-ne 72. on input line 72.
+ne 70. on input line 70.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
- 72.
-<figs/grafico_NB_Glass_exec_grp_3.png, id=852, 455.45157pt x 255.20343pt>
+ 70.
+<figs/grafico_NB_Glass_exec_grp_3.png, id=871, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_3.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_3.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_3.png  used on input li
-ne 76. on input line 76.
+ne 74. on input line 74.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
- 76.
-<figs/grafico_NB_Glass_exec_grp_4.png, id=853, 455.45157pt x 255.20343pt>
+ 74.
+<figs/grafico_NB_Glass_exec_grp_4.png, id=872, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_4.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_4.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_4.png  used on input li
-ne 80. on input line 80.
+ne 78. on input line 78.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
- 80.
- [42 <./figs/grafico_NB_IRIS_exec_grp.png (PNG copy)> <./figs/grafico_CART_IRIS
-_exec_grp.png (PNG copy)>]
-<figs/grafico_CART_GLASS_exec_grp_1.png, id=858, 455.45157pt x 255.95625pt>
+ 78.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/grafico_CART_GLASS_exec_grp_1.png, id=873, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_1.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_1.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_1.png  used on input 
-line 91. on input line 91.
+line 89. on input line 89.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
- 91.
-<figs/grafico_CART_GLASS_exec_grp_2.png, id=859, 455.45157pt x 255.95625pt>
+ 89.
+<figs/grafico_CART_GLASS_exec_grp_2.png, id=874, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_2.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_2.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_2.png  used on input 
-line 95. on input line 95.
+line 93. on input line 93.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
- 95.
-<figs/grafico_CART_GLASS_exec_grp_3.png, id=860, 455.45157pt x 255.95625pt>
+ 93.
+<figs/grafico_CART_GLASS_exec_grp_3.png, id=875, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_3.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_3.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_3.png  used on input 
-line 99. on input line 99.
+line 97. on input line 97.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
- 99.
-<figs/grafico_CART_GLASS_exec_grp_4.png, id=861, 455.45157pt x 255.95625pt>
+ 97.
+<figs/grafico_CART_GLASS_exec_grp_4.png, id=876, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_4.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_4.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_4.png  used on input 
-line 103. on input line 103.
+line 101. on input line 101.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
- 103.
- [43 <./figs/grafico_NB_Glass_exec_grp_1.png (PNG copy)> <./figs/grafico_NB_Gla
+ 101.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[44 <./figs/grafico_NB_IRIS_exec_grp.png (PNG copy)> <./figs/grafico_CART_IRIS_
+exec_grp.png (PNG copy)>]
+Underfull \vbox (badness 7796) has occurred while \output is active []
+
+ [45 <./figs/grafico_NB_Glass_exec_grp_1.png (PNG copy)> <./figs/grafico_NB_Gla
 ss_exec_grp_2.png (PNG copy)> <./figs/grafico_NB_Glass_exec_grp_3.png (PNG copy
 )> <./figs/grafico_NB_Glass_exec_grp_4.png (PNG copy)> <./figs/grafico_CART_GLA
 SS_exec_grp_1.png (PNG copy)> <./figs/grafico_CART_GLASS_exec_grp_2.png (PNG co
 py)> <./figs/grafico_CART_GLASS_exec_grp_3.png (PNG copy)> <./figs/grafico_CART
 _GLASS_exec_grp_4.png (PNG copy)>]
-<figs/grafico_NB_CART_acuracia.png, id=881, 454.69875pt x 255.95625pt>
+<figs/grafico_NB_CART_acuracia.png, id=900, 454.69875pt x 255.95625pt>
 File: figs/grafico_NB_CART_acuracia.png Graphic file (type png)
 <use figs/grafico_NB_CART_acuracia.png>
 Package pdftex.def Info: figs/grafico_NB_CART_acuracia.png  used on input line 
 131. on input line 131.
 Package pdftex.def Info: Requested size: 454.69763pt x 255.95561pt on input lin
 e 131.
+ [46 <./figs/grafico_NB_CART_acuracia.png (PNG copy)>]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 146.
 
- [44 <./figs/grafico_NB_CART_acuracia.png (PNG copy)>]) [45] (./dissertacao.bbl
 
-(./dissertacao.brf)
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 166.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 181.
+
+[47]) [48] (./dissertacao.bbl (./dissertacao.brf)
 \tf@brf=\write5
 \openout5 = `dissertacao.brf'.
 
@@ -2108,7 +2103,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 
+l.71 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2122,18 +2117,18 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 
+l.71 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[46
+[49
 
 
 ]) 
 AED: lastpage setting LastPage
-[47]
+[50]
 \tf@lof=\write6
 \openout6 = `dissertacao.lof'.
 
@@ -2154,7 +2149,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: F237B144B0C1456AD8210B021A9C75FC;2923.
+(rerunfilecheck)             Checksum: A925B8F7F3E32501279ACC870A9CD541;3143.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2162,17 +2157,17 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 17924 strings out of 492985
- 270146 string characters out of 6138585
- 618690 words of memory out of 5000000
- 20662 multiletter control sequences out of 15000+600000
- 106659 words of font info for 163 fonts, out of 8000000 for 9000
+ 17950 strings out of 492985
+ 270573 string characters out of 6138585
+ 625005 words of memory out of 5000000
+ 20684 multiletter control sequences out of 15000+600000
+ 106664 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,16n,51p,1356b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+ 47i,16n,51p,1385b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/font
@@ -2195,10 +2190,10 @@ lic/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr
 f-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dissertacao.pdf (71 pages, 2385766 bytes).
+Output written on dissertacao.pdf (74 pages, 2393980 bytes).
 PDF statistics:
- 1228 PDF objects out of 1440 (max. 8388607)
- 1071 compressed objects within 11 object streams
- 245 named destinations out of 1000 (max. 500000)
+ 1267 PDF objects out of 1440 (max. 8388607)
+ 1103 compressed objects within 12 object streams
+ 251 named destinations out of 1000 (max. 500000)
  33282 words of extra memory for PDF output out of 35830 (max. 10000000)
 
