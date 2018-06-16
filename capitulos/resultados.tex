@@ -4,13 +4,13 @@ Foram realizados testes com algumas bases de dados da UCI Machine Learning\footn
 
 As bases de dados foram escolhidas não só por critério comparativo de outros trabalhos que também já as utilizaram servindo  de referência para os resultados, como também, um cuidado de só escolher bases que estão classificadas, uma vez que esta pesquisa trabalhará com os clusters já formados e não na criação de grupos.
 
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho, explicando as ferramentas  utilizadas para desenvolver e quais configurações  de algumas variáveis. Cada base de dados utilizada é destacada por uma seção, onde cada seção refere-se a uma base de dados, sendo esta, dividida em subseções para cada algoritmo utilizado: Naive Bayes e CART.
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento, e quais configurações  de algumas variáveis. Cada base de dados utilizada é destacada por uma seção, onde cada seção refere-se a uma base de dados, sendo esta, dividida em subseções para cada algoritmo utilizado: Naive Bayes e CART.
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
-Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/}\footnote{versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na Statistics and Machine Learning Toolbox. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi escolhida para colocar em prática essa pesquisa.
+Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi escolhida para colocar em prática essa pesquisa.
 
-Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. Essas alterações, dependendo da base de dados utilizadas fazem as seguintes modificações na  variável ''V'', na quantidade de faixas ''R'' e métodos de discretização ''EWD,EFD''. 
+Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. Essas alterações, dependendo da base de dados utilizadas fazem as seguintes modificações na  variável ``V'', na quantidade de faixas ``R'' e métodos de discretização ``EWD,EFD''. 
 
 Como dito na subseção \ref{cap:ferramentas:ssec:algsuper} a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando rótulos apresentarem os mesmos resultados: atributo e faixa de valor. Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster.
 
@@ -204,7 +204,7 @@ Essa tabela é fruto da aplicação do Naive Bayes na base de dados \textbf{Seed
 
 
 
-Para provar empiricamente os resultados, na tabela \ref{tab:execucoes:seed:nb} é exposto as 4 (quatro) execuções do Algoritmo Naive Bayes. Pode-se constatar que mesmo havendo algumas alterações nos valores dos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area} nos clusters 1 e 2, possuem o melhor grau de correlacionamento em seus grupos, mesmo nas quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
+Para provar empiricamente os resultados, na tabela \ref{tab:execucoes:seed:nb} é exposto  4 (quatro) execuções do Algoritmo Naive Bayes. Pode-se constatar que mesmo havendo algumas alterações nos valores dos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area} nos clusters 1 e 2, possuem o melhor grau de correlacionamento em seus grupos, mesmo nas quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
 
 A informação passada pela tabela \ref{tab:execucoes:seed:nb} tem a intensão de mostrar para o analista que estiver aplicando a rotulação de dados, como seus atributos se comportam em cada cluster, ao utilizar  o método de rotulação de dados.
 
@@ -238,7 +238,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{tabular}}
 \end{table}
 
-Já na tabela \ref{tab:execucoes:seed:cart} são exibidas algumas execuções do algoritmo CART na base de dados. O mesmo comportamento entre execuções pode ser visto no algoritmo de paradigma estatístico, subseção \ref{cap:resultados:ssec:seed:nb}, realizado nessa pesquisa. O  comportamento de ambos os algoritmos foram bem semelhantes, como também, seus valores nas execuções que não se alteraramm muito a cada iteração.
+Já na tabela \ref{tab:execucoes:seed:cart} são exibidas algumas execuções do algoritmo CART na base de dados. O mesmo comportamento entre execuções pode ser visto no algoritmo de paradigma estatístico, subseção \ref{cap:resultados:ssec:seed:nb}, realizado nessa pesquisa. O  comportamento de ambos os algoritmos foram bem semelhantes, como também, seus valores nas execuções que não se alteraram muito a cada iteração.
 
 % 
 % \begin{table}[!h]
@@ -403,7 +403,7 @@ O resultado da rotulação utilizando o algoritmo CART na base de dados \textbf{
 \section{Iris - Identificação de Tipos de Plantas}
 
 
-A base de dados \textbf{Iris}, também pertencente a UCI Machine Learning, é muito conhecida em outras pesquisas \citeonline{LOPES2014,Filho2015,FISHER1936}, como também na literatura em reconhecimentos de padrões, por utilizar classes de plantas bem definidas. Contêm 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. O atributo classe classifica o tipo de planta em 3 tipos:
+A base de dados \textbf{Iris}, também pertencente a UCI Machine Learning, é muito conhecida em outras pesquisas \citeonline{LOPES2014,Filho2015}, como também na literatura em reconhecimentos de padrões, por utilizar classes de plantas bem definidas. Contêm 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. O atributo classe classifica o tipo de planta em 3 tipos \cite{FISHER1936}:
 
 \begin{itemize}[noitemsep]
  \item 50 elementos da classe Iris-setosa ;
@@ -777,9 +777,9 @@ Para execução dos algoritmos foram definidos a quantidade de faixas (${R}$) qu
 
 Ao observar a tabela \ref{tab:rot:glass:nb} percebe-se que a coluna \textbf{Relevância} obteve porcentagens altas, ressaltando nos rótulos de cada grupo os atributos que mais bem se relacionaram. E em específico no  \textbf{cluster 5} atributo \textbf{Na}, o valor da coluna de \textbf{Relevância = 100\%}, mas na coluna, \textbf{Fora da Faixa}, apresentam 2(dois) elementos que não estão sendo representados pelo rótulo. 
 
-Essa situação dita no parágrafo acima segue a Definição \ref{teo:resolucao}, mas é um exemplo prático que não aconteceu em outros testes das outras bases de dados. A definição é que cada rótulo específico é dado por um conjunto de pares de valores, tendo como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$. Então caso a coluna \textbf{Relevância} seja igual a 100\%, isso não implica que todos os elementos tenham que estar dentro da faixa ${ p_{m^{(c_i)}} }$ (limite inferior) e ${ q_{m^{(c_i)}} }$ (limite superior), e sim, a maioria dos elementos, mostrando que o rótulo é capaz de melhor representar o cluster.
+Essa situação dita no parágrafo acima segue a Definição \ref{teo:resolucao}, mas é um exemplo prático que não aconteceu em outros testes das outras bases de dados, e por isso segue um esclarecimento. A definição é que cada rótulo específico é dado por um conjunto de pares de valores, tendo como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$. Então caso a coluna \textbf{Relevância} seja igual a 100\%, isso não implica que todos os elementos tenham que estar dentro da faixa ${ p_{m^{(c_i)}} }$ (limite inferior) e ${ q_{m^{(c_i)}} }$ (limite superior), e sim, a maioria dos elementos, mostrando que o rótulo é capaz de melhor representar o cluster.
 
-Além de apresentar dados desbalenceados o \textbf{Cluster 5} apresentado na tabela \ref{tab:rot:glass:nb} conta com o total de nove elementos, e entre estes, nenhum participa da 1a. faixa, dois estão na 2a. faixa e os restantes (sete) estão na 3a. faixa. Dessa maneira justifica-se o porquê dos dois elementos estarem de fora do rótulo, pois a faixa rótulo escolhida é a 3a. faixa, onde contém a maioria dos elementos, por conseguinte, representada pelo rótulo.
+Além de apresentar dados desbalenceados o \textbf{Cluster 5} apresentado na tabela \ref{tab:rot:glass:nb} conta com o total de nove elementos, e entre estes, nenhum participa da 1a. faixa, dois estão na 2a. faixa e os restantes (sete) estão na 3a. faixa. Dessa maneira justifica-se o porquê dos dois elementos estarem de fora do rótulo, pois a faixa rótulo escolhida é a 3a. faixa, onde contém a maioria dos elementos, por conseguinte, escolhida para representar o rótulo.
 
 \begin{table}[!h]
 \centering

@@ -10,13 +10,13 @@ A importância do rótulo em um cluster é transparecer a compreensão do cluste
 
 A criação do rótulo é a escolha de uma tupla \textbf{atributo} e \textbf{faixa de valor}, onde o atributo possui  o maior  valor de correlacionamento entre os outros atributos. E a faixa escolhida é aquela que  mais se repete desse atributo rótulo. Podendo o cluster ter mais de um rótulo contendo a tupla atributo e faixa (Definição \ref{teo:problema}).
 
-Essa faixa, é um intervalo de valor definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que representa os valores que se repetem com a maior frequência no atributo. A exemplo disso, tem-se um vetor de elementos já discretizados, ${\vec{a}_i=\{1,1,1,2,2,2,2,3,3\}}$, onde $i\leqslant m$ e ${(\vec{a})}$ representa todos os elementos da coluna representada pelo atributo  ${(a)}$. Neste vetor o valor que mais se repete é o número 2, então, a \textbf{faixa 2} do atributo rótulo é a escolhida para compor o rótulo.
+Essa faixa, é um intervalo de valor definido pela discretização seção \ref{cap:refTeor:sec:discret}, onde o intervalo escolhido, seria a faixa que representa os valores que se repetem com a maior frequência no atributo. A exemplo disso, tem-se um vetor de elementos já discretizados, ${\vec{v}_i=\{1,1,1,2,2,2,2,3,3\}}$, onde $i\leqslant m$ e ${(\vec{v})}$ representa todos os elementos da coluna representada pelo atributo  ${(a)}$. Neste vetor o valor que mais se repete é o número 2, então, a \textbf{faixa 2} do atributo rótulo é a escolhida para compor o rótulo.
 
 O Problema de Rotulação é formalmente definido como segue abaixo:
 %\newtheorem{teorema}{Definição}
     \begin{teorema}
-    Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=0 }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$ (Adaptada de \citeonline{LOPES2014}).
-        \footnotemark 
+    Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\emptyset }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$ (Adaptada de \citeonline{LOPES2014}).
+        %\footnotemark 
         %\footnotetext{Adaptada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
             \item ${K}$ é o número de clusters;
@@ -56,7 +56,7 @@ Este modelo de resolução consiste em apresentar como saída um conjunto de ró
 %\newtheorem{teorema}{Definição}
     \begin{teorema}
     Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dados por um conjunto de pares de valores, tem como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$ (Adaptada de \citeonline{LOPES2014}).
-        \footnotemark 
+        %\footnotemark 
         %\footnotetext{Adaptada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
             \item ${k}$ número de rótulos;
@@ -344,10 +344,7 @@ Uma forma de eliminar uma possível ambiguidade entre os clusters foi adicionar 
 
 O valor da variável ${V}$ é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em um conjunto de dados. Nesse exemplo caso fosse utilizado a variância ${V=12}$ na matriz de atributos importantes representada pela figura \ref{fig:rotulacao:rotNB}, teriam os atributos, por clusters, ${r_{c_i}}$ : ${r_{c_1}=\{atr2\}}$, ${r_{c_2}=\{atr2\}}$, ${r_{c_3}=\{atr2\}}$.
 
-O valor da variável V é subjetivo e irá ser arbitrado de acordo com os resultados
-em cada aplicação do algoritmo em cima de um conjunto de dados. Nesse exemplo caso
-fosse utilizado a variância V = 12 na matriz de atributos importantes representada pela
-figura 11a, teriam os atributos, por clusters, rci : rc1 = {atr2}, rc2 = {atr2}, rc3 = {atr2}.
+%O valor da variável \textbf{V} é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em cima de um conjunto de dados. Nesse exemplo caso fosse utilizado a variância \textbf{V} = 12 na matriz de atributos importantes representada pela figura \ref{fig:rotulacao:rotNB}, teriam os atributos, por clusters, r_(ci) : rc1 = \{atr2\}, rc2 = \{atr2\}, rc3 = \{atr2\}.
 
 
 \subsection{Processo (III) - Rotulação} \label{cap:ferramentas:ssec:rotulacao}
@@ -357,7 +354,7 @@ No processo de rotulação os rótulos de cada cluster (${c_i}$) serão composto
 r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} 
 \end{equation}
 
- Cada rótulo é composto pela tupla:  atributo de maior relevância e a faixa de valor desse atributo que mais se repete. Na figura \ref{fig:rotulacao} os rótulos em destaque são os que possuem maior valor, ademais, cada atributo que faz parte do rótulo possui um vetor de valores, de onde será escolhido a faixa de maior ocorrência. Uma vez calculado e definido a faixa, será determinado os limites inferiores (${p_{m^{(c_i)}}}$) e superiores (${q_{m^{(c_i)}}}$) de acordo com a tabela discretizada (exemplo \ref{tab:faixas}). 
+ Cada rótulo é composto pela tupla:  atributo de maior relevância (matriz de atributos importantes) e a faixa de valor desse atributo que mais se repete. Na figura \ref{fig:rotulacao} os rótulos em destaque são os que possuem maior valor, ademais, cada atributo que faz parte do rótulo possui um vetor de valores, de onde será escolhido a faixa de maior ocorrência. Uma vez calculado e definido a faixa, será determinado os limites inferiores (${p_{m^{(c_i)}}}$) e superiores (${q_{m^{(c_i)}}}$) de acordo com a tabela discretizada (exemplo \ref{tab:faixas}). 
 
 
 Por exemplo, utilizando a Base Modelo, mais especificamente o cluster 1 ($c_1$), cujo resultado é apresentado na figura \ref{fig:rotulacao:rotNB}, o rótulo apresentado é o atributo  \textbf{atr2} com a \textbf{faixa 2}, faixa esta encontrada após cálculo dos elementos de maior ocorrência, conforme descrito no parágrafo acima. 
