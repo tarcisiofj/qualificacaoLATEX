@@ -4,9 +4,6 @@ The top-level auxiliary file: dissertacao.aux
 A level-1 auxiliary file: pretextual/capa.aux
 A level-1 auxiliary file: pretextual/catalografica.aux
 A level-1 auxiliary file: pretextual/assinaturas.aux
-A level-1 auxiliary file: pretextual/dedicatoria.aux
-A level-1 auxiliary file: pretextual/agradecimentos.aux
-A level-1 auxiliary file: pretextual/epigrafe.aux
 A level-1 auxiliary file: pretextual/resumos.aux
 A level-1 auxiliary file: capitulos/introducao.aux
 A level-1 auxiliary file: capitulos/referencialTeorico.aux
@@ -34,44 +31,44 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 26 entries,
+You've used 25 entries,
             6714 wiz_defined-function locations,
-            1411 strings with 15162 characters,
-and the built_in function-call counts, 28525 in all, are:
-= -- 2931
-> -- 738
-< -- 438
-+ -- 722
-- -- 224
-* -- 1902
-:= -- 3709
-add.period$ -- 120
-call.type$ -- 26
-change.case$ -- 250
-chr.to.int$ -- 56
-cite$ -- 25
-duplicate$ -- 2185
-empty$ -- 1617
-format.name$ -- 1066
-if$ -- 6208
+            1397 strings with 14851 characters,
+and the built_in function-call counts, 27788 in all, are:
+= -- 2870
+> -- 721
+< -- 435
++ -- 717
+- -- 219
+* -- 1855
+:= -- 3609
+add.period$ -- 112
+call.type$ -- 25
+change.case$ -- 243
+chr.to.int$ -- 49
+cite$ -- 24
+duplicate$ -- 2139
+empty$ -- 1549
+format.name$ -- 1043
+if$ -- 6025
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 469
-newline$ -- 141
-num.names$ -- 126
-pop$ -- 602
+missing$ -- 449
+newline$ -- 135
+num.names$ -- 121
+pop$ -- 582
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 97
 quote$ -- 0
-skip$ -- 2275
+skip$ -- 2244
 stack$ -- 1
-substring$ -- 1076
-swap$ -- 882
-text.length$ -- 28
+substring$ -- 1057
+swap$ -- 857
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 3
 warning$ -- 0
-while$ -- 183
+while$ -- 177
 width$ -- 0
-write$ -- 421
+write$ -- 402

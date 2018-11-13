@@ -1,16 +1,16 @@
 \chapter{Referencial Teórico}\label{cap:refTeor}
 
 
-Para se compreender  a temática proposta  este capítulo abordará o conteúdo base deste trabalho dividido em 3 seções: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
+Para se compreender a temática proposta  este capítulo abordará o conteúdo base deste trabalho dividido em 3 seções: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
 
-A aprendizagem de máquina utiliza métodos de inferências lógicas para aquisições de novos conhecimentos, e um dos tipos de inferência comentada nesta seção são os aprendizados indutivos, que dentre seus tipos terá o maior destaque  ao aprendizado supervisionado, foco dessa proposta de mestrado. ``Na aprendizagem indutiva os algoritmos podem, na melhor das hipóteses, garantir que a hipótese de saída se encaixe no conceito de destino sobre os dados de treinamento'' \cite[p.23]{Mitchell1997}.
+%A aprendizagem de máquina utiliza métodos de inferências lógicas para aquisições de novos conhecimentos, e um dos tipos de inferência comentada nesta seção são os aprendizados indutivos, que dentre seus tipos terá o maior destaque  ao aprendizado supervisionado, foco dessa proposta de mestrado. ``Na aprendizagem indutiva os algoritmos podem, na melhor das hipóteses, garantir que a hipótese de saída se encaixe no conceito de destino sobre os dados de treinamento'' \cite[p.23]{Mitchell1997}.
 
 %\epigraph{Na aprendizagem indutiva os algoritmos podem, na melhor das hipóteses, garantir que a hipótese de saída se encaixe no conceito de destino sobre os dados de treinamento. Na falta de mais informações, nossa suposição é que a melhor hipótese em relação a instâncias não vistas é a hipótese que melhor se ajusta aos dados de treinamento observados}{ \cite[p.23]{Mitchell1997}}
 
 
 %No aprendizado indutivo a indução é um tipo de inferência lógica, a partir de um pequeno número de observações pode-se ter uma conclusão geral de todo o conjunto. Então, caso a pequena amostra não tenha dados suficientes ou os dados da amostra não forem relevantes, o conhecimento induzido acaba sendo prejudicado por generalizar o conhecimento adquirido, dessa amostra, para todo o grupo de dados.
 
-Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre a técnica de discretização adotada nesta pesquisa. Possuindo grande contribuição para os resultados gerados, e ganhando assim uma seção própria para explanação do funcionamento dessa técnica. E na seção \ref{cap:refTeor:sec:trabcorrel}, serão abordados trabalhos que possuam mesmas características desta pesquisa adicionando conhecimento ao tema.
+Essa primeira seção discorrerá sobre aprendizado de máquina e os aprendizados indutivos, embora cada aprendizado tenham suas importâncias será dado maior ênfase ao aprendizado supervisionado, pelo fato da utilização de algoritmos de aprendizado supervisionado na rotulação de grupos. Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre as técnicas de discretizações adotadas nesta pesquisa, onde há grande contribuição para os resultados gerados e ganhando assim uma seção própria para explanação do funcionamento dessas técnicas. Na última seção serão abordados trabalhos com mesmas características desta pesquisa adicionando conhecimento ao tema.
 
 
 
@@ -26,86 +26,76 @@ Já na seção \ref{cap:refTeor:sec:discret} dissertará sobre a técnica de dis
  %  \label{teo:defaprendmaq}
  % \end{teorema}
  
-Para melhor explicar a citação acima, destaca-se o determinado exemplo: considerar o reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Então caso fossem  inseridas várias fotos tituladas de uma certa pessoa (T) no banco de dados, e após vários exemplos (E), fotos dessa pessoa, o programa de computador seria capaz de predizer (P) se uma nova foto, ainda não inserida no banco de dados, seria dessa  determinada pessoa através de aprendizado  anterior (E), ou melhor, de fotos que foram anteriormente inseridas.
+%Para melhor explicar a citação acima, destaca-se o determinado exemplo: considerar o reconhecimento facial de uma pessoa utilizando aprendizado de máquina. Então caso fossem  inseridas várias fotos tituladas de uma certa pessoa (T) no banco de dados, e após vários exemplos (E), fotos dessa pessoa, o programa de computador seria capaz de predizer (P) se uma nova foto, ainda não inserida no banco de dados, seria dessa  determinada pessoa através de aprendizado  anterior (E), ou melhor, de fotos que foram anteriormente inseridas.
 
-O aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. Esse aprendizado automático preenche algumas lacunas no desenvolvimento de programas, posto que não é possível simplesmente exigir do projetista implementar melhorias em um sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}, pois seria impossível um programador antecipar todas as situações possíveis de implementação.
+O aprendizado de máquina correspondem a algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. Esse aprendizado automático preenche algumas lacunas no desenvolvimento de programas, posto que não é possível simplesmente exigir do projetista implementar melhorias em um sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}, pois seria impossível um programador antecipar todas as situações possíveis de implementação.
 
 
 %Alguns motivos justificam que não é possível simplesmente exigir do projetista implementar melhorias no sistema, de forma que ele esteja robusto bastante para lidar com todas as situações \cite{RusselStuart.Norvig2013}. Um  desses motivos seria a incapacidade da antecipação de todas as situações possíveis de implementação por parte do programador. Fazendo um resumo, aprendizado de máquina seriam algoritmos capazes de aprender automaticamente através de  determinados exemplos, ou comportamentos. 
 
-Utilizando a idéia do exemplo anterior, uma vez inserida uma foto no banco de dados e determiná-la como masculina, nesse momento, estará se fazendo uma classificação desse novo registro (nova foto). Uma vez com a base de dados classificada, pode-se utilizar algoritmos para predizer um novo registro e defini-lo como masculino ou feminino. Predizer uma determinada condição irá depender da base de dados como também do algoritmo utilizado para fazer essa classificação. Alguns  exemplos de algoritmos são:  RNA, árvores de decisão, Suport Vector Machine – SVM, etc. A escolha apropriada do algoritmo se dará através de métricas que avaliarão o desempenho de cada um e a melhor métrica servirá de parâmetro para a escolha do algoritmo apropriado para aquele problema de classificação de dados. 
+Utilizando a ideia acima, uma vez inserida uma foto no banco de dados e determiná-la como masculina, nesse momento, estará se fazendo uma classificação desse novo registro (nova foto). Uma vez com a base de dados classificada, pode-se utilizar algoritmos para predizer um novo registro e defini-lo como masculino ou feminino. Predizer uma determinada condição dependerá da base de dados como também do algoritmo utilizado para fazer essa classificação. Alguns exemplos de algoritmos são: RNA, K-Nearest Neighbor - KNN, Suport Vector Machine – SVM, etc. A escolha apropriada do algoritmo se dará através de métricas que avaliarão o desempenho de cada um e a melhor métrica servirá de parâmetro para a escolha do algoritmo apropriado para aquele problema de classificação de dados. 
 
 %A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
-Em aprendizado de máquina são vários as abordagens encontradas, e segundo \citeonline{Mohri2012} são eles: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço e  muitos outros. Todavia nesta pesquisa serão comentados somente algumas abordagens de referência específicas utilizadas neste trabalho.
+Segundo \citeonline{Mohri2012} o aprendizado de máquina possui abordagens diferentes, são elas: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço. Todavia, nesta pesquisa serão comentados somente as abordagens de referência específicas utilizadas neste trabalho.
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
-O aprendizado supervisionado é um método que através de uma base de dados classificada, será realizado uma predição de novos registros com base em vários desses exemplos já classificados, ou seja, é quando existem casos que possuem uma classificação disponível para determinados conjunto de dados (conjunto de treinamento), mas precisa ser previstos para outras instâncias. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
-
-
-O termo ``Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe). Seguindo o padrão do exemplo anterior considere: uma base de dados de imagens de rostos, onde cada imagen possui uma saída representada por uma classe (masculino ou feminino). A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria  difícil  implementar de maneira tradicional, utilizando estruturas condicionais e laços, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina aprender uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
-
-Em \citeonline{RusselStuart.Norvig2013} é feito apresentação formal do funcionamento da aprendizagem supervisionada. Dado um conjunto de treinamento 
-\begin{equation}
- (x_{1},y_{2}),(x_{2},y_{2}),...(x_{n},y_{n}),
- \label{eq:aprendSup}
-\end{equation}
-onde cada ${y_{j}} $ foi gerado por ${y=f(x)}$ desconhecida. Encontrar uma função ${h}$ que se aproxime da função ${f}$ real.
+O aprendizado supervisionado é um método que através de uma base de dados classificada, será realizado uma predição de novos registros com base em vários desses exemplos já classificados, ou seja, é quando existem casos que possuem uma classificação disponível para determinados conjuntos de dados (conjunto de treinamento), mas precisa ser previsto para outras instâncias. Os responsáveis por essas predições de novos registros são algoritmos de aprendizado supervisionados projetados para determinados fins.
 
 %Antes de falar dos algoritmos utilizados nesse texto, a aprendizagem supervisionada detém dois tipos de casos: regressão e classificação. A classificação, contêm variáveis com valores discretos, onde as amostras destas variáveis de saída estão na forma de categorias. Como exemplo poderia ser masculino e feminino. Já no tipo regressão, possuem valores contínuos: quantidade de água em ml, velocidade de um carro, altura de uma pessoa.
 
-A função ${h}$ é uma hipótese onde prevê um melhor desempenho entre as hipóteses possíveis através dos conjuntos de dados, que são diferentes do conjunto de treinamento equação \ref{eq:aprendSup}.
+O termo ``Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe), e seguindo essa afirmação considere uma base de dados de imagens de rostos, onde cada imagem possui uma saída representada por uma classe (masculino ou feminino). A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria difícil implementar de maneira tradicional, utilizando estruturas condicionais e laços, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina aprender uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
+
+Em \citeonline{RusselStuart.Norvig2013}, é feito apresentação formal do funcionamento da aprendizagem supervisionada, pois dado um conjunto de treinamento, 
+%\begin{equation}
+ %(x_{1},y_{2}),(x_{2},y_{2}),...(x_{n},y_{n}),
+% \label{eq:aprendSup}
+%\end{equation}
+${(x_{1},y_{2}),(x_{2},y_{2}),...(x_{n},y_{n})}$, onde cada ${y_{j}} $ foi gerado por ${y=f(x)}$ desconhecida, encontrar uma função ${h}$ (hipótese) dentre várias possíveis, que se aproxime ao máximo da função ${f}$ (real). Quanto mais próxima de ${f}$ melhor o desempenho da função ${h}$, mas para medir esse desempenho é testado um conjunto diferente (dados de teste) do conjunto de treinamento, e aferida a precisão da função hipótese.  
 
  \begin{figure}[h!]
     \centering
-    \subfloat[Ajuste polinomial de grau 6]{
+    \subfloat[Função \textbf{h} com ajuste polinomial de grau 6]{
         \includegraphics[scale=0.8]{figs/grafA.png}
         \label{fig:graf1:grafA} }
     \quad
-    \subfloat[Hipótese linear]{
+    \subfloat[Função \textbf{h} com hipótese linear]{
         \includegraphics[scale=0.8]{figs/grafB.png}
         \label{fig:graf1:grafB} }
     
-    \caption{Hipóteses ajustadas} \label{fig:graf1}
+    \caption{Hipóteses ajustadas – Função ${h}$ próxima da função ${f}$ real} \label{fig:graf1}
         
         %\includegraphics[scale=0.4]{figs/grafB.png}
         %\caption{Polinômio Superajustado} \label{grafB}
 \end{figure}
 
 
-O exemplo da figura \ref{fig:graf1:grafA} mostra uma função de grau 6 onde acontece  um sobreajuste (overfitting) no conjunto de dados de treinamento. Esse modelo acabou exibindo uma função mais complexa para atender todo o conjunto de dados do gráfico, ficando especifico para essa amostra. 
+O exemplo da figura \ref{fig:graf1:grafA} mostra a função ${h}$  de grau 6 onde acontece um sobreajuste (\textit{overfitting}) no conjunto de dados de treinamento. Esse modelo exibe uma função mais complexa para atender todo o conjunto de dados do gráfico, tornando-se um modelo específico para essa amostra de dados. 
 
-Já na figura \ref{fig:graf1:grafB} o ajuste da função se torna mais simples e mesmo o gráfico não passando por todos os pontos, acabou por generalizar melhor o conjunto de treinamento, tornando, um melhor resultado da predição de novos valores. 
+Já na figura \ref{fig:graf1:grafB} o ajuste da função ${h}$ se torna mais simples e mesmo o gráfico não passando por todos os pontos, acabou por generalizar melhor o conjunto de treinamento, tornando, um melhor resultado da predição de novos valores. 
 
-Em análise da figura \ref{fig:graf1} é apresentado duas hipóteses que tentam se aproximar ao máximo da função verdadeira (${h}$), que é desconhecida. Mesmo parecendo que  na figura \ref{fig:graf1:grafA} obteve-se melhor resultado, pois todos os pontos são atingidos pelo gráfico da função, este modelo acabou se ajustando muito bem na amostra de dados deixando a função ${h}$ muito específica, não retratando os dados em um mundo real. Então, apesar de parecer que a \ref{fig:graf1:grafA} por ser mais específica é a melhor função, não é a opção correta. Quanto mais  generalizado for modelo, melhor será para predizer os valores de ${y}$ para novos conjuntos de dados.
+Em análise da figura \ref{fig:graf1} é apresentado duas hipóteses que tentam se aproximar ao máximo da função verdadeira (${f}$), que é desconhecida. Mesmo parecendo que na figura \ref{fig:graf1:grafA} obteve-se melhor resultado, pois todos os pontos são atingidos pelo gráfico da função, este modelo acabou se ajustando muito bem na amostra de dados deixando a função ${h}$ muito específica, não retratando os dados em um mundo real. Então,  apesar de parecer que a figura \ref{fig:graf1:grafA} é a melhor opção por ela ser mais específica, esta, não é a melhor opção, pois quanto mais generalizado for o modelo, melhor será para predizer os valores de ${y}$ para novos conjuntos de dados.
 
-\subsubsection{Algoritmo Classification and Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
+\subsubsection{Algoritmo Classification And Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
 
 
-Esse algoritmo constroi modelos de previsão a partir de dados de treinamento onde seus resultados podem ser reprensentados em uma árvore de decisão. A árvore de decisão é uma ferramenta que da suporte à decisão utilizando como modelo um fluxograma semelhante a uma árvore, onde a cada nó interno é feito um teste para tomada de decisão, permitindo uma abordagem do problema de forma estruturada e sistemática até chegar a uma conclusão lógica. ``Uma árvore de decisão alcança sua decisão executando uma sequência de testes'' \cite[p. 811]{RusselStuart.Norvig2013}
+O algoritmo Classification And Regression Trees - CART constrói modelos de previsão a partir de dados de treinamento onde seus resultados podem ser representados em uma árvore de decisão. A árvore de decisão é uma ferramenta que dá suporte à decisão utilizando como modelo um fluxograma semelhante a uma árvore, onde a cada nó interno é feito um teste para tomada de decisão, e tendo como resposta sim ou não (a exemplo da figura \ref{fig:fluxogramaarvore}), permitindo uma abordagem do problema de forma estruturada e sistemática até chegar a uma conclusão lógica. ``Uma árvore de decisão alcança sua decisão executando uma sequência de testes'' \cite[p. 811]{RusselStuart.Norvig2013}
 
-O algoritmo CART pode se tornar uma árvore de classificação ou também um árvore de regressão, o que irá definir seu tipo seria o atributo classe. Por exemplo, em um conjunto de dados de um paciente onde tenta prever se o mesmo possuirá câncer. A classe seria ``Terá Câncer'' ou ``Não terá Câncer''. Nesse exemplo o atributo assume duas classes.
+ \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=0.5]{figs/arvoredecisao_nos.png}
+      \caption{Exemplo de Fluxograma de árvore: R1 a R5 são as folhas relacionadas de acordo com as respostas sim ou não dos nós} \label{fig:fluxogramaarvore}
+\end{figure}
 
-Mas ao contrário de uma árvore de classificação que prediz uma classe, o CART também pode assumir uma árvore de regressão, onde poderá prever um valor numérico ou contínuo, como: período de tempo de internação do paciente, preço de uma cirurgia ou quantidade de água ingerida. 
+O  CART pode se tornar uma árvore de classificação ou também uma árvore de regressão, o que definirá o tipo de árvore é o valor do atributo classe, se categórico ou contínuo. Por exemplo, em um conjunto de dados de um paciente onde tenta prever se o mesmo possuirá câncer, ou não, a classe seria ``Terá Câncer'' ou ``Não terá Câncer'', podendo esse atributo assumir duas categorias (classes),  e assumindo uma árvore de classificação. Na regressão o atributo classe pode assumir um valor contínuo tornando-se uma árvore de regressão, onde poderá prever valores numéricos como: período de tempo de internação do paciente, preço de uma cirurgia, temperatura do paciente ou quantidade de água ingerida. 
 
-No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas. 
+No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas, e utiliza uma técnica como partição recursiva binária, no qual cada nó pai é sempre decomposto em dois nós filhos, e cada nó filho irá ser tratado posteriormente no processo como nó pai.
 
-O CART utiliza uma técnica como partição recursiva binária. Binária porque a divisão do nó pai é sempre em dois nós filhos, e recursiva porque cada nó filho irá ser tratado posteriormente no processo como nó pai.
+De acordo com \citeonline{yohannes1999classification,Raimundo2008}, existem três componentes importantes na construção de uma árvore de decisão:
+%Na construção de uma árvore de decisão existem três componentes importantes de acordo com \citeonline{yohannes1999classification,Raimundo2008}: 
+%Para construção de uma árvore, pode-se simplificar em três componentes importantes \cite{yohannes1999classification,Raimundo2008}: 
 
-Inicialmente todas as amostras se concentram no nó raiz, e a partir daí é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homeogêneos. O objetivo é criar uma regra que inicialmente crie grupos ou nós binários que sejam internamente mais homogêneos que o nó raiz. Dependendo da questão as amostras irão para a folha esquerda ou direita do nó raiz. O CART faz a escolha dessa divisão em função da regra Gini de Impureza\footnote{O CART pode utilizar outros critérios de divisão de dados como: entropia e critério de Twoing} \cite{breiman1984}, e o índice Gini varia de 0 a 1, definindo o grau de pureza do nó. 
-
-\begin{equation}
-Gini(S)= 1 - \sum p^2(j/t)
- \label{eq:cartGini}
-\end{equation}
-Onde: ${p(j/t)}$ é probabilidade a priori da classe ${j}$ se formar no nó ${t}$. E ${S}$ é um conjunto de dados que contém exemplos de n classes
-%\begin{itemize}
-% \item ${S}$: é um conjunto de dados que contém exemplos de n classes
-% \item ${p_j}$: é uma frequência relativa da classe ${j}$ em ${S}$
-%\end{itemize}
-
-Para construção de uma árvore pode-se simplificar em três componente importantes \cite{yohannes1999classification,Raimundo2008}: 
 \begin{itemize}
 [noitemsep]
  \item Um conjunto de perguntas que servirá de base para fazer uma divisão;
@@ -113,11 +103,56 @@ Para construção de uma árvore pode-se simplificar em três componente importa
  \item Regras para atribuir uma classe a cada nó;
 \end{itemize}
 
-Na divisão inicial será atribuído ao nó pai uma questão onde dependendo da resposta (sim ou não) os registros irão para nó filho esquerdo ou direito. Esse questionamento binário servirá dividindo o grupo em dois, para depois testar o ponto de divisão.
+Na divisão inicial será atribuído ao nó pai uma questão onde dependendo da resposta (sim ou não - a exemplo da figura \ref{fig:fluxogramaarvore}) os registros irão para nó filho esquerdo ou direito, e após, será realizado o teste do ponto de divisão. O CART percorrerá todos os atributos e construirá uma árvore de decisão baseado no melhor ponto de divisão, uma vez que são testados todos os atributos como potencial divisor. Após a escolha do melhor ponto de divisão do nó faz-se a atribuição de uma classe para o nó, e após essa etapa, o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para a divisão desse nó.
 
-O CART percorrerá todos os atributos construindo uma árvore para descobrir qual melhor ponto de divisão. Uma vez testados todos os atributos é escolhido o que tiver menor grau de impureza do nó medido através do critério Gini, onde o grau de pureza do nó é mais puro, quando no grupo houver mais casos pertencente a uma única classe. Fazendo que o índice Gini seja mais alto.
+%Inicialmente todas as amostras se concentram no nó raiz e, a partir daí, é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homogêneos. O objetivo é criar uma regra que inicialmente crie grupos, ou nós binários, que sejam internamente mais homogêneos que o nó raiz, e dependendo da questão, as amostras irão para a folha esquerda ou direita do nó raiz. 
+O CART faz a escolha da divisão dos nós em função da regra Gini de Impureza  \cite{breiman1984}, definindo o grau de pureza variando de 0 (zero) a 1 (um), ademais quando o nó tende um resultado de índice Gini aproximando-se de 1 (um), maior a impureza do nó. A equação \ref{eq:cartGini} define este índice:
 
-Após a escolha do melhor ponto de  divisão do nó faz-se a atribuição de uma classe para o nó, onde a esolha da classe será a que mais exemplos contiver no grupo. E após essa etapa o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para a divisão desse nó.
+\begin{equation}
+Gini(S)= 1 - \sum [p(j/t)]^2
+ \label{eq:cartGini}
+\end{equation}
+Onde: ${p(j/t)}$ é probabilidade a priori da classe ${j}$ se formar no nó ${t}$, e ${S}$ é um conjunto de dados que contém exemplos de n classes.
+%\begin{itemize}
+% \item ${S}$: é um conjunto de dados que contém exemplos de n classes
+% \item ${p_j}$: é uma frequência relativa da classe ${j}$ em ${S}$
+%\end{itemize}
+
+A equação \ref{eq:cartGini} mede a impureza do conjunto ${S}$, e caso todos os dados forem da mesma classe (dados puros), o resultado da equação seria ${1-1=0}$. Já a equação \ref{eq:cartGiniSplit} tem como  finalidade a escolha da divisão do nó (conjunto ${S}$), onde é medida a impureza da divisão do nó pai com os nós filhos, e para isso, contêm a média ponderada de cada índice do subgrupo formado por essa divisão de ${S}$. Então o menor valor encontrado em ${Gini_{split}(S)}$ será o escolhido para dividir o nó. 
+
+\begin{equation}
+Gini_{split}(S) = \frac{S_l}{S}gini(S_l)+\frac{S_r}{S}gini(S_r)
+ \label{eq:cartGiniSplit}
+\end{equation}
+
+\begin{itemize}[noitemsep]
+            \item ${S}$ conjunto de dados que contém exemplos de n classes;
+            \item ${S_l}$ subconjunto esquerdo de ${S}$;
+            \item ${S_r}$ subconjunto direito de ${S}$;
+        \end{itemize}
+
+Para a escolha da variável e ponto de divisão necessário do nó, terão que ser aplicados testes em todos os atributos através das equações \ref{eq:cartGini} e \ref{eq:cartGiniSplit}, e após o envolvimento de todos os atributos será escolhido o nó com menor valor ${Gini_{split}(S)}$.
+
+
+%só assim é possível saber qual melhor ponto de divisão. Caso o valor do atributo seja contínuo será necessário ordenar os registros do atributo e encontrar os pontos médios entre os valores sucessivos. Ex.
+
+%No procedimento da divisão do nó em dois subconjuntos, o atributo poderá conter valores contínuos ou categóricos. Quando o atributo possuir valores contínuos - por exemplo, ${[4.2, 2.0, 1.0, 8.8,...,10.8]}$, estes serão ordenados ${[1.0, 2.0, 4.2, 8.8,...,10.8]}$, e após, serão encontrados valores entre os pontos (por exemplo o ${1.5}$ que está entre ${1.0}$ e ${2.0}$), e assim sucessivamente até o último dois pontos. Para cada valor  encontrado os registros serão divididos: menor igual (<=) a ${1.5}$ e maior (>) ${1.5}$. No seguinte caso serão aplicados a equação \ref{eq:cartGiniSplit} em todos os números encontrados, e escolhido o menor valor para saber o melhor ponto de divisão. Em outra situação, sendo as variáveis  categóricas - por exemplo X, Y e Z, terão que ser testadas qual melhor divisão entre elas: \{X\} e \{Y,Z\}, \{Y\} e \{X,Z\} ou \{Z\} e \{X,Y\}. 
+
+No procedimento da divisão do nó em dois subconjuntos, o atributo poderá conter valores contínuos ou categóricos. Serão aplicados a equação \ref{eq:cartGiniSplit} em todos os valores, e escolhido o melhor ponto de divisão. Em outra situação, sendo as variáveis  categóricas - por exemplo X, Y e Z, terão que ser testadas, dentre todas as possibilidades, qual melhor divisão entre elas: \{X\} e \{Y,Z\}, \{Y\} e \{X,Z\} ou \{Z\} e \{X,Y\}.
+
+% De acordo com \citeonline{yohannes1999classification,Raimundo2008}, existem três componentes importantes na construção de uma árvore de decisão:
+% %Na construção de uma árvore de decisão existem três componentes importantes de acordo com \citeonline{yohannes1999classification,Raimundo2008}: 
+% %Para construção de uma árvore, pode-se simplificar em três componentes importantes \cite{yohannes1999classification,Raimundo2008}: 
+% 
+% \begin{itemize}
+% [noitemsep]
+%  \item Um conjunto de perguntas que servirá de base para fazer uma divisão;
+%  \item Regras de divisão para julgar o quanto é boa esta divisão;
+%  \item Regras para atribuir uma classe a cada nó;
+% \end{itemize}
+% 
+% Na divisão inicial será atribuído ao nó pai uma questão onde dependendo da resposta (sim ou não) os registros irão para nó filho esquerdo ou direito, e após, será realizado o teste do ponto de divisão. O CART percorrerá todos os atributos e construirá uma árvore de decisão baseado no melhor ponto de divisão, uma vez que são testados todos os atributos como potencial divisor, e escolhido o que tiver maior índice Gini. Após a escolha do melhor ponto de divisão do nó faz-se a atribuição de uma classe para o nó, e após essa etapa, o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para a divisão desse nó.
+
 
 
 
@@ -160,14 +195,14 @@ Após a escolha do melhor ponto de  divisão do nó faz-se a atribuição de uma
 
 \subsubsection{Algoritmo Naive Bayes}\label{cap:refTeor:sssec:nbayes}
 
-É um modelo probabilístico de aprendizado que pode ser calculado diretamente entre seus dados de treinamento. Depois de calculado, o modelo pode ser utilizado para fazer previsões de novos dados através do teorema de Bayes. ``O teorema de Bayes fornece uma maneira de calcular a probabilidade de uma hipótese com base em sua probabilidade anterior, as probabilidades de observar vários dados, dadas as hipóteses, e os dados observados em si'' \cite[p. 156]{Mitchell1997}.
+O algoritmo Naive Bayes é um modelo probabilístico de aprendizado que pode ser calculado diretamente entre seus dados de treinamento. Depois de calculado, o modelo pode ser utilizado para fazer previsões de novos dados através do teorema de Bayes. ``O teorema de Bayes fornece uma maneira de calcular a probabilidade de uma hipótese com base em sua probabilidade anterior, as probabilidades de observar vários dados, dadas as hipóteses, e os dados observados em si'' \cite[p. 156]{Mitchell1997}.
 
 
 
-Esse teorema utiliza uma teoria estatística e probabilística para previsão de acontecimento de um evento, sendo este evento  relacionado a condição da probabilidade de ocorrência anteriores do mesmo. É nesse seguimento que o algoritmo Naive Bayes funciona. Criando classificadores  probabilístico baseados no teorema de Bayes.
+Esse teorema utiliza uma teoria estatística e probabilística para previsão de acontecimento de um evento, sendo este evento  relacionado a condição da probabilidade de ocorrência anteriores do mesmo, portanto, é nesse seguimento que o algoritmo Naive Bayes funciona, criando classificadores  probabilísticos baseados no teorema de Bayes.
 
 
-Pode-se citar como exemplo desse evento, a descoberta do câncer em uma pessoa, pois se tal doença estiver relacionada ao sexo, então, utilizando o teorema de Bayes, o sexo de uma pessoa pode ser utilizada para da maior precisão a probabilidade de câncer, ao invés de fazer uma avaliação de probabilidade sem a utilização do sexo da pessoa.
+Pode-se citar como exemplo desse evento, a descoberta do câncer em uma pessoa, pois se tal doença estiver relacionada ao sexo, então, utilizando o teorema de Bayes, o sexo de uma pessoa pode ser utilizada para dar maior precisão a probabilidade de câncer, em vez de fazer uma avaliação de probabilidade sem a utilização do sexo da pessoa.
 
 O Naive Bayes utiliza uma técnica de independência dos atributos, onde cada variável de entrada não depende de recursos de outras. Essa independência condicionada  entre os atributos, os quais nem sempre ocorrem nos problemas reais, acabou deixando conhecida por Bayes ingênuo, ou Naive Bayes.
 
@@ -196,53 +231,157 @@ Naive Bayes como classificador estatístico possui um modelo de simples constru�
  \item ${P(x)}$  é a probabilidade original do preditor.
 \end{itemize}
 
-A utilização do algoritmo Naive Bayes já é bem difundida e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \citeonline{Madureira2017, Lucca2013, Wu2008, Mccallum1997}. Mas mesmo atingido boa popularidade possui pontos negativos. A suposição de ter preditores independentes não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramentes independentes. 
+A utilização do algoritmo Naive Bayes já é bem difundida e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \cite{Madureira2017, Lucca2013, Wu2008, Mccallum1997}. Entretanto mesmo atingido boa popularidade, o algoritmo possui pontos negativos. A suposição de ter preditores independentes não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramente independentes. 
+
+\begin{table}[!ht]
+\centering
+%\resizebox{\textwidth}{!}{ 
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline \hline 
+\rowcolor[HTML]{EFEFEF} 
+     & Aspecto   & Temperatura  & Umidade   & Vento    & Decisão \\ \hline
+1       & Sol       & Quente        & Alta   & Fraco       & Não \\ \hline                    
+2       & Sol       & Quente        & Alta   & Forte       & Não \\ \hline
+3       & Nublado   & Quente        & Alta   & Fraco       & Sim \\ \hline                    
+4       & Chuva     & Agradável     & Alta   & Fraco       & Sim \\ \hline
+5       & Chuva     & Fria          & Normal   & Fraco       & Sim \\ \hline                    
+6       & Chuva     & Fria          & Normal   & Forte       & Não \\ \hline
+7       & Nublado   & Fria          & Normal   & Forte       & Sim \\ \hline                    
+8       & Sol       & Agradável     & Alta   & Fraco       & Não \\ \hline
+9       & Sol       & Fria          & Normal   & Fraco       & Sim \\ \hline                    
+10       & Chuva    & Agradável     & Normal   & Fraco       & Sim \\ \hline
+11       & Sol      & Agradável     & Normal   & Forte       & Sim \\ \hline                    
+12       & Nublado  & Agradável     & Alta   & Forte       & Sim \\ \hline
+13       & Nublado  & Quente        & Alta   & Fraco       & Sim \\ \hline                    
+14       & Chuva    & Agradável     & Alta   & Forte       & Não \\ \hline
+\end{tabular}
+%}
+\caption{Base de exemplo onde exibe através do atributo Decisão, se existe, ou não condição de jogo perante as outras características (Aspecto, temperatura, Umidade e Vento)}
+\label{tab:exemploNB}
+\end{table}
+
+A tabela \ref{tab:exemploNB} é uma amostra de dados, onde é possível aplicar o funcionamento do Naiva Bayes através da equação \ref{eq:bayes}, sendo esta tabela composta por 4 (quatro) características (Aspecto, Temperatura, Umidade e Vento) e pela coluna Decisão, representando a classe. Então cada registro assume uma condição de jogo ´´Sim'' ou ``Não'' - por exemplo, na linha 2 (dois) faz ``Sol'', é ``Quente'', possui umidade ``Alta'' e vento ``Forte'', e contêm no atributo classe a não possibilidade de jogo (Decisão = Não). Pode-se com as informações dessa amostra prever algumas possibilidades de jogo, dependendo de como estão dispostos os valores dessas características. Para exemplificar melhor, as seguintes condições  são para saber se há possibilidade de jogo, ``Sim'': P(Jogar=sim|Aspecto=sol, Temperatura=fria, Umidade=alta e Vento=forte). Para obter a resposta será necessário a aplicação na equação \ref{eq:bayes}.  
+
+
+\begin{eqnarray}
+&=& \frac{ P(Sol|Sim)*P(Fria|Sim)*P(Alta|Sim)*P(Forte|Sim)*P(Sim) }{ P(Sol)*P(Fria)*P(Alta)*P(Forte) } \nonumber \\
+ &=& \frac{ \frac{2}{9}*\frac{3}{9}*\frac{3}{9}*\frac{3}{9}*\frac{9}{14} }{ \frac{5}{14}*\frac{4}{14}*\frac{7}{14}*\frac{6}{14} } \nonumber \\
+ &=& \frac{0,0053}{0,02186} \nonumber \\
+ &=& 0,242
+ \label{eq:resolNB}
+\end{eqnarray}
+
+O resultado (0,242) mostra uma probabilidade aproximada de ${20\%}$ de chance de acontecer o jogo, de acordo com as características apresentadas, implicando aproximadamente  ${80\%}$ de não acontecer, portanto, seguindo essas características se pode afirmar que a previsão é de não acorrer o jogo.
+
+\subsubsection{Algoritmo k-Nearest Neighbor - KNN}\label{cap:refTeor:sssec:knn}
+
+O K-Nearest Neighbor - KNN é um algoritmo de classificação simples, pois onde os objetos são classificados através de um conjunto de treinamento que estão próximos no espaço de características. Uma vez que seja necessário definir qual a classificação de um objeto, será averiguado quais são os exemplos mais próximos, determinado por uma distância, e assim definirá através desses elementos próximos, qual sua classificação. 
+
+Algumas considerações têm que ser feitas na execução do KNN, como a definição da métrica entre os elementos e o número que a variável K assumirá, ademais serão realizados alguns passos: i) o algoritmo funcionará calculando a distância entre todos os exemplos próximos do elemento a classificar; ii) será identificado os K vizinhos mais próximos; iii) e através do número de K será determinado a mesma classe do vizinho para classificação do elemento. 
+
+Na figura \ref{fig:knn} pode-se observar melhor seu funcionamento.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.9]{figs/ex_knn1.png}
+    
+    
+    \caption{Exemplo do funcionamento do algoritmo KNN} 
+    \label{fig:knn}     
+        %\includegraphics[scale=0.4]{figs/grafB.png}
+        %\caption{Polinômio Superajustado} \label{grafB}
+\end{figure}
+
+Neste exemplo da figura \ref{fig:knn} um novo objeto precisa ser classificado, e na amostra de dados distribuída no plano cartesiano, o algoritmo KNN prevê sua classificação de acordo com objetos que estão próximos a ele. Na figura \ref{fig:knn} existem objetos ``círculos'', ``quadrados'', e um novo objeto triângulo que seria o novo objeto a ser classificado. 
+
+O algoritmo KNN calcula a distância do objeto ``triângulo'' para com os outros objetos utilizando a distância euclidiana, conforme equação \ref{eq:euclidiana} que está na forma bidimensional de acordo com o exemplo apresentado na figura \ref{fig:knn}.
+
+\begin{equation}
+ \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
+ \label{eq:euclidiana}
+\end{equation}
+
+Ao calcular todas as distâncias o algoritmo irá ordenar estes resultados de forma crescente, de acordo com a tabela \ref{tab:exemploKNN}, e depois dependendo do valor de ${K}$ será determinado a classe do objeto.
+
+\begin{table}[!ht]
+\centering 
+\begin{tabular}{|c|c|c|}
+\hline \hline 
+\rowcolor[HTML]{EFEFEF} 
+K & Distância     & Classe \\ \hline
+1 & 0,11       & \includegraphics[scale=0.2]{figs/circulo.png}       \\ \hline                    
+2 & 0,29       &  \includegraphics[scale=0.2]{figs/quadrado.png}        \\ \hline
+3 & 1,10       &  \includegraphics[scale=0.2]{figs/quadrado.png}   \\ \hline                    
+4 & 1,40       &  \includegraphics[scale=0.2]{figs/circulo.png}     \\ \hline
+5 & 1,55       &  \includegraphics[scale=0.2]{figs/circulo.png}     \\ \hline                    
+\end{tabular}
+%}
+\caption{Tabela em ordem crescente das distâncias euclidianas encontradas do objeto a que se deseja classificar para os outros objetos da amostra, de acordo com as setas da figura \ref{fig:knn}}
+\label{tab:exemploKNN}
+\end{table}
+
+Para definir a classe do objeto ``triangulo'' será necessário saber qual valor o ${K}$ assumirá, porque o maior número de ocorrências de uma determinada classe, será a classe eleita para o novo objeto - por exemplo, utilizando a tabela \ref{tab:exemploKNN}, com ${K=1}$ a classe deste registro é ``círculo'', dado que o número de ocorrências é CÍRCULO=1 e QUADRADO=0, então, caso ${K=1}$, o número de ocorrência do ``círculo'' é maior que ``quadrado''. No caso de ${K=2}$, aparece uma ocorrência de ``círculo'' e uma ocorrência de ``quadrado'', totalizando CÍRCULO=1 e QUADRADO=1, nesse caso não fica definido qual a classe, pois cada classe possui o mesmo número de ocorrências. No caso de ${K=3}$ a contagem de ocorrências em cada classe totaliza CÍRCULO=1 e QUADRADO=2, e desta vez, a classe que possui maior número de ocorrências é a escolhida para o novo objeto, ``quadrado'', e assim acontece sucessivamente para os outros valores ${K}$ assumir. Cada vez que o valor de ${K}$ aumenta é feita  a soma de ocorrências de cada classe, sendo a classe elegida a que mais ocorrências houver.
+
+Ao escolhe um valor par de ${K}$, poderá haver um empate no número de ocorrências das classes, essa situação fica clara no exemplo acima, tabela \ref{tab:exemploKNN}, quando ${K=2}$ (CÍRCULO=1 e QUADRADO=1) e ${K=4}$ (CÍRCULO=2 e QUADRADO=2), mas para não acontecer um valor de empate é necessário escolher sempre um valo ${K}$ ímpar, e este parâmetro pode ser definido ao executar o algoritmo.
 
 
 \subsection{Aprendizado Não-Supervisionado}\label{ssec:aprendNSup}
 
-Outro cenário de aprendizado de máquina é o aprendizado não-supervisionado, onde nessa abordagem não existe uma tentativa de se encontrar uma função que se aproxime da real. Logo porque os registros não são classificados, visto que o conjunto de treinamento não possui informação da saída sobre determinada entrada. Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tentam agrupá-los de forma a ter algum sentido deles estarem juntos. 
+Outro cenário de aprendizado de máquina é o aprendizado não-supervisionado, onde não existe uma tentativa de se encontrar uma função que se aproxime da real, logo porque os registros não são classificados, visto que o conjunto de treinamento não possui informação da saída sobre determinada entrada. Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tentam agrupá-los de forma a ter algum sentido deles estarem juntos. 
 
-Quando o algoritmo encontra dados com mesma similaridade ele os agrupa formando clusters. Os números de clusters encontrados dependerá do funcionamento dos algoritmos e também do grau de dissimilaridade entre elementos de grupos diferentes. Como não existe uma variável classe no aprendizado não-supervisionado, então segundo \citeonline{Barber2011}, o maior interesse seria em uma perspectiva probabilística de distribuição ${p(x)}$ de um determinado conjunto de dados.
-\begin{equation}
- D = \{x_{n},n=1,...,N\}
- \label{eq:aprendNSup}
-\end{equation}
+Quando o algoritmo encontra dados com mesma similaridade ele os agrupa formando \textit{clusters}. Os números de \textit{clusters} encontrados dependerá do funcionamento, técnica, configuração dos algoritmos e também do grau de dissimilaridade entre elementos de grupos diferentes. Segundo \citeonline{Barber2011} não existe uma variável classe no aprendizado não-supervisionado, então, o maior interesse, seria em uma perspectiva probabilística de distribuição ${p(x)}$ de um determinado conjunto de dados ${D = \{x_{n},n=1,...,N\}}$. Mesmo não possuindo rótulos (classes), novos dados inseridos são submetidos aos algoritmos não-supervisionados, e esses algoritmos são capazes de encontrar padrões nos atributos em um conjunto de treinamento, conseguindo inferir sobre os dados de testes, classificando-os em algum grupo. 
 
-Uma vez que no conjunto (\ref{eq:aprendNSup}), encontrado em um conjunto de treinamento (equação \ref{eq:aprendSup}), o algoritmo precisará encontrar padrões nos atributos para fazer os agrupamentos.
+Cada algoritmo utilizará alguma característica para determinar grupos diferentes na base de dados, no exemplo da figura \ref{fig:planoCartesianoAprendNSup}, fica visível a existência de agrupamentos diferentes (h1, h2, h3, h4). 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{figs/amostra_dados_AprendNSuperv.png}
+    
+    
+    \caption{Exemplos de técnicas diferentes utilizada por algoritmos para dividir em grupos} 
+    \label{fig:planoCartesianoAprendNSup}     
+        %\includegraphics[scale=0.4]{figs/grafB.png}
+        %\caption{Polinômio Superajustado} \label{grafB}
+\end{figure}
+
+% \begin{equation}
+%  D = \{x_{n},n=1,...,N\}
+%  \label{eq:aprendNSup}
+% \end{equation}
+
+O que é apresentado na figura \ref{fig:planoCartesianoAprendNSup} são situações de agrupamentos em um conjunto distribuído bidimensional. Dependendo do algoritmo, ou mesmo da configuração, é possível ter 3 (três) grupos formados por h1, h2 e h3, ou 2 (dois) grupos formados por h3 e h4, ou mesmo, um grupo só pela união de h3 e h4. 
 
 
 \section{Discretização}\label{cap:refTeor:sec:discret}
 
-O método de discretização faz a conversão de valores contínuos em valores discretos. A partir de um atributo com valores contínuos, a discretização cria um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos os atributos possuiram novos contéudos no formato de faixas de valores.
+O método de discretização faz a conversão de valores contínuos em valores discretos. A partir de um atributo com valores contínuos, a discretização cria um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos, novos contéudos representando as faixas de valores.
 
-Segundo alguns autores como \citeonline{Catlett2006b,Hwang2002} a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento. Os métodos de discretização mais comumente utilizados no âmbito dos métodos  não-supervisionados de acordo com \citeonline{Kotsiantis2006, Dougherty1995} são os métodos de Discretização por Larguras Iguais(EWD) e Discretização por Frequências Iguais (EFD).
+Segundo alguns autores, a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento \cite{Catlett2006b,Hwang2002}. De acordo com \citeonline{Kotsiantis2006, Dougherty1995} os métodos de discretização mais comumente utilizados, no âmbito dos métodos  não-supervisionados,  são os de Discretização por Larguras Iguais (do inglês: Equal Width Discretization - EWD) e Discretização por Frequências Iguais (do inglês: Equal Frequency Discretization - EFD).
 
 %Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
 
 
 
-\subsection{Discretização por Larguras Iguais - EWD}\label{cap:refTeor:subsec:ewd}
+\subsection{Equal Weight Discretization - EWD}\label{cap:refTeor:subsec:ewd}
 
-O método de Discretização por Larguras Iguais (EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo através de um ponto de corte as faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte, figura \ref{fig:pontocorte}. 
+O método de Discretização por Larguras Iguais faz a discretização de um intervalo, entre valores contínuos, dividindo através de um ponto de corte as faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte (figura \ref{fig:pontocorte}). 
 
 \begin{figure}[h]
         \centering
         \includegraphics[scale=1]{figs/faixaA-B_PontoCorte.png}
-        \caption{Ponto de Corte (R-1)} \label{fig:pontocorte}
+        \caption{Ponto de Corte (R-1); 2(R) significa o valor de R=2; 2 - 1 = 1} \label{fig:pontocorte}
 \end{figure}
 
-Para haver o ponto de corte antes tem que ser realizado a ordenação dos dados. A largura de cada faixa ${r_1,...,r_R}$ na equação \ref{eq:largurafaixa} é representada por ${w}$, que é calculada pela diferença entre os limites superior e inferior do intervalo, dividido pela quantidade ${R}$ de valores a serem gerados.
+Para exemplificar, a figura \ref{fig:pontocorte} exibe uma faixa com início em ``[a'', e final ``b]'', e pretende obter a divisão do intervalo ${[a,b]}$ em 2 (duas) faixas iguais (${R=2}$), então, utilizando a regra ( Número\_De\_Faixas - 1 =  2-1=1), obtendo sempre, o número de faixas que deseja particionar menos 1 (um).
+
+Para haver o ponto de corte, terá que ser feito primeiro a ordenação dos dados, e logo após, definir a largura de cada faixa ${r_1,...,r_R}$. O cálculo realizado na equação \ref{eq:largurafaixa} para encontrar ${w}$, é a diferença entre os limites superior e inferior do intervalo, dividido pela quantidade de faixas (${R}$).
 
 \begin{equation}
  w = \frac{b-a}{R}
  \label{eq:largurafaixa}
 \end{equation}
 
-A variável ${w}$ determina os pontos de corte ${(c_1,...,c_{R-1})}$ que irão delimitar o tamanho das faixas de valores. O primeiro ponto de corte, ${c_1}$, é obtido através da soma do limite inferior ${a}$ com a tamanho de ${w}$. E os pontos de corte seguintes são calculados pela soma do ponto de corte anterior com ${w}$.
-
-
-O valor de cada faixa será representado por ${i}$, onde ${i}$ é o índice indicando a faixa. De acordo com a figura \ref{fig:faixasEWD} para dividir o intervalo ${[a,b]}$ em ${R}$ faixas será necessário de ${R-1}$ pontos de corte.
+De acordo com a figura \ref{eq:regratamfaixa} a variável ${w}$ delimita o tamanho das faixas de valores e determina os pontos de corte ${(c_1,...,c_{R-1})}$. O primeiro ponto de corte, ${c_1}$, é obtido através da soma do limite inferior ${a}$ com a tamanho de ${w}$, e os pontos de corte seguintes são calculados pela soma do ponto de corte anterior com ${w}$.
 
 \begin{equation}
 c_i=\left\{\begin{matrix}
@@ -252,7 +391,8 @@ c_{i-1}+w,  & caso\, contrário &
  \label{eq:regratamfaixa}
 \end{equation}
 
-O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índice de sua faixa ${r_1}$. Então, um valor na faixa ${r_1}$ terá o valor reprensentado por ${1(um)}$, pois  ${i=1}$ é o limite inferior mais largura da faixa, equação \ref{eq:regratamfaixa}. E seguindo o mesmo raciocínio o valor da faixa ${r_2=]c_1,c_2]}$ é representado por ${2(dois)}$, e consequentemente o valor que se encontra em uma faixa qualquer ${r_i}$ será reprensentado por ${i}$.
+
+Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índice de sua faixa, nesse caso ${r_1}$, então, o valor na faixa ${r_1}$ é reprensentado por ${1(um)}$, pois  ${i=1}$. No caso do intervalo ${]c_1,c_2]}$ definido na faixa  ${r_2}$ é representado pelo valor discreto ${2(dois)}$, e consequentemente o valor que se encontra em uma faixa qualquer ${r_i}$ será reprensentado por ${i}$.
 
 %\afterpage{
 \begin{figure}[h] 
@@ -264,20 +404,213 @@ O valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índic
 %\footnotetext{Figura extraída de \cite{Lopes}}
 % }
 
+\begin{table}[!ht]
+\centering
+\caption{Dados de exemplo para discretizção}
+\label{tab:discretizaco}
+\begin{tabular}{|ll|}
+\hline 
+ no. & Valor \\ \hline
+1	&	5,10	\\ \hline
+2	&	4,90	\\ \hline
+3	&	4,70	\\ \hline
+4	&	4,60	\\ \hline
+5	&	5,00	\\ \hline
+6	&	5,40	\\ \hline
+7	&	4,60	\\ \hline
+8	&	5,00	\\ \hline
+9	&	4,40	\\ \hline
+10	&	4,90	\\ \hline
+11	&	5,40	\\ \hline
+12	&	4,80	\\ \hline
+13	&	4,80	\\ \hline
+14	&	4,30	\\ \hline
+15	&	5,80	\\ \hline
+16	&	5,70	\\ \hline
+17	&	5,40	\\ \hline
+18	&	5,10	\\ \hline
+19	&	5,70	\\ \hline
+20	&	5,10	\\ \hline
+21	&	5,40	\\ \hline
+22	&	5,10	\\ \hline
+23	&	4,60	\\ \hline
+24	&	5,10	\\ \hline
+25	&	4,80	\\ \hline
+\end{tabular}
+\begin{tabular}{ |ll| }
+\hline
+ no. & Valor \\ \hline
+26	&	5,00	\\ \hline
+27	&	5,00	\\ \hline
+28	&	5,20	\\ \hline
+29	&	5,20	\\ \hline
+30	&	4,70	\\ \hline
+31	&	4,80	\\ \hline
+32	&	5,40	\\ \hline
+33	&	5,20	\\ \hline
+34	&	5,50	\\ \hline
+35	&	4,90	\\ \hline
+36	&	5,00	\\ \hline
+37	&	5,50	\\ \hline
+38	&	4,90	\\ \hline
+39	&	4,40	\\ \hline
+40	&	5,10	\\ \hline
+41	&	5,00	\\ \hline
+42	&	4,50	\\ \hline
+43	&	4,40	\\ \hline
+44	&	5,00	\\ \hline
+45	&	5,10	\\ \hline
+46	&	4,80	\\ \hline
+47	&	5,10	\\ \hline
+48	&	4,60	\\ \hline
+49	&	5,30	\\ \hline
+50	&	5,00	\\ \hline
+\end{tabular}
+\begin{tabular}{ |ll| }
+\hline
+ no. & Valor \\ \hline
+51	&	7,00	\\ \hline
+52	&	6,40	\\ \hline
+53	&	6,90	\\ \hline
+54	&	5,50	\\ \hline
+55	&	6,50	\\ \hline
+56	&	5,70	\\ \hline
+57	&	6,30	\\ \hline
+58	&	4,90	\\ \hline
+59	&	6,60	\\ \hline
+60	&	5,20	\\ \hline
+61	&	5,00	\\ \hline
+62	&	5,90	\\ \hline
+63	&	6,00	\\ \hline
+64	&	6,10	\\ \hline
+65	&	5,60	\\ \hline
+66	&	6,70	\\ \hline
+67	&	5,60	\\ \hline
+68	&	5,80	\\ \hline
+69	&	6,20	\\ \hline
+70	&	5,60	\\ \hline
+71	&	5,90	\\ \hline
+72	&	6,10	\\ \hline
+73	&	6,30	\\ \hline
+74	&	6,10	\\ \hline
+75	&	6,40	\\ \hline
+\end{tabular}
+\begin{tabular}{ |ll| }
+\hline
+ no. & Valor \\ \hline
+76	&	6,60	\\ \hline
+77	&	6,80	\\ \hline
+78	&	6,70	\\ \hline
+79	&	6,00	\\ \hline
+80	&	5,70	\\ \hline
+81	&	5,50	\\ \hline
+82	&	5,50	\\ \hline
+83	&	5,80	\\ \hline
+84	&	6,00	\\ \hline
+85	&	5,40	\\ \hline
+86	&	6,00	\\ \hline
+87	&	6,70	\\ \hline
+88	&	6,30	\\ \hline
+89	&	5,60	\\ \hline
+90	&	5,50	\\ \hline
+91	&	5,50	\\ \hline
+92	&	6,10	\\ \hline
+93	&	5,80	\\ \hline
+94	&	5,00	\\ \hline
+95	&	5,60	\\ \hline
+96	&	5,70	\\ \hline
+97	&	5,70	\\ \hline
+98	&	6,20	\\ \hline
+99	&	5,10	\\ \hline
+100	&	5,70	\\ \hline
+\end{tabular}
+\begin{tabular}{ |ll| }
+\hline
+ no. & Valor \\ \hline
+101	&	6,30	\\ \hline
+102	&	5,80	\\ \hline
+103	&	7,10	\\ \hline
+104	&	6,30	\\ \hline
+105	&	6,50	\\ \hline
+106	&	7,60	\\ \hline
+107	&	4,90	\\ \hline
+108	&	7,30	\\ \hline
+109	&	6,70	\\ \hline
+110	&	7,20	\\ \hline
+111	&	6,50	\\ \hline
+112	&	6,40	\\ \hline
+113	&	6,80	\\ \hline
+114	&	5,70	\\ \hline
+115	&	5,80	\\ \hline
+116	&	6,40	\\ \hline
+117	&	6,50	\\ \hline
+118	&	7,70	\\ \hline
+119	&	7,70	\\ \hline
+120	&	6,00	\\ \hline
+121	&	6,90	\\ \hline
+122	&	5,60	\\ \hline
+123	&	7,70	\\ \hline
+124	&	6,30	\\ \hline
+125	&	6,70	\\ \hline
+\end{tabular}
+\begin{tabular}{ |ll| }
+\hline
+ no. & Valor \\ \hline
+126	&	7,20	\\ \hline
+127	&	6,20	\\ \hline
+128	&	6,10	\\ \hline
+129	&	6,40	\\ \hline
+130	&	7,20	\\ \hline
+131	&	7,40	\\ \hline
+132	&	7,90	\\ \hline
+133	&	6,40	\\ \hline
+134	&	6,30	\\ \hline
+135	&	6,10	\\ \hline
+136	&	7,70	\\ \hline
+137	&	6,30	\\ \hline
+138	&	6,40	\\ \hline
+139	&	6,00	\\ \hline
+140	&	6,90	\\ \hline
+141	&	6,70	\\ \hline
+142	&	6,90	\\ \hline
+143	&	5,80	\\ \hline
+144	&	6,80	\\ \hline
+145	&	6,70	\\ \hline
+146	&	6,70	\\ \hline
+147	&	6,30	\\ \hline
+148	&	6,50	\\ \hline
+149	&	6,20	\\ \hline
+150	&	5,90	\\ \hline
 
+\end{tabular}
+\end{table}
+
+\begin{figure}[h] 
+        \centering
+        \includegraphics[scale=0.9]{figs/efd_fisheriris_col1.png}
+        \caption[Discretização EWD]{Discretização EWD baseada em \cite{LOPES2014}}%\footnotemark } 
+        \label{fig:faixasEWD}
+\end{figure}
+
+\begin{figure}[h] 
+        \centering
+        \includegraphics[scale=0.8]{figs/ewd_fisheriris_col1.png}
+        \caption[Discretização EWD]{Discretização EWD baseada em \cite{LOPES2014}}%\footnotemark } 
+        \label{fig:faixasEWD}
+\end{figure}
 
 \subsection{Discretização por Frequência Iguais - EFD}\label{cap:refTeor:subsec:efd}
 
-Esse outro método de discretização já possui uma abordagem diferente a do EWD, pois a idéia é manter a quantidade de elementos distintos, entre os pontos de corte, com o mesmo número. Dado um intervalo ${[a,b]}$ o número de faixas ${R}$ e a quantidade de valores distintos ${\xi}$ , onde ${\xi \geqslant R}$ o método EFD irá segmentar em  ${R}$ faixas de valores que possuem a mesma quantidade de elementos distintos ${\lambda}$. Então serão realizados ${R-1}$ pontos de corte gerando ${R}$ faixas de valores, ${(r_1,...,r_R)}$, com a mesma quantidade de elementos distintos ${\lambda}$. Para encontrar ${\lambda}$ calcula-se o valor inteiro da divisão entre a quantidade de elementos distintos ${\xi}$ pela quantidade de faixas de valores ${R}$, obtendo o número de elementos da faixa \ref{eq:qtdelemfaixaEFD}.
+Esse outro método de discretização já possui uma abordagem diferente do EWD, pois a idéia é manter a quantidade de elementos distintos, entre os pontos de corte, com o mesmo número. Dado um intervalo ${[a,b]}$ o número de faixas ${R}$ e a quantidade de valores distintos ${\xi}$ , onde ${\xi \geqslant R}$ o método EFD irá segmentar em  ${R}$ faixas de valores que possuem a mesma quantidade de elementos distintos ${\lambda}$. Então serão realizados ${R-1}$ pontos de corte gerando ${R}$ faixas de valores, ${(r_1,...,r_R)}$, com a mesma quantidade de elementos distintos ${\lambda}$. Para encontrar ${\lambda}$ calcula-se o valor inteiro da divisão entre a quantidade de elementos distintos ${\xi}$ pela quantidade de faixas de valores ${R}$, obtendo o número de elementos da faixa (equação \ref{eq:qtdelemfaixaEFD}).
 
 \begin{equation}
 \lambda = \frac{\xi}{R}
  \label{eq:qtdelemfaixaEFD}
 \end{equation}
 
-Uma observação nesse método é a ocorrência em amostras que possuem uma má distribuição de valores de um dado atributo. Como um número significativo de repetições, causando um desiquilíbrio nas distribuições dos elementos.
+Uma observação nesse método é a ocorrência de uma má distribuitção de valores entre as faixas, portanto, caso haja um número significativo de valores repetidos de um atributo, isso causa um desiquilíbrio na distribuição dos elementos dentro da faixa. Essa situação reflete em faixas com muitos valores e outras sem nenhuma. 
 
-Uma vez no intervalo ${[a,b]}$ de elemetos ordenado e calculado ${\lambda}$ contendo ${R}$ elementos ${v_{[R]}}$  pode-se determinar os pontos de corte ${(c_1,...,c_{R-1})}$ que são os delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}-ésimo}$ elemento, \ref{eq:pontocorteEFD}.
+Uma vez no intervalo ${[a,b]}$ de elementos ordenados e calculado ${\lambda}$ contendo ${R}$ elementos ${v_{[R]}}$,  pode-se determinar os pontos de corte ${(c_1,...,c_{R-1})}$ que são os delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}-ésimo}$ elemento (equação \ref{eq:pontocorteEFD}).
 
 \begin{equation}
 c_i = v_{[i\lambda]}
@@ -301,7 +634,7 @@ Igual o que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]
 
 Esta seção propõe relacionar outros trabalhos servindo de complemento teórico para entender a variedade de aplicações referente ao assunto de rotulação de dados.
 
-O trabalho escrito por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, tema este, proposto também por esta pesquisa, mas com abrangência e execução diferentes do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático, com algoritmos não-supervisionados formando  clusters. Logo após a formação dos clusters e a discretização do dados é utilizado um algoritmo supervisionado (RNA) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
+O trabalho escrito por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, tema este, proposto também por esta pesquisa, mas com abrangência e execução diferentes do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático, com algoritmos não-supervisionados formando  \textit{clusters}. Logo após a formação dos \textit{clusters} e a discretização do dados é utilizado um algoritmo supervisionado (RNA) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
 
 \begin{figure}[h]
         \centering
@@ -348,20 +681,6 @@ Na segunda etapa acontece a seleção dos elementos a partir da comparação do 
 
 Outro trabalho de rotulação é o de \citeonline{Araujo2018}, onde defende que a etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será  acurácia dos grupos encontrados.
 
-Nesse trabalho o autor utiliza em conjundo o DAMICORE e DAMICORE-2 no método de rotulação automática para rotular  grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de clusters ao qual o algoritmo é aplicado. 
+Nesse trabalho o autor utiliza em conjundo o DAMICORE e DAMICORE-2 no método de rotulação automática para rotular  grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de \textit{clusters} ao qual o algoritmo é aplicado. 
 
-O modelo é dividio em cinco etapas até obter os rótulos. Nas etapas I e II preparam os dados e ajuda ao DAMICORE (etapa III) para melhor medir a similaridade dos elementos, oferecendo uma maior precisão. Como não é preciso informar o número de cluster na utilização do DAMICORE, os resultados na etapa III acabam por superar um número razoável de clusters para uma melhor compreensão. Em razão disso a etapa IV de mesclagem faz a junção de clusters para criação de super-clusters, que são clusters maiores representando um conceito mais geral e de mais fácil entedimento. Por fim, os super-clusters são submetidos ao método de rotulação automática (etapa V) permitindo identificar os atributos mais relevantes e seus respectivos faixas de valores.
-
-
-% \begin{figure}[!h]
-%         \centering
-%         \includegraphics[scale=0.8]{figs/modeloRotFuzzy.png}
-%         \caption{Modelo \cite{Filho2015}} \label{fig:modeloFilhoVilmar}
-% \end{figure}
-
-%Outras pesquisas encontradas estão sempre mais relacionadas a classificação dos dados, contudo o que se pretende é da significado, rotular um grupo, identificando através de uma tupla, atributo e faixa de valor, e não somente agrupar esses  dados.
-
-
-
-
-
+O modelo é dividio em cinco etapas até obter os rótulos. Nas etapas I e II preparam os dados e ajuda ao DAMICORE (etapa III) para melhor medir a similaridade dos elementos, oferecendo uma maior precisão. Como não é preciso informar o número de cluster na utilização do DAMICORE, os resultados na etapa III acabam por superar um número razoável de \textit{clusters} para uma melhor compreensão. Em razão disso a etapa IV de mesclagem faz a junção de \textit{clusters} para criação de super-\textit{clusters}, que são \textit{clusters} maiores representando um conceito mais geral e de mais fácil entedimento. Por fim, os super-\textit{clusters} são submetidos ao método de rotulação automática (etapa V) permitindo identificar os atributos mais relevantes e seus respectivos faixas de valores.
