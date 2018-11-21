@@ -398,17 +398,18 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 \begin{figure}[h] 
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEWD.png}
-        \caption[Discretização EWD]{Discretização EWD baseada em \cite{LOPES2014}}%\footnotemark } 
+        \caption[Discretização EWD]{Discretização EWD. Figura baseada em \cite{LOPES2014}}%\footnotemark } 
         \label{fig:faixasEWD}
 \end{figure}
 %\footnotetext{Figura extraída de \cite{Lopes}}
 % }
 
+A tabela \ref{tab:amostraDiscret} contém uma amostra de valores dividido em duas colunas, onde a primeira coluna significa o número da linha e a segunda coluna o valor propriamente dito. Essa tabela servirá para exemplificar o que foi dito neste método de discretização, e pode ser vista como um vetor de 150 (cento e cinquenta) posições, e dependendo do número de faixas poderá ser dividido em vários pedaços, onde cada pedaço seria uma faixa.
+
 \begin{table}[!ht]
 \centering
-\caption{Dados de exemplo para discretizção}
-\label{tab:discretizaco}
-\begin{tabular}{|ll|}
+
+\begin{tabular}{|l|l|}
 \hline 
  no. & Valor \\ \hline
 1	&	5,10	\\ \hline
@@ -437,7 +438,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 24	&	5,10	\\ \hline
 25	&	4,80	\\ \hline
 \end{tabular}
-\begin{tabular}{ |ll| }
+\begin{tabular}{ |l|l| }
 \hline
  no. & Valor \\ \hline
 26	&	5,00	\\ \hline
@@ -466,7 +467,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 49	&	5,30	\\ \hline
 50	&	5,00	\\ \hline
 \end{tabular}
-\begin{tabular}{ |ll| }
+\begin{tabular}{ |l|l| }
 \hline
  no. & Valor \\ \hline
 51	&	7,00	\\ \hline
@@ -495,7 +496,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 74	&	6,10	\\ \hline
 75	&	6,40	\\ \hline
 \end{tabular}
-\begin{tabular}{ |ll| }
+\begin{tabular}{ |l|l| }
 \hline
  no. & Valor \\ \hline
 76	&	6,60	\\ \hline
@@ -524,7 +525,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 99	&	5,10	\\ \hline
 100	&	5,70	\\ \hline
 \end{tabular}
-\begin{tabular}{ |ll| }
+\begin{tabular}{ |l|l| }
 \hline
  no. & Valor \\ \hline
 101	&	6,30	\\ \hline
@@ -553,7 +554,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 124	&	6,30	\\ \hline
 125	&	6,70	\\ \hline
 \end{tabular}
-\begin{tabular}{ |ll| }
+\begin{tabular}{ |l|l| }
 \hline
  no. & Valor \\ \hline
 126	&	7,20	\\ \hline
@@ -583,21 +584,28 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 150	&	5,90	\\ \hline
 
 \end{tabular}
+\caption{Amostra de dados para exemplificar a discretização EWD e EFD}
+\label{tab:amostraDiscret}
 \end{table}
 
-\begin{figure}[h] 
-        \centering
-        \includegraphics[scale=0.9]{figs/efd_fisheriris_col1.png}
-        \caption[Discretização EWD]{Discretização EWD baseada em \cite{LOPES2014}}%\footnotemark } 
-        \label{fig:faixasEWD}
-\end{figure}
+Para este exemplo descrito é definido em 3 (três) o número de faixas (${R=3}$), e aplicado a equação \ref{eq:largurafaixa} na tabela \ref{tab:amostraDiscret}, para encontrar a largura (fixa) da faixa, pois o método de discretização EWD, mantém faixas com mesmo tamanho. O intervalo ${[a,b]}$ seriam o limite inferior, menor valor (${a=4,3}$) e limite superior, maior valor (${b=7.9}$) respectivamente da tabela de amostra, portanto, logo que calculado o valor da largura ${w}$ é utilizado a regra da equação \ref{eq:regratamfaixa} para encontrar os pontos de corte de cada faixa.
+
+Utilizando a equação \ref{eq:largurafaixa}, encontra-se ${w=1.2}$, portanto, uma vez em posse da largura, e sendo o primeiro ponto de corte (${i=1}$), simplesmente utiliza-se equação \ref{eq:regratamfaixa} para encontrar o primeiro ponto de corte ${a+w = 4.3 + 1.2 = 5.5}$, que está como asterisco na posição ${c_1=5.5}$. Os asteriscos na figura \ref{fig:faixasFihseririsExemploEWD} delimitam os pontos de cortes, e os pontinhos são todos os valores dispostos nas faixas definidos na tabela \ref{tab:amostraDiscret}.
 
 \begin{figure}[h] 
         \centering
         \includegraphics[scale=0.8]{figs/ewd_fisheriris_col1.png}
-        \caption[Discretização EWD]{Discretização EWD baseada em \cite{LOPES2014}}%\footnotemark } 
-        \label{fig:faixasEWD}
+        \caption{Discretização EWD de acordo com a amostra da tabela \ref{tab:amostraDiscret}}%\footnotemark } 
+        \label{fig:faixasFihseririsExemploEWD}
 \end{figure}
+
+A partir dos cálculos é definido as seguintes faixas de tamanhos iguais:
+\begin{itemize}[noitemsep]
+ \item Faixa 1 - [4.3,5.5]
+ \item Faixa 2 - ]5.5,6.7]
+ \item Faixa 3 - ]6.7,7.9]
+\end{itemize}
+
 
 \subsection{Discretização por Frequência Iguais - EFD}\label{cap:refTeor:subsec:efd}
 
@@ -617,24 +625,47 @@ c_i = v_{[i\lambda]}
  \label{eq:pontocorteEFD}
 \end{equation}
 
-Igual o que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$ conforme figura \ref{fig:faixasEFD}. Então, caso o valor esteja na faixa ${r_2}$ ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor ${3(três)}$. Uma outra observação desse método é que diferente do EWD, os intervalos podem assumir faixas com tamanhos diferentes.
+Igual ao que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$ conforme figura \ref{fig:faixasEFD}. Então, caso o valor esteja na faixa ${r_2}$ ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor ${3(três)}$. Uma outra observação desse método é que diferente do EWD, os intervalos podem assumir faixas com tamanhos diferentes.
 
 %\afterpage{
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEFD.png}
-        \caption[Discretização EFD]{Discretização EFD baseada em \cite{LOPES2014}} 
+        \caption[Discretização EFD]{Discretização EFD. Figura baseada em \cite{LOPES2014}} 
         \label{fig:faixasEFD}
 \end{figure} 
 %\footnotetext{Figura extraída de \cite{LOPES2014}}
 %}
 
+Neste exemplo com o método EFD, exibido o resultado na figura \ref{fig:faixasFihseririsExemploEFD}, a tabela \ref{tab:amostraDiscret} também é utilizada na disposição dos valores em cada faixa, bem como o cálculo de ${\lambda}$ (equação \ref{eq:qtdelemfaixaEFD}), que é a divisão do total  de elementos distintos (${\xi}$) pelo o número de faixas ${R=3}$. Após tal cálculo, é realizado a ordenação dos valores, e uma  vez os valores ordenados, soma-se o valor mínimo com ${\lambda}$, encontrando ${c_1}$  como primeiro ponto de corte, e assim sucessivamente, para os outros pontos de corte (${c_2=c_1+\lambda}$), até ${R-1}$ pontos de corte. Na figura \ref{fig:faixasFihseririsExemploEFD} pode-se perceber como a distribuição  dos valores da amostra se comportam no método EFD. Os asteriscos delimitam o início e fim de cada faixa de valor, e os pontos são os valores propriamente ditos.
+
+\begin{figure}[h] 
+        \centering
+        \includegraphics[scale=0.9]{figs/efd_fisheriris_col1.png}
+        \caption{Discretização EFD de acordo com a amostra da tabela \ref{tab:amostraDiscret}}%\footnotemark } 
+        \label{fig:faixasFihseririsExemploEFD}
+\end{figure}
+
+O número de elementos distinto na amostra de dados da tabela \ref{tab:amostraDiscret} é de 35 (trinta e cinco) elementos, e dividindo por ${R=3}$, que é o número de faixas, encontrará ${\lambda=11}$. Na lista de números distintos o 11º (décimo primeiro) elemento a partir de ${a}$ (menor valor da amostra) será o primeiro ponto de corte (${c_1}$). Então todos os valores de ${4.3}$ a ${5.3}$ (identificados por asterisco) fazem parte da primeira faixa.
+
+A seguir é definido as faixas, onde percebe-se que são de tamanhos diferentes ao do método EWD, pois há valores repetidos:
+
+\vspace{-3mm}
+\begin{itemize}[noitemsep]
+ \item Faixa 1 - [4.3,5.3]
+ \item Faixa 2 - ]5.3,6.4]
+ \item Faixa 3 - ]6.4,7.9]
+
+\end{itemize}
+
+
+ 
 
 \section{Trabalhos Correlatos}\label{cap:refTeor:sec:trabcorrel}
 
 Esta seção propõe relacionar outros trabalhos servindo de complemento teórico para entender a variedade de aplicações referente ao assunto de rotulação de dados.
 
-O trabalho escrito por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, tema este, proposto também por esta pesquisa, mas com abrangência e execução diferentes do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático, com algoritmos não-supervisionados formando  \textit{clusters}. Logo após a formação dos \textit{clusters} e a discretização do dados é utilizado um algoritmo supervisionado (RNA) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
+O trabalho proposto por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, mas com abrangência e execução diferente do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático com algoritmos não-supervisionados formando  \textit{clusters}. Logo após a formação dos \textit{clusters} e a discretização do dados é utilizado um algoritmo supervisionado (RNA) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
 
 \begin{figure}[h]
         \centering

@@ -1,48 +1,48 @@
 \select@language {brazil}
 \contentsline {table}{\numberline {1}{\ignorespaces Base de exemplo onde exibe atrav\IeC {\'e}s do atributo Decis\IeC {\~a}o, se existe, ou n\IeC {\~a}o condi\IeC {\c c}\IeC {\~a}o de jogo perante as outras caracter\IeC {\'\i }sticas (Aspecto, temperatura, Umidade e Vento)\relax }}{10}{table.caption.10}
 \contentsline {table}{\numberline {2}{\ignorespaces Tabela em ordem crescente das dist\IeC {\^a}ncias euclidianas encontradas do objeto a que se deseja classificar para os outros objetos da amostra, de acordo com as setas da figura \ref {fig:knn}\relax }}{12}{table.caption.12}
-\contentsline {table}{\numberline {3}{\ignorespaces Dados de exemplo para discretiz\IeC {\c c}\IeC {\~a}o\relax }}{15}{table.caption.16}
-\contentsline {table}{\numberline {4}{\ignorespaces Base de Dados Modelo\relax }}{25}{table.caption.25}
-\contentsline {table}{\numberline {5}{\ignorespaces Base de Dados Modelo Discretizada\relax }}{26}{table.caption.27}
-\contentsline {table}{\numberline {6}{\ignorespaces Valores das faixas com R=3 da Base de Dados Modelo\relax }}{27}{table.caption.28}
-\contentsline {table}{\numberline {7}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o com o algoritmo Naive Bayes\relax }}{32}{table.caption.31}
-\contentsline {table}{\numberline {8}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{33}{table.caption.32}
-\contentsline {table}{\numberline {9}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{33}{table.caption.33}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{33}{subtable.9.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{33}{subtable.9.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{33}{subtable.9.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{33}{subtable.9.4}
-\contentsline {table}{\numberline {10}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{34}{table.caption.34}
-\contentsline {table}{\numberline {11}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{35}{table.caption.35}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{35}{subtable.11.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{35}{subtable.11.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{35}{subtable.11.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{35}{subtable.11.4}
-\contentsline {table}{\numberline {12}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{36}{table.caption.36}
-\contentsline {table}{\numberline {13}{\ignorespaces Resultado (em \%) de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength, (SW)sepalwidth, (PL)petallength, (PW)petalwidth\relax }}{37}{table.caption.37}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{37}{subtable.13.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{37}{subtable.13.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{37}{subtable.13.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{37}{subtable.13.4}
-\contentsline {table}{\numberline {14}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{37}{table.caption.38}
-\contentsline {table}{\numberline {15}{\ignorespaces Resultado de 4 (quatro) itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{38}{table.caption.39}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.15.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.15.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.15.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.15.4}
-\contentsline {table}{\numberline {16}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{40}{table.caption.40}
-\contentsline {table}{\numberline {17}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes.\relax }}{41}{table.caption.41}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{41}{subtable.17.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{41}{subtable.17.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{41}{subtable.17.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{41}{subtable.17.4}
-\contentsline {table}{\numberline {18}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{42}{table.caption.42}
-\contentsline {table}{\numberline {19}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo CART.\relax }}{43}{table.caption.43}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.19.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.19.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.19.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.19.4}
-\contentsline {table}{\numberline {20}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Redes Neurais \cite {LOPES2014} referente a base de dados SEEDS.\relax }}{50}{table.caption.49}
-\contentsline {table}{\numberline {21}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Naive Bayes referente a base de dados SEEDS.\relax }}{50}{table.caption.50}
-\contentsline {table}{\numberline {22}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando CART referente a base de dados SEEDS.\relax }}{50}{table.caption.51}
-\contentsline {table}{\numberline {23}{\ignorespaces Cronograma de atividades\relax }}{51}{table.caption.52}
+\contentsline {table}{\numberline {3}{\ignorespaces Amostra de dados para exemplificar a discretiza\IeC {\c c}\IeC {\~a}o EWD e EFD\relax }}{15}{table.caption.16}
+\contentsline {table}{\numberline {4}{\ignorespaces Base de Dados Modelo\relax }}{26}{table.caption.25}
+\contentsline {table}{\numberline {5}{\ignorespaces Base de Dados Modelo Discretizada\relax }}{27}{table.caption.27}
+\contentsline {table}{\numberline {6}{\ignorespaces Valores das faixas com R=3 da Base de Dados Modelo\relax }}{28}{table.caption.28}
+\contentsline {table}{\numberline {7}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o com o algoritmo Naive Bayes\relax }}{33}{table.caption.31}
+\contentsline {table}{\numberline {8}{\ignorespaces Resultado da Correla\IeC {\c c}\IeC {\~a}o dos atributos pelo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{34}{table.caption.32}
+\contentsline {table}{\numberline {9}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{34}{table.caption.33}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{34}{subtable.9.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{34}{subtable.9.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{34}{subtable.9.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{34}{subtable.9.4}
+\contentsline {table}{\numberline {10}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{35}{table.caption.34}
+\contentsline {table}{\numberline {11}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove\relax }}{36}{table.caption.35}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{36}{subtable.11.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{36}{subtable.11.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{36}{subtable.11.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{36}{subtable.11.4}
+\contentsline {table}{\numberline {12}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{37}{table.caption.36}
+\contentsline {table}{\numberline {13}{\ignorespaces Resultado (em \%) de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength, (SW)sepalwidth, (PL)petallength, (PW)petalwidth\relax }}{38}{table.caption.37}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.13.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.13.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.13.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{38}{subtable.13.4}
+\contentsline {table}{\numberline {14}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{38}{table.caption.38}
+\contentsline {table}{\numberline {15}{\ignorespaces Resultado de 4 (quatro) itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{39}{table.caption.39}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{39}{subtable.15.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{39}{subtable.15.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{39}{subtable.15.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{39}{subtable.15.4}
+\contentsline {table}{\numberline {16}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{41}{table.caption.40}
+\contentsline {table}{\numberline {17}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes.\relax }}{42}{table.caption.41}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{42}{subtable.17.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{42}{subtable.17.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{42}{subtable.17.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{42}{subtable.17.4}
+\contentsline {table}{\numberline {18}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{43}{table.caption.42}
+\contentsline {table}{\numberline {19}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo CART.\relax }}{44}{table.caption.43}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.19.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.19.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.19.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.19.4}
+\contentsline {table}{\numberline {20}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Redes Neurais \cite {LOPES2014} referente a base de dados SEEDS.\relax }}{51}{table.caption.49}
+\contentsline {table}{\numberline {21}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Naive Bayes referente a base de dados SEEDS.\relax }}{51}{table.caption.50}
+\contentsline {table}{\numberline {22}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando CART referente a base de dados SEEDS.\relax }}{51}{table.caption.51}
+\contentsline {table}{\numberline {23}{\ignorespaces Cronograma de atividades\relax }}{52}{table.caption.52}
