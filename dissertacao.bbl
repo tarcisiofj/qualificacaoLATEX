@@ -56,18 +56,13 @@ Dispon{\'\i}vel em:
 ISBN 0-470-21260-8.
 Dispon{\'\i}vel em: \url{http://dl.acm.org/citation.cfm?id=67040.67055}.}
 
-\bibitem[Filho 2018]{imperes2018}
-\abntrefinfo{Filho}{FILHO}{2018}
-{FILHO, I. \emph{{Rotula{\c{c}}{\~{a}}o de Grupos em Algoritmos de Agrupamento
-  Baseados em Dist{\^{a}}ncia Utilizando Grau de Pertin{\^{e}}ncia}}. 2018.
-  60~p.}
-
-\bibitem[Filho 2015]{Filho2015}
-\abntrefinfo{Filho}{FILHO}{2015}
-{FILHO, V. P.~R.
-Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
-  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{Rotulação de grupos
-  utilizando conjuntos fuzzy}}. Teresina: [s.n.], 2015. 25~p.}
+\bibitem[Filho, Machado e Lira 2015]{Filho2015}
+\abntrefinfo{Filho, Machado e Lira}{FILHO; MACHADO; LIRA}{2015}
+{FILHO, V. P.~R.; MACHADO, V.~P.; LIRA, R. d.~A. {Rotula{\c{c}}{\~{a}}o de
+  Grupos Utilizando Conjuntos Fuzzy}. In:  UNIVERSIDADE FEDERAL DO PIAU{\'{I}}.
+  \emph{XII Simp{\'{o}}sio Brasileiro de Automa{\c{c}}{\~{a}}o Inteligente
+  (SBAI)}. Natal, RN, 2015. Dispon{\'\i}vel em:
+  \url{http://pubs.acs.org/doi/abs/10.1021/ja103937v}.}
 
 \bibitem[FISHER 1936]{FISHER1936}
 \abntrefinfo{FISHER}{FISHER}{1936}
@@ -88,6 +83,12 @@ ISSN 16113349.
 Dispon{\'\i}vel em:
   \url{http://www.springerlink.com/content/4n05b2n6x0cx4tlk}.}
 
+\bibitem[Imperes 2018]{imperes2018}
+\abntrefinfo{Imperes}{IMPERES}{2018}
+{IMPERES, F. d.~C. \emph{{Rotula{\c{c}}{\~{a}}o de Grupos em Algoritmos de
+  Agrupamento Baseados em Dist{\^{a}}ncia Utilizando Grau de
+  Pertin{\^{e}}ncia}}. 2018. 60~p.}
+
 \bibitem[Kotsiantis e Kanellopoulos 2006]{Kotsiantis2006}
 \abntrefinfo{Kotsiantis e Kanellopoulos}{KOTSIANTIS; KANELLOPOULOS}{2006}
 {KOTSIANTIS, S.; KANELLOPOULOS, D. {Discretization Techniques : A recent
@@ -102,22 +103,20 @@ Dispon{\'\i}vel em:
 \emph{International Journal of Engineering Science Invention}, v.~2, n.~7,
   p.~1--8, 2013.}
 
-\bibitem[Lima 2015]{Metodo2015}
-\abntrefinfo{Lima}{LIMA}{2015}
-{LIMA, B. V.~A.
-Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
-  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{M{\'{e}}todo
-  Semissupervisionado de Rotula{\c{c}}{\~{a}}o e Classifica{\c{c}}{\~{a}}o
-  Utilizando Agrupamento por Sementes e Classificadores}}. Teresina - PI:
-  [s.n.], 2015. 47~p.}
+\bibitem[Lima, Machado e Lopes 2015]{DeLima2015}
+\abntrefinfo{Lima, Machado e Lopes}{LIMA; MACHADO; LOPES}{2015}
+{LIMA, B. V.~A. de; MACHADO, V.~P.; LOPES, L.~A. {Automatic labeling of social
+  network users Scientia.Net through the machine learning supervised
+  application}.
+\emph{Social Network Analysis and Mining}, v.~5, n.~1, p.~44, dec 2015.
+ISSN 1869-5450.
+Dispon{\'\i}vel em: \url{http://link.springer.com/10.1007/s13278-015-0285-x}.}
 
-\bibitem[Lopes 2014]{LOPES2014}
-\abntrefinfo{Lopes}{LOPES}{2014}
-{LOPES, L.~A.
-Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
-  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{Rotula{\c{c}}{\~{a}}o
-  Autom{\'{a}}tica de Grupos com Aprendizagem de M{\'{a}}quina
-  Supervisionada}}. Teresina: [s.n.], 2014. 73~p.}
+\bibitem[Lopes, Machado e Rabelo 2016]{Lopes2016}
+\abntrefinfo{Lopes, Machado e Rabelo}{LOPES; MACHADO; RABELO}{2016}
+{LOPES, L.~A.; MACHADO, V.~P.; RABELO, R. D. A.~L. {Automatic Labeling of
+  Groupings through Supervised Machine Learning}.
+\emph{Knowledge-Based Systems}, v.~106, p. 231--241, 2016.}
 
 \bibitem[Lucca et al. 2013]{Lucca2013}
 \abntrefinfo{Lucca et al.}{LUCCA et al.}{2013}
@@ -155,8 +154,10 @@ ISBN 9780262018258.}
 
 \bibitem[Raimundo, Mattos e Waleska 2008]{Raimundo2008}
 \abntrefinfo{Raimundo, Mattos e Waleska}{RAIMUNDO; MATTOS; WALESKA}{2008}
-{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. \emph{{O Algoritmo de
-  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}}. 2008.}
+{RAIMUNDO, L.~R.; MATTOS, M. C.~D.; WALESKA, P. {O Algoritmo de
+  Classifica{\c{c}}{\~{a}}o CART em uma Ferramenta de Data Mining}.
+\emph{IV Congresso Sul Brasileiro de Ci{\^{e}}ncias da Computa{\c{c}}{\~{a}}o -
+  SULCOMP}, 2008.}
 
 \bibitem[Russel e Norvig 2013]{RusselStuart.Norvig2013}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2013}

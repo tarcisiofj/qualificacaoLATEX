@@ -37,7 +37,7 @@ Utilizando a ideia acima, uma vez inserida uma foto no banco de dados e determin
 
 %A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
-Segundo \citeonline{Mohri2012} o aprendizado de máquina possui abordagens diferentes, são elas: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço. Todavia, nesta pesquisa serão comentados somente as abordagens de referência específicas utilizadas neste trabalho.
+Segundo \cite{Mohri2012} o aprendizado de máquina possui abordagens diferentes, são elas: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semi-supervisionado, aprendizado por reforço. Todavia, nesta pesquisa serão comentados somente as abordagens de referência específicas utilizadas neste trabalho.
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
@@ -47,7 +47,7 @@ O aprendizado supervisionado é um método que através de uma base de dados cla
 
 O termo ``Supervisionado'' indica uma correlação entre os dados de entrada com a saída desejada (classe), e seguindo essa afirmação considere uma base de dados de imagens de rostos, onde cada imagem possui uma saída representada por uma classe (masculino ou feminino). A tarefa seria criar um preditor capaz de acertar a cada novo registro se a imagem é masculina ou feminina. Seria difícil implementar de maneira tradicional, utilizando estruturas condicionais e laços, uma vez que são inúmeras as diferenças das faces masculinas e femininas. Embora haja uma dificuldade de distinção entre as faces, uma alternativa seria dar exemplos de rostos classificados, masculino ou feminino,  e através desses exemplos aplicar o algoritmo que automaticamente faça a máquina aprender uma regra para predizer qual sexo pertence cada rosto  \cite{Barber2011}.
 
-Em \citeonline{RusselStuart.Norvig2013}, é feito apresentação formal do funcionamento da aprendizagem supervisionada, pois dado um conjunto de treinamento, 
+Em \cite{RusselStuart.Norvig2013}, é feito apresentação formal do funcionamento da aprendizagem supervisionada, pois dado um conjunto de treinamento, 
 %\begin{equation}
  %(x_{1},y_{2}),(x_{2},y_{2}),...(x_{n},y_{n}),
 % \label{eq:aprendSup}
@@ -92,7 +92,7 @@ O  CART pode se tornar uma árvore de classificação ou também uma árvore de 
 
 No caso de não ser probabilístico o grau de confiança em seu modelo de predição será embasada em respostas semelhantes em outras circunstâncias antes analisadas, e utiliza uma técnica como partição recursiva binária, no qual cada nó pai é sempre decomposto em dois nós filhos, e cada nó filho irá ser tratado posteriormente no processo como nó pai.
 
-De acordo com \citeonline{yohannes1999classification,Raimundo2008}, existem três componentes importantes na construção de uma árvore de decisão:
+De acordo com \cite{yohannes1999classification,Raimundo2008}, existem três componentes importantes na construção de uma árvore de decisão:
 %Na construção de uma árvore de decisão existem três componentes importantes de acordo com \citeonline{yohannes1999classification,Raimundo2008}: 
 %Para construção de uma árvore, pode-se simplificar em três componentes importantes \cite{yohannes1999classification,Raimundo2008}: 
 
@@ -106,7 +106,8 @@ De acordo com \citeonline{yohannes1999classification,Raimundo2008}, existem trê
 Na divisão inicial será atribuído ao nó pai uma questão onde dependendo da resposta (sim ou não - a exemplo da figura \ref{fig:fluxogramaarvore}) os registros irão para nó filho esquerdo ou direito, e após, será realizado o teste do ponto de divisão. O CART percorrerá todos os atributos e construirá uma árvore de decisão baseado no melhor ponto de divisão, uma vez que são testados todos os atributos como potencial divisor. Após a escolha do melhor ponto de divisão do nó faz-se a atribuição de uma classe para o nó, e após essa etapa, o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para a divisão desse nó.
 
 %Inicialmente todas as amostras se concentram no nó raiz e, a partir daí, é apresentado uma questão, onde a intenção é separar o nó raiz em dois grupos mais homogêneos. O objetivo é criar uma regra que inicialmente crie grupos, ou nós binários, que sejam internamente mais homogêneos que o nó raiz, e dependendo da questão, as amostras irão para a folha esquerda ou direita do nó raiz. 
-O CART faz a escolha da divisão dos nós em função da regra Gini de Impureza  \cite{breiman1984}, definindo o grau de pureza variando de 0 (zero) a 1 (um), ademais quando o nó tende um resultado de índice Gini aproximando-se de 1 (um), maior a impureza do nó. A equação \ref{eq:cartGini} define este índice:
+
+Logo na equação \ref{eq:cartGini} pode-se verificar como o CART faz a escolha da divisão dos nós em função da regra Gini de Impureza  \cite{breiman1984}. É definido o grau de pureza variando de 0 (zero) a 1 (um), portanto quando o nó tende um resultado de índice Gini aproximando-se de 1 (um), maior a impureza do nó, e o inverso maior a pureza. 
 
 \begin{equation}
 Gini(S)= 1 - \sum [p(j/t)]^2
@@ -124,7 +125,7 @@ A equação \ref{eq:cartGini} mede a impureza do conjunto ${S}$, e caso todos os
 Gini_{split}(S) = \frac{S_l}{S}gini(S_l)+\frac{S_r}{S}gini(S_r)
  \label{eq:cartGiniSplit}
 \end{equation}
-
+Onde:
 \begin{itemize}[noitemsep]
             \item ${S}$ conjunto de dados que contém exemplos de n classes;
             \item ${S_l}$ subconjunto esquerdo de ${S}$;
@@ -138,7 +139,7 @@ Para a escolha da variável e ponto de divisão necessário do nó, terão que s
 
 %No procedimento da divisão do nó em dois subconjuntos, o atributo poderá conter valores contínuos ou categóricos. Quando o atributo possuir valores contínuos - por exemplo, ${[4.2, 2.0, 1.0, 8.8,...,10.8]}$, estes serão ordenados ${[1.0, 2.0, 4.2, 8.8,...,10.8]}$, e após, serão encontrados valores entre os pontos (por exemplo o ${1.5}$ que está entre ${1.0}$ e ${2.0}$), e assim sucessivamente até o último dois pontos. Para cada valor  encontrado os registros serão divididos: menor igual (<=) a ${1.5}$ e maior (>) ${1.5}$. No seguinte caso serão aplicados a equação \ref{eq:cartGiniSplit} em todos os números encontrados, e escolhido o menor valor para saber o melhor ponto de divisão. Em outra situação, sendo as variáveis  categóricas - por exemplo X, Y e Z, terão que ser testadas qual melhor divisão entre elas: \{X\} e \{Y,Z\}, \{Y\} e \{X,Z\} ou \{Z\} e \{X,Y\}. 
 
-No procedimento da divisão do nó em dois subconjuntos, o atributo poderá conter valores contínuos ou categóricos. Serão aplicados a equação \ref{eq:cartGiniSplit} em todos os valores, e escolhido o melhor ponto de divisão. Em outra situação, sendo as variáveis  categóricas - por exemplo X, Y e Z, terão que ser testadas, dentre todas as possibilidades, qual melhor divisão entre elas: \{X\} e \{Y,Z\}, \{Y\} e \{X,Z\} ou \{Z\} e \{X,Y\}.
+No procedimento da divisão do nó em dois subconjuntos, o atributo poderá conter valores contínuos ou categóricos. Nas duas opções serão aplicados a equação \ref{eq:cartGiniSplit} em todos os valores, e escolhido o melhor ponto de divisão. No caso de serem valores contínuos, simplesmente após o valor ser o escolhido para a divisão, esta divisão será: menor igual (ramo da esquerda) ou maior (ramo da direita) que o valor escolhido. Em outra situação, sendo as variáveis  categóricas - por exemplo X, Y e Z, terão que ser testadas, dentre todas as possibilidades, qual melhor divisão entre elas, e como é uma divisão binária, o nó não poderá ser dividido em 3 (três) ramos X, Y e Z, e sim, em grupos de dois como: \{X\} e \{Y,Z\}, \{Y\} e \{X,Z\} ou \{Z\} e \{X,Y\}.
 
 % De acordo com \citeonline{yohannes1999classification,Raimundo2008}, existem três componentes importantes na construção de uma árvore de decisão:
 % %Na construção de uma árvore de decisão existem três componentes importantes de acordo com \citeonline{yohannes1999classification,Raimundo2008}: 
@@ -206,13 +207,13 @@ Pode-se citar como exemplo desse evento, a descoberta do câncer em uma pessoa, 
 
 O Naive Bayes utiliza uma técnica de independência dos atributos, onde cada variável de entrada não depende de recursos de outras. Essa independência condicionada  entre os atributos, os quais nem sempre ocorrem nos problemas reais, acabou deixando conhecida por Bayes ingênuo, ou Naive Bayes.
 
-Em \citeonline{RusselStuart.Norvig2013} a equação \ref{eq:causaefeito} mostra a relação ${P(causa/efeito)}$ onde o efeito é evidência de alguma causa desconhecida, e quer se determinar a causa.
+Em \cite{RusselStuart.Norvig2013} a equação \ref{eq:causaefeito} mostra a relação ${P(causa/efeito)}$ onde o efeito é evidência de alguma causa desconhecida, e quer se determinar a causa.
 
 \begin{equation} \label{eq:causaefeito}
  P(causa|efeito)= \frac{P(efeito|causa)P(causa)}{P(efeito)}
 \end{equation}
 
-Naive Bayes como classificador estatístico possui um modelo de simples construção, e ficou conhecido por ter bons resultados em relação a algoritmos mais sofisticados, mesmo trabalhando com grandes quantidades de dados. Ele agrupa objetos de uma certa classe em razão da probabilidade do objeto pertencer a esta classe. 
+Naive Bayes como classificador estatístico possui um modelo de simples construção, e ficou conhecido por ter bons resultados em relação a algoritmos mais sofisticados, mesmo trabalhando com grandes quantidades de dado, e possui uma característica de agrupar objetos de uma certa classe em razão da probabilidade do objeto pertencer a esta classe. 
 
 \begin{equation}
  P(c/x)= \frac{P(x/c)P(c)}{P(x)}
@@ -231,7 +232,7 @@ Naive Bayes como classificador estatístico possui um modelo de simples constru�
  \item ${P(x)}$  é a probabilidade original do preditor.
 \end{itemize}
 
-A utilização do algoritmo Naive Bayes já é bem difundida e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \cite{Madureira2017, Lucca2013, Wu2008, Mccallum1997}. Entretanto mesmo atingido boa popularidade, o algoritmo possui pontos negativos. A suposição de ter preditores independentes não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramente independentes. 
+A utilização do algoritmo Naive Bayes já é bem difundida e está presente em vários trabalhos, como classificação de textos, filtro de SPAM, analisador de sentimentos, entre outros \cite{Madureira2017, Lucca2013, Wu2008, Mccallum1997}, entretanto, mesmo atingido boa popularidade o algoritmo se utiliza da suposição de ter preditores independentes, e isso não acontece muito na vida real, pois acaba sendo difícil ter uma amostra de dados que sejam inteiramente independentes. 
 
 \begin{table}[!ht]
 \centering
@@ -271,15 +272,15 @@ A tabela \ref{tab:exemploNB} é uma amostra de dados, onde é possível aplicar 
  \label{eq:resolNB}
 \end{eqnarray}
 
-O resultado (0,242) mostra uma probabilidade aproximada de ${20\%}$ de chance de acontecer o jogo, de acordo com as características apresentadas, implicando aproximadamente  ${80\%}$ de não acontecer, portanto, seguindo essas características se pode afirmar que a previsão é de não acorrer o jogo.
+O resultado (0,242) mostra uma probabilidade aproximada de ${20\%}$ de chance de acontecer o jogo, de acordo com as características apresentadas, implicando aproximadamente  ${80\%}$ de não acontecer, portanto, seguindo esse resultado pode-se afirmar que a previsão é de não acorrer o jogo.
 
 \subsubsection{Algoritmo k-Nearest Neighbor - KNN}\label{cap:refTeor:sssec:knn}
 
-O K-Nearest Neighbor - KNN é um algoritmo de classificação simples, pois onde os objetos são classificados através de um conjunto de treinamento que estão próximos no espaço de características. Uma vez que seja necessário definir qual a classificação de um objeto, será averiguado quais são os exemplos mais próximos, determinado por uma distância, e assim definirá através desses elementos próximos, qual sua classificação. 
+O K-Nearest Neighbor - KNN é um algoritmo de classificação simples, onde os objetos são classificados através de um conjunto de treinamento que estão próximos no espaço de características. Uma vez que seja necessário definir qual a classificação de um objeto, será averiguado quais são os exemplos mais próximos, determinado por uma distância, e assim definirá através desses elementos próximos, qual sua classificação. 
 
-Algumas considerações têm que ser feitas na execução do KNN, como a definição da métrica entre os elementos e o número que a variável K assumirá, ademais serão realizados alguns passos: i) o algoritmo funcionará calculando a distância entre todos os exemplos próximos do elemento a classificar; ii) será identificado os K vizinhos mais próximos; iii) e através do número de K será determinado a mesma classe do vizinho para classificação do elemento. 
+Na execução do KNN algumas considerações são importantes, como a definição da métrica entre os elementos e o número que a variável K assumirá, ademais, segue alguns passos: i) o algoritmo funcionará calculando a distância entre todos os exemplos próximos do elemento a classificar; ii) será identificado os K vizinhos mais próximos; iii) e através do número de K será determinado a mesma classe do vizinho para classificação do elemento. 
 
-Na figura \ref{fig:knn} pode-se observar melhor seu funcionamento.
+Na figura \ref{fig:knn} pode-se observar comportamento do algoritmo, onde um objeto está próximo de outros objetos vizinhos, e o número de vizinhos é determinado pelo K.
 
 \begin{figure}[h!]
     \centering
@@ -294,14 +295,21 @@ Na figura \ref{fig:knn} pode-se observar melhor seu funcionamento.
 
 Neste exemplo da figura \ref{fig:knn} um novo objeto precisa ser classificado, e na amostra de dados distribuída no plano cartesiano, o algoritmo KNN prevê sua classificação de acordo com objetos que estão próximos a ele. Na figura \ref{fig:knn} existem objetos ``círculos'', ``quadrados'', e um novo objeto triângulo que seria o novo objeto a ser classificado. 
 
-O algoritmo KNN calcula a distância do objeto ``triângulo'' para com os outros objetos utilizando a distância euclidiana, conforme equação \ref{eq:euclidiana} que está na forma bidimensional de acordo com o exemplo apresentado na figura \ref{fig:knn}.
+O algoritmo KNN calcula a distância do objeto ``triângulo'' para com os outros objetos utilizando a distância euclidiana \cite{Lachi2005}, conforme equação \ref{eq:euclidiana} que está na forma bidimensional de acordo com o exemplo apresentado na figura \ref{fig:knn}.
 
 \begin{equation}
- \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
+d=\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
  \label{eq:euclidiana}
 \end{equation}
 
-Ao calcular todas as distâncias o algoritmo irá ordenar estes resultados de forma crescente, de acordo com a tabela \ref{tab:exemploKNN}, e depois dependendo do valor de ${K}$ será determinado a classe do objeto.
+Onde:
+\begin{itemize}[noitemsep]
+ \item ${d}$ resultado da distância euclidiana entre dois objeto no plano cartesiano;
+ \item ${x_2-x_1}$ distância no eixo ${x}$ entre objetos;% nas coordenadas ${x_2}$ e ${x_1}$;  
+ \item ${y_2-y_1}$ distância no eixo ${y}$ entre  objetos;% nas coordenadas ${y_2}$ e ${y_1}$;  
+\end{itemize}
+
+Ao calcular todas as distâncias o algoritmo irá ordenar estes resultados de forma crescente, de acordo com a tabela \ref{tab:exemploKNN}, e depois dependendo do valor de ${K}$ será determinado a classe do objeto. A tabela de exemplo é formada por 3 (três) colunas, onde K significa o número de vizinhos, seguida da distância e também qual o tipo de objeto (quadrado ou círculo).
 
 \begin{table}[!ht]
 \centering 
@@ -320,7 +328,7 @@ K & Distância     & Classe \\ \hline
 \label{tab:exemploKNN}
 \end{table}
 
-Para definir a classe do objeto ``triangulo'' será necessário saber qual valor o ${K}$ assumirá, porque o maior número de ocorrências de uma determinada classe, será a classe eleita para o novo objeto - por exemplo, utilizando a tabela \ref{tab:exemploKNN}, com ${K=1}$ a classe deste registro é ``círculo'', dado que o número de ocorrências é CÍRCULO=1 e QUADRADO=0, então, caso ${K=1}$, o número de ocorrência do ``círculo'' é maior que ``quadrado''. No caso de ${K=2}$, aparece uma ocorrência de ``círculo'' e uma ocorrência de ``quadrado'', totalizando CÍRCULO=1 e QUADRADO=1, nesse caso não fica definido qual a classe, pois cada classe possui o mesmo número de ocorrências. No caso de ${K=3}$ a contagem de ocorrências em cada classe totaliza CÍRCULO=1 e QUADRADO=2, e desta vez, a classe que possui maior número de ocorrências é a escolhida para o novo objeto, ``quadrado'', e assim acontece sucessivamente para os outros valores ${K}$ assumir. Cada vez que o valor de ${K}$ aumenta é feita  a soma de ocorrências de cada classe, sendo a classe elegida a que mais ocorrências houver.
+Para definir qual a classe do objeto ``triangulo'' assumirá, será necessário saber qual valor de ${K}$, pois o maior número de ocorrências de uma determinada classe, será a classe eleita para o novo objeto - por exemplo, utilizando a tabela \ref{tab:exemploKNN}, com ${K=1}$ a classe deste registro é ``círculo'', dado que o número de ocorrências é CÍRCULO=1 e QUADRADO=0, então, caso ${K=1}$, o número de ocorrência do ``círculo'' é maior que ``quadrado''. No caso de ${K=2}$, aparece uma ocorrência de ``círculo'' e uma ocorrência de ``quadrado'', totalizando CÍRCULO=1 e QUADRADO=1, nesse caso não fica definido qual a classe, pois cada classe possui o mesmo número de ocorrências. No caso de ${K=3}$ a contagem de ocorrências em cada classe totaliza CÍRCULO=1 e QUADRADO=2, e desta vez, a classe que possui maior número de ocorrências é a escolhida para o novo objeto, ``quadrado'', e assim acontece sucessivamente para os outros valores ${K}$ assumir. Cada vez que o valor de ${K}$ aumenta é feita  a soma de ocorrências de cada classe, sendo a classe elegida a que mais ocorrências houver.
 
 Ao escolhe um valor par de ${K}$, poderá haver um empate no número de ocorrências das classes, essa situação fica clara no exemplo acima, tabela \ref{tab:exemploKNN}, quando ${K=2}$ (CÍRCULO=1 e QUADRADO=1) e ${K=4}$ (CÍRCULO=2 e QUADRADO=2), mas para não acontecer um valor de empate é necessário escolher sempre um valo ${K}$ ímpar, e este parâmetro pode ser definido ao executar o algoritmo.
 
@@ -329,7 +337,7 @@ Ao escolhe um valor par de ${K}$, poderá haver um empate no número de ocorrên
 
 Outro cenário de aprendizado de máquina é o aprendizado não-supervisionado, onde não existe uma tentativa de se encontrar uma função que se aproxime da real, logo porque os registros não são classificados, visto que o conjunto de treinamento não possui informação da saída sobre determinada entrada. Desta forma os algoritmos procuram algum grau de similaridade entre os registros e tentam agrupá-los de forma a ter algum sentido deles estarem juntos. 
 
-Quando o algoritmo encontra dados com mesma similaridade ele os agrupa formando \textit{clusters}. Os números de \textit{clusters} encontrados dependerá do funcionamento, técnica, configuração dos algoritmos e também do grau de dissimilaridade entre elementos de grupos diferentes. Segundo \citeonline{Barber2011} não existe uma variável classe no aprendizado não-supervisionado, então, o maior interesse, seria em uma perspectiva probabilística de distribuição ${p(x)}$ de um determinado conjunto de dados ${D = \{x_{n},n=1,...,N\}}$. Mesmo não possuindo rótulos (classes), novos dados inseridos são submetidos aos algoritmos não-supervisionados, e esses algoritmos são capazes de encontrar padrões nos atributos em um conjunto de treinamento, conseguindo inferir sobre os dados de testes, classificando-os em algum grupo. 
+Quando o algoritmo encontra dados com mesma similaridade ele os agrupa formando \textit{clusters}. Os números de \textit{clusters} encontrados dependerá do funcionamento, técnica, configuração dos algoritmos e também do grau de dissimilaridade entre elementos de grupos diferentes. Segundo \cite{Barber2011} não existe uma variável classe no aprendizado não-supervisionado, então, o maior interesse, seria em uma perspectiva probabilística de distribuição ${p(x)}$ de um determinado conjunto de dados ${D = \{x_{n},n=1,...,N\}}$. Mesmo não possuindo rótulos (classes), novos dados inseridos são submetidos aos algoritmos não-supervisionados, e esses algoritmos são capazes de encontrar padrões nos atributos em um conjunto de treinamento, conseguindo inferir sobre os dados de testes, classificando-os em algum grupo. 
 
 Cada algoritmo utilizará alguma característica para determinar grupos diferentes na base de dados, no exemplo da figura \ref{fig:planoCartesianoAprendNSup}, fica visível a existência de agrupamentos diferentes (h1, h2, h3, h4). 
 
@@ -356,7 +364,7 @@ O que é apresentado na figura \ref{fig:planoCartesianoAprendNSup} são situaç�
 
 O método de discretização faz a conversão de valores contínuos em valores discretos. A partir de um atributo com valores contínuos, a discretização cria um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos, novos contéudos representando as faixas de valores.
 
-Segundo alguns autores, a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento \cite{Catlett2006b,Hwang2002}. De acordo com \citeonline{Kotsiantis2006, Dougherty1995} os métodos de discretização mais comumente utilizados, no âmbito dos métodos  não-supervisionados,  são os de Discretização por Larguras Iguais (do inglês: Equal Width Discretization - EWD) e Discretização por Frequências Iguais (do inglês: Equal Frequency Discretization - EFD).
+Segundo alguns autores, a discretização melhora a precisão e deixa um modelo mais rápido em seu conjunto de treinamento \cite{Catlett2006b,Hwang2002}. De acordo com \cite{Kotsiantis2006, Dougherty1995} os métodos de discretização mais comumente utilizados, no âmbito dos métodos  não-supervisionados,  são os de Discretização por Larguras Iguais (do inglês: Equal Width Discretization - EWD) e Discretização por Frequências Iguais (do inglês: Equal Frequency Discretization - EFD).
 
 %Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
 
@@ -364,7 +372,7 @@ Segundo alguns autores, a discretização melhora a precisão e deixa um modelo 
 
 \subsection{Equal Weight Discretization - EWD}\label{cap:refTeor:subsec:ewd}
 
-O método de Discretização por Larguras Iguais faz a discretização de um intervalo, entre valores contínuos, dividindo através de um ponto de corte as faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte (figura \ref{fig:pontocorte}). 
+O método de Discretização por Larguras Iguais (Equal Weight Discretization - EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo através de um ponto de corte as faixas de tamanhos iguais. Logo se existir um intervalo com valores contínuos [a,b], e deseja particionar em ${R}$ faixas de tamanhos iguais serão necessários ${R-1}$ pontos de corte (figura \ref{fig:pontocorte}). 
 
 \begin{figure}[h]
         \centering
@@ -398,7 +406,7 @@ Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$
 \begin{figure}[h] 
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEWD.png}
-        \caption[Discretização EWD]{Discretização EWD. Figura baseada em \cite{LOPES2014}}%\footnotemark } 
+        \caption[Discretização EWD]{Discretização EWD. Figura baseada em \cite{Lopes2016}}%\footnotemark } 
         \label{fig:faixasEWD}
 \end{figure}
 %\footnotetext{Figura extraída de \cite{Lopes}}
@@ -631,7 +639,7 @@ Igual ao que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.6]{figs/discretizacaoEFD.png}
-        \caption[Discretização EFD]{Discretização EFD. Figura baseada em \cite{LOPES2014}} 
+        \caption[Discretização EFD]{Discretização EFD. Figura baseada em \cite{Lopes2016}} 
         \label{fig:faixasEFD}
 \end{figure} 
 %\footnotetext{Figura extraída de \cite{LOPES2014}}
@@ -663,55 +671,52 @@ A seguir é definido as faixas, onde percebe-se que são de tamanhos diferentes 
 
 \section{Trabalhos Correlatos}\label{cap:refTeor:sec:trabcorrel}
 
-Esta seção propõe relacionar outros trabalhos servindo de complemento teórico para entender a variedade de aplicações referente ao assunto de rotulação de dados.
+Esta seção propõe relacionar outros trabalhos servindo de complemento teórico  ao assunto de rotulação de dados.
 
-O trabalho proposto por \citeonline{LOPES2014} fez um estudo abordando o tema de rotulação de dados, mas com abrangência e execução diferente do modelo da figura \ref{fig:modeloLOPES} executado por ele. Neste trabalho foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático com algoritmos não-supervisionados formando  \textit{clusters}. Logo após a formação dos \textit{clusters} e a discretização do dados é utilizado um algoritmo supervisionado (RNA) nos grupos de dados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
+O trabalho proposto por \cite{Lopes2016} faz um estudo abordando o tema de rotulação de dados, nele foi utilizado como entrada um conjunto de dados onde foi realizado o agrupamento automático com algoritmos não-supervisionados, formando  \textit{clusters}, e logo após a formação dos \textit{clusters} é utilizado um algoritmo supervisionado (RNA) nos grupos de dados já discretizados, e apresentado como saída um rótulo específico que melhor define o grupo formado. Esses rótulos são formados por uma tupla, atributos mais relevantes e faixa de valores que mais se repetem.
+
+A figura \ref{fig:modeloLOPES} representa o modelo de atuação do autor citado alhures, que através de 4 passos (I, II, III, IV) são obtidos os rótulos que representaram os clusters.
 
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.8]{figs/modeloLopes.png}
-        \caption{Modelo de \citeonline{LOPES2014}} 
+        \caption{Modelo de \cite{Lopes2016}} 
         \label{fig:modeloLOPES}
 \end{figure}
 
-Em analogia com este trabalho pode-se verificar na figura \ref{fig:modeloLOPES} que na parte onde é aplicado o algoritmo  de RNA (processo III) é o local exato que esta pesquisa utiliza para testar outros algoritmos supervisionados. Nesse modelo proposto o autor não só tem a preocupação de processar  a formação dos grupos como também aplicar um algoritmo supervisionado para rotular esses grupos formados.
+Em analogia com este trabalho pode-se verificar na figura \ref{fig:modeloLOPES} que na parte onde é aplicado o algoritmo  de RNA (processo III) é o local exato que esta pesquisa utiliza para testar outros algoritmos supervisionados. Nesse modelo proposto o autor não só tem a preocupação de processar  a formação dos grupos como também aplicar um algoritmo supervisionado para rotular esses grupos formados, diferente dessa pesquisa que tem como foco a rotulação dos clusters que já existem.
 
 
 
 
-O trabalho de \citeonline{Metodo2015} é baseado em fazer a classificação e rotulação em uma base que possuem poucos elementos classificados utilizando método semisupervisionado. Na aprendizagem de máquina semisupervisionada o foco é quando não há muitos exemplos em quantidade suficientes ao ponto de conseguir treinar um classificador que desempenhe bem seu papel. 
+Em \cite{DeLima2015} é utilizado uma combinação de algoritmos: algoritmos de aprendizado não-supervisionado e de aprendizado supervisionado. Eles são aplicados a uma base de dados de uma rede social chamada de Scientia.Net, com o objetivo da criação de grupos e identificação dos atributos que podem ser importantes ao ponto de representar estes  grupos, chamando-os de rótulos. O Scientia.Net é uma rede social para cientistas com propósito do compartilhamento de suas pesquisas e criação de perfis facilitando o contato no meio acadêmico. Nesse artigo o autor utilizou o modelo de \cite{Lopes2016}, seguindo os mesmos algoritmos, o algoritmo \textit{k-means} para agrupamento, e logo na segunda parte a utilização  do algoritmo supervisionado, \textit{Artificial Neural Networks} - ANN. Diferente desse artigo \cite{DeLima2015}, este trabalho aqui são testados outros algoritmos supervisionados, em grupos já formados, a fim de gerar rótulos e aferir suas acurácias para cada um desses algoritmos.
+% O trabalho de \citeonline{Metodo2015} é baseado em fazer a classificação e rotulação em uma base que possuem poucos elementos classificados utilizando método semisupervisionado. Na aprendizagem de máquina semisupervisionada o foco é quando não há muitos exemplos em quantidade suficientes ao ponto de conseguir treinar um classificador que desempenhe bem seu papel. 
+% 
+% O autor aplica a combinação de um classificador e um agrupador para desempenhar  a tarefa de classificação dos dados baseando-se nos algoritmos co-training e $k-means_ki$.
+% 
+% 
+% O método inicia com uma base dividida em elementos classificados (L) e não classificados (U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U, figura  \ref{fig:modeloVicente}. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
+% \begin{figure}[!h]
+%         \centering
+%         \includegraphics[scale=0.4]{figs/modeloVicente.png}
+%         \caption{Comportamento da base de dados a cada iteração. Método \cite{Metodo2015}} \label{fig:modeloVicente}
+% \end{figure}
+% 
+% O método proposto é uma combinação de um classificador com um método de agrupamento, onde a rotulação de um conjunto de dados é feita com conhecimento prévio de um outro conjunto menor rotulado. O classificador treina com a parte de dados rotulada e classifica os dados não-rotulados.
 
-O autor aplica a combinação de um classificador e um agrupador para desempenhar  a tarefa de classificação dos dados baseando-se nos algoritmos co-training e $k-means_ki$.
 
+Outra pesquisa \cite{Filho2015}  aborda o mesmo Problema de Rotulação, mas a atuação é diferenciada, pois o modelo procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. Através do algoritmo Fuzzy C-Means é criada uma tabela chamada de matriz U, ou matriz de partição \textit{fuzzy}. Essa matriz contém um número relacionado a cada grupo chamado, Grau de Pertinência - GP, onde este número varia de 0 a 1 dependendo do grau de proximidade com o centróide de um grupo. Quanto mais próximo ao centróide, maior é seu grau de pertinência em relação ao grupo. Através dessa tabela criada com os valores de pertinência são escolhidos os atributos que farão parte de cada grupo. A cada atributo é verificado o GP de cada grupo, e o atributo pertencerá ao grupo que tiver o maior GP. Isso significa que quanto maior o valor de GP, mais próximo do centróide do grupo, consequentemente, mais pertencente ao grupo. 
 
-O método inicia com uma base dividida em elementos classificados (L) e não classificados (U). Após cada iteração o grupo L vai crescendo e automaticamente diminuindo o grupo U até que não tenha mais nenhum elemento em U, figura  \ref{fig:modeloVicente}. Após isso é realizado uma etapa de agrupamento, sem levar em consideração os dados classificados anteriormente. Terminada essa etapa é feito uma validação para saber quais os rótulos foram considerados corretos.
-\begin{figure}[!h]
-        \centering
-        \includegraphics[scale=0.4]{figs/modeloVicente.png}
-        \caption{Comportamento da base de dados a cada iteração. Método \cite{Metodo2015}} \label{fig:modeloVicente}
-\end{figure}
+Nesse modelo proposto pelo autor existe duas variáveis onde são atribuídos parâmetros: Grau de Seleção - GS e Incremento do Grau de Seleção - IGS. O GS, serve de base para seleção dos elementos mais significativos na formação do rótulo e o IGS seria um incremento do parâmetro GS, sendo que, tanto GS quanto IGS podem variar de 0 a 1. Esses parâmetros são inicializados no início do modelo de resolução e são incrementados a cada iteração, que ocorre caso não exista pelo menos uma faixa de valor pertencente a cada grupo. A forma medir a acurácia do autor \cite{Filho2015} coincide com este trabalho, pois é utilizado os grupos já formados na base de dados de exemplo, e comparado com os resultados do modelo, para então verificar a porcentagem de acerto dos rótulos de cada grupo. 
 
-O método proposto é uma combinação de um classificador com um método de agrupamento, onde a rotulação de um conjunto de dados é feita com conhecimento prévio de um outro conjunto menor rotulado. O classificador treina com a parte de dados rotulada e classifica os dados não-rotulados.
+O trabalho de \cite{imperes2018} realizou uma proposta de rotulação onde utilizou algoritmo não-supervisionado, \textit{K-means}, que é baseado em distância. Foi desenvolvido transformando saída padrão em distância para que cada elemento da base de dados recebesse um GP. Esse GP é utilizado para selecionar os elementos relevantes em cada grupo. Esse modelo funciona em duas etapas, a primeira transforma as saídas em distâncias para GP, e a segunda etapa, formar as faixas de valores e exibir os rótulos.
+No início da primeira etapa são atribuidos os parâmetros do números de grupos, GP, GS e IGS, após, é carregado a base de dados e formados os grupos através de algoritmo baseado em distância (\textit{K-means}). Logo em seguida a transformação da saída de distância em GP, por conseguinte os grupos já ficam atuliazados contendo GP.
 
+Na segunda etapa acontece a seleção dos elementos a partir da comparação do GP e do GS, portanto em seguida, a escolha do menor e maior valor do atributo formando a faixa de valor. Caso haja pele menos uma faixa de valor pertencente a cada grupo os rótulos são exibidos, mas caso não ocorra, GS é incrementado pelo IGS refazendo a segunda etapa novamente. 
 
-Outra pesquisa \cite{Filho2015}  aborda o mesmo Problema de Rotulação, mas a atuação é diferenciada, pois o modelo procura diferenças existentes em cada grupo através da seleção dos elementos que representam o grupo, e depois é construído a faixa de valores. Os grupos são formados pelo algoritmo Fuzzy C-Means e após isso que é selecionado os atributos. 
-
-Através do algoritmo Fuzzy C-Means é criada uma tabela chamada de matriz U. Essa matriz contém um número relacionado a cada grupo chamado, Grau de Pertinência - GP, onde este número varia de 0 a 1 dependendo do grau de proximidade com o centróide de um grupo. Quanto mais próximo ao centróide, maior é seu grau de pertinência em relação ao grupo.
-
-Através dessa tabela criada com os valores de pertinência são escolhidos os atributos que farão parte de cada grupo. A cada atributo é verificado o GP de cada grupo, e o atributo pertencerá ao grupo que tiver o maior GP. Isso significa que quanto maior o valor de GP, mais próximo do centróide do grupo, consequentemente, mais pertencente ao grupo. 
-
-Nesse modelo proposto pelo autor existe duas variáveis onde são atribuídos parâmetros: Grau de Seleção - GS e Incremento do Grau de Seleção - IGS. O GS, serve de base para seleção dos elementos mais significativos na formação do rótulo e o IGS seria um incremento do parâmetro GS, sendo que, tanto GS quanto IGS podem variar de 0 a 1. Esses parâmetros são inicializados no início do modelo de resolução e são incrementados a cada iteração, que ocorre caso não exista pelo menos uma faixa de valor pertencente a cada grupo.
-
-O trabalho de \citeonline{imperes2018} realizou uma proposta de rotulação onde utilizou algoritmo de agrupamento baseado em distância como base. A partir deste ponto o trabalho foi desenvolvido transformando saída padrão em distância para que cada elemento da base de dados recebesse um GP. Esse GP é utilizado para selecionar os elementos relevantes em cada grupo.
-
-O modelo proposto pelo autor funciona em duas etapas, a primeira transforma as saídas em distâncias para GP, e a segunda etapa, formar as faixas de valores e exibir os rótulos.
-
-No início da primeira etapa são atribuidos os parâmetros do números de grupos, GP, GS e IGS. Após é carregado a base de dados e formados os grupos através de algoritmo baseado em distância (K-Means). Logo em seguida a transformação da saída de distância em GP, por conseguinte os grupos já ficam atuliazados contendo GP.
-
-Na segunda etapa acontece a seleção dos elementos a partir da comparação do GP e do GS, e logo em seguida a escolha do menor e maior valor do atributo formando a faixa de valor. Caso haja pele menos uma faixa de valor pertencente a cada grupo os rótulos são exibidos, mas caso não ocorra, GS é incrementado pelo IGS refazendo a segunda etapa novamente. 
-
-Outro trabalho de rotulação é o de \citeonline{Araujo2018}, onde defende que a etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será  acurácia dos grupos encontrados.
-
+Outro trabalho de rotulação é o de \cite{Araujo2018}, onde defende que a etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será  acurácia dos grupos encontrados.
 Nesse trabalho o autor utiliza em conjundo o DAMICORE e DAMICORE-2 no método de rotulação automática para rotular  grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de \textit{clusters} ao qual o algoritmo é aplicado. 
 
 O modelo é dividio em cinco etapas até obter os rótulos. Nas etapas I e II preparam os dados e ajuda ao DAMICORE (etapa III) para melhor medir a similaridade dos elementos, oferecendo uma maior precisão. Como não é preciso informar o número de cluster na utilização do DAMICORE, os resultados na etapa III acabam por superar um número razoável de \textit{clusters} para uma melhor compreensão. Em razão disso a etapa IV de mesclagem faz a junção de \textit{clusters} para criação de super-\textit{clusters}, que são \textit{clusters} maiores representando um conceito mais geral e de mais fácil entedimento. Por fim, os super-\textit{clusters} são submetidos ao método de rotulação automática (etapa V) permitindo identificar os atributos mais relevantes e seus respectivos faixas de valores.
+
+%Nas pesquisas realizadas a cerca do tema de ``rotulação de grupos'', foi encontrado vários trabalhos que em seus títulos possuia a palavra ``rotulaçao'', mas não no sentido empregado aqui, nesta pesquisa - a exemplo dentre esses vários trabalhos encontrados, o autor \cite{} faz a rotulação de objetos, cujo problema abordado é a leitura de identificadores de objetos em forma de rolo de ``papel bolha'', onde há dificulta do leitor lêr os rótulos dos rolos em uma esteira, pois não há condições de prever qual posição estára o identificador do objeto ao chegar no leitor. Isso mostra que referente ao tema desta pesquisa   (Citar aqui vários trabalhos de 2017,2018)

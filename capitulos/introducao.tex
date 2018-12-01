@@ -12,7 +12,7 @@
 % ----------------------------------------------------------
 \chapter{Introdução} \label{cap:introd}
 
-Agrupamento de dados, ou clustering, é o termo usado para identificar dois ou mais objetos pertencentes ao mesmo grupo que compartilham um conceito em comum \cite{Kumar2013}. Cluster é um termo bastante pesquisado no aprendizado não-supervisionado (subárea do aprendizado de máquina) e aplicado em vários contextos como segmentação de imagens, recuperação de informação e reconhecimento de objetos. Os algoritmos de agrupamento, conforme \citeonline{Kumar2013}, são aplicados em diferentes campos: Biologia (classificação de plantas e animais), Marketing (encontrar grupos de clientes com comportamentos semelhantes), planejamento de cidades (identificação de casas de acordo com seu tipo, valor e localização geográfica), entre outros.
+Agrupamento de dados, ou clustering, é o termo usado para identificar dois ou mais objetos pertencentes ao mesmo grupo que compartilham um conceito em comum \cite{Kumar2013}. Cluster é um termo bastante pesquisado no aprendizado não-supervisionado (subárea do aprendizado de máquina) e aplicado em vários contextos como segmentação de imagens, recuperação de informação e reconhecimento de objetos. Os algoritmos de agrupamento, conforme \cite{Kumar2013}, são aplicados em diferentes campos: Biologia (classificação de plantas e animais), Marketing (encontrar grupos de clientes com comportamentos semelhantes), planejamento de cidades (identificação de casas de acordo com seu tipo, valor e localização geográfica), entre outros.
 
 Com a popularização da internet e mídias sociais, cada vez mais dados são processados, transportados e produzidos. É nesse cenário, com grandes volumes de dados, que não só a formação de grupos ganha importância, mas também a compreensão dos mesmos, pois a interpretação dos grupos fornecerá informações úteis para análises desses clusters.
 
@@ -24,7 +24,7 @@ Diante desse contexto é que se extrai a temática desta proposta de mestrado - 
 A rotulação dita neste trabalho segue a própria definição da palavra, que serve para informar sobre algo. Então, a partir de um grupo de dados, seria possível destacar neste grupo uma informação que o represente, e uma forma seria encontrar através de técnicas uma tupla: atributo(s) e faixa(s). Onde o atributo selecionado seria o que teria maior relevância no grupo, no sentido de representar o grupo, e a faixa de valor escolhida, seria a que mais tivesse ocorrência nos valores do atributo. Poderá também haver no grupo mais de um atributo com sua respectiva faixa, representando o rótulo.
 
 
-O termo rotulação, neste trabalho, segue a definição conforme \citeonline{LOPES2014}: 
+O termo rotulação, neste trabalho, segue a definição conforme \cite{LOPES2014}: 
 
 %\newtheorem{teorema}{Definição}
     \begin{teorema}
@@ -35,7 +35,7 @@ Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que
             \item ${K}$ é o número de clusters;
             \item ${c_i}$ é o i-ésimo cluster;
             \item ${n^{c_i}}$ é o número de elementos do cluster ${c_i}$;
-            \item ${\vec{e}_{n^{(c_i)}}}$ se refere ao j-ésimo elemento pertencente ao cluster ${c_i}$;
+            \item ${\vec{e}_{j^{(c_i)}}}$ se refere ao j-ésimo elemento pertencente ao cluster ${c_i}$;
             \item ${m}$ é a dimensão do problema;
             \item ${r_{c_i}}$ é o rótulo referente ao cluster ${c_i}$;
             \item ${]p_{m^{(c_i)}},q_{m^{(c_i)}}]}$ representa o intervalo de valores do atributo ${a_{m^{(c_i)}} }$, onde ${ p_{m^{(c_i)}} }$  é o limite inferior e ${ q_{m^{(c_i)}} }$ é o limite superior;
@@ -44,7 +44,7 @@ Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que
     \end{teorema}
 
 
-A formação do problema desta pesquisa nasce a partir do trabalho realizado por \citeonline{LOPES2014}, que se dedicou a estudar a possibilidade de realização de rotulação automática de grupos utilizando para isso dois algoritmos: i) Um para realizar a formação de grupos através de algoritmo não supervisionado (K-means); e ii) utiliza o algoritmo supervisionado (Redes Neurais Artificiais - RNA) para fazer a rotulação de grupos. Assim, partindo do estudo já realizado, este trabalho se dedica a realizar rotulação de grupos de dados a partir de outros algoritmos supervisionados não testados e fazer um comparativo entre eles.
+A formação do problema desta pesquisa nasce a partir do trabalho realizado por \cite{LOPES2014}, que se dedicou a estudar a possibilidade de realização de rotulação automática de grupos utilizando para isso dois algoritmos: i) Um para realizar a formação de grupos através de algoritmo não supervisionado (K-means); e ii) utiliza o algoritmo supervisionado (Redes Neurais Artificiais - RNA) para fazer a rotulação de grupos. Assim, partindo do estudo já realizado, este trabalho se dedica a realizar rotulação de grupos de dados a partir de outros algoritmos supervisionados não testados e fazer um comparativo entre eles.
 
 Nesta pesquisa foi aferida a acurácia de cada resultado através do percentual de acertos dos atributos que são representados pelos rótulos gerados, sendo essa acurácia possível em virtude das bases de dados escolhidas já serem classificadas, possibilitando o comparativo do rótulo com a classificação da base de dados. É importante destacar, que este trabalho não se preocupa em criar grupos, e sim na rotulação dos mesmos, isto é, compreender os grupos de dados já formados.
 
