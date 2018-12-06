@@ -39,6 +39,21 @@ ISBN 9780412048418. Dispon{\'\i}vel em:
 \emph{Advances in Intelligent and Soft Computing}, v.~69, p. 15--24, 2010.
 ISSN 18675662.}
 
+\bibitem[Chen, Tseng e Liang 2011]{Chen2011}
+\abntrefinfo{Chen, Tseng e Liang}{CHEN; TSENG; LIANG}{2011}
+{CHEN, C.-L.; TSENG, F. S.~C.; LIANG, T. {An integration of fuzzy association
+  rules and WordNet for document clustering}.
+\emph{Knowledge and Information Systems}, v.~28, n.~3, p. 687--708, sep 2011.
+ISSN 0219-1377.
+Dispon{\'\i}vel em: \url{http://link.springer.com/10.1007/s10115-010-0364-2}.}
+
+\bibitem[Costa et al. 2016]{Costa2016}
+\abntrefinfo{Costa et al.}{COSTA et al.}{2016}
+{COSTA, B. S.~J. et al. {Unsupervised classification of data streams based on
+  typicality and eccentricity data analytics}.
+\emph{2016 IEEE International Conference on Fuzzy Systems, FUZZ-IEEE 2016}, p.
+  58--63, 2016.}
+
 \bibitem[Dougherty, Kohavi e Sahami 1995]{Dougherty1995}
 \abntrefinfo{Dougherty, Kohavi e Sahami}{DOUGHERTY; KOHAVI; SAHAMI}{1995}
 {DOUGHERTY, J.; KOHAVI, R.; SAHAMI, M. {Supervised and Unsupervised
@@ -72,6 +87,15 @@ ISSN 20501420.
 Dispon{\'\i}vel em:
   \url{http://doi.wiley.com/10.1111/j.1469-1809.1936.tb02137.x}.}
 
+\bibitem[Gan et al. 2013]{Gan2013}
+\abntrefinfo{Gan et al.}{GAN et al.}{2013}
+{GAN, H. et al. {Using clustering analysis to improve semi-supervised
+  classification}.
+\emph{Neurocomputing}, v.~101, p. 290--298, feb 2013.
+ISSN 09252312.
+Dispon{\'\i}vel em:
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0925231212006601}.}
+
 \bibitem[Hwang e Li 2002]{Hwang2002}
 \abntrefinfo{Hwang e Li}{HWANG; LI}{2002}
 {HWANG, G.~J.; LI, F. {A Dynamic Method for Discretization of Continuous
@@ -89,6 +113,23 @@ Dispon{\'\i}vel em:
   Agrupamento Baseados em Dist{\^{a}}ncia Utilizando Grau de
   Pertin{\^{e}}ncia}}. 2018. 60~p.}
 
+\bibitem[Iwamura, Tsukada e Kise 2013]{Iwamura2013}
+\abntrefinfo{Iwamura, Tsukada e Kise}{IWAMURA; TSUKADA; KISE}{2013}
+{IWAMURA, M.; TSUKADA, M.; KISE, K. {Automatic Labeling for Scene Text
+  Database}. In:  \emph{2013 12th International Conference on Document Analysis
+  and Recognition}. IEEE, 2013. p. 1365--1369.
+ISBN 978-0-7695-4999-6. Dispon{\'\i}vel em:
+  \url{http://ieeexplore.ieee.org/document/6628837/}.}
+
+\bibitem[Jirasirilerd e Tangtisanon 2018]{Jirasirilerd2018}
+\abntrefinfo{Jirasirilerd e Tangtisanon}{JIRASIRILERD; TANGTISANON}{2018}
+{JIRASIRILERD, W.; TANGTISANON, P. {Automatic Labeling for Thai News Articles
+  Based on Vector Representation of Documents}. In:  \emph{2018 International
+  Conference on Engineering, Applied Sciences, and Technology (ICEAST)}. IEEE,
+  2018. p.~1--4.
+ISBN 978-1-5386-4956-5. Dispon{\'\i}vel em:
+  \url{https://ieeexplore.ieee.org/document/8434457/}.}
+
 \bibitem[Kotsiantis e Kanellopoulos 2006]{Kotsiantis2006}
 \abntrefinfo{Kotsiantis e Kanellopoulos}{KOTSIANTIS; KANELLOPOULOS}{2006}
 {KOTSIANTIS, S.; KANELLOPOULOS, D. {Discretization Techniques : A recent
@@ -102,6 +143,22 @@ Dispon{\'\i}vel em:
   Data Mining for Industrial Applications}.
 \emph{International Journal of Engineering Science Invention}, v.~2, n.~7,
   p.~1--8, 2013.}
+
+\bibitem[Lachi e Rocha 2005]{Lachi2005}
+\abntrefinfo{Lachi e Rocha}{LACHI; ROCHA}{2005}
+{LACHI, R.~L.; ROCHA, H.~V. \emph{{Aspectos b{\'{a}}sicos de clustering:
+  conceitos e t{\'{e}}cnicas}}.
+Campinas, SP, 2005. 1--26~p. Dispon{\'\i}vel em:
+  \url{http://www.ic.unicamp.br/{~}reltech/2005/05-03.p}.}
+
+\bibitem[Lima 2015]{Metodo2015}
+\abntrefinfo{Lima}{LIMA}{2015}
+{LIMA, B. V.~A.
+Disserta{\c{c}}{\~{a}}o (Programa de P{\'{o}}s-gradua{\c{c}}{\~{a}}o em
+  Ci{\^{e}}ncia da Computa{\c{c}}{\~{a}}o), \emph{{M{\'{e}}todo
+  Semissupervisionado de Rotula{\c{c}}{\~{a}}o e Classifica{\c{c}}{\~{a}}o
+  Utilizando Agrupamento por Sementes e Classificadores}}. Teresina - PI:
+  [s.n.], 2015. 47~p.}
 
 \bibitem[Lima, Machado e Lopes 2015]{DeLima2015}
 \abntrefinfo{Lima, Machado e Lopes}{LIMA; MACHADO; LOPES}{2015}
@@ -165,12 +222,29 @@ ISBN 9780262018258.}
   3{\textordfeminine}. ed. Rio de Janeiro: [s.n.], 2013.
 ISBN 9780136042594.}
 
+\bibitem[Sun, Yoshida e Liang 2011]{Sun2011}
+\abntrefinfo{Sun, Yoshida e Liang}{SUN; YOSHIDA; LIANG}{2011}
+{SUN, L.; YOSHIDA, S.; LIANG, Y. {A support vector and k-means based hybrid
+  intelligent data clustering algorithm}.
+\emph{IEICE Transactions on Information and Systems}, E94-D, n.~11, p.
+  2234--2243, 2011.
+ISSN 17451361.}
+
 \bibitem[Wu et al. 2008]{Wu2008}
 \abntrefinfo{Wu et al.}{WU et al.}{2008}
 {WU, X. et al. \emph{{Top 10 algorithms in data mining}}. [S.l.: s.n.], 2008.
   v.~14. 1--37~p.
 ISSN 02191377.
 ISBN 1011500701.}
+
+\bibitem[Yeganova, Comeau e Wilbur 2010]{Yeganova2010}
+\abntrefinfo{Yeganova, Comeau e Wilbur}{YEGANOVA; COMEAU; WILBUR}{2010}
+{YEGANOVA, L.; COMEAU, D.~C.; WILBUR, W.~J. {Identifying Abbreviation
+  Definitions Machine Learning with Naturally Labeled Data}. In:  \emph{2010
+  Ninth International Conference on Machine Learning and Applications}. IEEE,
+  2010. p. 499--505.
+ISBN 978-1-4244-9211-4. Dispon{\'\i}vel em:
+  \url{http://ieeexplore.ieee.org/document/5708877/}.}
 
 \bibitem[Yohannes e Webb 1999]{yohannes1999classification}
 \abntrefinfo{Yohannes e Webb}{YOHANNES; WEBB}{1999}

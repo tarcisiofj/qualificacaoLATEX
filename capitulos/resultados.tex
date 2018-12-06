@@ -1,36 +1,36 @@
 \chapter{Resultados}\label{cap:resultados}
 
-Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/}, um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987 e até hoje é utilizado não só por estudantes mas também por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
+Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/}, um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987, essas bases são utilizadas por estudantes mas e por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
 
 * lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
 
 
 As bases de dados foram escolhidas não só por critério comparativo de outros trabalhos que também já as utilizaram servindo  de referência para os resultados, como também, um cuidado de só escolher bases que estão classificadas, uma vez que esta pesquisa trabalhará com os clusters já formados e não na criação de grupos.
 
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento, e quais configurações  de algumas variáveis. Cada base de dados utilizada é destacada por uma seção, onde cada seção refere-se a uma base de dados, sendo esta, dividida em subseções para cada algoritmo utilizado: Naive Bayes e CART.
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento, e quais configurações  de algumas variáveis. Cada seção refere-se a uma base de dados utilizada, sendo esta, dividida em subseções para os algoritmos: Naive Bayes, CART e KNN.
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
 Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi escolhida para colocar em prática essa pesquisa.
 
-Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. Essas alterações, dependendo da base de dados utilizadas fazem as seguintes modificações na  variável ``V'', na quantidade de faixas ``R'' e métodos de discretização ``EWD,EFD''. 
+Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância ``V'', número de faixas ``R'', e métodos de discretização ``R'' (EWD,EFD). 
 
 Como dito na subseção \ref{cap:ferramentas:ssec:algsuper} a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando rótulos apresentarem os mesmos resultados: atributo e faixa de valor. Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster.
 
 %A utilização da variação ${V}$ para escolha de rótulos acontece após uma análise da tabela de correlação dos atributos (seção \ref{cap:ferramentas:sec:tecnica}), a exemplo da tabela \ref{tab:matrelevancia:seeds:nb}. E existindo valores muito próximos em relação a outros (cabe a uma análise se necessário), poderá utilizar esses atributos também como rótulos para melhor definir o cluster. A variável ${V}$ pode ser configurada com um valor que possa abranger esses atributos que possuam valores de porcentagens próximos ao do atributo de maior valor na tabela (mais relevante). O valor de ${V}$ é subjetivo e sua adição é condicionada a análise da aplicação do algoritmo na bases de dados.
 
-É importante ressaltar a criação da tabela de correlação de atributos (Matriz de Atributos Importantes). Essa tabela é implementada conforme a técnica de correlação entre atributos com algoritmos supervisionados, seção \ref{cap:ferramentas:ssec:algsuper}, onde cada célula da tabela é preenchida através da execução de um algoritmo supervisionado. Estas execuções são realizadas em todos os atributos da cada cluster existente na base de dados.
+%É importante ressaltar a criação da tabela de correlação de atributos (Matriz de Atributos Importantes). Essa tabela é implementada conforme a técnica de correlação entre atributos com algoritmos supervisionados, seção \ref{cap:ferramentas:ssec:algsuper}, onde cada célula da tabela é preenchida através da execução de um algoritmo supervisionado. Estas execuções são realizadas em todos os atributos da cada cluster existente na base de dados.
 
-Após a tabela preenchida, o atributo rótulo será selecionado a partir do maior valor em relação aos outros atributos do grupo, que é representado pela linha da tabela (matriz de atributos). Também poderá ser selecionado como rótulo os atributos que possuam o valor entre a diferença de ${V}$ com o atributo de maior valor (mais relevante). Por exemplo, se o valor de ${V=5\%}$ e o atributo de maior valor é \textbf{95\%}, então todos os atributos que possuírem o valor a partir de \textbf{90\%} serão considerados rótulos também.
+%Após a tabela preenchida, o atributo rótulo será selecionado a partir do maior valor em relação aos outros atributos do grupo, que é representado pela linha da tabela (matriz de atributos). Também poderá ser selecionado como rótulo os atributos que possuam o valor entre a diferença de ${V}$ com o atributo de maior valor (mais relevante). Por exemplo, se o valor de ${V=5\%}$ e o atributo de maior valor é \textbf{95\%}, então todos os atributos que possuírem o valor a partir de \textbf{90\%} serão considerados rótulos também.
 
 %a cada iteração do algoritmo é preenchida uma célula da tabela com o valor de correlação do primeiro atributo até o último atributo de um cluster, e depois iniciado o mesmo procedimento a outro cluster até não haver mais clusters. Após a tabela estar montada o atributo rótulo será selecionado a partir do maior valor em relação aos outros atributos do grupo, e caso seja necessário também é selecionado como rótulo os atributos que possuam o valor entre a diferença de ${V}$ com o atributo de maior valor (mais relevante). 
 
 
-A cada base de dados descritas nas seções seguintes, são configuradas algumas variáveis, método de discretização e implementado dois algoritmos de aprendizado supervisionado com paradigmas diferentes para fazer rotulação. Cada algoritmo terá como resultado o rótulo por cluster de dados.
+%A cada base de dados descritas nas seções seguintes, são configuradas algumas variáveis, método de discretização e implementado dois algoritmos de aprendizado supervisionado com paradigmas diferentes para fazer rotulação. Cada algoritmo terá como resultado o rótulo por cluster de dados.
 
 
 \section{Seeds - Identificação de Tipos de Semente}
-Essa base pertence a UCI Machine Learning, e composta por sete  atributos definindo suas características e mais um atributo classe  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Em seus atributos  seus valores são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias:
+Essa base é composta por sete  atributos definindo suas características e mais um atributo classe  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Em seus atributos  seus valores são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias:
 \begin{itemize}[noitemsep]
  \item 70 elementos do tipo Kama;
  \item 70 elementos do tipo Rosa;
