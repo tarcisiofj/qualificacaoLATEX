@@ -1,21 +1,23 @@
 \chapter{Resultados}\label{cap:resultados}
 
-Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/}, um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987, essas bases são utilizadas por estudantes mas e por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
+Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987, são bases utilizadas por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
 
-* lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
+%* lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
 
+As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine Quality, sendo o motivo dessa seleção, serem bases bastantes utilizadas em outras pesquisas,  possibilitando análises de seus resultados, através de seus comportamentos. Essas escolhas não foram só por critérios comparativos de outros trabalhos, servindo  de referência para os resultados, como também, um cuidado de só ter bases classificadas, uma vez que esta pesquisa trabalhará com os \textit{clusters} já formados e não na criação desses \textit{clusters}.
 
-As bases de dados foram escolhidas não só por critério comparativo de outros trabalhos que também já as utilizaram servindo  de referência para os resultados, como também, um cuidado de só escolher bases que estão classificadas, uma vez que esta pesquisa trabalhará com os clusters já formados e não na criação de grupos.
-
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento, e quais configurações  de algumas variáveis. Cada seção refere-se a uma base de dados utilizada, sendo esta, dividida em subseções para os algoritmos: Naive Bayes, CART e KNN.
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento com configurações  de algumas variáveis, e cada seção referirá a uma base de dados utilizada, sendo esta, dividida em subseções para os algoritmos: Naive Bayes, CART e KNN.
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
-Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi escolhida para colocar em prática essa pesquisa.
+Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi selecionada para colocar em prática essa pesquisa.
 
-Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância ``V'', número de faixas ``R'', e métodos de discretização ``R'' (EWD,EFD). 
+Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$), número de faixas (${R}$), e tipo de discretização, ${TipoDiscretização}$ ( EWD,EFD). 
 
-Como dito na subseção \ref{cap:ferramentas:ssec:algsuper} a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando rótulos apresentarem os mesmos resultados: atributo e faixa de valor. Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster.
+Fazendo um breve resumo, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Explicação sobre o número de faixas no Apêndice \ref{apendice:1}}. Uma vez definido o número de faixas será escolhido qual método de discretização (EWD,EFD) aplicado nos valores, e decidindo em qual faixa cada valor irá ficar.  
+
+%Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster. 
+
 
 %A utilização da variação ${V}$ para escolha de rótulos acontece após uma análise da tabela de correlação dos atributos (seção \ref{cap:ferramentas:sec:tecnica}), a exemplo da tabela \ref{tab:matrelevancia:seeds:nb}. E existindo valores muito próximos em relação a outros (cabe a uma análise se necessário), poderá utilizar esses atributos também como rótulos para melhor definir o cluster. A variável ${V}$ pode ser configurada com um valor que possa abranger esses atributos que possuam valores de porcentagens próximos ao do atributo de maior valor na tabela (mais relevante). O valor de ${V}$ é subjetivo e sua adição é condicionada a análise da aplicação do algoritmo na bases de dados.
 
@@ -30,15 +32,17 @@ Como dito na subseção \ref{cap:ferramentas:ssec:algsuper} a variação ${V}$ e
 
 
 \section{Seeds - Identificação de Tipos de Semente}
-Essa base é composta por sete  atributos definindo suas características e mais um atributo classe  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Em seus atributos  seus valores são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias:
+Essa base é composta por sete  atributos definindo suas características, e mais um atributo classe  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Esses elementos foram construídos a partir de sete parâmetros geométricos medidos dos grãos de trigo: \textit{area} - A, \textit{perimeter} - P, \textit{compactness} - C, \textit{length of kernel} - Lkernel, \textit{width of kernel} - Wkernel, \textit{asymmetry coefficient} - asymetry, \textit{length of kernel groove} - lkgroove.
+
+Os valores dos atributos  são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias bem distribuidas entre as classes, definindo esta, como base de dados balanceada, por conta dessa distribuição dos registros:
 \begin{itemize}[noitemsep]
  \item 70 elementos do tipo Kama;
  \item 70 elementos do tipo Rosa;
  \item 70 elementos do tipo Canadian.
 \end{itemize}
-Para classificar as sementes, como Kama, Rosa e Canadian foi utilizada uma técnica de raio X, que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais, explorados no Instituo de Agrofísica da Academia Polonês de Ciências em Lublin.
+Para classificar as sementes, como Kama, Rosa e Canadian foi utilizada uma técnica de raio X, que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais, explorados no Instituto de Agrofísica da Academia Polonesa de Ciências em Lublin.
 
-Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias. A primeira, é a configuração do método de discretização para o tipo EFD, e a segunda é a divisão dos valores dos atributos em faixas, com ${R=3}$ para todos os atributos. Tanto a discretização como o valor do número de faixas foram testados e escolhidos para alcançar melhores resultados.
+Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias. A primeira, é a configuração do método de discretização para o tipo EFD, e a segunda é a divisão dos valores dos atributos em faixas, com ${R=3}$ para todos os atributos. 
 
 %e também o valor de variação ${V=0\%}$,  não obstante, esta variável ${V}$ só assumirar valor maior que zero após análise dos resultados caso haja ambiguidade.
 
@@ -48,6 +52,10 @@ Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implemen
 % \usepackage{multirow}
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclss[xcolor=table]{beamer}
+
+
+
+Na tabela \ref{tab:rot:seeds:nb} é apresentado os resultados de rotulação do algoritmo Naive Bayes. Essa tabela é composta por colunas que informam os \textbf{Clusters}, \textbf{Rótulos}  que integram \textbf{Atributo} e sua \textbf{Faixa} de valor, além da coluna \textbf{Relevância} exibida em porcentagem, bem como as  colunas \textbf{Fora da Faixa} e \textbf{Acurácia Cluster} que exibem a quantidade de elementos que não estão dentro da faixa designada pelo do rótulo encontrado, e a acurácia do cada cluster respectivamente.
 
 
 \begin{table}[!h]
@@ -67,8 +75,6 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 }
 \end{table}
 
-
-Na tabela \ref{tab:rot:seeds:nb} é apresentado os resultados de rotulação do algoritmo Naive Bayes. Essa tabela é composta por colunas que informam os \textbf{Clusters}, \textbf{Rótulos}  que integram \textbf{Atributo} e sua \textbf{Faixa} de valor, além da coluna \textbf{Relevância} exibida em porcentagem, bem como as  colunas \textbf{Fora da Faixa} e \textbf{Acurácia Cluster} que exibem a quantidade de elementos que não estão dentro da faixa designada pelo do rótulo encontrado, e a acurácia do cada cluster respectivamente.
 
 A coluna \textbf{Relevância}  demonstra o maior valor entre os atributos de cada  cluster, e caso esses valores sejam ambíguos, serão exibidos na coluna todos estes  atributos. Para ter maior clareza na escolha desses atributos foi inseridaa a tabela \ref{tab:matrelevancia:seeds:nb} que exibem os valores de correlação entre eles.
 

@@ -15,7 +15,7 @@
 	openany,				% capítulos começam  qualquer pág (não insere página vazia caso preciso)
 	twoside,					% para impressão em verso e anverso. Oposto a oneside
 	a4paper,					% tamanho do papel. 
-	% -- opções da classe abntex2 --
+% -- opções da classe abntex2 --       
 	%chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsculas
 	%section=TITLE,			% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,		% títulos de subseções convertidos em letras maiúsculas
@@ -63,8 +63,9 @@
 % Pacotes de CITAÇÕES
 % ---------------------
 \usepackage[brazilian,hyperpageref]{backref}	% Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}				% Citações padrão ABNT (alfa)
+%\usepackage[alf]{abntex2cite}				% Citações padrão ABNT (alfa)
 %\usepackage[num]{abntex2cite}				% Citações padrão ABNT (numericas)
+\usepackage[alf,abnt-etal-cite=2 ]{abntex2cite} % acrescentado por tarcisio
 % ---------------------
 
 % Configurações de CITAÇÕES para abntex2
@@ -201,7 +202,7 @@
 %\glossary
 
 % Apêndices
-% \include{postextual/apendices}
+ \include{postextual/apendices}
 
 % Anexos
 % \include{postextual/anexos}

@@ -1,32 +1,32 @@
 \chapter{Metodologia} \label{cap:ferramentas}
 
-O texto a seguir abordará o problema descrito neste trabalho e, logo em seguida, será apresentado um modelo de resolução utilizando algoritmos supervisionados, e mais ao final deste capítulo é realizado um exemplo de rotulação, onde será feita desde a discretição até o encontro dos rótulos para melhor explanar o contéudo descrito.
+O texto a seguir abordará o problema descrito neste trabalho e, logo em seguida, será apresentado um modelo de resolução utilizando algoritmos supervisionados e mais ao final deste capítulo é realizado um exemplo de rotulação, que será feita desde a discretização até o encontro dos rótulos para melhor explanar o conteúdo descrito. 
 
 \section{Rotulação de Cluster}\label{cap:ferramentas:sec:considproblema}
 
-A abordagem do problema referente a essa proposta de mestrado segue uma linha já pequisada que seria o \textbf{Problema de Rotulação}. Muitas pesquisas realizadas na área de rotulação fazem referência a classificação dos dados e não da rotulação. Ao agrupar um conjunto de elementos por um derterminado critério, está havendo uma classificação desses elementos de mesma similaridade, mas pouco se sabe qual é a compreensão desses grupos já classificado, no sentido de, quais os atributos são mais relevantes dentro desses grupos.
+A abordagem do problema referente a essa proposta de mestrado segue uma linha já pesquisada, que seria o Problema de Rotulação. Muitas pesquisas realizadas na área de rotulação fazem referência à classificação dos dados e não da rotulação. Ao agrupar um conjunto de elementos por um determinado critério, está havendo uma classificação desses elementos de mesma similaridade, mas pouco se sabe qual é a compreensão desses grupos já classificados no sentido de quais os atributos são mais relevantes dentro desses grupos. 
 
-A importância do rótulo em um cluster é transparecer a compreensão do cluster formado, visto que, uma vez os clusters já agrupados não fica claro o critério de criação desses grupos. Para o observador é interessante existir um rótulo de um grupo oferecendo elementos que possam ajudar em alguma tomada de decisão em razão de seu significado, ou seja, o rótulo. Dessa forma serão apresentadas 2 (duas) definições que se complementam.
+A importância do rótulo em um \textit{cluster} é transparecer a compreensão do \textit{cluster} formado, visto que, uma vez os clusters já agrupados, não fica claro o critério de criação desses grupos. Para o observador é interessante existir um rótulo de um grupo oferecendo elementos que possam ajudar em alguma tomada de decisão em razão de seu significado, ou seja, o rótulo. Dessa forma serão apresentadas 2 (duas) definições que se complementam. 
 
-Na definição \ref{teo:problema} é expressa formalmente o comportamento dos clusters, e na definição \ref{teo:resolucao} complementa a definição \ref{teo:problema} definindo o comportamento do rótulo.
+Na definição \ref{teo:problema} é expresso formalmente o comportamento dos \textit{clusters}, e na definição \ref{teo:resolucao} complementa a definição \ref{teo:problema} definindo o comportamento do rótulo.
 
 %\newtheorem{teorema}{Definição}
     \begin{teorema}
-    Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\emptyset }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$ (Adaptada de \cite{LOPES2014}).
+    Dado um conjunto de clusters ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada \textit{cluster} contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\emptyset }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$ (Adaptada de \cite{LOPES2014}).
         %\footnotemark 
         %\footnotetext{Adaptada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
             \item ${K}$ é o número de clusters;
             \item ${a}$ é o atributo
-            \item ${c_i}$ é o i-ésimo cluster qualquer;
-            \item ${n^{c_i}}$ é o número de elementos do cluster ${c_i}$;
-            \item ${\vec{e}^{(c_i)}_j}$ se refere ao j-ésimo  elemento (registro na tabela) pertencente ao cluster ${c_i}$;
+            \item ${c_i}$ é o i-ésimo \textit{cluster} qualquer;
+            \item ${n^{c_i}}$ é o número de elementos do \textit{cluster} ${c_i}$;
+            \item ${\vec{e}^{(c_i)}_j}$ se refere ao j-ésimo  elemento (registro na tabela) pertencente ao \textit{cluster} ${c_i}$;
             \item ${m}$ é o número de atributos da tabela de dados;
         \end{itemize}
     \label{teo:problema}
     \end{teorema}
 
-A criação do rótulo é a escolha de uma tupla \textbf{atributo} e \textbf{faixa de valor}, onde o atributo possui  o maior  valor de correlacionamento entre os outros atributos, e a faixa escolhida, uma vez com os dados já discretizados, é aquele valor que mais se repete, dentro do atributo rótulo selecionado - por exemplo, um vetor de valores já discretizados \footnote{ seção \ref{cap:refTeor:sec:discret}} , ${\vec{v}_i=\{1,1,1,2,2,2,2,3,3\}}$, sendo $i\leqslant m$ e ${(\vec{v})}$ representando todos os elementos da coluna representada pelo atributo rótulo  ${(a)}$. Neste vetor (${\vec{v}}$) o valor que mais se repete é o número 2, então, a \textbf{faixa 2} do atributo rótulo, é a escolhida para compor o rótulo. Isto posto, o rótulo é o atributo representado por ${a}$ junto com a representação da faixa 2 (dois), e podendo em outra situação, o rótulo de um cluster ser composto por mais de uma tupla: atributo,faixa. (Definição \ref{teo:problema}).
+A criação do rótulo é a escolha de uma tupla \textbf{atributo} e \textbf{faixa de valor}, em que o atributo possui o maior valor de correlacionamento entre os outros atributos, e a faixa escolhida, uma vez com os dados já discretizados, é aquele valor que mais se repete, dentro do atributo rótulo selecionado - por exemplo, um vetor de valores já discretizados \footnote{ seção \ref{cap:refTeor:sec:discret}} , ${\vec{v}_i=\{1,1,1,2,2,2,2,3,3\}}$, sendo $i\leqslant m$ e ${(\vec{v})}$ representando todos os elementos da coluna representada pelo atributo rótulo  ${(a)}$. Neste vetor (${\vec{v}}$) o valor que mais se repete é o número 2, então, a \textbf{faixa 2} do atributo rótulo é a escolhida para compor o rótulo. Isto posto, o rótulo é o atributo representado por ${a}$ junto com a representação da faixa 2 (dois) e podendo, em outra situação, o rótulo de um \textit{cluster} ser composto por mais de uma tupla: atributo e faixa (Definição \ref{teo:problema}).
 
 
 
@@ -50,28 +50,28 @@ A criação do rótulo é a escolha de uma tupla \textbf{atributo} e \textbf{fai
 
 \section{O Modelo de Resolução}\label{cap:ferramentas:sec:modeloresolucao}
 
-A partir da definição do problema - \textit{Definição ~\ref{teo:problema}} - um estudo  foi desenvolvido nesta pesquisa, a fim de ser possível realizar rotulação de dados com  algoritmos supervisionados com características distintas.
+A partir da definição do problema - \textit{Definição ~\ref{teo:problema}} - um estudo  foi desenvolvido a fim de ser possível realizar rotulação de dados com  algoritmos supervisionados com características distintas.
 
 
-Este modelo de resolução consiste em apresentar como saída um conjunto de rótulos, onde cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivos intevalos, gerados a partir das frequências dos valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
+Este modelo de resolução consiste em apresentar como saída um conjunto de rótulos, em que cada rótulo específico é dado por um conjunto de pares de valores, atributo e seus respectivos intevalos, gerados a partir das frequências dos valores repetidos neste intervalo. Segue \textit{Definição ~\ref{teo:resolucao}} formalizando a saída do modelo:
 %\newtheorem{teorema}{Definição}
     \begin{teorema}
-    Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dado por um conjunto de pares de valores, correspondendo a um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$ (Adaptada de \cite{Lopes2016}).
+    Dado um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dado por um conjunto de pares de valores, correspondendo a um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o \textit{cluster} ${c_i}$ (Adaptada de \cite{Lopes2016}).
         %\footnotemark 
         %\footnotetext{Adaptada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
             \item ${k}$ número de rótulos;
             \item ${R}$ representa o conjunto de rótulos na saída do modelo;
             \item ${a}$ é o atributo
-            \item ${c_i}$ é o i-ésimo cluster;
-            \item ${r_{c_i}}$ é o rótulo referente ao cluster ${c_i}$;
+            \item ${c_i}$ é o i-ésimo \textit{cluster};
+            \item ${r_{c_i}}$ é o rótulo referente ao \textit{cluster} ${c_i}$;
             \item ${]p_{m^{(c_i)}},q_{m^{(c_i)}}]}$ representa o intervalo de valores do atributo ${a_{m^{(c_i)}} }$, onde ${ p_{m^{(c_i)}} }$  é o limite inferior e ${ q_{m^{(c_i)}} }$ é o limite superior;
             \item ${m}$ é o número de atributos da tabela de dados;
         \end{itemize}
     \label{teo:resolucao}
     \end{teorema}
 
-Como apresentado na seção \ref{cap:refTeor:sec:trabcorrel}, o autor \cite{Lopes2016} foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada, com paradigma conexionista, para realizar seu trabalho. Porém, nesta pesquisa, foi aplicado no modelo de resolução  três algoritmos supervisionados com atuações diferentes  do que já havia sido testado anteriormente, e realizando a rotulação de dados. Logo na figura \ref{fig:modeloresolucao} é apresentado o modelo de resolução desta pesquisa.
+Como apresentado na seção \ref{cap:refTeor:sec:trabcorrel}, o autor \cite{Lopes2016} foca em rotulação automática de grupos utilizando a estratégia de aprendizagem de máquina supervisionada com paradigma conexionista para realizar seu trabalho. Porém, nesta pesquisa, foram aplicados no modelo de resolução três algoritmos supervisionados com atuações diferentes do que já havia sido testado anteriormente, realizando a rotulação de dados. Logo na figura \ref{fig:modeloresolucao} é apresentado o modelo de resolução desta pesquisa.
 
 
 \begin{figure}[h!]
@@ -80,11 +80,9 @@ Como apresentado na seção \ref{cap:refTeor:sec:trabcorrel}, o autor \cite{Lope
         \caption{Modelo de Resolução Proposto} \label{fig:modeloresolucao}
 \end{figure}
 
-A base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/} do modelo (figura \ref{fig:modeloresolucao}) conterá  valores contínuos, contudo, conforme modelo,  aplicará o método de discretização (I). Uma vez com a base discretizada ocorrerá a divisão em clusters, que nada mais é do que a separação da base em grupos já classificados mostrado na figura no fluxo ${a}$. É importante ressaltar que no fluxo ${a}$ serve para mostrar como será a entrada no passo II, pois os clusters já são definidos na própria base.
+A base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/} do modelo (figura \ref{fig:modeloresolucao}) conterá valores contínuos, contudo, conforme modelo, aplicará o método de discretização (I). Uma vez com a base discretizada, ocorrerá a divisão em clusters, que nada mais é do que a separação da base em grupos já classificados, mostrados na figura no fluxo  ${a}$. É importante ressaltar que o fluxo  ${a}$. serve para mostrar como será a entrada no passo II, pois os clusters já são definidos na própria base. 
 
-
-
-No passo II será executado o algoritmo de aprendizagem supervisionado, já visto nas subseções \ref{cap:refTeor:sssec:cart}, \ref{cap:refTeor:sssec:nbayes} e \ref{cap:refTeor:sssec:knn}. Essa etapa utiliza a técnica de correlação de atributos, que neste modelo de resolução é considerado um processo de grande importância, e será visto na seção  \ref{cap:ferramentas:sec:tecnica}, mas já é possível através da figura \ref{fig:tecnicamodelocomp} verificar seu funcionamento. Nesta figura ocorre um exemplo do funcionamento da técnica de correlação, onde uma base fictícia possuindo três atributos se correlacionam entre si. Como neste exemplo são três o número de atributos  (atr1,atr2 e atr3), pode-se perceber que na figura \ref{fig:tecnicamodelocomp} a quantidade de vezes que o algoritmo é executado é a mesma do número de atributos.
+No passo II será executado o algoritmo de aprendizagem supervisionado, já visto nas subseções \ref{cap:refTeor:sssec:cart}, \ref{cap:refTeor:sssec:nbayes} e \ref{cap:refTeor:sssec:knn}.Essa etapa utiliza a técnica de correlação de atributos, que neste modelo de resolução é considerada um processo de grande importância e será vista na seção   \ref{cap:ferramentas:sec:tecnica}, mas já é possível através da figura \ref{fig:tecnicamodelocomp} verificar seu funcionamento. Nesta figura ocorre um exemplo do funcionamento da técnica de correlação, em que uma base fictícia possuindo três atributos se correlacionam entre si. Como neste exemplo, são três os números de atributos (atr1,atr2 e atr3) e pode-se perceber que na figura \ref{fig:tecnicamodelocomp} a quantidade de vezes que o algoritmo é executado é a mesma do número de atributos.
 
 \begin{figure}[h!]
         \centering
@@ -93,19 +91,19 @@ No passo II será executado o algoritmo de aprendizagem supervisionado, já vist
 \end{figure}
 
 
-A saída do processo II gera uma matriz de atributos com seus respectivos valores, e   através desses valores armazenados é escolhido um, ou mais, atributos de maior relevância. Para gerar essa matriz, conforme modelo figura \ref{fig:modeloresolucao}, o algoritmo supervisionado será aplicado em uma quantidade igual ao número de atributos, ilustrado na figura \ref{fig:tecnicamodelocomp} como exemplo.
-
+A saída do processo II gera uma matriz de atributos com seus respectivos valores e através desses valores armazenados é escolhido um, ou mais, atributo de maior relevância. Para gerar essa matriz, conforme modelo figura \ref{fig:modeloresolucao}, o algoritmo supervisionado será aplicado em uma quantidade igual ao número de atributos, ilustrado na figura \ref{fig:tecnicamodelocomp} como exemplo.
 %A quantidade de vezes que o algoritmo supervisionado é aplicado - dimensão ${m}$ da Definição \ref{teo:problema} -  irá ser a mesma do número de atributos do conjunto de dados. Utilizando a figura \ref{fig:tecnicamodelocomp} como exemplo, o algoritmo supervisionado seria executado três vezes, sendo essa quantidade igual ao número de atributos: \textbf{atr1, atr2} e \textbf{atr3}. 
 
 
-No processo (III) acontecerá a escolha do atributo mais relevante (maior valor), e podendo, em caso de mesmo valor, ter mais de um atributo relevante. Esta seleção será feita a partir da matriz (\textbf{Atributos Importantes}) criada pela implementação dos algoritmos supervisionados utilizando a técnica de correlação entre atributos seção (\ref{cap:ferramentas:sec:tecnica}), junto com o valor mais frequente desse(s) atributo(s). Após essa etapa é criado um conjunto de rotulos para cada clusters. 
+No processo (III) acontecerá a escolha do atributo mais relevante (maior valor), e podendo, em caso de mesmo valor, ter mais de um atributo relevante. Esta seleção será feita a partir da matriz (Atributos Importantes) criada pela implementação dos algoritmos supervisionados utilizando a técnica de correlação entre atributos seção (\ref{cap:ferramentas:sec:tecnica}), junto com o valor mais frequente desse(s) atributo(s). Após essa etapa é criado um conjunto de rótulos para cada \textit{clusters}. 
 
 \section{Técnica de Correlação entre Atributos através de Algoritmos Supervisionados}\label{cap:ferramentas:sec:tecnica}
 
-Essa técnica \cite{Lopes2016} utiliza por analogia a aprendizagem supervisionada, no qual os atributos de entrada são correlacionados com um atributo classe (atributo de saída). Conforme o número de atributos do cluster o atributo classe seria alterado seguindo uma sequência do primeiro ao último atributo desse cluster. Através desse processo cada atributo seria classe em relação aos outros atributos gerando um valor que seria armazenado em uma matriz.
+Essa técnica de correleção entre atributo empregada por \cite{Lopes2016} utiliza por analogia a aprendizagem supervisionada, na qual os atributos de entrada são correlacionados com um atributo classe (atributo de saída). Conforme o número de atributos do \textit{cluster}, o atributo classe seria alterado seguindo uma sequência do primeiro ao último atributo desse \textit{cluster}. Através desse processo, cada atributo seria classe em relação aos outros atributos, gerando um valor que seria armazenado em uma matriz de acordo . 
 
-De acordo com essa técnica os atributos de um cluster, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, seria armazenado o valor desse atributo em uma matriz chamada de atributos importantes. Essa matriz após montada mostraria os valores de cada atributo enquanto classe, e quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz, vista na figura \ref{fig:matribimp} é definida em linhas, onde serão armazenadas os clusters, e compondo cada coluna os resultados dos atributos classe. Então caso uma base possua 2 (dois) clusters e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas).
+De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz chamada de atributos importantes. Essa matriz após montada mostraria os valores de cada atributo enquanto classe, e quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz, vista na figura \ref{fig:matribimp} é definida em linhas, onde serão armazenadas os \textit{clusters}, e compondo cada coluna os resultados dos atributos classe. Então caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas).
 
+De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz chamada de atributos importantes. Essa matriz, após montada, mostraria os resultados de cada atributo enquanto classe e, quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz é definida em linhas, nas quais são armazenadas os \textit{clusters} e compondo cada coluna os resultados dos atributos classe. Então, caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas) conforme exemplo da figura  \ref{fig:matribimp}.
 
 \begin{figure}[h!]
         \centering
@@ -115,8 +113,11 @@ De acordo com essa técnica os atributos de um cluster, descartando o atributo c
 
 Tal técnica possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$ descrita na definição \ref{teo:resolucao}, onde ${R}$ representa o conjunto de rótulos e ${m}$ o número de atributos (dimensão do problema). Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
 
+Tal técnica possui um grau de processamento diretamente proporcional à quantidade de características expressa na base de dados definido em ${R^m}$ descrita na definição  \ref{teo:resolucao}, em que ${R}$ representa o conjunto de rótulos e ${m}$ a dimensão do problema (número de atributos). Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo. 
 
-Utilizando como exemplo uma base com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}. Retirando o atributo classe, e atribuindo a cada iteração, um  novo atributo classe, portanto,  a base possui três atributos, então o algoritmo será aplicado três vezes, um para cada atributo gerando um valor que será armazenado em uma matriz. Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna classe e executado com os outros dois atributos, \textbf{atr2, atr3} de entrada com um algoritmo supervisionado, figura \ref{fig:tecnicamodelo}.
+%Utilizando como exemplo uma base com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}. Retirando o atributo classe, e atribuindo a cada iteração, um  novo atributo classe, portanto,  a base possui três atributos, então o algoritmo será aplicado três vezes, um para cada atributo gerando um valor que será armazenado em uma matriz. Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna classe e executado com os outros dois atributos, \textbf{atr2, atr3} de entrada com um algoritmo supervisionado, figura \ref{fig:tecnicamodelo}.
+
+Para exemplificar a teoria é utilizado a figura \ref{fig:tecnicamodelo} com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}, portando ao retirar o atributo classe a base possuirá três atributos, então, o algoritmo supervisionado será aplicado três vezes, um para cada atributo, gerando um valor que será armazenado em uma matriz. Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna a classe da vez, e executado com os outros dois atributos \textbf{atr2, atr3} de entrada com um algoritmo supervisionado.
 
 \begin{figure}[h!]
         \centering
@@ -124,11 +125,11 @@ Utilizando como exemplo uma base com os seguintes atributos: \textbf{atr1, atr2,
         \caption{Exemplo da técnica de correlação aplicada ao atributo, atr1, sendo classe } \label{fig:tecnicamodelo}
 \end{figure}
 
-O resultado da correlação entre os atributos \textbf{atr2, atr3} em relação ao \textbf{atr1} (figura \ref{fig:tecnicamodelo}) é armazanado em uma matriz, denominada de \textbf{Atributos Importantes}, de acordo com figura \ref{fig:matribimp}. Por conseguinte é realizado a aplicação do algoritmo com \textbf{atr2} sendo classe, e assim sucessivamente até o último atributo (\textbf{atr3}). Essa etapa só é finalizada quando todos os atributos tiverem a chance de ser classe, e armazenado seus valores em porcentagem na tabela, e quanto maior sua porcentagem, mais bem correlacionado é o atributo em relação aos demais.
+O resultado da correlação entre os atributos \textbf{atr2, atr3} de entrada com relação ao \textbf{atr1}, sendo saída, é armazanado em uma matriz denominada de \textbf{Atributos Importantes}, de acordo com figura \ref{fig:matribimp}. Por conseguinte, é realizado a aplicação do algoritmo com \textbf{atr2} sendo classe, e assim sucessivamente, até o último atributo (\textbf{atr3}). Essa etapa só é finalizada quando todos os atributos tiverem a chance de ser classe, e armazenados seus valores em porcentagem na tabela. Quanto maior sua porcentagem, mais bem correlacionado é o atributo em relação aos demais.
 
 \section{Exemplo} \label{cap:ferramentas:sec:exebasemodfic}
 
-Para melhor esclarecer as etapas do modelo de resolução exibido na figura \ref{fig:modeloresolucao}, será utilizado  a tabela \ref{tab:bdm} como exemplo no  modelo proposto nesta pesquisa. Essa tabela é composta por cinquenta linhas e quatro atributos, sendo o último, um atributo classe representando o cluster. Logo na primeira coluna da tabela, possui o índice da linha da tabela identificando cada registro, e outros campos são atributos que definem características do registro identificado pelo índice da primeira coluna até a quinta coluna representando a classe de cada registro.
+Para melhor esclarecer as etapas do modelo de resolução exibido na figura \ref{fig:modeloresolucao}, será utilizada a tabela \ref{tab:bdm} como exemplo no modelo proposto nesta pesquisa. Essa tabela é composta por cinquenta registros (linhas) e quatro colunas (atributos), sendo o último um atributo de classe representando o \textit{cluster}. Logo, a primeira coluna da tabela possui o índice da linha da tabela identificando cada registro e outros campos são atributos que definem características desse registro, e a quinta coluna, representando a classe de cada registro.
 
 \begin{table}[!ht]
 \centering
@@ -195,13 +196,13 @@ n.  & atr1 & atr2 & atr3 & classe \\ \hline
 \end{tabular}
 \end{table}
 
-Seguindo a definição \ref{teo:problema} um elemento é expresso por um vetor  de dimensão ${m}$, com tamanho igual ao número de atributos. Um exemplo do elemento 2 da tabela \ref{tab:bdm}, pode ser representado por ${\vec{e}_{2}=(1.26,85.03, 20.45)}$.
+Seguindo a definição \ref{teo:problema}, um elemento é expresso por um vetor  de dimensão ${m}$, com tamanho igual ao número de atributos. Um exemplo do elemento 2 da tabela \ref{tab:bdm} pode ser representado por ${\vec{e}_{2}=(1.26,85.03, 20.45)}$.
 
 \subsection{Processo (I) - Discretização} \label{cap:ferramentas:ssec:disc}
 
-Segundo \cite{Catlett2006b,Hwang2002} através de resultados experimentais, na conversão em atributos discretos ordenados de vários domínios constatou que a mudança de representação da informação na maioria das vezes  pode aumentar a acurácia do sistema de aprendizado. Dessa maneira a etapa de discretização ganha um papel importante no modelo, e também no processo de Rotulação (III), pois é utilizada uma inferência na faixa discretizada para encontrar o intervalo na faixa.
+Segundo \cite{Catlett2006b,Hwang2002}, por meio de resultados experimentais, na conversão em atributos discretos ordenados de vários domínios, constatou que a mudança de representação da informação, na maioria das vezes, pode aumentar a acurácia do sistema de aprendizado. Dessa maneira, a etapa de discretização ganha um papel importante no modelo e também no processo de Rotulação (III), pois é utilizada uma inferência na faixa discretizada para encontrar o intervalo na faixa. 
 
-Utilizando como exemplo a tabela \ref{tab:bdm} será utilizada a técnica de discretização por frequências iguais - EFD - e divisão de números de faixas igual a R=3. Na figura\ref{fig:EFD_R_3} poderá ser vizualizado como é feita a discretização.
+Utilizando como exemplo a tabela \ref{tab:bdm}, será utilizada a técnica de discretização por frequências iguais - EFD - e divisão de números de faixas igual a R=3. Na figura \ref{fig:EFD_R_3} pode-se visualizar como é feita a discretização. 
 
  \begin{figure}[!h]
     \centering
@@ -223,7 +224,8 @@ Utilizando como exemplo a tabela \ref{tab:bdm} será utilizada a técnica de dis
         %\caption{Polinômio Superajustado} \label{grafB}
 \end{figure}
 
-Através da figura \ref{fig:EFD_R_3} fica claro o conteúdo da faixa 1, contendo o valor inicial, 1(um), até o primeiro ponto de corte. Na faixa 2, o valor inicial é o primeiro número após o primeiro ponto de corte (término da faixa 1) até o segundo ponto de corte, incluindo o próprio ponto de corte. E na faixa 3 contém todos  valores a partir do segundo ponto de corte.
+
+Por meio da figura \ref{fig:EFD_R_3} fica claro o conteúdo da faixa 1, contendo o valor inicial, 1(um), até o primeiro ponto de corte. Na faixa 2, o valor inicial é o primeiro número após o primeiro ponto de corte (término da faixa 1) até o segundo ponto de corte, incluindo o próprio ponto de corte. E a faixa 3 contém todos valores a partir do segundo ponto de corte. 
 
 \begin{table}[!ht]
 \centering
@@ -291,7 +293,7 @@ Através da figura \ref{fig:EFD_R_3} fica claro o conteúdo da faixa 1, contendo
 \end{tabular}
 \end{table}
 
-A tabela \ref{tab:bdmd} é o resultado após a discretização de todos os atributos. Para cada base de dados será definido o número de faixas de acordo com a configuração inicial antes da execução. Nessa configuração do sistema o número de faixas serve para toda a base de dados e não para cada atributo, então nesse exemplo o valor de ${R=3}$ conforme figura \ref{fig:EFD_R_3}, onde ${R}$ é o número de faixas a ser dividido tanto no \textbf{atr1} como também no \textbf{atr2} e \textbf{atr3} possuem os valores conforme tabela \ref{tab:faixas}.
+A tabela \ref{tab:bdmd} é o resultado após a discretização de todos os atributos. Para cada base de dados será definido o número de faixas de acordo com a configuração inicial antes da execução. Nessa configuração do sistema, o número de faixas serve para toda a base de dados e não para cada atributo, então nesse exemplo o valor de ${R=3}$, conforme figura \ref{fig:EFD_R_3}. A escolha de ${R}$, neste exemplo, é por conta dos valores de cada atributo, pois com três faixas os dados ficam melhores distribuídos entre as faixas, ao contrário de quatro ou mais faixas. Também nesse exemplo, o ${R}$ possui é o mesmo tanto no \textbf{atr1},  no \textbf{atr2} e \textbf{atr3}, conforme tabela \ref{tab:faixas}. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
@@ -317,9 +319,11 @@ A tabela \ref{tab:bdmd} é o resultado após a discretização de todos os atrib
 
 \subsection{Processo (II) - Algoritmos Supervisionados}\label{cap:ferramentas:ssec:algsuper}
 
-Ao chegar nessa etapa, Processo (II) da figura \ref{fig:modeloresolucao}, já se tem uma base discretizada e clusters formados como visto na tabela \ref{tab:bdmd}. A partir desta etapa é feita a execução do algorimo de aprendizado supervisionado obtendo como saída um valor, em porcentagem, informando o grau de correlacionamento entre os atributos compondo  uma matriz, cuja função é armazenar o resultado da execução dos algoritmos utilizando a técnica de correlação de atributos (\ref{cap:ferramentas:sec:tecnica}).
+Ao chegar nessa etapa, Processo (II) do modelo já apresentado, já se tem uma base discretizada e clusters formados como visto na tabela \ref{tab:bdmd}. A partir desta etapa é feita a execução do algoritmo de aprendizado supervisionado obtendo como saída um valor, em porcentagem, informando o grau de correlacionamento entre os atributos compondo uma matriz, cuja função é armazenar o resultado da execução dos algoritmos utilizando a técnica de correlação de atributos (\ref{cap:ferramentas:sec:tecnica}). 
 
-O algoritmo irá selecionar cluster por cluster, percorrendo todos os atributos destes clusters, onde a cada iteração um atributo será a classe da vez. Nesse exemplo, primeiramente o atributo \textbf{atr1} será classe e os demais irão participar como entrada junto ao algoritmo, verificando seu grau de importância entre eles. Depois o atributo \textbf{atr2} irá ser classe, e depois o \textbf{atr3}, fechando o ciclo de todos os atributos do cluster, visualizado na figura \ref{fig:tecnicamodelocomp}.
+O algoritmo irá selecionar \textit{cluster} por \textit{cluster}, percorrendo todos os atributos destes clusters, em que a cada iteração um atributo será a classe da vez. Nesse exemplo, primeiramente, o atributo \textbf{atr1} será classe e os demais irão participar como entrada junto ao algoritmo, verificando seu grau de importância entre eles, através da do valor em porcentagem junto a tabela. Depois o atributo \textbf{atr2} irá ser classe, seguido do \textbf{atr3}, fechando o ciclo de todos os atributos do \textit{cluster}.
+
+Como amostra deste exemplo, serão executados dois algoritmos supervisionados para comparar os resultados (figura \ref{fig:rotulacao}). Assim, apresentar-se-á valores em percentual dos atributos enquanto classe de cada \textit{cluster}, após isso, será escolhido o maior valor definindo-se o atributo rótulo.
 % \begin{figure}[h!]
 %         \centering
 %         \includegraphics[scale=0.7]{figs/tecnicamodeloComp.png}
@@ -343,28 +347,32 @@ O algoritmo irá selecionar cluster por cluster, percorrendo todos os atributos 
         %\caption{Polinômio Superajustado} \label{grafB}
 \end{figure}
 
-A figura \ref{fig:rotulacao:rotNB} mostra o resultado da execução do Naive Bayes trabalhando com a base modelo (tabela \ref{tab:bdmd}) exibindo os resultados em porcentagem de acerto de cada atributo em relação aos demais. O mesmo acontece com a figura \ref{fig:rotulacao:rotDT} onde é aplicado um algorimo de Árvore de Decisão - CART - exibindo o resultado de todas as taxas de acerto, em porcentagem, dos atributos de seus respectivos clusters.
+%A figura \ref{fig:rotulacao:rotNB} mostra o resultado da execução do Naive Bayes trabalhando com a base modelo (tabela \ref{tab:bdmd}) exibindo os resultados em porcentagem de acerto de cada atributo em relação aos demais. O mesmo acontece com a figura \ref{fig:rotulacao:rotDT} onde é aplicado um algorimo de Árvore de Decisão - CART - exibindo o resultado de todas as taxas de acerto, em porcentagem, dos atributos de seus respectivos clusters.
 
-Uma forma de eliminar uma possível ambiguidade entre os clusters foi adicionar na implementação uma variável  ${V}$. Essa variável é utilizada para seleção dos atributos rótulos de um clusters, caso aconteça dos rótulos se repetirem em clusters diferentes. Logo, todos os atributos que tiverem até uma diferença ${V}$ em relação ao atributo de maior taxa de acerto, expresso em porcentagem, serão escolhidos como rótulo. Isto posto, se o atributo de maior taxa de acerto possuir ${90\%}$, e o ${V=10\%}$  então todos outros atributos que tiverem valores a partir de ${80\%}$ são selecionados como rótulo do cluster.  
+%Uma forma de eliminar uma possível ambiguidade entre os clusters foi adicionar na implementação uma variável  ${V}$. Essa variável é utilizada para seleção dos atributos rótulos de um clusters, caso aconteça dos rótulos se repetirem em clusters diferentes. Logo, todos os atributos que tiverem até uma diferença ${V}$ em relação ao atributo de maior taxa de acerto, expresso em porcentagem, serão escolhidos como rótulo. Isto posto, se o atributo de maior taxa de acerto possuir ${90\%}$, e o ${V=10\%}$  então todos outros atributos que tiverem valores a partir de ${80\%}$ são selecionados como rótulo do cluster.  
 
-O valor da variável ${V}$ é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em um conjunto de dados. Nesse exemplo caso fosse utilizado a variância ${V=12}$ na matriz de atributos importantes representada pela figura \ref{fig:rotulacao:rotNB}, teriam os atributos, por clusters, ${r_{c_i}}$ : ${r_{c_1}=\{atr2\}}$, ${r_{c_2}=\{atr2\}}$, ${r_{c_3}=\{atr2\}}$.
+%O valor da variável ${V}$ é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em um conjunto de dados. Nesse exemplo caso fosse utilizado a variância ${V=12}$ na matriz de atributos importantes representada pela figura \ref{fig:rotulacao:rotNB}, teriam os atributos, por clusters, ${r_{c_i}}$ : ${r_{c_1}=\{atr2\}}$, ${r_{c_2}=\{atr2\}}$, ${r_{c_3}=\{atr2\}}$.
+
+A figura \ref{fig:rotulacao:rotNB} mostra o resultado da execução do Naive Bayes trabalhando com a base modelo (tabela 5), exibindo os resultados em porcentagem de acerto de cada atributo em relação aos demais. O mesmo acontece com a figura \ref{fig:rotulacao:rotDT}, em que é aplicado um algoritmo de Árvore de Decisão - CART - exibindo o resultado de todas as taxas de acerto, em porcentagem, dos atributos de seus respectivos clusters. 
+
+%Uma forma de eliminar uma possível ambiguidade entre os clusters foi adicionar na implementação uma variável V . Essa variável é utilizada para seleção dos atributos rótulos de um clusters caso aconteça de os rótulos se repetirem em clusters diferentes. Logo, todos os atributos que tiverem até uma diferença V em relação ao atributo de maior taxa de acerto, expresso em porcentagem, serão escolhidos como rótulo. Isto posto, se o atributo de maior taxa de acerto possuir 90% e o V = 10%, então todos outros atributos que tiverem valores a partir de 80% são selecionados como rótulo do cluster. 
+%O valor da variável V é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em um conjunto de dados. Nesse exemplo, caso fosse utilizado a variância V = 12 na matriz de atributos importantes representada pela figura 16a, teriam os atributos por clusters, rci : rc1 = {atr2}, rc2 = {atr2}, rc3 = {atr2}.
 
 %O valor da variável \textbf{V} é subjetivo e irá ser arbitrado de acordo com os resultados em cada aplicação do algoritmo em cima de um conjunto de dados. Nesse exemplo caso fosse utilizado a variância \textbf{V} = 12 na matriz de atributos importantes representada pela figura \ref{fig:rotulacao:rotNB}, teriam os atributos, por clusters, r_(ci) : rc1 = \{atr2\}, rc2 = \{atr2\}, rc3 = \{atr2\}.
 
 
 \subsection{Processo (III) - Rotulação} \label{cap:ferramentas:ssec:rotulacao}
 
-No processo de rotulação os rótulos de cada cluster (${c_i}$) serão compostos conforme o  equação \ref{eq:rotulo}. 
+No processo de rotulação, os rótulos de cada \textit{cluster} (${c_i}$) serão compostos conforme o  equação \ref{eq:rotulo}. 
 \begin{equation}\label{eq:rotulo}
 r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} 
 \end{equation}
 
- Cada rótulo é composto pela tupla:  atributo de maior relevância (matriz de atributos importantes) e a faixa de valor desse atributo que mais se repete. Na figura \ref{fig:rotulacao} os rótulos em destaque são os que possuem maior valor, ademais, cada atributo que faz parte do rótulo possui um vetor de valores, de onde será escolhido a faixa de maior ocorrência. Uma vez calculado e definido a faixa, será determinado os limites inferiores (${p_{m^{(c_i)}}}$) e superiores (${q_{m^{(c_i)}}}$) de acordo com a tabela discretizada (exemplo \ref{tab:faixas}). 
+ Cada rótulo é composto pela tupla: atributo de maior relevância (matriz de atributos importantes) e a faixa de valor desse atributo que mais se repete. Na figura \ref{fig:rotulacao} os rótulos em destaque são os que possuem maior valor, ademais, cada atributo que faz parte do rótulo possui um vetor de valores, do qual será escolhido a faixa de maior ocorrência. Uma vez calculada e definida a faixa, serão determinados os limites inferiores (${p_{m^{(c_i)}}}$) e superiores (${q_{m^{(c_i)}}}$), de acordo com a tabela discretizada (exemplo \ref{tab:faixas}).
 
+Por exemplo, utilizando a Base Modelo, mais especificamente o \textit{cluster} 1 ($c_1$), cujo resultado é apresentado na figura \ref{fig:rotulacao:rotNB}, o rótulo apresentado é o atributo \textbf{atr2} com a \textbf{faixa 2}, faixa esta encontrada após cálculo dos elementos de maior ocorrência, conforme descrito no parágrafo acima. 
 
-Por exemplo, utilizando a Base Modelo, mais especificamente o cluster 1 ($c_1$), cujo resultado é apresentado na figura \ref{fig:rotulacao:rotNB}, o rótulo apresentado é o atributo  \textbf{atr2} com a \textbf{faixa 2}, faixa esta encontrada após cálculo dos elementos de maior ocorrência, conforme descrito no parágrafo acima. 
-
-O rótulo apresentado ao final do processo terá a substituição do número da faixa pelos valores do intervalo conforme a tabela \ref{tab:faixas}. Os rótulos dos clusters descrito neste exemplo - conforme figura \ref{fig:rotulacao:rotNB} e figura  \ref{fig:rotulacao:rotDT} - aplicado na BD Modelo são:
+O rótulo apresentado ao final do processo terá a substituição do número da faixa pelos valores do intervalo conforme a tabela \ref{tab:faixas}. Os rótulos dos \textit{clusters} descrito neste exemplo - conforme figura \ref{fig:rotulacao:rotNB} e figura \ref{fig:rotulacao:rotDT} - aplicado na BD Modelo são: 
 
 \begin{itemize}[noitemsep]
             \item ${r_{c_1}=(atr2,]67.66, 88.36])}$;
@@ -373,12 +381,11 @@ O rótulo apresentado ao final do processo terá a substituição do número da 
             
 \end{itemize}
 
-A representação acima do rótulo informa que no rótulo do cluster 1 é uma tupla composta pelo atributo, \textbf{atr2}, e a faixa variando de valor maior que 67,66 até 88,36. No cluster 2 possui o rótulo composto também pelo atributo \textbf{atr2}, mas com faixa diferente, variando de um valor maior que 88,67 até 108,36. E por último o rótulo do cluster 3 com a faixa variando de 39,67 até 67,66. Isso significa que qualquer registro com valor no atr2 no intervalo ${]67.66, 88.36]}$, será agrupado no cluster 1, podendo ajudar um analista a interpretar ou tomar decisão em conformidade a esse rótulo. Então, caso esse atr2 fosse localização e esse intervalo determinasse uma região, isso poderia ser utilizado para tomada de decisão, dependendo do problema que queira resolver.
-
-% Uma vez terminado o processo (III) de rotulação, o fluxo ${b}$ da figura \ref{fig:modeloresolucao}, só será executado caso seja necessário  testar outro algoritmo.
 
 
-O algoritmo \ref{alg:rotulacao} exibe a rotina em forma de pseudocódigo para melhor entendimento, mas as variáveis ${V}$, ${R}$ e ${TipoDiscretização}$, não foram inicializadas por serem variáveis que dependem de testes para melhor otimização dos rótulos. No caso da variância ${V}$ por padrão é inicializada com 0 (zero), porque ela é utilizada caso haja empate nos valores da matriz de importância na escolha dos rótulos, e caso assuma outro valor, ela dependerá dos valores da matriz. A variável ${R}$ é utilizada para definir em quantas faixas será dividido os valores do atributo na discretização, e por fim a variável ${TipoDiscretização}$ que também dependerá do comportamento dos valores do atributo. 
+A representação acima do rótulo informa que no rótulo do \textit{cluster} 1 é uma tupla composta pelo atributo \textbf{atr2} e a faixa variando de valor maior que 67,66 até 88,36. No \textit{cluster} 2 verifica-se o rótulo composto também pelo atributo \textbf{atr2}, mas com faixa diferente, variando de um valor maior que 88,67 até 108,36. E, por último, o rótulo do \textit{cluster} 3, com a faixa variando de 39,67 até 67,66. Isso significa que qualquer registro com valor no \textbf{atr2} no intervalo ]67.66,88.36] será agrupado no \textit{cluster} 1, podendo ajudar um analista a interpretar ou tomar decisão em conformidade a esse rótulo. Então, caso esse \textbf{atr2} fosse localização e esse intervalo determinasse uma região, isso poderia ser utilizado para tomada de decisão, dependendo do problema que queira resolver. 
+
+O algoritmo \ref{alg:rotulacao} exibe a rotina em forma de pseudocódigo para melhor entendimento, mas as variáveis ${V}$, ${R}$ e ${TipoDiscretização}$, não aparecem inicializadas por serem variáveis que dependem de testes para melhor otimização dos rótulos. No caso da variância ${V}$ por é inicializada com 0 (zero), porque ela é utilizada caso haja empate nos valores da matriz de importância na escolha dos rótulos e, caso assuma outro valor, ela dependerá dos valores da matriz. A variável ${R}$ é utilizada para definir em quantas faixas serão divididos os valores do atributo na discretização, e por fim a variável ${TipoDiscretização}$, que também dependerá do comportamento dos valores do atributo. 
 
 \IncMargin{1em}
 \begin{algorithm}[h]
