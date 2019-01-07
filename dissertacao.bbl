@@ -26,6 +26,13 @@ ISBN 9780511804779. Dispon{\'\i}vel em:
 ISBN 9780412048418. Dispon{\'\i}vel em:
   \url{https://books.google.com.br/books?id=JwQx-WOmSyQC}.}
 
+\bibitem[Casari e Zheng 2018]{Casari2018}
+\abntrefinfo{Casari e Zheng}{CASARI; ZHENG}{2018}
+{CASARI, A.; ZHENG, A. \emph{{Feature Engineering for Machine Learning.
+  Principles and Techniques for Data Scientists.}} First edition. Sebastopol,
+  CA: O'Reilly Media, Inc., 2018.
+ISBN 9781491953235.}
+
 \bibitem[Catlett 1991]{Catlett2006b}
 \abntrefinfo{Catlett}{CATLETT}{1991}
 {CATLETT, J. \emph{{On changing continuous attributes into ordered discrete

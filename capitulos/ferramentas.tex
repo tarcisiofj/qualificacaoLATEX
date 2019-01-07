@@ -76,13 +76,34 @@ Como apresentado na seção \ref{cap:refTeor:sec:trabcorrel}, o autor \cite{Lope
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[scale=0.7]{figs/modeloResolucao.png}
+        \includegraphics[scale=0.6]{figs/modeloResolucao.png}
         \caption{Modelo de Resolução Proposto} \label{fig:modeloresolucao}
 \end{figure}
 
-A base de dados\footnote{UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/} do modelo (figura \ref{fig:modeloresolucao}) conterá valores contínuos, contudo, conforme modelo, aplicará o método de discretização (I). Uma vez com a base discretizada, ocorrerá a divisão em clusters, que nada mais é do que a separação da base em grupos já classificados, mostrados na figura no fluxo  ${a}$. É importante ressaltar que o fluxo  ${a}$. serve para mostrar como será a entrada no passo II, pois os clusters já são definidos na própria base. 
+A base de dados\footnote{Base de dados retirada da UCI - Machine Learning Repository. http://archive.ics.uci.edu/ml/} do modelo (figura \ref{fig:modeloresolucao}) já é classificada de acordo com o repositório UCI - Machine Learning Repository, possuindo valores contínuos, contudo, conforme modelo, aplicará o método de discretização (I). Uma vez com a base discretizada, ocorrerá a divisão em clusters, que nada mais é do que a separação dos grupos já classificados que servirá de entrada para o processo II. É importante ressaltar que  os clusters já são definidos na própria base. 
 
-No passo II será executado o algoritmo de aprendizagem supervisionado, já visto nas subseções \ref{cap:refTeor:sssec:cart}, \ref{cap:refTeor:sssec:nbayes} e \ref{cap:refTeor:sssec:knn}.Essa etapa utiliza a técnica de correlação de atributos, que neste modelo de resolução é considerada um processo de grande importância e será vista na seção   \ref{cap:ferramentas:sec:tecnica}, mas já é possível através da figura \ref{fig:tecnicamodelocomp} verificar seu funcionamento. Nesta figura ocorre um exemplo do funcionamento da técnica de correlação, em que uma base fictícia possuindo três atributos se correlacionam entre si. Como neste exemplo, são três os números de atributos (atr1,atr2 e atr3) e pode-se perceber que na figura \ref{fig:tecnicamodelocomp} a quantidade de vezes que o algoritmo é executado é a mesma do número de atributos.
+No passo II será executado o algoritmo de aprendizagem supervisionado, já visto nas subseções \ref{cap:refTeor:sssec:cart}, \ref{cap:refTeor:sssec:nbayes} e \ref{cap:refTeor:sssec:knn}. Essa etapa utiliza a técnica de correlação de atributos, que neste modelo de resolução é considerada um processo de grande importância e será vista na seção   \ref{cap:ferramentas:sec:tecnica}. Logo a saída do processo II gera uma matriz de atributos com seus respectivos valores e através desses valores armazenados é escolhido um, ou mais, atributo de maior relevância. 
+
+%Para gerar essa matriz, conforme modelo figura \ref{fig:modeloresolucao}, o algoritmo supervisionado será aplicado em uma quantidade igual ao número de atributos, ilustrado na figura \ref{fig:tecnicamodelocomp} como exemplo.
+%A quantidade de vezes que o algoritmo supervisionado é aplicado - dimensão ${m}$ da Definição \ref{teo:problema} -  irá ser a mesma do número de atributos do conjunto de dados. Utilizando a figura \ref{fig:tecnicamodelocomp} como exemplo, o algoritmo supervisionado seria executado três vezes, sendo essa quantidade igual ao número de atributos: \textbf{atr1, atr2} e \textbf{atr3}. 
+
+
+No processo (III) acontecerá a escolha do atributo mais relevante (maior valor), e podendo, em caso de mesmo valor, ter mais de um atributo relevante. Esta seleção será feita a partir da matriz (Atributos Importantes) criada pela implementação dos algoritmos supervisionados utilizando a técnica de correlação entre atributos seção (\ref{cap:ferramentas:sec:tecnica}), junto com o valor mais frequente desse(s) atributo(s). Após essa etapa é criado um conjunto de rótulos para cada \textit{clusters}. 
+
+\section{Técnica de Correlação entre Atributos através de Algoritmos Supervisionados}\label{cap:ferramentas:sec:tecnica}
+
+Essa técnica de correleção entre atributo empregada por \cite{Lopes2016} utiliza por analogia a aprendizagem supervisionada, na qual os atributos de entrada são correlacionados com um atributo classe (atributo de saída). Conforme o número de atributos do \textit{cluster}, o atributo classe seria alterado seguindo uma sequência do primeiro ao último atributo desse \textit{cluster}. Através desse processo, cada atributo seria classe 
+em relação aos outros atributos, gerando um valor que seria armazenado em uma matriz. 
+
+Para exemplificar a técnica é utilizado a figura \ref{fig:tecnicamodelo} com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}, portando em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna a classe da vez, e executado com os outros dois atributos \textbf{atr2, atr3} de entrada com um algoritmo supervisionado.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.7]{figs/tecnicamodelo.png}
+        \caption{Exemplo da técnica de correlação aplicada ao atributo, atr1, sendo classe } \label{fig:tecnicamodelo}
+\end{figure}
+
+E na figura \ref{fig:tecnicamodelocomp} ocorre um exemplo do funcionamento da técnica de correlação, em que uma base fictícia possuindo três atributos se correlacionam entre si, e que a quantidade de vezes que o algoritmo é executado é a mesma do número de atributos.
 
 \begin{figure}[h!]
         \centering
@@ -91,19 +112,8 @@ No passo II será executado o algoritmo de aprendizagem supervisionado, já vist
 \end{figure}
 
 
-A saída do processo II gera uma matriz de atributos com seus respectivos valores e através desses valores armazenados é escolhido um, ou mais, atributo de maior relevância. Para gerar essa matriz, conforme modelo figura \ref{fig:modeloresolucao}, o algoritmo supervisionado será aplicado em uma quantidade igual ao número de atributos, ilustrado na figura \ref{fig:tecnicamodelocomp} como exemplo.
-%A quantidade de vezes que o algoritmo supervisionado é aplicado - dimensão ${m}$ da Definição \ref{teo:problema} -  irá ser a mesma do número de atributos do conjunto de dados. Utilizando a figura \ref{fig:tecnicamodelocomp} como exemplo, o algoritmo supervisionado seria executado três vezes, sendo essa quantidade igual ao número de atributos: \textbf{atr1, atr2} e \textbf{atr3}. 
+Em resumo da técnica, o resultado da correlação entre os atributos \textbf{atr1, atr2, atr3}  é armazanado em uma matriz denominada de \textbf{Atributos Importantes}, de acordo com figura \ref{fig:matribimp}. Por conseguinte, é realizado a aplicação do algoritmo com \textbf{atr1} sendo classe, e assim sucessivamente, até o último atributo (\textbf{atr3}). Essa etapa só é finalizada quando todos os atributos tiverem a chance de ser classe, e armazenados seus valores em porcentagem na tabela. Quanto maior sua porcentagem, mais bem correlacionado é o atributo em relação aos demais.
 
-
-No processo (III) acontecerá a escolha do atributo mais relevante (maior valor), e podendo, em caso de mesmo valor, ter mais de um atributo relevante. Esta seleção será feita a partir da matriz (Atributos Importantes) criada pela implementação dos algoritmos supervisionados utilizando a técnica de correlação entre atributos seção (\ref{cap:ferramentas:sec:tecnica}), junto com o valor mais frequente desse(s) atributo(s). Após essa etapa é criado um conjunto de rótulos para cada \textit{clusters}. 
-
-\section{Técnica de Correlação entre Atributos através de Algoritmos Supervisionados}\label{cap:ferramentas:sec:tecnica}
-
-Essa técnica de correleção entre atributo empregada por \cite{Lopes2016} utiliza por analogia a aprendizagem supervisionada, na qual os atributos de entrada são correlacionados com um atributo classe (atributo de saída). Conforme o número de atributos do \textit{cluster}, o atributo classe seria alterado seguindo uma sequência do primeiro ao último atributo desse \textit{cluster}. Através desse processo, cada atributo seria classe em relação aos outros atributos, gerando um valor que seria armazenado em uma matriz de acordo . 
-
-De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz chamada de atributos importantes. Essa matriz após montada mostraria os valores de cada atributo enquanto classe, e quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz, vista na figura \ref{fig:matribimp} é definida em linhas, onde serão armazenadas os \textit{clusters}, e compondo cada coluna os resultados dos atributos classe. Então caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas).
-
-De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz chamada de atributos importantes. Essa matriz, após montada, mostraria os resultados de cada atributo enquanto classe e, quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz é definida em linhas, nas quais são armazenadas os \textit{clusters} e compondo cada coluna os resultados dos atributos classe. Então, caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas) conforme exemplo da figura  \ref{fig:matribimp}.
 
 \begin{figure}[h!]
         \centering
@@ -111,25 +121,23 @@ De acordo com essa técnica os atributos de um \textit{cluster}, descartando o a
         \caption{Montagem da Matriz de Atributos Importantes } \label{fig:matribimp}
 \end{figure}
 
-Tal técnica possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$ descrita na definição \ref{teo:resolucao}, onde ${R}$ representa o conjunto de rótulos e ${m}$ o número de atributos (dimensão do problema). Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
+
+
+%De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz chamada de atributos importantes. Essa matriz após montada mostraria os valores de cada atributo enquanto classe, e quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz, vista na figura \ref{fig:matribimp} é definida em linhas, onde serão armazenadas os \textit{clusters}, e compondo cada coluna os resultados dos atributos classe. Então caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas).
+
+De acordo com essa técnica os atributos de um \textit{cluster}, descartando o atributo classe, seriam percorridos um por um, até o último, e a cada iteração de um atributo enquanto classe, é armazenado o valor do resultado em uma matriz (atributos importantes). Essa matriz, após montada, mostraria os resultados de cada atributo enquanto classe e, quanto maior o valor, mais relevante será este atributo em relação aos demais. Essa matriz é definida em linhas, nas quais são representados os \textit{clusters} e  as colunas, são os resultados da aplicação do algoritmo de cada atributo classe. Então, caso uma base possua 2 (dois) \textit{clusters} e 3 (três) atributos, a matriz seria de ordem 2x3 (2 linhas e 3 colunas) conforme exemplo da figura  \ref{fig:matribimp}.
+
+
+%Tal técnica possui um grau de processamento diretamente proporcional a quantidade de características expressa na base de dados definido em ${R^m}$ descrita na definição \ref{teo:resolucao}, onde ${R}$ representa o conjunto de rótulos e ${m}$ o número de atributos (dimensão do problema). Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo.
 
 Tal técnica possui um grau de processamento diretamente proporcional à quantidade de características expressa na base de dados definido em ${R^m}$ descrita na definição  \ref{teo:resolucao}, em que ${R}$ representa o conjunto de rótulos e ${m}$ a dimensão do problema (número de atributos). Ela implica em utilizar todos os atributos, menos o definido como classe, para fazer uma correlação entre eles junto ao algoritmo. 
 
 %Utilizando como exemplo uma base com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}. Retirando o atributo classe, e atribuindo a cada iteração, um  novo atributo classe, portanto,  a base possui três atributos, então o algoritmo será aplicado três vezes, um para cada atributo gerando um valor que será armazenado em uma matriz. Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna classe e executado com os outros dois atributos, \textbf{atr2, atr3} de entrada com um algoritmo supervisionado, figura \ref{fig:tecnicamodelo}.
 
-Para exemplificar a teoria é utilizado a figura \ref{fig:tecnicamodelo} com os seguintes atributos: \textbf{atr1, atr2, atr3 e classe}, portando ao retirar o atributo classe a base possuirá três atributos, então, o algoritmo supervisionado será aplicado três vezes, um para cada atributo, gerando um valor que será armazenado em uma matriz. Em um primeiro processamento de três, o primeiro atributo \textbf{atr1} se torna a classe da vez, e executado com os outros dois atributos \textbf{atr2, atr3} de entrada com um algoritmo supervisionado.
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.7]{figs/tecnicamodelo.png}
-        \caption{Exemplo da técnica de correlação aplicada ao atributo, atr1, sendo classe } \label{fig:tecnicamodelo}
-\end{figure}
-
-O resultado da correlação entre os atributos \textbf{atr2, atr3} de entrada com relação ao \textbf{atr1}, sendo saída, é armazanado em uma matriz denominada de \textbf{Atributos Importantes}, de acordo com figura \ref{fig:matribimp}. Por conseguinte, é realizado a aplicação do algoritmo com \textbf{atr2} sendo classe, e assim sucessivamente, até o último atributo (\textbf{atr3}). Essa etapa só é finalizada quando todos os atributos tiverem a chance de ser classe, e armazenados seus valores em porcentagem na tabela. Quanto maior sua porcentagem, mais bem correlacionado é o atributo em relação aos demais.
 
 \section{Exemplo} \label{cap:ferramentas:sec:exebasemodfic}
 
-Para melhor esclarecer as etapas do modelo de resolução exibido na figura \ref{fig:modeloresolucao}, será utilizada a tabela \ref{tab:bdm} como exemplo no modelo proposto nesta pesquisa. Essa tabela é composta por cinquenta registros (linhas) e quatro colunas (atributos), sendo o último um atributo de classe representando o \textit{cluster}. Logo, a primeira coluna da tabela possui o índice da linha da tabela identificando cada registro e outros campos são atributos que definem características desse registro, e a quinta coluna, representando a classe de cada registro.
+Para melhor esclarecer as etapas do modelo de resolução exibido na figura \ref{fig:modeloresolucao}, será utilizada a tabela \ref{tab:bdm} como um exemplo prático no modelo proposto nesta pesquisa. Essa tabela é composta por cinquenta registros (linhas) e quatro colunas (atributos), sendo o último um atributo de classe representando o \textit{cluster}. Logo, a primeira coluna da tabela possui o índice da linha da tabela identificando cada registro e outros campos são atributos que definem características desse registro, e a quinta coluna, representando a classe de cada registro.
 
 \begin{table}[!ht]
 \centering

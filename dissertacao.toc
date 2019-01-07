@@ -24,29 +24,29 @@
 \contentsline {section}{\numberline {3.2}O Modelo de Resolu\IeC {\c c}\IeC {\~a}o}{24}{section.3.2}
 \contentsline {section}{\numberline {3.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos atrav\IeC {\'e}s de Algoritmos Supervisionados}{26}{section.3.3}
 \contentsline {section}{\numberline {3.4}Exemplo}{28}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{28}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{31}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{32}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{29}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{30}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{31}{subsection.3.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{34}{section.4.1}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e Discuss\IeC {\~a}o}}{34}{chapter.4}
+\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{35}{section.4.1}
 \contentsline {section}{\numberline {4.2}Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{35}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{35}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}CART}{38}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{38}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}CART}{37}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{39}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{40}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}CART}{41}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{41}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{42}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}CART}{45}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{42}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{43}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}CART}{44}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{47}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{53}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{54}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{48}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{54}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{55}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{55}{section*.55}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{56}{section*.55}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}

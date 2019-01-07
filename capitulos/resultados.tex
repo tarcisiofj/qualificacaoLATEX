@@ -1,20 +1,22 @@
-\chapter{Resultados}\label{cap:resultados}
+\chapter{Resultados e Discussão}\label{cap:resultados}
 
 Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina. Criado por estudantes de pós-graduação na UC Irvine em 1987, são bases utilizadas por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
 
 %* lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
 
-As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine Quality, sendo o motivo dessa seleção, serem bases bastantes utilizadas em outras pesquisas,  possibilitando análises de seus resultados, através de seus comportamentos. Essas escolhas não foram só por critérios comparativos de outros trabalhos, servindo  de referência para os resultados, como também, um cuidado de só ter bases classificadas, uma vez que esta pesquisa trabalhará com os \textit{clusters} já formados e não na criação desses \textit{clusters}.
+As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine Quality. Essas bases são bastantes utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identification, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine+quality, https://archive.ics.uci.edu/ml/datasets/seeds}  possibilitando análises de seus comportamentos através de seus resultados, visto que, todas as bases são classificadas, servindo de referência por critérios comparativos para os resultados desta pesquisa, uma vez que esta pesquisa trabalhará com os \textit{clusters} já formados e não na criação desses \textit{clusters}. Outra motivo desta seleção, é mitigar o máximo a utilização das técnicas de \textit{Feature Engineering} \cite{Casari2018}, que são técnicas de manipulação de dados empregue na base para aplicação do algoritmo de aprendizado de máquina utilizada na fase de preparação dos dados, que é um fase inicial na execução de aprendizado de máquina. 
 
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento com configurações  de algumas variáveis, e cada seção referirá a uma base de dados utilizada, sendo esta, dividida em subseções para os algoritmos: Naive Bayes, CART e KNN.
+As tabelas \ref{tab:rot:seeds:nb} a \ref{tab:rot:glass:cart}, apresentadas neste capítulo, representam os resultados dos algoritmos executados a cada base de dados, e a disposição detas tabelas seguem o seguinte formato: a primeira coluna (\textbf{Cluster}) é um número que representa cada cluster de forma sequencial, a segunda coluna (\textbf{Rótulos}) representado pelo par, \textbf{Atributo} e \textbf{Faixa}, o quais definem o rótulo do cluster respectivo. A coluna \textbf{Relevância} tem a importância de informar o quanto, em porcentagem, aquele atributo é relacionado aos demais, na definição do rótulo daquele cluster. A quinta coluna, \textbf{Fora da Faixa}, exibe o erro em quantidade de elementos que não estão naquela faixa definida naquele rótulo, e por último a \textbf{Acurácia do Cluster}, o qual exibe, em porcentagem, o valor de acertos de elementos que são representados pelo rótulo. 
+
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento com configurações  de algumas variáveis, e cada seção referirá a uma base de dados utilizada, sendo esta, dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN.
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
 Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi selecionada para colocar em prática essa pesquisa.
 
-Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$), número de faixas (${R}$), e tipo de discretização, ${TipoDiscretização}$ ( EWD,EFD). 
+Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$), número de faixas (${R}$), e tipo de discretização, ${TipoDiscretização}$ (EWD,EFD). 
 
-Fazendo um breve resumo, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Explicação sobre o número de faixas no Apêndice \ref{apendice:1}}. Uma vez definido o número de faixas será escolhido qual método de discretização (EWD,EFD) aplicado nos valores, e decidindo em qual faixa cada valor irá ficar.  
+Fazendo um breve resumo, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Explicação sobre o número de faixas no Apêndice \ref{apendice:1}}. Uma vez definido o número de faixas será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo qual faixa cada valor irá ficar.  
 
 %Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster. 
 
@@ -42,7 +44,7 @@ Os valores dos atributos  são todos contínuos e não existem valores em branco
 \end{itemize}
 Para classificar as sementes, como Kama, Rosa e Canadian foi utilizada uma técnica de raio X, que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais, explorados no Instituto de Agrofísica da Academia Polonesa de Ciências em Lublin.
 
-Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias. A primeira, é a configuração do método de discretização para o tipo EFD, e a segunda é a divisão dos valores dos atributos em faixas, com ${R=3}$ para todos os atributos. 
+Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias. Na base Seeds  a configuração do método de discretização será do tipo EFD, e a divisão dos valores dos atributos em faixas, será com ${R=3}$ para todos os atributos. 
 
 %e também o valor de variação ${V=0\%}$,  não obstante, esta variável ${V}$ só assumirar valor maior que zero após análise dos resultados caso haja ambiguidade.
 
@@ -79,6 +81,8 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 A coluna \textbf{Relevância}  demonstra o maior valor entre os atributos de cada  cluster, e caso esses valores sejam ambíguos, serão exibidos na coluna todos estes  atributos. Para ter maior clareza na escolha desses atributos foi inseridaa a tabela \ref{tab:matrelevancia:seeds:nb} que exibem os valores de correlação entre eles.
 
 Já na coluna, \textbf{Fora da Faixa}, tem a função de exibir, em números, a quantidade de valores que não estão participando da faixa definida pelo rótulo. Através de experimentos percebeu-se o mérito de apresentar em números a quantidade de elementos que não estão sendo representados pelo rótulo gerando mais realidade as informações, ao invés de exibir em porcentagem.
+
+
 
 Na última coluna, \textbf{Acurácia Cluster}, apresenta em porcentagem o grau de acerto, por cluster, dos registros que são representados pelo rótulo. Foi possível expor estas informações visto que cada cluster já apresenta a quantidade e quais registros fazem parte de cada cluster.
 
