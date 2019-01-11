@@ -338,7 +338,7 @@ O resultado da rotulação utilizando o algoritmo CART na base de dados \textbf{
 
 \subsection{K-Nearest Neighbor} \label{cap:resultados:ssec:seed:knn}
 
-Na aplicação do algoritmo KNN percebe-se coincidir o resultado somente no \textit{cluster} 1 com o Naive Bayes, não ocorrendo resultados semelhantes com o CART, mas isso não implicou em uma acurácia baixa. Em comparação ao Naive Bayes, o rótulo do \textit{cluster} 2 ficou diferente, mas manteve o mesmo poder de representatividade deste \textit{cluster}, deixando de representar somente 6 (seis) elementos dos 70 do grupo \textit{Rosa} (\textit{cluster} 2).
+Na aplicação do algoritmo KNN percebe-se coincidir o resultado somente no \textit{cluster} 1 com o Naive Bayes, não ocorrendo resultados semelhantes com o CART, mas isso não implicou em uma acurácia baixa. Em comparação ao Naive Bayes, o rótulo do \textit{cluster} 2 ficou diferente, mas manteve o mesmo poder de representatividade deste \textit{cluster}, deixando de representar somente 6 (seis) elementos dos 70 do grupo \textit{Rosa} (\textit{cluster} 2). Já no \textit{cluster} 3 houve resultado parecido com o Naive Bayes, mas no KNN foi adicionado o  atributo \textbf{area} para compor o rótulo.
 
 \begin{table}[!h]
 \centering
@@ -358,10 +358,115 @@ Parcial                                      & Atributos      & \multicolumn{1}{
 \end{tabular}}
 \end{table}
 
-A situação do \textit{cluster} 2 entre os três algoritmos pode ser explicada melhor através das tabelas \ref{tab:analise:seeds:knn}, \ref{tab:analise:seeds:bayes} e \ref{tab:analise:seeds:cart}, as quais contêm amostras de dados em ordem crescente dos valores dos atributos rótulo  do \textit{cluster} 2 (\textit{Rosa}). Na tabela \ref{tab:rot:seeds:knn} o atributo rótulo do \textit{cluster} 2 é \textbf{Lkernel}, com faixa ] 5.83 $\sim$ 6.67 ], e observando a tabela \ref{tab:analise:seeds:knn} ordenada pelo atributo \textbf{Lkernel} é fácil observer que os 6 (seis) primeiros registros, destacados, estão fora da faixa do rótulo, e são exatamente os 6 (seis) erros exibidos na tabela \ref{tab:rot:seeds:knn}.
-No resultado do Naive Bayes (tabela \ref{tab:rot:seeds:nb}) que possui o atributo rótulo \textbf{area} no \textit{cluster} 2 com faixa ] 16.14 $\sim$  21.18 ], possui também 6 (seis) registros que não são representados pelo rótulo, e podem ser vistos na tabela \ref{tab:analise:seeds:bayes}, nas linha 71 a 76. No exemplo desta base Seeds no \textit{cluster} 2, houve uma coincidência no número de erros dos rótulos, mas os registros não são os mesmos nos dois algoritmos, e mesmo com os registros diferentes, suas acurácias ficaram iguais por causa da quantidade erros iguais.
+Para o melhor compreensão do rótulo do \textit{cluster} 1, desse e dos demais  algoritmos, será exibida a tabela \ref{tab:analise:seeds:cluster1}, representando os registros do grupo \textit{Kama}. Como os resultados de rotulação do KNN e Naive Bayes foram iguais no \textit{cluster} 1, será dado ênfase aos registros que não estão sendo representados pelos rótulos do algoritmo KNN e CART (linhas destacadas). A partir dessa tabela pode-se acompanhar quais são os registros que são representados pelo rótulo e os que não são representados (Fora da Faixa). 
 
-Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado diferente, pois o rótulo é composto por dois atributos e suas referidas faixas de valores. A tabela \ref{tab:analise:seeds:cart} está ordenada pelos valores do atributo \textbf{area}, e em destaque, as linhas 71 a 76 são os registros que não são representados pela faixa do atributo \textbf{perimetro}.  Como o rótulo tem mais de um atributo, terá que ser verificado também o erro do rótulo \textbf{area}, pois com  a interseção dos erros dos atributos, area e perimetro, é possível verificar quais registros são representados ou não pelo rótulo. Então, nas linhas 71 a 76 da tabela \ref{tab:analise:seeds:cart}, coincide com os dois atributos rótulos, e a linha 79 faz parte do registro de exclusão do atributo \textbf{perimetro}, mas como não faz parte da faixa de exclusão do atributo \textbf{area}, então o registro é representado pelo rótulo, permanecendo e fazendo com que somente 6 elementos não sejam representados pelo rótulo do \textit{cluster} 2.
+No resultado do algoritmo KNN o rótulo foi definido pelo atributo \textbf{area} e intervalo de ]12.78 $\sim$ 16.14], como pode ser visto nos registros na tabela \ref{tab:analise:seeds:cluster1:bayes} que estão ordenados de acordo com o atributo, e todos os 14 (quatorze) registros que não são representados pelo rótulo estão destacados. Logo na tabela \ref{tab:analise:seeds:cluster1:cart} exibe os registros ordenados em razão do atributo \textbf{perimetro}, o qual é faz parte do rótulo do algoritmo CART no \textit{cluster} 1. Mantendo os mesmos valores de erros, não pode-se afirmar que são os mesmos registros, pois ao se analisar as tabelas é possível verificar que na tabela \ref{tab:analise:seeds:cluster1:bayes} o registro da linha 7 está fora da faixa, então é um registro que não é representado pelo rótulo ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$ do KNN, mas esse mesmo registros é sim, representado pelo rótulo ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$ do CART, e o mesmo acontece no registro da linha 66. 
+
+Nessa base Seeds no grupo Kama (cluster 1) a acurácia se manteve a mesma, pois o número de erros foram iguais, e o que vai diferenciar são os registros que são ou não representados pelos rótulos encontrados.
+
+\begin{table}[!h]
+\caption{Parte dos dados pertencentes ao \textit{cluster} 1 (\textit{Kama}) - da base Seeds. No total são 210 registros os quais as linha de 1 a 70 são \textit{Kama}, 71 a 140 são Rosa e 141 a 210 são \textit{Canadian} }
+ %\begin{tabular}{ll}
+%\rule{0}{50}
+\centering
+   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{area}, representando os registros do grupo \textit{Kama} (\textit{cluster} 1)]{ \label{tab:analise:seeds:cluster1:bayes}
+   %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-2pt} 
+   \begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+
+& \textbf{area} & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+1 & \textbf{11.23} & 12.63 & 0.884 & 4.902 & 2.879 & 2.269 & 4.703\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+2 & \textbf{11.42} & 12.86 & 0.8683 & 5.008 & 2.85 & 2.7 & 4.607\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+3 & \textbf{12.08} & 13.23 & 0.8664 & 5.099 & 2.936 & 1.415 & 4.961\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+4 & \textbf{12.11} & 13.47 & 0.8392 & 5.159 & 3.032 & 1.502 & 4.519\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+5 & \textbf{12.36} & 13.19 & 0.8923 & 5.076 & 3.042 & 3.22 & 4.605\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+6 & \textbf{12.72} & 13.57 & 0.8686 & 5.226 & 3.049 & 4.102 & 4.914\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+7 & \textbf{12.73} & 13.75 & 0.8458 & 5.412 & 2.882 & 3.533 & 5.067\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+8 & \textbf{12.74} & 13.67 & 0.8564 & 5.395 & 2.956 & 2.504 & 4.869\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+9 & \textbf{12.78} & 13.57 & 0.8716 & 5.262 & 3.026 & 1.176 & 4.782\\ \hline 
+10 & \textbf{12.88} & 13.5 & 0.8879 & 5.139 & 3.119 & 2.352 & 4.607\\ \hline 
+... & ... & ... & ... & ... & ... & ... & ...\\ \hline 
+65 & \textbf{16.14} & 14.99 & 0.9034 & 5.658 & 3.562 & 1.355 & 5.175\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+66 & \textbf{16.19} & 15.16 & 0.8849 & 5.833 & 3.421 & 0.903 & 5.307\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+67 & \textbf{16.2} & 15.27 & 0.8734 & 5.826 & 3.464 & 2.823 & 5.527\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+68 & \textbf{16.44} & 15.25 & 0.888 & 5.884 & 3.505 & 1.969 & 5.533\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+69 & \textbf{16.63} & 15.46 & 0.8747 & 6.053 & 3.465 & 2.04 & 5.877\\ \hline 
+\rowcolor[HTML]{EFEFEF}
+70 & \textbf{17.08} & 15.38 & 0.9079 & 5.832 & 3.683 & 2.956 & 5.484\\ \hline  
+
+\end{tabular}
+    %}
+    }
+ %&
+ %\hspace{1cm} %altera o espaçamento entre as tabelas
+ \hspace{1cm}
+   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{perimetro}  simulando os registros do cluster 1]{ \label{tab:analise:seeds:cluster1:cart}
+ %\scalebox{0.5}{%
+   \small\addtolength{\tabcolsep}{-2pt}
+   \begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+
+& area & \textbf{perimetro} & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+1 & 11.23 &\textbf{ 12.63} & 0.884 & 4.902 & 2.879 & 2.269 & 4.703\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+2 & 11.42 & \textbf{12.86} & 0.8683 & 5.008 & 2.85 & 2.7 & 4.607\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+3 & 12.36 & \textbf{13.19} & 0.8923 & 5.076 & 3.042 & 3.22 & 4.605\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+4 & 12.08 & \textbf{13.23} & 0.8664 & 5.099 & 2.936 & 1.415 & 4.961\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+5 & 12.11 & \textbf{13.47} & 0.8392 & 5.159 & 3.032 & 1.502 & 4.519\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+6 & 12.88 & \textbf{13.5} & 0.8879 & 5.139 & 3.119 & 2.352 & 4.607\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+7 & 13.16 & \textbf{13.55} & 0.9009 & 5.138 & 3.201 & 2.461 & 4.783\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+8 & 12.72 & \textbf{13.57} & 0.8686 & 5.226 & 3.049 & 4.102 & 4.914\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+9 & 12.78 & \textbf{13.57} & 0.8716 & 5.262 & 3.026 & 1.176 & 4.782\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+10 & 12.74 & \textbf{13.67} & 0.8564 & 5.395 & 2.956 & 2.504 & 4.869\\ \hline 
+11 & 12.73 & \textbf{13.75} & 0.8458 & 5.412 & 2.882 & 3.533 & 5.067\\ \hline 
+... & ... & ... & ... & ... & ... & ... & ...\\ \hline 
+66 & 16.19 & \textbf{15.16} & 0.8849 & 5.833 & 3.421 & 0.903 & 5.307\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+67 & 16.44 & \textbf{15.25} & 0.888 & 5.884 & 3.505 & 1.969 & 5.533\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+68 & 16.2 & \textbf{15.27} & 0.8734 & 5.826 & 3.464 & 2.823 & 5.527\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+69 & 17.08 & \textbf{15.38} & 0.9079 & 5.832 & 3.683 & 2.956 & 5.484\\ \hline 
+\rowcolor[HTML]{EFEFEF} 
+70 & 16.63 & \textbf{15.46} & 0.8747 & 6.053 & 3.465 & 2.04 & 5.877\\ \hline 
+\end{tabular}
+  %}
+  %\\  [8ex]
+    }
+    
+    %&
+    
+ %\end{tabular}
+ \label{tab:analise:seeds:cluster1}
+\end{table}
+
+A situação do \textit{cluster} 2 entre os três algoritmos pode ser explicada melhor através das tabelas \ref{tab:analise:seeds:cluster2:knn}, \ref{tab:analise:seeds:cluster2:bayes} e \ref{tab:analise:seeds:cluster2:cart}, as quais contêm amostras de dados em ordem crescente dos valores dos atributos rótulo  do \textit{cluster} 2 (\textit{Rosa}). Na tabela \ref{tab:rot:seeds:knn} o atributo rótulo do \textit{cluster} 2 é \textbf{Lkernel}, com faixa ] 5.83 $\sim$ 6.67 ], e observando a tabela \ref{tab:analise:seeds:cluster2:knn} ordenada pelo atributo \textbf{Lkernel} é fácil observer que os 6 (seis) primeiros registros (linha 71 a 76), destacados, estão fora da faixa do rótulo, e são exatamente os 6 (seis) erros exibidos na tabela \ref{tab:rot:seeds:knn}.
+No resultado do Naive Bayes (tabela \ref{tab:rot:seeds:nb}) que possui o atributo rótulo \textbf{area} no \textit{cluster} 2 com faixa ] 16.14 $\sim$  21.18 ], possui também 6 (seis) registros que não são representados pelo rótulo, e podem ser vistos na tabela \ref{tab:analise:seeds:cluster2:bayes}, nas linha 71 a 76. No exemplo desta base Seeds no \textit{cluster} 2, houve uma coincidência no número de erros dos rótulos, mas os registros não são os mesmos nos dois algoritmos, e mesmo com os registros diferentes, suas acurácias ficaram iguais por causa da quantidade erros iguais.
+
+Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado diferente, pois o rótulo é composto por dois atributos e suas referidas faixas de valores. A tabela \ref{tab:analise:seeds:cluster2:cart} está ordenada pelos valores do atributo \textbf{area}, e em destaque, as linhas 71 a 76 são os registros que não são representados pela faixa do atributo \textbf{perimetro}.  Como o rótulo tem mais de um atributo, terá que ser verificado também o erro do rótulo \textbf{area}, pois com  a interseção dos erros dos atributos, area e perimetro, é possível verificar quais registros são representados ou não pelo rótulo. Então, nas linhas 71 a 76 da tabela \ref{tab:analise:seeds:cluster2:cart}, coincide com os dois atributos rótulos, e a linha 79 faz parte do registro de exclusão do atributo \textbf{perimetro}, mas como não faz parte da faixa de exclusão do atributo \textbf{area}, então o registro é representado pelo rótulo, permanecendo e fazendo com que somente 6 elementos não sejam representados pelo rótulo do \textit{cluster} 2.
 
 % \begin{table}[!ht]
 % \centering 
@@ -398,13 +503,13 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
  %\begin{tabular}{ll}
 %\rule{0}{50}
 \centering
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{Lkernel}, exibindo os 8 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:knn}
+   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{Lkernel}, exibindo os 8 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:cluster2:knn}
    %\scalebox{0.5}{%
    \small\addtolength{\tabcolsep}{-2pt} 
    \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 
-& area & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
+& area & perimetro & compacteness & \textbf{Lkernel} & wkernel & asymetry &lkgroove \\ \hline
 \rowcolor[HTML]{EFEFEF} 
 71 & 15.99 & 14.89 & 0.9064 & \textbf{5.363} & 3.582 & 3.336 & 5.144 \\ \hline 
 \rowcolor[HTML]{EFEFEF} 
@@ -428,13 +533,13 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
  %&
  %\hspace{1cm} %altera o espaçamento entre as tabelas
  \hspace{1cm}
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{area}, exibindo os 8 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:bayes}
+   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{area}, exibindo os 8 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:cluster2:bayes}
  %\scalebox{0.5}{%
    \small\addtolength{\tabcolsep}{-2pt}
    \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 
-& area & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
+& \textbf{area} & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
 \rowcolor[HTML]{EFEFEF} 
 71 & \textbf{15.38} & 14.66 & 0.899 & 5.477 & 3.465 & 3.6 & 5.439\\ \hline 
 \rowcolor[HTML]{EFEFEF}  
@@ -457,40 +562,40 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
   %\\  [8ex]
     }
     
-    \subfloat[Amostra de dados exibindo os 11 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:cart}
+    \subfloat[Amostra de dados exibindo os 11 primeiro registros e simulando até o último, do cluster 2]{ \label{tab:analise:seeds:cluster2:cart}
  %\scalebox{0.5}{%
    \small\addtolength{\tabcolsep}{-2pt} 
    \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 
-& area & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
+& \textbf{area} & \textbf{perimetro} & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
 \rowcolor[HTML]{EFEFEF} 
-71 & 15.38 & 14.66 & 0.899 & 5.477 & 3.465 & 3.6 & 5.439\\ \hline 
+71 & \textbf{15.38} & 14.66 & 0.899 & 5.477 & 3.465 & 3.6 & 5.439\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-72 & 15.38 & 14.9 & 0.8706 & 5.884 & 3.268 & 4.462 & 5.795\\ \hline 
+72 & \textbf{15.38} & 14.9 & 0.8706 & 5.884 & 3.268 & 4.462 & 5.795\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-73 & 15.56 & 14.89 & 0.8823 & 5.776 & 3.408 & 4.972 & 5.847\\ \hline 
+73 & \textbf{15.56} & 14.89 & 0.8823 & 5.776 & 3.408 & 4.972 & 5.847\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-74 & 15.57 & 15.15 & 0.8527 & 5.92 & 3.231 & 2.64 & 5.879\\ \hline 
+74 & \textbf{15.57} & 15.15 & 0.8527 & 5.92 & 3.231 & 2.64 & 5.879\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-75 & 15.6 & 15.11 & 0.858 & 5.832 & 3.286 & 2.725 & 5.752\\ \hline 
+75 & \textbf{15.6} & 15.11 & 0.858 & 5.832 & 3.286 & 2.725 & 5.752\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-76 & 15.99 & 14.89 & 0.9064 & 5.363 & 3.582 & 3.336 & 5.144\\ \hline 
-77 & 16.16 & 15.33 & 0.8644 & 5.845 & 3.395 & 4.266 & 5.795\\ \hline 
-78 & 16.17 & 15.38 & 0.8588 & 5.762 & 3.387 & 4.286 & 5.703\\ \hline 
+76 & \textbf{15.99} & 14.89 & 0.9064 & 5.363 & 3.582 & 3.336 & 5.144\\ \hline 
+77 & \textbf{16.16} & 15.33 & 0.8644 & 5.845 & 3.395 & 4.266 & 5.795\\ \hline 
+78 & \textbf{16.17} & 15.38 & 0.8588 & 5.762 & 3.387 & 4.286 & 5.703\\ \hline 
 \rowcolor[HTML]{EFEFEF}
-79 & 16.23 & 15.18 & 0.885 & 5.872 & 3.472 & 3.769 & 5.922\\ \hline 
-80 & 16.41 & 15.25 & 0.8866 & 5.718 & 3.525 & 4.217 & 5.618\\ \hline 
-81 & 16.53 & 15.34 & 0.8823 & 5.875 & 3.467 & 5.532 & 5.88\\ \hline 
+79 & \textbf{16.23} & 15.18 & 0.885 & 5.872 & 3.472 & 3.769 & 5.922\\ \hline 
+80 & \textbf{16.41} & 15.25 & 0.8866 & 5.718 & 3.525 & 4.217 & 5.618\\ \hline 
+81 & \textbf{16.53} & 15.34 & 0.8823 & 5.875 & 3.467 & 5.532 & 5.88\\ \hline 
 ...& ... & ... & ... & ... & ... & ... & ...\\ \hline 
-140 & 21.18 & 17.21 & 0.8989 & 6.573 & 4.033 & 5.78 & 6.231\\ \hline 
+140 & \textbf{21.18} & 17.21 & 0.8989 & 6.573 & 4.033 & 5.78 & 6.231\\ \hline 
 
 \end{tabular}
     }
     %&
     
  %\end{tabular}
- \label{tab:analise:seeds}
+ \label{tab:analise:seeds:cluster2}
 \end{table}
 
 O resultado da rotulação utilizando o algoritmo KNN na base de dados \textbf{Seeds} tem como rótulos: 

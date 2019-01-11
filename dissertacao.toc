@@ -35,28 +35,28 @@
 \contentsline {subsection}{\numberline {4.2.2}CART}{37}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}K-Nearest Neighbor}{38}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{40}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{40}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}CART}{42}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{42}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{43}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}CART}{45}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{42}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}CART}{43}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{44}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{45}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}CART}{46}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{48}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{48}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{54}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{55}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{50}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{50}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{56}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{57}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{56}{section*.54}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{58}{section*.55}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{59}{section*.55}
+\contentsline {part}{\uppercase {Ap\^endices}}{61}{section*.56}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{60}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{62}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{61}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{63}{appendix.B}
