@@ -34,12 +34,12 @@
 \contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}CART}{37}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}K-Nearest Neighbor}{38}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{40}{section.4.3}
+\contentsline {section}{\numberline {4.3}Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{42}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{42}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}CART}{43}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}CART}{44}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{44}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{45}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}CART}{46}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}CART}{47}{subsection.4.4.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{50}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{50}{section.5.1}

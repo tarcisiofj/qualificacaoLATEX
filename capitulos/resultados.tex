@@ -363,8 +363,9 @@ Para o melhor compreensão do rótulo do \textit{cluster} 1, desse e dos demais 
 No resultado do algoritmo KNN o rótulo foi definido pelo atributo \textbf{area} e intervalo de ]12.78 $\sim$ 16.14], como pode ser visto nos registros na tabela \ref{tab:analise:seeds:cluster1:bayes} que estão ordenados de acordo com o atributo, e todos os 14 (quatorze) registros que não são representados pelo rótulo estão destacados. Logo na tabela \ref{tab:analise:seeds:cluster1:cart} exibe os registros ordenados em razão do atributo \textbf{perimetro}, o qual é faz parte do rótulo do algoritmo CART no \textit{cluster} 1. Mantendo os mesmos valores de erros, não pode-se afirmar que são os mesmos registros, pois ao se analisar as tabelas é possível verificar que na tabela \ref{tab:analise:seeds:cluster1:bayes} o registro da linha 7 está fora da faixa, então é um registro que não é representado pelo rótulo ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$ do KNN, mas esse mesmo registros é sim, representado pelo rótulo ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$ do CART, e o mesmo acontece no registro da linha 66. 
 
 Nessa base Seeds no grupo Kama (cluster 1) a acurácia se manteve a mesma, pois o número de erros foram iguais, e o que vai diferenciar são os registros que são ou não representados pelos rótulos encontrados.
+\newpage
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \caption{Parte dos dados pertencentes ao \textit{cluster} 1 (\textit{Kama}) - da base Seeds. No total são 210 registros os quais as linha de 1 a 70 são \textit{Kama}, 71 a 140 são Rosa e 141 a 210 são \textit{Canadian} }
  %\begin{tabular}{ll}
 %\rule{0}{50}
@@ -497,8 +498,8 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
 % \label{tab:exemploKNN}
 % \end{table}
 
-
-\begin{table}[!h]
+\newpage
+\begin{table}[!ht]
 \caption{Parte dos dados pertencentes ao \textit{cluster} 2 (\textit{Rosa}) - da base Seeds. No total são 210 registros os quais 1 a 70 são \textit{Kama}, 71 a 140 são Rosa e 141 a 210 são \textit{Canadian} }
  %\begin{tabular}{ll}
 %\rule{0}{50}
@@ -604,6 +605,8 @@ O resultado da rotulação utilizando o algoritmo KNN na base de dados \textbf{S
  \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]), (perimetro, ]15.18 \sim 17.25]) \} }$
  \item ${r_{c_3}=\{ (wkernel, [2.63 \sim 3.049]) \} }$
 \end{itemize}
+
+
 
 \section{Iris - Identificação de Tipos de Plantas}
 

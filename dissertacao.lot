@@ -15,13 +15,13 @@
 \contentsline {subtable}{\numberline {(a)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {Lkernel}, exibindo os 8 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do cluster 2}}}{41}{subtable.11.1}
 \contentsline {subtable}{\numberline {(b)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {area}, exibindo os 8 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do cluster 2}}}{41}{subtable.11.2}
 \contentsline {subtable}{\numberline {(c)}{\ignorespaces {Amostra de dados exibindo os 11 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do cluster 2}}}{41}{subtable.11.3}
-\contentsline {table}{\numberline {12}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{42}{table.caption.36}
+\contentsline {table}{\numberline {12}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{43}{table.caption.36}
 \contentsline {table}{\numberline {13}{\ignorespaces Resultado (em \%) de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength, (SW)sepalwidth, (PL)petallength, (PW)petalwidth\relax }}{43}{table.caption.37}
 \contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.13.1}
 \contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.13.2}
 \contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.13.3}
 \contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{43}{subtable.13.4}
-\contentsline {table}{\numberline {14}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{43}{table.caption.38}
+\contentsline {table}{\numberline {14}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{44}{table.caption.38}
 \contentsline {table}{\numberline {15}{\ignorespaces Resultado de 4 (quatro) itera\IeC {\c c}\IeC {\~o}es do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth\relax }}{44}{table.caption.39}
 \contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.15.1}
 \contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{44}{subtable.15.2}
