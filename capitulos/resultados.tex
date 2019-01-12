@@ -261,7 +261,7 @@ No \textit{cluster} 2 (dois) houve um empate no valor de relevância de dois atr
 
 \begin{table}[!h]
 \centering
-\caption{Matriz de Atributos Importantes do algoritmo CART}
+\caption{Matriz de Atributos Importantes do algoritmo CART na base Seeds}
 \label{tab:execucoes:seed:cart}
 \scalebox{0.8}{
 \begin{tabular}{|cl|c|c|c|c|c|c|c|}
@@ -654,7 +654,8 @@ Para gerar os resultados, da aplicação do algoritmo na base de dados, foi defi
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:iris:nb}
 
-Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotulação de dados, e um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância} com valor de 100\% (cem por cento) e \textbf{Fora da Faixa} com 0 (zero) erros no cluster 1, implicando em uma acurácia de 100\% (cem por cento). O cluster 2 e cluster 3 obtiveram rótulos distintos, cada um com grau de relevância acima de 80\% em  cada grupo.
+Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotulação de dados, e o \textit{cluster} 1 (\textit{Iris-setosa}) é representado por dois atributos (\textbf{petalwidth} e \textbf{petallength}) com seus respectivos intervalos. No \textit{cluster} 2 (\textit{Iris-versicolour}) o atributo \textbf{petallength} é novamente escolhido, mas com o intervalo diferente a do \textit{cluster} 1, e no cluster 3 (\textit{Iris-virginica}) o rótulo é formado pelo atributo \textbf{petalwidth} e sua faixa também diferente a do \textit{cluster} 1.
+
 
  
 \begin{table}[!h]
@@ -750,6 +751,26 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 %Se na tabela \ref{tab:execucoes:iris:nb} fosse escolhida a 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
 
+Um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância} com valor de 100\% (cem por cento) e \textbf{Fora da Faixa} com 0 (zero) erros no cluster 1, implicando em uma acurácia de 100\% (cem por cento). Tendo em vista esses resultados, não é correto afirmar que o valor de   100\% (cem por cento) na relevância indique um valor de erro 0 (zero), pois a relevância é o valor de correlação do atributo com os outros atributos e uma vez escolhido o atributo na matriz, tabela \ref{tab:execucoes:iris:cart}, é considerado o intervalo de maior frequência de elementos.
+
+Essa tabela é a matriz de atributos importantes gerado na execuação do algoritmo nesta base de dados, e os valores em destaques são os maiores valores escolhidos para serem os atributos rótulos.
+
+\begin{table}[!h]
+\centering
+\caption{Matriz de Atributos Importantes do algoritmo Naive Bayes na base Iris}
+\label{tab:execucoes:iris:cart}
+\scalebox{0.8}{
+\begin{tabular}{|cl|c|c|c|c|}
+        \hline \hline
+                     &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
+       \multicolumn{1}{|l}{}                             &   & sepallength   & sepalwidth     & petallength    & petalwidth     \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
+        \multicolumn{1}{|c|}{}                           & 2 & 72 & 76   & \textbf{84}  & 82     \\ \cline{2-6} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 76 & 74   & 68  & \textbf{90}     \\ \hline
+      \end{tabular}}
+\end{table}    
+
+
 Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dados abaixo:
 \begin{itemize}[noitemsep]
  \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
@@ -759,7 +780,7 @@ Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dado
 
 \subsection{CART} \label{cap:resultados:ssec:iris:cart}
 
-A aplicação do algoritmo CART na base de dados \textbf{Iris} gerou a tabela \ref{tab:rot:iris:cart} como resultado, e ao examinar pode-se observar uma semelhança com a subseção anterior onde foi aplicado o Naive Bayes. 
+A aplicação do algoritmo CART na base de dados \textbf{Iris} gerou a tabela \ref{tab:rot:iris:cart} como resultado, e ao examinar pode-se observar uma semelhança com a rotulação do algoritmo anterior.
 
 \begin{table}[!h]
 \centering
@@ -778,104 +799,38 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{tabular}}
 \end{table}
 
-Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotulação no cluster 1 e 3 são idênticos ao do algoritmo apresentado anteriormente, mas  no cluster 2 o rótulo é diferenciado pelo atributo petalwidth que atinge valores mais altos em todas as execuções, como mostra a tabela \ref{tab:execucoes:iris:cart}.
+
+Ao se analisar a tabela percebe-se a importância do atributo \textbf{petalwidth}, pois este, tem participação nos três \textit{clusters}, e tanto no \textit{cluster} 2 (\textit{Iris-versicolour}) como no 3 (\textit{Iris-virginica}) são diferenciados apenas pelo intervalo de dados. Este resultado pode ser visto por um especialista em alguma tomada de decisão, pois a partir da leitura destes rótulos, fica claro que qualquer  outro novo registro que tenha como característica um petalwidth (largura da pétala) de tamanho entre 1.0 a 1.7, será do tipo Iris-versicolour, e assim poderá classificar qualquer outro registro só observando esse atributo.  
+%**Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotulação no cluster 1 e 3 são idênticos ao do algoritmo apresentado anteriormente, mas  no cluster 2 o rótulo é diferenciado pelo atributo petalwidth que atinge valores mais altos em todas as execuções, como mostra a tabela \ref{tab:execucoes:iris:cart}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\begin{table}[!h]
-\caption{Resultado de 4 (quatro) iterações do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth}
- %\begin{tabular}{ll}
-%\rule{0}{50}
-\centering
-   \subfloat[1a. Execução]{ \label{tab:execucoes:iris:cart:1exec}
-   %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt} 
-     \begin{tabular}{|cl|c|c|c|c|}
-        \hline \hline
-                  1a. Execução   &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-       \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 88  & \textbf{90}     \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 68   & 74  & \textbf{90}     \\ \hline
-      \end{tabular}
-    %}
-    }
- %&
- %\hspace{1cm} %altera o espaçamento entre as tabelas
- \hspace{1cm}
-   \subfloat[2a. Execução]{ \label{tab:execucoes:iris:cart:2exec}
- %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt}
-     \begin{tabular}{|cl|c|c|c|c|}
-        \hline \hline
-         2a. Execução         &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-       \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100 &  100      \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 88  &    90  \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 70   & 74  &  90    \\ \hline
-      \end{tabular}
-  %}
-  %\\  [8ex]
-    }
-    
-    \subfloat[3a. Execução]{ \label{tab:execucoes:iris:cart:3exec}
- %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt} 
-     \begin{tabular}{|cl|c|c|c|c|}
-        \hline \hline
-         3a. Execução           &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-       \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  & 100       \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 84  &  84    \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 74 & 74   & 68  &   90   \\ \hline
-      \end{tabular}
-    }
-    %&
-    \hspace{1cm}
-    \subfloat[4a. Execução]{  \label{tab:execucoes:iris:cart:4exec}
-       \small\addtolength{\tabcolsep}{-2pt}
-     \begin{tabular}{|cl|c|c|c|c|}
-        \hline \hline
-        4a. Execução      &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-       \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  &   100     \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 86  &   90   \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 66   & 78  & 90     \\ \hline
-      \end{tabular}
-   %\\
-    }
-    
- %\end{tabular}
- \label{tab:execucoes:iris:cart}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % \begin{table}[!h]
-% \caption{Resultado de ${4(quatro)}$ iterações do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth}
-%  \begin{tabular}{ll}
+% \caption{Resultado de 4 (quatro) iterações do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth}
+%  %\begin{tabular}{ll}
 % %\rule{0}{50}
-% 
-%   
+% \centering
+%    \subfloat[1a. Execução]{ \label{tab:execucoes:iris:cart:1exec}
 %    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-1pt}
+%    \small\addtolength{\tabcolsep}{-2pt} 
 %      \begin{tabular}{|cl|c|c|c|c|}
 %         \hline \hline
 %                   1a. Execução   &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
 %        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
 %         \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & \textbf{88}  & \textbf{90}     \\ \cline{2-6} 
+%         \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 88  & \textbf{90}     \\ \cline{2-6} 
 %         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 68   & 74  & \textbf{90}     \\ \hline
 %       \end{tabular}
 %     %}
-%  &
+%     }
+%  %&
 %  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  
-%    
+%  \hspace{1cm}
+%    \subfloat[2a. Execução]{ \label{tab:execucoes:iris:cart:2exec}
 %  %\scalebox{0.5}{%
-%   \small\addtolength{\tabcolsep}{-1pt}
+%    \small\addtolength{\tabcolsep}{-2pt}
 %      \begin{tabular}{|cl|c|c|c|c|}
 %         \hline \hline
 %          2a. Execução         &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
@@ -885,24 +840,25 @@ Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotul
 %         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 70   & 74  &  90    \\ \hline
 %       \end{tabular}
 %   %}
-%   \\  [8ex]
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  %\rule{0}{50}
-%  
+%   %\\  [8ex]
+%     }
+%     
+%     \subfloat[3a. Execução]{ \label{tab:execucoes:iris:cart:3exec}
 %  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-1pt}
+%    \small\addtolength{\tabcolsep}{-2pt} 
 %      \begin{tabular}{|cl|c|c|c|c|}
 %         \hline \hline
 %          3a. Execução           &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
 %        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
 %         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  & 100       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 86  &  90    \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 66   & 78  &   90   \\ \hline
+%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 84  &  84    \\ \cline{2-6} 
+%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 74 & 74   & 68  &   90   \\ \hline
 %       \end{tabular}
-%     
-%     &
-%     
-%  \small\addtolength{\tabcolsep}{-1pt}
+%     }
+%     %&
+%     \hspace{1cm}
+%     \subfloat[4a. Execução]{  \label{tab:execucoes:iris:cart:4exec}
+%        \small\addtolength{\tabcolsep}{-2pt}
 %      \begin{tabular}{|cl|c|c|c|c|}
 %         \hline \hline
 %         4a. Execução      &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
@@ -911,11 +867,15 @@ Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotul
 %         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 86  &   90   \\ \cline{2-6} 
 %         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 66   & 78  & 90     \\ \hline
 %       \end{tabular}
-%    \\
-%  
-%  \end{tabular}
+%    %\\
+%     }
+%     
+%  %\end{tabular}
 %  \label{tab:execucoes:iris:cart}
 % \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo CART:
@@ -924,6 +884,29 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo 
  \item ${r_{c_2}=\{  (petalwidth,] 1.0 \sim 1.7 ] )\} }$
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
+
+
+\subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:iris:knn}
+
+
+
+\begin{table}[!h]
+\centering
+\caption{Resultado da aplicação do algoritmo CART}
+\label{tab:rot:iris:cart}
+\scalebox{0.8}{
+\begin{tabular}{llcrcc} \hline \hline
+ 
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
+                                             & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 & \\  
+\multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 & \multirow{-2}{*}{100\%}\\  \hline
+%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
+2                                            & petallength     & ] 3.7 $\sim$  5.1 ]       & 90\%                               & 7 & 86\%\\  \hline
+3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5 & 90\%\\ \hline \hline
+\end{tabular}}
+\end{table}
+
 
 
 \section{Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
