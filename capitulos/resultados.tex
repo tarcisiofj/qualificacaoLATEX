@@ -1,14 +1,15 @@
 \chapter{Resultados e Discussão}\label{cap:resultados}
 
-Foram realizados testes com algumas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina, criado por estudantes de pós-graduação na UC Irvine em 1987, e são bases utilizadas por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
+Este estudo conta com a realização de testes nas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina, criado por estudantes de pós-graduação na UC Irvine em 1987, e são bases utilizadas por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
 
 %* lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
 
-As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine Quality. Essas bases são bastantes utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine+quality, https://archive.ics.uci.edu/ml/datasets/seeds}, e através deles há possilidades de análises de seus comportamentos mediante seus resultados, visto que, todas as bases são classificadas, pois já possuem seus grupos definidos, servindo de referência por critérios comparativos para os resultados desta pesquisa, sem esquecer que esta pesquisa trabalhará com os \textit{clusters} já formados e não na formação dos mesmos. Outro motivo desta seleção das bases  é mitigar o máximo a utilização das técnicas de \textit{Feature Engineering} \cite{Casari2018}, que são técnicas de manipulação de dados empregue na base para aplicação do algoritmo de aprendizado de máquina utilizada na fase de preparação dos dados, que é um fase inicial na execução de aprendizado de máquina. 
+As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine Quality. Essas bases são bastantes utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine+quality, https://archive.ics.uci.edu/ml/datasets/seeds}, e através deles há possilidade de análises de seus comportamentos mediante seus resultados, visto que, todas as bases são classificadas, e já possuem seus grupos definidos, servindo de referência para  comparar  os resultados desta pesquisa. Sem esquecer que será trabalhado com os \textit{clusters} já formados e não na formação dos mesmos. Outro motivo desta seleção das bases  é mitigar ao máximo a utilização das técnicas de \textit{Feature Engineering} \cite{Casari2018}, que são técnicas de manipulação de dados empregados na base para aplicação do algoritmo de aprendizado de máquina utilizados na fase de preparação dos dados.
+ 
 
 As tabelas apresentadas como resposta dos algoritmos de rotulação para cada base de dados possuem o seguinte formato: a primeira coluna (\textbf{Cluster}) é um número que representa cada \textit{cluster} de forma sequencial, a segunda coluna (\textbf{Rótulos}) representado pelo par, \textbf{Atributo} e \textbf{Faixa}, o quais definem o rótulo do \textit{cluster} respectivo, podendo haver ou não mais atributos para compor o rótulo. A coluna \textbf{Relevância} tem a importância de informar o quanto, em porcentagem, aquele atributo é relacionado aos demais, na definição do rótulo daquele \textit{cluster}. A quinta coluna, \textbf{Fora da Faixa}, exibe o erro em quantidade de elementos que não estão naquela faixa definida naquele rótulo, e por último a \textbf{Acurácia Parcial}, o qual exibe, em porcentagem, o valor de acertos dos elementos que são representados pelo atributo e faixa da respectiva linha. 
 
-A obtenção da acurácia dos \textit{clusters} só é possível em razão das bases de dados já possuírem seus grupos definidos, por conseguinte há o conhecimento de quais elementos fazem parte de um determinado grupo. Dessa maneira qualquer resultado desse trabalho da aplicação dos algoritmos nos \textit{clusters} podem ser confrontadas com as informações dos \textit{clusters} inicialmente retirados da UCI Machine Learning, e assim, podendo ser calculado a porcentagem de acertos.
+A obtenção da acurácia dos \textit{clusters} só é possível porquê as bases de dados já possuem seus grupos definidos, por conseguinte, há o conhecimento de quais elementos fazem parte de um determinado grupo. Dessa maneira, qualquer resultado da aplicação dos algoritmos nos \textit{clusters} podem ser confrontadas com as informações dos \textit{clusters} inicialmente retirados da UCI Machine Learning, e assim, poderá ser calculado a porcentagem de acertos.
 
 A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento com configurações  de algumas variáveis, e cada seção referirá a uma base de dados utilizada, sendo esta, dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN.
 
@@ -35,7 +36,7 @@ Fazendo um breve resumo sobre as configurações das variáveis, a variação ${
 %A cada base de dados descritas nas seções seguintes, são configuradas algumas variáveis, método de discretização e implementado dois algoritmos de aprendizado supervisionado com paradigmas diferentes para fazer rotulação. Cada algoritmo terá como resultado o rótulo por cluster de dados.
 
 
-\section{Primeira Base de Dados - Seeds - Identificação de Tipos de Semente}
+\section{Base de Dados 1 - Seeds - Identificação de Tipos de Semente}
 Essa base é composta por sete  atributos definindo suas características, e mais um atributo, classe,  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Esses elementos foram construídos a partir de sete parâmetros geométricos medidos dos grãos de trigo: \textit{area} - A, \textit{perimeter} - P, \textit{compactness} - C, \textit{length of kernel} - Lkernel, \textit{width of kernel} - Wkernel, \textit{asymmetry coefficient} - asymetry, \textit{length of kernel groove} - lkgroove.
 
 Os valores dos atributos  são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias bem distribuidas entre as classes, definindo esta, como base de dados balanceada, por conta dessa distribuição dos registros:
@@ -64,7 +65,7 @@ Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implemen
 %Para ter maior clareza na escolha desses atributos foi inseridaa a tabela \ref{tab:matrelevancia:seeds:nb} que exibem os valores de correlação entre eles.
 
 
-Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do algoritmo, e através dela percebe-se que em 2 (dois) clusters obtiveram acurácia acima de 90\% (noventa porcento), indicando um rótulo que representa bem o cluster. A partir das colunas  \textbf{Fora da Faixa} e Acurácia Parcial, pode-se ter um indicativo bom ou ruim do rótulo nos clusters, e  logo na linha representada pelo \textit{cluster} 1 (um), é exibido 14 (quatorze) elementos que não estão participando da faixa definida pelo rótulo, isso implica que o rótulo não consegue representar esses 14 (quatorze) elementos que fazem parte do \textit{cluster} 1 (um). Já na segunda linha que representa o segundo \textit{cluster} houve um erro de 6 (seis) elementos que não foram representados pelo rótulo, e o rótulo que mais representou o grupo foi o do \textit{cluster} 3 (três) o qual obteve um atributo com relevância de 95\% (noventa e cinco) entre os demais atributos, e com menor números de elementos fora da faixa totalizando os 5 (cinco) elementos. %entre os 70 (setenta) do \textit{cluster} 3.
+Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do algoritmo, e através dela percebe-se que em 2 (dois) clusters obtiveram acurácia acima de 90\% (noventa porcento), indicando um rótulo que representa bem o cluster. A partir das colunas  \textbf{Fora da Faixa} e Acurácia Parcial, pode-se ter um indicativo bom ou ruim do rótulo nos clusters, e  logo na linha representada pelo \textit{cluster} 1 (um), é exibido 14 (quatorze) elementos que não estão participando da faixa definida pelo rótulo, isso implica que aquele rótulo não consegue representar esses 14 (quatorze) elementos que fazem parte do \textit{cluster} 1 (um). Já na segunda linha que representa o segundo \textit{cluster} houve um erro de 6 (seis) elementos que não foram representados pelo rótulo, e o rótulo que mais representou o grupo foi o do \textit{cluster} 3 (três) o qual obteve um atributo com relevância de 95\% (noventa e cinco) entre os demais atributos, e com menor números de elementos fora da faixa totalizando os 5 (cinco) elementos. %entre os 70 (setenta) do \textit{cluster} 3.
 
 
 \begin{table}[!h]
@@ -234,7 +235,7 @@ Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds
 
 \subsection{CART}\label{cap:resultados:ssec:seed:cart}
 
-Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo da tabela \ref{tab:rot:seeds:nb}, tem-se o resultado da aplicação do algoritmo supervisionado na base Seeds. O CART é utilizado pela toolbox do MATLAB como algoritmo de classificação de árvore de decisão. 
+Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo anterior, tem-se o resultado da aplicação do algoritmo supervisionado na base Seeds. O CART é utilizado pela toolbox do MATLAB como algoritmo de classificação de árvore de decisão. 
 %O que se pretende fazer é seguir a pesquisa e testar a base de dados com um paradigma  diferente para fazer rotulação nos clusters.
 
 \begin{table}[!h]
@@ -633,10 +634,10 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
 
 
 
-\section{Segunda Base de Dados - Iris - Identificação de Tipos de Plantas}
+\section{Base de Dados 2 - Iris - Identificação de Tipos de Plantas}
 
 
-A base de dados \textbf{Iris} pertence a UCI Machine Learning, é também conhecida em pesquisas como \citeonline{Lopes2016,Filho2015}, e utilizada em reconhecimento de padrões de plantas por lidar com classes bem definidas, pois contém 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. A base possui amostras com 3 tipos \cite{FISHER1936}:
+A base de dados \textbf{Iris} pertence a UCI Machine Learning, já usado em trabalhos como \citeonline{Lopes2016,Filho2015}, e utilizada em reconhecimento de padrões de plantas por lidar com classes bem definidas, pois contém 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. A base possui amostras com 3 tipos \cite{FISHER1936}:
 
 \begin{itemize}[noitemsep]
  \item 50 elementos da classe \textit{Iris-setosa} ;
@@ -918,7 +919,7 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo 
 
 
 
-\section{Terceira Base de Dados - Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
+\section{Base de Dados 3 - Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
 Essa base ficou conhecida por Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduzio pesquisas e testes de comparação em seu sistema baseado em regras determinando, se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
 
