@@ -35,7 +35,7 @@ Fazendo um breve resumo sobre as configurações das variáveis, a variação ${
 %A cada base de dados descritas nas seções seguintes, são configuradas algumas variáveis, método de discretização e implementado dois algoritmos de aprendizado supervisionado com paradigmas diferentes para fazer rotulação. Cada algoritmo terá como resultado o rótulo por cluster de dados.
 
 
-\section{Seeds - Identificação de Tipos de Semente}
+\section{Primeira Base de Dados - Seeds - Identificação de Tipos de Semente}
 Essa base é composta por sete  atributos definindo suas características, e mais um atributo, classe,  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Esses elementos foram construídos a partir de sete parâmetros geométricos medidos dos grãos de trigo: \textit{area} - A, \textit{perimeter} - P, \textit{compactness} - C, \textit{length of kernel} - Lkernel, \textit{width of kernel} - Wkernel, \textit{asymmetry coefficient} - asymetry, \textit{length of kernel groove} - lkgroove.
 
 Os valores dos atributos  são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias bem distribuidas entre as classes, definindo esta, como base de dados balanceada, por conta dessa distribuição dos registros:
@@ -384,7 +384,7 @@ O resultado da rotulação utilizando o algoritmo KNN na base de dados \textbf{S
 \end{itemize}
 
 
-\subsection{Comparação entre Algoritmos} \label{cap:resultados:ssec:compalgoritmos}
+\subsection{Comparação entre Algoritmos na Base de Dados Seeds} \label{cap:resultados:ssec:compalgoritmos:seeds}
 
 Na aplicação do algoritmo KNN percebe-se coincidir o resultado somente no \textit{cluster} 1 com o Naive Bayes, não ocorrendo resultados semelhantes com o CART, mas isso não implicou em uma acurácia baixa. Em comparação ao Naive Bayes, o rótulo do \textit{cluster} 2 ficou diferente, mas manteve o mesmo poder de representatividade deste \textit{cluster}, deixando de representar somente 6 (seis) elementos dos 70 do grupo \textit{Rosa} (\textit{cluster} 2). Já no \textit{cluster} 3 houve resultado parecido com o Naive Bayes, mas no KNN foi adicionado o  atributo \textbf{area} para compor o rótulo.
 
@@ -633,7 +633,7 @@ Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado 
 
 
 
-\section{Iris - Identificação de Tipos de Plantas}
+\section{Segunda Base de Dados - Iris - Identificação de Tipos de Plantas}
 
 
 A base de dados \textbf{Iris} pertence a UCI Machine Learning, é também conhecida em pesquisas como \citeonline{Lopes2016,Filho2015}, e utilizada em reconhecimento de padrões de plantas por lidar com classes bem definidas, pois contém 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. A base possui amostras com 3 tipos \cite{FISHER1936}:
@@ -751,9 +751,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 %Se na tabela \ref{tab:execucoes:iris:nb} fosse escolhida a 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
 
-Um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância} com valor de 100\% (cem por cento) e \textbf{Fora da Faixa} com 0 (zero) erros no cluster 1, implicando em uma acurácia de 100\% (cem por cento). Tendo em vista esses resultados, não é correto afirmar que o valor de   100\% (cem por cento) na relevância indique um valor de erro 0 (zero), pois a relevância é o valor de correlação do atributo com os outros atributos e uma vez escolhido o atributo na matriz, tabela \ref{tab:execucoes:iris:cart}, é considerado o intervalo de maior frequência de elementos.
-
-Essa tabela é a matriz de atributos importantes gerado na execuação do algoritmo nesta base de dados, e os valores em destaques são os maiores valores escolhidos para serem os atributos rótulos.
+Um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância} com valor de 100\% (cem por cento) e \textbf{Fora da Faixa} com 0 (zero) erros no cluster 1, implicando em uma acurácia de 100\% (cem por cento). Tendo em vista esses resultados, não é correto afirmar que o valor de   100\% (cem por cento) na relevância indique um valor de erro 0 (zero), pois a relevância é o valor de correlação do atributo com os outros atributos e uma vez escolhido o atributo na matriz, tabela \ref{tab:execucoes:iris:cart}, é considerado o intervalo de maior frequência de elementos. Essa tabela é a matriz de atributos importantes gerado na execuação do algoritmo nesta base de dados, e os valores em destaques são os maiores valores escolhidos para serem os atributos rótulos.
 
 \begin{table}[!h]
 \centering
@@ -914,7 +912,13 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo 
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
-\section{Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
+\subsection{Comparação entre Algoritmos na Base de Dados Iris} \label{cap:resultados:ssec:compalgoritmos:iris}
+
+
+
+
+
+\section{Terceira Base de Dados - Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
 Essa base ficou conhecida por Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduzio pesquisas e testes de comparação em seu sistema baseado em regras determinando, se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
 
