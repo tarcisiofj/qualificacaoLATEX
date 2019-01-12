@@ -888,11 +888,11 @@ Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo 
 
 \subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:iris:knn}
 
-
+No resultado da rotulação utilizando KNN constata-se os mesmos rótulos do algoritmo Naive Bayes, mas com algumas diferenças nas relevâncias de atributos, porém na coluna \textbf{Fora da Faixa}  não houveram alterações  no \textit{cluster} 2 (\textit{Iris-versicolour}) e nem no \textit{cluster} 3 (\textit{Iris-virginica}).
 
 \begin{table}[!h]
 \centering
-\caption{Resultado da aplicação do algoritmo CART}
+\caption{Resultado da aplicação do algoritmo KNN}
 \label{tab:rot:iris:cart}
 \scalebox{0.8}{
 \begin{tabular}{llcrcc} \hline \hline
@@ -907,7 +907,12 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{tabular}}
 \end{table}
 
-
+Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo KNN:
+\begin{itemize}[noitemsep]
+ \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
+ \item ${r_{c_2}=\{ (petallength, ] 3.7 \sim 5.1]) \} }$
+ \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
+\end{itemize}
 
 \section{Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
