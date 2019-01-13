@@ -20,19 +20,19 @@
 \contentsline {table}{\numberline {14}{\ignorespaces Matriz de Atributos Importantes do algoritmo Naive Bayes na base Iris\relax }}{44}{table.caption.38}
 \contentsline {table}{\numberline {15}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{44}{table.caption.39}
 \contentsline {table}{\numberline {16}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{45}{table.caption.40}
-\contentsline {table}{\numberline {17}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{47}{table.caption.41}
-\contentsline {table}{\numberline {18}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo Naive Bayes.\relax }}{48}{table.caption.42}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{48}{subtable.18.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{48}{subtable.18.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{48}{subtable.18.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{48}{subtable.18.4}
+\contentsline {table}{\numberline {17}{\ignorespaces Amostra de Dados Iris do grupo \textit {Iris-versicolour} ordenado pelo atributo petalwidth. Legenda: (SL) sepallength, (SW) sepalwidth, (PL) petallength, (PW) petalwidth\relax }}{46}{table.caption.41}
+\contentsline {table}{\numberline {18}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{48}{table.caption.42}
 \contentsline {table}{\numberline {19}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{49}{table.caption.43}
-\contentsline {table}{\numberline {20}{\ignorespaces Resultado de 4 (quatro) execu\IeC {\c c}\IeC {\~o}es do algoritmo CART.\relax }}{50}{table.caption.44}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {1a. Execu\IeC {\c c}\IeC {\~a}o}}}{50}{subtable.20.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {2a. Execu\IeC {\c c}\IeC {\~a}o}}}{50}{subtable.20.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {3a. Execu\IeC {\c c}\IeC {\~a}o}}}{50}{subtable.20.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {4a. Execu\IeC {\c c}\IeC {\~a}o}}}{50}{subtable.20.4}
-\contentsline {table}{\numberline {21}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Redes Neurais \cite {LOPES2014} referente a base de dados SEEDS.\relax }}{57}{table.caption.50}
-\contentsline {table}{\numberline {22}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Naive Bayes referente a base de dados SEEDS.\relax }}{57}{table.caption.51}
-\contentsline {table}{\numberline {23}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando CART referente a base de dados SEEDS.\relax }}{57}{table.caption.52}
-\contentsline {table}{\numberline {24}{\ignorespaces Cronograma de atividades\relax }}{58}{table.caption.53}
+\contentsline {table}{\numberline {20}{\ignorespaces Matriz de Atributos Importantes do algoritmo CART na base Glass\relax }}{50}{table.caption.44}
+\contentsline {table}{\numberline {21}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{51}{table.caption.45}
+\contentsline {table}{\numberline {22}{\ignorespaces Resultado comparativo \textit {cluster} por \textit {cluster} entre Naive Bayes (NB), CART e KNN. \relax }}{52}{table.caption.46}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Cluster 1 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro temperado }}}{52}{subtable.22.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Cluster 2 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro n\IeC {\~a}o-temperado}}}{52}{subtable.22.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Cluster 3 - janelas de ve\IeC {\'\i }culos - vidro temperado}}}{52}{subtable.22.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {Cluster 4 - recipientes}}}{52}{subtable.22.4}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {Cluster 5 - lou\IeC {\c c}as de mesa}}}{52}{subtable.22.5}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {Cluster 6 - l\IeC {\^a}mpadas}}}{52}{subtable.22.6}
+\contentsline {table}{\numberline {23}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Redes Neurais \cite {LOPES2014} referente a base de dados SEEDS.\relax }}{59}{table.caption.52}
+\contentsline {table}{\numberline {24}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando Naive Bayes referente a base de dados SEEDS.\relax }}{59}{table.caption.53}
+\contentsline {table}{\numberline {25}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o utilizando CART referente a base de dados SEEDS.\relax }}{59}{table.caption.54}
+\contentsline {table}{\numberline {26}{\ignorespaces Cronograma de atividades\relax }}{60}{table.caption.55}
