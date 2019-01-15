@@ -1377,112 +1377,103 @@ Diferentes das outras bases testadas, o método de discretização EWD, na base 
  \item ${r_{c_6}=\{ (Fe,[ 0.0 \sim 0.11] ) \} }$
 \end{itemize}
 
-Pode-se notar com este resultado que os clusters 1, 2 e 3 já apresentavam problemas, por possuírem rótulos iguais, e para contornar essa situação teria que inserir valores na variância ${V}$ a fim de tirar essas ambiguidades, mas isso, gera acurácias parciais mais altas. A única função da variação ${V}$ é tirar essas ambiguidades, mas isso sempre acaba adicionando novos atributos para o rótulo que deseja, ou para outros.
+Pode-se notar deste resultado acima, que os clusters 1, 2 e 3 já apresentavam problemas, por possuírem rótulos iguais, e para contornar essa situação teria que inserir valores na variância ${V}$ a fim de tirar essas ambiguidades, mas isso, gera um aumento no número de atributos rótulos, e por conseguência também aumentar as  acurácias parciais, portanto, para alterar este resultado do rótulo, foi utilizado EWD, como método de discretização da bases de dados.
  
-Em relação aos resultados apresentados entre os três algoritmos o KNN teve as melhores acurácias parciais, pois mesmo com semelhanças entre os resultados, pode-se dizer que o KNN pegou o melhor dois dois resultados, Naive Bayes e CART, ficando com os rótulos que tiveram menores erros, por consequência melhores acurácias parciais. 
-
-
+Em relação aos resultados apresentados entre os três algoritmos o KNN teve as melhores acurácias parciais, pois mesmo com semelhanças entre os rótulos, pode-se dizer que o KNN pegou o melhor dos dois rótulos, Naive Bayes e CART, e ficando com os rótulos que tiveram menores erros, por consequência, melhores acurácias parciais, e para verificar esta afirmativa, pode-se comparar os resultados \textit{cluster} por \textit{cluster} a partir da tabela \ref{tab:comparativo:bases}.
 
 \begin{table}[!h]
 \caption{Resultado comparativo \textit{cluster} por \textit{cluster} entre Naive Bayes (NB), CART e KNN. }
- %\begin{tabular}{ll}
-%\rule{0}{50}
-\centering
+
+   % \hspace{1cm} %altera o espaçamento entre as tabelas
    \subfloat[Cluster 1 - janelas de construção - vidro temperado ]{ \label{tab:comparativo:bases:cluster1}
-   \scalebox{0.7}{
+   \scalebox{0.8}{
    \small\addtolength{\tabcolsep}{-2pt} 
     \begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-      &        &   Mg      & 94        &           &              \\ \hline
-      &        &     Si    & 94        &           &              \\ \hline
-     K & 100   &   K       & 100       &   K       & 100          \\ \hline
-     Ba & 100  &    Ba     & 100       &    Ba     & 100            \\ \hline
-\end{tabular}
-    }
-    }
+        \hline
+        \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+          Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+            &        &   Mg      & 94        &           &              \\ \hline
+            &        &     Si    & 94        &           &              \\ \hline
+            K & 100   &   K       & 100       &   K       & 100          \\ \hline
+            Ba & 100  &    Ba     & 100       &    Ba     & 100            \\ \hline
+    \end{tabular}
+   }}
  %&
- %\hspace{1cm} %altera o espaçamento entre as tabelas
- \hspace{1cm}
+ 
+ 
+   \hspace{1cm} %altera o espaçamento entre as tabelas
    \subfloat[Cluster 2 - janelas de construção - vidro não-temperado]{ \label{tab:comparativo:bases:cluster2}
- \scalebox{0.7}{
+   \scalebox{0.8}{
    \small\addtolength{\tabcolsep}{-2pt}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-      K & 100           &       K & 100            &       K & 100          \\ \hline
-          &              &      Ba & 98             &           &              \\ \hline
-\end{tabular}
-  }
-  %\\  [8ex]
-    }
-    
+   \begin{tabular}{|l|l|l|l|l|l|}
+      \hline 
+      \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+        Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+             K & 100           &       K & 100            &       K & 100          \\ \hline
+               &              &      Ba & 98             &           &              \\ \hline
+   \end{tabular}
+  }}
+     \hspace{1cm}
     \subfloat[Cluster 3 - janelas de veículos - vidro temperado]{ \label{tab:comparativo:bases:cluster3}
- \scalebox{0.7}{
-   \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-   Mg  & 100      &   Mg   & 100       &   Mg   & 100         \\ \hline
-     K & 100   &   K       & 100       &   K    & 100          \\ \hline
-     Ba & 100  &    Ba     & 100       &    Ba  & 100            \\ \hline
-\end{tabular}
-    }
-    }
-    %&
+    \scalebox{0.8}{
+    \small\addtolength{\tabcolsep}{-2pt} 
+    \begin{tabular}{|l|l|l|l|l|l|}
+        \hline
+        \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+            Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+               Mg  & 100      &   Mg   & 100       &   Mg   & 100         \\ \hline
+                 K & 100   &   K       & 100       &   K    & 100          \\ \hline
+                Ba & 100  &    Ba     & 100       &    Ba  & 100            \\ \hline
+    \end{tabular}
+    }}
+%     %&
     \hspace{1cm}
     \subfloat[Cluster 4 - recipientes]{  \label{tab:comparativo:bases:cluster4}
-       \scalebox{0.7}{
-       \small\addtolength{\tabcolsep}{-2pt}
+    \scalebox{0.8}{
+    \small\addtolength{\tabcolsep}{-2pt}
     \begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-    Al    &   92  &    Al  &   92      &           &              \\ \hline
-    K     & 92    &   K    & 92        &           &              \\ \hline
-   Ca     &  92   &   Ca   &  92       &           &              \\ \hline
-   Ba     &    92 &    Ba  &    92     &     Ba     &    92      \\ \hline
-\end{tabular}}
+    \hline
+    \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+        Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+               &     &    RI  &   92      &           &              \\ \hline
+        Al    &   92  &    Al  &   92      &           &              \\ \hline
+         K     & 92    &       &         &           &              \\ \hline
+        Ca     &  92   &   Ca   &  92       &           &              \\ \hline
+        Ba     &    92 &    Ba  &    92     &     Ba     &    92      \\ \hline
+    \end{tabular}
    %\\
-    }
+    }}
     \hspace{1cm}
     \subfloat[Cluster 5 - louças de mesa]{  \label{tab:comparativo:bases:cluster5}
-       \scalebox{0.7}{
-       \small\addtolength{\tabcolsep}{-2pt}
+    \scalebox{0.8}{
+    \small\addtolength{\tabcolsep}{-2pt}
     \begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-  K     & 100     &   K       & 100    &   K    & 100          \\ \hline
-     Ba & 100     &    Ba     & 100    &    Ba  & 100            \\ \hline
-Fe      & 100     & Fe        & 100    & Fe      & 100                   \\ \hline
-\end{tabular}}
-   %\\
-    }
-    
-        \hspace{1cm}
-    \subfloat[Cluster 6 - lâmpadas]{  \label{tab:comparativo:bases:cluster6}
-       \scalebox{0.7}{
-       \small\addtolength{\tabcolsep}{-3pt}
-    \begin{tabular}{|l|l|l|l|l|l|}
-\hline
- 
-\multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
-Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
-          &              &      K     & 96        &           &              \\ \hline
-Fe     & 100         &       Fe     & 100       &      Fe     & 100        \\ \hline
+    \hline
+    \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+        Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+         K     & 100     &   K       & 100    &   K    & 100          \\ \hline
+            Ba & 100     &    Ba     & 100    &    Ba  & 100            \\ \hline
+       Fe      & 100     & Fe        & 100    & Fe      & 100                   \\ \hline
+    \end{tabular}
+   }}
+%         
+  \hspace{1cm}    
+   \subfloat[Cluster 6 - lâmpadas]{  \label{tab:comparativo:bases:cluster6}
+   \scalebox{0.8}{
+   \small\addtolength{\tabcolsep}{-2pt}
+   \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    \multicolumn{2}{|c|}{NB} & \multicolumn{2}{c|}{CART} & \multicolumn{2}{c|}{KNN} \\ \hline
+        Atrib  & Acur(\%) & Atrib  & Acur(\%)  & Atrib  & Acur(\%) \\ \hline
+               &              &      K     & 96        &           &              \\ \hline
+        Fe     & 100         &       Fe     & 100       &      Fe     & 100        \\ \hline
 
-\end{tabular}}
+\end{tabular}
    %\\
-    }
- %\end{tabular}
- \label{tab:comparativo:bases}
+    }}
+
+\label{tab:comparativo:bases}
 \end{table}
+
+
+De acordo com a tabela \ref{tab:comparativo:bases} é feito um comparativo entre os cluster dos três algoritmos,  o Naive Bayes e CART e KNN, e percebe-se que o CART é o algoritmo que mais se diferencial entre os outros. No exemplo de Naive Bayes e CART, os rótulos diferenciados são: cluster 1 (tabela \ref{tab:comparativo:bases:cluster1}), 2 (tabela \ref{tab:comparativo:bases:cluster2}) e 6 (tabela \ref{tab:comparativo:bases:cluster6}). No  Naive Bayes e KNN, possuem os rótulos bem semelhantes, diferenciados somente pelo cluster 4 (tabela \ref{tab:comparativo:bases:cluster4}), que como rótulo do KNN, possui apenas o atributo Ba, com intervalor de [0.0 até 1.05]. Já entre o CART e KNN possuem mais diferenças entre os clusters, coincidindo somente nos clusters 3 (tabela \ref{tab:comparativo:bases:cluster3}) e 6 (tabela \ref{tab:comparativo:bases:cluster6}). Percebe-se que o algoritmo CART, são os mais diferentes entre os resultados de seus rótulos, mas isso se deve ao fato da aplicação do método de discretização, EWD, utilizado no CART, deixando as faixas diferenciadas e implicando em rótulos também diferentes.

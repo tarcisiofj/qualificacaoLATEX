@@ -46,13 +46,13 @@
 \contentsline {subsection}{\numberline {4.4.3}KNN}{50}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}Comparativo entre Algoritmos na Base de Dados Glass}{51}{subsection.4.4.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{53}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{59}{section.5.2}
-\contentsline {section}{\numberline {5.3}Cronograma}{60}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros e Cronograma}}{54}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{54}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{60}{section.5.2}
+\contentsline {section}{\numberline {5.3}Cronograma}{61}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{61}{section*.58}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{62}{section*.58}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}

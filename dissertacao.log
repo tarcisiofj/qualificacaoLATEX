@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  13 JAN 2019 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  15 JAN 2019 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2025,33 +2025,43 @@ Overfull \hbox (10.45413pt too wide) in paragraph at lines 1352--1353
  [][] 
  []
 
-[51]) [52]
+[51]
+Overfull \hbox (32.75992pt too wide) in paragraph at lines 1404--1474
+[]  [][]  [][]
+ []
+
+
+Overfull \hbox (1.6961pt too wide) in paragraph at lines 1404--1474
+[][]  [][]
+ []
+
+) [52] [53]
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.tex
 
-LaTeX Warning: Citation `LOPES2014' on page 53 undefined on input line 6.
+LaTeX Warning: Citation `LOPES2014' on page 54 undefined on input line 6.
 
 
-LaTeX Warning: Reference `tab:execucoes:seed:nb' on page 53 undefined on input 
+LaTeX Warning: Reference `tab:execucoes:seed:nb' on page 54 undefined on input 
 line 12.
 
 
 Underfull \vbox (badness 1484) has occurred while \output is active []
 
- [53
+ [54
 
 
 
 ]
-<figs/grafico_NB_SEED_exec_grp.png, id=985, 386.19281pt x 309.40594pt>
+<figs/grafico_NB_SEED_exec_grp.png, id=997, 386.19281pt x 309.40594pt>
 File: figs/grafico_NB_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_SEED_exec_grp.png  used on input line 
 19. on input line 19.
 Package pdftex.def Info: Requested size: 308.95465pt x 247.52509pt on input lin
 e 19.
-<figs/grafico_CART_SEED_exec_grp.png, id=986, 348.55219pt x 344.78813pt>
+<figs/grafico_CART_SEED_exec_grp.png, id=998, 348.55219pt x 344.78813pt>
 File: figs/grafico_CART_SEED_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_SEED_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_SEED_exec_grp.png  used on input lin
@@ -2063,17 +2073,17 @@ Package pdftex.def Info: Requested size: 278.8421pt x 275.83087pt on input line
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `tab:execucoes:seed:nb' on page 54 undefined on input 
+LaTeX Warning: Reference `tab:execucoes:seed:nb' on page 55 undefined on input 
 line 32.
 
-<figs/grafico_NB_IRIS_exec_grp.png, id=991, 395.22656pt x 255.95625pt>
+<figs/grafico_NB_IRIS_exec_grp.png, id=1003, 395.22656pt x 255.95625pt>
 File: figs/grafico_NB_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_NB_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_NB_IRIS_exec_grp.png  used on input line 
 41. on input line 41.
 Package pdftex.def Info: Requested size: 355.7006pt x 230.35847pt on input line
  41.
-<figs/grafico_CART_IRIS_exec_grp.png, id=992, 410.2828pt x 255.95625pt>
+<figs/grafico_CART_IRIS_exec_grp.png, id=1004, 410.2828pt x 255.95625pt>
 File: figs/grafico_CART_IRIS_exec_grp.png Graphic file (type png)
 <use figs/grafico_CART_IRIS_exec_grp.png>
 Package pdftex.def Info: figs/grafico_CART_IRIS_exec_grp.png  used on input lin
@@ -2086,33 +2096,33 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [55]
 Underfull \vbox (badness 5217) has occurred while \output is active []
 
- [55 <./figs/grafico_NB_SEED_exec_grp.png (PNG copy)> <./figs/grafico_CART_SEED
+ [56 <./figs/grafico_NB_SEED_exec_grp.png (PNG copy)> <./figs/grafico_CART_SEED
 _exec_grp.png (PNG copy)>]
-<figs/grafico_NB_Glass_exec_grp_1.png, id=1011, 456.20438pt x 256.70906pt>
+<figs/grafico_NB_Glass_exec_grp_1.png, id=1023, 456.20438pt x 256.70906pt>
 File: figs/grafico_NB_Glass_exec_grp_1.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_1.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_1.png  used on input li
 ne 66. on input line 66.
 Package pdftex.def Info: Requested size: 182.4785pt x 102.6818pt on input line 
 66.
-<figs/grafico_NB_Glass_exec_grp_2.png, id=1012, 455.45157pt x 255.20343pt>
+<figs/grafico_NB_Glass_exec_grp_2.png, id=1024, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_2.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_2.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_2.png  used on input li
 ne 70. on input line 70.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
  70.
-<figs/grafico_NB_Glass_exec_grp_3.png, id=1013, 455.45157pt x 255.20343pt>
+<figs/grafico_NB_Glass_exec_grp_3.png, id=1025, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_3.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_3.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_3.png  used on input li
 ne 74. on input line 74.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
  74.
-<figs/grafico_NB_Glass_exec_grp_4.png, id=1014, 455.45157pt x 255.20343pt>
+<figs/grafico_NB_Glass_exec_grp_4.png, id=1026, 455.45157pt x 255.20343pt>
 File: figs/grafico_NB_Glass_exec_grp_4.png Graphic file (type png)
 <use figs/grafico_NB_Glass_exec_grp_4.png>
 Package pdftex.def Info: figs/grafico_NB_Glass_exec_grp_4.png  used on input li
@@ -2123,28 +2133,28 @@ Package pdftex.def Info: Requested size: 182.1774pt x 102.07956pt on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/grafico_CART_GLASS_exec_grp_1.png, id=1015, 455.45157pt x 255.95625pt>
+<figs/grafico_CART_GLASS_exec_grp_1.png, id=1027, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_1.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_1.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_1.png  used on input 
 line 89. on input line 89.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
  89.
-<figs/grafico_CART_GLASS_exec_grp_2.png, id=1016, 455.45157pt x 255.95625pt>
+<figs/grafico_CART_GLASS_exec_grp_2.png, id=1028, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_2.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_2.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_2.png  used on input 
 line 93. on input line 93.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
  93.
-<figs/grafico_CART_GLASS_exec_grp_3.png, id=1017, 455.45157pt x 255.95625pt>
+<figs/grafico_CART_GLASS_exec_grp_3.png, id=1029, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_3.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_3.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_3.png  used on input 
 line 97. on input line 97.
 Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
  97.
-<figs/grafico_CART_GLASS_exec_grp_4.png, id=1018, 455.45157pt x 255.95625pt>
+<figs/grafico_CART_GLASS_exec_grp_4.png, id=1030, 455.45157pt x 255.95625pt>
 File: figs/grafico_CART_GLASS_exec_grp_4.png Graphic file (type png)
 <use figs/grafico_CART_GLASS_exec_grp_4.png>
 Package pdftex.def Info: figs/grafico_CART_GLASS_exec_grp_4.png  used on input 
@@ -2154,17 +2164,17 @@ Package pdftex.def Info: Requested size: 182.1774pt x 102.38068pt on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56 <./figs/grafico_NB_IRIS_exec_grp.png (PNG copy)> <./figs/grafico_CART_IRIS_
+[57 <./figs/grafico_NB_IRIS_exec_grp.png (PNG copy)> <./figs/grafico_CART_IRIS_
 exec_grp.png (PNG copy)>]
 Underfull \vbox (badness 7796) has occurred while \output is active []
 
- [57 <./figs/grafico_NB_Glass_exec_grp_1.png (PNG copy)> <./figs/grafico_NB_Gla
+ [58 <./figs/grafico_NB_Glass_exec_grp_1.png (PNG copy)> <./figs/grafico_NB_Gla
 ss_exec_grp_2.png (PNG copy)> <./figs/grafico_NB_Glass_exec_grp_3.png (PNG copy
 )> <./figs/grafico_NB_Glass_exec_grp_4.png (PNG copy)> <./figs/grafico_CART_GLA
 SS_exec_grp_1.png (PNG copy)> <./figs/grafico_CART_GLASS_exec_grp_2.png (PNG co
 py)> <./figs/grafico_CART_GLASS_exec_grp_3.png (PNG copy)> <./figs/grafico_CART
 _GLASS_exec_grp_4.png (PNG copy)>]
-<figs/grafico_NB_CART_acuracia.png, id=1043, 454.69875pt x 255.95625pt>
+<figs/grafico_NB_CART_acuracia.png, id=1055, 454.69875pt x 255.95625pt>
 File: figs/grafico_NB_CART_acuracia.png Graphic file (type png)
 <use figs/grafico_NB_CART_acuracia.png>
 Package pdftex.def Info: figs/grafico_NB_CART_acuracia.png  used on input line 
@@ -2173,18 +2183,18 @@ Package pdftex.def Info: Requested size: 454.69763pt x 255.95561pt on input lin
 e 131.
 
 
-LaTeX Warning: Citation `LOPES2014' on page 58 undefined on input line 135.
+LaTeX Warning: Citation `LOPES2014' on page 59 undefined on input line 135.
 
-[58 <./figs/grafico_NB_CART_acuracia.png (PNG copy)>]
+[59 <./figs/grafico_NB_CART_acuracia.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 146.
 
 
-LaTeX Warning: Citation `LOPES2014' on page 59 undefined on input line 148.
+LaTeX Warning: Citation `LOPES2014' on page 60 undefined on input line 148.
 
 
-LaTeX Warning: Citation `LOPES2014' on page 59 undefined on input line 148.
+LaTeX Warning: Citation `LOPES2014' on page 60 undefined on input line 148.
 
 
 LaTeX Warning: No positions in optional float specifier.
@@ -2194,7 +2204,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 181.
 
-[59]) [60] (./dissertacao.bbl (./dissertacao.brf)
+[60]) [61] (./dissertacao.bbl (./dissertacao.brf)
 \tf@brf=\write5
 \openout5 = `dissertacao.brf'.
 
@@ -2204,21 +2214,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[61
+[62
 
 
-] [62]) [63]
+] [63]) [64]
 \openout2 = `postextual/apendices.aux'.
 
- (./postextual/apendices.tex [64
-
-
-]
+ (./postextual/apendices.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 12.
 
 [65
+
+
 
 ] [66
 
@@ -2245,7 +2254,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
 Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: B3E18E6D4EDAF0F258EAD70279118DC8;4015.
+(rerunfilecheck)             Checksum: 603F7A818A6452CCA6DA5147AA3C20FD;4015.
 
 
 LaTeX Warning: There were undefined references.
@@ -2256,11 +2265,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
- 18194 strings out of 492985
- 274094 string characters out of 6138585
+ 18192 strings out of 492985
+ 274074 string characters out of 6138585
  593955 words of memory out of 5000000
  20841 multiletter control sequences out of 15000+600000
- 121798 words of font info for 200 fonts, out of 8000000 for 9000
+ 121715 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,16n,56p,1840b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
@@ -2284,10 +2293,10 @@ exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dissertacao.pdf (85 pages, 2574492 bytes).
+Output written on dissertacao.pdf (85 pages, 2575911 bytes).
 PDF statistics:
- 1476 PDF objects out of 1728 (max. 8388607)
- 1288 compressed objects within 13 object streams
+ 1484 PDF objects out of 1728 (max. 8388607)
+ 1296 compressed objects within 13 object streams
  279 named destinations out of 1000 (max. 500000)
  36445 words of extra memory for PDF output out of 42996 (max. 10000000)
 
