@@ -1,6 +1,5 @@
 \backcite {Lopes2016}{{9}{(document)}{Doc-Start}}
 \backcite {Lopes2016}{{9}{(document)}{Doc-Start}}
-\backcite {LOPES2014}{{12}{(document)}{Doc-Start}}
 \backcite {Kumar2013}{{1}{1}{chapter.1}}
 \backcite {Kumar2013}{{1}{1}{chapter.1}}
 \backcite {Lopes2016}{{1}{1}{chapter.1}}
@@ -65,8 +64,7 @@
 \backcite {Lopes2016,Filho2015}{{43}{4.3}{section.4.3}}
 \backcite {Lopes2016,Filho2015}{{43}{4.3}{section.4.3}}
 \backcite {FISHER1936}{{43}{4.3}{section.4.3}}
-\backcite {Evett:1989}{{47}{4.4}{section.4.4}}
-\backcite {Aeberhard1992}{{53}{4.5}{section.4.5}}
-\backcite {LOPES2014}{{56}{5.1}{section.5.1}}
-\backcite {LOPES2014}{{61}{5.1}{figure.caption.54}}
-\backcite {LOPES2014}{{62}{26}{table.caption.55}}
+\backcite {Evett:1989}{{48}{4.4}{section.4.4}}
+\backcite {Aeberhard1992}{{54}{4.5}{section.4.5}}
+\backcite {Lopes2016}{{60}{5.1}{section.5.1}}
+\backcite {Lopes2016}{{61}{5.1}{section.5.1}}

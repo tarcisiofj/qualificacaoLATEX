@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Aeberhard et al. 1992]{Aeberhard1992}
+\abntrefinfo{Aeberhard et al.}{AEBERHARD et al.}{1992}
+{AEBERHARD, S.; COOMANS, D.; VEL, O.~D. \emph{{Comparison of classifiers in
+  high dimensional settings.}}
+North Queensland, Austr{\'{a}}lia, 1992. 92--02~p.}
+
 \bibitem[Ara{\'{u}}jo 2018]{Araujo2018}
 \abntrefinfo{Ara{\'{u}}jo}{ARA{\'{U}}JO}{2018}
 {ARA{\'{U}}JO, F. N.~C. \emph{{Rotula{\c{c}}{\~{a}}o Autom{\'{a}}tica de
