@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  25 JAN 2019 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  25 JAN 2019 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2019,35 +2019,47 @@ Package pdftex.def Info: Requested size: 409.90262pt x 230.35847pt on input lin
 e 325.
  [44 <./figs/grafico_iris_petalwidth_petallength_BrOf.png (PNG copy)>] [45] [46
 ] [47] [48] [49] [50]
+Overfull \hbox (22.17854pt too wide) in paragraph at lines 606--607
+[]$[]$ 
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 617.
+(Font)              <10.95> on input line 648.
 
-Overfull \hbox (1.6961pt too wide) in paragraph at lines 617--631
+Overfull \hbox (1.6961pt too wide) in paragraph at lines 648--662
 [][]  [][] 
  []
 
 
-Overfull \hbox (1.6961pt too wide) in paragraph at lines 643--661
+Overfull \hbox (1.6961pt too wide) in paragraph at lines 674--692
 [][]  [][] 
  []
 
 
-Overfull \hbox (1.6961pt too wide) in paragraph at lines 673--689
+Overfull \hbox (1.6961pt too wide) in paragraph at lines 704--720
 [][]  [][] 
  []
 
-[51] [52] [53] [54]
-<figs/grafico_acuracia_media_algoritmos.png, id=989, 454.69875pt x 288.3272pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[51] [52]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[53] [54] [55]
+<figs/grafico_acuracia_media_algoritmos.png, id=996, 454.69875pt x 288.3272pt>
 File: figs/grafico_acuracia_media_algoritmos.png Graphic file (type png)
 <use figs/grafico_acuracia_media_algoritmos.png>
 Package pdftex.def Info: figs/grafico_acuracia_media_algoritmos.png  used on in
-put line 891. on input line 891.
+put line 922. on input line 922.
 Package pdftex.def Info: Requested size: 409.22508pt x 259.49207pt on input lin
-e 891.
- [55 <./figs/grafico_acuracia_media_algoritmos.png (PNG copy)>]) [56]
+e 922.
+) [56 <./figs/grafico_acuracia_media_algoritmos.png (PNG copy)>]
 \openout2 = `capitulos/conclusao.aux'.
 
- (./capitulos/conclusao.tex
+
+(./capitulos/conclusao.tex
 Underfull \vbox (badness 2564) has occurred while \output is active []
 
  [57
@@ -2118,8 +2130,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
  18119 strings out of 492985
- 272146 string characters out of 6138585
- 598765 words of memory out of 5000000
+ 272144 string characters out of 6138585
+ 597765 words of memory out of 5000000
  20787 multiletter control sequences out of 15000+600000
  119153 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2145,10 +2157,10 @@ exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dissertacao.pdf (83 pages, 2101658 bytes).
+Output written on dissertacao.pdf (83 pages, 2104416 bytes).
 PDF statistics:
- 1445 PDF objects out of 1728 (max. 8388607)
- 1267 compressed objects within 13 object streams
+ 1447 PDF objects out of 1728 (max. 8388607)
+ 1269 compressed objects within 13 object streams
  262 named destinations out of 1000 (max. 500000)
  35933 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -42,15 +42,15 @@
 \contentsline {subsection}{\numberline {4.3.4}Comparativo entre Algoritmos na Base de Dados Iris}{43}{subsection.4.3.4}
 \contentsline {section}{\numberline {4.4}Base de Dados 3 - Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{44}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{45}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Classification and Regression Trees - CART}{47}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}Classification and Regression Trees - CART}{48}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}K-Nearest Neighbor - KNN}{49}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Comparativo entre Algoritmos na Base de Dados Glass}{50}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.4}Comparativo entre Algoritmos na Base de Dados Glass}{51}{subsection.4.4.4}
 \contentsline {section}{\numberline {4.5}Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}{52}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Naive Bayes}{52}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.1}Naive Bayes}{53}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Classification and Regression Trees - CART}{53}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}K-Nearest Neighbor - KNN}{53}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}K-Nearest Neighbor - KNN}{54}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Comparativo entre Algoritmos na Base de Dados Wine}{54}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{55}{section.4.6}
+\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{56}{section.4.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{57}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{57}{section.5.1}

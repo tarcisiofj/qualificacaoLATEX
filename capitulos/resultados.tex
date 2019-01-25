@@ -411,7 +411,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
                                             & Ba     & [ 0.0 $\sim$  0.7875 ]    & 94\%  & 0  & 100\% \\  
 \multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 70\%  & 3  & 82.4\% \\  \hline
                                              & Mg    & [ 0.0 $\sim$  1.1225 ]    & 46\%  & 5  & 61.6\%\\ 
-                                             & Al    & ] 1.09 $\sim$  1.895]      & 15\%  & 4  & 69.3\%\\
+                                             & Al    & ] 1.0925 $\sim$  1.895]      & 15\%  & 4  & 69.3\%\\
                                             & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 3  & 77\% \\ 
                                             & Ba     & [ 0.0 $\sim$  0.7875 ]    & 84\%  & 1  & 92.4\% \\  
 \multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 84\%  & 2  & 84.7\% \\  \hline                                            
@@ -432,7 +432,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 }
 \end{table}
 
-Os atributos \textbf{Ba} e \textbf{Fe} são os que aparecem em todos os rótulos indicando uma importância desses elementos nos grupos mantendo suas intervalos de dados
+Em análise dos resultados da execução do Naive Bayes os atributos \textbf{Ba} e \textbf{Fe} são os que aparecem em todos os rótulos indicando uma importância desses elementos nos grupos, que pode também ser percebido através dos altos valores de correlacionamento na tabela \ref{tab:execucoes:glass:nb}. Neste resultado observa-se que o cluster 6 acabou por ter um rótulo o qual todos os atributos estão selecionados, ou seja, fazem parte do rótulo, esse efeito foi causa da variância ${V}$ que atingiu um número maior, em relação ao resultado da diferença entre, o maior e menor valor  da linha respectiva a do cluster 6 da tabela \ref{tab:execucoes:glass:nb}. Dito isto, a variável cumpre seu papel de não deixar que rótulos repetidos existam.
 % acurácia media p/ grupo
 % cluster1=89.3
 % cluster2=84.125
@@ -441,20 +441,24 @@ Os atributos \textbf{Ba} e \textbf{Fe} são os que aparecem em todos os rótulos
 % cluster5 = 100
 % cluster6=77.066
 
-
+A menor acurácia média por grupo foi do cluster 4 (recipientes) com 77\%, e a maior acurácia do cluster 5 (louças de mesa) com 100\%.
 
 De acordo com a aplicação do Naive Bayes na base de dados \textbf{Glass} os rótulos são os seguintes:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$  
- \item ${r_{c_2}=\{ (Mg,] 3.43 \sim  3.66 ] ),(Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
- \item ${r_{c_3}=\{ ((K,] 0.49 \sim  0.65 ] ),(Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] )  \} }$  
- \item ${r_{c_4}=\{ (Mg,[ 0.0 \sim  2.76 ] ),(Al,] 1.43 \sim 1.83 ] ), (K,] 0.49 \sim  0.65 ] ),}$
-
- ${ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
- \item ${r_{c_5}=\{  (Mg,[ 0.0 \sim  2.76 ] ), (K,[ 0.0 \sim  0.16 ] ),(Ba,[ 0.0 \sim 0.27 ] ), }$
+ \item ${r_{c_1}=\{ (Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$  
+ \item ${r_{c_2}=\{ (Mg,] 3.3675 \sim  4.49 ] ),(K,[ 0.0 \sim 1.5525 ] ),(Ba,[ 0.0 \sim 0.7875 ] ),}$
  
- ${ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
- \item ${r_{c_6}=\{ (Mg,[ 0.0 \sim  2.76 ] ),  (K,[ 0.0 \sim  0.16 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
+ ${(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
+ \item ${r_{c_3}=\{ ((Na,]12.3925 \sim 14.055 ] ),(Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] )  \} }$  
+ \item ${r_{c_4}=\{ (Mg,[ 0.0 \sim  1.1225 ] ),(Al,] 1.0925 \sim 1.895 ] ), (K,[ 0.0 \sim 1.5525 ] ),}$
+
+ ${ (Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
+ \item ${r_{c_5}=\{  (K,[ 0.0 \sim 1.5525 ]  ),(Ba,[ 0.0 \sim 0.7875 ] ), (Fe,[ 0.0 \sim 0.1275 ] )\} }$
+ \item ${r_{c_6}=\{ (RI,[ 1.511150 \sim  1.516845  ] ),(Na,]14.055 \sim 15.7175 ] ),  (Mg,[ 0.0 \sim  1.1225  ] ), }$
+ 
+ ${ (Al,] 1.895 \sim 2.6975 ] ), (Si,] 72.61 \sim 74.01 ] ),  }$
+ 
+ ${ (K,[ 0.0 \sim 1.5525] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
 \end{itemize}
 
 
@@ -531,7 +535,7 @@ De acordo com a aplicação do CART na base de dados \textbf{Glass} os rótulos 
 \subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:glass:knn}
 
 
-Na tabela \ref{tab:rot:glass:knn} é apresentado o resultado da execução do algoritmo KNN na base de dados Glass, aplicando o método de discretização EWD, e o valor da variância ${V=0\%}$ sem necessidade de altereação desse valor, pois não houve ambiguidade entre os rótulos. Quase todas as acurácias parciais dos atributos rótulos foram 100\%, menos o \textit{cluster} 4 (recipientes), que teve um registro que não é representado pelo \textit{cluster}.
+Na tabela \ref{tab:rot:glass:knn} é apresentado o resultado da execução do algoritmo KNN na base de dados Glass aplicando o método de discretização EWD, com valor da variância ${V=81\%}$ e alterando para ${R=3}$. Na mesma situação do Naive Bayes, o cluster 6 recebeu um rótulo com todos os atributos, pelo alto valor de ${V}$, embora necessário para retirar as ambiguidades dos rótulos a consequência é aumentar o números de atributos nos rótulos, implicando também na diminuição da acurácia média por grupo. 
 
 \newpage
 \begin{table}[!h]
@@ -544,39 +548,66 @@ Na tabela \ref{tab:rot:glass:knn} é apresentado o resultado da execução do al
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                            %& Mg     & ]  2.993333 $\sim$  4.490  ]       & 100\%                               & 4 & 94\% \\
-                                            %& Si     & ] 71.676667 $\sim$  73.543333      ]       & 94\%                               & 4 & 94\% \\
-                                             & K     & [ 0.0 $\sim$  2.0700      ]       & 100\%                               & 0 & 100\% \\  
-\multirow{-2}{*}{1}                          & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\  \hline
-                                            %& Ba    & [ 0.0 $\sim$  1.0500     ]       & 98\%                               & 1 & 98\% \\  
-2                                            & K     & [ 0.0 $\sim$  2.0700 ]           & 100\%                               & 0 & 100\% \\  \hline
-                                            & Mg     & ]  2.993333 $\sim$  4.490  ]              & 100\%                               & 0 & 100\% \\ 
-                                            & K     & [ 0.0 $\sim$  2.0700 ]               & 100\%                               & 0 & 100\% \\  
-\multirow{-3}{*}{3}                          & Ba    & [ 0.0 $\sim$  1.0500     ]      & 100\%                               & 0 &  100\% \\  \hline
-                                             %& Al    & [ 1.360000 $\sim$  2.430000 ]       & 92\%                               & 3 & 77\%\\
-                                             %& RI     & ] 1.518743 $\sim$  1.526337     ]       & 92\%                               & 4 & 94\%\\  
-                                             %& Ca   & ] 9.016667 $\sim$  12.603333      ] & 92\%                               & 3 & 77\%\\  
-4                                           & Ba    & [ 0.0 $\sim$ 1.050000    ]       & 92\%                               & 1 &  92\%\\  \hline                                            
-                                            & K     & [ 0.0 $\sim$  2.070000     ]       & 100\%                               & 0 & 100\%\\  
-                                            & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\   
-\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-                                            %& K     & [ 0.0 $\sim$  2.070000     ]       & 96\%                               & 1 & 96\%\\  
-6                                           & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-
-\hline
+                                             & Al   & [ 0.29 $\sim$  1.36 ]     & 15\%  & 10  & 85.8\% \\  
+                                            & K     & [ 0.0 $\sim$  2.07 ]     & 24\%  & 0  & 100\% \\  
+                                             & Ba    & [ 0.0 $\sim$  1.05 ]   & 95\%  & 0 & 100\% \\  
+\multirow{-4}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.17  ]   & 64\%  & 8 & 88.6\% \\  \hline
+                                             & Mg    & ] 2.993333 $\sim$  4.49 ]   & 18\%  & 19 & 75\%\\ 
+                                             & K     & [ 0.0 $\sim$  2.07 ]     & 18\%  & 0  & 100\% \\
+                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    & 92\%  & 1  & 98.7\% \\  
+\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.17 ]    & 51\%  & 16 & 79\% \\  \hline
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 94\%  & 0  & 100\% \\  
+\multirow{-2}{*}{3}                          & Fe    & [ 0.0 $\sim$   0.17 ]    & 70\%  & 2  & 88.3\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.496667 ]    & 53\%  & 5  & 61.6\%\\ 
+                                             & Al    & ] 1.36 $\sim$  2.43]      & 15\%  & 3  & 77\%\\
+                                            & K     & [  0.0 $\sim$  2.07 ]    & 15\%  & 2  & 84.7\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 84\%  & 1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.17 ]    & 84\%  & 2  & 84.7\% \\  \hline                                            
+                                            & K     & [ 0.00 $\sim$  2.07 ]     & 100\%  & 0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 100\%  & 0 & 100\% \\  
+\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17 ]     & 100\%  & 0 & 100\% \\  \hline
+                                            & RI     & [1.511150 $\sim$  1.516845 ] & 0\%  & 4  & 86.3\% \\ 
+                                            & Na     & ]12.946667 $\sim$  15.163333 ] & 3\%  & 2  & 93.2\% \\ 
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 79\%  &6  & 79.4\%\\ 
+                                             & Al    & [ 0.0 $\sim$  1.496667]      & 6\%  & 10  & 65.6\%\\
+                                            & Si    & ] 71.676667 $\sim$  73.543333]      & 6\%  & 6  & 79.4\%\\
+                                            & K     & [  0.0 $\sim$  2.07 ]    & 55\%  & 1  & 96.6\% \\ 
+                                            & Ca     & [5.43 $\sim$ 9.016667 ]    & 3\%  & 7  & 75.9\% \\ 
+                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    & 20\%  & 14  & 51.8\% \\ 
+\multirow{-9}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.17 ]     & 75\%  & 0  & 100\% \\  \hline\hline
 
 \end{tabular}
 }
 \end{table}
+% cluster 1=93,6
+% cluster 2=88,175
+% cluster 3=94,15
+% cluster 4=80,08
+% cluster 5=100
+% cluster 6=80,9111111111111
+
+Analisando os resultados percebe-se que a acurácia média por rótulo foi acima dos 80\% indicando que cada tipo de vidro  é representado de forma satisfatória pelos rótulos dos grupos. As valores nos elementos químicos (atributos) é uma porcentagem de óxido que varia de acordo com o vidro, e  com essas informações é possível identicar o tipo de vidro, \textit{i.e.}, para identificar um tipo de vidro olhando para os elementos químicos Mg, K, Ba e Fe, que são atributos do ${r_{c_2}}$, basta verificar os valore de óxido em cada um desses elementos, e se as informações forem compatíveis, então ele é do tipo, janela de construção - vidro não-temperado. Mesmo que os elementos estejam se repetindo no ${r_{c_6}}$, a faixa de valor do elemento químico Mg é diferente entre os rótulos, garantindo que os rótulos consigam representar cada grupo. 
+%A acurácia média por grupo varia da menor de 80\% até 100\% referente ao cluster 5. 
+
 
 De acordo com a aplicação do KNN na base de dados \textbf{Glass} os rótulos são os seguintes:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (Ba,[ 0.0 \sim 1.0500 ] ), (K,[ 0.0 \sim  2.0700 ] )\} }$
- \item ${r_{c_2}=\{(K,[ 0.0 \sim  2.0700 ] ) \} }$
- \item ${r_{c_3}=\{ (Mg, [ 2.993333 \sim  4.490]), (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] )  \} }$  
- \item ${r_{c_4}=\{ (Ba,[ 0.0 \sim 1.0500 ] ) \}}$
+ \item ${r_{c_1}=\{(Al,[ 0.29 \sim 1.36 ] ),(K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.05 ] ),}$
+ 
+ ${ (Fe,[ 0.0 \sim 0.17] )  \} }$
+ \item ${r_{c_2}=\{(Mg, [ 2.993333 \sim  4.490]),(K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.05 ] ),}$
+ 
+ ${ (Fe,[ 0.0 \sim 0.17] )  \} }$
+ \item ${r_{c_3}=\{ (Ba,[ 0.0 \sim 1.0500 ] ),(Fe,[ 0.0 \sim 0.17] )  \} }$
+ \item ${r_{c_4}=\{(Mg, [ 2.993333 \sim  4.490]), (Al,[ 0.29 \sim 1.36 ] ),(K,[ 0.0 \sim  2.0700 ] ),}$
+ 
+ ${ (Ba,[ 0.0 \sim 1.0500 ] ), (Fe,[ 0.0 \sim 0.17] )  \} }$
  \item ${r_{c_5}=\{ (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] ), (Fe,[ 0.0 \sim 0.17000] ) \} }$
- \item ${r_{c_6}=\{ (Fe,[ 0.0 \sim 0.17000] ) \} }$
+ \item ${r_{c_6}=\{ (RI,[ 1.511150 \sim  1.516845  ] ),(Na,]12.946667 \sim 15.163333 ] ),  (Mg,[ 0.0 \sim  1.1225  ] ), }$
+ 
+ ${ (Al,[0.0 \sim  1.496667 ] ), (Si,] 71.676667 \sim  73.543333 ] ),  }$
+ 
+ ${ (K,[ 0.0 \sim 2.07] ),(Fe,[ 0.0 \sim 0.17 ] ) \} }$
 \end{itemize}
 
 
