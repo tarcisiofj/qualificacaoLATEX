@@ -7,34 +7,24 @@
 \contentsline {table}{\numberline {6}{\ignorespaces Valores das faixas com R=3 da Base de Dados Modelo\relax }}{30}{table.caption.28}
 \contentsline {table}{\numberline {7}{\ignorespaces Resultado da rotula\IeC {\c c}\IeC {\~a}o com o algoritmo Naive Bayes\relax }}{36}{table.caption.31}
 \contentsline {table}{\numberline {8}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{37}{table.caption.32}
-\contentsline {table}{\numberline {9}{\ignorespaces Matriz de Atributos Importantes do algoritmo CART na base Seeds\relax }}{38}{table.caption.33}
-\contentsline {table}{\numberline {10}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{38}{table.caption.34}
-\contentsline {table}{\numberline {11}{\ignorespaces Parte dos dados pertencentes ao \textit {cluster} 1 (\textit {Kama}) - da base Seeds. No total s\IeC {\~a}o 210 registros os quais as linha de 1 a 70 s\IeC {\~a}o \textit {Kama}, 71 a 140 s\IeC {\~a}o Rosa e 141 a 210 s\IeC {\~a}o \textit {Canadian} \relax }}{40}{table.caption.35}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {area}, representando os registros do grupo \textit {Kama} (\textit {cluster} 1)}}}{40}{subtable.11.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {perimetro} simulando os registros do \textit {cluster} 1}}}{40}{subtable.11.2}
-\contentsline {table}{\numberline {12}{\ignorespaces Parte dos dados pertencentes ao \textit {cluster} 2 (\textit {Rosa}) - da base Seeds. No total s\IeC {\~a}o 210 registros os quais 1 a 70 s\IeC {\~a}o \textit {Kama}, 71 a 140 s\IeC {\~a}o Rosa e 141 a 210 s\IeC {\~a}o \textit {Canadian} \relax }}{42}{table.caption.36}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {Lkernel}, exibindo os 8 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do \textit {cluster} 2}}}{42}{subtable.12.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Amostra de dados ordenados em rela\IeC {\c c}\IeC {\~a}o ao atributo \textbf {area}, exibindo os 8 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do \textit {cluster} 2}}}{42}{subtable.12.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Amostra de dados exibindo os 11 primeiro registros e simulando at\IeC {\'e} o \IeC {\'u}ltimo, do \textit {cluster} 2}}}{42}{subtable.12.3}
-\contentsline {table}{\numberline {13}{\ignorespaces Amostra de dados da base Seeds somente das linhas 200 a 210 do grupo \textit {Canadian}, que possui o total de 70 (setenta) elementos, ordenados pelo atributo area\relax }}{43}{table.caption.37}
-\contentsline {table}{\numberline {14}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{44}{table.caption.38}
-\contentsline {table}{\numberline {15}{\ignorespaces Matriz de Atributos Importantes do algoritmo Naive Bayes na base Iris\relax }}{45}{table.caption.39}
-\contentsline {table}{\numberline {16}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{45}{table.caption.40}
-\contentsline {table}{\numberline {17}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{46}{table.caption.41}
-\contentsline {table}{\numberline {18}{\ignorespaces Amostra de Dados Iris do grupo \textit {Iris-versicolor} ordenado pelo atributo petalwidth. Legenda: (SL) sepallength, (SW) sepalwidth, (PL) petallength, (PW) petalwidth\relax }}{47}{table.caption.42}
-\contentsline {table}{\numberline {19}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{49}{table.caption.43}
-\contentsline {table}{\numberline {20}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{50}{table.caption.44}
-\contentsline {table}{\numberline {21}{\ignorespaces Matriz de Atributos Importantes do algoritmo CART na base Glass\relax }}{50}{table.caption.45}
-\contentsline {table}{\numberline {22}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{52}{table.caption.46}
-\contentsline {table}{\numberline {23}{\ignorespaces Resultado comparativo \textit {cluster} por \textit {cluster} entre Naive Bayes (NB), CART e KNN. \relax }}{53}{table.caption.47}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Cluster 1 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro temperado }}}{53}{subtable.23.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Cluster 2 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro n\IeC {\~a}o-temperado}}}{53}{subtable.23.2}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Cluster 3 - janelas de ve\IeC {\'\i }culos - vidro temperado}}}{53}{subtable.23.3}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {Cluster 4 - recipientes}}}{53}{subtable.23.4}
-\contentsline {subtable}{\numberline {(e)}{\ignorespaces {Cluster 5 - lou\IeC {\c c}as de mesa}}}{53}{subtable.23.5}
-\contentsline {subtable}{\numberline {(f)}{\ignorespaces {Cluster 6 - l\IeC {\^a}mpadas}}}{53}{subtable.23.6}
-\contentsline {table}{\numberline {24}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{54}{table.caption.48}
-\contentsline {table}{\numberline {25}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{55}{table.caption.49}
-\contentsline {table}{\numberline {26}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{55}{table.caption.50}
-\contentsline {table}{\numberline {27}{\ignorespaces Amostra do \textit {cluster} 1 da base dados Wine, ordenados pelo atributo \textbf {matiz}\relax }}{56}{table.caption.51}
-\contentsline {table}{\numberline {28}{\ignorespaces Amostra do \textit {cluster} 1 da base dados Wine, ordenados pelo atributo \textbf {flavonoides}\relax }}{56}{table.caption.52}
+\contentsline {table}{\numberline {9}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{38}{table.caption.33}
+\contentsline {table}{\numberline {10}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{42}{table.caption.37}
+\contentsline {table}{\numberline {11}{\ignorespaces Matriz de Atributos Importantes do algoritmo Naive Bayes na base Iris\relax }}{42}{table.caption.38}
+\contentsline {table}{\numberline {12}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{43}{table.caption.39}
+\contentsline {table}{\numberline {13}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{43}{table.caption.40}
+\contentsline {table}{\numberline {14}{\ignorespaces Matriz de Atributos Importantes do algoritmo Naive Bayes na base Glass\relax }}{46}{table.caption.42}
+\contentsline {table}{\numberline {15}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{47}{table.caption.43}
+\contentsline {table}{\numberline {16}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{48}{table.caption.44}
+\contentsline {table}{\numberline {17}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{50}{table.caption.45}
+\contentsline {table}{\numberline {18}{\ignorespaces Resultado comparativo \textit {cluster} por \textit {cluster} entre Naive Bayes (NB), CART e KNN. \relax }}{51}{table.caption.46}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Cluster 1 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro temperado }}}{51}{subtable.18.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Cluster 2 - janelas de constru\IeC {\c c}\IeC {\~a}o - vidro n\IeC {\~a}o-temperado}}}{51}{subtable.18.2}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Cluster 3 - janelas de ve\IeC {\'\i }culos - vidro temperado}}}{51}{subtable.18.3}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {Cluster 4 - recipientes}}}{51}{subtable.18.4}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {Cluster 5 - lou\IeC {\c c}as de mesa}}}{51}{subtable.18.5}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {Cluster 6 - l\IeC {\^a}mpadas}}}{51}{subtable.18.6}
+\contentsline {table}{\numberline {19}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo Naive Bayes\relax }}{52}{table.caption.47}
+\contentsline {table}{\numberline {20}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo CART\relax }}{53}{table.caption.48}
+\contentsline {table}{\numberline {21}{\ignorespaces Resultado da aplica\IeC {\c c}\IeC {\~a}o do algoritmo KNN\relax }}{53}{table.caption.49}
+\contentsline {table}{\numberline {22}{\ignorespaces Amostra do \textit {cluster} 1 da base dados Wine, ordenados pelo atributo \textbf {matiz}\relax }}{54}{table.caption.50}
+\contentsline {table}{\numberline {23}{\ignorespaces Amostra do \textit {cluster} 1 da base dados Wine, ordenados pelo atributo \textbf {flavonoides}\relax }}{54}{table.caption.51}

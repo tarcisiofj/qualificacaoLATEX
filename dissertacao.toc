@@ -33,40 +33,40 @@
 \contentsline {section}{\numberline {4.2}Base de Dados 1 - Seeds - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Semente}{35}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Naive Bayes}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Classification and Regression Trees - CART}{37}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}K-Nearest Neighbor - KNN}{38}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}K-Nearest Neighbor - KNN}{37}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Comparativo entre Algoritmos na Base de Dados Seeds}{38}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Base de Dados 2 - Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{43}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{44}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Classification and Regression Trees - CART}{45}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}K-Nearest Neighbor - KNN}{46}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Comparativo entre Algoritmos na Base de Dados Iris}{46}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Base de Dados 3 - Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{47}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{48}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Classification and Regression Trees - CART}{49}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}K-Nearest Neighbor - KNN}{51}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Comparativo entre Algoritmos na Base de Dados Glass}{52}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}{54}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Naive Bayes}{54}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Classification and Regression Trees - CART}{55}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}K-Nearest Neighbor - KNN}{55}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Comparativo entre Algoritmos na Base de Dados Wine}{56}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{57}{section.4.6}
+\contentsline {section}{\numberline {4.3}Base de Dados 2 - Iris - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Plantas}{41}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Naive Bayes}{41}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Classification and Regression Trees - CART}{42}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}K-Nearest Neighbor - KNN}{43}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Comparativo entre Algoritmos na Base de Dados Iris}{43}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Base de Dados 3 - Glass - Identifica\IeC {\c c}\IeC {\~a}o de Tipos de Vidros}{44}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Naive Bayes}{45}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Classification and Regression Trees - CART}{47}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}K-Nearest Neighbor - KNN}{49}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Comparativo entre Algoritmos na Base de Dados Glass}{50}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}{52}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Naive Bayes}{52}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Classification and Regression Trees - CART}{53}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}K-Nearest Neighbor - KNN}{53}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Comparativo entre Algoritmos na Base de Dados Wine}{54}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{55}{section.4.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{60}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{60}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{61}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{57}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{58}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{62}{section*.57}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{59}{section*.55}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{65}{section*.58}
+\contentsline {part}{\uppercase {Ap\^endices}}{63}{section*.56}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{66}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{64}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{67}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{65}{appendix.B}

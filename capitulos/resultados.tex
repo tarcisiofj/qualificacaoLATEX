@@ -1,25 +1,36 @@
  \chapter{Resultados e Discussões}\label{cap:resultados}
 
-Este estudo conta com a realização de testes nas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina, criado por estudantes de pós-graduação na UC Irvine em 1987, e são bases utilizadas por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
+
+Este estudo conta com a realização de testes nas bases de dados da UCI Machine Learning\footnote{http://archive.ics.uci.edu/ml/} - um repositório de dados a serviço da comunidade de aprendizado de máquina criado por estudantes de pós-graduação na UC Irvine em 1987 e que é utilizado por educadores e pesquisadores como fonte primária de aplicações de aprendizado de máquina. 
 
 %* lembrar que as bases são essas (iris, ...) por serem já estudadas, e de prévio conhecimento, onde a partir de estudos em bases assim pode-se ter resultados conclusivos e expandir para outras bases. É como se testase com base conhecida para depois pegar uma nova.
 
-As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine. Essas bases são bastantes utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine, https://archive.ics.uci.edu/ml/datasets/seeds}, e através deles há possilidade de análises de seus comportamentos mediante seus resultados, visto que, todas as bases são classificadas, e já possuem seus grupos definidos, servindo de referência para  comparar  os resultados desta pesquisa. Sem esquecer que será trabalhado com os \textit{clusters} já formados e não na formação dos mesmos. Outro motivo desta seleção das bases  é mitigar ao máximo a utilização das técnicas de \textit{Feature Engineering} \cite{Casari2018}, que são técnicas de manipulação de dados empregados na base para aplicação do algoritmo de aprendizado de máquina utilizados na fase de preparação dos dados.
+
  
+As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine. Essas bases são bastante utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine, https://archive.ics.uci.edu/ml/datasets/seeds}  e por meio deles há possibilidade de análise de seus comportamentos mediante resultados, visto que todas as bases são classificadas e já possuem seus grupos definidos, servindo de referência para comparar os resultados desta pesquisa, sem esquecer que o trabalho é com os \textit{clusters} já formados e não na formação deles. Outro motivo desta seleção das bases é mitigar ao máximo a utilização das técnicas de \textit{Feature Engineering} \cite{Casari2018}, que são técnicas de manipulação de dados empregadas na base para aplicação do algoritmo de aprendizado de máquina utilizado na fase de preparação dos dados.
 
-As tabelas apresentadas como resposta dos algoritmos de rotulação para cada base de dados possuem o seguinte formato: a primeira coluna (\textbf{Cluster}) é um número que representa cada \textit{cluster} de forma sequencial, a segunda coluna (\textbf{Rótulos}) representado pelo par, \textbf{Atributo} e \textbf{Faixa}, o quais definem o rótulo do \textit{cluster} respectivo, podendo haver ou não mais atributos para compor o rótulo. A coluna \textbf{Relevância} tem a importância de informar o quanto, em porcentagem, aquele atributo é relacionado aos demais, na definição do rótulo daquele \textit{cluster}. A quinta coluna, \textbf{Fora da Faixa}, exibe o erro em quantidade de elementos que não estão naquela faixa definida naquele rótulo, e por último a \textbf{Acurácia Parcial}, o qual exibe, em porcentagem, o valor de acertos dos elementos que são representados pelo atributo e faixa da respectiva linha. 
 
-A obtenção da acurácia dos \textit{clusters} só é possível porquê as bases de dados já possuem seus grupos definidos, por conseguinte, há o conhecimento de quais elementos fazem parte de um determinado grupo. Dessa maneira, qualquer resultado da aplicação dos algoritmos nos \textit{clusters} podem ser confrontadas com as informações dos \textit{clusters} inicialmente retirados da UCI Machine Learning, e assim, poderá ser calculado a porcentagem de acertos.
+As tabelas apresentadas como resposta dos algoritmos de rotulação para cada base de dados possuem o seguinte formato: a primeira coluna (\textbf{Cluster}) é um número que representa cada cluster de forma sequencial; a segunda coluna (\textbf{Rótulos}) é representada pelo par \textbf{Atributo} e \textbf{Faixa}, o qual define o rótulo do cluster respectivo, podendo haver ou não mais atributos para compor o rótulo; a coluna \textbf{Relevância} tem a importância de informar o quanto, em porcentagem, aquele atributo é relacionado aos demais na definição do rótulo daquele \textit{cluster}. A quinta coluna, \textbf{Fora da Faixa}, exibe o erro em quantidade de elementos que não estão naquela faixa definida naquele rótulo e, por último, a \textbf{Acurácia Parcial}, que exibe, em porcentagem, o valor de acertos dos elementos que são representados pelo atributo e faixa da respectiva linha. 
 
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas  utilizadas no desenvolvimento com configurações  de algumas variáveis, e cada seção referirá a uma base de dados utilizada, sendo esta, dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN.
+A obtenção da acurácia dos \textit{clusters} só é possível porque as bases de dados já possuem seus grupos definidos, por conseguinte, há o conhecimento de quais elementos fazem parte de um determinado grupo. Dessa maneira, qualquer resultado da aplicação dos algoritmos nos \textit{clusters} pode ser confrontado com as informações dos \textit{clusters} inicialmente retirados da UCI Machine Learning e, assim, poderá ser calculada a porcentagem de acertos. 
+
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho explicando as ferramentas utilizadas no desenvolvimento com configurações de algumas variáveis e cada seção se referirá a uma base de dados utilizada, sendo esta dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN.
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
-Para  gerar os resultados aqui escritos foram realizadas implementações utilizando a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox }. Por aprensentar  linguagem técnica e funcões já prontas direcionada para aprendizado de máquina essa ferramenta foi selecionada para colocar em prática essa pesquisa.
+
+
+Para gerar os resultados aqui descritos, foram realizadas implementações utilizando-se a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox} . Por apresentar linguagem técnica e funções já prontas direcionadas para aprendizado de máquina,essa ferramenta foi selecionada para colocar em prática essa pesquisa.
 
 Ao longo da pesquisa foram realizados vários testes, porém, houveram alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$), número de faixas (${R}$), e tipo de discretização, ${TipoDiscretização}$ (EWD,EFD). 
 
-Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Explicação sobre o número de faixas no Apêndice \ref{apendice:1}}. Uma vez definido o número de faixas será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo qual faixa cada valor irá ficar.  
+Ao longo da pesquisa foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$), número de faixas (${R}$) e tipo de discretização (EWD,EFD). 
+
+%Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Apêndice \ref{apendice:1}}, contudo, os resultados foram realizados com ${R=3}$ em concordância ao trabalho de \citeonline{Lopes2016} que também utilizou esse configuração, e assim podendo haver uma comparação entre resultados. Uma vez definido o número de faixas será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo qual faixa cada valor irá ficar.  
+
+Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$) é definido de forma que os atributos tenham seus valores mapeados de acordo com a faixa de valor correspondente e, uma vez definido o número de faixas será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo-se com qual faixa cada valor irá ficar.
+
+
 
 %Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster. 
 
@@ -37,36 +48,22 @@ Fazendo um breve resumo sobre as configurações das variáveis, a variação ${
 
 
 \section{Base de Dados 1 - Seeds - Identificação de Tipos de Semente}
-Essa base é composta por sete  atributos definindo suas características, e mais um atributo, classe,  responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Esses elementos foram construídos a partir de sete parâmetros geométricos medidos dos grãos de trigo: \textit{area} - A, \textit{perimeter} - P, \textit{compactness} - C, \textit{length of kernel} - Lkernel, \textit{width of kernel} - Wkernel, \textit{asymmetry coefficient} - asymetry, \textit{length of kernel groove} - lkgroove.
+Essa base é composta por sete  atributos definindo suas características e mais um: a  classe, que é responsável por identificar os tipos de sementes \cite{Charytanowicz2010}. Esses elementos foram construídos a partir de sete parâmetros geométricos medidos dos grãos de trigo: \textit{area} - A, \textit{perimeter} - P, \textit{compactness} - C, \textit{length of kernel} - Lkernel, \textit{width of kernel} - Wkernel, \textit{asymmetry coefficient} - asymetry, \textit{length of kernel groove} - lkgroove.
 
-Os valores dos atributos  são todos contínuos e não existem valores em branco,  possuindo um total de 210 registros classificados em três categorias bem distribuidas entre as classes, definindo esta, como base de dados balanceada, por conta dessa distribuição dos registros:
+Os valores dos atributos são todos contínuos e não existem valores em branco, possuindo um total de 210 registros classificados em três categorias bem distribuídas entre as classes, definindo-se estas como base de dados balanceada, por conta dessa distribuição dos registros: 
 \begin{itemize}[noitemsep]
  \item 70 elementos do tipo \textit{Kama};
  \item 70 elementos do tipo \textit{Rosa};
  \item 70 elementos do tipo \textit{Canadian}.
 \end{itemize}
-Para classificar as sementes, como \textit{Kama}, \textit{Rosa} e \textit{Canadian} foi utilizada uma técnica de raio X, que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais, explorados no Instituto de Agrofísica da Academia Polonesa de Ciências em Lublin.
 
+Para classificar as sementes como \textit{Kama}, \textit{Rosa} e \textit{Canadian}, foi utilizada uma técnica de raio X que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais, explorados no Instituto de Agrofísica da Academia Polonesa de Ciências em Lublin.
 
-As tabelas com os resultados dos rótulos apresentadas a seguir (tabelas \ref{tab:rot:seeds:nb}, \ref{tab:rot:seeds:cart}, \ref{tab:rot:seeds:knn}) exibem os resultados de rotulação dos algoritmos Naive Bayes, CART e KNN, respectivamente, e no caso dos \textit{clusters}, cada linha determina um grupo: (1) \textit{Kama}, (2) \textit{Rosa} e (3) \textit{Canadian}. 
-
-
-Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo algumas configuração são necessárias para executar o algoritmo, como, a configuração do método de discretização que do tipo EFD, e também a divisão dos valores dos atributos em faixas, com ${R=3}$ para todos os atributos, e variação ${V=0\%}$ 
-
-%e também o valor de variação ${V=0\%}$,  não obstante, esta variável ${V}$ só assumirar valor maior que zero após análise dos resultados caso haja ambiguidade.
-
+As tabelas com os resultados dos rótulos apresentadas a seguir (tabelas \ref{tab:rot:seeds:nb},\ref{tab:rot:seeds:cart}, \ref{tab:rot:seeds:knn}) exibem os resultados de rotulação dos algoritmos Naive Bayes, CART e KNN, respectivamente, e no caso dos \textit{clusters}, cada linha determina um grupo: (1) \textit{Kama}, (2) \textit{Rosa} e (3) \textit{Canadian}. Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo, algumas configurações são necessárias para executar o algoritmo, como a do método de discretização do tipo EFD, e também a divisão dos valores dos atributos em faixas com ${R=3}$ para todos os atributos e variação ${V=0\%}$ 
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:seed:nb}
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclss[xcolor=table]{beamer}
 
-%Para ter maior clareza na escolha desses atributos foi inseridaa a tabela \ref{tab:matrelevancia:seeds:nb} que exibem os valores de correlação entre eles.
-
-
-Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do algoritmo, e através dela percebe-se que em 2 (dois) clusters obtiveram acurácia acima de 90\% (noventa porcento), indicando um rótulo que representa bem o \textit{cluster}. A partir das colunas  \textbf{Fora da Faixa} e Acurácia Parcial, pode-se ter um indicativo bom ou ruim do rótulo nos clusters, e  logo na linha representada pelo \textit{cluster} 1 (um), é exibido 14 (quatorze) elementos que não estão participando da faixa definida pelo rótulo, isso implica que aquele rótulo não consegue representar esses 14 (quatorze) elementos que fazem parte do \textit{cluster} 1 (um). Já na segunda linha que representa o segundo \textit{cluster} houve um erro de 6 (seis) elementos que não foram representados pelo rótulo, e o rótulo que mais representou o grupo foi o do \textit{cluster} 3 (três) o qual obteve um atributo com relevância de 95\% (noventa e cinco) entre os demais atributos, e com menor números de elementos fora da faixa totalizando os 5 (cinco) elementos. %entre os 70 (setenta) do \textit{cluster} 3.
-
+Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do algoritmo e através dela percebe-se que o pior rótulo foi no \textit{cluster} 1 com acurácia de 70\%, e com isso deixa de representar nove registros no total de setenta amostras, mas nos outros dois \textit{clusters} a acurácia sobe para 88\% com um erro de nove registros, porém, os rótulos nestes \textit{clusters} são diferentes, coincidindo somente os  valores das colunas \textbf{Fora da Faixa} e \textbf{Acurácia Parcial}.
 
 \begin{table}[!h]
 \centering
@@ -77,165 +74,31 @@ Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do
 \hline \hline
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & & \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%) \\ \hline \hline
-1                                            & area           & ] 12.78 $\sim$  16.14 ]   & 92\%                               & 14 & 80\% \\  \hline
-2                                            & area           & ] 16.14 $\sim$  21.18 ]   & 95\%                               & 6 & 91,4\%\\ \hline
+1                                            & Lkernel           & ] 5.357 $\sim$  5.826 ]   & 2.85\%                               & 21 & 70\% \\  \hline
+2                                            & lkgroove           & ] 5.791 $\sim$  6.55 ]   & 8.57\%                               & 9 & 87.15\%\\ \hline
 %\multirow{-2}{*}{2}                          & lkernel        & ] 5.826 $\sim$  6.675 ]   & 92\%                               & 6\\  \hline
-3                                            & perimetro      & [ 12.41 $\sim$  13.73 ]   & 95\%                               & 5 & 92,8\% \\ \hline \hline
+3                                            & wkernel      & [ 2.63 $\sim$  3.049 ]   & 4.28\%                               & 9 & 87.15\% \\ \hline \hline
 \end{tabular}
 }
 \end{table}
 
 
 
+%Na última coluna, \textbf{Acurácia Parcial}, apresenta em porcentagem o grau de acerto, por \textit{cluster}, dos registros que são representados pelo rótulo. Essa acurácia é possível, visto que, na descrição do \textit{dataset} da  \textit{UCI Machine Learning}\footnote{repositório de dados de onde está a base de dados. https://archive.ics.uci.edu/ml/datasets/seed} já é definido que cada grupo possui 70 (setenta) registros, e quais elementos fazem parte de cada \textit{cluster}. Já em uma análise desta tabela, os valores da coluna Relevância tiveram valore baixos, contudo, uma referência da qualidade do rótulos é diante dos elementos que ficam fora da faixa indicando o grau de representatividade do rótulo.
 
-Na última coluna, \textbf{Acurácia Parcial}, apresenta em porcentagem o grau de acerto, por \textit{cluster}, dos registros que são representados pelo rótulo. Essa acurácia é possível, visto que, na descrição do \textit{dataset} da  \textit{UCI Machine Learning}\footnote{repositório de dados de onde está a base de dados. https://archive.ics.uci.edu/ml/datasets/seed} já é definido que cada grupo possui 70 (setenta) registros, e quais elementos fazem parte de cada \textit{cluster}. Dessa forma o melhor rótulo ficou no \textit{cluster} 3 (três), \textit{Canadian}, que ficou com 92,8\% (noventa e dois vírgula oito porcento) de acurácia.
-
-Analisando a coluna \textbf{Rótulos} da tabela \ref{tab:rot:seeds:nb}, nota-se que o atributo \textbf{area} aparece tanto no  \textit{cluster} 1 (um) como também no \textit{cluster} 2 (dois). A rotulação de dados envolve não só o atributo mais relevante, como também, a faixa de valores, onde é contado os elementos que mais se repetem dentro do atributo. Nesse caso, pode-se observar que na coluna \textbf{Atributos}, mesmo possuindo  \textbf{area} como parte do rótulo, nos \textit{cluster}  1 (um) e 2 (dois), as faixa de valores diferem uma da outra, sendo considerados rótulos distintos, todavia os rótulos seriam iguais, somente se, a tupla, atributo e faixa, fossem iguais.
-
-
-%Caso os resultados gerados na tabela \ref{tab:matrelevancia:seeds:nb} expusessem clusters com rótulos ambíguos, poderia ser utilizado a variação de ${V}$. Quando houver ambiguidade dos rótulos, a seleção dos atributos que compõem os rótulos, acontecerá da diferença da variável ${V}$ em relação ao atributo de maior relevência do cluster. Caso essa variável tenha o valor alterado, os rótulos dos clusters poderão sofrer mudanças, pois poderia aumentar  ou diminuir o número de atributos dos rótulos, dependendo do valor inserido em ${V}$. Através da tabela \ref{tab:matrelevancia:seeds:nb} é possível analisar todos os valores de relevância gerados para os atributos e analisar qual valor pode-se inserir em ${V}$ para montar o rótulo.
-
-%Para exemplificar a utilização da variável ${V}$ pode-se utilizar como exemplo os dados do cluster 2 da tabela \ref{tab:matrelevancia:seeds:nb} e adotando ${V=3\%}$.  Neste exemplo não só o atributo de maior relevância, \textbf{area} com ${95.7\%}$ seria escolhido como rótulo, mas também o atributo \textbf{lkernel} com valor ${92.8\%}$, pois a diferença entre o valor de \textbf{area} com ${V}$ resultaria em ${92.7\%}$. Através dessa diferença todos os atributos que estivessem na faixa de ${92.7\%}$ a  ${95.7\%}$ seriam selecionados como atributos do rótulo.
-% 
-% \begin{table}[!h]
-%     
-%     \caption{Resultado da Correlação dos atributos pelo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}    
-%     \centering
-%    \small\addtolength{\tabcolsep}{+2pt}
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%                                 &   & \multicolumn{7}{c|}{Atributos}          \\ \cline{3-9} 
-%         \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 87.1   & 50.0      & 75.7 & 85.7 & 60.0   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 95.7 & 91.4   & 47.1      & 92.8 & 90.0 & 28.5  & 85.7  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 71.4      & 85.7 & 91.4 & 64.2  & 58.5  \\ \hline
-%     \end{tabular}
-%     \label{tab:matrelevancia:seeds:nb} 
-% \end{table}
-
-%A tabela \ref{tab:matrelevancia:seeds:nb} é um exemplo da matriz de atributos importantes gerada pela técnica de correlação entre atributos. É formada por clusters representado pelas linhas, e atributos representado por colunas, onde esses valores são representados em porcentagem (\%). 
-
-%Essa tabela é fruto da aplicação do Naive Bayes na base de dados \textbf{Seeds}, e a partir dela é retirado o(s) atributo(s) rótulo(s). Uma análise pode ser feita através desses dados e ajudar a definir um valor para a variável ${V}$ caso necessário. Percebe-se que algumas características são mais bem correlacionadas que  outras, através dos valores mais altos indicando o grau de relacionamento entre os atributos após a aplicação do algoritmo. 
-
-% 
-% \begin{table}[!h]
-% \caption{Resultado de 4 (quatro) execuções do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}
-%  %\begin{tabular}{ll}
-% %\rule{0}{50}
-% \centering
-%    \subfloat[1a. Execução]{ \label{tab:execucoes:seed:nb:1exec}
-%    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%      \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 1a. Execução}     &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 87.1   & 48.5      & 77.1 & 82.8 & 57.1   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 94.2 & 90.0   & 45.7      & 92.8 & 90.0 & 38.5  & 87.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 91.4 & 64.2  & 60.0  \\ \hline
-%       \end{tabular}
-%     %}
-%     }
-%  %&
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  
-%    \subfloat[2a. Execução]{ \label{tab:execucoes:seed:nb:2exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt}
-%    \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%              {\tiny 2a. Execução }       &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 87.1   & 47.1      & 77.1 & 87.1 & 60.0   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 94.2 & 90.0   & 47.1      & 92.8 & 91.4 & 32.8  & 87.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 92.8 & 64.2  & 60.0  \\ \hline
-%       \end{tabular}
-%   %}
-%   %\\  [8ex]
-%     }
-%     
-%     \subfloat[3a. Execução]{ \label{tab:execucoes:seed:nb:3exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%    \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%           {\tiny 3a. Execução}     &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 94.2 & 85.7   & 48.5      & 77.1 & 82.8 & 61.4   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 92.8 & 90.0   & 50.0      & 92.8 & 90.0 & 32.8  & 87.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 92.8 & 64.2  & 60.0  \\ \hline
-%    \end{tabular}
-%     }
-%     %&
-%     
-%     \subfloat[4a. Execução]{  \label{tab:execucoes:seed:nb:4exec}
-%        \small\addtolength{\tabcolsep}{-2pt}
-%         \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 4a. Execução }   &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 91.4 & 88.5   & 54.2      & 75.7 & 85.7 & 62.8   & 61.4   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 95.7 & 90.0   & 50.0      & 92.8 & 90.0 & 38.5  & 85.7  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 94.2 & 64.2  & 57.1  \\ \hline
-%         \end{tabular}
-%    %\\
-%     }
-%     
-%  %\end{tabular}
-%  \label{tab:execucoes:seed:nb}
-% \end{table}
-
-%% TESTE DE CRIAÇÃO DE TABELA
-% \begin{table}[!h]
-% \caption{Resultado de 4 (quatro) execuções do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}
-%  \centering
-%  \subfloat[Tabela A]{
-%  
-%  \small\addtolength{\tabcolsep}{-5pt}
-%  \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 1a. Execução}     &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 87.1   & 48.5      & 77.1 & 82.8 & 57.1   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 94.2 & 90.0   & 45.7      & 92.8 & 90.0 & 38.5  & 87.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 91.4 & 64.2  & 60.0  \\ \hline
-%       \end{tabular}
-%  }
-%  
-%  %\hspace{3cm}
-%  
-%  \subfloat[Tabela B]{
-%  
-%  \small\addtolength{\tabcolsep}{-5pt}
-%  \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 1a. Execução}     &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 87.1   & 48.5      & 77.1 & 82.8 & 57.1   & 65.7   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 94.2 & 90.0   & 45.7      & 92.8 & 90.0 & 38.5  & 87.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 72.8      & 85.7 & 91.4 & 64.2  & 60.0  \\ \hline
-%       \end{tabular}
-%  }
-%  
-% \end{table}
-
-
-
-%Para provar empiricamente os resultados, na tabela \ref{tab:execucoes:seed:nb} é exposto  4 (quatro) execuções do Algoritmo Naive Bayes. Pode-se constatar que mesmo havendo algumas alterações nos valores dos atributos em cada execução, a correlação entre os atributos não oferece muita alteração. Como exemplo, o atributo \textbf{area} nos clusters 1 e 2, possuem o melhor grau de correlacionamento em seus grupos, mesmo nas quatro execuções, como mostrado na tabela \ref{tab:execucoes:seed:nb}.
-
-%A informação passada pela tabela \ref{tab:execucoes:seed:nb} tem a intenção de mostrar para o analista que estiver aplicando a rotulação de dados, como seus atributos se comportam em cada cluster, ao utilizar  o método de rotulação de dados.
+A última coluna, \textbf{Acurácia Parcial}, apresenta em porcentagem o grau de acerto, por \textit{cluster}, dos registros que são representados pelo rótulo. Analisando-se a coluna \textbf{Relevância} da tabela \ref{tab:rot:seeds:nb} nota-se que os valores são baixos, contudo, uma vez escolhido o atributo rótulo o grau de confiabilidade passa a ser o número de erros do rótulo, pois quanto menores são os erros mais representabilidade possui o rótulo. Dessa forma, o menor valor de acurácia ficou em 70\% (setenta por cento) no \textit{cluster} 1, indicando que dentre as setenta amostras, 21 (vinte e um) não são representadas pelo rótulo, e nos outros \textit{clusters} acima de 87\% (oitenta e sete por cento).
 
 Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds} com seus rótulos: 
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$  
- \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]) \} }$
- \item ${r_{c_3}=\{ (perimetro, [12.41 \sim 13.73])\} }$
+ \item ${r_{c_1}=\{ (Lkernel, ] 5.357 \sim  5.826 ]) \} }$  
+ \item ${r_{c_2}=\{ (lkgroove, ] 5.791 \sim  6.55]) \} }$
+ \item ${r_{c_3}=\{ (wkernel, [2.63 \sim  3.049])\} }$
 \end{itemize}
 
 
 \subsection{Classification and Regression Trees - CART}\label{cap:resultados:ssec:seed:cart}
 
-Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo anterior, tem-se o resultado da aplicação do algoritmo supervisionado na base Seeds. O CART é utilizado pela toolbox do MATLAB como algoritmo de classificação de árvore de decisão. 
+Na tabela \ref{tab:rot:seeds:cart} que segue o mesmo modelo da tabela visto anteriormente e apresenta o resultado da aplicação do algoritmo supervisionado na base Seeds. O CART é utilizado pela toolbox do MATLAB como algoritmo de classificação de árvore de decisão. 
 %O que se pretende fazer é seguir a pesquisa e testar a base de dados com um paradigma  diferente para fazer rotulação nos clusters.
 
 \begin{table}[!h]
@@ -246,120 +109,30 @@ Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo anterior, tem-se o 
 \begin{tabular}{llcrcc}\hline \hline
 
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
-Parcial                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
 %                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          & 14 \\  
-1                                            & perimetro      & [ 13.73 $\sim$ 15.18 ]          & 94\%          & 14 & 80\%\\ \hline
-                                             & area           & ] 16.14 $\sim$  21.18 ]          & 98\%         & 6 & 91\%\\ 
-\multirow{-2}{*}{2}                          & perimetro      & ] 15.18 $\sim$  17.25 ]          & 98\%         & 7 & 90\% \\  \hline
-%                                             & perimetro      & [ 12.41 $\sim$  13.73 ]         & 95\%          & 5 \\
-3                                            & wkernel        & [ 2.63 $\sim$  3.049 ]         & 97\%           & 9 & 87,1\%\\ \hline \hline
+1                          & perimetro      & ] 13.73 $\sim$ 15.18 ]          & 5.71\%          & 14 & 80\%\\ \hline
+2                          & lkgroove      & ]5.791 $\sim$   6.55 ]          & 5.71\%         & 9 & 87.15\% \\  \hline
+3                          & perimetro        & [ 12.41 $\sim$  13.73 ]         & 4.28\%           & 5 & 92.8\%\\ \hline \hline
 \end{tabular}}
 \end{table}
 
-O resultado desse algoritmo,  teve escolhas dos atributos de cada rótulo dos \textit{clusters}  diferentes ao do Naive Bayes visto anteriormente, e a coluna \textbf{Fora da Faixa} teve valores um pouco maiores em alguns \textit{clusters}, que por consequência houve uma acurácia menor entre os \textit{clusters}. 
+%Os rótulos encontrados para cada cluster foi somente uma tupla (atributo/faixa) para cada grupo de dados, e coincidindo o mesmo resultado no \textit{cluster} 2 ao Naive Bayes visto anteriormente. Já nos outros rótulos, os mesmo com rótulos diferentes alcançaram acurácias melhores.
 
-Logo, na tabela \ref{tab:execucoes:seed:cart} é exibida a matriz de atributos importantes, a qual possui os valores de correlação entre os demais atributos, como também os valores de correlação dos atributos rótulos, destacados. Essas informações ajudam a entender como o atributo rótolo é escolhido, podendo ser um ou mais atributos. 
-\begin{table}[!h]
-\centering
-\caption{Matriz de Atributos Importantes do algoritmo CART na base Seeds}
-\label{tab:execucoes:seed:cart}
-\scalebox{0.8}{
-\begin{tabular}{|cl|c|c|c|c|c|c|c|}
-        \hline \hline
-           {\tiny  }      &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-       \multicolumn{1}{|l}{}                            &   & area    & perimetro & compacteness & Lkernel & Wkernel & asymetry & lkgroove \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 91.4 & \textbf{94.2}   & 58.5      & 80.0 & 74.2 & 55.7   & 60.0   \\ \cline{2-9} 
-        \multicolumn{1}{|c|}{}                           & 2 & \textbf{98.5} & \textbf{98.5}   & 50.0      & 90.0 & 88.5 & 41.4  & 90.0  \\ \cline{2-9} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 92.8 & 95.7   & 80.0      & 88.5 & \textbf{97.1} & 55.7  & 77.1  \\ \hline
-      \end{tabular}}
-\end{table}   
-
-No \textit{cluster} 2 (dois) houve um empate no valor de relevância de dois atributos, implicando na escolha de ambos para integrar o rótulo. Isso acontece quando na execução do algoritmo, na etapa da escolha do maior valor do atributo para ser rótulo na matriz de atributos importantes (tabela \ref{tab:execucoes:seed:cart}), há no mesmo \textit{cluster}, valores de atributos iguais, não importando a quantidade de atributos com valores ambíguos. 
- 
-    
-%Já na tabela \ref{tab:execucoes:seed:cart} são exibidas algumas execuções do algoritmo CART na base de dados. O mesmo comportamento entre execuções pode ser visto no algoritmo de paradigma estatístico, subseção \ref{cap:resultados:ssec:seed:nb}, realizado nessa pesquisa. O  comportamento de ambos os algoritmos foram bem semelhantes, como também, seus valores nas execuções que não se alteraram muito a cada iteração.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% \begin{table}[!h]
-% \caption{Resultado de 4 (quatro) execuções do algoritmo Naive Bayes; Legenda dos Atributos: (A)area, (B)perimetro, (C)compacteness, (D)Lkernel, (E)Wkernel, (F)asymetry, (G)lkgroove}
-%  %\begin{tabular}{ll}
-% %\rule{0}{50}
-% \centering
-%    \subfloat[1a. Execução]{ \label{tab:execucoes:seed:cart:1exec}
-%    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%            {\tiny  1a. Execução}      &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 91.4 & 94.2   & 58.5      & 80.0 & 74.2 & 55.7   & 60.0   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 50.0      & 90.0 & 88.5 & 41.4  & 90.0  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 92.8 & 95.7   & 80.0      & 88.5 & 97.1 & 55.7  & 77.1  \\ \hline
-%       \end{tabular}
-%     %}
-%     }
-%  %&
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  
-%    \subfloat[2a. Execução]{ \label{tab:execucoes:seed:cart:2exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt}
-%   \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%          {\tiny  2a. Execução} &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 &  91.4 & 94.2   & 62.8      & 78.5 & 81.4 & 61.4   & 57.1   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 54.2      & 90.0 & 88.5 & 40.0  & 90.0  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 92.8 & 95.7   & 80.0      & 88.5 & 97.1 & 60.0  & 77.1  \\ \hline
-%       \end{tabular}
-%   %}
-%   %\\  [8ex]
-%     }
-%     
-%     \subfloat[3a. Execução]{ \label{tab:execucoes:seed:cart:3exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%    \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%           {\tiny  3a. Execução}   &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 93.8 & 93.6   & 61.8      & 83.2 & 89.2 & 53.2   & 71.0   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 98.2 & 98.3   & 61.9      & 93.0 & 90.5 & 25.2  & 90.1  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 95.5 & 96.3   & 82.4      & 90.9 & 97.7 & 59.3  & 77.0  \\ \hline
-%    \end{tabular}
-%     }
-%     %&
-%     
-%     \subfloat[4a. Execução]{  \label{tab:execucoes:seed:cart:4exec}
-%        \small\addtolength{\tabcolsep}{-2pt}
-%    \begin{tabular}{|cl|c|c|c|c|c|c|c|}
-%         \hline \hline
-%          {\tiny 4a. Execução}       &   & \multicolumn{7}{c|}{Atributos}                                               \\ \cline{3-9} 
-%        \multicolumn{1}{|l}{}                            &   & A    & B & C & D & E & F & G \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 92.8 & 94.2   & 60.0      & 80.0 & 84.2 & 64.2   & 60.0   \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 98.5 & 98.5   & 47.1      & 91.4 & 90.0 & 42.8  & 88.5  \\ \cline{2-9} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 91.4 & 95.7   & 80.0      & 88.5 & 97.1 & 55.7  & 77.1  \\ \hline
-%    \end{tabular}
-%    %\\
-%     }
-%     
-%  %\end{tabular}
-%  \label{tab:execucoes:seed:cart}
-% \end{table}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Analisando os rótulos encontrados percebe-se que as acurácias do CART são melhores aos do algoritmo visto anteriormente, e na coluna \textbf{Atributos} há uma repetição do \textbf{perimetro} em dois clusters: \textit{Kama} e \textit{Canadian}. Na situação apresentada na tabela \ref{tab:rot:seeds:cart} esses atributos repetidos não representam as mesmas amostras na base de dados, porque mesmo com o rótulo possuindo o mesmo atributo as faixas de cada atributo são diferentes tornando-os rótulos distintos.
 
 O resultado da rotulação utilizando o algoritmo CART na base de dados \textbf{Seeds} tem como rótulos: 
 \begin{itemize}[noitemsep]
  \item ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$
- \item ${r_{c_2}=\{ (area, ]16.14 \sim 21.18]), (perimetro, ]15.18 \sim 17.25]) \} }$
- \item ${r_{c_3}=\{ (wkernel, [2.63 \sim 3.049]) \} }$
+ \item ${r_{c_2}=\{ (lkgroove, ] 5.791 \sim  6.55]) \} }$
+ \item ${r_{c_3}=\{ (perimetro, [12.41 \sim  13.73])\} }$
 \end{itemize}
 
 
 \subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:seed:knn}
 
-Na tabela \ref{tab:rot:seeds:knn} aponta o \textit{cluster} 1 com o maior número de erros, diferente dos dois outros clusters, e diferente dos outros resultados o KNN apresenta no \textit{cluster} 3 um rótulo composto por dois atributos, que mesmo somado os erros, não ultrapassa os erros do \textit{cluster} 1.
-
+Na tabela \ref{tab:rot:seeds:knn} exibe o resultado da aplicação do KNN na base Seeds e os rótulos encontrados são os mesmos do CART com uma diferença somente nos dados de relevância do atributo, o que não muda o grau de representatividade do rótulo. 
+\newpage
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
@@ -368,319 +141,63 @@ Na tabela \ref{tab:rot:seeds:knn} aponta o \textit{cluster} 1 com o maior númer
 \begin{tabular}{llcrcc}\hline \hline
 
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
-Parcial                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
 %                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          & 14 \\  
-1                                            & area      & ] 12.78 $\sim$ 16.14 ]          & 95\%          & 14 & 80\%\\ \hline
-2                                            & Lkernel      & ] 5.83 $\sim$ 6.67 ]          & 94\%          & 6 & 91,4\%\\ \hline
-                                             & area           & [ 10.59 $\sim$  12.78 ]          & 94\%         & 8 & 88\% \\ 
-\multirow{-2}{*}{3}                          & perimetro        & [ 12.41 $\sim$  13.73 ]         & 94\%           & 5 & 92\% \\  \hline \hline
-
+1                          & perimetro      & ] 13.73 $\sim$ 15.18 ]          & 12.85\%          & 14 & 80\%\\ \hline
+2                          & lkgroove      & ]5.791 $\sim$   6.55 ]          & 7.14\%         & 9 & 87.15\% \\  \hline
+3                          & perimetro        & [ 12.41 $\sim$  13.73 ]         & 5.71\%           & 5 & 92.8\%\\ \hline \hline
 \end{tabular}}
 \end{table}
 
 O resultado da rotulação utilizando o algoritmo KNN na base de dados \textbf{Seeds} tem como rótulos: 
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$
- \item ${r_{c_2}=\{ (Lkernel, ]5.83 \sim 6.67]) \} }$
- \item ${r_{c_3}=\{ (area, [10.59 \sim 12.78]), (perimetro, [12.41 \sim 13.73]) \} }$
- 
+ \item ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$
+ \item ${r_{c_2}=\{ (lkgroove, ] 5.791 \sim  6.55]) \} }$
+ \item ${r_{c_3}=\{ (perimetro, [12.41 \sim  13.73])\} }$
 \end{itemize}
 
 
 \subsection{Comparativo entre Algoritmos na Base de Dados Seeds} \label{cap:resultados:ssec:compalgoritmos:seeds}
+O CART e KNN foram dentre os três algoritmos, os que obtiveram os rótulos com melhores acurácias, que por sua vez tiveram os mesmos rótulos em todos os três grupos: \textit{Kama}, \textit{Rosa} e \textit{Canadian}. Analisando-se os resultados: o Naive Bayes no \textit{cluster} 1, ${r_{c_1}=\{ (Lkernel, ] 5.357 \sim  5.826 ]) \} }$, foi o que obteve maior número de elementos fora da faixa, isso quer dizer que no total de setenta amostras de dados no grupo, vinte e um ficaram de fora do rótulo, resultando na menor acurácia entre os três algoritmos que tiveram quatorze amostras cada um; no \textit{cluster} 2 os três algoritmos coincidiram os resultados dos rótulos com nove erros cada; e no \textit{cluster} 3 (\textit{Canadian}) mais uma vez CART e KNN tiveram rótulos com acurácias mais altas com número de erros iguais a cinco registros nos dois algoritmos, comparado com nove registros  do Naive Bayes.
 
-Na aplicação do algoritmo KNN percebe-se coincidir o resultado somente no \textit{cluster} 1 com o Naive Bayes, não ocorrendo resultados semelhantes com o CART, e a acurácia nos três algoritmos foram a mesma. Considerando o rótulo do \textit{cluster} 2, os resultados ficaram diferentes, mas no KNN e Naive Bayes tiveram o mesmo poder de representatividade  deste \textit{cluster}, deixando de representar somente 6 (seis) elementos dos 70, do grupo \textit{Rosa} (\textit{cluster} 2), e no CART coincidiu um atributo do rótulo do Naive Bayes, mas apareceu outro atributo componto o rótulo. Já no \textit{cluster} 3 houve resultado parecido com o Naive Bayes, mas no KNN foi adicionado o  atributo \textbf{area} para compor o rótulo.
+Para compreender melhor a representatividade do rótulo nos \textit{clusters} foi posto alguns gráficos apresentando o comportamento da base de dados em relação a alguns atributos. Com estes gráficos é possível visualizar se o rótulo está de fato representando um determinado grupo. Os gráficos são dispostos em duas dimensões e o atributo referente a cada eixo foi escolhido para melhor representar a amostra.
 
+O gráfico da figura \ref{fig:grafico_NB_cluster1_lkernel_lkgroove_seeds} contém uma relação dos atributos \textbf{Lkernel} com \textbf{lkgroove} e representa a amostra de dados dos três grupos: \textit{Kama}, \textit{Rosa} e \textit{Canadian}, contudo o objetivo deste gráfico é apresentar o comportamento do rótulo  no Naive Bayes, ${r_{c_1}=\{ (Lkernel, ] 5.357 \sim  5.826 ]) \} }$ no \textit{cluster} 1, e poder visualizar a representatividade do rótulo no grupo.
 
-Para o melhor compreensão do rótulo do \textit{cluster} 1, desse e dos demais  algoritmos, será exibida a tabela \ref{tab:analise:seeds:cluster1}, representando os registros do grupo \textit{Kama}. Como os resultados de rotulação do KNN e Naive Bayes foram iguais no \textit{cluster} 1, a comparação será com os erros do KNN e CART (linhas destacadas), e a partir dessa tabela, pode-se acompanhar quais são os registros que são representados pelo rótulo e os que não são representados (Fora da Faixa). 
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.9]{figs/grafico_NB_cluster1_lkernel_lkgroove_seeds.png}
+        \caption{Gráfico da disposição de elementos da Base Seeds entre os eixos \textbf{Lkernel} e \textbf{lkgroove}} \label{fig:grafico_NB_cluster1_lkernel_lkgroove_seeds}
+\end{figure}
 
+Na situação da figura \ref{fig:grafico_NB_cluster1_lkernel_lkgroove_seeds} , pode-se perceber que o grupo \textit{kama} (cluster 1) contém alguns erros, pois logo no início da faixa ${ (Lkernel, ] 5.357 \sim  5.826 ]) }$ é fácil visualizar que alguns dados  ficam fora da faixa indicando que não estão sendo representados pelo rótulo ocasionando os erros, contudo é possível ter uma impressão generalizada de todos os registros que o rótulo representa através dos valores de intervalo do rótulo. 
 
-\begin{table}[!ht]
-\caption{Parte dos dados pertencentes ao \textit{cluster} 1 (\textit{Kama}) - da base Seeds. No total são 210 registros os quais as linha de 1 a 70 são \textit{Kama}, 71 a 140 são Rosa e 141 a 210 são \textit{Canadian} }
- %\begin{tabular}{ll}
-%\rule{0}{50}
-\centering
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{area}, representando os registros do grupo \textit{Kama} (\textit{cluster} 1)]{ \label{tab:analise:seeds:cluster1:bayes}
-   %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt} 
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-& \textbf{area} & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-1 & \textbf{11.23} & 12.63 & 0.884 & 4.902 & 2.879 & 2.269 & 4.703\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-2 & \textbf{11.42} & 12.86 & 0.8683 & 5.008 & 2.85 & 2.7 & 4.607\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-3 & \textbf{12.08} & 13.23 & 0.8664 & 5.099 & 2.936 & 1.415 & 4.961\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-4 & \textbf{12.11} & 13.47 & 0.8392 & 5.159 & 3.032 & 1.502 & 4.519\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-5 & \textbf{12.36} & 13.19 & 0.8923 & 5.076 & 3.042 & 3.22 & 4.605\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-6 & \textbf{12.72} & 13.57 & 0.8686 & 5.226 & 3.049 & 4.102 & 4.914\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-7 & \textbf{12.73} & 13.75 & 0.8458 & 5.412 & 2.882 & 3.533 & 5.067\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-8 & \textbf{12.74} & 13.67 & 0.8564 & 5.395 & 2.956 & 2.504 & 4.869\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-9 & \textbf{12.78} & 13.57 & 0.8716 & 5.262 & 3.026 & 1.176 & 4.782\\ \hline 
-10 & \textbf{12.88} & 13.5 & 0.8879 & 5.139 & 3.119 & 2.352 & 4.607\\ \hline 
-... & ... & ... & ... & ... & ... & ... & ...\\ \hline 
-65 & \textbf{16.14} & 14.99 & 0.9034 & 5.658 & 3.562 & 1.355 & 5.175\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-66 & \textbf{16.19} & 15.16 & 0.8849 & 5.833 & 3.421 & 0.903 & 5.307\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-67 & \textbf{16.2} & 15.27 & 0.8734 & 5.826 & 3.464 & 2.823 & 5.527\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-68 & \textbf{16.44} & 15.25 & 0.888 & 5.884 & 3.505 & 1.969 & 5.533\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-69 & \textbf{16.63} & 15.46 & 0.8747 & 6.053 & 3.465 & 2.04 & 5.877\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-70 & \textbf{17.08} & 15.38 & 0.9079 & 5.832 & 3.683 & 2.956 & 5.484\\ \hline  
-
-\end{tabular}
-    %}
-    }
- %&
- %\hspace{1cm} %altera o espaçamento entre as tabelas
- \hspace{1cm}
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{perimetro}  simulando os registros do \textit{cluster} 1]{ \label{tab:analise:seeds:cluster1:cart}
- %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt}
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-& area & \textbf{perimetro} & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-1 & 11.23 &\textbf{ 12.63} & 0.884 & 4.902 & 2.879 & 2.269 & 4.703\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-2 & 11.42 & \textbf{12.86} & 0.8683 & 5.008 & 2.85 & 2.7 & 4.607\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-3 & 12.36 & \textbf{13.19} & 0.8923 & 5.076 & 3.042 & 3.22 & 4.605\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-4 & 12.08 & \textbf{13.23} & 0.8664 & 5.099 & 2.936 & 1.415 & 4.961\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-5 & 12.11 & \textbf{13.47} & 0.8392 & 5.159 & 3.032 & 1.502 & 4.519\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-6 & 12.88 & \textbf{13.5} & 0.8879 & 5.139 & 3.119 & 2.352 & 4.607\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-7 & 13.16 & \textbf{13.55} & 0.9009 & 5.138 & 3.201 & 2.461 & 4.783\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-8 & 12.72 & \textbf{13.57} & 0.8686 & 5.226 & 3.049 & 4.102 & 4.914\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-9 & 12.78 & \textbf{13.57} & 0.8716 & 5.262 & 3.026 & 1.176 & 4.782\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-10 & 12.74 & \textbf{13.67} & 0.8564 & 5.395 & 2.956 & 2.504 & 4.869\\ \hline 
-11 & 12.73 & \textbf{13.75} & 0.8458 & 5.412 & 2.882 & 3.533 & 5.067\\ \hline 
-... & ... & ... & ... & ... & ... & ... & ...\\ \hline 
-66 & 16.19 & \textbf{15.16} & 0.8849 & 5.833 & 3.421 & 0.903 & 5.307\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-67 & 16.44 & \textbf{15.25} & 0.888 & 5.884 & 3.505 & 1.969 & 5.533\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-68 & 16.2 & \textbf{15.27} & 0.8734 & 5.826 & 3.464 & 2.823 & 5.527\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-69 & 17.08 & \textbf{15.38} & 0.9079 & 5.832 & 3.683 & 2.956 & 5.484\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-70 & 16.63 & \textbf{15.46} & 0.8747 & 6.053 & 3.465 & 2.04 & 5.877\\ \hline 
-\end{tabular}
-  %}
-  %\\  [8ex]
-    }
-    
-    %&
-    
- %\end{tabular}
- \label{tab:analise:seeds:cluster1}
-\end{table}
-
-
-No resultado do algoritmo KNN o rótulo foi definido pelo atributo \textbf{area} e intervalo de ]12.78 $\sim$ 16.14], como pode ser visto nos registros na tabela \ref{tab:analise:seeds:cluster1:bayes} que estão ordenados de acordo com o atributo, e todos os 14 (quatorze) registros que não são representados pelo rótulo estão destacados. Logo na tabela \ref{tab:analise:seeds:cluster1:cart} exibe os registros ordenados em razão do atributo \textbf{perimetro}, o qual é faz parte do rótulo do algoritmo CART no \textit{cluster} 1. Mesmos tendo o número de erros iguais, não pode-se afirmar que são os mesmos registros, e consequentemente os rótulos reprsentam registros diferentes. Ao se analisar as tabelas é possível verificar que na tabela \ref{tab:analise:seeds:cluster1:bayes} o registro da linha 7 está fora da faixa, então é um registro que não é representado pelo rótulo ${r_{c_1}=\{ (area, ]12.78 \sim 16.14]) \} }$ do KNN, mas esse mesmo registros é sim, representado pelo rótulo ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$ do CART, e o mesmo acontece no registro da linha 66. 
-Nessa base Seeds no grupo Kama (\textit{cluster} 1) a acurácia se manteve a mesma, pois o número de erros foram iguais, e o que vai diferenciar são os registros que são ou não representados pelos rótulos encontrados.
-\newpage
-
-A situação do \textit{cluster} 2 entre os três algoritmos pode ser explicada melhor através das tabelas \ref{tab:analise:seeds:cluster2:knn}, \ref{tab:analise:seeds:cluster2:bayes} e \ref{tab:analise:seeds:cluster2:cart}, as quais contêm amostras de dados em ordem crescente dos valores dos atributos rótulo  do \textit{cluster} 2 (\textit{Rosa}). Na tabela \ref{tab:rot:seeds:knn} o atributo rótulo do \textit{cluster} 2 é \textbf{Lkernel}, com faixa ] 5.83 $\sim$ 6.67 ], e observando a tabela \ref{tab:analise:seeds:cluster2:knn} ordenada pelo atributo \textbf{Lkernel} é fácil observer que os 6 (seis) primeiros registros (linha 71 a 76), destacados, estão fora da faixa do rótulo, e são exatamente os 6 (seis) erros exibidos na tabela \ref{tab:rot:seeds:knn}.
-No resultado do Naive Bayes (tabela \ref{tab:rot:seeds:nb}) que possui o atributo rótulo \textbf{area} no \textit{cluster} 2 com faixa ] 16.14 $\sim$  21.18 ], possui também 6 (seis) registros que não são representados pelo rótulo, e podem ser vistos na tabela \ref{tab:analise:seeds:cluster2:bayes}, nas linha 71 a 76. No exemplo desta base Seeds no \textit{cluster} 2, houve uma coincidência no número de erros dos rótulos, mas os registros não são os mesmos nos dois algoritmos, e mesmo com os registros diferentes, suas acurácias ficaram iguais por causa da quantidade erros iguais.
-
-Diferente desses dois algoritmos (Naive Bayes e KNN) o CART obteve um resultado diferente, pois o rótulo é composto por dois atributos e suas referidas faixas de valores. A tabela \ref{tab:analise:seeds:cluster2:cart} está ordenada pelos valores do atributo \textbf{area}, e em destaque, as linhas 71 a 76 são os registros que não são representados pela faixa do atributo \textbf{perimetro}.  Como o rótulo tem mais de um atributo, terá que ser verificado também o erro do rótulo \textbf{area}, pois com  a interseção dos erros dos atributos, area e perimetro, é possível verificar quais registros são representados ou não pelo rótulo. Então, nas linhas 71 a 76 da tabela \ref{tab:analise:seeds:cluster2:cart}, coincide com os dois atributos rótulos, e a linha 79 faz parte do registro de exclusão do atributo \textbf{perimetro}, mas como não faz parte da faixa de exclusão do atributo \textbf{area}, então o registro é representado pelo rótulo, permanecendo e fazendo com que somente 6 elementos não sejam representados pelo rótulo do \textit{cluster} 2.
-
-% \begin{table}[!ht]
-% \centering 
-% \begin{tabular}{c|c|c|c|c|c|c|c|}
-% \hline
-% 
-% & area & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-% \rowcolor[HTML]{EFEFEF} 
-% 71 & 15.99 & 14.89 & 0.9064 & \textbf{5.363} & 3.582 & 3.336 & 5.144 \\ \hline 
-% \rowcolor[HTML]{EFEFEF} 
-% 72 & 15.38 & 14.66 & 0.899 & \textbf{5.477} & 3.465 & 3.6 & 5.439 \\ \hline 
-% \rowcolor[HTML]{EFEFEF} 
-% 73 & 16.41 & 15.25 & 0.8866 & \textbf{5.718} & 3.525 & 4.217 & 5.618 \\ \hline 
-% \rowcolor[HTML]{EFEFEF} 
-% 74 & 16.17 & 15.38 & 0.8588 & \textbf{5.762} & 3.387 & 4.286 & 5.703 \\ \hline 
-% \rowcolor[HTML]{EFEFEF} 
-% 75 & 15.56 & 14.89 & 0.8823 & \textbf{5.776} & 3.408 & 4.972 & 5.847 \\ \hline 
-% \rowcolor[HTML]{EFEFEF} 
-% 76 & 17.55 & 15.66 & 0.8991 & \textbf{5.791} & 3.69 & 5.366 & 5.661 \\ \hline 
-% 77 & 15.6 & 15.11 & 0.858 & \textbf{5.832} & 3.286 & 2.725 & 5.752 \\ \hline 
-% 78 & 16.16 & 15.33 & 0.8644 & \textbf{5.845} & 3.395 & 4.266 & 5.795 \\ \hline 
-% ... & ... & ... & ... & ... & ... & ... & .. \\ \hline 
-% 140 & 19.94 & 16.92 & 0.8752 & \textbf{6.675} & 3.763 & 3.252 & 6.55 \\ \hline 
-% 
-% \end{tabular}
-% %}
-% \caption{Tabela em ordem crescente das distâncias euclidianas encontradas do objeto a que se deseja classificar para os outros objetos da amostra, de acordo com as setas da figura \ref{fig:knn}}
-% \label{tab:exemploKNN}
-% \end{table}
-
-\newpage
-\begin{table}[!ht]
-\caption{Parte dos dados pertencentes ao \textit{cluster} 2 (\textit{Rosa}) - da base Seeds. No total são 210 registros os quais 1 a 70 são \textit{Kama}, 71 a 140 são Rosa e 141 a 210 são \textit{Canadian} }
- %\begin{tabular}{ll}
-%\rule{0}{50}
-\centering
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{Lkernel}, exibindo os 8 primeiro registros e simulando até o último, do \textit{cluster} 2]{ \label{tab:analise:seeds:cluster2:knn}
-   %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt} 
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-& area & perimetro & compacteness & \textbf{Lkernel} & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-71 & 15.99 & 14.89 & 0.9064 & \textbf{5.363} & 3.582 & 3.336 & 5.144 \\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-72 & 15.38 & 14.66 & 0.899 & \textbf{5.477} & 3.465 & 3.6 & 5.439 \\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-73 & 16.41 & 15.25 & 0.8866 & \textbf{5.718} & 3.525 & 4.217 & 5.618 \\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-74 & 16.17 & 15.38 & 0.8588 & \textbf{5.762} & 3.387 & 4.286 & 5.703 \\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-75 & 15.56 & 14.89 & 0.8823 & \textbf{5.776} & 3.408 & 4.972 & 5.847 \\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-76 & 17.55 & 15.66 & 0.8991 & \textbf{5.791} & 3.69 & 5.366 & 5.661 \\ \hline 
-77 & 15.6 & 15.11 & 0.858 & \textbf{5.832} & 3.286 & 2.725 & 5.752 \\ \hline 
-78 & 16.16 & 15.33 & 0.8644 & \textbf{5.845} & 3.395 & 4.266 & 5.795 \\ \hline 
-... & ... & ... & ... & ... & ... & ... & .. \\ \hline 
-140 & 19.94 & 16.92 & 0.8752 & \textbf{6.675} & 3.763 & 3.252 & 6.55 \\ \hline 
-
-\end{tabular}
-    %}
-    }
- %&
- %\hspace{1cm} %altera o espaçamento entre as tabelas
- \hspace{1cm}
-   \subfloat[Amostra de dados ordenados em relação ao atributo \textbf{area}, exibindo os 8 primeiro registros e simulando até o último, do \textit{cluster} 2]{ \label{tab:analise:seeds:cluster2:bayes}
- %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt}
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-& \textbf{area} & perimetro & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-71 & \textbf{15.38} & 14.66 & 0.899 & 5.477 & 3.465 & 3.6 & 5.439\\ \hline 
-\rowcolor[HTML]{EFEFEF}  
-72 & \textbf{15.38} & 14.9 & 0.8706 & 5.884 & 3.268 & 4.462 & 5.795\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-73  & \textbf{15.56} & 14.89 & 0.8823 & 5.776 & 3.408 & 4.972 & 5.847\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-74 & \textbf{15.57} & 15.15 & 0.8527 & 5.92 & 3.231 & 2.64 & 5.879\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-75 & \textbf{15.6} & 15.11 & 0.858 & 5.832 & 3.286 & 2.725 & 5.752\\ \hline 
-\rowcolor[HTML]{EFEFEF} 
-76 & \textbf{15.99} & 14.89 & 0.9064 & 5.363 & 3.582 & 3.336 & 5.144\\ \hline 
-77 & \textbf{16.16} & 15.33 & 0.8644 & 5.845 & 3.395 & 4.266 & 5.795\\ \hline 
-78 & \textbf{16.17} & 15.38 & 0.8588 & 5.762 & 3.387 & 4.286 & 5.703\\ \hline 
-... & ... & ... & ... & ... & ... & ... & ...\\ \hline 
-140 & \textbf{21.18} & 17.21 & 0.8989 & 6.573 & 4.033 & 5.78 & 6.231\\ \hline 
-
-\end{tabular}
-  %}
-  %\\  [8ex]
-    }
-    
-    \subfloat[Amostra de dados exibindo os 11 primeiro registros e simulando até o último, do \textit{cluster} 2]{ \label{tab:analise:seeds:cluster2:cart}
- %\scalebox{0.5}{%
-   \small\addtolength{\tabcolsep}{-2pt} 
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-n. & \textbf{area} & \textbf{perimetro} & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-71 & \textbf{15.38} & 14.66 & 0.899 & 5.477 & 3.465 & 3.6 & 5.439\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-72 & \textbf{15.38} & 14.9 & 0.8706 & 5.884 & 3.268 & 4.462 & 5.795\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-73 & \textbf{15.56} & 14.89 & 0.8823 & 5.776 & 3.408 & 4.972 & 5.847\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-74 & \textbf{15.57} & 15.15 & 0.8527 & 5.92 & 3.231 & 2.64 & 5.879\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-75 & \textbf{15.6} & 15.11 & 0.858 & 5.832 & 3.286 & 2.725 & 5.752\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-76 & \textbf{15.99} & 14.89 & 0.9064 & 5.363 & 3.582 & 3.336 & 5.144\\ \hline 
-77 & \textbf{16.16} & 15.33 & 0.8644 & 5.845 & 3.395 & 4.266 & 5.795\\ \hline 
-78 & \textbf{16.17} & 15.38 & 0.8588 & 5.762 & 3.387 & 4.286 & 5.703\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-79 & \textbf{16.23} & 15.18 & 0.885 & 5.872 & 3.472 & 3.769 & 5.922\\ \hline 
-80 & \textbf{16.41} & 15.25 & 0.8866 & 5.718 & 3.525 & 4.217 & 5.618\\ \hline 
-81 & \textbf{16.53} & 15.34 & 0.8823 & 5.875 & 3.467 & 5.532 & 5.88\\ \hline 
-...& ... & ... & ... & ... & ... & ... & ...\\ \hline 
-140 & \textbf{21.18} & 17.21 & 0.8989 & 6.573 & 4.033 & 5.78 & 6.231\\ \hline 
-
-\end{tabular}
-    }
-    %&
-    
- %\end{tabular}
- \label{tab:analise:seeds:cluster2}
-\end{table}
-
-No \textit{cluster} 3 (Canadian), tabela \ref{tab:rot:seeds:knn}, o KNN possui um rótulo com dois atributos, \textbf{area} e \textbf{perimetro}, com 8 e 5 erros respectivamente, contudo, o número de erros do \textit{cluster} não obrigatoriamente é a soma desses valores, isto posto, uma análise realizada na base de dados, exibida na tabela \ref{tab:analise:seeds:cluster3} é a  única maneira de saber quantos erros o \textit{cluster} possui. 
-
-Essa tabela \ref{tab:analise:seeds:cluster3} é uma amostra do elementos do grupo \textit{Canadian} com a seguinte formação: primeira coluna indica o número do registro, que tem início em 141 até 210, e as outras colunas são os atributos da base Seeds. As linhas destacadas até 202 representam  todos os registros do \textit{cluster} 3,  contudo, para análise dos dados não é necessário representar todos os registros na tabela, por isso foi inserido só alguns elementos.
-
-\begin{table}[!ht]
-\caption{Amostra de dados da base Seeds somente das linhas 200 a 210 do grupo \textit{Canadian}, que possui o total de 70 (setenta) elementos, ordenados pelo atributo area}
- %\begin{tabular}{ll}
-%\rule{0}{50}
-\centering
+Na figura \ref{fig:grafico_NB_cluster1_2_wkernel_lkgroove_seeds} também apresenta a base Seeds distiguindo os grupos pelas formas geométricas: quadrados (\textit{Kama}), losango (\textit{Rosa}) e triângulos (\textit{Canadian}), mas com uma  relação entre  \textbf{lkgroove} e \textbf{wkernel} que  fazem parte dos resultados de rotulação do Naive Bayes no \textit{cluster} 2 ${r_{c_2}=\{ (lkgroove, ] 5.791 \sim  6.55]) \} }$ e no \textit{cluster} 3 ${r_{c_3}=\{ (wkernel, [2.63 \sim  3.049])\} }$.
  
- %\scalebox{0.5}{%
-  % \small\addtolength{\tabcolsep}{-2pt} 
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-
-& \textbf{area} & \textbf{perimetro} & compacteness & Lkernel & wkernel & asymetry &lkgroove \\ \hline
-\rowcolor[HTML]{EFEFEF}
-...& ... & ... & ... & ... & ... & ... & ...\\ \hline 
-\rowcolor[HTML]{EFEFEF}
-200 & 12,7 & 13,71 & 0,8491 & 5,386 & 2,911 & 3,26 & 5,316\\ \hline
-\rowcolor[HTML]{EFEFEF}
-201 & 12,7 & 13,41 & 0,8874 & 5,183 & 3,091 & 8,456 & 5\\ \hline
-\rowcolor[HTML]{EFEFEF}
-202 & 12,76 & 13,38 & 0,8964 & 5,073 & 3,155 & 2,828 & 4,83\\ \hline
-203 & 12,79 & 13,53 & 0,8786 & 5,224 & 3,054 & 5,483 & 4,958\\ \hline
-204 & 12,8 & 13,47 & 0,886 & 5,16 & 3,126 & 4,873 & 4,914\\ \hline
-205 & 12,89 & 13,77 & 0,8541 & 5,495 & 3,026 & 6,185 & 5,316\\ \hline
-206 & 13,07 & 13,92 & 0,848 & 5,472 & 2,994 & 5,304 & 5,395\\ \hline
-207 & 13,2 & 13,66 & 0,8883 & 5,236 & 3,232 & 8,315 & 5,056\\ \hline
-208 & 13,32 & 13,94 & 0,8613 & 5,541 & 3,073 & 7,035 & 5,44\\ \hline
-209 & 13,34 & 13,95 & 0,862 & 5,389 & 3,074 & 5,995 & 5,307\\ \hline
-210 & 13,37 & 13,78 & 0,8849 & 5,32 & 3,128 & 4,67 & 5,091\\ \hline
-
-\end{tabular}
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.9]{figs/grafico_NB_cluster1_2_wkernel_lkgroove_seeds.png}
+        \caption{Gráfico da disposição de elementos da Base Seeds entre os eixos \textbf{Lkernel} e \textbf{lkgroove}} \label{fig:grafico_NB_cluster1_2_wkernel_lkgroove_seeds}
+\end{figure}
  
-    %&
-    
- %\end{tabular}
- \label{tab:analise:seeds:cluster3}
-\end{table}
+O atributo \textbf{lkgroove} faz parte do rótulo encontrado no grupo \textit{Rosa} (\textit{cluster} 2) pelo Naive Bayes, representado no gráfico pelo eixo Y da figura \ref{fig:grafico_NB_cluster1_2_wkernel_lkgroove_seeds} e sua faixa de dados é de fácil visualização no gráfico. Os valores do eixo Y acima de 5.791 até 6.55 são representados por ${r_{c_2}}$ do grupo Rosa figurado pelo losango no gráfico da figura \ref{fig:grafico_NB_cluster1_2_wkernel_lkgroove_seeds}. Já o ${r_{c_3}}$ possui o atributo \textbf{wkernel}  representado no gráfico no eixo X possuindo uma faixa de dados a partir de 2.63 até 3.049, e através desse intervalo é possível notar que há alguns dados não pertencentes ao ${r_{c_3}}$ do grupo Canadian. Com o gráfico fica fácil perceber que na disposição das amostras o grupo que mais se mistura  é o \textit{Kama}, implicando também na menor acurácia entre os rótulos. 
 
-Com a tabela \ref{tab:analise:seeds:cluster3} é possível perceber, através das linhas destacadas, os registros que fazem parte do rótulo do \textit{cluster} 3 (linha 141 até linha 202), e também os 8 (oito) registros que não são representados pelo rótulo (linhas 203 até 210). Esses 8 (oito) registros fazem parte das informações do rótulo na coluna \textbf{Fora da Faixa}, dito isto, para saber ao certo o número de erros do \textit{cluster} 3, é realizado uma analise na base de dados para localizar os 5 (cinco) elementos da coluna \textbf{Fora da Faixa} do atributo perimetro. Neste caso, os cinco registros podem ser vistos na tabela \ref{tab:analise:seeds:cluster3}, linhas 205, 206, 208, 209 e 210, que estão na mesma faixa de erros do atributo \textbf{area}, então, como coincidio os erros serem os mesmos, o número de erros do grupo \textit{Canadian} são somente os 8 (oito). 
+
+No outro gráfico, figura \ref{fig:grafico_CART_KNN_SEEDS_perimetro_lkgroove}, são relacionados dois eixos X e Y com os atributos \textbf{perimetro} e \textbf{lkgroove} respectivamente, e através desse plano cartesiano é possível identificar todos os grupos da base Seeds. Os dois algoritmos   CART e KNN possuem os mesmos resultados de rotulação para os três grupos mediante os dois atributos que estão representados no gráfico, dessa forma, com essa amostra de dados é possível representar o espaço de dados dos rótulos encontrados em cada algoritmo.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.9]{figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png}
+        \caption{Gráfico da disposição de elementos da Base Seeds entre os eixos \textbf{Lkernel} e \textbf{lkgroove}} \label{fig:grafico_CART_KNN_SEEDS_perimetro_lkgroove}
+\end{figure}
+
+Os elementos do rótulo ${r_{c_1}=\{ (perimetro, ]13.73 \sim 15.18]) \} }$,  representam o grupo \textit{Kama}, que estão simbolizados de quadrados no gráfico, e através do atributo \textbf{perimetro} no intervalo de ]13.73 até 15.78] consegue-se visualizar no gráfico a amostra que o rótulo representa do \textit{cluster} 1 (\textit{Kama}), como também, alguns dados que não estão neste intervalo configurando os erros.
+
+No \textit{cluster} 2 (\textit{Rosa}) figurando no gráfico como um losango pode-se perceber, através de seu rótulo ${r_{c_2}=\{ (lkgroove, ] 5.791 \sim  6.55]) \} }$, que o atributo \textbf{lkgroove} e seu intervalo estão bem definidos no gráfico. Qualquer valor no eixo Y no intervalo, a partir de 5.6791 até 6.55, é representado pelo rótulo ${r_{c_2}}$, mas mesmo com alguns erros visíveis na amostra, esse grupo foi o que ficou melhor delineado no gráfico e de fácil visualização para comprovar a representatividade dos rótulos encontrados pelos algoritmos CART e KNN. Já no \textit{cluster} 3 \textit{Canadian} não é diferente mediante ao rótulo encontrado pelos dois algoritmos ${r_{c_3}=\{ (perimetro, [12.41 \sim  13.73])\} }$. A partir da faixa do  ${r_{c_3}}$ no atributo \textbf{perimetro} as amostras representadas iniciam em 12.41 até 13.73,  mas mesmo no valor final do intervalo onde pode-se encontrar alguns erros, é possível mostrar que o ${r_{c_3}}$ consegue representar o grupo \textit{Canadian}.
 
 \section{Base de Dados 2 - Iris - Identificação de Tipos de Plantas}
 
-
-A base de dados \textbf{Iris} pertence a UCI Machine Learning, já usado em trabalhos como \citeonline{Lopes2016,Filho2015}, e utilizada em reconhecimento de padrões de plantas por lidar com classes bem definidas, pois contém 3 classes de 50 instâncias cada, totalizando  150 registros de amostra de plantas. A base possui amostras com 3 tipos \cite{FISHER1936}:
+A base de dados Iris pertence a UCI Machine Learning, já usada em trabalhos como \citeonline{Lopes2016,Filho2015}, e utilizada em reconhecimento de padrões de plantas por lidar com classes bem definidas, pois contém 3 classes de 50 instâncias cada, totalizando 150 registros de amostra de plantas. A base possui amostras com 3 tipos \cite{FISHER1936}:
 
 \begin{itemize}[noitemsep]
  \item 50 elementos da classe \textit{Iris-setosa} ;
@@ -690,17 +207,14 @@ A base de dados \textbf{Iris} pertence a UCI Machine Learning, já usado em trab
 
 Os atributos correspondentes são comprimento da sepala - SL, largura da sepala - SW, comprimento da pétala - PL e largura da pétala - PW, e através dessas características há uma classificação para dizer se o tipo de planta é: \textit{Iris-setosa}, \textit{Iris-versicolor} e \textit{Iris-virginica}.
 
-Seguindo a análise, semelhante da base de dados anterior, foram realizados testes utilizando os algoritmos, Naive Bayes, CART e KNN e seus resultados depositados em tabelas dividida em colunas no mesmo formato das anteriores: \textbf{Cluster}, \textbf{Rótulo}, \textbf{Relevância}, \textbf{Fora da Faixa} e \textbf{Acurácia Parcial}. Os \textit{clusters} são dispostos em números correspondentes a seguinte sequência: (1) \textit{Iris-setosa}, (2) \textit{Iris-versicolor} e (3) \textit{Iris-virginica}.
+Seguindo a análise, semelhante a da base de dados anterior, foram realizados testes utilizando os algoritmos Naive Bayes, CART e KNN e seus resultados depositados em tabelas divididas em colunas no mesmo formato das anteriores: \textbf{Cluster}, \textbf{Rótulo}, \textbf{Relevância}, \textbf{Fora da Faixa} e \textbf{Acurácia Parcial}. Os \textit{clusters} são dispostos em números correspondentes a seguinte sequência: (1) \textit{Iris-setosa}, (2) \textit{Iris-versicolor} e (3) \textit{Iris-virginica}.
  
 
-Para gerar os resultados, da aplicação do algoritmo na base de dados, foi definida o método de discretização, tipo EFD (seção \ref{cap:refTeor:subsec:efd}), a divisão em três faixas de valores ${R = 3}$ para todos os atributos, e inserido o valor de variação ${V=0\%}$. 
-
+Para gerar os resultados, da aplicação do algoritmo na base de dados, foi definido o método de discretização tipo EWD (seção \ref{cap:refTeor:subsec:ewd}), a divisão em três faixas de valores ${R = 3}$ para todos os atributos e inserido o valor de variação ${V=0\%}$. 
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:iris:nb}
 
-Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotulação de dados, e o \textit{cluster} 1 (\textit{Iris-setosa}) é representado por dois atributos (\textbf{petalwidth} e \textbf{petallength}) com seus respectivos intervalos. No \textit{cluster} 2 (\textit{Iris-versicolor}) o atributo \textbf{petallength} é novamente escolhido, mas com o intervalo diferente a do \textit{cluster} 1, e no \textit{cluster} 3 (\textit{Iris-virginica}) o rótulo é formado pelo atributo \textbf{petalwidth} e sua faixa também diferente a do \textit{cluster} 1.
-
-
+Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotulação de dados de todos os grupos: \textit{cluster} 1 (\textit{Iris-setosa}), \textit{cluster} 2 (\textit{Iris-versicolor}) e \textit{cluster} 3 (\textit{Iris-virginica}). O Naive Bayes encontrou o mesmo atributo para cada rótulo, mas os intervalos foram diferentes assegurando que os rótulos se tornassem distintos.
  
 \begin{table}[!h]
 \centering
@@ -710,92 +224,14 @@ Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotula�
 \begin{tabular}{llcrcc} \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
-                                             & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 & \\  
-\multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 & \multirow{-2}{*}{100\%} \\  \hline
-2                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 84\%                               & 7 & 86\% \\ \hline
-%\multirow{-2}{*}{2}                          & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 82\%                               & 8\\  \hline
-3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5 & 90\% \\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline                                             
+1                                            & petalwidth     & [ 0.1 $\sim$  0.9 ]       & 42\%                        & 0 & 100\% \\  \hline
+2                                             & petalwidth    & ] 0.9 $\sim$  1.7 ]       & 36\%                        & 2 & 94\% \\ \hline
+3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 20\%                         & 4 & 92\% \\ \hline \hline
 \end{tabular}}
 \end{table}
 
-% 
-% **A porcentagem representada na coluna de relevância não pode ser analisada isoladamente. Para isso  a tabela \ref{tab:execucoes:iris:nb} possui os valores de correlação de todos os atributos. Todos os números estão representados em porcentagem para melhor análise do grau de relacionamento entre os outros atributos.
-
-
-% 
-% \begin{table}[!h]
-% \caption{Resultado (em \%) de 4 (quatro) execuções do algoritmo Naive Bayes; Legenda dos Atributos: (SL)sepallength, (SW)sepalwidth, (PL)petallength, (PW)petalwidth}
-%  %\begin{tabular}{ll}
-% %\rule{0}{50}
-% \centering
-%    \subfloat[1a. Execução]{ \label{tab:execucoes:iris:nb:1exec}
-%    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%                   1a. Execução   &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 76   & \textbf{84}  & 82     \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 76 & 74   & 68  & \textbf{90}     \\ \hline
-%       \end{tabular}
-%     %}
-%     }
-%  %&
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  \hspace{1cm}
-%    \subfloat[2a. Execução]{ \label{tab:execucoes:iris:nb:2exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt}
-%       \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%          2a. Execução         &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100 &  100      \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 76   & 88  &    84  \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 74   & 70  &  90    \\ \hline
-%       \end{tabular}
-%   %}
-%   %\\  [8ex]
-%     }
-%     
-%     \subfloat[3a. Execução]{ \label{tab:execucoes:iris:nb:3exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%          3a. Execução           &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  & 100       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 84  &  84    \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 74 & 74   & 68  &   90   \\ \hline
-%       \end{tabular}
-%     }
-%     %&
-%     \hspace{1cm}
-%     \subfloat[4a. Execução]{  \label{tab:execucoes:iris:nb:4exec}
-%        \small\addtolength{\tabcolsep}{-2pt}
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%         4a. Execução      &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  &   100     \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 86  &   82   \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 74   & 70  & 92     \\ \hline
-%       \end{tabular}
-%    %\\
-%     }
-%     
-%  %\end{tabular}
-%  \label{tab:execucoes:iris:nb}
-% \end{table}
-% 
-% Na tabela \ref{tab:execucoes:iris:nb} foram inseridas quatro resultados de execuções do algoritmo. Foi escolhida na tabela \ref{tab:execucoes:iris:nb:1exec} a 1a. execução para montar a tabela de rótulos, tabela \ref{tab:rot:iris:nb}. A partir dessas execuções o pesquisador poderá arbitrá sobre o valor de ${V}$ para melhor adaptá-lo a base. Das várias execuções expostas na tabela \ref{tab:execucoes:iris:nb}, percebe-se que não há muita diferença entre os valores de cada execução. Isso mostra um padrão de valores de acordo com a base. No caso da 1a. execução (tabela \ref{tab:execucoes:iris:nb:1exec}) os valores escolhidos como rótulo estão destacados em cada cluster.
-
-%Se na tabela \ref{tab:execucoes:iris:nb} fosse escolhida a 3a. execução, os valores de rótulos seriam modificados, em virtude dos valores mais altos serem iguais, fazendo que o rótulo assumisse dois atributos: PL e PW. Em análise do cluster 2 perecebe-se que os valores de PL e PW nas quatro execuções são bem próximos e até idênticos na terceira execução, como já dito anteriormente, então caso fosse necessário inserir um valor de variação ${V}$, um valor aceitável seria ${V=3}$. Desta maneira manteria os rótulos dos clusters 1 e 3 sem alteração, e um novo atributo seria incluído no cluster 2, assumindo o novo rótulo com dois atributos: PL e PW.
-
-Um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância} com valor de 100\% (cem por cento) e \textbf{Fora da Faixa} com 0 (zero) erros no \textit{cluster} 1, implicando em uma acurácia de 100\% (cem por cento). Tendo em vista esses resultados, não é correto afirmar que o valor de   100\% (cem por cento) na relevância indique um valor de erro 0 (zero), pois a relevância é o valor de correlação do atributo entre os outros atributos, e uma vez escolhido o atributo na matriz, tabela \ref{tab:execucoes:iris:cart}, o próximo passo é considerar o intervalo que possui a maior frequência de elementos. A tabela \ref{tab:execucoes:iris:cart} é a matriz de atributos importantes gerado na execuação do algoritmo nesta base de dados, e os valores em destaques são os atributos rótulos, por possuírem os maiores valores.
+O fato dos rótulos apresentarem o mesmo atributo pode ser analisado na tabela \ref{tab:execucoes:iris:cart}, que expõe os valores de correlacionamento entre atributos, esta é a matriz de atributos importante, e através desta que é escolhido o atributo de maior valor. Esta tabela é dividida em linhas representando os grupos e colunas representando os atributos. 
 
 \begin{table}[!h]
 \centering
@@ -806,17 +242,18 @@ Um fato a se considerar nesse resultado, são as colunas de \textbf{Relevância}
         \hline \hline
                      &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
        \multicolumn{1}{|l}{}                             &   & sepallength   & sepalwidth     & petallength    & petalwidth     \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{}                           & 2 & 72 & 76   & \textbf{84}  & 82     \\ \cline{2-6} 
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 76 & 74   & 68  & \textbf{90}     \\ \hline
+        \multicolumn{1}{|c|}{}                           & 1 & 14   & 16     & 26   & \textbf{42}       \\ \cline{2-6} 
+        \multicolumn{1}{|c|}{}                           & 2 & 16 & 12   & 14  & \textbf{36}     \\ \cline{2-6} 
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 14 & 16   & 14  & \textbf{20}     \\ \hline
       \end{tabular}}
 \end{table}    
 
+A tabela \ref{tab:execucoes:iris:cart} mantém os resultados de correlacionamento entre os atributos, e quando ela está toda preenchida, é realizada uma varredura por linha para saber qual o maior valor,  servindo para indicar qual o atributo será o rótulo, desta forma como todos os maiores números estão na coluna do atributo \textbf{petalwidth}, este atributo é o rótulo de cada \textit{cluster}.
 
 Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dados abaixo:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
- \item ${r_{c_2}=\{ (petallength, ] 3.7 \sim 5.1]) \} }$
+ \item ${r_{c_1}=\{ (petalwidth,[ 0.1 \sim 0.9 ] ) \} }$  
+ \item ${r_{c_2}=\{ (petalwidth, ] 0.9 \sim 1.7]) \} }$
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
@@ -832,105 +269,28 @@ A aplicação do algoritmo CART na base de dados \textbf{Iris} gerou a tabela \r
 \begin{tabular}{llcrcc} \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
-                                             & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 & \\  
-\multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 & \multirow{-2}{*}{100\%}\\  \hline
-%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
-2                                            & petalwidth     & ] 1.0 $\sim$  1.7 ]       & 90\%                               & 8 & 84\%\\  \hline
-3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5 & 90\%\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline                                             
+1                                            & petalwidth     & [ 0.1 $\sim$  0.9 ]       & 38\%                        & 0 & 100\% \\  \hline
+2                                             & petalwidth    & ] 0.9 $\sim$  1.7 ]       & 24\%                        & 2 & 94\% \\ \hline
+3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 24\%                         & 4 & 92\% \\ \hline \hline
 \end{tabular}}
 \end{table}
 
 
-Ao se analisar a tabela percebe-se a importância do atributo \textbf{petalwidth}, pois este, tem participação nos três \textit{clusters}, e tanto no \textit{cluster} 2 (\textit{Iris-versicolor}) como no 3 (\textit{Iris-virginica}) são diferenciados apenas pelo intervalo de dados. Este resultado pode ser visto por um especialista em alguma tomada de decisão, pois a partir da leitura destes rótulos, fica claro que qualquer  outro novo registro que tenha como característica um petalwidth (largura da pétala) de tamanho entre 1.0 a 1.7, será do tipo Iris-versicolor, e assim poderá classificar qualquer outro registro só observando esse atributo.  
-%**Ao observar a tabela \ref{tab:rot:iris:cart} percebe-se que o resultado de rotulação no cluster 1 e 3 são idênticos ao do algoritmo apresentado anteriormente, mas  no cluster 2 o rótulo é diferenciado pelo atributo petalwidth que atinge valores mais altos em todas as execuções, como mostra a tabela \ref{tab:execucoes:iris:cart}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% 
-% \begin{table}[!h]
-% \caption{Resultado de 4 (quatro) iterações do algoritmo CART; Legenda dos Atributos: (SL)sepallength,(SW)sepalwidth,(PL)petallength,(PW)petalwidth}
-%  %\begin{tabular}{ll}
-% %\rule{0}{50}
-% \centering
-%    \subfloat[1a. Execução]{ \label{tab:execucoes:iris:cart:1exec}
-%    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%                   1a. Execução   &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80   & 68     & \textbf{100}   & \textbf{100}       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 88  & \textbf{90}     \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 68   & 74  & \textbf{90}     \\ \hline
-%       \end{tabular}
-%     %}
-%     }
-%  %&
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  \hspace{1cm}
-%    \subfloat[2a. Execução]{ \label{tab:execucoes:iris:cart:2exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt}
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%          2a. Execução         &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100 &  100      \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 74 & 76   & 88  &    90  \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 70 & 70   & 74  &  90    \\ \hline
-%       \end{tabular}
-%   %}
-%   %\\  [8ex]
-%     }
-%     
-%     \subfloat[3a. Execução]{ \label{tab:execucoes:iris:cart:3exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%          3a. Execução           &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  & 100       \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 84  &  84    \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 74 & 74   & 68  &   90   \\ \hline
-%       \end{tabular}
-%     }
-%     %&
-%     \hspace{1cm}
-%     \subfloat[4a. Execução]{  \label{tab:execucoes:iris:cart:4exec}
-%        \small\addtolength{\tabcolsep}{-2pt}
-%      \begin{tabular}{|cl|c|c|c|c|}
-%         \hline \hline
-%         4a. Execução      &   & \multicolumn{4}{c|}{Atributos}                                               \\ \cline{3-6} 
-%        \multicolumn{1}{|l}{}                             &   & SL   & SW     & PL    & PW      \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 80 & 68   & 100  &   100     \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72 & 74   & 86  &   90   \\ \cline{2-6} 
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{Clusters}} & 3 & 68 & 66   & 78  & 90     \\ \hline
-%       \end{tabular}
-%    %\\
-%     }
-%     
-%  %\end{tabular}
-%  \label{tab:execucoes:iris:cart}
-% \end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+Ao se analisar a tabela percebe-se a importância do atributo \textbf{petalwidth} para essa base, pois este, tem participação nos três \textit{clusters}: \textit{Iris-setosa}, \textit{Iris-versicolor}, \textit{Iris-virginica}, e também diferenciados apenas pelo intervalo de dados. Este resultado para um  especialista ajudaria em uma tomada de decisão, pois a partir da leitura destes rótulos, qualquer novo registro basta verificar o valor da largura da pétala (\textit{petalwidth}) e  assim poderá classificá-lo em algum grupo.
 
 
 Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo CART:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
- \item ${r_{c_2}=\{  (petalwidth,] 1.0 \sim 1.7 ] )\} }$
+ \item ${r_{c_1}=\{ (petalwidth,[ 0.1 \sim 0.9 ] ) \} }$  
+ \item ${r_{c_2}=\{ (petalwidth, ] 0.9 \sim 1.7]) \} }$
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
 
 \subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:iris:knn}
 
-No resultado da rotulação utilizando KNN constata-se os mesmos rótulos do algoritmo Naive Bayes, mas com algumas diferenças nas relevâncias de atributos, porém na coluna \textbf{Fora da Faixa}  não houveram alterações  no \textit{cluster} 2 (\textit{Iris-versicolor}) e nem no \textit{cluster} 3 (\textit{Iris-virginica}).
+No resultado da rotulação utilizando KNN constata-se os mesmos rótulos dos dois algoritmos Naive Bayes e CART, mas com algumas diferenças nas relevâncias de atributos, porém na coluna \textbf{Fora da Faixa}  não houveram alterações.
 
 \begin{table}[!h]
 \centering
@@ -940,145 +300,39 @@ No resultado da rotulação utilizando KNN constata-se os mesmos rótulos do alg
 \begin{tabular}{llcrcc} \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline
-                                             & petallength    & [ 1.0 $\sim$  3.7 ]       & 100\%                               & 0 & \\  
-\multirow{-2}{*}{1}                          & petalwidth     & [ 0.1 $\sim$  1.0 ]       & 100\%                               & 0 & \multirow{-2}{*}{100\%}\\  \hline
-%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
-2                                            & petallength     & ] 3.7 $\sim$  5.1 ]       & 90\%                               & 7 & 86\%\\  \hline
-3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 90\%                               & 5 & 90\%\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Cluster(\%)\\ \hline \hline                                             
+1                                            & petalwidth     & [ 0.1 $\sim$  0.9 ]       & 50\%                        & 0 & 100\% \\  \hline
+2                                             & petalwidth    & ] 0.9 $\sim$  1.7 ]       & 36\%                        & 2 & 94\% \\ \hline
+3                                            & petalwidth     & ] 1.7 $\sim$  2.5 ]       & 24\%                         & 4 & 92\% \\ \hline \hline
 \end{tabular}}
 \end{table}
 
 Segue abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo KNN:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (petallength, [ 1.0 \sim 3.7]), (petalwidth,[ 0.1 \sim 1.0 ] ) \} }$  
- \item ${r_{c_2}=\{ (petallength, ] 3.7 \sim 5.1]) \} }$
+ \item ${r_{c_1}=\{ (petalwidth,[ 0.1 \sim 0.9 ] ) \} }$  
+ \item ${r_{c_2}=\{ (petalwidth, ] 0.9 \sim 1.7]) \} }$
  \item ${r_{c_3}=\{ (petalwidth, ] 1.7 \sim 2.5 ]) \} }$
 \end{itemize}
 
 \subsection{Comparativo entre Algoritmos na Base de Dados Iris} \label{cap:resultados:ssec:compalgoritmos:iris}
 
-Os resultados dos algoritmos na criação dos rótulos, nesta base de dados, foram bastantes concisos entre eles, e, em dois algoritmos como Naive Bayes e KNN, tiveram exatamente os mesmos rótulos em todos os três \textit{clusters}.
+Os resultados dos algoritmos na criação dos rótulos, nesta base de dados, foram bastantes concisos entre eles, cada rótulo possui somente um atributo e faixa de valor representando o grupo, e os três algoritmos: Naive Bayes, CART e KNN, tiveram exatamente os mesmos rótulos em todos os três \textit{clusters}.
 
-Comparando os rótulos do Naive Bayes e KNN com o CART pode-se verificar uma diferença entre os \textit{cluster} 2 (Iris-versicolor), que no CART o atributo rótulo do \textit{cluster} 2 é petalwidth com intervalo de ]1.0 a 1.7] com 8 erros, e nos outros, o atributo rótulo é petallength com intervalor de ]3.7 a 5.1] com 7 erros. 
+ Uma forma de comprovar a qualidade do rótulo e mostrar que de fato ele cumpre seu papel de identificar o grupo, é colocar em prática um exemplo que pode ser visto na figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf}. Para essa análise o gráfico exibe a relação de dois atributos representados pelos eixos X e Y, facilitando a visualização do comportamento dos três grupos: \textit{Iris-setosa}, \textit{Iris-versicolor} e \textit{Iris-viginica}.
 
-A tabela \ref{tab:analise:iris:cluster2:pw} formada pela primeira coluna com o índice da linha, e as outras quatro, os atributos da base, exibe uma amostra corresponde ao grupo Iris-versicolor, ordenada pelo atributo petalwidth.
+\begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.9]{figs/grafico_iris_petalwidth_petallength_BrOf.png}
+        \caption{Gráfico da disposição de elementos da Base Iris entre os eixos \textbf{petallength} e \textbf{petalwidth}} \label{fig:grafico_iris_petalwidth_petallength_BrOf}
+\end{figure}
 
-\begin{table}[!ht]
-\centering
-\caption{Amostra de Dados Iris do grupo \textit{Iris-versicolor} ordenado pelo atributo petalwidth. Legenda: (SL) sepallength, (SW) sepalwidth, (PL) petallength, (PW) petalwidth}
-\label{tab:analise:iris:cluster2:pw}
-\begin{tabular}{|l|l|l|l|c|}
-\hline 
- n. & SL & SW & PL & PW \\ \hline
-1 & 4.9 & 2.4 & 3.3 & 1.0 \\ \hline
-2 & 5.0 & 2.3 & 3.3 & 1.0 \\ \hline
-3 & 5.0 & 2.0 & 3.5 & 1.0 \\ \hline
-4 & 5.7 & 2.6 & 3.5 & 1.0 \\ \hline
-5 & 5.5 & 2.4 & 3.7 & 1.0 \\ \hline
-6 & 6.0 & 2.2 & 4.0 & 1.0 \\ \hline
-7 & 5.8 & 2.7 & 4.1 & 1.0 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-8 & 5.1 & 2.5 & 3.0 & 1.1 \\ \hline
- \rowcolor[HTML]{EFEFEF}  
-9 & 5.5 & 2.4 & 3.8 & 1.1 \\ \hline
-  \rowcolor[HTML]{EFEFEF} 
-10 & 5.6 & 2.5 & 3.9 & 1.1 \\ \hline
- 
-\rowcolor[HTML]{EFEFEF} 
-11 & 5.8 & 2.7 & 3.9 & 1.2 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-12 & 5.8 & 2.6 & 4.0 & 1.2 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-13 & 5.7 & 3.0 & 4.2 & 1.2 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-14 & 5.5 & 2.6 & 4.4 & 1.2 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-15 & 6.1 & 2.8 & 4.7 & 1.2 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-16 & 5.6 & 2.9 & 3.6 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-17 & 5.5 & 2.3 & 4.0 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-18 & 6.1 & 2.8 & 4.0 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-19 & 5.5 & 2.5 & 4.0 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-20 & 5.6 & 3.0 & 4.1 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-21 & 5.7 & 2.8 & 4.1 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-22 & 5.6 & 2.7 & 4.2 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-23 & 5.7 & 2.9 & 4.2 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-24 & 6.4 & 2.9 & 4.3 & 1.3 \\ \hline
- \rowcolor[HTML]{EFEFEF} 
-25 & 6.2 & 2.9 & 4.3 & 1.3 \\ \hline
-  \end{tabular}
-  \begin{tabular}{ |l|l|l|l|c| }
-   
-\hline
-n. & SL & SW & PL & PW \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-26 & 6.3 & 2.3 & 4.4 & 1.3 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-27 & 5.7 & 2.8 & 4.5 & 1.3 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-28 & 6.6 & 2.9 & 4.6 & 1.3 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-29 & 5.2 & 2.7 & 3.9 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-30 & 6.7 & 3.1 & 4.4 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-31 & 6.6 & 3.0 & 4.4 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-32 & 6.1 & 3.0 & 4.6 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-33 & 7.0 & 3.2 & 4.7 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-34 & 6.1 & 2.9 & 4.7 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-35 & 6.8 & 2.8 & 4.8 & 1.4 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-36 & 5.9 & 3.0 & 4.2 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-37 & 6.4 & 3.2 & 4.5 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-38 & 5.6 & 3.0 & 4.5 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-39 & 6.2 & 2.2 & 4.5 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-40 & 6.0 & 2.9 & 4.5 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-41 & 5.4 & 3.0 & 4.5 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-42 & 6.5 & 2.8 & 4.6 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-43 & 6.7 & 3.1 & 4.7 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-44 & 6.9 & 3.1 & 4.9 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-45 & 6.3 & 2.5 & 4.9 & 1.5 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-46 & 6.0 & 3.4 & 4.5 & 1.6 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-47 & 6.3 & 3.3 & 4.7 & 1.6 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-48 & 6.0 & 2.7 & 5.1 & 1.6 \\ \hline 
- \rowcolor[HTML]{EFEFEF} 
-49 & 6.7 & 3.0 & 5.0 & 1.7 \\ \hline
-50 & 5.9 & 3.2 & 4.8 & 1.8 \\ \hline
-\end{tabular}
-\end{table}
+Todos os algoritmos: Naive Bayes, CART e KNN, encontraram os mesmos rótulos em todos os \textit{clusters} da Iris, e ao analisar o gráfico, o \textit{cluster} 1 (Iris-setosa), é possível perceber uma relação bem definida entre os demais grupos, pois todos os elementos que possuem largura da pétala (\textit{petalwidth}) variando de 0.1 até 0.9 participam do grupo Iris-setosa, portanto, esse rótulo comprovadamente representa este grupo. Analisando os outros grupos através do gráfico da figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf} percebe-se que a amostra de dados dos grupos Iris-versicolor e Iris-virginica contêm elementos que se misturam, não deixando um ponto de corte tão preciso quanto o da Iris-setosa, e isso acaba por também ocasionar ao rótulo alguns erros identificados nos \textit{clusters} 1 e 2.
 
-A amostra da tabela \ref{tab:analise:iris:cluster2:pw} representa todos os dados representados pelo \textit{cluster} 2 do algoritmo CART, e em destaque de cinza-claro estão os registros que fazem parte do rótulo pelas linhas 8 a 49, representado pelo intervalo de ]1.0 a 1.7] do atributo \textbf{petalwidth}. O motivo desta tabela é visualizar  a amostrar de dados e comparar os dois rótulos encontrados no \textit{cluster} 2 (Iris-versicolor). Nesta tabela, os registros nas linha 6, 7 e 50 são representados pelo rótulo dos algoritmos, Naive Bayes e KNN, mas não são representados pelo rótulo do CART, dessa mesma maneira, os registros da linha 8 e 16 são representados pelo rótulo CART, mas não são representados pelo rótulo dos algoritmos Naive Bayes e KNN. 
 
-A nível de comparação fica claro que os registros dos rótulos não são os mesmos, e que uma hipotética interseção dos dois rótulos, Naive Bayes e KNN com CART, deixaria de fora os oito registros de erros já definidos (linha 1 a 7, e linha 50), e os dois registros, linha 8 e 16, que estão na faixa de \textit{cluster} 2 do CART, mas não são representados pelo \textit{cluster} 2 dos algoritmos, Naive Bayes e KNN, totalizando um erro de dez registros sem representação na interseção dos rótulos. Com isso deixa firmado que os rótulos encontrados pelos algoritmos Naive Bayes e KNN, obtiveram melhores resultados, pois o erro deles foram menores que do algoritmo CART.
 
 \section{Base de Dados 3 - Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
-Essa base ficou conhecida pelo Dr. Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, onde conduziu pesquisas e testes de comparação em seu sistema baseado em regras, determinando se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidros, porque em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
+Essa base ficou conhecida pelo Dr. Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation, que conduziu pesquisas e testes de comparação em seu sistema baseado em regras, determinando se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidro, porque em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
 
 Possui um total de 214 instancias, caracterizados por 9 atributos: índice de refração (RI), e os demais atributos correspondentes a porcentagem do óxido no Sódio (Na), Magnésio (Mg), Alumínio (Al), Silício (Si), Potássio (K), Cálcio (Ca), Bário (Ba) e Ferro (Fe).
 
@@ -1093,24 +347,50 @@ Os tipos de vidro (atributo classe) foram divididos em 7 grupos distintos:
  \item lâmpadas: 29 registros 
 \end{itemize}
 
-Essa é uma base de dados diferentes das demais por possuírem mais grupos, e em específico, o grupo de janelas de veículos - vidro não-temperado, que não existem amostras de dados para exemplificar. Nos resultados dos rótulos exibidos nas tabelas adiante, a coluna \textbf{Cluster} que exibe uma sequência numérica dos grupos, não conteplará o grupo janelas de veículos - vidro não-temperado, pois não há exemplos de dados para definir o grupo,  ficando somente seis grupos determinados na seguinte sequência : (1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas.
 
-Nos teste desenvolvidos nesta pesquisa os valores de referência foram, ${R=3}$ para o número de faixas, o método de discretização escolhido foi o EWD, pois, diferentes das outras bases, acabou gerando rótulos mais precisos, e a variação  ${V}$ sofreu alterações em diferentes algoritmos.
+Essa é uma base de dados diferente das demais por possuir mais grupos e, especificamente, o grupo de janelas de veículos - vidro não-temperado, que não possuem amostras de dados para exemplificar. Nos resultados dos rótulos exibidos nas tabelas adiante a coluna \textbf{Cluster}, que exibe uma sequência numérica dos grupos, não contemplará o grupo janelas de veículos - vidro não-temperado, pois não há exemplos de dados para definir o grupo, ficando somente seis grupos determinados na seguinte sequência : (1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas. 
+
+Nos teste desenvolvidos nesta pesquisa os valores de referência foram ${R=4}$ para o número de faixas, o método de discretização  e também a variância ${V}$ sofrerão alterações nas execuções nos próprios algoritmos para melhorar seus resultados. O que mais diferenciou os resultados desta base, foi ter que utilizar valores de ${V}$ bastantes altos para poder conseguir criar rótulos distintos.
 
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:glass:nb}
 %Os resultados da tabela \ref{tab:execucoes:glass:nb}, assim como nos resultados de bases anteriores, indicam uma sequência de execuções onde é possível observar o comportamento das variáveis que são escolhidas como rótulo. Nestes exemplos fica claro que não foi necessária a utilização de uma variação ${V}$ para a escolha dos rótulos, logo porque não houve ambiguidade entre eles. Por outro lado, quando testes utilizaram o outro método de discretização, EFD, retornaram rótulos ambíguos obrigando o uso da variação ${V}$. Em consequencia disto foi definindo o método de discretização EWD como padrão para a rotulação de dados.
 
-O método de discretização utilizado foi o EWD, como já dito antes, mas na variação ${V}$  manteve-se com valor ${V=0}$. Essa mudança do método de discretização foi necessária, pois a rotuloção realizada com o método de discretização EFD, apresentou vários \textit{cluster} com rótulos iguais, e após a alteração para EWD, não houve mais ambiguidade, como também melhorou as acurácias parciais. 
+Na aplicação desse algoritmo as melhores configurações para rotulação foram através do método EWD de discretização e a variação ${V=77\%}$ que influencia diretamente nas escolhas dos atributos. Esse valor foi necessário pois os resultados da matriz de importância apresentaram vários \textit{cluster} com rótulos iguais, desta forma foi realizado testes para chegar a um valor de ${V}$ para não haver mais ambiguidade.
 
-A tabela \ref{tab:rot:glass:nb} apresenta os seis clusters nas ordens sequenciais:(1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas. Pode-se notar que o cluster 4 (recipientes) foi o único a não apresentar um rótulo com representatividade igual aos demais, mas isso se deve  por possuir  uma amostra modesta contendo  treze elementos de baixa representatividade do grupo.
 
-%Ao observar a tabela \ref{tab:rot:glass:nb} percebe-se que a coluna \textbf{Relevância} obteve porcentagens altas, ressaltando nos rótulos de cada grupo os atributos que mais bem se relacionaram. E em específico no  \textbf{cluster 5} atributo \textbf{Na}, o valor da coluna de \textbf{Relevância = 100\%}, mas na coluna, \textbf{Fora da Faixa}, apresentam 2(dois) elementos que não estão sendo representados pelo rótulo. 
+A melhor maneira para explicar o valor de variância  ${V=77\%}$ é verificar na tabela \ref{tab:execucoes:glass:nb} (matriz de atributos importantes) os valores correspondentes aos \textit{clusters} que possuem rótulos iguais. Esta tabela contém os valores em porcentagem do quanto cada atributo é bem correlacionado com os demais, logo, quanto maior for o valor mais bem correlacionado é o atributo. Cada linha da tabela corresponde a um cluster e as colunas os atributos.
 
-%Essa situação dita no parágrafo acima segue a Definição \ref{teo:resolucao}, mas é um exemplo prático que não aconteceu em outros testes das outras bases de dados, e por isso segue um esclarecimento. A definição é que cada rótulo específico é dado por um conjunto de pares de valores, tendo como saída um vetor com atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$. Então caso a coluna \textbf{Relevância} seja igual a 100\%, isso não implica que todos os elementos tenham que estar dentro da faixa ${ p_{m^{(c_i)}} }$ (limite inferior) e ${ q_{m^{(c_i)}} }$ (limite superior), e sim, a maioria dos elementos, mostrando que o rótulo é capaz de melhor representar o cluster.
 
-%Além de apresentar dados desbalenceados o \textbf{Cluster 5} apresentado na tabela \ref{tab:rot:glass:nb} conta com o total de nove elementos, e entre estes, nenhum participa da 1a. faixa, dois estão na 2a. faixa e os restantes (sete) estão na 3a. faixa. Dessa maneira justifica-se o porquê dos dois elementos estarem de fora do rótulo, pois a faixa rótulo escolhida é a 3a. faixa, onde contém a maioria dos elementos, por conseguinte, escolhida para representar o rótulo.
 
+\begin{table}[!h]
+\centering
+\caption{Matriz de Atributos Importantes do algoritmo Naive Bayes na base Glass}
+\label{tab:execucoes:glass:nb}
+\scalebox{0.7}{
+
+   %\small\addtolength{\tabcolsep}{-2pt} 
+    \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
+        \hline \hline
+            {\tiny }     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
+       \multicolumn{1}{|l}{}    &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
+        \multicolumn{1}{|c|}{}  & 1 & 8.5714 & 7.1429  & 4.2857 & 4.2857 & 8.5714 & 10.0 & 0 & 91.4286 & 58.5714 \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}  & 2 & 2.6316  &  3.9474  &  14.4737  &  3.9474  &  0  & 11.8421  & 2.6316 & 85.5263  &  51.3158   \\ \cline{2-11} 
+        \multicolumn{1}{|c|}{}  & 3 &  11.7647  &  17.6471  & 11.7647  &  0  &  0  & 5.8824  &  11.7647 & 94.1176  &  70.5882   \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}  & 4 &  0  &  0  &  46.1538  &  15.3846  &  0  &  15.3846  &  0  &  84.6154  &  84.6154  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{}  & 5 &  0  &  0  &  11.1111  &  0  &  0   & 100.00 &  0  &  100.00 & 100.00  \\ \cline{2-11}
+        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 &  6.8966  &  0  &  68.9655  &  6.8966  &  10.3448  &  48.2759  &  0  &  10.3448  & 58.6207  \\ \hline
+        
+        
+    \end{tabular}
+
+}
+\end{table}    
+
+
+O número da variância não é escolhido aleatoriamente, ao em vez disso, é analisada a matriz de atributos importantes, tabela  \ref{tab:execucoes:glass:nb}, e calculado o menor valor ${V}$ que contribua de forma a adicionar o menor número possíveis de atributos nos rótulos para  evitar a ambiguidade. Analisando esta tabela o valor encontrado ${V=77\%}$, foi o que obteve a distinção dos rótulos nos clusters, como também, fez com que um rótulo fosse contemplado com todos os atributos conforme pode-se conferir na tabela \ref{tab:rot:glass:nb}, que apresenta os seis clusters nas ordens sequenciais:(1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas. 
+
+\newpage
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo Naive Bayes}
@@ -1121,39 +401,60 @@ A tabela \ref{tab:rot:glass:nb} apresenta os seis clusters nas ordens sequenciai
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                             & K     & [ 0.0 $\sim$  2.0700      ]       & 100\%                               & 0 & 100\% \\  
-\multirow{-2}{*}{1}                          & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\  \hline
-%                                             & petallength    & ] 3.7 $\sim$  5.1 ]       & 88\%                               & 7\\ 
-2                                            & K     & [ 0.0 $\sim$  2.0700 ]           & 100\%                               & 0 & 100\% \\  \hline
-                                            & Mg     & ]  2.993333 $\sim$  4.490  ]              & 100\%                               & 0 & 100\% \\ 
-                                            & K     & [ 0.0 $\sim$  2.0700 ]               & 100\%                               & 0 & 100\% \\  
-\multirow{-3}{*}{3}                          & Ba    & [ 0.0 $\sim$  1.0500     ]      & 100\%                               & 0 &  100\% \\  \hline
-                                             & Al    & [ 1.360000 $\sim$  2.430000 ]       & 92\%                               & 3 & 77\%\\
-                                             & K     & [ 0.0 $\sim$  2.070000     ]       & 92\%                               & 2 & 84\%\\  
-                                             & Ca   & ] 9.016667 $\sim$  12.603333      ] & 92\%                               & 3 & 77\%\\  
-\multirow{-3}{*}{4}                          & Ba    & [ 0.0 $\sim$ 1.050000    ]       & 92\%                               & 1 &  92\%\\  \hline                                            
-                                            & K     & [ 0.0 $\sim$  2.070000     ]       & 100\%                               & 0 & 100\%\\  
-                                            & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\   
-\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-6                                            & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-
-\hline
+                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   & 91\%  & 0 & 100\% \\  
+\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   & 58\%  & 15 & 78.6\% \\  \hline
+                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   & 14\%  & 25 & 68\%\\ 
+                                             & K     & [ 0.0 $\sim$  1.5525 ]     & 11\%  & 0  & 100\% \\  
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 85\%  & 1  & 98.7\% \\  
+\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 51\%  & 23 & 69.8\% \\  \hline
+                                            & Na     & ]12.3925 $\sim$  14.055 ] & 17\%  & 3  & 82.4\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 94\%  & 0  & 100\% \\  
+\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 70\%  & 3  & 82.4\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 46\%  & 5  & 61.6\%\\ 
+                                             & Al    & ] 1.09 $\sim$  1.895]      & 15\%  & 4  & 69.3\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 3  & 77\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 84\%  & 1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 84\%  & 2  & 84.7\% \\  \hline                                            
+                                            & K     & [ 0.00 $\sim$ 1.5525 ]     & 100\%  & 0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 100\%  & 0 & 100\% \\  
+\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 100\%  & 0 & 100\% \\  \hline
+                                            & RI     & [1.511150 $\sim$  1.516845 ] & 6\%  & 11  & 62.1\% \\ 
+                                            & Na     & ]14.055 $\sim$  15.7175 ] & 0\%  & 6  & 79.4\% \\ 
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 68\%  &6  & 79.4\%\\ 
+                                             & Al    & ] 1.895 $\sim$  2.6975]      & 6\%  & 11  & 62.1\%\\
+                                            & Si    & ] 72.61 $\sim$  74.01]      & 10\%  & 6  & 79.4\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 2  & 93.2\% \\ 
+                                            & Ca     & [ 8.12 $\sim$ 10.81 ]    & 0\%  & 3  & 89.7\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 10\%  & 15  & 48.3\% \\  
+\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 58\%  & 0  & 100\% \\  \hline
 
 \end{tabular}
 }
 \end{table}
 
+Os atributos \textbf{Ba} e \textbf{Fe} são os que aparecem em todos os rótulos indicando uma importância desses elementos nos grupos mantendo suas intervalos de dados
+% acurácia media p/ grupo
+% cluster1=89.3
+% cluster2=84.125
+% cluster3=88.2
+% cluster4=77
+% cluster5 = 100
+% cluster6=77.066
+
 
 
 De acordo com a aplicação do Naive Bayes na base de dados \textbf{Glass} os rótulos são os seguintes:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] ) \} }$  
- \item ${r_{c_2}=\{ (K,[ 0.0 \sim  2.0700 ] ) \} }$
- \item ${r_{c_3}=\{ (Mg, [ 2.993333 \sim  4.490]), (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] )  \} }$  
- \item ${r_{c_4}=\{(Al,[ 1.360000 \sim  2.430000 ] ), (Ca,] 9.016667 \sim  12.603333] ), (K,[  0.0 \sim  2.0700 ] ),}$  
-${ (Ba,[ 0.0 \sim 1.0500 ] ) \} }$
- \item ${r_{c_5}=\{ (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] ), (Fe,[ 0.0 \sim 0.17000] ) \} }$
- \item ${r_{c_6}=\{ (Fe,[ 0.0 \sim 0.17000] ) \} }$
+ \item ${r_{c_1}=\{ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$  
+ \item ${r_{c_2}=\{ (Mg,] 3.43 \sim  3.66 ] ),(Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
+ \item ${r_{c_3}=\{ ((K,] 0.49 \sim  0.65 ] ),(Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] )  \} }$  
+ \item ${r_{c_4}=\{ (Mg,[ 0.0 \sim  2.76 ] ),(Al,] 1.43 \sim 1.83 ] ), (K,] 0.49 \sim  0.65 ] ),}$
+
+ ${ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
+ \item ${r_{c_5}=\{  (Mg,[ 0.0 \sim  2.76 ] ), (K,[ 0.0 \sim  0.16 ] ),(Ba,[ 0.0 \sim 0.27 ] ), }$
+ 
+ ${ (Ba,[ 0.0 \sim 0.27 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
+ \item ${r_{c_6}=\{ (Mg,[ 0.0 \sim  2.76 ] ),  (K,[ 0.0 \sim  0.16 ] ),(Fe,[ 0.0 \sim 0.09 ] ) \} }$
 \end{itemize}
 
 
@@ -1161,18 +462,9 @@ ${ (Ba,[ 0.0 \sim 1.0500 ] ) \} }$
 
 %Na execução do CART foi aplicado o método de discretização EWD e uma mudança no valor da variância ${V=6\%}$ para evitar a ambiguidade dos clusters 1 e 3. 
 
-Através de testes e foi descartado a utilização do método de discretização EFD, e adotado o EWD, pois estava havendo  rótulos iguais em vários \textit{clusters}, e mesmo alterando a variância ${V}$ para valores mais altos, tentando contornar essa situação, cada vez mais os valores da acurácia parcial diminuíam. 
+Através de testes foi descartado a utilização do método de discretização EFD, e adotado o EWD, em virtude da diminuirção de erros por atributo em comparação ao outro método, e a divisão de faixas foi mantido ${R=4}$. Quanto a variável ${V}$ sofreu alteração em relação ao algoritmo anterior, mas mesmo assim manteve-se alto com ${V=71\%}$, em razão do número de clusters com rótulos iguais. Este aumento da variável ${V}$ influencia diretamente, diminuindo a acurácia média do cluster, muito embora seja justificado esse aumento de ${V}$ devido os rótulos não poderem se repetir nos \textit{clusters}.
 
-Uma vez, aplicado o método de discretização EWD, apenas os \textit{clusters} 1 e 3 mantiveram rótulos iguais, porém, para tirar essa ambiguidade foi alterado o valor da variância para ${V=6\%}$, e assim o atributo \textbf{Si} foi adicionado ao rótulo do \textit{cluster} 1, que pode ser visto na tabela \ref{tab:rot:glass:cart}.
-
-
-
-%Ao utilizar o algoritmo CART logo percebe-se a semelhança com os resultados apresentados na subseção \ref{cap:resultados:ssec:glass:nb}. Apesar dessa semelhança os \textbf{Clusters 4} e \textbf{5} tiveram diferenças nos resultados em comparação ao algoritmo Naive Bayes. 
-
-%Ao verificar a \textbf{linha 4} da tabela \ref{tab:execucoes:glass:nb} do Naive Bayes, correspondente ao \textbf{Cluster 4}, os atributos \textbf{Al, K, Ba} apresentaram sempre os mesmos valores, mas já na tabela \ref{tab:execucoes:glass:cart}, também na \textbf{linha 4} de cada execução, só o valor de \textbf{Ba} coincide já os outros atributos tiveram valores mais baixos, fazendo com que eles não participassem da composição do rótulo.
-
-%No \textbf{Cluster 5} o atributo \textbf{Na} não faz parte do rótulo, e diferente do Naive Bayes  na tabela \ref{tab:execucoes:glass:nb}, verifica-se que os valores de \textbf{Na} são sempre 100\% de correlação entre os outros atributos. No CART os valores apresentados de \textbf{Na}  nas execuções da tabela \ref{tab:execucoes:glass:cart}, \textbf{linha 5}, são abaixo dos 78\%. Na \textbf{1a. Execução} da tabela \ref{tab:execucoes:glass:cart:1exec} os atributos que compõem o rótulo do \textbf{Cluster 5} apresentam também 100\%, portanto qualquer atributo com valor abaixo de 100\%  não será escolhido para compor o rótulo.
-
+A execução do CART obteve os resultados apresentados na tabela \ref{tab:rot:glass:cart}.
 
 \begin{table}[!h]
 \centering
@@ -1184,168 +476,54 @@ Uma vez, aplicado o método de discretização EWD, apenas os \textit{clusters} 
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                            & Mg     & ]  2.993333 $\sim$  4.490  ]       & 100\%                               & 4 & 94\% \\
-                                            & Si     & ] 71.676667 $\sim$  73.543333      ]       & 94\%                               & 4 & 94\% \\
-                                             & K     & [ 0.0 $\sim$  2.0700      ]       & 100\%                               & 0 & 100\% \\  
-\multirow{-4}{*}{1}                          & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\  \hline
-                                            & Ba    & [ 0.0 $\sim$  1.0500     ]       & 98\%                               & 1 & 98\% \\  
-\multirow{-2}{*}{2}                         & K     & [ 0.0 $\sim$  2.0700 ]           & 100\%                               & 0 & 100\% \\  \hline
-                                            & Mg     & ]  2.993333 $\sim$  4.490  ]              & 100\%                               & 0 & 100\% \\ 
-                                            & K     & [ 0.0 $\sim$  2.0700 ]               & 100\%                               & 0 & 100\% \\  
-\multirow{-3}{*}{3}                          & Ba    & [ 0.0 $\sim$  1.0500     ]      & 100\%                               & 0 &  100\% \\  \hline
-                                             & Al    & [ 1.360000 $\sim$  2.430000 ]       & 92\%                               & 3 & 77\%\\
-                                             & RI     & ] 1.518743 $\sim$  1.526337     ]       & 92\%                               & 4 & 94\%\\  
-                                             & Ca   & ] 9.016667 $\sim$  12.603333      ] & 92\%                               & 3 & 77\%\\  
-\multirow{-4}{*}{4}                          & Ba    & [ 0.0 $\sim$ 1.050000    ]       & 92\%                               & 1 &  92\%\\  \hline                                            
-                                            & K     & [ 0.0 $\sim$  2.070000     ]       & 100\%                               & 0 & 100\%\\  
-                                            & Ba    & [ 0.0 $\sim$  1.0500     ]       & 100\%                               & 0 & 100\% \\   
-\multirow{-2}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-                                            & K     & [ 0.0 $\sim$  2.070000     ]       & 96\%                               & 1 & 96\%\\  
-\multirow{-2}{*}{6}                          & Fe    & [ 0.0 $\sim$  0.17000     ]       & 100\%                               & 0 & 100\% \\  \hline
-
-\hline
+                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   & 95\%  & 0 & 100\% \\  
+\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   & 51\%  & 15 & 78.6\% \\  \hline
+                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   & 17\%  & 25 & 68\%\\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 84\%  & 1  & 98.7\% \\  
+\multirow{-3}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 43\%  & 23 & 69.8\% \\  \hline
+                                            & K     & [ 0.0 $\sim$  1.5525 ]     & 23\%  & 0  & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 88\%  & 0  & 100\% \\  
+\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 70\%  & 3  & 82.7\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 30\%  & 5  & 61.6\%\\ 
+                                             & Al    & ] 1.43 $\sim$  1.83]      & 15\%  & 4  & 69.3\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 3  & 77\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 76\%  & 1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 69\%  & 2  & 84.7\% \\  \hline
+                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     & 33\%  & 5  & 44.5\% \\ 
+                                            & K     & [ 0.00 $\sim$ 1.5525 ]     & 100\%  & 0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 100\%  & 0 & 100\% \\  
+\multirow{-4}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 100\%  & 0 & 100\% \\  \hline
+                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     & 65\%  & 6  & 79.4\% \\ 
+                                            & K     & [ 0.0 $\sim$ 1.5525 ]      & 48\%  & 2  & 93.2\% \\ 
+\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 79\%  & 0  & 100\% \\  \hline
 
 \end{tabular}
 }
 \end{table}
 
+As acurácias parciais foram bem diversificadas bem como o número de atributos por rótulo, embora mais uma vez os elementos \textbf{Ba} e \textbf{Fe} são os atributos que aparecem com mais frequência mantendo os mesmos intervalos de dados. Fazendo um cálculo da acurácia média por grupo, os valores variam de 77\% o menor valor no grupo \textit{recipientes}, e 90.8\% o maior valor no grupo \textit{lâmpadas}, apesar de saber que esses valores poderiam melhorar caso não tivessem tantos rótulos atribuído pela variável ${V}$ é a forma de manter um rótulo único por grupo.
+% acurácia media p/ grupo
+% cluster1=89.3
+% cluster2=78.8
+% cluster3=94.2
+% cluster4=77
+% cluster5 = 86.1
+% cluster6=90.8
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{table}[!h]
-% \caption{Resultado de 4 (quatro) execuções do algoritmo CART.}
-%  %\begin{tabular}{ll}
-% %\rule{0}{50}
-% \centering
-%    \subfloat[1a. Execução]{ \label{tab:execucoes:glass:cart:1exec}
-%    %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 1a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
-%        \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 88.5 & 90.0  & 100 & 92.8 & 84.2 & 100 & 92.8 & 100 & 75.7 \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 72.3 & 82.8  & 94.7 & 82.8 & 71.0 & 100  & 77.6 &98.6 & 68.4  \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 3 & 76.4   & 70.5& 100  & 47.0 & 76.4 & 100  & 100 & 100 & 76.4  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 4 & 69.2   & 84.6& 76.9  & 61.5 & 69.2 & 76.9  & 76.9 & 92.3 & 84.6  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 77.7& 44.4  & 66.6 & 66.6 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 72.4 & 75.8& 68.9  & 72.4 & 75.8 & 86.2  & 86.2 & 51.7 & 100   \\ 
-%         
-%         \hline
-%       \end{tabular}
-%     %}
-%     }
-%  %&
-%  %\hspace{1cm} %altera o espaçamento entre as tabelas
-%  \hspace{1cm}
-%    \subfloat[2a. Execução]{ \label{tab:execucoes:glass:cart:2exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt}
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 2a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
-%        \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 85.7 & 87.1  & 100 & 92.8 & 84.2 & 100 & 92.8 & 100 & 74.2 \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 76.3 & 86.8  & 96.0 & 82.8 & 64.4 & 100  & 76.3 &98.6 & 68.4  \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 3 & 76.4   & 82.3& 100  & 47.0 & 76.4 & 100  & 100 & 100 & 76.4  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 4 & 76.9   & 84.6& 76.9  & 69.2 & 69.2 & 76.9  & 76.9 & 92.3 & 84.6  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 77.7& 44.4  & 66.6 & 66.6 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 72.4 & 75.8& 65.5  & 72.4 & 75.8 & 93.1  & 93.1 & 51.7 & 100  \\ 
-%         
-%         \hline
-%       \end{tabular}
-%   %}
-%   %\\  [8ex]
-%     }
-%     
-%     \subfloat[3a. Execução]{ \label{tab:execucoes:glass:cart:3exec}
-%  %\scalebox{0.5}{%
-%    \small\addtolength{\tabcolsep}{-2pt} 
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 3a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
-%        \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 88.5 & 85.7  & 100 & 92.8 & 84.2 & 100 & 92.8 & 100 & 75.7 \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 71.1 & 80.2  & 94.7 & 78.9 & 68.4 & 100  & 78.9 &98.6 & 65.7  \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 3 & 76.4   & 82.3& 100  & 58.8 & 76.4 & 100  & 100 & 100 & 82.3  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 4 & 76.9   & 84.6& 76.9  & 61.5 & 69.2 & 76.9  & 76.9 & 92.3 & 84.6  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 77.7& 44.4  & 66.6 & 66.6 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 72.4 & 68.9& 65.9  & 68.9 & 75.8 & 89.6  & 93.1 & 55.1 & 100   \\ 
-%         
-%         \hline
-%       \end{tabular}
-%     }
-%     %&
-%     \hspace{1cm}
-%     \subfloat[4a. Execução]{  \label{tab:execucoes:glass:cart:4exec}
-%        \small\addtolength{\tabcolsep}{-2pt}
-%     \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
-%         \hline \hline
-%             {\tiny 4a. Exec}     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
-%        \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
-%         \multicolumn{1}{|c|}{}                           & 1 & 88.7 & 87.1  & 100 & 92.8 & 84.2 & 100 & 92.8 & 100 & 75.7 \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 2 & 78.9 & 84.2  & 94.7 & 81.5 & 69.7 & 100  & 76.3 &98.6 & 65.7  \\ \cline{2-11} 
-%         \multicolumn{1}{|c|}{}                           & 3 & 76.4   & 82.3& 100  & 64.7 & 76.4 & 100  & 100 & 100 & 76.4  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 4 & 76.9   & 84.6& 61.5  & 69.2 & 69.2 & 76.9  & 76.9 & 92.3 & 84.6  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{}                           & 5 & 77.7   & 77.7& 44.4  & 66.6 & 66.6 & 100  & 55.5 & 100 & 100  \\ \cline{2-11}
-%         \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 & 72.4 & 68.9& 68.9  & 68.9 & 75.8 & 93.1  & 93.1 & 51.7 & 100  \\ 
-%         
-%         \hline
-%       \end{tabular}
-%    %\\
-%     }
-%     
-%  %\end{tabular}
-%  \label{tab:execucoes:glass:cart}
-% \end{table}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-A melhor maneira para explicar o valor de variância  ${V=6\%}$ é verificar na tabela \ref{tab:execucoes:glass:cart} (matriz de atributos importantes) os valores correspondentes aos \textit{clusters} que possuem rótulos iguais. Esta tabela contém valores em porcentagem, e representa o quanto cada atributo é bem correlacionado com os demais, logo, quanto maior for o valor mais bem correlacionado é o atributo. 
-
-
-\begin{table}[!h]
-\centering
-\caption{Matriz de Atributos Importantes do algoritmo CART na base Glass}
-\label{tab:execucoes:glass:cart}
-\scalebox{0.8}{
-
-   %\small\addtolength{\tabcolsep}{-2pt} 
-    \begin{tabular}{|cl|c|c|c|c|c|c|c|c|c|}
-        \hline \hline
-            {\tiny }     &   & \multicolumn{9}{c|}{\tiny Atributos}                                               \\ \cline{3-11} 
-       \multicolumn{1}{|l}{}                            &   & RI    & Na    & Mg  & Al   & Si   & K   & Ca   & Ba  & Fe             \\ \hline
-        \multicolumn{1}{|c|}{}                           & 1 & 85 & 68  & \textbf{100} & 82 & 94 & \textbf{100} & 87 & \textbf{100} & 91 \\ \cline{2-11} 
-        \multicolumn{1}{|c|}{}                           & 2 & 88  &  64  &  82  &  65  &  84  & \textbf{100}  &  85  &  98  &  81   \\ \cline{2-11} 
-        \multicolumn{1}{|c|}{}                           & 3 &  88  &  88  & \textbf{100}  &  70  &  82  & \textbf{100}  &  88 & \textbf{100}  &  82   \\ \cline{2-11}
-        \multicolumn{1}{|c|}{}                           & 4 &  92  &  46  &  76  &  \textbf{92}  &  84  &  84  &  \textbf{92}  &  \textbf{92}  &  84  \\ \cline{2-11}
-        \multicolumn{1}{|c|}{}                           & 5 &  55  &  88  &  55  &  66  &  77   & \textbf{100}  &  77  &  \textbf{100} & \textbf{100}   \\ \cline{2-11}
-        \multicolumn{1}{|c|}{\multirow{-3}{*}{\tiny Clusters}} & 6 &  72  &  89  &  82  &  82  &  68  &  96  &  89  &  48  & \textbf{100}    \\ 
-        
-        \hline
-      \end{tabular}
-
-}
-\end{table}    
-
-O número da variância não é escolhido aleatoriamente, ao em vez disso, é analisada a matriz de atributos importantes, tabela  \ref{tab:execucoes:glass:cart}, e calculado o menor valor ${V}$ que contribua de forma a adicionar o menor número possível de atributos rótulos para  evitar a ambiguidade, e analisando esta tabela, em específico o \textit{cluster} 1 e 3, percebe-se que os maiores valores (100\%) estão apontando para os mesmos atributos: \textbf{Mg}, \textbf{K}, \textbf{Ba}. Então, para retirar essa ambiguidade foram testados vários valores, e encontrado ${V=6\%}$, sendo que ${100-6=94}$, isto posto, qualquer atributo que possua o valor entre de ${94\%}$ até ${100\%}$ será atributo rótulo do \textit{cluster}. Neste intervalo, o atributo \textbf{Si} (94\%) entra para  fazer parte do rótulo do \textit{cluster} 1, e o \textit{cluster} 3 mantém os mesmos atributos, porém no \textit{cluster} 6 o atributo \textbf{K} (96\%) também é adicionado ao rótulo, ficando dois atributos rótulos: \textbf{K} e \textbf{Fe}.
 
 
 De acordo com a aplicação do CART na base de dados \textbf{Glass} os rótulos são os seguintes:
 \begin{itemize}[noitemsep]
- \item ${r_{c_1}=\{ (Mg, [ 2.993333 \sim  4.490]), (Si,] 71.676667 \sim 73.543333 ]), (K,[ 0.0 \sim  2.0700 ] ), }$
+ \item ${r_{c_1}=\{ (Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$  
+ \item ${r_{c_2}=\{ (Mg,] 3.3675 \sim  4.49 ] ),(Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
+ \item ${r_{c_3}=\{ ((K,[ 0.0 \sim 1.5525 ] ),(Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] )  \} }$  
+ \item ${r_{c_4}=\{ (Mg,[ 0.0 \sim  1.1225 ] ),(Al,] 1.0925 \sim 1.895 ] ), (K,[ 0.0 \sim 1.5525 ] ),}$
 
- ${ (Ba,[ 0.0 \sim 1.0500 ] ) \} }$  
- \item ${r_{c_2}=\{(Ba,[ 0.0 \sim 1.0500 ] ), (K,[ 0.0 \sim  2.0700 ] ) \} }$
- \item ${r_{c_3}=\{ (Mg, [ 2.993333 \sim  4.490]), (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] )  \} }$  
- \item ${r_{c_4}=\{ (RI,] 1.518743 \sim  1.526337 ] ), (Al,[ 1.360000 \sim  2.430000 ] ), }$
+ ${ (Ba,[ 0.0 \sim 0.7875 ] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
+ \item ${r_{c_5}=\{ (Mg,[ 0.0 \sim  1.1225 ] ), (K,[ 0.0 \sim 1.5525 ]  ),(Ba,[ 0.0 \sim 0.7875 ] ), }$
  
- ${(Ca,] 9.016667 \sim  12.603333] ), (Ba,[ 0.0 \sim 1.0500 ] ) \}}$
-
- \item ${r_{c_5}=\{ (K,[ 0.0 \sim  2.0700 ] ), (Ba,[ 0.0 \sim 1.0500 ] ), (Fe,[ 0.0 \sim 0.17000] ) \} }$
- \item ${r_{c_6}=\{ (K,[ 0.0 \sim  2.0700 ] ),(Fe,[ 0.0 \sim 0.17000] ) \} }$
+ ${ (Fe,[ 0.0 \sim 0.1275 ] ) \} }$
+ \item ${r_{c_6}=\{ (Mg,[ 0.0 \sim  1.1225  ] ),  (K,[ 0.0 \sim 1.5525] ),(Fe,[ 0.0 \sim 0.1275 ] ) \} }$
 \end{itemize}
 
 
@@ -1716,18 +894,4 @@ A figura \ref{fig:acuracia_media_algoritmos} mostra um gráfico geral da acurác
 
 Uma breve análise do gráfico da figura \ref{fig:acuracia_media_algoritmos} referente as acurácias dos rótulos, fica claro que a qualidade deles foram satisfatórias, pois atingiram uma acurácia média com mínimo de 80\%. A acurácia desses rótulos servem para mostrar o quanto esses rótulos representam o grupo através das amostras testadas, e os três algoritmos tiveram acurácias bem parecidas, e em específico o Naive Bayes e KNN. Os clusters com menores acurácias 
 
-Uma forma de comprovar a qualidade do rótulo e mostrar que de fato ele cumpre seu papel de identificar o grupo, é colocar em prática um exemplo que pode ser visto na figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf}. Para essa análise foi selecionada a base Iris, por possuir poucos atributos e também pelos rótulos encontrados em todos os \textit{clusters} variarem entre dois deles: petalwidth e petallength. 
 
-%Dessa forma o gráfico da figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf} apresenta o comportamento dos dados desta base, logo facilita a análise para comfirmar se os rótulos encontrados cumprem a finalidde de representar os grupos. 
-
-O gráfico da figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf} exibe a relação de dois atributos representados pelos eixos X e Y, facilitando a visualização do comportamento dos três grupos: \textit{Iris-setosa}, \textit{Iris-versicolor} e \textit{Iris-viginica}.
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.9]{figs/grafico_iris_petalwidth_petallength_BrOf.png}
-        \caption{Gráfico da disposição de elementos da Base Iris entre os eixos \textbf{petallength} e \textbf{petalwidth}} \label{fig:grafico_iris_petalwidth_petallength_BrOf}
-\end{figure}
-
-De acordo com a proposta dessa pesquisa, sobre a rotulação de dados, e para mostrar a confiabilidade dos rótulos encontrados nas bases de dados na representação dos clusters, foi inserido como exemplo a base Iris representada acima através da figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf}, para uma análise dos rótulos. Todos os algoritmos: Naive Bayes, CART e KNN, encontraram os mesmos rótulos no \textit{cluster} 1 da Iris, e ao analisar o gráfico, o \textit{cluster} 1 (Iris-setosa), é possível perceber uma relação bem definida entre os demais grupos, pois de fato, todos os elementos que possuem comprimento da pétala (\textit{petallength}) variando de 1.0 até 3.7 e largura de pétala (\textit{petallength}) variando de 0.1 a 1.0 participa do grupo Iris-setosa, portanto, esse rótulo comprovadamente representa este grupo.
-
-Analisando os outros grupos através do gráfico da figura \ref{fig:grafico_iris_petalwidth_petallength_BrOf} percebe-se que a amostra de dados dos grupos Iris-versicolor e Iris-virginica contêm elementos que se misturam, não deixando um ponto de corte tão preciso quanto o da Iris-setosa, ocasionando ao rótulo alguns erros identificados nos \textit{clusters} 1 e 2.
