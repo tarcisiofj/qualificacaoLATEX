@@ -50,23 +50,23 @@
 \contentsline {subsection}{\numberline {4.5.2}Classification and Regression Trees - CART}{52}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}K-Nearest Neighbor - KNN}{53}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Comparativo entre Algoritmos na Base de Dados Wine}{53}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{54}{section.4.6}
+\contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{57}{section.4.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{56}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{56}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{57}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{58}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{58}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{59}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{58}{section*.55}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{60}{section*.55}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{61}{section*.56}
+\contentsline {part}{\uppercase {Ap\^endices}}{63}{section*.56}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{62}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{64}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{63}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{65}{appendix.B}
