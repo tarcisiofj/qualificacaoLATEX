@@ -52,21 +52,17 @@
 \contentsline {subsection}{\numberline {4.5.4}Comparativo entre Algoritmos na Base de Dados Wine}{56}{subsection.4.5.4}
 \contentsline {section}{\numberline {4.6}Discuss\IeC {\~o}es}{60}{section.4.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{63}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{64}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~o}es, Trabalhos Futuros}}{62}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~a}o}{62}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{63}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{65}{section*.58}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{64}{section*.55}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{69}{section*.59}
+\contentsline {part}{\uppercase {Ap\^endices}}{67}{section*.56}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{70}{appendix.A}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Perceba que o texto do t\IeC {\'\i }tulo desse segundo ap\IeC {\^e}ndice \IeC {\'e} bem grande}}{71}{appendix.B}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Primeiro Ap\IeC {\^e}ncice}}{68}{appendix.A}

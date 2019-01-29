@@ -736,8 +736,9 @@ Analisando-se os resultados da tabela \ref{tab:acuracia:glass}, percebe-se que a
 
 \section{Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}
 
+ 
 
-Essa base \cite{Aeberhard1992} possui dados que são resultados de uma análise química de vinhos em uma mesma região da Itália, mas com três tipos de cultivos diferenciados, resultando em três classes distintas (tipos de vinho) e totalizando 178 registros. Através desta análise foram determinadas treze características determinantes para classificação do tipo de vinho, que estão distribuídas em 178 amostras. Esses treze atributos são: (1) álcool , (2) ácido málico - AM, (3) cinzas, (4) alcalinidade das cinzas - AC, (5) magnésio, (6) total de fenois - TF, (7) flavonoides, (8) fenóis não-flavonoides - FnF, (9) proantocianidinas, (10) intensidade da cor - IC, (11) matiz, (12) OD280/OD315 de vinhos diluídos - OD e (13) prolina. 
+Essa base \cite{Aeberhard1992} possui dados que são resultados de uma análise química de vinhos em uma mesma região da Itália, mas com três tipos de cultivos diferenciados, resultando em três classes distintas (tipos de vinho) e totalizando 178 registros. Por meio desta análise, foram determinadas treze características determinantes para classificação do tipo de vinho, que estão distribuídas em 178 amostras. Esses treze atributos são: (1) álcool , (2) ácido málico - AM, (3) cinzas, (4) alcalinidade das cinzas - AC, (5) magnésio, (6) total de fenois - TF, (7) flavonoides, (8) fenóis não-flavonoides - FnF, (9) proantocianidinas, (10) intensidade da cor - IC, (11) matiz, (12) OD280/OD315 de vinhos diluídos - OD e (13) prolina. 
 
 A divisão em número de instâncias por classe são:
 
@@ -748,13 +749,14 @@ A divisão em número de instâncias por classe são:
 \end{itemize}
 
 
-Na descrição da base Wine\footnote{https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.names} não é dito quais seriam os nomes das classes (tipos de vinho) designadas como classe 1, 2 ou 3, portanto, os rótulos encontrados pelos algoritmos são apresentados em tabelas e na coluna \textbf{Cluster} as informações são inseridas por sequência numérica: \textit{cluster} 1, \textit{cluster} 2, \textit{cluster} 3 com 59, 71 e 48 registros respectivamente. 
 
-O método de discretização variou dentre os algoritmos e prevaleceu os que obtiveram melhores resultados (menos erros) nos rótulos encontrados, mantendo-se o  ${R=3}$  para todos os atributos e também a variância ${V=0\%}$. 
+Na descrição da base Wine\footnote{https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.names} não é dito quais seriam os nomes das classes (tipos de vinho) designadas como classe 1, 2 ou 3, portanto, os rótulos encontrados pelos algoritmos são apresentados em tabelas e na coluna \textbf{Cluster} as informações são inseridas por sequência numérica: \textit{cluster} 1, \textit{cluster} 2, \textit{cluster} 3, com 59, 71 e 48 registros respectivamente. 
+
+O método de discretização variou dentre os algoritmos e prevaleceu os que obtiveram melhores resultados (menos erros) nos rótulos encontrados, mantendo-se o ${R=3}$ para todos os atributos e também a variância ${V=0\%}$.
 
 \subsection{Naive Bayes} \label{cap:resultados:ssec:wine:bayes}
 
-Os rótulos encontrados após aplicação do Naive Bayes são apresentados na tabela \ref{tab:rot:wine:nb} e separados por \textit{cluster} 1, 2 e 3, representando os três tipos de vinho. Foi utilizado o método de discretização EWD para demarcar os limites das faixas de dados dos atributos.
+Os rótulos encontrados após aplicação do Naive Bayes são apresentados na tabela \ref{tab:rot:wine:nb}  e separados por \textit{cluster} 1, 2 e 3, representando os três tipos de vinho. Foi utilizado o método de discretização EWD para demarcar os limites das faixas de dados dos atributos.
 
 \begin{table}[!h]
 \centering
@@ -777,14 +779,14 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 
 
-O \textit{cluster} 1 foi o único a apresentar três atributos no rótulo, com relevância de 8\% cada; dois desses atributos \textbf{AM} e \textbf{magnesium} possuem acurácias parciais baixas, 52.6\% e 59.4\%  respectivamente e outro \textbf{prolina} com 83.1\%, totalizando uma acurácia média aproximada no grupo de 65\%. Em números de registros o rótulos do cluster 1 consegue representar 19 registros dos 59 do grupo.
-No \textit{cluster} 2 foi o que apresentou melhor acurácia com 95\% representando 60 registros dos 71 do grupo, e o \textit{cluster} 3 com a pior acurácia, representanto 26 amostras, um pouco mais da metade dos 48 registros do grupo.
+
+O \textit{cluster} 1 foi o único a apresentar três atributos no rótulo, com relevância de 8\% cada; dois desses atributos, \textbf{AM} e \textbf{magnesium}, possuem acurácias parciais baixas, 52.6\% e 59.4\% respectivamente e outro, \textbf{prolina}, com 83.1\%, totalizando uma acurácia média aproximada no grupo de 65\%. Em números de registros, o rótulo do \textit{cluster} 1 consegue representar 19 registros dos 59 do grupo. O \textit{cluster} 2 foi o que apresentou melhor acurácia, com 95\%, representando 60 registros dos 71 do grupo, e o \textit{cluster} 3 com a pior acurácia, representando 26 amostras, um pouco mais da metade dos 48 registros do grupo. 
 
 %Essa distribuição de dados obteve via Naive Bayesvalores de relevância
 
 
 
-De acordo com a aplicação do Naive Bayes na base de dados \textbf{Wine} os rótulos são:
+De acordo com a aplicação do Naive Bayes na base de dados Wine, os rótulos são: 
 
 \begin{itemize}[noitemsep]
     \item ${r_{c_1}=\{ (AM, ] 1.71  \sim  2.89]),(magnesium, ] 95.00 \sim  113.00]),}$
@@ -797,7 +799,8 @@ De acordo com a aplicação do Naive Bayes na base de dados \textbf{Wine} os ró
 
 \subsection{Classification and Regression Trees - CART} \label{cap:resultados:ssec:wine:cart}
 
-A tabela \ref{tab:rot:wine:cart} apresenta os rótulos encontrados pelo CART na base Wine utilizando o número de faixas ${R=3}$, e dentre os clusters percebe-se  que o \textit{cluster} 2, foi o que obteve a melhor  acurácia de ${76.1\%}$. Foram realizados vários testes alterando  o número de faixas, mas nenhuma melhora significativa nos erros foram encontrados   nos rótulos dos clusters.
+A tabela \ref{tab:rot:wine:cart} apresenta os rótulos encontrados pelo CART na base Wine utilizando o número de faixas ${R=3}$ e, dentre os \textit{clusters}, percebe-se que o \textit{cluster} 2 foi o que obteve a melhor acurácia, 76.1\%. Foram realizados vários testes alterando o número de faixas, mas nenhuma melhora significativa nos erros foi encontrada nos rótulos dos \textit{clusters}. 
+
 \newpage
 \begin{table}[!h]
 \centering
@@ -817,7 +820,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{tabular}}
 \end{table}
 
-Nos rótulos sugeridos pelo CART, os valores de porcentagens de correlacionamento entre as variáveis, coluna \textbf{Relevância}, foram valores baixos não passando de 14\% nos grupos, indicando um baixo grau de correlação entre esse atributo e os demais. Embora a relevância do atributo implique na escolha dele como rótulo, a acurácia depende da divisão de valores da faixa do atributo, pois será contabilizado o número de registros em cada faixa.
+Nos rótulos sugeridos pelo CART, os valores de porcentagem de correlacionamento entre as variáveis, coluna \textbf{Relevância}, foram baixos, não passando de 14\% nos grupos, indicando um baixo grau de correlação entre esse atributo e os demais. Embora a relevância do atributo implique na escolha dele como rótulo, a acurácia depende da divisão de valores da faixa do atributo, pois será contabilizado o número de registros em cada faixa. 
 
 Logo os rótulos da aplicação do CART na base de dados \textbf{Wine} são:
 \begin{itemize}[noitemsep]
@@ -828,9 +831,9 @@ Logo os rótulos da aplicação do CART na base de dados \textbf{Wine} são:
  
  
 \subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:wine:knn}
+ 
 
-No resultado do KNN, na tabela \ref{tab:rot:wine:knn}, percebe-se o atributo FnF sendo rótulo do \textit{cluster} 1 e 3, mediante faixas distintas. O mesmo atributo  se repete no  \textit{cluster} 3  dos três algoritmos, ainda que no Naive Bayes fora utilizado outro método de discretização mantendo o atributo FnF mas alterando os intervalos da faixa. 
-
+No resultado do KNN, na tabela \ref{tab:rot:wine:knn}, percebe-se o atributo FnF sendo rótulo do \textit{cluster} 1 e 3, mediante faixas distintas. O mesmo atributo se repete no cluster 3 dos três algoritmos, ainda que no Naive Bayes fora utilizado outro método de discretização, mantendo o atributo FnF, mas alterando os intervalos da faixa. 
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
@@ -865,13 +868,13 @@ Os rótulos encontrados após a execução do KNN na base Wine são:
 
 \subsection{Comparativo entre Algoritmos na Base de Dados Wine} \label{cap:resultados:ssec:compalgoritmos:wine}
 
-No geral as acurácias foram bastantes baixas entre os algoritmos e a única semelhança entre os rótulos aconteceu no \textit{cluster} 3, o qual foi idêntico entre CART, KNN e Naive Bayes mas nesse último, houve diferença do intervalo de dados ocasionando altereção na acurácia. Na execução do Naive Bayes foi utilizado  discretização EFD com variação na faixa 1 de ${[0.13 \sim 0.29]}$, na faixa 2 ${]0.29 \sim 0.44]}$ e na faixa 3 ${]0.44 \sim 0.66]}$, e os outros dois algoritmos utilizaram EWD variando na faixa 1 de ${[0.13 \sim 0.3067]}$, na faixa 2 ${]0.3067 \sim 0.483333]}$ e na faixa 3 ${]0.483333 \sim 0.66]}$. A faixa 3 do método de discretização EFD ficou maior e por conseguinte mais registros foram representados aumentando a acurácia.
+
+No geral, as acurácias foram bastante baixas entre os algoritmos e a única semelhança entre os rótulos aconteceu no \textit{cluster} 3, o qual foi idêntico entre CART, KNN e Naive Bayes, mas, nesse último, houve diferença do intervalo de dados, ocasionando alteração na acurácia. Na execução do Naive Bayes, foi utilizada discretização EFD com variação na faixa 1 de ${[0.13 \sim 0.29]}$, na faixa 2 ${]0.29 \sim 0.44]}$ e na faixa 3 ${]0.44 \sim 0.66]}$ e os outros dois algoritmos utilizaram EWD variando na faixa 1 de ${[0.13 \sim 0.3067]}$, na faixa 2  ${]0.3067 \sim 0.483333]}$ e na faixa 3 ${]0.483333 \sim 0.66]}$. A faixa 3 do método de discretização EFD ficou maior e, por conseguinte, mais registros foram representados, aumentando a acurácia.Dos três algoritmos, o Naive Bayes obteve melhores acurácias nos rótulos dos \textit{clusters} 2 e 3 e foi o único que no \textit{cluster} 1 apresentou, em um mesmo rótulo, três atributos para representar o grupo. Uma forma de melhor explicar quais registros o rótulo está representando foi adicionar a tabela \ref{tab:wine:am_magnesium_proline}, que exibe todos os 59 registros do grupo 1, mas com somente três atributos. Esta amostra servirá de exemplo para visualizar quais os registros são representados pelo rótulo do \textit{cluster} 1 do Naive Bayes. 
 
 %Outra forma de melhorar a acurácia foi quando nos testes foi definiu o valor de ${R=2}$, devido a essa alteração os rótulos sugeridos pelo CART e KNN tiveram acurácias melhores, porém se sabe que ao diminuir o valor de ${R}$ aumenta o tamanho da faixa implicando em uma perda de informação, \textit{e.g.}, se com uma faixa de tamanho ${R=3}$ o número de faixas iria para três, logo os dados iriam distribuir-se entre as três faixas, entretanto diminuindo para ${R=2}$, a mesma quantidade de valores irião distribuir-se em duas faixas, ao invés das três anteriores, e  deixando as duas faixas maiores consequentemente representando mais valores. Dito isso, é importante ressaltar que este trabalho faz testes sempre a partir de R=3 não só pela perda de informação mas também por comparação de outros trabalhos já realizados, e assim haver comparação.
 
-Dos três algoritmos o Naive Bayes  obteve melhores acurácias nos rótulos dos clusters 2 e 3, e foi o único que no cluster 1 apresentou em um mesmo rótulo, três atributos para representar o grupo. Uma forma de melhor explicar quais registros o rótulo esta representando foi adicionar a tabela \ref{tab:wine:am_magnesium_proline} onde exibe todos os 59 registros do grupo 1, mas com somente três atributos. Esta amostra servirá de exemplo  para visualizar quais os registros são representados pelo rótulo do cluster 1 do Naive Bayes. 
 
-A tabela possui quatro colunas, sendo a primeira um índice da linha e as outras três os atributos correspondentes ao rótulo. No cabeçalho da tabela \ref{tab:wine:am_magnesium_proline} é exibido os atributos com seus respectivos símbolos, cada símbolo tem a função visual de marcar a linha que faz parte do rótulo ${r_{c_1}}$, ou seja, destaca a qual atributo e faixa é representada a amostra:
+A tabela possui quatro colunas, sendo a primeira um índice da linha e as outras três os atributos correspondentes ao rótulo. No cabeçalho da tabela \ref{tab:wine:am_magnesium_proline} são exibidos os atributos com seus respectivos símbolos. Cada símbolo tem a função visual de marcar a linha que faz parte do rótulo ${r_{c_1}}$, ou seja, destaca qual atributo e faixa são representados na amostra: 
 
 \begin{itemize}[noitemsep]
 \item ${(AM, ] 1.71  \sim  2.89])}$ - \Square
@@ -880,9 +883,9 @@ A tabela possui quatro colunas, sendo a primeira um índice da linha e as outras
 \end{itemize}
 
 \newpage
-Então quando a linha for representada por um atributo e seu intervalo, este será marcado de acordo com o símbolo que ele representa, e caso esteja com os três símbolos então a linha é representada pelo rótulo ${r_{c_1}}$, e dessa forma é possível visualizar na própria base quais amostras o rótulo representa e não representa.
 
 
+Então, quando a linha for representada por um atributo e seu intervalo, este será marcado de acordo com o símbolo que ele representa e, caso esteja com os três símbolos, então a linha é representada pelo rótulo ${r_{c_1}}$, e, dessa forma, é possível visualizar na própria base quais amostras o rótulo representa e não representa.
 \begin{table}[!ht]
 \centering 
 \caption{Amostra da Base de Dados Wine com somente três atributos pertencentes ao \textit{cluster} 1 do algoritmo Naive Bayes}
@@ -962,10 +965,11 @@ Então quando a linha for representada por um atributo e seu intervalo, este ser
 \end{tabular}}
 \end{table}
 
-Como exemplo, verificando a linha 3 percebe-se que ela está na faixa de representação tanto do atributo \textbf{magnesium} como também do \textbf{atributo} proline, mas não é representada pelo atributo \textbf{AM} por possuir o valor 4.04, sendo que o limite do intervalo do atributo \textbf{AM} é 2.89. Considerando essa informação essa linha não consegue ser representada pelo três atributos e  por conseguinte não é representada pelo rótulo ${r_{c_1}}$ do Naive Bayes. Então atravé da tabela \ref{tab:wine:am_magnesium_proline} é contabilizado que o rótulo consegue representar 19 elementos no grupo de 59. Quando acontece do rótulo apresentar mais de um atributo, uma análise dos valores dos atributos do grupo tem que ser realizada, pois só assim é possível informar com precisão quais são os registros que pertencem aos rótulos.  
 
-\newpage
-Os outros rótulos dos clusters 2 e 3 do Naive Bayes são compostos por um atributo cada, e através da figura \ref{fig:grafico_wine_alcool_FnF} é possível conhecer o espaço amostral da base Wine em função de dois eixos:FnF e alcool.  
+Como exemplo, verificando a linha 3 percebe-se que ela está na faixa de representação tanto do atributo \textbf{magnesium} como também do atributo \textbf{proline}, mas não é representada pelo atributo \textbf{AM} por possuir o valor 4.04, sendo que o limite do intervalo do atributo \textbf{AM} é 2.89. Considerando essa informação, essa linha não consegue ser representada pelo três atributos e, por conseguinte, não é representada pelo rótulo  ${r_{c_1}}$ do Naive Bayes. Então, através da tabela \ref{tab:wine:am_magnesium_proline} é contabilizado que o rótulo consegue representar 19 elementos no grupo de 59. Quando acontece de o rótulo apresentar mais de um atributo, uma análise dos valores dos atributos do grupo tem que ser realizada junto a base de dados, pois só assim é possível informar com precisão quais são os registros que pertencem aos rótulos. 
+
+  
+Os outros rótulos dos \textit{clusters} 2 e 3 do Naive Bayes são compostos por um atributo cada e por meio da figura \ref{fig:grafico_wine_alcool_FnF} é possível conhecer o espaço amostral da base Wine em função de dois eixos:\textbf{FnF} e \textbf{alcool}. 
 
 \begin{figure}[h!]
         \centering
@@ -975,10 +979,15 @@ Os outros rótulos dos clusters 2 e 3 do Naive Bayes são compostos por um atrib
 
 Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma pespectiva de duas variáveis, é possível visualizar o comportamento da base Wine quanto a disposição de seus dados, e através dos rótulos  sugeridos de pelo Naive Bayes pode-se constatar suas representações nos grupos, bem como também visualizar seus erros. e.g., quando um especialista verificar um determinado dado que possui no atributo alcool o valor 12.1, e este conhece os rótulos sugeridos pelo Naive Bayes, logo o especialista atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado  com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois ao confirmar o valor 12.1 no eixo X (alcool) percebe-se que este está junto a distribuição do grupo 2 conforme figura.
 
+Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma perspectiva de duas variáveis, é possível visualizar distribuição da base Wine  e, através dos rótulos sugeridos pelo Naive Bayes, pode-se constatar suas representações nos grupos, bem como também visualizar seus erros, e.g., quando um especialista verificar um determinado dado que possui no atributo \textbf{alcool}, o valor 12.1, e conhece os rótulos sugeridos pelo Naive Bayes, logo ele atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois, ao confirmar o valor 12.1 no eixo X (\textbf{alcool}), percebe-se visualmente que este está junto à distribuição do grupo 2, conforme figura. 
+
 A mesma figura também pode ser utilizada para explicar os rótulos sugeridos pelo KNN, que teve em comparação com CART melhor acurácia na rotulação do \textit{cluster} 1, e igual ao \textit{cluster} 3. Com rótulo do KNN ${r_{c_1}}$ ${=(FnF, [ 0.13 \sim  0.306667  ] ) \} }$, e através da figura \ref{fig:grafico_wine_alcool_FnF} percebe-se que a faixa coberta pelo rótulo aponta para os dados do grupo 1 (classe1 do gráfico). Da mesma forma acontece com o rótulo ${r_{c_3}=}$ ${\{ (FnF, ] 0.483333 \sim  0.66 ])\} }$ no qual valores do atributo \textbf{FnF} acima de 0.48 (vê gráfico figura \ref{fig:grafico_wine_alcool_FnF}) até 0.66 direcionam para o grupo 3 (classe3 do gráfico), de modo a constatar que os rótulos conseguem representar os grupos dos tipos de vinho.
+
+A mesma figura também pode ser utilizada para explicar os rótulos sugeridos pelo KNN, que teve, em comparação com CART, melhor acurácia na rotulação do \textit{cluster} 1 e igual ao \textit{cluster} 3. Com rótulo do KNN ${r_{c_1}}$ ${=(FnF, [ 0.13 \sim  0.306667  ] ) \} }$, e através da figura \ref{fig:grafico_wine_alcool_FnF}, percebe-se que a faixa coberta pelo rótulo aponta para os dados do grupo 1 (classe 1 do gráfico). Da mesma forma acontece com o rótulo ${r_{c_3}=}$ ${\{ (FnF, ] 0.483333 \sim  0.66 ])\} }$, no qual valores do atributo \textbf{FnF} acima de 0.48 (vê gráfico figura \ref{fig:grafico_wine_alcool_FnF}) até 0.66 direcionam para o grupo 3 (classe 3 do gráfico), de modo a constatar que os rótulos conseguem representar os grupos dos tipos de vinho.
 
 Dos resultados encontrados pelo CART o rótulo do \textit{cluster} 1, dentre os três algoritmos foi o melhor, com acurácia de 66.2\%, já em relação a acurácia no \textit{cluster} 2 foi pior comparando aos outros dois algoritmos, no \textit{cluster} 3 já foi dito sobre a igualdade deste resultado com CART e teve a acurácia mais baixa do que o Naive Bayes.
 
+Dos resultados encontrados pelo CART, o rótulo do \textit{cluster} 1, dentre os três algoritmos, foi o melhor, com acurácia de 66.2\%; já o cluster 2 em relação à acurácia, foi pior comparando-se aos outros dois algoritmos; no cluster 3, já foi dito sobre a igualdade deste resultado com CART, tendo a acurácia mais baixa do que o Naive Bayes. 
 
 % 
 % As tabelas \ref{tab:analise:wine:cluster1:matiz} e \ref{tab:analise:wine:cluster1:flavonoides} possuem uma amostra de registros do \textit{cluster} 1, em que é possível perceber quais os registros estão fazendo parte dos rótulos encontrados em cada algoritmo através das linhas em destaque. A tabela é formada pela primeira coluna indicando o número do registro na base de dados e em seguida os atributos. 
@@ -1056,7 +1065,7 @@ Dos resultados encontrados pelo CART o rótulo do \textit{cluster} 1, dentre os 
 \section{Discussões}
 
 
-A figura \ref{fig:acuracia_media_algoritmos} mostra um gráfico geral da acurácia média de todos os rótulos encontrados na aplicação dos algoritmos nas bases de dados. O eixo Y corresponde à porcentagem de acurácia média alcançada de um algoritmo, e o eixo X está dividido nos \textit{clusters} e a qual base de dados eles pertencem.  Essa acurácia é aferida a partir das acurácias parciais do(s) atributo(s) que faz(em) parte do rótulo, e caso o rótulo possua mais de um atributo é calculado uma média das acurácias parciais.
+A figura  \ref{fig:acuracia_media_algoritmos} mostra um gráfico geral da acurácia média de todos os rótulos encontrados na aplicação dos algoritmos nas bases de dados. O eixo Y corresponde à porcentagem de acurácia média alcançada de um algoritmo e o eixo X está dividido nos \textit{clusters} e a qual base de dados eles pertencem. Essa acurácia é aferida a partir das acurácias parciais do(s) atributo(s) que faz(em) parte do rótulo e, caso o rótulo possua mais de um atributo, é calculada uma média das acurácias parciais. 
 
 \begin{figure}[h!]
         \centering
@@ -1064,322 +1073,15 @@ A figura \ref{fig:acuracia_media_algoritmos} mostra um gráfico geral da acurác
         \caption{Acurácia média entre os clusters de todas as bases testadas com os algoritmos: Naive Bayes, CART e KNN} \label{fig:acuracia_media_algoritmos}
 \end{figure}
 
-Foram testadas quatro bases de dados e dentre elas a base Wine, uma base de resultado de análises químicas com 178 amostras dividia em três tipos de vinhos, foi a única a possuir algumas acurácias de rótulos por clusters abaixo de 60\%, já as demais bases: Seeds, Iris e Glass, tiveram suas acurácias dos rótulos por clusters acima de 70\%.
+Foram testadas quatro bases de dados e dentre elas a base Wine, uma base de resultado de análises químicas com 178 amostras dividida em três tipos de vinhos. Foi a única a possuir algumas acurácias de rótulos por clusters abaixo de 60\%, já as demais bases, Seeds, Iris e Glass, tiveram suas acurácias dos rótulos por clusters acima de 70\%.
 
 %É possível verificar no gráfico da figura \ref{fig:acuracia_media_algoritmos} algoritmo
 
-Outra pesquisa também realizou testes com essas mesmas bases para realizar rotulação de dados, mas diferente deste trabalho, \citeonline{Lopes2016} não considerou a classificação da base e realizou em seu modelo de resolução uma nova classificação através de um algoritmo não-supervisionado, \textit{K-means}, e só assim aplicou um algoritmo de aprendizado de máquina supervisionado. Para esta pesquisa poder realizar uma comparação entre os resultados, terá que se recriar os grupos que \citeonline{Lopes2016} criou em seu trabalho, e em seguida aplicar os algoritmos supervisionados para obter os resultados dos rótulo. A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo, qualquer alteração destes registros implica nos resultados dos rótulos. Dessa maneira foram recriados os grupos das bases: Seeds, Iris e Glass, de acordo com a pesquisa de \citeonline{Lopes2016} para que dessa forma consiga recriar novos rótulos a partir de outros algoritmos supervisionados não testados,  e compará-los.
 
 
-\begin{table}[]
-\centering
-\caption{Rotulação de Dados utilizando a base de dados Seeds.}
-\subfloat[Naive Bayes]{
-\label{tab:comparativo:seeds:nb}
-\scalebox{0.8}{
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
-1                   &    72                  &  asymetry    & 25   & 34.7\\ \hline
-                    &                        & Lkernel        & 1  & 1.64\\  
-\multirow{-2}{*}{2} &   \multirow{-2}{*}{61} & lkgroove        & 5  & 8.19\\ \hline 
-3                   &    77                  & perimetro       & 10  & 12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 41   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[CART]{
-\label{tab:comparativo:seeds:cart}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
-1                   &    72                  &  perimetro    & 14  & 19.44 \\ \hline
-2                   &   61                   & perimetro     & 0  & 0\\ \hline 
-3                   &    77                  & perimetro      & 10  & 12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 24  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-
-\subfloat[KNN]{
-\label{tab:comparativo:seeds:knn}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
-1                   &    72                  &  perimetro    & 14   & 19.44\\ \hline
-2                   &   61                   & lkgroove     & 5  & 8.19\\ \hline 
-3                   &    77                  & perimetro      & 10 &  12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 29  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[Resultado de \citeonline{Lopes2016}]{
-\label{tab:comparativo:seeds:lopes}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
-                   &                       &  area    & 8   &  11.95 \\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{67} & perimetro        & 9  & 13.64\\  \hline
-                    &                        & area        & 12  & 14.64\\
-\multirow{-2}{*}{2} &   \multirow{-2}{*}{82} & perimetro        & 10  & 12.2\\ \hline 
-                    &                      & perimetro       & 0  & 0\\ 
-                    &                        & wkernel        & 3  & 4.92\\  
-                    &                      & lkernel       & 1  & 1.64\\ 
-\multirow{-4}{*}{3} &   \multirow{-4}{*}{61} & area        & 0  & 0\\  \hline
-\multicolumn{3}{|c|}{Total}                             & 43   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\end{table}
+Outra pesquisa também realizou testes com essas mesmas bases para realizar rotulação de dados, mas, diferente deste trabalho, \citeonline{Lopes2016} não considerou a classificação das bases, ou seja,  não utilizou os grupos já designados na origem das bases, e realizou  uma nova classificação através de um algoritmo não-supervisionado,\textit{ K-means}, e só assim aplicou um algoritmo de aprendizado  de máquina supervisionado (RNAs). Para esta pesquisa poder realizar uma comparação entre os resultados, é necessário recriar os grupos que \citeonline{Lopes2016} criou em seu trabalho e em seguida aplicar os algoritmos supervisionados para obter os rótulo. A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo e qualquer alteração destes registros implica em uma alteração nos resultados dos rótulos. Dessa maneira foram realizados testes para recriar os mesmos grupos que \citeonline{Lopes2016}, mas mesmo utilizando as mesmas técnicas as tentativas não lograram êxito em fazer grupos idênticos, pois mesmo configurando o número de grupos a ser encontrado pelo algoritmo, ao executá-lo, os resultados retornam grupos diferentes um do outro, de forma que uma comparação com grupos diferentes não retrataria uma comparação justa, pois os dados testados não seriam os mesmos\footnote{Resultados dos testes comparativos no Apêndice \ref{apendice:1}}.
 
 
-
-\begin{table}[]
-\centering
-\caption{Rotulação de Dados utilizando a base de dados Iris.}
-\subfloat[Naive Bayes]{
-\label{tab:comparativo:iris:nb}
-\scalebox{0.8}{
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
-                    &                        & sepallength        & 10  & 26.3\\  
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{38} & petalwidth        & 4  & 10.5\\ \hline 
-2                   &    62                  & petalwidth       & 19  & 30.6\\ \hline
-3                   &    50                  & petalwidth       & 0  & 0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 33   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[CART]{
-\label{tab:comparativo:iris:cart}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
-1                   &    38                  &  petalwidth    & 4  & 10.5 \\ \hline
-2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
-3                   &    50                  & petalwidth      & 0  & 0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 23  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-
-\subfloat[KNN]{
-\label{tab:comparativo:iris:knn}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
-1                   &    38                  &  sepallength   & 10   & 26.3\\ \hline
-2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
-3                   &    50                  & petalwidth      & 0 &  0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 29  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[Resultado de \citeonline{Lopes2016}]{
-\label{tab:comparativo:iris:lopes}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
-                   &                       &  petalwidth    & 0   & 0 \\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{50} & petallength   & 0  & 0\\  \hline
-                   2 &          62              & petallength   & 6  & 9.68\\ \hline
-                     &                        & petallength        & 3  & 7.9\\
-\multirow{-2}{*}{3} &   \multirow{-2}{*}{38} & petalwidth        & 2  & 5.27 \\ \hline 
-\multicolumn{3}{|c|}{Total}                             & 11   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\end{table}
-
-
-\begin{table}[]
-\centering
-\caption{Rotulação de Dados utilizando a base de dados Glass.}
-\subfloat[Naive Bayes]{
-\label{tab:comparativo:glass:nb}
-\scalebox{0.8}{
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
-                  &                    & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
- &  & Mg  & 2 & 50,00\\
- &  & K   & 2 & 50,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-3}{*}{2} & \multirow{-2}{*}{4}& Fe  & 0 & 0,00\\ \hline
- &  & RI  & 11 & 35,48\\
- &  & Mg  & 2 & 6,45\\
- &  & Al  & 14 & 45,16\\
- &  & Si  & 6 & 19,35\\
- &  & K   & 1 & 3,23\\
- &  & Ba  & 12 & 38,71\\
-\multirow{-7}{*}{3} & \multirow{-7}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 6 & 16,67\\
- &  & Na  & 11 & 30,56\\
- &  & Mg  & 12 & 33,33\\
- &  & Al  & 17 & 47,22\\
- &  & Si  & 6 & 16,67\\
- &  & K   & 0 & 0,00\\
- &  & Ca  & 1 & 2,78\\
- &  & Ba  & 1 & 2,78\\
-\multirow{-9}{*}{4} & \multirow{-9}{*}{36}& Fe  & 8 & 22,22\\ \hline
- &  & Mg  & 2 & 12,50\\
- &  & Al  & 6 & 37,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe  & 4 & 25,00\\ \hline
- &  & Si  & 6 & 10,34\\
- &  & K   & 0 & 0,00\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-4}{*}{6} & \multirow{-4}{*}{58} &Fe& 20 & 34,48\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 165  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[CART]{
-\label{tab:comparativo:glass:cart}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
- &  & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 17 & 24,64\\  \hline
- &  & Mg  & 1 & 25,00\\
- &  & K   & 0 & 0,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-3}{*}{2} & \multirow{-3}{*}{4} & Fe  & 0 & 0,00\\ \hline
- &  & Mg  & 0 & 0,00\\
- &  & K   & 3 & 9,68\\
-&  & Ba  & 22 & 70,97\\
-\multirow{-4}{*}{3} & \multirow{-4}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 7 & 19,44\\
- &  & Na  & 19 & 52,78\\
- &  & Mg  & 20 & 55,56\\
- &  & Al  & 16 & 44,44\\
- &  & Si  & 8 & 22,22\\
- &  & K   & 15 & 41,67\\
- &  & Ca  & 14 & 38,89\\
- &  & Ba  & 2 & 5,56\\
-\multirow{-9}{*}{4} & \multirow{-9}{*}{36} & Fe  & 10 & 27,78\\ \hline
- &  & Mg  & 0 & 0,00\\
- &  & Al  & 10 & 62,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe  & 5 & 31,25\\ \hline
- &  & K   & 12 & 20,69\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & 23 & 39,66\\ \hline
-
-\multicolumn{3}{|c|}{Total}                             & 208  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-
-\subfloat[KNN]{
-\label{tab:comparativo:glass:knn}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
- &  & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
- &  & Mg  & 2 & 50,00\\
- &  & K   & 2 & 50,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-4}{*}{2} & \multirow{-4}{*}{4} & Fe  & 0 & 0,00\\ \hline
- &  & Mg  & 2 & 6,45\\
- &  & Al  & 14 & 45,16\\
- &  & K   & 1 & 3,23\\
- &  & Ba  & 12 & 38,71\\
-\multirow{-5}{*}{3} & \multirow{-5}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 6 & 16,67\\
- &  & Na  & 11 & 30,56\\
- &  & Al  & 17 & 47,22\\
- &  & Si  & 6 & 16,67\\
- &  & K   & 0 & 0,00\\
- &  & Ca  & 1 & 2,78\\
- &  & Ba  & 1 & 2,78\\
-\multirow{-8}{*}{1} & \multirow{-8}{*}{36} & Fe  & 8 & 22,22\\ \hline
- &  & Mg  & 2 & 12,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-3}{*}{5} & \multirow{-3}{*}{16} & Fe  & 4 & 25,00\\ \hline
- &  & K   & 0 & 0,00\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & 20 & 34,48\\ \hline
-\multicolumn{3}{|c|}{Total}                             &  124 & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[Resultado de \citeonline{Lopes2016}]{
-\label{tab:comparativo:glass:lopes}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
- &  & Ba & 0 & 0\\
- &  & K & 0 & 0\\
- &  & Si & 2 & 2,71\\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{74}& Na & 3 & 4,06\\ \hline
-  &  & Fe & 0 & 0\\
- \multirow{-2}{*}{2} &   \multirow{-2}{*}{5} & Ca & 0 & 0\\ \hline
-  &  & K & 0 & 0\\
- \multirow{-2}{*}{3} &   \multirow{-2}{*}{19} & Ba & 1 & 5,27 \\ \hline
-  &   & K & 0 & 0\\
- &  &  Ba & 1 & 3,13\\
-\multirow{-3}{*}{4} &   \multirow{-3}{*}{32} & Ca & 1 & 3,13\\ \hline
- &  & Ba & 0 & 0\\
- &  & K & 0 & 0\\
- &  &  Na & 2 & 3,58\\
- &  & Al & 4 & 7,15\\
-\multirow{-5}{*}{5} &   \multirow{-5}{*}{56}  & Mg & 6 & 10,72\\ \hline
-  &  & Fe & 0 & 0\\
- \multirow{-2}{*}{6} &   \multirow{-2}{*}{28} & K & 1 & 3,58 \\ \hline
-\multicolumn{3}{|c|}{Total}                             & 21   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\end{table}
 
 
 
