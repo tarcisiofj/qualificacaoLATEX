@@ -23,55 +23,55 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: mestradobib.bib
-Warning--I didn't find a database entry for "LOPES2014"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Warning--campo note vazio em Imperes2018a
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 37 entries,
+You've used 38 entries,
             6714 wiz_defined-function locations,
-            1499 strings with 18310 characters,
-and the built_in function-call counts, 46435 in all, are:
-= -- 4892
-> -- 1176
-< -- 855
-+ -- 1288
-- -- 349
-* -- 3114
-:= -- 5850
-add.period$ -- 171
-call.type$ -- 38
-change.case$ -- 403
-chr.to.int$ -- 86
-cite$ -- 35
-duplicate$ -- 3836
-empty$ -- 2341
-format.name$ -- 1712
-if$ -- 9920
+            1510 strings with 18664 characters,
+and the built_in function-call counts, 47601 in all, are:
+= -- 5029
+> -- 1193
+< -- 883
++ -- 1317
+- -- 354
+* -- 3186
+:= -- 6006
+add.period$ -- 175
+call.type$ -- 39
+change.case$ -- 412
+chr.to.int$ -- 93
+cite$ -- 37
+duplicate$ -- 3950
+empty$ -- 2375
+format.name$ -- 1735
+if$ -- 10151
 int.to.chr$ -- 1
 int.to.str$ -- 2
-missing$ -- 663
-newline$ -- 196
-num.names$ -- 176
-pop$ -- 867
+missing$ -- 679
+newline$ -- 203
+num.names$ -- 181
+pop$ -- 876
 preamble$ -- 1
-purify$ -- 156
+purify$ -- 159
 quote$ -- 0
-skip$ -- 3982
+skip$ -- 4081
 stack$ -- 1
-substring$ -- 1869
-swap$ -- 1529
-text.length$ -- 51
+substring$ -- 1949
+swap$ -- 1576
+text.length$ -- 54
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 7
-warning$ -- 0
-while$ -- 273
+warning$ -- 1
+while$ -- 283
 width$ -- 0
-write$ -- 595
+write$ -- 612
 (There was 1 warning)

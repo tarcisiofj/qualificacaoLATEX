@@ -3,7 +3,7 @@
 
 Para se compreender a temática proposta, este capítulo abordará o conteúdo base deste trabalho dividido em 3 seções: Aprendizado de Máquina, Discretização e Trabalhos Correlatos. 
 
-Essa primeira seção discorrerá sobre aprendizado de máquina e os aprendizados indutivos, embora cada aprendizado tenha sua importância. Será dada maior ênfase ao aprendizado supervisionado, em virtude da utilização de algoritmos de aprendizado supervisionado na rotulação de grupos. Já na seção  \ref{cap:refTeor:sec:discret} se dissertará sobre as técnicas de discretizações adotadas nesta pesquisa, a qual oferece grande contribuição para os resultados gerados, e ganhando, assim, uma seção própria para explanação do funcionamento dessas técnicas. Na última seção serão abordados trabalhos com mesmas características desta pesquisa, adicionando conhecimento ao tema. 
+Essa primeira seção discorrerá sobre aprendizado de máquina e os aprendizados indutivos, embora cada aprendizado tenha sua importância. Será dada maior ênfase ao aprendizado supervisionado, em virtude da utilização de algoritmos de aprendizado supervisionado na rotulação de grupos, já na seção  \ref{cap:refTeor:sec:discret}, se dissertará sobre as técnicas de discretizações adotadas nesta pesquisa, a qual oferece grande contribuição para os resultados gerados, e ganhando, assim, uma seção própria para explanação do funcionamento dessas técnicas. Na última seção serão abordados trabalhos com mesmas características desta pesquisa, adicionando conhecimento ao tema. 
 
 
 
@@ -92,7 +92,9 @@ De acordo com \cite{yohannes1999classification,Raimundo2008}, existem três comp
  \item Regras para atribuir uma classe a cada nó;
 \end{itemize}
 
-Na divisão inicial será atribuída ao nó pai uma questão e,  dependendo da resposta (sim ou não - a exemplo da figura \ref{fig:fluxogramaarvore}), os registros irão para nó filho esquerdo ou direito, e depois será realizado o teste do ponto de divisão. O CART percorrerá todos os atributos e construirá uma árvore de decisão baseada no melhor ponto de divisão, uma vez que são testados todos os atributos como potencial divisor. Após a escolha do melhor ponto de divisão do nó, faz-se a atribuição de uma classe para o nó e, após essa etapa, o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para sua divisão.Logo, na equação \ref{eq:cartGini} pode-se verificar como o CART faz a escolha da divisão dos nós em função da regra Gini de Impureza \cite{breiman1984}. É definido o grau de pureza variando de 0 (zero) a 1 (um), portanto, quando o nó tende a um resultado de índice Gini aproximando-se de 1 (um), maior a impureza do nó, e o inverso, maior a pureza. 
+Na divisão inicial será atribuída ao nó pai uma questão e,  dependendo da resposta (sim ou não - a exemplo da figura \ref{fig:fluxogramaarvore}), os registros irão para nó filho esquerdo ou direito, e depois será realizado o teste do ponto de divisão. O CART percorrerá todos os atributos e construirá uma árvore de decisão baseada no melhor ponto de divisão, uma vez que são testados todos os atributos como potencial divisor. Após a escolha do melhor ponto de divisão do nó, faz-se a atribuição de uma classe para o nó e, após essa etapa, o novo nó filho passa a ser nó pai, refazendo os mesmos passos anteriores para sua divisão.
+
+A equação \ref{eq:cartGini} é utlizado pelo CART para escolher a divisão dos nós em função da regra Gini de Impureza \cite{breiman1984}. É definido o grau de pureza variando de 0 (zero) a 1 (um), portanto, quando o nó tende a um resultado de índice Gini aproximando-se de 1 (um), maior a impureza do nó, e o inverso, maior a pureza. A equação \ref{eq:cartGini} mede a impureza do conjunto ${S}$ e caso todos os dados forem da mesma classe (dados puros), o resultado da equação seria ${1-1=0}$.
 
 \begin{equation}
 Gini(S)= 1 - \sum [p(j/t)]^2
@@ -103,8 +105,9 @@ Onde: ${p(j/t)}$ é probabilidade a priori da classe ${j}$ se formar no nó ${t}
 % \item ${S}$: é um conjunto de dados que contém exemplos de n classes
 % \item ${p_j}$: é uma frequência relativa da classe ${j}$ em ${S}$
 %\end{itemize}
+ 
 
-A equação \ref{eq:cartGini} mede a impureza do conjunto S e caso todos os dados forem da mesma classe (dados puros), o resultado da equação seria ${1-1=0}$. tem como finalidade a escolha da divisão do nó (conjunto ${S}$), em que é medida a impureza da divisão do nó pai com os nós filhos, e para isso, contém a média ponderada de cada índice do subgrupo formado por essa divisão de ${S}$. Então o menor valor encontrado em ${Gini_{split}(S)}$ será o escolhido para dividir o nó. 
+Este cálculo tem como finalidade a escolha da divisão do nó (conjunto ${S}$), em que é medida a impureza da divisão do nó pai com os nós filhos, e para isso, contém a média ponderada de cada índice do subgrupo formado por essa divisão de ${S}$. Então o menor valor encontrado em ${Gini_{split}(S)}$ será o escolhido para dividir o nó. 
 
 \begin{equation}
 Gini_{split}(S) = \frac{S_l}{S}gini(S_l)+\frac{S_r}{S}gini(S_r)
@@ -183,7 +186,7 @@ No procedimento da divisão do nó em dois subconjuntos, o atributo poderá cont
 
 \subsubsection{Algoritmo Naive Bayes}\label{cap:refTeor:sssec:nbayes}
 
-O algoritmo Naive Bayes é um modelo probabilístico de aprendizado que pode ser calculado diretamente entre seus dados de treinamento. Depois de calculado, o modelo pode ser utilizado para fazer previsões de novos dados através do teorema de Bayes. ``O teorema de Bayes fornece uma maneira de calcular a probabilidade de uma hipótese com base em sua probabilidade anterior, as probabilidades de observar vários dados, dadas as hipóteses, e os dados observados em si'' \cite[p. 156]{Mitchell1997}.
+O algoritmo bayesiano Naive Bayes é um modelo probabilístico de aprendizado que pode ser calculado diretamente entre seus dados de treinamento. Depois de calculado, o modelo pode ser utilizado para fazer previsões de novos dados através do teorema de Bayes. ``O teorema de Bayes fornece uma maneira de calcular a probabilidade de uma hipótese com base em sua probabilidade anterior, as probabilidades de observar vários dados, dadas as hipóteses, e os dados observados em si'' \cite[p. 156]{Mitchell1997}.
 
 
 
@@ -194,7 +197,7 @@ Pode-se citar, como exemplo desse evento, a descoberta do câncer em uma pessoa,
 
 O Naive Bayes utiliza uma técnica de independência dos atributos, em que cada variável de entrada não depende de recursos de outras. Essa independência condicionada, entre os atributos que nem sempre ocorrem nos problemas reais, acabou ficando conhecida por Bayes ingênuo ou Naive Bayes. 
 
-Em \cite{RusselStuart.Norvig2013} a equação \ref{eq:causaefeito} mostra a relação ${P(causa/efeito)}$ onde o efeito é evidência de alguma causa desconhecida, e quer se determinar a causa.
+Em \cite{RusselStuart.Norvig2013} a equação \ref{eq:causaefeito} mostra a relação ${P(causa/efeito)}$ onde o efeito é evidência de alguma causa desconhecida, e quer se determinar a causa. Logo em seguida as equações \ref{eq:bayes} e \ref{eq:bayes:numerador} são responsáveis pelo cálculo de probabilidade do algoritmo.
 
 \begin{equation} \label{eq:causaefeito}
  P(causa|efeito)= \frac{P(efeito|causa)P(causa)}{P(efeito)}
@@ -204,15 +207,16 @@ Naive Bayes como classificador estatístico possui um modelo de simples constru�
 
 \begin{equation}
  P(c/x)= \frac{P(x/c)P(c)}{P(x)}
-\end{equation}
+\label{eq:bayes}
+ \end{equation}
 
 \begin{equation}
- P(c/x)=P(x_1|c)*P(x_2|c)*...*P(x_n|c)*P(c)
- \label{eq:bayes}
+ P(x/c)=P(x_1|c)*P(x_2|c)*...*P(x_n|c)*P(c)
+ \label{eq:bayes:numerador}
 \end{equation}
 
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
  \item ${P(c/x)}$ probabilidade posterior da classe ${c,alvo}$ dada preditor ${x,atributos}$.
  \item ${P(c)}$  é a probabilidade original da classe.
  \item ${P(x|c)}$  é a probabilidade que representa a probabilidade de preditor dada a classe.
@@ -387,6 +391,11 @@ Para haver o ponto de corte, terá que ser feita primeiro a ordenação dos dado
  w = \frac{b-a}{R}
  \label{eq:largurafaixa}
 \end{equation}
+\begin{itemize}[noitemsep]
+ \item ${w}$ - tamanho da faixa
+ \item a,b - limite inferior, limete superior respectivamente
+ \item R - número de faixas
+\end{itemize}
 
 De acordo com a figura \ref{eq:regratamfaixa}, a variável ${w}$ delimita o tamanho das faixas de valores e determina os pontos de corte ${(c_1,...,c_{R-1})}$. O primeiro ponto de corte, ${c_1}$, é obtido por meio da soma do limite inferior ${a}$ com a tamanho de ${w}$, e os pontos de corte seguintes são calculados pela soma do ponto de corte anterior com ${w}$.
 
@@ -397,7 +406,11 @@ c_{i-1}+w,  & caso\, contrário &
 \end{matrix}\right.
  \label{eq:regratamfaixa}
 \end{equation}
-
+\begin{itemize}[noitemsep]
+ \item ${w}$ - tamanho da faixa
+ \item ${c_i}$ - ponto de corte da faixa
+ \item a - limite inferior
+\end{itemize}
 
 Seguindo a figura \ref{fig:faixasEWD}, o valor da faixa do intervalo ${[a,c_1]}$ será o valor discreto igual ao índice de sua faixa, nesse caso ${r_1}$, então, o valor na faixa ${r_1}$ é reprensentado por ${1(um)}$, pois  ${i=1}$. No caso do intervalo ${]c_1,c_2]}$ definido na faixa  ${r_2}$, é representado pelo valor discreto 2 (dois) e, e consequentemente, o valor que se encontra em uma faixa qualquer ${r_i}$ será reprensentado por ${i}$.
 
@@ -622,17 +635,29 @@ Esse outro método de discretização já possui uma abordagem diferente do EWD,
 \lambda = \frac{\xi}{R}
  \label{eq:qtdelemfaixaEFD}
 \end{equation}
+\begin{itemize}[noitemsep]
+ \item ${\lambda}$ - número de elementos da faixa
+ \item ${R}$ - total de elementos distintos nas faixas
+ \item ${\xi}$ - número de faixas
+\end{itemize}
+
 
 Uma observação nesse método é a ocorrência de uma má distribuição de valores entre as faixas, portanto, caso haja um número significativo de valores repetidos de um atributo, isso causa um desequilíbrio na distribuição dos elementos dentro da faixa. Essa situação reflete em faixas com muitos valores e outras sem nenhuma. 
 
-Uma vez no intervalo ${[a,b]}$ de elementos ordenados e calculado ${\lambda}$ contendo ${R}$ elementos ${v_{[R]}}$,  pode-se determinar os pontos de corte ${(c_1,...,c_{R-1})}$, que são os delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}-ésimo}$ elemento (equação \ref{eq:pontocorteEFD}).
+Uma vez no intervalo ${[a,b]}$ de elementos ordenados e calculado ${\lambda}$ contendo ${R}$ elementos em um vetor ${v_{[R]}}$, tem-se os pontos de corte ${(c_1,...,c_{R-1})}$ como  delimitadores das faixas. Cada ponto de corte ${c_i}$ pode ser calculado por ${v_{i\lambda}-ésimo}$ elemento (equação \ref{eq:pontocorteEFD}).
 
+A equação \ref{eq:pontocorteEFD} é responsável pelo ponto de corte da faixa:
 \begin{equation}
 c_i = v_{[i\lambda]}
  \label{eq:pontocorteEFD}
 \end{equation}
+\begin{itemize}[noitemsep]
+ \item ${c_i}$ - iésimo ponto de corte
+ \item ${R}$ - total de elementos distintos nas faixas
+ \item ${\xi}$ - quantidade de faixas de valores
+\end{itemize}
 
-Igual ao que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$, conforme figura \ref{fig:faixasEFD}. Então, caso o valor esteja na faixa ${r_2}$, ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva, os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor 3 (três). Uma outra observação desse método é que, diferente do EWD, os intervalos podem assumir faixas com tamanhos diferentes.
+Igual ao que aconteceu no método EWD, o valor que estiver no intervalo ${[a,c_1]}$ terá seu valor associado a um valor discreto igual ao índice ${i}$ de sua faixa ${r_i}$, conforme figura \ref{fig:faixasEFD} que exibe as  faixas (${r}$) de tamanhos variáveis no intervalor ${[a,b]}$. Então, caso o valor esteja na faixa ${r_2}$, ele passará a ter o valor de seu índice ${i}$ igual a ${2(dois)}$. De maneira consecutiva, os valores que estiverem na faixa ${r_3=]c_2,c_3]}$ terão valor 3 (três). Uma outra observação desse método é que, diferente do EWD, os intervalos podem assumir faixas com tamanhos diferentes.
 
 %\afterpage{
 \begin{figure}[h]
@@ -736,10 +761,10 @@ Outra pesquisa \cite{Filho2015}  aborda o mesmo problema de rotulação, mas com
 %Nesse modelo proposto pelo autor \cite{Filho2015} existem duas variáveis onde são atribuídos parâmetros: Grau de Seleção - GS e Incremento do Grau de Seleção - IGS. O GS, serve de base para seleção dos elementos mais significativos na formação do rótulo e o IGS seria um incremento do parâmetro GS, sendo que, tanto GS quanto IGS podem variar de 0 a 1. Esses parâmetros são inicializados no início do modelo de resolução e são incrementados a cada iteração, que ocorre caso não exista pelo menos uma faixa de valor pertencente a cada grupo. A forma de medir a acurácia do autor \cite{Filho2015} coincide com este trabalho, pois são utilizados os grupos já predefinidos pelo autor da base de dados de exemplo, e dessa forma ao se refazer os novos grupos pode-se comparar com os grupos originais e verificar os resultados do modelo e aferir a acurácia dos rótulos de cada grupo. 
 
 
-Outro autor  \cite{imperes2018} em seu trabalho utiliza uma proposta de rotulação semelhante a outra pesquisa \cite{Filho2015}, mas com outro algoritmo, \textit{K-means} não-supervisionado, baseado em distância. Esse modelo é constituído de duas etapas, sendo a primeira a transformação da distância gerada pelo \textit{K-means} em GP, e logo após, na segunda etapa, é realizada a rotulação de dados de acordo com a tabela gerada na primeira etapa. São feitas várias iterações até encontrar faixas únicas de valores para cada atributo rótulo. Ao se comparar esta dissertação com a pesquisa desse autor (\cite{imperes2018}), percebe-se que também não há um processo de discretização de valores dos atributos e também não há aplicação de dois algoritmos de aprendizado. 
+Outro autor  \cite{Imperes2018a} em seu trabalho utiliza uma proposta de rotulação semelhante a outra pesquisa \cite{Filho2015}, mas com outro algoritmo, \textit{K-means} não-supervisionado, baseado em distância. Esse modelo é constituído de duas etapas, sendo a primeira a transformação da distância gerada pelo \textit{K-means} em GP, e logo após, na segunda etapa, é realizada a rotulação de dados de acordo com a tabela gerada na primeira etapa. São feitas várias iterações até encontrar faixas únicas de valores para cada atributo rótulo. Ao se comparar esta dissertação com a pesquisa desse autor \cite{Imperes2018a}, percebe-se que também não há um processo de discretização de valores dos atributos e também não há aplicação de dois algoritmos de aprendizado. 
 
 %Outro autor \cite{imperes2018} utilizou em seu trabalho  uma proposta de rotulação com o algoritmo não-supervisionado, \textit{K-means}, que é baseado em distância, e desenvolveu em seu método a transformação da saída padrão, em distância, para que cada elemento da base de dados recebesse um GP. Esse GP é utilizado para selecionar os elementos relevantes em cada grupo. Esse modelo funciona em duas etapas, a primeira transforma as saídas em distâncias para GP, e a segunda etapa, formar as faixas de valores e exibir os rótulos. No início da primeira etapa são atribuídos os parâmetros do números de grupos, GP, GS e IGS, após, é carregado a base de dados e formados os grupos através de algoritmo baseado em distância (\textit{K-means}). Logo em seguida a transformação da saída de distância em GP, por conseguinte os grupos já ficam atuliazados contendo GP. Na segunda etapa acontece a seleção dos elementos a partir da comparação do GP e do GS, portanto em seguida, a escolha do menor e maior valor do atributo formando a faixa de valor. Caso haja pele menos uma faixa de valor pertencente a cada grupo os rótulos são exibidos, mas caso não ocorra, GS é incrementado pelo IGS refazendo a segunda etapa novamente. 
 
-Outro trabalho de rotulação \cite{Araujo2018} defende que uma etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será acurácia dos grupos encontrados. A partir do que foi dito, o autor utiliza em conjunto o DAMICORE e DAMICORE-2 no método de rotulação automática para criar grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de \textit{clusters} ao qual o algoritmo é aplicado. O modelo é dividido em cinco etapas até se obterem os rótulos. A etapa I e II preparam os dados e ajudam a medir a similaridade dos elementos, oferecendo uma maior precisão e contribuindo para criação de grupos mais significativos. Na etapa III ocorre a clusterização, e como não é preciso informar o número de \textit{cluster} na utilização do DAMICORE, os resultados nesta etapa acabam por superar um número razoável de \textit{clusters} para uma melhor compreensão e, em razão disso, a etapa IV, de mesclagem, faz a junção de \textit{clusters} para criação de super-clusters, que são \textit{clusters} maiores representando um conceito mais geral e de mais fácil entendimento. Por fim, os super-clusters são submetidos ao método de rotulação automática na etapa V, permitindo identificar os atributos mais relevantes e suas respectivas faixas de valores. Essa pesquisa mantém o foco na etapa de formação dos clusters e se diferencia do texto desta dissertação exatamente nisso, pois nesta dissertação o foco é nos algoritmos supervisionados utilizados na etapa de rotulação dos grupos de dados. 
+Outro trabalho de rotulação \cite{araujo2017} defende que uma etapa de fundamental importância para se ter bons resultados na rotulação de grupos de dados se dá na clusterização. Portanto, quanto mais eficiente for a técnica de agrupamento de dados utilizada, maior será acurácia dos grupos encontrados. A partir do que foi dito, o autor utiliza o DAMICORE no método de rotulação automática para criar grupos. DAMICORE é um método de detecção de correlação de dados e tem como característica a não informação do número de \textit{clusters} ao qual o algoritmo é aplicado. O modelo é dividido em cinco etapas até se obterem os rótulos. A etapa I e II preparam os dados e ajudam a medir a similaridade dos elementos, oferecendo uma maior precisão e contribuindo para criação de grupos mais significativos. Na etapa III ocorre a clusterização, e como não é preciso informar o número de \textit{cluster} na utilização do DAMICORE, os resultados nesta etapa acabam por superar um número razoável de \textit{clusters} para uma melhor compreensão e, em razão disso, a etapa IV, de mesclagem, faz a junção de \textit{clusters} para criação de super-clusters, que são \textit{clusters} maiores representando um conceito mais geral e de mais fácil entendimento. Por fim, os super-clusters são submetidos ao método de rotulação automática na etapa V, permitindo identificar os atributos mais relevantes e suas respectivas faixas de valores. Essa pesquisa mantém o foco na etapa de formação dos clusters e se diferencia do texto desta dissertação exatamente nisso, pois nesta dissertação é pressuposto que os grupos testados são clusters bem definidos e classificados, posto que este trabalho não cria grupos e sim os utiliza. 
 
 %Nas pesquisas realizadas a cerca do tema de ``rotulação de grupos'', foi encontrado vários trabalhos que em seus títulos possuia a palavra ``rotulaçao'', mas não no sentido empregado aqui, nesta pesquisa - a exemplo dentre esses vários trabalhos encontrados, o autor \cite{} faz a rotulação de objetos, cujo problema abordado é a leitura de identificadores de objetos em forma de rolo de ``papel bolha'', onde há dificulta do leitor lêr os rótulos dos rolos em uma esteira, pois não há condições de prever qual posição estára o identificador do objeto ao chegar no leitor. Isso mostra que referente ao tema desta pesquisa   (Citar aqui vários trabalhos de 2017,2018)

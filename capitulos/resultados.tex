@@ -15,25 +15,47 @@ As tabelas apresentadas como resposta dos algoritmos de rotulação para cada ba
 A obtenção da acurácia dos \textit{clusters} só é possível porque as bases de dados já possuem seus grupos definidos, por conseguinte, há o conhecimento de quais elementos fazem parte de um determinado grupo. Dessa maneira, qualquer resultado da aplicação dos algoritmos nos clusters pode ser confrontado com as informações dos \textit{clusters} inicialmente retirados da \textit{UCI Machine Learning} e, assim, poderá ser calculada a porcentagem de acertos.
 
 
-A divisão deste capítulo iniciará por uma explanação da implementação do trabalho, explicando as ferramentas utilizadas no desenvolvimento com configurações de algumas variáveis e cada seção referir-se-á a uma base de dados utilizada, sendo esta dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN. 
+A divisão deste capítulo iniciará por uma explanação da implementação do trabalho, explicando as ferramentas utilizadas no desenvolvimento, bem como os algoritmos e  as configurações de algumas variáveis, e cada seção referir-se-á a uma base de dados utilizada, sendo esta dividida em subseções para os seguintes algoritmos: Naive Bayes, CART e KNN. 
 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
 
+Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como ferramenta de desenvolvimento o MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, e também por ser uma poderosa ferramenta matemática e IDE de desenvolvimento com recursos de aprendizado de máquina em pacotes chamados de \textit{Statistics and Machine Learning Toolbox}. A pesquisa de \citeonline{Lopes2016} utilizou na fase III, a execução de um algoritmo supervisionado com paradigma conexionista, já  esta pesquisa, utilizou outros algoritmos com outros paradigmas, que não haviam sido testados,  para fazer rotulação de dados.  O autor \cite{pedro2017} defende existir cinco paradigmas diferentes na aprendisagem supervisionada o qual ele os denomina de tribos: evolucionários, conexionista, simbolistas, bayesianos e analogistas (baseado em instância), sendo que a toolbox de acordo com a documentação do MATLAB\footnote{https://la.mathworks.com/help/stats/supervised-learning-machine-learning-workflow-and-algorithms.html?lang=en} a \textit{Statistics and Machine Learning Toolbox} implementa alguns algoritmos com diferentes paradigmas, exibido na tabela \ref{}, com exceção do paradigma evolucionário.
+
+Esta tabela exibe algoritmos de aprendizado  supervisionados e suas característica através de resultados  estudados de bases de dados com mais de 7000 observações e cinquentas classes.
 
 
 
-Para gerar os resultados aqui descritos, foram realizadas implementações utilizando-se a ferramenta MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, sendo possível utilizar suas funções de aprendizado de máquina já implementadas na \textit{Statistics and Machine Learning Toolbox} . Por apresentar linguagem técnica e funções já prontas direcionadas para aprendizado de máquina,essa ferramenta foi selecionada para colocar em prática essa pesquisa. 
+\begin{table}[!h]
+\centering
+\caption{\textit{Cluster} 5 - Louças de mesa - Base Glass }
+\label{tab:glass:cluster5}
+\scalebox{0.7}{
+\begin{tabular}{p{65}|p{70}|p{100}|p{100}|p{100}|p{100}}
+\hline
+\rowcolor[HTML]{EFEFEF}
+Classifier & Multiclass Support & Categorical Predictor Support & Prediction Speed & Memory Usage & Interpretability\\ \hline
+Decision trees — fitctree & Yes & Yes & Fast & Small & Easy\\ \hline
+Discriminant analysis — fitcdiscr & Yes & No & Fast & Small for linear, large for quadratic & Easy\\ \hline
+SVM — fitcsvm & No. Combine multiple binary SVM classifiers using fitcecoc. & Yes & Medium for linear. Slow for others. & Medium for linear. All others: medium for multiclass, large for binary. & Easy for linear SVM. Hard for all other kernel types.\\ \hline
+Naive Bayes — fitcnb & Yes & Yes & Medium for simple distributions. Slow for kernel distributions or high-dimensional data & Small for simple distributions. Medium for kernel distributions or high-dimensional data & Easy\\ \hline
+Nearest neighbor — fitcknn & Yes & Yes & Slow for cubic. Medium for others. & Medium & Hard\\ \hline
+Ensembles — fitensemble & Yes & Yes & Fast to medium depending on choice of algorithm & Low to high depending on choice of algorithm. & Hard\\ \hline
+\end{tabular}}
+\end{table}
 
 
-Ao longo da pesquisa foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$ ), número de faixas (${R}$) e tipo de discretização ${TipoDiscretização}$ (EWD,EFD). 
+
+Uma vez decidido pela utilização da \textit{toolbox}, foi escolhida para este trabalho alguns algoritmos por paradigma; simbólico (árvore de decisão com CART), bayesiano (probabilístico Nave Bayes) e analogia ou baseado em instância (KNN). Alguns algoritmos mostrado na tabela não foram necessários testá-los como Discriminant analysis é do mesmo tipo bayesiano e Ensembles é tipo um framework onde pode-se utilizar outras implementações de regressões e classificações com pequenas nuances, também não foi utilizado por sair do foco desta pesquisa.
+
+Ao longo da pesquisa também foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$ ), número de faixas (${R}$) e tipo de discretização ${TipoDiscretização}$ (EWD,EFD). 
 
 
+Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, para quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$) é definido de forma que os atributos tenham seus valores mapeados de acordo com a faixa de valor correspondente e, uma vez definido o número de faixas, será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo-se com qual faixa cada valor irá ficar.
 
 %Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$), é o número de faixas definido de forma que os atributos tenham seus valores mapeados de acordo com o valor da variável, e dependendo de como os dados do atributo são dispostos, existirá uma melhor divisão no número de faixas \footnote{Apêndice \ref{apendice:1}}, contudo, os resultados foram realizados com ${R=3}$ em concordância ao trabalho de \citeonline{Lopes2016} que também utilizou esse configuração, e assim podendo haver uma comparação entre resultados. Uma vez definido o número de faixas será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo qual faixa cada valor irá ficar.  
 
 
-Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, para quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$) é definido de forma que os atributos tenham seus valores mapeados de acordo com a faixa de valor correspondente e, uma vez definido o número de faixas, será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo-se com qual faixa cada valor irá ficar.
 
 %Além de evitar a ambiguidade dos rótulos a variável ${V}$ pode ser utilizada também para selecionar mais de um atributo para ser o rótulo do cluster. 
 
