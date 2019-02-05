@@ -1,7 +1,7 @@
 \select@language {brazil}
 \contentsline {table}{\numberline {1}{\ignorespaces Base de exemplo onde exibe atrav\IeC {\'e}s do atributo Decis\IeC {\~a}o, se existe, ou n\IeC {\~a}o condi\IeC {\c c}\IeC {\~a}o de jogo perante as outras caracter\IeC {\'\i }sticas (Aspecto, temperatura, Umidade e Vento)\relax }}{9}{table.caption.10}
 \contentsline {table}{\numberline {2}{\ignorespaces Tabela em ordem crescente das dist\IeC {\^a}ncias euclidianas encontradas do objeto a que se deseja classificar para os outros objetos da amostra, de acordo com as setas da figura \ref {fig:knn}\relax }}{11}{table.caption.12}
-\contentsline {table}{\numberline {3}{\ignorespaces Amostra de dados para exemplificar a discretiza\IeC {\c c}\IeC {\~a}o EWD e EFD\relax }}{15}{table.caption.16}
+\contentsline {table}{\numberline {3}{\ignorespaces Amostra de dados para exemplificar a discretiza\IeC {\c c}\IeC {\~a}o EWD e EFD\relax }}{16}{table.caption.16}
 \contentsline {table}{\numberline {4}{\ignorespaces Base de Dados Modelo\relax }}{28}{table.caption.25}
 \contentsline {table}{\numberline {5}{\ignorespaces Base de Dados Modelo Discretizada\relax }}{30}{table.caption.27}
 \contentsline {table}{\numberline {6}{\ignorespaces Valores das faixas com R=3 da Base de Dados Modelo\relax }}{30}{table.caption.28}

@@ -68,7 +68,7 @@ Já na figura \ref{fig:graf1:grafB}, o ajuste da função ${h}$ se torna mais si
 
 Em análise da figura \ref{fig:graf1} são apresentadas duas hipóteses que tentam se aproximar ao máximo da função verdadeira (${f}$), que é desconhecida. Mesmo parecendo que na figura \ref{fig:graf1:grafA} obteve-se melhor resultado, pois todos os pontos são atingidos pelo gráfico da função, este modelo acabou se ajustando muito bem na amostra de dados, deixando a função ${h}$ muito específica, não retratando os dados em um mundo real. Então, apesar de parecer que a figura \ref{fig:graf1:grafA} é  a melhor opção por ela ser mais específica, não é, pois quanto mais generalizado for o modelo, melhor será para predizer os valores de ${y}$ para novos conjuntos de dados.
 
-
+O treinamento dos dados realizado nesta pesquisa utilizou validação cruzada com o número  ${k}$ igual a dez  para os três algoritmos. Este ${k}$ indica que o algoritmo supervisionado irá treinar com os dados dividido em dez subgrupos, onde um subgrupo é utilizado para validar os teste dos outros subgrupos restantes. Esse procedimento é feito ${k}$ vezes alternando mutuamente entre os subgrupos e retirado uma média que é o valor resposta do algoritmo aplicado.
 
 
 \subsubsection{Algoritmo Classification And Regression Trees  - CART}\label{cap:refTeor:sssec:cart}
@@ -339,6 +339,10 @@ Já com ${K=3}$, a contagem de ocorrências em cada classe totaliza CÍRCULO=1 e
  
 
 Ao escolher um valor par de ${K}$, poderá haver um empate no número de ocorrências das classes. Essa situação fica clara no exemplo acima, tabela \ref{tab:exemploKNN}, quando ${K=2}$  (CÍRCULO=1 e QUADRADO=1) e ${K=4}$  (CÍRCULO=2 e QUADRADO=2); para não acontecer um valor de empate, é necessário escolher sempre um valor ${K}$ ímpar e este parâmetro é definido ao executar o algoritmo. 
+
+Esses três algoritmos de aprendizado supervisionados são aplicados nas bases de dados para fazer rotulação de dados, o qual antes somente um algoritmo supervisionado havia sido testado \cite{Lopes2016}. Como antes já um algoritmo de paradigma conexionista havia sido testado foi considerado nesta pesquisa outros algoritmos para rotulação de dados, mas com paradigmas diferentes conforme autor \citeonline{pedro2017} cita em sua obra: bayesiano, simbolista e analogista (baseado em instâncias). 
+
+O Naiva Bayes um algoritmo probabilístico bayesiano que possue uma característica de destaque a não dependência entre atributos em seus cálculos. O CART, um exemplo simbolista implementado em árvore de decisão e KNN um algoritmo baseado em instâncias, que faz classificação levando em consideração a distâncias entre os espaço de características, mas possui melhores resultados quando aplicado em bases de pouca dimensionalidade, \textit{i.e.}, quanto mais características menores são as performances do modelo.
 
 \subsection{Aprendizado Não-Supervisionado}\label{ssec:aprendNSup}
 
