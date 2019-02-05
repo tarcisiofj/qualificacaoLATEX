@@ -20,21 +20,19 @@ A divisão deste capítulo iniciará por uma explanação da implementação do 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
 
-Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como ferramenta de desenvolvimento o MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, e também por ser uma poderosa ferramenta matemática e IDE de desenvolvimento com recursos de aprendizado de máquina em pacotes chamados de \textit{Statistics and Machine Learning Toolbox}. A pesquisa de \citeonline{Lopes2016} utilizou na fase III, a execução de um algoritmo supervisionado com paradigma conexionista, já  esta pesquisa, utilizou outros algoritmos com outros paradigmas, que não haviam sido testados,  para fazer rotulação de dados.  O autor \cite{pedro2017} defende existir cinco paradigmas diferentes na aprendisagem supervisionada o qual ele os denomina de tribos: evolucionários, conexionista, simbolistas, bayesianos e analogistas (baseado em instância), sendo que a toolbox de acordo com a documentação do MATLAB\footnote{https://la.mathworks.com/help/stats/supervised-learning-machine-learning-workflow-and-algorithms.html?lang=en} a \textit{Statistics and Machine Learning Toolbox} implementa alguns algoritmos com diferentes paradigmas, exibido na tabela \ref{}, com exceção do paradigma evolucionário.
-
-Esta tabela exibe algoritmos de aprendizado  supervisionados e suas característica através de resultados  estudados de bases de dados com mais de 7000 observações e cinquentas classes.
+Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como ferramenta de desenvolvimento o MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, uma poderosa ferramenta matemática e IDE de desenvolvimento com recursos de aprendizado de máquina em pacotes chamados de \textit{Statistics and Machine Learning Toolbox}. A pesquisa de \citeonline{Lopes2016} utilizou na fase III, a execução de um algoritmo supervisionado com paradigma conexionista, já  esta pesquisa, utilizou outros algoritmos com outros paradigmas, que não haviam sido testados,  para fazer rotulação de dados.  O autor \cite{pedro2017} defende existir cinco paradigmas diferentes na aprendisagem supervisionada o qual ele os denomina de tribos: evolucionários, conexionista, simbolistas, bayesianos e analogistas (baseado em instância), sendo que a \textit{toolbox} de acordo com a documentação do MATLAB\footnote{https://la.mathworks.com/help/stats/supervised-learning-machine-learning-workflow-and-algorithms.html?lang=en}  implementa alguns algoritmos com diferentes paradigmas com exceção do paradigma evolucionário visto na  tabela \ref{tab:matlab}.
 
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
-\caption{\textit{Cluster} 5 - Louças de mesa - Base Glass }
-\label{tab:glass:cluster5}
-\scalebox{0.7}{
-\begin{tabular}{p{65}|p{70}|p{100}|p{100}|p{100}|p{100}}
+\caption{Informações retiradas da documentação do MATLAB v.2016a - Supervised Learning Workflow and Algorithms}
+\label{tab:matlab}
+\scalebox{0.6}{
+\begin{tabular}{p{3cm}|p{4cm}|p{3cm}|p{5cm}|p{5cm}|p{4.5cm}}%p{65}|p{70}|p{100}|p{100}|p{100}|p{100}
 \hline
 \rowcolor[HTML]{EFEFEF}
-Classifier & Multiclass Support & Categorical Predictor Support & Prediction Speed & Memory Usage & Interpretability\\ \hline
+Classificador & Suporta multi-classes & Suporta Preditor Categórico & Velocidade de Predição & Utilização de Memória & Interpretabilidade\\ \hline
 Decision trees — fitctree & Yes & Yes & Fast & Small & Easy\\ \hline
 Discriminant analysis — fitcdiscr & Yes & No & Fast & Small for linear, large for quadratic & Easy\\ \hline
 SVM — fitcsvm & No. Combine multiple binary SVM classifiers using fitcecoc. & Yes & Medium for linear. Slow for others. & Medium for linear. All others: medium for multiclass, large for binary. & Easy for linear SVM. Hard for all other kernel types.\\ \hline
@@ -44,9 +42,9 @@ Ensembles — fitensemble & Yes & Yes & Fast to medium depending on choice of al
 \end{tabular}}
 \end{table}
 
+Esta tabela exibe algoritmos de aprendizado  supervisionados e suas característica através de resultados  estudados de bases de dados com mais de 7000 observações e 50 classes.
 
-
-Uma vez decidido pela utilização da \textit{toolbox}, foi escolhida para este trabalho alguns algoritmos por paradigma; simbólico (árvore de decisão com CART), bayesiano (probabilístico Nave Bayes) e analogia ou baseado em instância (KNN). Alguns algoritmos mostrado na tabela não foram necessários testá-los como Discriminant analysis é do mesmo tipo bayesiano e Ensembles é tipo um framework onde pode-se utilizar outras implementações de regressões e classificações com pequenas nuances, também não foi utilizado por sair do foco desta pesquisa.
+Uma vez decidido pela utilização da \textit{toolbox} e suas característica expostas na tabela \ref{tab:matlab}, foi escolhida para este trabalho um algoritmo por paradigma; simbólico (árvore de decisão com CART), bayesiano (probabilístico Nave Bayes) e analogia ou baseado em instância (KNN). Alguns dos algoritmos mostrado na tabela não foram  utilizados, como:  Discriminant analysis pois é do mesmo tipo bayesiano e Ensembles é do tipo contém vários outras implementações de regressões e classificações com pequenas nuances, e também não foi utilizado por sair do foco desta pesquisa.
 
 Ao longo da pesquisa também foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$ ), número de faixas (${R}$) e tipo de discretização ${TipoDiscretização}$ (EWD,EFD). 
 
@@ -166,7 +164,7 @@ O resultado da rotulação utilizando o algoritmo CART na base de dados \textbf{
 
 Na tabela \ref{tab:rot:seeds:knn} exibe-se o resultado da aplicação do KNN na base Seeds e os rótulos encontrados são os mesmos do CART, com uma diferença somente nos dados de relevância do atributo, o que não muda o grau de representatividade do rótulo. 
 
-\newpage
+
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
@@ -408,7 +406,7 @@ Na aplicação desse algoritmo, as melhores configurações para rotulação for
 
  A tabela \ref{tab:rot:glass:nb}  apresenta os seis clusters nas ordens sequenciais:(1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas, e junto a essa coluna são atributos e suas relevâncias com os erros (Fora da Faixa) e acurácia parcial indicada para cada atributo junto ao cluster. 
  
-\newpage
+
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo Naive Bayes}
@@ -598,7 +596,7 @@ De acordo com a aplicação do CART na base de dados \textbf{Glass}, os rótulos
 
 Na tabela \ref{tab:rot:glass:knn} é apresentado o resultado da execução do algoritmo KNN na base de dados Glass, aplicando-se o método de discretização EWD, com valor da variância ${V=81\%}$ e alterando-se para ${R=3}$. Na mesma situação do Naive Bayes, o \textit{cluster} 6 recebeu um rótulo com todos os atributos pelo alto valor de ${V}$; embora necessário para retirar as ambiguidades dos rótulos, a consequência é aumentar o número de atributos nos rótulos, implicando também na diminuição da acurácia média por grupo. 
 
-\newpage
+
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
@@ -823,7 +821,7 @@ De acordo com a aplicação do Naive Bayes na base de dados Wine, os rótulos s�
 
 A tabela \ref{tab:rot:wine:cart} apresenta os rótulos encontrados pelo CART na base Wine utilizando o número de faixas ${R=3}$ e, dentre os \textit{clusters}, percebe-se que o \textit{cluster} 2 foi o que obteve a melhor acurácia, 76.1\%. Foram realizados vários testes alterando o número de faixas, mas nenhuma melhora significativa nos erros foi encontrada nos rótulos dos \textit{clusters}. 
 
-\newpage
+
 \begin{table}[!h]
 \centering
 \caption{Resultado da aplicação do algoritmo CART}
@@ -904,7 +902,7 @@ A tabela possui quatro colunas, sendo a primeira um índice da linha e as outras
 \item ${(proline, ] 880.00 \sim 1680.00]) }$ - \Circle
 \end{itemize}
 
-\newpage
+
 
 
 Então, quando a linha for representada por um atributo e seu intervalo, este será marcado de acordo com o símbolo que ele representa e, caso esteja com os três símbolos, então a linha é representada pelo rótulo ${r_{c_1}}$, e, dessa forma, é possível visualizar na própria base quais amostras o rótulo representa e não representa.

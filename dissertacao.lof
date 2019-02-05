@@ -1,16 +1,16 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Hip\IeC {\'o}teses ajustadas \IeC {\textendash } Fun\IeC {\c c}\IeC {\~a}o ${h}$ pr\IeC {\'o}xima da fun\IeC {\c c}\IeC {\~a}o ${f}$ real\relax }}{6}{figure.caption.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fun\IeC {\c c}\IeC {\~a}o \textbf {h} com ajuste polinomial de grau 6}}}{6}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fun\IeC {\c c}\IeC {\~a}o \textbf {h} com hip\IeC {\'o}tese linear}}}{6}{subfigure.1.2}
+\contentsline {figure}{\numberline {1}{\ignorespaces Hip\IeC {\'o}teses ajustadas \IeC {\textendash } Fun\IeC {\c c}\IeC {\~a}o ${h}$ pr\IeC {\'o}xima da fun\IeC {\c c}\IeC {\~a}o ${f}$ real\relax }}{5}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fun\IeC {\c c}\IeC {\~a}o \textbf {h} com ajuste polinomial de grau 6}}}{5}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fun\IeC {\c c}\IeC {\~a}o \textbf {h} com hip\IeC {\'o}tese linear}}}{5}{subfigure.1.2}
 \contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de Fluxograma de \IeC {\'a}rvore: R1 a R5 s\IeC {\~a}o as folhas relacionadas de acordo com as respostas sim ou n\IeC {\~a}o dos n\IeC {\'o}s\relax }}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo do funcionamento do algoritmo KNN\relax }}{11}{figure.caption.11}
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemplos de t\IeC {\'e}cnicas diferentes utilizada por algoritmos para dividir em grupos\relax }}{13}{figure.caption.13}
-\contentsline {figure}{\numberline {5}{\ignorespaces Ponto de Corte (R-1); 2(R) significa o valor de R=2; 2 - 1 = 1\relax }}{14}{figure.caption.14}
-\contentsline {figure}{\numberline {6}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD}}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo do funcionamento do algoritmo KNN\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {4}{\ignorespaces Exemplos de t\IeC {\'e}cnicas diferentes utilizada por algoritmos para dividir em grupos\relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {5}{\ignorespaces Ponto de Corte (R-1); 2(R) significa o valor de R=2; 2 - 1 = 1\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD}}{14}{figure.caption.15}
 \contentsline {figure}{\numberline {7}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EWD de acordo com a amostra da tabela \ref {tab:amostraDiscret}\relax }}{16}{figure.caption.17}
 \contentsline {figure}{\numberline {8}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD}}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {9}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD de acordo com a amostra da tabela \ref {tab:amostraDiscret}\relax }}{18}{figure.caption.19}
-\contentsline {figure}{\numberline {10}{\ignorespaces Modelo de \cite {Lopes2016}\relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {9}{\ignorespaces Discretiza\IeC {\c c}\IeC {\~a}o EFD de acordo com a amostra da tabela \ref {tab:amostraDiscret}\relax }}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Modelo de \cite {Lopes2016}\relax }}{20}{figure.caption.20}
 \contentsline {figure}{\numberline {11}{\ignorespaces Modelo de Resolu\IeC {\c c}\IeC {\~a}o Proposto\relax }}{25}{figure.caption.21}
 \contentsline {figure}{\numberline {12}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada ao atributo, atr1, sendo classe \relax }}{26}{figure.caption.22}
 \contentsline {figure}{\numberline {13}{\ignorespaces Exemplo da t\IeC {\'e}cnica de correla\IeC {\c c}\IeC {\~a}o aplicada aos atributos atr1, atr2 e atr3. \relax }}{27}{figure.caption.23}
@@ -23,8 +23,8 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do Naive Bayes}}}{31}{subfigure.16.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Execu\IeC {\c c}\IeC {\~a}o do algorimo de \IeC {\'A}rvore de Decis\IeC {\~a}o}}}{31}{subfigure.16.2}
 \contentsline {figure}{\numberline {17}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Seeds entre os eixos \textbf {Lkernel} e \textbf {lkgroove}\relax }}{40}{figure.caption.35}
-\contentsline {figure}{\numberline {18}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Seeds entre os eixos \textbf {Lkernel} e \textbf {lkgroove}\relax }}{41}{figure.caption.36}
+\contentsline {figure}{\numberline {18}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Seeds entre os eixos \textbf {Lkernel} e \textbf {lkgroove}\relax }}{40}{figure.caption.36}
 \contentsline {figure}{\numberline {19}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Seeds entre os eixos \textbf {Lkernel} e \textbf {lkgroove}\relax }}{41}{figure.caption.37}
 \contentsline {figure}{\numberline {20}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Iris entre os eixos \textbf {petallength} e \textbf {petalwidth}\relax }}{45}{figure.caption.42}
-\contentsline {figure}{\numberline {21}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Wine entre os eixos \textbf {FnF} e \textbf {Alcool}\relax }}{60}{figure.caption.52}
-\contentsline {figure}{\numberline {22}{\ignorespaces Acur\IeC {\'a}cia m\IeC {\'e}dia entre os clusters de todas as bases testadas com os algoritmos: Naive Bayes, CART e KNN\relax }}{62}{figure.caption.53}
+\contentsline {figure}{\numberline {21}{\ignorespaces Gr\IeC {\'a}fico da disposi\IeC {\c c}\IeC {\~a}o de elementos da Base Wine entre os eixos \textbf {FnF} e \textbf {Alcool}\relax }}{57}{figure.caption.52}
+\contentsline {figure}{\numberline {22}{\ignorespaces Acur\IeC {\'a}cia m\IeC {\'e}dia entre os clusters de todas as bases testadas com os algoritmos: Naive Bayes, CART e KNN\relax }}{58}{figure.caption.53}

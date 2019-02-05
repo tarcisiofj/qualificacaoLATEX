@@ -33,45 +33,45 @@ Warning--campo note vazio em Imperes2018a
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 38 entries,
+You've used 40 entries,
             6714 wiz_defined-function locations,
-            1510 strings with 18664 characters,
-and the built_in function-call counts, 47601 in all, are:
-= -- 5029
-> -- 1193
-< -- 883
-+ -- 1317
-- -- 354
-* -- 3186
-:= -- 6006
-add.period$ -- 175
-call.type$ -- 39
-change.case$ -- 412
-chr.to.int$ -- 93
-cite$ -- 37
-duplicate$ -- 3950
-empty$ -- 2375
-format.name$ -- 1735
-if$ -- 10151
+            1524 strings with 19201 characters,
+and the built_in function-call counts, 49416 in all, are:
+= -- 5182
+> -- 1240
+< -- 885
++ -- 1334
+- -- 369
+* -- 3309
+:= -- 6230
+add.period$ -- 185
+call.type$ -- 41
+change.case$ -- 430
+chr.to.int$ -- 95
+cite$ -- 39
+duplicate$ -- 4041
+empty$ -- 2543
+format.name$ -- 1805
+if$ -- 10604
 int.to.chr$ -- 1
 int.to.str$ -- 2
-missing$ -- 679
-newline$ -- 203
-num.names$ -- 181
-pop$ -- 876
+missing$ -- 714
+newline$ -- 211
+num.names$ -- 191
+pop$ -- 919
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 166
 quote$ -- 0
-skip$ -- 4081
+skip$ -- 4186
 stack$ -- 1
-substring$ -- 1949
-swap$ -- 1576
-text.length$ -- 54
+substring$ -- 2055
+swap$ -- 1626
+text.length$ -- 56
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 7
+type$ -- 9
 warning$ -- 1
-while$ -- 283
+while$ -- 301
 width$ -- 0
-write$ -- 612
+write$ -- 644
 (There was 1 warning)

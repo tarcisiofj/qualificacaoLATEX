@@ -26,6 +26,14 @@ ISSN 9780521518147.
 ISBN 9780511804779. Dispon{\'\i}vel em:
   \url{http://ebooks.cambridge.org/ref/id/CBO9780511804779}.}
 
+\bibitem[Baron 2016]{Baron2016}
+\abntrefinfo{Baron}{BARON}{2016}
+{BARON, G. {On influence of representations of discretized data on performance
+  of a decision system}. In:  \emph{Procedia Computer Science 96 ( 2016 ) :
+  20th International Conference on Knowledge Based and Intelligent Information
+  and Engineering Systems, KES2016}. York, United Kingdom: [s.n.], 2016. p.
+  1418--1427.}
+
 \bibitem[Breiman et al. 1984]{breiman1984}
 \abntrefinfo{Breiman et al.}{BREIMAN et al.}{1984}
 {BREIMAN, L. et al. \emph{Classification and Regression Trees}. Taylor \&
@@ -257,6 +265,13 @@ ISSN 17451361.}
   v.~14. 1--37~p.
 ISSN 02191377.
 ISBN 1011500701.}
+
+\bibitem[Yang e Webb 2002]{Yang2002}
+\abntrefinfo{Yang e Webb}{YANG; WEBB}{2002}
+{YANG, Y.; WEBB, G.~I. {A Comparative Study of Discretization Methods for
+  Naive-Bayes Classifiers}. In:  \emph{Proceedings of PKAW 2002: The 2002
+  Pacific Rim Knowledge Acquisition Workshop.} Gold Coast, Austr{\'{a}}lia:
+  [s.n.], 2002. p. 159--173.}
 
 \bibitem[Yeganova et al. 2010]{Yeganova2010}
 \abntrefinfo{Yeganova et al.}{YEGANOVA et al.}{2010}
