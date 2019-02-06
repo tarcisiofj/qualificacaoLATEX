@@ -332,9 +332,36 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 %\lipsum[50] % Texto qualquer. REMOVER!!
 
 % ----------------------------------------------------------
-%\chapter{Perceba que o texto do título desse segundo apêndice é bem grande}
+\chapter{Características da Implementação}
 % ----------------------------------------------------------
-%\lipsum[51-53] % Texto qualquer. REMOVER!!
+\label{apendice:2}
+Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como ferramenta de desenvolvimento o MATLAB\footnote{http://www.mathworks.com/products/matlab/ ; versão: R2016a(9.0.0.341360); 64-bit (glnxa64)}, uma poderosa ferramenta matemática e IDE de desenvolvimento com recursos de aprendizado de máquina em pacotes chamados de \textit{Statistics and Machine Learning Toolbox}. De acordo com a documentação do MATLAB\footnote{https://la.mathworks.com/help/stats/supervised-learning-machine-learning-workflow-and-algorithms.html?lang=en} a  tabela \ref{tab:matlab} exibe quais algoritmos são implementados pela Toolbox.
+
+
+
+\begin{table}[!ht]
+\centering
+\caption{Informações retiradas da documentação do MATLAB v.2016a - Supervised Learning Workflow and Algorithms}
+\label{tab:matlab}
+\scalebox{0.6}{
+\begin{tabular}{p{3cm}|p{4cm}|p{3cm}|p{5cm}|p{5cm}|p{4.5cm}}%p{65}|p{70}|p{100}|p{100}|p{100}|p{100}
+\hline
+\rowcolor[HTML]{EFEFEF}
+Classificador & Suporta multi-classes & Suporta Preditor Categórico & Velocidade de Predição & Utilização de Memória & Interpretabilidade\\ \hline
+Decision trees — fitctree & Yes & Yes & Fast & Small & Easy\\ \hline
+Discriminant analysis — fitcdiscr & Yes & No & Fast & Small for linear, large for quadratic & Easy\\ \hline
+SVM — fitcsvm & No. Combine multiple binary SVM classifiers using fitcecoc. & Yes & Medium for linear. Slow for others. & Medium for linear. All others: medium for multiclass, large for binary. & Easy for linear SVM. Hard for all other kernel types.\\ \hline
+Naive Bayes — fitcnb & Yes & Yes & Medium for simple distributions. Slow for kernel distributions or high-dimensional data & Small for simple distributions. Medium for kernel distributions or high-dimensional data & Easy\\ \hline
+Nearest neighbor — fitcknn & Yes & Yes & Slow for cubic. Medium for others. & Medium & Hard\\ \hline
+Ensembles — fitensemble & Yes & Yes & Fast to medium depending on choice of algorithm & Low to high depending on choice of algorithm. & Hard\\ \hline
+\end{tabular}}
+\end{table}
+
+Esta tabela exibe algoritmos de aprendizado  supervisionados e suas característica através de resultados  estudados de bases de dados com mais de 7000 observações e 50 classes.
+
+Uma vez decidido pela utilização da \textit{toolbox} e suas característica expostas na tabela \ref{tab:matlab}, foi escolhida para este trabalho um algoritmo por paradigma; simbólico (árvore de decisão com CART), bayesiano (probabilístico Nave Bayes) e analogia ou baseado em instância (KNN). Alguns dos algoritmos mostrado na tabela não foram  utilizados, como:  Discriminant analysis pois é do mesmo tipo bayesiano e Ensembles funciona com várias outras implementações de regressões e classificações com pequenas nuances, e também não foi utilizado por sair do foco desta pesquisa.
+
+
 
 \end{apendicesenv}
 % ---

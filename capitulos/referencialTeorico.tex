@@ -643,9 +643,9 @@ A partir dos cálculos é definido as seguintes faixas de tamanhos iguais:
 \end{itemize}
 
 
-\subsection{Discretização por Frequência Iguais - EFD}\label{cap:refTeor:subsec:efd}
+\subsection{Equal Frequence Discretization - EFD}\label{cap:refTeor:subsec:efd}
 
-Esse outro método de discretização já possui uma abordagem diferente do EWD, pois a ideia é manter a quantidade de elementos distintos entre os pontos de corte com o mesmo número \cite{Baron2016,Yang2002}. Dado um intervalo ${[a,b]}$, o número de faixas ${R}$ e a quantidade de valores distintos ${\xi}$ , em que ${\xi \geqslant R}$, o método EFD irá segmentar em ${R}$ faixas de valores que possuem a mesma quantidade de elementos distintos ${\lambda}$. Então serão realizados ${R-1}$ pontos de corte gerando ${R}$ faixas de valores, ${(r_1,...,r_R)}$, com a mesma quantidade de elementos distintos ${\lambda}$. Para encontrar ${\lambda}$ , calcula-se o valor inteiro da divisão entre a quantidade de elementos distintos ${\xi}$ pela quantidade de faixas de valores ${R}$, obtendo o número de elementos da faixa (equação \ref{eq:qtdelemfaixaEFD}). 
+Esse outro método de discretização, discretização por frequência iguais do inglês - Equal Frequence Discretization - EFD, já possui uma abordagem diferente do EWD, pois a ideia é manter a quantidade de elementos distintos entre os pontos de corte com o mesmo número \cite{Baron2016,Yang2002}. Dado um intervalo ${[a,b]}$, o número de faixas ${R}$ e a quantidade de valores distintos ${\xi}$ , em que ${\xi \geqslant R}$, o método EFD irá segmentar em ${R}$ faixas de valores que possuem a mesma quantidade de elementos distintos ${\lambda}$. Então serão realizados ${R-1}$ pontos de corte gerando ${R}$ faixas de valores, ${(r_1,...,r_R)}$, com a mesma quantidade de elementos distintos ${\lambda}$. Para encontrar ${\lambda}$ , calcula-se o valor inteiro da divisão entre a quantidade de elementos distintos ${\xi}$ pela quantidade de faixas de valores ${R}$, obtendo o número de elementos da faixa (equação \ref{eq:qtdelemfaixaEFD}). 
 \begin{equation}
 \lambda = \frac{\xi}{R}
  \label{eq:qtdelemfaixaEFD}
