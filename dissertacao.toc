@@ -25,7 +25,7 @@
 \contentsline {section}{\numberline {3.3}T\IeC {\'e}cnica de Correla\IeC {\c c}\IeC {\~a}o entre Atributos atrav\IeC {\'e}s de Algoritmos Supervisionados}{27}{section.3.3}
 \contentsline {section}{\numberline {3.4}Exemplo}{29}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Processo (I) - Discretiza\IeC {\c c}\IeC {\~a}o}{29}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{31}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Processo (II) - Algoritmos Supervisionados}{32}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Processo (III) - Rotula\IeC {\c c}\IeC {\~a}o}{33}{subsection.3.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e Discuss\IeC {\~o}es}}{35}{chapter.4}
@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {4.4.2}Rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s do algoritmo Classification and Regression Trees - CART}{48}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s do algoritmo K-Nearest Neighbor - KNN}{49}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}Avalia\IeC {\c c}\IeC {\~a}o da rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s de algoritmos supervisionados na base de dados Glass}{50}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}{52}{section.4.5}
+\contentsline {section}{\numberline {4.5}Base de Dados 4 - Wine - Dados de Reconhecimento de vinhos}{51}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s do algoritmo Naive Bayes}{52}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s do algoritmo Classification and Regression Trees - CART}{53}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Rotula\IeC {\c c}\IeC {\~a}o atrav\IeC {\'e}s do algoritmo K-Nearest Neighbor - KNN}{53}{subsection.4.5.3}
@@ -57,16 +57,16 @@
 \contentsline {section}{\numberline {5.2}Trabalhos Futuros}{60}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{61}{section*.54}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{62}{section*.54}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{65}{section*.55}
+\contentsline {part}{\uppercase {Ap\^endices}}{67}{section*.55}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Outros resultados de Rotula\IeC {\c c}\IeC {\~a}o }}{66}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Outros resultados de Rotula\IeC {\c c}\IeC {\~a}o }}{68}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Caracter\IeC {\'\i }sticas da Implementa\IeC {\c c}\IeC {\~a}o}}{69}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Caracter\IeC {\'\i }sticas da Implementa\IeC {\c c}\IeC {\~a}o}}{71}{appendix.B}

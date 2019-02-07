@@ -17,7 +17,7 @@ A divisão deste capítulo iniciará por uma explanação da implementação do 
 \section{Implementação}\label{cap:resultados:sec:implement}
 
 
-Ao longo da pesquisa também foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$ ), número de faixas (${R}$) e tipo de discretização ${TipoDiscretização}$ (EWD,EFD). 
+Ao longo da pesquisa foram realizados vários testes, porém, houve alterações de algumas variáveis e métodos de discretização, sempre com o objetivo de obter os melhores resultados. As variáveis e métodos alterados são: variância (${V}$ ), número de faixas (${R}$) e tipo de discretização ${TipoDiscretização}$ (EWD,EFD). 
 
 
 Fazendo um breve resumo sobre as configurações das variáveis, a variação ${V}$ existe para evitar a ambiguidade dos rótulos, ou seja, para quando os rótulos apresentarem os mesmos resultados: atributo e faixa de valor. O número de faixas (${R}$) é definido de forma que os atributos tenham seus valores mapeados de acordo com a faixa de valor correspondente e, uma vez definido o número de faixas, será escolhido qual método de discretização será aplicado (EWD,EFD), decidindo-se com qual faixa cada valor irá ficar.
@@ -222,7 +222,7 @@ A base de dados Iris pertence à UCI Machine Learning, já usada em trabalhos co
  
 Os atributos correspondentes são: comprimento da sepala - SL, largura da sepala - SW, comprimento da pétala - PL e largura da pétala - PW, e através dessas características há uma classificação para dizer se o tipo de planta é: \textit{Iris-setosa}, \textit{Iris-versicolor} e \textit{Iris-virginica}. 
 
-Seguindo a análise, semelhante à da base de dados anterior, foram realizados testes utilizando-se os algoritmos Naive Bayes, CART e KNN e seus resultados depositados em tabelas divididas em colunas no mesmo formato das anteriores: \textbf{Cluster}, \textbf{Rótulo}, \textbf{Relevância}, \textbf{Fora da Faixa} e \textbf{Acurácia Parcial}. Os \textit{clusters} são dispostos em números correspondentes à seguinte sequência: (1) \textit{Iris-setosa}, (2) \textit{Iris-versicolor} e (3) \textit{Iris-virginica}.
+Seguindo a análise, semelhante à da base de dados anterior, foram realizados testes utilizando-se os algoritmos Naive Bayes, CART e KNN e seus resultados depositados em tabelas divididas em colunas no mesmo formato das anteriores: \textbf{Cluster}, \textbf{Rótulo}, \textbf{Elementos Fora da Faixa} e \textbf{Acurácia Parcial}. Os \textit{clusters} são dispostos em números correspondentes à seguinte sequência: (1) \textit{Iris-setosa}, (2) \textit{Iris-versicolor} e (3) \textit{Iris-virginica}.
  
  
 Para gerar os resultados da aplicação do algoritmo na base de dados, foi definido o método de discretização tipo EWD (seção \ref{cap:refTeor:subsec:ewd}), a divisão em três faixas de valores ${R = 3}$ para todos os atributos e inserido o valor de variação ${V=0\%}$. 
@@ -370,7 +370,7 @@ Os tipos de vidro (atributo classe) foram divididos em 7 grupos distintos:
 Essa é uma base de dados diferente das demais por possuir mais grupos e, especificamente, o grupo de janelas de veículos - vidro não-temperado, que não possuem amostras de dados para exemplificar. Nos resultados dos rótulos exibidos nas tabelas adiante a coluna \textit{Cluster}, que exibe uma sequência numérica dos grupos, não contemplará o grupo janelas de veículos - vidro não-temperado, pois não há exemplos de dados para definir o grupo, ficando somente seis grupos determinados na seguinte sequência : (1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas. 
 
 
-Nos testes desenvolvidos nesta pesquisa, os valores de referência foram ${R=4}$ para o número de faixas. O método de discretização e também a variância ${V}$ sofreu alterações nas execuções nos próprios algoritmos para melhorar seus resultados. O que mais diferenciou os resultados desta base foi a necessidade de se utilizarem valores de ${V}$ bastante altos para poder conseguir criar rótulos distintos. 
+Nos testes desenvolvidos nesta pesquisa, os valores de referência foram ${R=4}$ para o número de faixas. O método de discretização e também a variância ${V}$ sofreram alterações nas execuções nos próprios algoritmos para melhorar seus resultados. O que mais diferenciou os resultados desta base foi a necessidade de se utilizarem valores de ${V}$ bastante altos para poder conseguir criar rótulos distintos. 
 
 \subsection{Rotulação através do algoritmo Naive Bayes} \label{cap:resultados:ssec:glass:nb}
 
@@ -536,7 +536,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 \end{table}
 
 
-As acurácias parciais exibidas na tabela \ref{tab:rot:glass:cart} foram bem diversificadas, bem como o número de atributos por rótulo, embora mais uma vez os elementos \textbf{Ba} e \textbf{Fe} sejam os atributos que aparecem com mais frequência mantendo os mesmos intervalos de dados. Somente no \textit{cluster} 6 é que o \textbf{Ba} não participa do rótulo e \textbf{Fe} possui o maior valor de relevância, mas em todos os outros o valor de relevância do \textbf{Ba} é maior que os outros atributos. Fazendo um cálculo da acurácia média por grupo, os valores variam de 77\%, o menor valor no \textit{cluster} 4 (\textbf{recipientes}), e 90.8\%, o maior valor no \textit{cluster} 6 (\textbf{lâmpadas}).
+As acurácias parciais exibidas na tabela \ref{tab:rot:glass:cart} foram bem diversificadas, bem como o número de atributos por rótulo, embora mais uma vez os elementos \textbf{Ba} e \textbf{Fe} sejam os atributos que aparecem com mais frequência mantendo os mesmos intervalos de dados, e somente no \textit{cluster} 6 é que o \textbf{Ba} não participa do rótulo. Fazendo um cálculo da acurácia média por grupo, os valores variam de 77\%, o menor valor no \textit{cluster} 4 (\textbf{recipientes}), e 90.8\%, o maior valor no \textit{cluster} 6 (\textbf{lâmpadas}).
 
 %, apesar de saber que esses valores poderiam melhorar caso não tivessem tantos rótulos atribuído pela variável ${V}$ é a forma de manter um rótulo único por grupo.
 % acurácia media p/ grupo
@@ -621,9 +621,10 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 % cluster 6=80,9111111111111
 
 
-Os resultados apresentados na tabela \ref{tab:rot:glass:knn} apresentaram valores de intervalos diferentes dos demais algoritmos por suas faixas serem diferentes, pois foi utilizado um R=3 ao invés de R=4. Essa mudança de valor do número de faixas não altera os atributos rótulo, uma vez que a escolha do atributo rótulo é pelo valor de relevância dele junto aos demais. 
+Os resultados apresentados na tabela \ref{tab:rot:glass:knn} apresentaram valores de intervalos diferentes dos demais algoritmos por suas faixas serem diferentes, pois foi utilizado um R=3 ao invés de R=4. 
+% Essa mudança de valor do número de faixas não altera os atributos rótulo, uma vez que a escolha do atributo rótulo é pelo valor de relevância dele junto aos demais. 
 
-Os rótulos sugeridos na tabela \ref{tab:rot:glass:knn} apresentam em todos os clusters os elementos \textbf{Ba} e \textbf{Fe}, mantendo a mesma faixa de dados. O \textit{cluster} 6 é aquele no qual o \textbf{Ba} possui menor valor de relevância em relação aos demais rótulos, por ser atributo adicionado para evitar ambiguidade de rótulo, embora nos outros clusters seu valor de relevância sejam os mais altos, empatando nos \textit{cluster} 4 e 5, com 84\% e 100\% respectivamente. 
+%Os rótulos sugeridos na tabela \ref{tab:rot:glass:knn} apresentam em todos os clusters os elementos \textbf{Ba} e \textbf{Fe}, mantendo a mesma faixa de dados. O \textit{cluster} 6 é aquele no qual o \textbf{Ba} possui menor valor de relevância em relação aos demais rótulos, por ser atributo adicionado para evitar ambiguidade de rótulo, embora nos outros clusters seu valor de relevância sejam os mais altos, empatando nos \textit{cluster} 4 e 5, com 84\% e 100\% respectivamente. 
 
 %Um efeito que aconteceu em específico no \textit{cluster} 6, foi que o maior valor de relevância do \textit{cluster} é do atributo Mg de 79\%, visto que a variância ${V=81\%}$ tem o efeito de adicionar todos os atributos que possuem valores abaixo de 81\% no rótulo, dessa forma o atributo RI com relevância de 0\% também é adicionado ao rótulo. Uma vez que o atributo faz parte do rótulo é calculado  qual  faixa de valor, do atributo, possui mais elementos. Então o motivo de um atributo que tem 0\% de relevância, entre atributos, e ter 86.3\% de acurácia é justificado pelo fato de contabilizar os registros que possuem valores de RI, incluído no rótulo, no intervalo ${ [ 1.511150 \sim  1.516845  ]
 
@@ -1077,7 +1078,7 @@ Outra pesquisa \cite{Lopes2016} também realizou testes com essas mesmas bases p
 
 A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo e qualquer alteração destes registros implica em uma alteração nos resultados dos rótulos. Dessa maneira foram realizados testes para recriar os mesmos grupos que \citeonline{Lopes2016}, mas mesmo utilizando as mesmas técnicas as tentativas não lograram êxito em fazer grupos idênticos, pois mesmo configurando o número de grupos a ser encontrado pelo algoritmo, ao executá-lo, os resultados retornam grupos diferentes um do outro, de forma que uma comparação com grupos diferentes não retrataria uma comparação justa, pois os dados testados não seriam os mesmos\footnote{Resultados dos testes comparativos no Apêndice \ref{apendice:1}}.
 
-
+Para conseguir as acurácias dos rótulos deste trabalho foi necessária a utilização de bases de dados com classes definidas, pois a partir dos rótulos encontrados é possível saber se os elementos das amostras eram representados por eles, entretanto, este estudo tem o objetivo de identificar grupos que não tem classes conhecidas e a partir da rotulação conseguir representar esses grupos. Portanto, o envolvimento de bases classificadas faz parte desse estudo somente para comprovação de resultados, e para mostrar a  viabilidade dos rótulos através das acurácias e apresentando que é possível rotular grupos de dados.
 
 
 
