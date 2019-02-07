@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  6 FEB 2019 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  6 FEB 2019 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,14 +1597,14 @@ l.33 S
 
 
 ]
-<figs/grafA.png, id=375, 142.28156pt x 87.32625pt>
+<figs/grafA.png, id=377, 142.28156pt x 87.32625pt>
 File: figs/grafA.png Graphic file (type png)
 <use figs/grafA.png>
 Package pdftex.def Info: figs/grafA.png  used on input line 52. on input line 5
 2.
 Package pdftex.def Info: Requested size: 113.8254pt x 69.86108pt on input line 
 52.
-<figs/grafB.png, id=377, 142.28156pt x 85.06781pt>
+<figs/grafB.png, id=379, 142.28156pt x 85.06781pt>
 File: figs/grafB.png Graphic file (type png)
 <use figs/grafB.png>
 Package pdftex.def Info: figs/grafB.png  used on input line 56. on input line 5
@@ -1624,7 +1624,7 @@ been already used, duplicate ignored
                    \relax 
 l.68 
       [4]
-<figs/arvoredecisao_nos.png, id=394, 342.27875pt x 274.02374pt>
+<figs/arvoredecisao_nos.png, id=396, 342.27875pt x 274.02374pt>
 File: figs/arvoredecisao_nos.png Graphic file (type png)
 <use figs/arvoredecisao_nos.png>
 Package pdftex.def Info: figs/arvoredecisao_nos.png  used on input line 81. on 
@@ -1701,7 +1701,7 @@ been already used, duplicate ignored
                    \relax 
 l.274 
        [9]
-<figs/ex_knn1.png, id=464, 231.86626pt x 170.6375pt>
+<figs/ex_knn1.png, id=466, 231.86626pt x 170.6375pt>
 File: figs/ex_knn1.png Graphic file (type png)
 <use figs/ex_knn1.png>
 Package pdftex.def Info: figs/ex_knn1.png  used on input line 286. on input lin
@@ -1717,14 +1717,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
                    \relax 
 l.302 \end{equation}
                      [10 <./figs/ex_knn1.png>]
-<figs/circulo.png, id=479, 43.16125pt x 43.16125pt>
+<figs/circulo.png, id=481, 43.16125pt x 43.16125pt>
 File: figs/circulo.png Graphic file (type png)
 <use figs/circulo.png>
 Package pdftex.def Info: figs/circulo.png  used on input line 321. on input lin
 e 321.
 Package pdftex.def Info: Requested size: 8.63208pt x 8.63208pt on input line 32
 1.
-<figs/quadrado.png, id=480, 43.16125pt x 43.16125pt>
+<figs/quadrado.png, id=482, 43.16125pt x 43.16125pt>
 File: figs/quadrado.png Graphic file (type png)
 <use figs/quadrado.png>
 Package pdftex.def Info: figs/quadrado.png  used on input line 322. on input li
@@ -1755,7 +1755,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.342 
        [11 <./figs/circulo.png> <./figs/quadrado.png>]
-<figs/amostra_dados_AprendNSuperv.png, id=497, 519.9425pt x 505.89pt>
+<figs/amostra_dados_AprendNSuperv.png, id=499, 519.9425pt x 505.89pt>
 File: figs/amostra_dados_AprendNSuperv.png Graphic file (type png)
 <use figs/amostra_dados_AprendNSuperv.png>
 Package pdftex.def Info: figs/amostra_dados_AprendNSuperv.png  used on input li
@@ -1780,7 +1780,7 @@ ge.13}) has been already used, duplicate ignored
                    \relax 
 l.384 
        [13 <./figs/amostra_dados_AprendNSuperv.png>]
-<figs/faixaA-B_PontoCorte.png, id=525, 142.28156pt x 85.06781pt>
+<figs/faixaA-B_PontoCorte.png, id=527, 142.28156pt x 85.06781pt>
 File: figs/faixaA-B_PontoCorte.png Graphic file (type png)
 <use figs/faixaA-B_PontoCorte.png>
 Package pdftex.def Info: figs/faixaA-B_PontoCorte.png  used on input line 397. 
@@ -1797,14 +1797,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
                    \relax 
 l.423 \end{equation}
                      [14 <./figs/faixaA-B_PontoCorte.png>]
-<figs/discretizacaoEWD.png, id=539, 479.54156pt x 79.79813pt>
+<figs/discretizacaoEWD.png, id=541, 479.54156pt x 79.79813pt>
 File: figs/discretizacaoEWD.png Graphic file (type png)
 <use figs/discretizacaoEWD.png>
 Package pdftex.def Info: figs/discretizacaoEWD.png  used on input line 435. on 
 input line 435.
 Package pdftex.def Info: Requested size: 287.72716pt x 47.87923pt on input line
  435.
-<figs/ewd_fisheriris_col1.png, id=552, 422.32782pt x 31.61812pt>
+<figs/ewd_fisheriris_col1.png, id=554, 422.32782pt x 31.61812pt>
 File: figs/ewd_fisheriris_col1.png Graphic file (type png)
 <use figs/ewd_fisheriris_col1.png>
 Package pdftex.def Info: figs/ewd_fisheriris_col1.png  used on input line 633. 
@@ -1827,7 +1827,7 @@ l.649 \begin{equation}
 
 LaTeX Warning: Command \' invalid in math mode on input line 662.
 
-<figs/discretizacaoEFD.png, id=570, 487.06969pt x 94.10156pt>
+<figs/discretizacaoEFD.png, id=572, 487.06969pt x 94.10156pt>
 File: figs/discretizacaoEFD.png Graphic file (type png)
 <use figs/discretizacaoEFD.png>
 Package pdftex.def Info: figs/discretizacaoEFD.png  used on input line 680. on 
@@ -1835,7 +1835,7 @@ input line 680.
 Package pdftex.def Info: Requested size: 292.24405pt x 56.46136pt on input line
  680.
 [17 <./figs/discretizacaoEFD.png (PNG copy)>]
-<figs/efd_fisheriris_col1.png, id=589, 359.09157pt x 36.135pt>
+<figs/efd_fisheriris_col1.png, id=591, 359.09157pt x 36.135pt>
 File: figs/efd_fisheriris_col1.png Graphic file (type png)
 <use figs/efd_fisheriris_col1.png>
 Package pdftex.def Info: figs/efd_fisheriris_col1.png  used on input line 693. 
@@ -1850,7 +1850,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 751.
 
 [20]
-<figs/modeloLopes.png, id=646, 264.99pt x 216.81pt>
+<figs/modeloLopes.png, id=648, 264.99pt x 216.81pt>
 File: figs/modeloLopes.png Graphic file (type png)
 <use figs/modeloLopes.png>
 Package pdftex.def Info: figs/modeloLopes.png  used on input line 768. on input
@@ -1872,7 +1872,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 
 
 ] [25]
-<figs/modeloResolucao.png, id=724, 612.2875pt x 391.4625pt>
+<figs/modeloResolucao.png, id=726, 612.2875pt x 391.4625pt>
 File: figs/modeloResolucao.png Graphic file (type png)
 <use figs/modeloResolucao.png>
 Package pdftex.def Info: figs/modeloResolucao.png  used on input line 79. on in
@@ -1880,14 +1880,14 @@ put line 79.
 Package pdftex.def Info: Requested size: 367.37534pt x 234.8793pt on input line
  79.
  [26 <./figs/modeloResolucao.png>]
-<figs/tecnicamodelo.png, id=739, 322.20375pt x 91.34125pt>
+<figs/tecnicamodelo.png, id=741, 322.20375pt x 91.34125pt>
 File: figs/tecnicamodelo.png Graphic file (type png)
 <use figs/tecnicamodelo.png>
 Package pdftex.def Info: figs/tecnicamodelo.png  used on input line 101. on inp
 ut line 101.
 Package pdftex.def Info: Requested size: 225.54108pt x 63.93843pt on input line
  101.
-<figs/tecnicamodeloComp.png, id=742, 348.30125pt x 343.2825pt>
+<figs/tecnicamodeloComp.png, id=744, 348.30125pt x 343.2825pt>
 File: figs/tecnicamodeloComp.png Graphic file (type png)
 <use figs/tecnicamodeloComp.png>
 Package pdftex.def Info: figs/tecnicamodeloComp.png  used on input line 114. on
@@ -1899,7 +1899,7 @@ Package pdftex.def Info: Requested size: 243.8092pt x 240.2961pt on input line
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27 <./figs/tecnicamodelo.png>]
-<figs/montagem_matrizAtribImp.png, id=749, 761.84625pt x 522.95375pt>
+<figs/montagem_matrizAtribImp.png, id=751, 761.84625pt x 522.95375pt>
 File: figs/montagem_matrizAtribImp.png Graphic file (type png)
 <use figs/montagem_matrizAtribImp.png>
 Package pdftex.def Info: figs/montagem_matrizAtribImp.png  used on input line 1
@@ -1907,21 +1907,21 @@ Package pdftex.def Info: figs/montagem_matrizAtribImp.png  used on input line 1
 Package pdftex.def Info: Requested size: 380.9222pt x 261.47623pt on input line
  124.
  [28 <./figs/tecnicamodeloComp.png> <./figs/montagem_matrizAtribImp.png>]
-<figs/discretizacaoEFD_R_3_atr1.png, id=768, 468.24937pt x 54.2025pt>
+<figs/discretizacaoEFD_R_3_atr1.png, id=770, 468.24937pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr1.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr1.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr1.png  used on input line
  223. on input line 223.
 Package pdftex.def Info: Requested size: 374.59999pt x 43.36205pt on input line
  223.
-<figs/discretizacaoEFD_R_3_atr2.png, id=769, 471.26062pt x 54.2025pt>
+<figs/discretizacaoEFD_R_3_atr2.png, id=771, 471.26062pt x 54.2025pt>
 File: figs/discretizacaoEFD_R_3_atr2.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr2.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr2.png  used on input line
  227. on input line 227.
 Package pdftex.def Info: Requested size: 377.00902pt x 43.36205pt on input line
  227.
-<figs/discretizacaoEFD_R_3_atr3.png, id=770, 472.01344pt x 51.94406pt>
+<figs/discretizacaoEFD_R_3_atr3.png, id=772, 472.01344pt x 51.94406pt>
 File: figs/discretizacaoEFD_R_3_atr3.png Graphic file (type png)
 <use figs/discretizacaoEFD_R_3_atr3.png>
 Package pdftex.def Info: figs/discretizacaoEFD_R_3_atr3.png  used on input line
@@ -1946,14 +1946,14 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 313.
 
 [31]
-<figs/rotulacaoNB.png, id=798, 545.03625pt x 395.4775pt>
+<figs/rotulacaoNB.png, id=800, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoNB.png Graphic file (type png)
 <use figs/rotulacaoNB.png>
 Package pdftex.def Info: figs/rotulacaoNB.png  used on input line 353. on input
  line 353.
 Package pdftex.def Info: Requested size: 163.51213pt x 118.64417pt on input lin
 e 353.
-<figs/rotulacaoDecisionTree.png, id=799, 545.03625pt x 395.4775pt>
+<figs/rotulacaoDecisionTree.png, id=801, 545.03625pt x 395.4775pt>
 File: figs/rotulacaoDecisionTree.png Graphic file (type png)
 <use figs/rotulacaoDecisionTree.png>
 Package pdftex.def Info: figs/rotulacaoDecisionTree.png  used on input line 357
@@ -2025,15 +2025,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-[36]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[37]
+[36] [37]
 Underfull \vbox (badness 2856) has occurred while \output is active []
 
  [38]
-<figs/grafico_NB_cluster1_lkernel_lkgroove_seeds.png, id=886, 455.45157pt x 255
+<figs/grafico_NB_cluster1_lkernel_lkgroove_seeds.png, id=888, 455.45157pt x 255
 .95625pt>
 File: figs/grafico_NB_cluster1_lkernel_lkgroove_seeds.png Graphic file (type pn
 g)
@@ -2046,7 +2042,7 @@ e 179.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/grafico_NB_cluster1_2_wkernel_lkgroove_seeds.png, id=889, 455.45157pt x 2
+<figs/grafico_NB_cluster1_2_wkernel_lkgroove_seeds.png, id=891, 455.45157pt x 2
 55.95625pt>
 File: figs/grafico_NB_cluster1_2_wkernel_lkgroove_seeds.png Graphic file (type 
 png)
@@ -2063,7 +2059,7 @@ Underfull \vbox (badness 8094) has occurred while \output is active []
 
  [40 <./figs/grafico_NB_cluster1_lkernel_lkgroove_seeds.png (PNG copy)> <./figs
 /grafico_NB_cluster1_2_wkernel_lkgroove_seeds.png (PNG copy)>]
-<figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png, id=901, 455.45157pt x 255.
+<figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png, id=903, 455.45157pt x 255.
 95625pt>
 File: figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png Graphic file (type png
 )
@@ -2072,12 +2068,9 @@ Package pdftex.def Info: figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png  us
 ed on input line 199. on input line 199.
 Package pdftex.def Info: Requested size: 409.90262pt x 230.35847pt on input lin
 e 199.
- [41 <./figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png (PNG copy)>] [42]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[43]
-<figs/grafico_iris_petalwidth_petallength_BrOf.png, id=926, 455.45157pt x 255.9
+ [41 <./figs/grafico_CART_KNN_SEEDS_perimetro_lkgroove.png (PNG copy)>] [42] [4
+3]
+<figs/grafico_iris_petalwidth_petallength_BrOf.png, id=928, 455.45157pt x 255.9
 5625pt>
 File: figs/grafico_iris_petalwidth_petallength_BrOf.png Graphic file (type png)
 
@@ -2090,45 +2083,37 @@ e 344.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44] [45 <./figs/grafico_iris_petalwidth_petallength_BrOf.png (PNG copy)>]
+[44]
+Underfull \vbox (badness 3579) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ [45 <./figs/grafico_iris_petalwidth_petallength_BrOf.png (PNG copy)>]
+Underfull \vbox (badness 1286) has occurred while \output is active []
 
-[46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[48]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[49]
-Overfull \hbox (22.17854pt too wide) in paragraph at lines 649--650
+ [46]
+[47] [48] [49]
+Overfull \hbox (22.17854pt too wide) in paragraph at lines 650--651
 []$[]$ 
  []
 
-
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
- [50]
-[51] [52] [53] [54]
+[50] [51] [52] [53]
 
 LaTeX Font Warning: Font shape `U/wasy/bx/n' in size <12> not available
-(Font)              Font shape `U/wasy/b/n' tried instead on input line 922.
+(Font)              Font shape `U/wasy/b/n' tried instead on input line 923.
 
-[55]
-<figs/grafico_wine_alcool_FnF.png, id=1009, 455.45157pt x 255.95625pt>
+[54]
+<figs/grafico_wine_alcool_FnF.png, id=1005, 455.45157pt x 255.95625pt>
 File: figs/grafico_wine_alcool_FnF.png Graphic file (type png)
 <use figs/grafico_wine_alcool_FnF.png>
 Package pdftex.def Info: figs/grafico_wine_alcool_FnF.png  used on input line 9
-70. on input line 970.
+72. on input line 972.
 Package pdftex.def Info: Requested size: 409.90262pt x 230.35847pt on input lin
-e 970.
- [56 <./figs/grafico_wine_alcool_FnF.png (PNG copy)>] [57]
-<figs/grafico_acuracia_media_algoritmos.png, id=1027, 454.69875pt x 288.3272pt>
+e 972.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[55] [56 <./figs/grafico_wine_alcool_FnF.png (PNG copy)>]
+<figs/grafico_acuracia_media_algoritmos.png, id=1021, 454.69875pt x 288.3272pt>
 
 File: figs/grafico_acuracia_media_algoritmos.png Graphic file (type png)
 <use figs/grafico_acuracia_media_algoritmos.png>
@@ -2136,14 +2121,15 @@ Package pdftex.def Info: figs/grafico_acuracia_media_algoritmos.png  used on in
 put line 1066. on input line 1066.
 Package pdftex.def Info: Requested size: 409.22508pt x 259.49207pt on input lin
 e 1066.
-) [58 <./figs/grafico_acuracia_media_algoritmos.png (PNG copy)>] [59]
+ [57 <./figs/grafico_acuracia_media_algoritmos.png (PNG copy)>]) [58]
 \openout2 = `capitulos/conclusao.aux'.
 
- (./capitulos/conclusao.tex [60
+ (./capitulos/conclusao.tex
+[59
 
 
 
-]) [61] (./dissertacao.bbl (./dissertacao.brf)
+]) [60] (./dissertacao.bbl (./dissertacao.brf)
 \tf@brf=\write5
 \openout5 = `dissertacao.brf'.
 
@@ -2153,21 +2139,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[62
+[61
 
 
-] [63] [64]) [65]
+] [62] [63]) [64]
 \openout2 = `postextual/apendices.aux'.
 
- (./postextual/apendices.tex [66
-
-
-]
+ (./postextual/apendices.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 12.
 
-[67
+[65
+
+
 
 ]
 
@@ -2187,9 +2172,9 @@ LaTeX Warning: No positions in optional float specifier.
 
 LaTeX Warning: Float too large for page by 17.8219pt on input line 330.
 
-[68
+[66
 
-] [69] [70]
+] [67] [68]
 Underfull \hbox (badness 10000) in paragraph at lines 338--338
  [][] [][][]\T1/lmr/m/n/10 (+20) https://la.mathworks.com/help/stats/supervised
 -learning-machine-learning-workflow-and-
@@ -2235,7 +2220,7 @@ Overfull \hbox (10.01018pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
-) [71
+) [69
 
 ] 
 AED: lastpage setting LastPage
@@ -2263,8 +2248,8 @@ Package rerunfilecheck Warning: File `dissertacao.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `dissertacao.brf':
-(rerunfilecheck)             Before: 7874BF1635FA2BC9FA4D782064C4C200;4818
-(rerunfilecheck)             After:  DE44E53F3C1E02AF3DFAAF80676125E5;4818.
+(rerunfilecheck)             Before: 6F75C5EB8CD984A0EDC3B3CFDCB5C587;4818
+(rerunfilecheck)             After:  7CA6C3A3128C1D906E58EC3CC32445E5;4766.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2272,10 +2257,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
  18193 strings out of 492985
- 273379 string characters out of 6138585
- 638173 words of memory out of 5000000
+ 273387 string characters out of 6138585
+ 639055 words of memory out of 5000000
  20837 multiletter control sequences out of 15000+600000
- 120795 words of font info for 204 fonts, out of 8000000 for 9000
+ 120924 words of font info for 205 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,16n,57p,1899b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
@@ -2302,10 +2287,10 @@ ts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/wa
 sy2-ps/wasy10.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasyb10.pf
 b>
-Output written on dissertacao.pdf (89 pages, 2191289 bytes).
+Output written on dissertacao.pdf (87 pages, 2188215 bytes).
 PDF statistics:
- 1564 PDF objects out of 1728 (max. 8388607)
- 1369 compressed objects within 14 object streams
- 281 named destinations out of 1000 (max. 500000)
+ 1552 PDF objects out of 1728 (max. 8388607)
+ 1359 compressed objects within 14 object streams
+ 279 named destinations out of 1000 (max. 500000)
  36450 words of extra memory for PDF output out of 42996 (max. 10000000)
 

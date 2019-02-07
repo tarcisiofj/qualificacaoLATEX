@@ -66,7 +66,7 @@ As tabelas com os resultados dos rótulos apresentadas a seguir (tabelas \ref{ta
 
 Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do algoritmo e através dela percebe-se que o pior rótulo foi no \textit{cluster} 1, com acurácia de 70\%, e com isso deixa de representar nove registros no total de setenta amostras, mas nos outros dois \textit{clusters} a acurácia sobe para 88\%, com um erro de nove registros, porém, os rótulos nestes \textit{clusters} são diferentes, coincidindo somente os valores das colunas \textbf{Elementos Fora da Faixa} e \textbf{Acurácia Parcial}. 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da rotulação com o algoritmo Naive Bayes}
 \label{tab:rot:seeds:nb}
@@ -103,7 +103,7 @@ Segue abaixo o resultado do algoritmo Naive Bayes na base de dados \textbf{Seeds
 
 Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo da tabela visto anteriormente, é apresentado o resultado da aplicação do algoritmo supervisionado na base Seeds. O CART é utilizado pela toolbox do MATLAB como algoritmo de classificação de árvore de decisão. 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo CART}
 \label{tab:rot:seeds:cart}
@@ -138,7 +138,7 @@ O resultado da rotulação utilizando o algoritmo CART na base de dados \textbf{
 Na tabela \ref{tab:rot:seeds:knn} exibe-se o resultado da aplicação do KNN na base Seeds. Os rótulos encontrados são os mesmos do CART.
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
 \label{tab:rot:seeds:knn}
@@ -231,7 +231,7 @@ Para gerar os resultados da aplicação do algoritmo na base de dados, foi defin
 
 Através da tabela \ref{tab:rot:iris:nb}  são exibidos os resultados da rotulação de dados de todos os grupos: \textit{cluster} 1 (\textit{Iris-setosa}), \textit{cluster} 2 (\textit{Iris-versicolor}) e \textit{cluster} 3 (\textit{Iris-virginica}). O Naive Bayes encontrou o mesmo atributo para cada rótulo, mas os intervalos foram diferentes, assegurando-se que os rótulos se tornassem distintos. 
  
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo Naive Bayes}
 \label{tab:rot:iris:nb}
@@ -281,7 +281,7 @@ Os rótulos com o algoritmo Naive Bayes na base de dados \textbf{Iris} são dado
 
 A aplicação do algoritmo CART na base de dados Iris gerou a tabela \ref{tab:rot:iris:cart} como resultado e, ao examiná-la, pode-se observar uma semelhança com a rotulação do algoritmo anterior.
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo CART}
 \label{tab:rot:iris:cart}
@@ -311,7 +311,7 @@ Seguem abaixo os rótulos na base de dados \textbf{Iris} aplicado pelo algoritmo
 
 No resultado da rotulação utilizando-se KNN, constatam-se os mesmos rótulos dos dois algoritmos Naive Bayes e CART, mantendo-se os mesmos valores também para as outras colunas:
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
 \label{tab:rot:iris:cart}
@@ -351,7 +351,7 @@ Todos os algoritmos, Naive Bayes, CART e KNN, encontraram os mesmos rótulos em 
 \section{Base de Dados 3 - Glass - Identificação de Tipos de Vidros}\label{cap:resultados:ssec:iris}
 
 
-Essa base, através do Dr. Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation,  conduziu pesquisas e testes de comparação em seu sistema baseado em regras, determinando se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidro, porque, em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
+A base de dados dos tipos de vidro ficou conhecida através de estudos do Dr. Vina Spiehler, Ph.D. da DABFT Diagnostic Products Corporation,  que conduziu pesquisas e testes de comparação em seu sistema baseado em regras, determinando se o tipo de vidro era temperado ou não. Institutos de investigação criminológica motivaram os estudos de classificação de tipos de vidro, porque, em uma cena de crime, uma classificação de tipos de vidro corretamente identificada pode ser utilizada como prova, ajudando diretamente na investigação \cite{Evett:1989}.
 
 A base de vidros possui um total de 214 instâncias, caracterizados por 9 atributos: índice de refração (RI) e os demais atributos correspondentes à porcentagem do óxido no Sódio (Na), Magnésio (Mg), Alumínio (Al), Silício (Si), Potássio (K), Cálcio (Ca), Bário (Ba) e Ferro (Fe).
 
@@ -378,45 +378,45 @@ Nos testes desenvolvidos nesta pesquisa, os valores de referência foram ${R=4}$
 
 Na aplicação desse algoritmo, as melhores configurações para rotulação foram através do método EWD de discretização e a variação  ${V=77\%}$, que influencia diretamente nas escolhas dos atributos. 
 
- A tabela \ref{tab:rot:glass:nb}  apresenta os seis clusters nas ordens sequenciais:(1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas, e junto a essa coluna são atributos e suas relevâncias com os erros (Fora da Faixa) e acurácia parcial indicada para cada atributo junto ao cluster. 
+ A tabela \ref{tab:rot:glass:nb}  apresenta os seis clusters nas ordens sequenciais:(1) janelas de construção - vidro temperado, (2) janelas de construção - vidro não-temperado, (3) janelas de veículos - vidro temperado, (4) recipientes , (5) louças de mesa e (6) lâmpadas, e junto a coluna Cluster segue a sequência da coluna Rótulos (Atributo/Faixa), com os erros (Elementos Fora da Faixa) e Acurácia Parcial indicada para cada atributo junto ao cluster. 
  
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo Naive Bayes}
 \label{tab:rot:glass:nb}
 \scalebox{0.8}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   & 91\%  & 0 & 100\% \\  
-\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   & 58\%  & 15 & 78.6\% \\  \hline
-                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   & 14\%  & 25 & 68\%\\ 
-                                             & K     & [ 0.0 $\sim$  1.5525 ]     & 11\%  & 0  & 100\% \\  
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 85\%  & 1  & 98.7\% \\  
-\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 51\%  & 23 & 69.8\% \\  \hline
-                                            & Na     & ]12.3925 $\sim$  14.055 ] & 17\%  & 3  & 82.4\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 94\%  & 0  & 100\% \\  
-\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 70\%  & 3  & 82.4\% \\  \hline
-                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 46\%  & 5  & 61.6\%\\ 
-                                             & Al    & ] 1.0925 $\sim$  1.895]      & 15\%  & 4  & 69.3\%\\
-                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 3  & 77\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 84\%  & 1  & 92.4\% \\  
-\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 84\%  & 2  & 84.7\% \\  \hline                                            
-                                            & K     & [ 0.00 $\sim$ 1.5525 ]     & 100\%  & 0 & 100\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 100\%  & 0 & 100\% \\  
-\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 100\%  & 0 & 100\% \\  \hline
-                                            & RI     & [1.511150 $\sim$  1.516845 ] & 6\%  & 11  & 62.1\% \\ 
-                                            & Na     & ]14.055 $\sim$  15.7175 ] & 0\%  & 6  & 79.4\% \\ 
-                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 68\%  &6  & 79.4\%\\ 
-                                             & Al    & ] 1.895 $\sim$  2.6975]      & 6\%  & 11  & 62.1\%\\
-                                            & Si    & ] 72.61 $\sim$  74.01]      & 10\%  & 6  & 79.4\%\\
-                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 2  & 93.2\% \\ 
-                                            & Ca     & [ 8.12 $\sim$ 10.81 ]    & 0\%  & 3  & 89.7\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 10\%  & 15  & 48.3\% \\  
-\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 58\%  & 0  & 100\% \\  \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} &  Elementos Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   &  0 & 100\% \\  
+\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   &  15 & 78.6\% \\  \hline
+                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   &  25 & 68\%\\ 
+                                             & K     & [ 0.0 $\sim$  1.5525 ]     &  0  & 100\% \\  
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  1  & 98.7\% \\  
+\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  23 & 69.8\% \\  \hline
+                                            & Na     & ]12.3925 $\sim$  14.055 ] &  3  & 82.4\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  0  & 100\% \\  
+\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  3  & 82.4\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    &  5  & 61.6\%\\ 
+                                             & Al    & ] 1.0925 $\sim$  1.895]      & 1 4  & 69.3\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    &  3  & 77\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  2  & 84.7\% \\  \hline                                            
+                                            & K     & [ 0.00 $\sim$ 1.5525 ]     & 0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  0 & 100\% \\  
+\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     &  0 & 100\% \\  \hline
+                                            & RI     & [1.511150 $\sim$  1.516845 ] &  11  & 62.1\% \\ 
+                                            & Na     & ]14.055 $\sim$  15.7175 ] &  6  & 79.4\% \\ 
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 6  & 79.4\%\\ 
+                                             & Al    & ] 1.895 $\sim$  2.6975]      &  11  & 62.1\%\\
+                                            & Si    & ] 72.61 $\sim$  74.01]      &  6  & 79.4\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    &  2  & 93.2\% \\ 
+                                            & Ca     & [ 8.12 $\sim$ 10.81 ]    &  3  & 89.7\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  15  & 48.3\% \\  
+\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     &  0  & 100\% \\  \hline
 
 \end{tabular}
 }
@@ -424,17 +424,16 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 
 
-Analisando-se a tabela \ref{tab:rot:glass:nb} percebe-se, através da coluna Relevância, que entre os \textit{clusters} 1 ao 3 o atributo \textbf{Ba} é mais relevante com a mesma faixa de valor. Dessa forma, isso configura uma ambiguidade de rótulos entre três grupos, \textit{i.e.}, o mesmo rótulo está representando três grupos ao mesmo tempo. A solução para evitar a ambiguidade entre rótulos é agregar mais atributos de menor relevância considerando valores para variância ${V}$ até que os rótulos se tornem únicos por grupo. 
+Analisando-se a tabela \ref{tab:rot:glass:nb} percebe-se, através dos rótulos, que entre os \textit{clusters} 1 ao 6 o atributo \textbf{Ba} e \textbf{Fe} se repetem. No caso do resultado desse algoritmo aconteceu da tabela de atributos importantes coincidir estes dois atributos junto com as mesmas faixas nos \textit{clusters} 1, 3 e 5. Dessa forma, isso configura uma ambiguidade de rótulos entre três grupos, \textit{i.e.}, o mesmo rótulo está representando três grupos ao mesmo tempo. A solução para evitar a ambiguidade entre rótulos é agregar mais atributos de menores taxas de acerto do algoritmo, através da variância ${V}$ até que os rótulos se tornem únicos por grupo. 
 
-Em análise da tabela de atributos importantes a
 
-Sabe-se que, ao incluir atributos de menor relevância nos rótulos para deixá-los únicos, isso resulta na diminuição da acurácia média do grupo, porém essa diminuição de confiança do rótulo é necessária para manter a representatividade dele. Essa situação ocorreu com o \textit{cluster} 6, que possuiu umas das menores acurácias médias, devido ao alto valor da variância, ${V=77\%}$, resultando também em um rótulo com todos os atributos. 
+Sabe-se que, ao incluir atributos de com menores taxas de acerto nos rótulos para deixá-los únicos, isso resulta na diminuição da acurácia média do grupo, porém essa diminuição de confiança do rótulo é necessária para manter a representatividade dele. Essa situação ocorreu com o \textit{cluster} 6, que possuiu umas das menores acurácias médias por possuir todos os atributos como rótulo, e isso devido a dois fatores: i) os valores da tabela de atributos importantes, que mantém armazenados as taxas de acerto do algoritmo, contêm valores baixos; ii) o valor da variância ser maior que os valores armazenados na tabela do respectivo \textit{cluster}. Ao acontecer esses dois fatores acaba por  resultar em um rótulo com todos os atributos. 
 
-Considerando-se a tabela \ref{tab:rot:glass:nb}, o cluster 5 foi o único a apresentar um rótulo com três atributos com relevância de 100\% e, mesmo com ${V=77\%}$, não foi adicionado nenhum outro atributo menos relevante ao rótulo, obtendo-se o valor de 100\% na acurácia média do grupo. As menores acurácias médias, por grupo, foi do \textit{cluster} 4 (\textbf{recipientes}) e \textit{cluster} 6 (\textbf{lâmpadas}), com 77\% e 77.06\% respectivamente. 
+Considerando-se a tabela \ref{tab:rot:glass:nb}, o \textit{cluster} 5 foi o único, mesmo com ${V=77\%}$, a apresentar um rótulo com valor de 100\% na acurácia média do grupo. As menores acurácias médias, por grupo, foi do \textit{cluster} 4 (\textbf{recipientes}) e \textit{cluster} 6 (\textbf{lâmpadas}), com 77\% e 77.06\% respectivamente. 
 
-Em análise a um fato que ocorreu em específico no \textit{cluster} 6, foi que o maior valor de relevância do \textit{cluster} é do atributo \textbf{Mg} de 68\%, visto que a variância é igual a ${V=77\%}$, e tem o efeito de adicionar todos os atributos que possuem valores abaixo dele no rótulo, dessa forma o atributo \textbf{Na} com relevância de 0\% também é adicionado ao rótulo. Uma vez que o atributo faz parte do rótulo é calculado  qual  faixa de valor, do atributo, possui mais elementos. Então o motivo de um atributo que tem 0\% de relevância, entre atributos, e ter 86.3\% de acurácia é justificado pelo fato de contabilizar os registros que possuem valores de \textbf{Na} no intervalo ${]14.055 \sim 15.7175 ]}$. 
+%Em análise a um fato que ocorreu em específico no \textit{cluster} 6, foi que o maior valor da taxa de acerto do Naive Bayes no \textit{cluster} é do atributo \textbf{Mg} de 68\%, visto que a variância é igual a ${V=77\%}$, e tem o efeito de adicionar todos os atributos que possuem valores abaixo dele no rótulo, dessa forma o atributo \textbf{Na} com relevância de 0\% também é adicionado ao rótulo. Uma vez que o atributo faz parte do rótulo é calculado  qual  faixa de valor, do atributo, possui mais elementos. Então o motivo de um atributo que tem 0\% de relevância, entre atributos, e ter 86.3\% de acurácia é justificado pelo fato de contabilizar os registros que possuem valores de \textbf{Na} no intervalo ${]14.055 \sim 15.7175 ]}$. 
 
-Em análise a um fato que ocorreu em específico no \textit{cluster} 6, verificou-se que o maior valor de relevância do \textit{cluster} é do atributo \textbf{Mg}, de 68\%, sendo menor que o valor de  variância igual a ${V=77\%}$. Uma vez que a variáncia tenha um valor maior do que relevância do atributo do cluster, então todos os atributos que possuem o valor abaixo da variância serão adicionados ao rótulo; dessa forma, o atributo \textbf{Na}, com relevância de 0\%, também é adicionado ao rótulo, e calculada qual faixa de valor do atributo possui mais elementos. Então, uma vez que o atributo faz parte do rótulo, irá ser contabilizado o número de registros que estejam entre o intervalo do atributo e calculado sua acurácia.
+%Em análise a um fato que ocorreu em específico no \textit{cluster} 6, verificou-se que o maior valor de relevância do \textit{cluster} é do atributo \textbf{Mg}, de 68\%, sendo menor que o valor de  variância igual a ${V=77\%}$. Uma vez que a variáncia tenha um valor maior do que relevância do atributo do cluster, então todos os atributos que possuem o valor abaixo da variância serão adicionados ao rótulo; dessa forma, o atributo \textbf{Na}, com relevância de 0\%, também é adicionado ao rótulo, e calculada qual faixa de valor do atributo possui mais elementos. Então, uma vez que o atributo faz parte do rótulo, irá ser contabilizado o número de registros que estejam entre o intervalo do atributo e calculado sua acurácia.
 % 
 % Outra forma de explicar o valor de variância  ${V=}$ é verificar na tabela \ref{tab:execucoes:glass:nb} (matriz de atributos importantes) os valores correspondentes aos \textit{clusters} que possuem maiores números, pois esta contêm valores em porcentagem do quanto cada atributo é bem correlacionado com os demais, logo, quanto maior for o valor mais bem correlacionado é o atributo. Cada linha da tabela corresponde a um cluster e as colunas os atributos.
 % 
@@ -493,7 +492,7 @@ De acordo com a aplicação do Naive Bayes na base de dados \textbf{Glass} os r�
 \end{itemize}
 
 
-\subsection{Classification and Regression Trees - CART} \label{cap:resultados:ssec:glass:cart}
+\subsection{Rotulação através do algoritmo Classification and Regression Trees - CART} \label{cap:resultados:ssec:glass:cart}
 
 %Na execução do CART foi aplicado o método de discretização EWD e uma mudança no valor da variância ${V=6\%}$ para evitar a ambiguidade dos clusters 1 e 3. 
 
@@ -501,36 +500,36 @@ Por meio de testes foi descartada a utilização do método de discretização E
 
 A execução do CART obteve os resultados apresentados na tabela \ref{tab:rot:glass:cart}.
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo CART}
 \label{tab:rot:glass:cart}
 \scalebox{0.8}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   & 95\%  & 0 & 100\% \\  
-\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   & 51\%  & 15 & 78.6\% \\  \hline
-                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   & 17\%  & 25 & 68\%\\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 84\%  & 1  & 98.7\% \\  
-\multirow{-3}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 43\%  & 23 & 69.8\% \\  \hline
-                                            & K     & [ 0.0 $\sim$  1.5525 ]     & 23\%  & 0  & 100\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 88\%  & 0  & 100\% \\  
-\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 70\%  & 3  & 82.7\% \\  \hline
-                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 30\%  & 5  & 61.6\%\\ 
-                                             & Al    & ] 1.43 $\sim$  1.83]      & 15\%  & 4  & 69.3\%\\
-                                            & K     & [  0.0 $\sim$  1.5525 ]    & 15\%  & 3  & 77\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 76\%  & 1  & 92.4\% \\  
-\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    & 69\%  & 2  & 84.7\% \\  \hline
-                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     & 33\%  & 5  & 44.5\% \\ 
-                                            & K     & [ 0.00 $\sim$ 1.5525 ]     & 100\%  & 0 & 100\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    & 100\%  & 0 & 100\% \\  
-\multirow{-4}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 100\%  & 0 & 100\% \\  \hline
-                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     & 65\%  & 6  & 79.4\% \\ 
-                                            & K     & [ 0.0 $\sim$ 1.5525 ]      & 48\%  & 2  & 93.2\% \\ 
-\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     & 79\%  & 0  & 100\% \\  \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & Elementos Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+                                             & Ba     & [ 0.0 $\sim$  0.7875 ]   &  0 & 100\% \\  
+\multirow{-2}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.1275  ]   &  15 & 78.6\% \\  \hline
+                                             & Mg    & ] 3.3675 $\sim$  4.49 ]   &  25 & 68\%\\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  1  & 98.7\% \\  
+\multirow{-3}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  23 & 69.8\% \\  \hline
+                                            & K     & [ 0.0 $\sim$  1.5525 ]     &  0  & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  0  & 100\% \\  
+\multirow{-3}{*}{3}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  3  & 82.7\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    &  5  & 61.6\%\\ 
+                                             & Al    & ] 1.43 $\sim$  1.83]      &  4  & 69.3\%\\
+                                            & K     & [  0.0 $\sim$  1.5525 ]    &  3  & 77\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.1275 ]    &  2  & 84.7\% \\  \hline
+                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     &  5  & 44.5\% \\ 
+                                            & K     & [ 0.00 $\sim$ 1.5525 ]     &  0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  0.7875 ]    &  0 & 100\% \\  
+\multirow{-4}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     &  0 & 100\% \\  \hline
+                                            & Mg    & [ 0.0 $\sim$  1.1225 ]     &  6  & 79.4\% \\ 
+                                            & K     & [ 0.0 $\sim$ 1.5525 ]      &  2  & 93.2\% \\ 
+\multirow{-3}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.1275 ]     &  0  & 100\% \\  \hline
 
 \end{tabular}
 }
@@ -566,50 +565,50 @@ De acordo com a aplicação do CART na base de dados \textbf{Glass}, os rótulos
 
 
 
-\subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:glass:knn}
+\subsection{Rotulação através do algoritmo K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:glass:knn}
 
 
 
 Na tabela \ref{tab:rot:glass:knn} é apresentado o resultado da execução do algoritmo KNN na base de dados Glass, aplicando-se o método de discretização EWD, com valor da variância ${V=81\%}$ e alterando-se para ${R=3}$. Na mesma situação do Naive Bayes, o \textit{cluster} 6 recebeu um rótulo com todos os atributos pelo alto valor de ${V}$; embora necessário para retirar as ambiguidades dos rótulos, a consequência é aumentar o número de atributos nos rótulos, implicando também na diminuição da acurácia média por grupo. 
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
 \label{tab:rot:glass:knn}
 \scalebox{0.8}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                                             & Al   & [ 0.29 $\sim$  1.36 ]     & 15\%  & 10  & 85.8\% \\  
-                                            & K     & [ 0.0 $\sim$  2.07 ]     & 24\%  & 0  & 100\% \\  
-                                             & Ba    & [ 0.0 $\sim$  1.05 ]   & 95\%  & 0 & 100\% \\  
-\multirow{-4}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.17  ]   & 64\%  & 8 & 88.6\% \\  \hline
-                                             & Mg    & ] 2.993333 $\sim$  4.49 ]   & 18\%  & 19 & 75\%\\ 
-                                             & K     & [ 0.0 $\sim$  2.07 ]     & 18\%  & 0  & 100\% \\
-                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    & 92\%  & 1  & 98.7\% \\  
-\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.17 ]    & 51\%  & 16 & 79\% \\  \hline
-                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 94\%  & 0  & 100\% \\  
-\multirow{-2}{*}{3}                          & Fe    & [ 0.0 $\sim$   0.17 ]    & 70\%  & 2  & 88.3\% \\  \hline
-                                             & Mg    & [ 0.0 $\sim$  1.496667 ]    & 53\%  & 5  & 61.6\%\\ 
-                                             & Al    & ] 1.36 $\sim$  2.43]      & 15\%  & 3  & 77\%\\
-                                            & K     & [  0.0 $\sim$  2.07 ]    & 15\%  & 2  & 84.7\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 84\%  & 1  & 92.4\% \\  
-\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.17 ]    & 84\%  & 2  & 84.7\% \\  \hline                                            
-                                            & K     & [ 0.00 $\sim$  2.07 ]     & 100\%  & 0 & 100\% \\ 
-                                            & Ba     & [ 0.0 $\sim$  1.05 ]    & 100\%  & 0 & 100\% \\  
-\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17 ]     & 100\%  & 0 & 100\% \\  \hline
-                                            & RI     & [1.511150 $\sim$  1.516845 ] & 0\%  & 4  & 86.3\% \\ 
-                                            & Na     & ]12.946667 $\sim$  15.163333 ] & 3\%  & 2  & 93.2\% \\ 
-                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 79\%  &6  & 79.4\%\\ 
-                                             & Al    & [ 0.0 $\sim$  1.496667]      & 6\%  & 10  & 65.6\%\\
-                                            & Si    & ] 71.676667 $\sim$  73.543333]      & 6\%  & 6  & 79.4\%\\
-                                            & K     & [  0.0 $\sim$  2.07 ]    & 55\%  & 1  & 96.6\% \\ 
-                                            & Ca     & [5.43 $\sim$ 9.016667 ]    & 3\%  & 7  & 75.9\% \\ 
-                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    & 20\%  & 14  & 51.8\% \\ 
-\multirow{-9}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.17 ]     & 75\%  & 0  & 100\% \\  \hline\hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & Elementos Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+                                             & Al   & [ 0.29 $\sim$  1.36 ]     &  10  & 85.8\% \\  
+                                            & K     & [ 0.0 $\sim$  2.07 ]     &  0  & 100\% \\  
+                                             & Ba    & [ 0.0 $\sim$  1.05 ]   &  0 & 100\% \\  
+\multirow{-4}{*}{1}                          & Fe    & [ 0.0 $\sim$  0.17  ]   &  8 & 88.6\% \\  \hline
+                                             & Mg    & ] 2.993333 $\sim$  4.49 ]   &  19 & 75\%\\ 
+                                             & K     & [ 0.0 $\sim$  2.07 ]     &  0  & 100\% \\
+                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    &  1  & 98.7\% \\  
+\multirow{-4}{*}{2}                          & Fe    & [ 0.0 $\sim$  0.17 ]    &  16 & 79\% \\  \hline
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    &  0  & 100\% \\  
+\multirow{-2}{*}{3}                          & Fe    & [ 0.0 $\sim$   0.17 ]    &  2  & 88.3\% \\  \hline
+                                             & Mg    & [ 0.0 $\sim$  1.496667 ]    &  5  & 61.6\%\\ 
+                                             & Al    & ] 1.36 $\sim$  2.43]      &  3  & 77\%\\
+                                            & K     & [  0.0 $\sim$  2.07 ]    &  2  & 84.7\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    &  1  & 92.4\% \\  
+\multirow{-5}{*}{4}                          & Fe    & [ 0.0 $\sim$  0.17 ]    &  2  & 84.7\% \\  \hline                                            
+                                            & K     & [ 0.00 $\sim$  2.07 ]     &  0 & 100\% \\ 
+                                            & Ba     & [ 0.0 $\sim$  1.05 ]    &  0 & 100\% \\  
+\multirow{-3}{*}{5}                         & Fe    & [ 0.0 $\sim$  0.17 ]     &  0 & 100\% \\  \hline
+                                            & RI     & [1.511150 $\sim$  1.516845 ] &  4  & 86.3\% \\ 
+                                            & Na     & ]12.946667 $\sim$  15.163333 ] &  2  & 93.2\% \\ 
+                                             & Mg    & [ 0.0 $\sim$  1.1225 ]    & 6  & 79.4\%\\ 
+                                             & Al    & [ 0.0 $\sim$  1.496667]      &  10  & 65.6\%\\
+                                            & Si    & ] 71.676667 $\sim$  73.543333]      &  6  & 79.4\%\\
+                                            & K     & [  0.0 $\sim$  2.07 ]    &  1  & 96.6\% \\ 
+                                            & Ca     & [5.43 $\sim$ 9.016667 ]    &  7  & 75.9\% \\ 
+                                            & Ba     & [ 0.0 $\sim$ 1.05 ]    &  14  & 51.8\% \\ 
+\multirow{-9}{*}{6}                         & Fe    & [ 0.0 $\sim$  0.17 ]     &  0  & 100\% \\  \hline\hline
 
 \end{tabular}
 }
@@ -628,7 +627,7 @@ Os rótulos sugeridos na tabela \ref{tab:rot:glass:knn} apresentam em todos os c
 
 %Um efeito que aconteceu em específico no \textit{cluster} 6, foi que o maior valor de relevância do \textit{cluster} é do atributo Mg de 79\%, visto que a variância ${V=81\%}$ tem o efeito de adicionar todos os atributos que possuem valores abaixo de 81\% no rótulo, dessa forma o atributo RI com relevância de 0\% também é adicionado ao rótulo. Uma vez que o atributo faz parte do rótulo é calculado  qual  faixa de valor, do atributo, possui mais elementos. Então o motivo de um atributo que tem 0\% de relevância, entre atributos, e ter 86.3\% de acurácia é justificado pelo fato de contabilizar os registros que possuem valores de RI, incluído no rótulo, no intervalo ${ [ 1.511150 \sim  1.516845  ]
 
-O \textit{cluster} 6 teve o mesmo efeito do algoritmo Naive Bayes mediante uma variância com valor mais alto ao maior valor de relevância. Nesse caso, todos os atributos são incluídos no rótulo, até os que têm valores de relevância 0\%. É o que aconteceu em relação do atributo \textbf{RI}, com 0\% de relevância e acurácia de 86.3%. 
+O \textit{cluster} 6 teve o mesmo efeito do algoritmo Naive Bayes mediante uma variância com valor mais alto ao maior valor de taxa de acerto do algoritmo no \textit{cluster}. Nesse caso, todos os atributos são incluídos no rótulo.
 
 %d por ser incluído ao rótulo, pois uma vez que ele faz parte do rótulo o intervalo de valor que mais possuir registros por possuir um valor relevância menor  de variância ${V=81}$, que acabou sendo maior que o valor de relevância do atributo do cluster
 %Comparando o ${r_{c_2}}$ com  ${r_{c_6}}$ Mesmo que os elementos estejam se repetindo no ${r_{c_6}}$, a faixa de valor do elemento químico Mg é diferente entre os rótulos, garantindo que os rótulos consigam representar cada grupo. 
@@ -656,7 +655,7 @@ De acordo com a aplicação do KNN na base de dados \textbf{Glass}, os rótulos 
 \end{itemize}
 
 
-\subsection{Comparativo entre Algoritmos na Base de Dados Glass} \label{cap:resultados:ssec:compalgoritmos:glass}
+\subsection{Avaliação da rotulação através de algoritmos supervisionados na base de dados Glass} \label{cap:resultados:ssec:compalgoritmos:glass}
 
 
 Os valores que compõem a base Glass, por se tratarem de representações de elementos químicos através de atributos, possuem em cada um deles uma quantidade em porcentagem de óxido e como é um valor bastante complexo acaba por se tornar uma base com valores distintos em cada atributo. 
@@ -664,7 +663,7 @@ Os valores que compõem a base Glass, por se tratarem de representações de ele
 A tabela \ref{tab:glass:cluster5} apresenta todos os nove registros do \textit{cluster} 5 - louças de mesa - possuindo os valores respectivos de cada elemento em suas colunas.
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{\textit{Cluster} 5 - Louças de mesa - Base Glass }
 \label{tab:glass:cluster5}
@@ -695,7 +694,7 @@ Os algoritmos que sugeriram os mesmos rótulos foram Naive Bayes e KNN, encontra
 
 As informações da tabela \ref{tab:acuracia:glass} mostram as acurácias médias calculadas a partir das acurácias parciais dos clusters, servindo de referência para mensurar o quanto o rótulo está representando os clusters. 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Acurácia média da Base Glass por \textit{clusters}}
 \label{tab:acuracia:glass}
@@ -750,25 +749,25 @@ Na descrição da base Wine\footnote{https://archive.ics.uci.edu/ml/machine-lear
 
 O método de discretização variou dentre os algoritmos e prevaleceu os que obtiveram melhores resultados (menos erros) nos rótulos encontrados, mantendo-se o ${R=3}$ para todos os atributos e também a variância ${V=0\%}$.
 
-\subsection{Naive Bayes} \label{cap:resultados:ssec:wine:bayes}
+\subsection{Rotulação através do algoritmo Naive Bayes} \label{cap:resultados:ssec:wine:bayes}
 
 Os rótulos encontrados após aplicação do Naive Bayes são apresentados na tabela \ref{tab:rot:wine:nb}  e separados por \textit{cluster} 1, 2 e 3, representando os três tipos de vinho. Foi utilizado o método de discretização EWD para demarcar os limites das faixas de dados dos atributos.
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo Naive Bayes}
 \label{tab:rot:wine:nb}
 \scalebox{0.7}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
-                    & AM     & ] 1.71 $\sim$  2.89  ]       & 8\%      & 28 & 52.6\% \\
-                    & magnesium     & ] 95.00 $\sim$  113.00  ]       & 8\%      & 24 & 59.4\% \\
-\multirow{-3}{*}{1} & proline       & ] 880.00 $\sim$ 1680.00  ]       & 8\%      & 10 & 83.1\% \\  \hline
-2                   & alcohol       & [ 11.03 $\sim$  12.64 ]           & 11\%  & 15 & 95\% \\  \hline
-3                   & FnF & ] 0.44 $\sim$  0.66 ]      & 10\%         & 22 &  54.2\% \\  \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} &  Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+                    & AM     & ] 1.71 $\sim$  2.89  ]       &  28 & 52.6\% \\
+                    & magnesium     & ] 95.00 $\sim$  113.00  ]       &  24 & 59.4\% \\
+\multirow{-3}{*}{1} & proline       & ] 880.00 $\sim$ 1680.00  ]       &  10 & 83.1\% \\  \hline
+2                   & alcohol       & [ 11.03 $\sim$  12.64 ]           &  15 & 95\% \\  \hline
+3                   & FnF & ] 0.44 $\sim$  0.66 ]      &  22 &  54.2\% \\  \hline
 \hline
 \end{tabular}}
 \end{table}
@@ -776,7 +775,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 
 
 
-O \textit{cluster} 1 foi o único a apresentar três atributos no rótulo, com relevância de 8\% cada; dois desses atributos, \textbf{AM} e \textbf{magnesium}, possuem acurácias parciais baixas, 52.6\% e 59.4\% respectivamente e outro, \textbf{prolina}, com 83.1\%, totalizando uma acurácia média aproximada no grupo de 65\%. Em números de registros, o rótulo do \textit{cluster} 1 consegue representar 19 registros dos 59 do grupo. O \textit{cluster} 2 foi o que apresentou melhor acurácia, com 95\%, representando 60 registros dos 71 do grupo, e o \textit{cluster} 3 com a pior acurácia, representando 26 amostras, um pouco mais da metade dos 48 registros do grupo. 
+O \textit{cluster} 1 foi o único a apresentar três atributos no rótulo; dois desses atributos, \textbf{AM} e \textbf{magnesium}, possuem acurácias parciais baixas, 52.6\% e 59.4\% respectivamente e outro, \textbf{prolina}, com 83.1\%, totalizando uma acurácia média aproximada no grupo de 65\%. Em números de registros, o rótulo do \textit{cluster} 1 consegue representar 19 registros dos 59 do grupo. O \textit{cluster} 2 foi o que apresentou melhor acurácia, com 95\%, representando 60 registros dos 71 do grupo, e o \textit{cluster} 3 com a pior acurácia, representando 26 amostras, um pouco mais da metade dos 48 registros do grupo. 
 
 %Essa distribuição de dados obteve via Naive Bayesvalores de relevância
 
@@ -793,30 +792,30 @@ De acordo com a aplicação do Naive Bayes na base de dados Wine, os rótulos s�
  \end{itemize}
 
 
-\subsection{Classification and Regression Trees - CART} \label{cap:resultados:ssec:wine:cart}
+\subsection{Rotulação através do algoritmo Classification and Regression Trees - CART} \label{cap:resultados:ssec:wine:cart}
 
 A tabela \ref{tab:rot:wine:cart} apresenta os rótulos encontrados pelo CART na base Wine utilizando o número de faixas ${R=3}$ e, dentre os \textit{clusters}, percebe-se que o \textit{cluster} 2 foi o que obteve a melhor acurácia, 76.1\%. Foram realizados vários testes alterando o número de faixas, mas nenhuma melhora significativa nos erros foi encontrada nos rótulos dos \textit{clusters}. 
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo CART}
 \label{tab:rot:wine:cart}
 \scalebox{0.8}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} &  Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
  
-1     & AC          & [ 10.60 $\sim$   17.066667 ]  & 11\% & 27 & 54.3\% \\  \hline
-2     & magnesium   & [ 70.00 $\sim$  100.666667 ]  & 9\%  & 17 & 76.1\% \\  \hline
-3     & FnF         & ] 0.483333 $\sim$  0.660 ]    & 14\% & 27 &  43.8\% \\  \hline
+1     & AC          & [ 10.60 $\sim$   17.066667 ]  &27 & 54.3\% \\  \hline
+2     & magnesium   & [ 70.00 $\sim$  100.666667 ]  &  17 & 76.1\% \\  \hline
+3     & FnF         & ] 0.483333 $\sim$  0.660 ]    &  27 &  43.8\% \\  \hline
 \hline
 \end{tabular}}
 \end{table}
 
-Nos rótulos sugeridos pelo CART, os valores de porcentagem de correlacionamento entre as variáveis, coluna \textbf{Relevância}, foram baixos, não passando de 14\% nos grupos, indicando um baixo grau de correlação entre esse atributo e os demais. Embora a relevância do atributo implique na escolha dele como rótulo, a acurácia depende da divisão de valores da faixa do atributo, pois será contabilizado o número de registros em cada faixa. 
+
 
 Logo os rótulos da aplicação do CART na base de dados \textbf{Wine} são:
 \begin{itemize}[noitemsep]
@@ -826,25 +825,25 @@ Logo os rótulos da aplicação do CART na base de dados \textbf{Wine} são:
  \end{itemize}
  
  
-\subsection{K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:wine:knn}
+\subsection{Rotulação através do algoritmo K-Nearest Neighbor - KNN} \label{cap:resultados:ssec:wine:knn}
  
 
-No resultado do KNN, na tabela \ref{tab:rot:wine:knn}, percebe-se o atributo FnF sendo rótulo do \textit{cluster} 1 e 3, mediante faixas distintas. O mesmo atributo se repete no cluster 3 dos três algoritmos, ainda que no Naive Bayes fora utilizado outro método de discretização, mantendo o atributo FnF, mas alterando os intervalos da faixa. 
-\begin{table}[!h]
+No resultado do KNN, na tabela \ref{tab:rot:wine:knn}, percebe-se o atributo \textbf{FnF} sendo rótulo do \textit{cluster} 1 e 3, mediante faixas distintas. O mesmo atributo se repete no cluster 3 dos três algoritmos, ainda que no Naive Bayes fora utilizado outro método de discretização, mantendo o atributo FnF, mas alterando os intervalos da faixa. 
+\begin{table}[!ht]
 \centering
 \caption{Resultado da aplicação do algoritmo KNN}
 \label{tab:rot:wine:knn}
 \scalebox{0.8}{
-\begin{tabular}{llcrcc} 
+\begin{tabular}{llccc} 
 \hline \hline
  
 \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               & \\ \cline{2-3}
-Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & \multicolumn{1}{c}{Relevância(\%)} & Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
+Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} &  Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
  
-1                       & FnF     & [ 0.13 $\sim$  0.306667  ]     & 13\%  & 20 & 66.2\% \\  \hline
-                        & alcool  & [ 11.03 $\sim$  12.296667 ]    & 11\%  & 33 & 53.6\% \\  
-\multirow{-2}{*}{2}     & AC      & ] 17.066667 $\sim$  23.533333 ] & 11\% & 21 &  70.5\% \\  \hline
-3                       & FnF     & ] 0.483333 $\sim$  0.66 ]      & 20\% & 27 &  43.8\% \\  \hline
+1                       & FnF     & [ 0.13 $\sim$  0.306667  ]     &  20 & 66.2\% \\  \hline
+                        & alcool  & [ 11.03 $\sim$  12.296667 ]    &  33 & 53.6\% \\  
+\multirow{-2}{*}{2}     & AC      & ] 17.066667 $\sim$  23.533333 ] &  21 &  70.5\% \\  \hline
+3                       & FnF     & ] 0.483333 $\sim$  0.66 ]      &  27 &  43.8\% \\  \hline
 \hline
 \end{tabular}}
 \end{table}
@@ -862,10 +861,10 @@ Os rótulos encontrados após a execução do KNN na base Wine são:
 
 
 
-\subsection{Comparativo entre Algoritmos na Base de Dados Wine} \label{cap:resultados:ssec:compalgoritmos:wine}
+\subsection{Avaliação da rotulação através de algoritmos supervisionados na base de dados Wine} \label{cap:resultados:ssec:compalgoritmos:wine}
 
 
-No geral, as acurácias foram bastante baixas entre os algoritmos e a única semelhança entre os rótulos aconteceu no \textit{cluster} 3, o qual foi idêntico entre CART, KNN e Naive Bayes, mas, nesse último, houve diferença do intervalo de dados, ocasionando alteração na acurácia. Na execução do Naive Bayes, foi utilizada discretização EFD com variação na faixa 1 de ${[0.13 \sim 0.29]}$, na faixa 2 ${]0.29 \sim 0.44]}$ e na faixa 3 ${]0.44 \sim 0.66]}$ e os outros dois algoritmos utilizaram EWD variando na faixa 1 de ${[0.13 \sim 0.3067]}$, na faixa 2  ${]0.3067 \sim 0.483333]}$ e na faixa 3 ${]0.483333 \sim 0.66]}$. A faixa 3 do método de discretização EFD ficou maior e, por conseguinte, mais registros foram representados, aumentando a acurácia.Dos três algoritmos, o Naive Bayes obteve melhores acurácias nos rótulos dos \textit{clusters} 2 e 3 e foi o único que no \textit{cluster} 1 apresentou, em um mesmo rótulo, três atributos para representar o grupo. Uma forma de melhor explicar quais registros o rótulo está representando foi adicionar a tabela \ref{tab:wine:am_magnesium_proline}, que exibe todos os 59 registros do grupo 1, mas com somente três atributos. Esta amostra servirá de exemplo para visualizar quais os registros são representados pelo rótulo do \textit{cluster} 1 do Naive Bayes. 
+No geral, as acurácias foram bastante baixas entre os algoritmos e a única semelhança entre os rótulos aconteceu no \textit{cluster} 3, o qual foi idêntico entre CART, KNN e Naive Bayes, mas, nesse último, houve diferença do intervalo de dados, ocasionando alteração na acurácia. Na execução do Naive Bayes, foi utilizada discretização EFD com variação na faixa 1 de ${[0.13 \sim 0.29]}$, na faixa 2 ${]0.29 \sim 0.44]}$ e na faixa 3 ${]0.44 \sim 0.66]}$ e os outros dois algoritmos utilizaram EWD variando na faixa 1 de ${[0.13 \sim 0.3067]}$, na faixa 2  ${]0.3067 \sim 0.483333]}$ e na faixa 3 ${]0.483333 \sim 0.66]}$. A faixa 3 do método de discretização EFD ficou maior e, por conseguinte, mais registros foram representados, aumentando a acurácia. Dos três algoritmos, o Naive Bayes obteve melhores acurácias nos rótulos dos \textit{clusters} 2 e 3 e foi o único que no \textit{cluster} 1 apresentou, em um mesmo rótulo, três atributos para representar o grupo. Uma forma de melhor explicar quais registros o rótulo está representando foi adicionar a tabela \ref{tab:wine:am_magnesium_proline}, que exibe todos os 59 registros do grupo 1, mas com somente três atributos. Esta amostra servirá de exemplo para visualizar quais os registros são representados pelo rótulo do \textit{cluster} 1 do Naive Bayes. 
 
 %Outra forma de melhorar a acurácia foi quando nos testes foi definiu o valor de ${R=2}$, devido a essa alteração os rótulos sugeridos pelo CART e KNN tiveram acurácias melhores, porém se sabe que ao diminuir o valor de ${R}$ aumenta o tamanho da faixa implicando em uma perda de informação, \textit{e.g.}, se com uma faixa de tamanho ${R=3}$ o número de faixas iria para três, logo os dados iriam distribuir-se entre as três faixas, entretanto diminuindo para ${R=2}$, a mesma quantidade de valores irião distribuir-se em duas faixas, ao invés das três anteriores, e  deixando as duas faixas maiores consequentemente representando mais valores. Dito isso, é importante ressaltar que este trabalho faz testes sempre a partir de R=3 não só pela perda de informação mas também por comparação de outros trabalhos já realizados, e assim haver comparação.
 
@@ -962,10 +961,11 @@ Então, quando a linha for representada por um atributo e seu intervalo, este se
 \end{table}
 
 
-Como exemplo, verificando a linha 3 percebe-se que ela está na faixa de representação tanto do atributo \textbf{magnesium} como também do atributo \textbf{proline}, mas não é representada pelo atributo \textbf{AM} por possuir o valor 4.04, sendo que o limite do intervalo do atributo \textbf{AM} é 2.89. Considerando essa informação, essa linha não consegue ser representada pelo três atributos e, por conseguinte, não é representada pelo rótulo  ${r_{c_1}}$ do Naive Bayes. Então, através da tabela \ref{tab:wine:am_magnesium_proline} é contabilizado que o rótulo consegue representar 19 elementos no grupo de 59. Quando acontece de o rótulo apresentar mais de um atributo, uma análise dos valores dos atributos do grupo tem que ser realizada junto a base de dados, pois só assim é possível informar com precisão quais são os registros que pertencem aos rótulos. 
+Como exemplo, verificando a linha 3 percebe-se que ela está na faixa de representação tanto do atributo \textbf{magnesium} como também do atributo \textbf{proline}, mas não é representada pelo atributo \textbf{AM} por possuir o valor 4.04, sendo que o limite do intervalo do atributo \textbf{AM} é 2.89. Considerando essa informação, essa linha não consegue ser representada por três atributos e, por conseguinte, não é representada pelo rótulo  ${r_{c_1}}$ do Naive Bayes. Então, através da tabela \ref{tab:wine:am_magnesium_proline} é contabilizado que o rótulo consegue representar 19 elementos no grupo de 59. 
+%Quando acontece de o rótulo apresentar mais de um atributo, uma análise dos valores dos atributos do grupo tem que ser realizada junto a base de dados, pois só assim é possível informar com precisão quais são os registros que pertencem aos rótulos. 
 
   
-Os outros rótulos dos \textit{clusters} 2 e 3 do Naive Bayes são compostos por um atributo cada e por meio da figura \ref{fig:grafico_wine_alcool_FnF} é possível conhecer o espaço amostral da base Wine em função de dois eixos:\textbf{FnF} e \textbf{alcool}. 
+Os outros rótulos dos \textit{clusters} 2 e 3 do Naive Bayes são compostos por um atributo cada e por meio da figura \ref{fig:grafico_wine_alcool_FnF} é possível conhecer o espaço amostral da base Wine em função de dois eixos: \textbf{FnF} e \textbf{alcool}. 
 
 \begin{figure}[h!]
         \centering
@@ -973,15 +973,13 @@ Os outros rótulos dos \textit{clusters} 2 e 3 do Naive Bayes são compostos por
         \caption{Gráfico da disposição de elementos da Base Wine entre os eixos \textbf{FnF} e \textbf{Alcool}} \label{fig:grafico_wine_alcool_FnF}
 \end{figure}
 
-Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma pespectiva de duas variáveis, é possível visualizar o comportamento da base Wine quanto a disposição de seus dados, e através dos rótulos  sugeridos de pelo Naive Bayes pode-se constatar suas representações nos grupos, bem como também visualizar seus erros. e.g., quando um especialista verificar um determinado dado que possui no atributo alcool o valor 12.1, e este conhece os rótulos sugeridos pelo Naive Bayes, logo o especialista atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado  com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois ao confirmar o valor 12.1 no eixo X (alcool) percebe-se que este está junto a distribuição do grupo 2 conforme figura.
+% Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma pespectiva de duas variáveis, é possível visualizar o comportamento da base Wine quanto a disposição de seus dados, e através dos rótulos  sugeridos de pelo Naive Bayes pode-se constatar suas representações nos grupos, bem como também visualizar seus erros. e.g., quando um especialista verificar um determinado dado que possui no atributo alcool o valor 12.1, e este conhece os rótulos sugeridos pelo Naive Bayes, logo o especialista atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado  com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois ao confirmar o valor 12.1 no eixo X (alcool) percebe-se que este está junto a distribuição do grupo 2 conforme figura.
 
-Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma perspectiva de duas variáveis, é possível visualizar distribuição da base Wine  e, através dos rótulos sugeridos pelo Naive Bayes, pode-se constatar suas representações nos grupos, bem como também visualizar seus erros, e.g., quando um especialista verificar um determinado dado que possui no atributo \textbf{alcool}, o valor 12.1, e conhece os rótulos sugeridos pelo Naive Bayes, logo ele atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois, ao confirmar o valor 12.1 no eixo X (\textbf{alcool}), percebe-se visualmente que este está junto à distribuição do grupo 2, conforme figura. 
+Em uma análise do gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, mesmo observando em uma perspectiva de duas variáveis, é possível visualizar distribuição da base Wine  e, através dos rótulos sugeridos pelo Naive Bayes, pode-se constatar suas representações nos grupos, bem como também visualizar seus erros, \textit{e.g.}, quando um especialista verificar um determinado dado que possui no atributo \textbf{alcool}, o valor 12.1, e conhece os rótulos sugeridos pelo Naive Bayes, logo ele atribui que esse dado pertence ao grupo de vinho tipo 2. Esse exemplo pode ser constatado com o gráfico da figura \ref{fig:grafico_wine_alcool_FnF}, pois, ao confirmar o valor 12.1 no eixo X (\textbf{alcool}), percebe-se visualmente que este está junto à distribuição do grupo 2, conforme figura. 
 
-A mesma figura também pode ser utilizada para explicar os rótulos sugeridos pelo KNN, que teve em comparação com CART melhor acurácia na rotulação do \textit{cluster} 1, e igual ao \textit{cluster} 3. Com rótulo do KNN ${r_{c_1}}$ ${=(FnF, [ 0.13 \sim  0.306667  ] ) \} }$, e através da figura \ref{fig:grafico_wine_alcool_FnF} percebe-se que a faixa coberta pelo rótulo aponta para os dados do grupo 1 (classe1 do gráfico). Da mesma forma acontece com o rótulo ${r_{c_3}=}$ ${\{ (FnF, ] 0.483333 \sim  0.66 ])\} }$ no qual valores do atributo \textbf{FnF} acima de 0.48 (vê gráfico figura \ref{fig:grafico_wine_alcool_FnF}) até 0.66 direcionam para o grupo 3 (classe3 do gráfico), de modo a constatar que os rótulos conseguem representar os grupos dos tipos de vinho.
+A mesma figura também pode ser utilizada para explicar os rótulos sugeridos pelo KNN, que teve, em comparação com CART, melhor acurácia na rotulação do \textit{cluster} 1 e igual ao \textit{cluster} 3. Com rótulo do KNN ${r_{c_1}}$ $=\{(FnF, [ 0.13 \sim  0.306667  ] ) \} $, e através da figura \ref{fig:grafico_wine_alcool_FnF}, percebe-se que a faixa coberta pelo rótulo aponta para os dados do grupo 1 (classe 1 do gráfico). Da mesma forma acontece com o rótulo ${r_{c_3}=}$ ${\{ (FnF, ] 0.483333 \sim  0.66 ])\} }$, no qual valores do atributo \textbf{FnF} acima de 0.48 (vê gráfico figura \ref{fig:grafico_wine_alcool_FnF}) até 0.66 direcionam para o grupo 3 (classe 3 do gráfico), de modo a constatar que os rótulos conseguem representar os grupos dos tipos de vinho.
 
-A mesma figura também pode ser utilizada para explicar os rótulos sugeridos pelo KNN, que teve, em comparação com CART, melhor acurácia na rotulação do \textit{cluster} 1 e igual ao \textit{cluster} 3. Com rótulo do KNN ${r_{c_1}}$ ${=(FnF, [ 0.13 \sim  0.306667  ] ) \} }$, e através da figura \ref{fig:grafico_wine_alcool_FnF}, percebe-se que a faixa coberta pelo rótulo aponta para os dados do grupo 1 (classe 1 do gráfico). Da mesma forma acontece com o rótulo ${r_{c_3}=}$ ${\{ (FnF, ] 0.483333 \sim  0.66 ])\} }$, no qual valores do atributo \textbf{FnF} acima de 0.48 (vê gráfico figura \ref{fig:grafico_wine_alcool_FnF}) até 0.66 direcionam para o grupo 3 (classe 3 do gráfico), de modo a constatar que os rótulos conseguem representar os grupos dos tipos de vinho.
-
-Dos resultados encontrados pelo CART o rótulo do \textit{cluster} 1, dentre os três algoritmos foi o melhor, com acurácia de 66.2\%, já em relação a acurácia no \textit{cluster} 2 foi pior comparando aos outros dois algoritmos, no \textit{cluster} 3 já foi dito sobre a igualdade deste resultado com CART e teve a acurácia mais baixa do que o Naive Bayes.
+% Dos resultados encontrados pelo CART o rótulo do \textit{cluster} 1, dentre os três algoritmos foi o melhor, com acurácia de 66.2\%, já em relação a acurácia no \textit{cluster} 2 foi pior comparando aos outros dois algoritmos, no \textit{cluster} 3 já foi dito sobre a igualdade deste resultado com CART e teve a acurácia mais baixa do que o Naive Bayes.
 
 Dos resultados encontrados pelo CART, o rótulo do \textit{cluster} 1, dentre os três algoritmos, foi o melhor, com acurácia de 66.2\%; já o cluster 2 em relação à acurácia, foi pior comparando-se aos outros dois algoritmos; no cluster 3, já foi dito sobre a igualdade deste resultado com CART, tendo a acurácia mais baixa do que o Naive Bayes. 
 
@@ -1069,13 +1067,18 @@ A figura  \ref{fig:acuracia_media_algoritmos} mostra um gráfico geral da acurá
         \caption{Acurácia média entre os clusters de todas as bases testadas com os algoritmos: Naive Bayes, CART e KNN} \label{fig:acuracia_media_algoritmos}
 \end{figure}
 
-Foram testadas quatro bases de dados e dentre elas a base Wine, uma base de resultado de análises químicas com 178 amostras dividida em três tipos de vinhos. Foi a única a possuir algumas acurácias de rótulos por clusters abaixo de 60\%, já as demais bases, Seeds, Iris e Glass, tiveram suas acurácias dos rótulos por clusters acima de 70\%.
+Foram testadas quatro bases de dados e dentre elas a base Wine, uma base de resultado de análises químicas com 178 amostras dividida em três tipos de vinhos. Foi a única a possuir algumas acurácias de rótulos por clusters abaixo de 60\%, já as demais bases, Seeds, Iris e Glass, tiveram suas acurácias dos rótulos por clusters acima de 70\%, \textit{e.g.}, se um rótulo conseguir representar 70\% de uma amostra de quinhento registros, isso implica que o rótulo consegue representar trezentos e cinquenta registros do quinhentos, considerando assim um rótulo satisfatório nessa amostra.
 
 %É possível verificar no gráfico da figura \ref{fig:acuracia_media_algoritmos} algoritmo
 
 
 
-Outra pesquisa também realizou testes com essas mesmas bases para realizar rotulação de dados, mas, diferente deste trabalho, \citeonline{Lopes2016} não considerou a classificação das bases, ou seja,  não utilizou os grupos já designados na origem das bases, e realizou  uma nova classificação através de um algoritmo não-supervisionado,\textit{ K-means}, e só assim aplicou um algoritmo de aprendizado  de máquina supervisionado (RNAs). Para esta pesquisa poder realizar uma comparação entre os resultados, é necessário recriar os grupos que \citeonline{Lopes2016} criou em seu trabalho e em seguida aplicar os algoritmos supervisionados para obter os rótulo. A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo e qualquer alteração destes registros implica em uma alteração nos resultados dos rótulos. Dessa maneira foram realizados testes para recriar os mesmos grupos que \citeonline{Lopes2016}, mas mesmo utilizando as mesmas técnicas as tentativas não lograram êxito em fazer grupos idênticos, pois mesmo configurando o número de grupos a ser encontrado pelo algoritmo, ao executá-lo, os resultados retornam grupos diferentes um do outro, de forma que uma comparação com grupos diferentes não retrataria uma comparação justa, pois os dados testados não seriam os mesmos\footnote{Resultados dos testes comparativos no Apêndice \ref{apendice:1}}.
+Outra pesquisa \cite{Lopes2016} também realizou testes com essas mesmas bases para realizar rotulação de dados, mas, diferente deste trabalho, o autor citado não considerou a classificação das bases, ou seja,  não utilizou os grupos já designados na origem das bases, e realizou  uma nova classificação através de um algoritmo não-supervisionado,\textit{ K-means}, e só assim aplicou um algoritmo de aprendizado  de máquina supervisionado (RNAs). Para esta pesquisa poder realizar uma comparação entre os resultados, é necessário recriar os grupos e em seguida aplicar os algoritmos supervisionados para obter os rótulo. 
+
+A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo e qualquer alteração destes registros implica em uma alteração nos resultados dos rótulos. Dessa maneira foram realizados testes para recriar os mesmos grupos que \citeonline{Lopes2016}, mas mesmo utilizando as mesmas técnicas as tentativas não lograram êxito em fazer grupos idênticos, pois mesmo configurando o número de grupos a ser encontrado pelo algoritmo, ao executá-lo, os resultados retornam grupos diferentes um do outro, de forma que uma comparação com grupos diferentes não retrataria uma comparação justa, pois os dados testados não seriam os mesmos\footnote{Resultados dos testes comparativos no Apêndice \ref{apendice:1}}.
+
+
+
 
 
 
