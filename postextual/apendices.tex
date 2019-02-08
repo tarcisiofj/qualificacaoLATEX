@@ -19,7 +19,7 @@ Através da pesquisa de \citeonline{Lopes2016} que apresentou um modelo de rotul
 
 Segue nas tabelas abaixo o comparativo do trabalho do \cite{Lopes2016} com os testes realizados nos clusters recriados das bases: Seeds, Iris e Glass, com o trabalho 
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{Rotulação de Dados utilizando a base de dados Seeds.}
 \subfloat[Naive Bayes]{
@@ -30,7 +30,7 @@ Segue nas tabelas abaixo o comparativo do trabalho do \cite{Lopes2016} com os te
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
 1                   &    72                  &  asymetry    & 25   & 34.7\\ \hline
                     &                        & Lkernel        & 1  & 1.64\\  
 \multirow{-2}{*}{2} &   \multirow{-2}{*}{61} & lkgroove        & 5  & 8.19\\ \hline 
@@ -47,7 +47,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
 1                   &    72                  &  perimetro    & 14  & 19.44 \\ \hline
 2                   &   61                   & perimetro     & 0  & 0\\ \hline 
 3                   &    77                  & perimetro      & 10  & 12.98\\ \hline
@@ -64,7 +64,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
 1                   &    72                  &  perimetro    & 14   & 19.44\\ \hline
 2                   &   61                   & lkgroove     & 5  & 8.19\\ \hline 
 3                   &    77                  & perimetro      & 10 &  12.98\\ \hline
@@ -72,15 +72,16 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
+
 \subfloat[Resultado de \citeonline{Lopes2016}]{
 \label{tab:comparativo:seeds:lopes}
-\scalebox{0.8}{%
+\scalebox{1}{%
  \small\addtolength{\tabcolsep}{-2pt} 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
                    &                       &  area    & 8   &  11.95 \\
 \multirow{-2}{*}{1} &   \multirow{-2}{*}{67} & perimetro        & 9  & 13.64\\  \hline
                     &                        & area        & 12  & 14.64\\
@@ -97,18 +98,18 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 
 
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{Rotulação de Dados utilizando a base de dados Iris.}
 \subfloat[Naive Bayes]{
 \label{tab:comparativo:iris:nb}
-\scalebox{0.8}{
+\scalebox{1}{
  \small\addtolength{\tabcolsep}{-2pt} 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
                     &                        & sepallength        & 10  & 26.3\\  
 \multirow{-2}{*}{1} &   \multirow{-2}{*}{38} & petalwidth        & 4  & 10.5\\ \hline 
 2                   &    62                  & petalwidth       & 19  & 30.6\\ \hline
@@ -117,15 +118,16 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
+
 \subfloat[CART]{
 \label{tab:comparativo:iris:cart}
-\scalebox{0.8}{%
+\scalebox{1}{%
  \small\addtolength{\tabcolsep}{-2pt} 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
 1                   &    38                  &  petalwidth    & 4  & 10.5 \\ \hline
 2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
 3                   &    50                  & petalwidth      & 0  & 0\\ \hline
@@ -136,13 +138,13 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 
 \subfloat[KNN]{
 \label{tab:comparativo:iris:knn}
-\scalebox{0.8}{%
+\scalebox{1}{%
  \small\addtolength{\tabcolsep}{-2pt} 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
 1                   &    38                  &  sepallength   & 10   & 26.3\\ \hline
 2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
 3                   &    50                  & petalwidth      & 0 &  0\\ \hline
@@ -150,15 +152,16 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
+
 \subfloat[Resultado de \citeonline{Lopes2016}]{
 \label{tab:comparativo:iris:lopes}
-\scalebox{0.8}{%
+\scalebox{1}{%
  \small\addtolength{\tabcolsep}{-2pt} 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd)& Erro (\%) \\ \hline
                    &                       &  petalwidth    & 0   & 0 \\
 \multirow{-2}{*}{1} &   \multirow{-2}{*}{50} & petallength   & 0  & 0\\  \hline
                    2 &          62              & petallength   & 6  & 9.68\\ \hline
@@ -169,11 +172,11 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 } %fim scalebox
 } % fim subfloat
 \end{table}
+\FloatBarrier
 
-
-\begin{table}[]
+\begin{table}[H]
 \centering
-\caption{Rotulação de Dados utilizando a base de dados Glass.}
+\caption{Rotulação de Dados utilizando a base de dados Glass}
 \subfloat[Naive Bayes]{
 \label{tab:comparativo:glass:nb}
 \scalebox{0.8}{
@@ -182,7 +185,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
                   &                    & Ba  & 1 & 1,45\\
 \multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
  &  & Mg  & 2 & 50,00\\
@@ -225,7 +228,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
  &  & Ba  & 1 & 1,45\\
 \multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 17 & 24,64\\  \hline
  &  & Mg  & 1 & 25,00\\
@@ -266,7 +269,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
  &  & Ba  & 1 & 1,45\\
 \multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
  &  & Mg  & 2 & 50,00\\
@@ -304,7 +307,7 @@ Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%)\\
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \hline
-Cluster             & Num\_Elem              & Atributo     & Erro & Erro (\%) \\ \hline
+Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
  &  & Ba & 0 & 0\\
  &  & K & 0 & 0\\
  &  & Si & 2 & 2,71\\
@@ -339,7 +342,7 @@ Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como 
 
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \centering
 \caption{Informações retiradas da documentação do MATLAB v.2016a - Supervised Learning Workflow and Algorithms}
 \label{tab:matlab}

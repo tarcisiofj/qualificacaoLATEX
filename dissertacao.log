@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  7 FEB 2019 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017 on Slackware (SlackBuilds.org)) (preloaded format=pdflatex 2017.12.8)  7 FEB 2019 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1207,6 +1207,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count267
+\float@exts=\toks35
+\float@box=\box46
+\@float@everytoks=\toks36
+\@floatcapt=\box47
+)
 (/usr/share/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2016/05/21 v1.39 Bibliographical back referencing
 )
@@ -1216,12 +1224,12 @@ Package: abntex2cite 2016/02/26 v-1.9.6 abnTeX2
 (/usr/share/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip292
 \ABCIauxlen=\skip293
-\c@ABCIaux=\count267
-\c@ABCImax=\count268
+\c@ABCIaux=\count268
+\c@ABCImax=\count269
 \biblabelsep=\skip294
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
-\ABCItoken=\toks35
+\ABCItoken=\toks37
 )
 \@input{extras/conf_citacoes.aux}
 \openout2 = `extras/conf_citacoes.aux'.
@@ -1259,27 +1267,27 @@ LaTeX Warning: Label `tab:rot:iris:cart' multiply defined.
 ) (./capitulos/conclusao.aux) (./postextual/apendices.aux))
 \openout1 = `dissertacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 98.
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 96.
+\AtBeginShipoutBox=\box48
+Package hyperref Info: Link coloring ON on input line 98.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1287,32 +1295,32 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count269
+\c@section@level=\count270
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 96.
-LaTeX Info: Redefining \ref on input line 96.
-LaTeX Info: Redefining \pageref on input line 96.
-LaTeX Info: Redefining \nameref on input line 96.
-\myptabbox=\box47
+LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
+\myptabbox=\box49
 \myptabboxwidth=\skip295
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 96.
+(lastpage)             ! on input line 98.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
+\scratchcounter=\count271
 \scratchdimen=\dimen185
-\scratchbox=\box48
-\nofMPsegments=\count271
-\nofMParguments=\count272
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count273
+\scratchbox=\box50
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count274
 \MPscratchDim=\dimen186
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
-\everyMPtoPDFconversion=\toks37
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1332,13 +1340,14 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 
 (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 96.
+LaTeX Info: Redefining \microtypecontext on input line 98.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1384,37 +1393,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 2
 
 ])
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 111.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 113.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 111.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 113.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 111
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 113
 .
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 111
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 113
 .
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 111.
+(Font)              <12> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 111.
+(Font)              <8> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 111.
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+(Font)              <6> on input line 113.
+LaTeX Font Info:    Try loading font information for U+msa on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1422,7 +1431,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1430,12 +1439,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 111.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 111.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -1443,7 +1452,7 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 
+l.113 
        [1
 
 
@@ -1491,7 +1500,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 \include{pretextual/catalografica}
+l.115 \include{pretextual/catalografica}
                                          [2
 
 ]
@@ -1593,8 +1602,8 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 64.
 ) [16]
-\c@teorema=\count276
-\c@exemplo=\count277
+\c@teorema=\count277
+\c@exemplo=\count278
 \openout2 = `capitulos/introducao.aux'.
 
  (./capitulos/introducao.tex
@@ -1613,7 +1622,7 @@ l.29
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 \include{capitulos/introducao}
+l.180 \include{capitulos/introducao}
                                      [2]
 \openout2 = `capitulos/referencialTeorico.aux'.
 
@@ -2210,68 +2219,73 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [67
 
 ]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 22.
-
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 41.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 100.
+Overfull \hbox (11.43423pt too wide) in paragraph at lines 41--58
+ [][][][] 
+ []
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 174.
+Underfull \vbox (badness 5578) has occurred while \output is active []
+
+ [68
+
+]
+Overfull \hbox (3.11264pt too wide) in paragraph at lines 222--263
+ [][][][] 
+ []
 
 
-LaTeX Warning: Float too large for page by 17.8219pt on input line 330.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[68
+ [69]
+Overfull \vbox (17.8219pt too high) has occurred while \output is active []
 
-] [69] [70]
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
  [][] [][][]\T1/lmr/m/n/10 (+20) https://la.mathworks.com/help/stats/supervised
 -learning-machine-learning-workflow-and-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\T1/lmr/m/n/12 (+20) Discriminant
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \T1/lmr/m/n/12 (+20) analy-sis ^^V
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 357--357
+Underfull \hbox (badness 7631) in paragraph at lines 360--360
 []|\T1/lmr/m/n/12 (+20) Medium for li-near. All
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 357--357
+Underfull \hbox (badness 3826) in paragraph at lines 360--360
 []|\T1/lmr/m/n/12 (+20) Easy for li-near SVM.
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 357--357
+Underfull \hbox (badness 6927) in paragraph at lines 360--360
 []|\T1/lmr/m/n/12 (+20) Small for sim-ple dis-tri-
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 357--357
+Underfull \hbox (badness 1132) in paragraph at lines 360--360
 \T1/lmr/m/n/12 (+20) bu-ti-ons. Me-dium for ker-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 357--357
+Underfull \hbox (badness 1297) in paragraph at lines 360--360
 \T1/lmr/m/n/12 (+20) nel dis-tri-bu-ti-ons or high-
  []
 
 
-Overfull \hbox (10.01018pt too wide) in paragraph at lines 357--358
+Overfull \hbox (10.01018pt too wide) in paragraph at lines 360--361
  [][] 
  []
 
@@ -2288,59 +2302,67 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `dissertacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
 (./dissertacao.aux (./pretextual/capa.aux) (./pretextual/catalografica.aux)
 (./pretextual/assinaturas.aux) (./pretextual/resumos.aux)
 (./capitulos/introducao.aux) (./capitulos/referencialTeorico.aux)
 (./capitulos/ferramentas.aux) (./capitulos/resultados.aux)
 (./capitulos/conclusao.aux) (./postextual/apendices.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
-Package rerunfilecheck Info: File `dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: CCD7BDF86FAF638DEA6DFD3003A2DE74;4812.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 
+
+Package rerunfilecheck Warning: File `dissertacao.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `dissertacao.brf':
+(rerunfilecheck)             Before: 1F071646D926F2D83DFA612FEEE997CB;4861
+(rerunfilecheck)             After:  CCD7BDF86FAF638DEA6DFD3003A2DE74;4812.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
- 18212 strings out of 492985
- 273580 string characters out of 6138585
- 639426 words of memory out of 5000000
- 20849 multiletter control sequences out of 15000+600000
+ 18264 strings out of 492985
+ 274247 string characters out of 6138585
+ 624228 words of memory out of 5000000
+ 20896 multiletter control sequences out of 15000+600000
  125282 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,16n,57p,1899b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
-nts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.
-enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf-dist/fonts/type1/public/
-lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf-dist/fonts/type
-1/public/lm/lmbxi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb
-></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist
-/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
-mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/
-public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></
-usr/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/lm/lmss12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lms
-s17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/t
-exmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1
-/public/lm/lmsso17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/f
-onts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb></us
-r/share/texmf-dist/fonts/type1/public/wasy2-ps/wasyb10.pfb>
-Output written on dissertacao.pdf (89 pages, 2203511 bytes).
+ 47i,16n,57p,1899b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{page.72} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/font
+s/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
+c}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dis
+t/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf-dist/fonts/type1/public/lm
+/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share
+/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf-dist/fonts/type1/
+public/lm/lmbxi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/f
+onts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmm
+i8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
+-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public
+/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></us
+r/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-dist/font
+s/type1/public/lm/lmss12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss1
+7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/lm/lmsso17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
+usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/fon
+ts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb></usr/
+share/texmf-dist/fonts/type1/public/wasy2-ps/wasyb10.pfb>
+Output written on dissertacao.pdf (89 pages, 2203456 bytes).
 PDF statistics:
- 1571 PDF objects out of 1728 (max. 8388607)
- 1375 compressed objects within 14 object streams
- 283 named destinations out of 1000 (max. 500000)
+ 1573 PDF objects out of 1728 (max. 8388607)
+ 1377 compressed objects within 14 object streams
+ 284 named destinations out of 1000 (max. 500000)
  36962 words of extra memory for PDF output out of 42996 (max. 10000000)
 
