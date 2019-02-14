@@ -30,7 +30,7 @@ Utilizando a ideia acima, por exemplo uma vez inserida uma foto no banco de dado
 
 %A partir desta síntese, tem-se uma observação. A classificação de dados no contexto de aprendizado de máquina, são compostos por dois pilares. Um, seriam os \textbf{dados} a serem classificados, e outro, o \textbf{algoritmo} que irá atuar nessa base de dados. Existem vários algoritmos como exemplo: redes neurais, árvores de decisão, Suport Vector Machine – SVM, etc. Qualquer um destes algoritmos são utilizados para encontrar um classificador. E a escolha apropriada se dará através de métricas que avaliarão o desempenho de cada um, e a melhor métrica, será o algoritmo apropriado para aquele problema de classificação de dados. 
 
-Segundo \cite{Mohri2012} o aprendizado de máquina possui abordagens diferentes. São elas: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semisupervisionado, aprendizado por reforço. Todavia, nesta pesquisa serão comentadas somente as abordagens de referências específicas utilizadas neste trabalho. 
+Segundo \citeonline{Mohri2012} o aprendizado de máquina possui abordagens diferentes. São elas: aprendizado supervisionado, aprendizado não-supervisionado, aprendizado semisupervisionado, aprendizado por reforço. Todavia, nesta pesquisa serão comentadas somente as abordagens de referências específicas utilizadas neste trabalho. 
 
 \subsection{Aprendizado Supervisionado}\label{cap:refTeor:ssec:aprendSup}
 
@@ -344,7 +344,7 @@ Já com ${K=3}$, a contagem de ocorrências em cada classe totaliza CÍRCULO=1 e
 
 Ao escolher um valor par de ${K}$, poderá haver um empate no número de ocorrências das classes. Essa situação fica clara no exemplo acima, tabela \ref{tab:exemploKNN}, quando ${K=2}$  (CÍRCULO=1 e QUADRADO=1) e ${K=4}$  (CÍRCULO=2 e QUADRADO=2); para não acontecer um valor de empate, é necessário escolher sempre um valor ${K}$ ímpar e este parâmetro é definido ao executar o algoritmo. 
 
-Diferente do estudo de  \citeonline{Lopes2016} que em determinada fase de seu trabalho testou um algoritmo de paradigma conexionista para fazer rotulação, esta pesquisa aplicou algoritmos com paradigmas diferentes: bayesiano, simbolista e analogista  \cite{pedro2017}, comprovando que também é possível realizar rotulação de dados.
+Diferente do estudo de  \citeonline{Lopes2016} que em determinada fase de seu trabalho testou um algoritmo de paradigma conexionista para fazer rotulação em grupos de dados, esta pesquisa aplicou mais algoritmos com paradigmas diferentes \cite{pedro2017}: bayesiano, simbolista e analogista, comprovando que também é possível realizar rotulação de dados com esses tipos.
 
 % Os três algoritmos de aprendizado supervisionados acima mencionados foram aplicados nas  bases de dados para fazer rotulação. \citeonline{Lopes2016}, testou somente um algoritmo de paradigma conexionista, nesta pesquisa outros algoritmos com paradigmas diferentes foram testados: bayesiano, simbolista e analogista (baseado em instâncias), conforme autor \citeonline{pedro2017} cita em sua obra. 
 
@@ -382,9 +382,9 @@ O que é apresentado na figura \ref{fig:planoCartesianoAprendNSup} são situaç�
 
 O método de discretização faz a conversão de valores contínuos em valores discretos. A partir de um atributo com valores contínuos, a discretização cria um ponto inicial e final definindo um intervalo e designando uma faixa para cada intervalo. Assim, ao invés de valores contínuos, teremos valores discretos representando as faixas de valores. 
 
-Segundo alguns autores, a discretização melhora a precisão e deixa um modelo de classificador mais rápido em seu conjunto de treinamento \cite{Catlett2006b,Hwang2002}. De acordo com \cite{Kotsiantis2006, Dougherty1995}, os métodos de discretização mais comumente utilizados, no âmbito dos métodos não-supervisionados, são os de Discretização por Larguras Iguais (do inglês: Equal Width Discretization - EWD) e Discretização por Frequências Iguais (do inglês: Equal Frequency Discretization - EFD). Em quanto de um lado a discretização ajuda no treinamento do modelo, por outro, ambos os métodos sofrem com perda de informação, pois o número de faixas designado não é determinado levando em consideração as propriedades dos dados de treinamento, e dependendo do número de faixas há uma menor ou maior perda. 
+Segundo alguns autores, a discretização melhora a precisão e deixa um modelo de classificador mais rápido em seu conjunto de treinamento \cite{Catlett2006b,Hwang2002}. De acordo com \citeonline{Kotsiantis2006, Dougherty1995}, os métodos de discretização mais comumente utilizados, no âmbito dos métodos não-supervisionados, são os de Discretização por Larguras Iguais (do inglês: Equal Width Discretization - EWD) e Discretização por Frequências Iguais (do inglês: Equal Frequency Discretization - EFD). Em quanto de um lado a discretização ajuda no treinamento do modelo, por outro, ambos os métodos sofrem com perda de informação, pois o número de faixas designado não é determinado levando em consideração as propriedades dos dados de treinamento, e dependendo do número de faixas há uma menor ou maior perda. 
 
-Mesmo com uma consequente perda, a discretização tem um papel importante na rotulação e dependendo dos tipos de dados, método e das faixas, os rótulos sofrerão alterações, \textit{e.g.}, pode haver registros que estejam representados em uma determinada faixa, ao alterar o método de discretização também altera o corte da faixa, fazendo esse registro mudar de faixa, consequentemente o rótulo também muda, gerando uma nova visão ao analista do \textit{cluster}. 
+Mesmo com uma consequente perda de informação, a discretização tem um papel importante na rotulação e dependendo dos tipos de dados, método e das faixas de valores, os rótulos sofrerão alterações, \textit{e.g.}, pode haver registros que estejam representados em uma determinada faixa e, ao alterar o método de discretização também altere o tamanho (limites) da faixa, fazendo esse registro mudar de faixa, consequentemente alterando o rótulo, e gerando uma nova visão ao analista do \textit{cluster}. 
 
 
 %Aqui nesse trabalho é utilizado a técnica de discretização antes da execução dos algoritmos e as faixas selecionadas são usadas para identificar o rótulo. Após o conhecimento do rótulo o valor da faixa é trocado pelo início e fim do intervalo.
@@ -395,6 +395,7 @@ Mesmo com uma consequente perda, a discretização tem um papel importante na ro
 
 O método de Discretização por Larguras Iguais (Equal Weight Discretization - EWD) faz a discretização de um intervalo, entre valores contínuos, dividindo através de um ponto de corte as faixas de tamanhos iguais \cite{Baron2016,Yang2002}. Logo, se existir um intervalo com valores contínuos [a,b] e deseja particionar em ${R}$ faixas de tamanhos iguais, serão necessários ${R-1}$ pontos de corte. Na figura \ref{fig:pontocorte} exibe exatamente o que foi dito, caso tenha um ${R=2}$ simulando duas faixas em um intervalo ${[a,b]}$.
 
+Para exemplificar, a figura \ref{fig:pontocorte} exibe uma faixa com início em ``[a'', e final ``b]'', e pretende obter a divisão do intervalo ${[a,b]}$ em 2 (duas) faixas iguais (${R=2}$), então, utilizando a regra ( Número\_De\_Faixas - 1 =  2-1=1), obtendo sempre o número de faixas que deseja particionar, menos 1 (um).
 
 \begin{figure}[h]
         \centering
@@ -402,7 +403,7 @@ O método de Discretização por Larguras Iguais (Equal Weight Discretization - 
         \caption{Ponto de Corte($C_1$) igual ao número de faixas ($R$) menos um} \label{fig:pontocorte}
 \end{figure}
 
-Para exemplificar, a figura \ref{fig:pontocorte} exibe uma faixa com início em ``[a'', e final ``b]'', e pretende obter a divisão do intervalo ${[a,b]}$ em 2 (duas) faixas iguais (${R=2}$), então, utilizando a regra ( Número\_De\_Faixas - 1 =  2-1=1), obtendo sempre o número de faixas que deseja particionar, menos 1 (um).
+
 
 Para haver o ponto de corte, terá que ser feita primeiro a ordenação dos dados e logo após definir a largura de cada faixa ${r_1,...,r_R}$. O cálculo realizado na equação \ref{eq:largurafaixa}, para encontrar ${w}$, é a diferença entre os limites superior e inferior do intervalo, dividido pela quantidade de faixas (${R}$).
 
@@ -747,8 +748,8 @@ O trabalho \cite{Costa2016} utiliza classificação não-supervisionada, mas pos
 O trabalho proposto por \citeonline{Lopes2016} faz um estudo abordando o tema de rotulação de dados conforme definição  \ref{teo:lopes:problema}.
 % 
 %\newtheorem{teorema}{Definição}
-    \begin{teorema}
-Dado um conjunto de \textit{clusters} ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de modo que cada cluster contém um conjunto de elementos ${c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por ${ \vec{e}^{c_i}=(a_1,..,a_m)  }$ e ainda que  com ${ c_i \cap c_{i'}=\emptyset }$ com ${ 1 \leqslant i, i \leqslant K  }$ e ${ i \neq i' }$; o objetivo consiste em apresentar um conjunto de rótulos ${ R=\{ r_{c1},...,r_{ck} \} }$, no qual cada rótulo específico é dado por um conjunto de pares de valores, atributo e seu respectivo intervalo, ${ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \} }$ capaz de melhor expressar o cluster ${c_i}$ associado.
+\begin{teorema}
+Dado um conjunto de \textit{clusters} $C=\{c_1,...,c_k | K \geqslant 1\} $, de modo que cada cluster contém um conjunto de elementos $c_i=\{\vec{e}_1,..,\vec{e}_{n^{(c_i)}}|n^{(c_i)} \geqslant 1 \}$ que podem ser representados por um vetor de atributos definidos em ${\mathbb{R}^m }$ e expresso por $ \vec{e}^{c_i}=(a_1,..,a_m) $ e ainda que  com $ c_i \cap c_{i'}=\emptyset $ com $ 1 \leqslant i, i \leqslant K $ e $ i \neq i'$; o objetivo consiste em apresentar um conjunto de rótulos $ R=\{ r_{c1},...,r_{ck} \} $, no qual cada rótulo específico é dado por um conjunto de pares de valores, atributo e seu respectivo intervalo, $ r_{ci}=\{ (a_1,[p_1,q_1]),...,(a_{m^{(c_i)}}, ]p_{m^{(c_i)}},q_{m^{(c_i)}}]) \}$ capaz de melhor expressar o cluster ${c_i}$ associado.
         %\footnotemark 
         %\footnotetext{Definição retirada de \cite{LOPES2014}}
         \begin{itemize}[noitemsep]
@@ -758,7 +759,7 @@ Dado um conjunto de \textit{clusters} ${C=\{c_1,...,c_k | K \geqslant 1\} }$, de
             \item ${\vec{e}_{j^{(c_i)}}}$ se refere ao j-ésimo elemento pertencente ao \textit{cluster} ${c_i}$;
             \item ${m}$ é a dimensão do problema;
             \item ${r_{c_i}}$ é o rótulo referente ao \textit{cluster} ${c_i}$;
-            \item ${]p_{m^{(c_i)}},q_{m^{(c_i)}}]}$ representa o intervalo de valores do atributo ${a_{m^{(c_i)}} }$, onde ${ p_{m^{(c_i)}} }$  é o limite inferior e ${ q_{m^{(c_i)}} }$ é o limite superior;
+            \item ${]p_{m^{(c_i)}},q_{m^{(c_i)}}]}$ representa o intervalo de valores do atributo $a_{m^{(c_i)}} $, onde $ p_{m^{(c_i)}} $  é o limite inferior e $ q_{m^{(c_i)}} $ é o limite superior;
         \end{itemize}
     \label{teo:lopes:problema}
     \end{teorema}

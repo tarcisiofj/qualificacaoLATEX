@@ -17,322 +17,345 @@
 
 Através da pesquisa de \citeonline{Lopes2016} que apresentou um modelo de rotulação de dados, ao qual através de um algoritmo não-supervisionado gera grupos de uma determinada base de dados, e logo após, é aplicado um outro algoritmo com aprendizagem supervisionada nesses grupos para detectar um rótulo para esses grupos. Mediante isso foram realizados testes com as mesmas bases de dados com finalidade de comparar os resultados, mas os testes não foram satisfatórios, embora algumas bases sejam iguais houve diferença entre os clusters criados. Foram realizados o uso das mesmas técnicas do autor citado acima, todavia não foi o bastante para que os grupos fossem os mesmos, ou seja, grupos definidos não são iguais e por consequência os teste ficaram incompatíveis.
 
-Segue nas tabelas abaixo o comparativo do trabalho do \cite{Lopes2016} com os testes realizados nos clusters recriados das bases: Seeds, Iris e Glass, com o trabalho 
+Segue nas tabelas abaixo o comparativo do trabalho do \cite{Lopes2016} com os testes realizados nos clusters recriados das bases: Seeds, Iris e Glass. As tabelas são compostas por seis colunas informando: \textbf{Cluster}, o número de elementos de cada cluster (\textbf{Num\_Elem}), \textbf{Rótulo} (\textbf{\textbf{Atributo} e \textbf{Faixa}}), número de erros (\textbf{Num\_Erro}) e porcentagem de erros (\textbf{Erro}).
+
 
 \begin{table}[H]
-\centering
-\caption{Rotulação de Dados utilizando a base de dados Seeds.}
-\subfloat[Naive Bayes]{
-\label{tab:comparativo:seeds:nb}
-\scalebox{0.8}{
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
-1                   &    72                  &  asymetry    & 25   & 34.7\\ \hline
-                    &                        & Lkernel        & 1  & 1.64\\  
-\multirow{-2}{*}{2} &   \multirow{-2}{*}{61} & lkgroove        & 5  & 8.19\\ \hline 
-3                   &    77                  & perimetro       & 10  & 12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 41   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
-\subfloat[CART]{
-\label{tab:comparativo:seeds:cart}
-\scalebox{0.8}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
-1                   &    72                  &  perimetro    & 14  & 19.44 \\ \hline
-2                   &   61                   & perimetro     & 0  & 0\\ \hline 
-3                   &    77                  & perimetro      & 10  & 12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 24  & \\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
+ \centering
+ 
+ \caption{Rotulação de Dados utilizando a base de dados Seeds.}
+\label{tab:comparativo:seeds}
 
+ \subfloat[Naive Bayes]{
+ \label{tab:comparativo:seeds:nb}
+ \scalebox{0.6}{
+ \small\addtolength{\tabcolsep}{-2pt} 
+  \begin{tabular}{cclccc}
+   \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF} 
+   Cluster             & Num\_Elem              & Atributo  & Faixa                    & Num\_Erro & Erro (\%) \\ \hline
+   1                   &    72                  &  asymetry & ] 0.7651 $\sim$  2.936 ] & 25        & 34.7\\ \hline
+                       &                        & Lkernel   & [5.826 $\sim$ 6.675]     & 1         & 1.64\\  
+   \multirow{-2}{*}{2} &   \multirow{-2}{*}{61} & lkgroove  & [5.791 $\sim$ 6.55]      & 5         & 8.19\\ \hline 
+   3                   &    77                  & perimetro & [12.41 $\sim$ 13.73]     & 10        & 12.98\\ \hline
+   \rowcolor[HTML]{EFEFEF}
+   \multicolumn{4}{c}{Total}                                                           & 41        &\\ \hline
+  \end{tabular}
+ } %fim scalebox
+ } % fim subfloat
+ \subfloat[CART]{
+ \label{tab:comparativo:seeds:cart}
+ \scalebox{0.6}{%
+ \small\addtolength{\tabcolsep}{-2pt} 
+  \begin{tabular}{cclccc}
+   \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF} 
+   Cluster             & Num\_Elem              & Atributo &  Faixa  & Num\_Erro & Erro (\%)\\ \hline
+   1                   &    72                  &  perimetro & ]13.73 $\sim$ 15.18]   & 14  & 19.44 \\ \hline
+   2                   &   61                   & perimetro  & ]15.18 $\sim$ 17.25]  & 0  & 0\\ \hline 
+   3                   &    77                  & perimetro  & [12.41 $\sim$ 13.73]   & 10  & 12.98\\ \hline
+  \multicolumn{4}{c}{Total}                             & 24  & \\ \hline
+  \end{tabular}
+ } %fim scalebox
+ } % fim subfloat
+
+ 
 \subfloat[KNN]{
 \label{tab:comparativo:seeds:knn}
-\scalebox{0.8}{%
+\scalebox{0.6}{ 
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
-1                   &    72                  &  perimetro    & 14   & 19.44\\ \hline
-2                   &   61                   & lkgroove     & 5  & 8.19\\ \hline 
-3                   &    77                  & perimetro      & 10 &  12.98\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 29  & \\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF} 
+Cluster             & Num\_Elem              & Atributo   & Faixa                & Num\_Erro & Erro (\%)\\ \hline
+1                   &    72                  &  perimetro & ]13.73 $\sim$ 15.18] & 14       & 19.44\\ \hline
+2                   &   61                   & lkgroove   & ]5.791 $\sim$ 6.55]  & 5        & 8.19\\ \hline 
+3                   &    77                  & perimetro  & [12.41 $\sim$ 13.73] & 10       &  12.98\\ \hline
+\multicolumn{4}{c}{Total}                                                        & 29       & \\ \hline
+\end{tabular}
+} %fim scalebox
+} % fim subfloat
+\subfloat[Resultado de \citeonline{Lopes2016}]{
+\label{tab:comparativo:seeds:lopes}
+\scalebox{0.6}{%
+ \small\addtolength{\tabcolsep}{-2pt} 
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF} 
+Cluster             & Num\_Elem              & Atributo  & Faixa            & Num\_Erro & Erro (\%) \\ \hline
+                   &                        &  area      & ]12.78 $\sim$ 16.14]  & 8   &  11.95 \\
+\multirow{-2}{*}{1} &   \multirow{-2}{*}{67} & perimetro &   ]13.73 $\sim$ 15.18]& 9  & 13.64\\  \hline
+                    &                        & area      & [10.59 $\sim$ 12.78]  & 12  & 14.64\\
+\multirow{-2}{*}{2} &   \multirow{-2}{*}{82} & perimetro &  [12.41 $\sim$ 13.73] & 10  & 12.2\\ \hline 
+                    &                      & perimetro   & ]15.18 $\sim$ 17.25]  & 0  & 0\\ 
+                    &                        & wkernel  & ]3.465 $\sim$ 4.033]   & 3  & 4.92\\  
+                    &                      & lkernel    & ]5.826 $\sim$ 6.675]   & 1  & 1.64\\ 
+\multirow{-4}{*}{3} &   \multirow{-4}{*}{61} & area      & ]16.14 $\sim$ 21.18]  & 0  & 0\\  \hline
+\multicolumn{4}{c}{Total}                             & 43   &\\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 
-\subfloat[Resultado de \citeonline{Lopes2016}]{
-\label{tab:comparativo:seeds:lopes}
-\scalebox{1}{%
- \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
-                   &                       &  area    & 8   &  11.95 \\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{67} & perimetro        & 9  & 13.64\\  \hline
-                    &                        & area        & 12  & 14.64\\
-\multirow{-2}{*}{2} &   \multirow{-2}{*}{82} & perimetro        & 10  & 12.2\\ \hline 
-                    &                      & perimetro       & 0  & 0\\ 
-                    &                        & wkernel        & 3  & 4.92\\  
-                    &                      & lkernel       & 1  & 1.64\\ 
-\multirow{-4}{*}{3} &   \multirow{-4}{*}{61} & area        & 0  & 0\\  \hline
-\multicolumn{3}{|c|}{Total}                             & 43   &\\ \hline
-\end{tabular}
-} %fim scalebox
-} % fim subfloat
 \end{table}
 
 
-
+Percebe-se na tabela \ref{tab:comparativo:seeds:lopes} a coluna \textbf{Num\_Elem} não tem o mesmo número de elementos em relação as outras tabelas \ref{tab:comparativo:seeds:nb}, \ref{tab:comparativo:seeds:cart} \ref{tab:comparativo:seeds:knn}, por conta disso os clusters são diferentes, possuindo também rótulos diferentes, e essa situação se repete nas outra bases.
 \begin{table}[H]
 \centering
 \caption{Rotulação de Dados utilizando a base de dados Iris.}
 \subfloat[Naive Bayes]{
 \label{tab:comparativo:iris:nb}
-\scalebox{1}{
+\scalebox{0.9}{
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
-                    &                        & sepallength        & 10  & 26.3\\  
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{38} & petalwidth        & 4  & 10.5\\ \hline 
-2                   &    62                  & petalwidth       & 19  & 30.6\\ \hline
-3                   &    50                  & petalwidth       & 0  & 0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 33   &\\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF} 
+Cluster             & Num\_Elem              & Atributo    & Faixa    & Num\_Erro & Erro (\%) \\ \hline
+                    &                        & sepallength & ]6.400000 $\sim$ 7.900000]          &  10  & 26.3\\  
+\multirow{-2}{*}{1} &   \multirow{-2}{*}{38} & petalwidth  & ]1.700000 $\sim$ 2.500000]            & 4  & 10.5\\ \hline 
+2                   &    62                  & petalwidth  & ]1.000000 $\sim$ 1.700000]           & 19  & 30.6\\ \hline
+3                   &    50                  & petalwidth  & [0.100000 $\sim$ 1.000000]           & 0  & 0\\ \hline
+\multicolumn{4}{c}{Total}                             & 33   &\\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 
 \subfloat[CART]{
 \label{tab:comparativo:iris:cart}
-\scalebox{1}{%
+\scalebox{0.9}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
-1                   &    38                  &  petalwidth    & 4  & 10.5 \\ \hline
-2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
-3                   &    50                  & petalwidth      & 0  & 0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 23  & \\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo   & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+1                   &    38                  &  petalwidth & ]1.700000 $\sim$ 2.500000]   & 4  & 10.5 \\ \hline
+2                   &   62                   & petalwidth  & ]1.000000 $\sim$ 1.700000]   & 19  & 30.6\\ \hline 
+3                   &    50                  & petalwidth  & [0.100000 $\sim$ 1.000000]     & 0  & 0\\ \hline
+\multicolumn{4}{c}{Total}                             & 23  & \\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 
 \subfloat[KNN]{
 \label{tab:comparativo:iris:knn}
-\scalebox{1}{%
+\scalebox{0.9}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
-1                   &    38                  &  sepallength   & 10   & 26.3\\ \hline
-2                   &   62                   & petalwidth     & 19  & 30.6\\ \hline 
-3                   &    50                  & petalwidth      & 0 &  0\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 29  & \\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo   & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+1                   &    38                  &  sepallength & ]6.400000 $\sim$ 7.900000] & 10   & 26.3\\ \hline
+2                   &   62                   & petalwidth   & ]1.000000 $\sim$ 1.700000]   & 19  & 30.6\\ \hline 
+3                   &    50                  & petalwidth   & [0.100000 $\sim$ 1.000000]  & 0 &  0\\ \hline
+\multicolumn{4}{c}{Total}                             & 29  & \\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 
 \subfloat[Resultado de \citeonline{Lopes2016}]{
 \label{tab:comparativo:iris:lopes}
-\scalebox{1}{%
+\scalebox{0.9}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd)& Erro (\%) \\ \hline
-                   &                       &  petalwidth    & 0   & 0 \\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{50} & petallength   & 0  & 0\\  \hline
-                   2 &          62              & petallength   & 6  & 9.68\\ \hline
-                     &                        & petallength        & 3  & 7.9\\
-\multirow{-2}{*}{3} &   \multirow{-2}{*}{38} & petalwidth        & 2  & 5.27 \\ \hline 
-\multicolumn{3}{|c|}{Total}                             & 11   &\\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo      & Faixa    & Num\_Erro& Erro (\%) \\ \hline
+                   &                       &  petalwidth     & [0.1 $\sim$ 1]     & 0   & 0 \\
+\multirow{-2}{*}{1} &   \multirow{-2}{*}{50} & petallength   & [1 $\sim$ 3.7     & 0  & 0\\  \hline
+                   2 &          62              & petallength& ]3.7 $\sim$ 5.1]   & 6  & 9.68\\ \hline
+                     &                        & petallength  &  ]5.1 $\sim$ 6.9]  & 3  & 7.9\\
+\multirow{-2}{*}{3} &   \multirow{-2}{*}{38} & petalwidth     &  ]1.7 $\sim$ 2.5] & 2  & 5.27 \\ \hline 
+\multicolumn{4}{c}{Total}                             & 11   &\\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 \end{table}
-\FloatBarrier
+
 
 \begin{table}[H]
 \centering
 \caption{Rotulação de Dados utilizando a base de dados Glass}
 \subfloat[Naive Bayes]{
 \label{tab:comparativo:glass:nb}
-\scalebox{0.8}{
+\scalebox{0.6}{
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
-                  &                    & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
- &  & Mg  & 2 & 50,00\\
- &  & K   & 2 & 50,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-3}{*}{2} & \multirow{-2}{*}{4}& Fe  & 0 & 0,00\\ \hline
- &  & RI  & 11 & 35,48\\
- &  & Mg  & 2 & 6,45\\
- &  & Al  & 14 & 45,16\\
- &  & Si  & 6 & 19,35\\
- &  & K   & 1 & 3,23\\
- &  & Ba  & 12 & 38,71\\
-\multirow{-7}{*}{3} & \multirow{-7}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 6 & 16,67\\
- &  & Na  & 11 & 30,56\\
- &  & Mg  & 12 & 33,33\\
- &  & Al  & 17 & 47,22\\
- &  & Si  & 6 & 16,67\\
- &  & K   & 0 & 0,00\\
- &  & Ca  & 1 & 2,78\\
- &  & Ba  & 1 & 2,78\\
-\multirow{-9}{*}{4} & \multirow{-9}{*}{36}& Fe  & 8 & 22,22\\ \hline
- &  & Mg  & 2 & 12,50\\
- &  & Al  & 6 & 37,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe  & 4 & 25,00\\ \hline
- &  & Si  & 6 & 10,34\\
- &  & K   & 0 & 0,00\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-4}{*}{6} & \multirow{-4}{*}{58} &Fe& 20 & 34,48\\ \hline
-\multicolumn{3}{|c|}{Total}                             & 165  & \\ \hline
+\begin{tabular}{cclccc}
+  \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo  & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+ &  & Ba  & [0 $\sim$ 0,7875] & 1 & 1,45\\  
+\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & [0 $\sim$ 0,1275] & 11 & 15,94\\  \hline
+ &  & Mg  & [0.000000 $\sim$ 1.122500]  & 2 & 50,00\\  
+ &  & K   & ]4.657500 $\sim$ 6.210000]  & 2 & 50,00\\  
+ &  & Ba  & [0.000000 $\sim$ 0.787500]  & 2 & 50,00\\  
+\multirow{-4}{*}{2} & \multirow{-4}{*}{4}& Fe  & [0.000000 $\sim$ 0.127500]  & 0 & 0,00\\ \hline 
+ &  & RI  & [1.511150 $\sim$ 1.516845]  & 11 & 35,48\\  
+ &  & Mg  & [0.000000 $\sim$ 1.122500]  & 2 & 6,45\\  
+ &  & Al  & ]1.895000 $\sim$ 2.697500]  & 14 & 45,16\\  
+ &  & Si  & ]72.610000 $\sim$ 74.010000]  & 6 & 19,35\\  
+ &  & K   & [0.000000 $\sim$ 1.552500]  & 1 & 3,23\\  
+ &  & Ba  & [0.000000 $\sim$ 0.787500]  & 12 & 38,71\\  
+\multirow{-7}{*}{3} & \multirow{-7}{*}{31} & Fe  & [0.000000 $\sim$ 0.127500]  & 0 & 0,00\\  \hline
+ &  & RI  & [1.516845 $\sim$ 1.522540]  & 6 & 16,67\\  
+ &  & Na  & ]12.392500 $\sim$ 14.055000]  & 11 & 30,56\\  
+ &  & Mg  & ]3.367500 $\sim$ 4.490000]  & 12 & 33,33\\  
+ &  & Al  & [0.290000 $\sim$ 1.092500]  & 17 & 47,22\\  
+ &  & Si  & [71.210000 $\sim$ 72.610000]  & 6 & 16,67\\  
+ &  & K   & [0.000000 $\sim$ 1.552500]  & 0 & 0,00\\  
+ &  & Ca  & [8.120000 $\sim$ 10.810000]  & 1 & 2,78\\  
+ &  & Ba  & [0.000000 $\sim$ 0.787500]  & 1 & 2,78\\  
+\multirow{-9}{*}{4} & \multirow{-9}{*}{36}& Fe  & [0.000000 $\sim$ 0.127500]  & 8 & 22,22\\  \hline
+ &  & Mg  & [0.000000 $\sim$ 1.122500]  & 2 & 12,50\\  
+ &  & Al  & ]1.092500 $\sim$ 1.895000]  & 6 & 37,50\\  
+ &  & Ba  & [0.000000 $\sim$ 0.787500]  & 1 & 6,25\\  
+\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe & [0.000000 $\sim$ 0.127500]  & 4 & 25,00\\  \hline
+ &  & Si  & ]72.610000 $\sim$ 74.010000]  & 6 & 10,34\\  
+ &  & K   & [0.000000 $\sim$ 1.552500]  & 0 & 0,00\\  
+ &  & Ba  & [0.000000 $\sim$ 0.787500]  & 0 & 0,00\\  
+\multirow{-4}{*}{6} & \multirow{-4}{*}{58} &Fe  & [0.000000 $\sim$ 0.127500]  & 20 & 34,48\\  \hline
+\multicolumn{4}{c}{Total}                             & 165  & \\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 \subfloat[CART]{
 \label{tab:comparativo:glass:cart}
-\scalebox{0.8}{%
+\scalebox{0.6}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
- &  & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 17 & 24,64\\  \hline
- &  & Mg  & 1 & 25,00\\
- &  & K   & 0 & 0,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-3}{*}{2} & \multirow{-3}{*}{4} & Fe  & 0 & 0,00\\ \hline
- &  & Mg  & 0 & 0,00\\
- &  & K   & 3 & 9,68\\
-&  & Ba  & 22 & 70,97\\
-\multirow{-4}{*}{3} & \multirow{-4}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 7 & 19,44\\
- &  & Na  & 19 & 52,78\\
- &  & Mg  & 20 & 55,56\\
- &  & Al  & 16 & 44,44\\
- &  & Si  & 8 & 22,22\\
- &  & K   & 15 & 41,67\\
- &  & Ca  & 14 & 38,89\\
- &  & Ba  & 2 & 5,56\\
-\multirow{-9}{*}{4} & \multirow{-9}{*}{36} & Fe  & 10 & 27,78\\ \hline
- &  & Mg  & 0 & 0,00\\
- &  & Al  & 10 & 62,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe  & 5 & 31,25\\ \hline
- &  & K   & 12 & 20,69\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & 23 & 39,66\\ \hline
-
-\multicolumn{3}{|c|}{Total}                             & 208  & \\ \hline
+\begin{tabular}{cclccc}
+  \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo  & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 1 & 1.45\\
+\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & [0.000000 $\sim$ 0.090000]  & 17 & 24.64\\
+ &  & Mg  & [0.000000 $\sim$ 2.760000]  & 1 & 25.00\\
+ &  & K   & [0.650000 $\sim$ 6.210000]  & 0 & 0.00\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 2 & 50.00\\
+\multirow{-4}{*}{2} & \multirow{-4}{*}{4} & Fe & [0.000000 $\sim$ 0.090000]  & 0 & 0.00\\ \hline
+ &  & Mg  & [0.000000 $\sim$ 2.760000]  & 0 & 0.00\\
+ &  & K   & [0.000000 $\sim$ 0.160000]  & 3 & 9.68\\
+ &  & Ba  & [0.270000 $\sim$ 0.660000]  & 22 & 70.97\\
+\multirow{-4}{*}{3} & \multirow{-4}{*}{31} & Fe & [0.000000 $\sim$ 0.090000]  & 0 & 0.00\\ \hline
+ &  & RI  & [1.519180 $\sim$ 1.533930]  & 7 & 19.44\\
+ &  & Na  & ]13.380000 $\sim$ 13.980000]  & 19 & 52.78\\
+ &  & Mg  & ]3.660000 $\sim$ 4.490000]  & 20 & 55.56\\
+ &  & Al  & [0.290000 $\sim$ 1.110000]  & 16 & 44.44\\
+ &  & Si  & [69.810000 $\sim$ 72.120000]  & 8 & 22.22\\
+ &  & K   & [0.000000 $\sim$ 0.160000]  & 15 & 41.67\\
+ &  & Ca  & ]9.490000 $\sim$ 16.190000]  & 14 & 38.89\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 2 & 5.56\\
+\multirow{-9}{*}{4} & \multirow{-9}{*}{36} & Fe  & [0.000000 $\sim$ 0.090000]  & 10 & 27.78\\ \hline
+ &  & Mg  & [0.000000 $\sim$ 2.760000]  & 0 & 0.00\\
+ &  & Al  & ]1.430000 $\sim$ 1.830000]  & 10 & 62.50\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 1 & 6.25\\
+\multirow{-4}{*}{5} & \multirow{-4}{*}{16} & Fe & [0.000000 $\sim$ 0.090000]  & 5 & 31.25\\ \hline
+ &  & K   & [0.490000 $\sim$ 0.650000]  & 12 & 20.69\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 0 & 0.00\\
+\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & [0.000000 $\sim$ 0.090000]  & 23 & 39.66\\ \hline
+\multicolumn{4}{c}{Total}                             & 208  & \\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 
 \subfloat[KNN]{
 \label{tab:comparativo:glass:knn}
-\scalebox{0.8}{%
+\scalebox{0.6}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%)\\ \hline
- &  & Ba  & 1 & 1,45\\
-\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe  & 11 & 15,94\\ \hline
- &  & Mg  & 2 & 50,00\\
- &  & K   & 2 & 50,00\\
- &  & Ba  & 2 & 50,00\\
-\multirow{-4}{*}{2} & \multirow{-4}{*}{4} & Fe  & 0 & 0,00\\ \hline
- &  & Mg  & 2 & 6,45\\
- &  & Al  & 14 & 45,16\\
- &  & K   & 1 & 3,23\\
- &  & Ba  & 12 & 38,71\\
-\multirow{-5}{*}{3} & \multirow{-5}{*}{31} & Fe  & 0 & 0,00\\ \hline
- &  & RI  & 6 & 16,67\\
- &  & Na  & 11 & 30,56\\
- &  & Al  & 17 & 47,22\\
- &  & Si  & 6 & 16,67\\
- &  & K   & 0 & 0,00\\
- &  & Ca  & 1 & 2,78\\
- &  & Ba  & 1 & 2,78\\
-\multirow{-8}{*}{1} & \multirow{-8}{*}{36} & Fe  & 8 & 22,22\\ \hline
- &  & Mg  & 2 & 12,50\\
- &  & Ba  & 1 & 6,25\\
-\multirow{-3}{*}{5} & \multirow{-3}{*}{16} & Fe  & 4 & 25,00\\ \hline
- &  & K   & 0 & 0,00\\
- &  & Ba  & 0 & 0,00\\
-\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & 20 & 34,48\\ \hline
-\multicolumn{3}{|c|}{Total}                             &  124 & \\ \hline
+\begin{tabular}{cclccc}
+ \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo  & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 1 & 1.45\\
+\multirow{-2}{*}{1} & \multirow{-2}{*}{69} & Fe   & [0.000000 $\sim$ 0.090000]  & 17 & 24.64\\ \hline
+ & & Mg  & [0.000000 $\sim$ 2.760000]  & 1 & 25.00\\
+ &  & K   & ]0.650000 $\sim$ 6.210000]  & 0 & 0.00\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 2 & 50.00\\
+\multirow{-4}{*}{2} & \multirow{-4}{*}{4} & Fe   & [0.000000 $\sim$ 0.090000]  & 0 & 0.00\\ \hline
+ &  & Mg  & [0.000000 $\sim$ 2.760000]  & 0 & 0.00\\
+ &  & Al  & ]1.830000 $\sim$ 3.500000]  & 10 & 32.26\\
+ &  & K   & [0.000000 $\sim$ 0.160000]  & 3 & 9.68\\
+ &  & Ba  & ]0.270000 $\sim$ 0.660000]  & 22 & 70.97\\
+\multirow{-5}{*}{3} & \multirow{-5}{*}{31} & Fe  & [0.000000 $\sim$ 0.090000]  & 0 & 0.00\\ \hline
+ &  & RI  & [1.519180 $\sim$ 1.533930]  & 7 & 19.44\\
+ &  & Na  & ]13.380000 $\sim$ 13.980000]  & 19 & 52.78\\
+ &  & Al  & [0.290000 $\sim$ 1.110000]  & 16 & 44.44\\
+ &  & Si  & [69.810000 $\sim$ 72.120000]  & 8 & 22.22\\
+ &  & K   & [0.000000 $\sim$ 0.160000]  & 15 & 41.67\\
+ &  & Ca  & ]9.490000 $\sim$ 16.190000]  & 14 & 38.89\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 2 & 5.56\\
+\multirow{-8}{*}{4} & \multirow{-8}{*}{36} & Fe & [0.000000 $\sim$ 0.090000]  & 10 & 27.78\\ \hline
+ &  & Mg  & [0.000000 $\sim$ 2.760000]  & 0 & 0.00\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 1 & 6.25\\ 
+\multirow{-3}{*}{5} & \multirow{-3}{*}{16} & Fe  & [0.000000 $\sim$ 0.090000]  & 5 & 31.25\\ \hline
+ &  & K   & [0.490000 $\sim$ 0.650000]  & 12 & 20.69\\
+ &  & Ba  & [0.000000 $\sim$ 0.270000]  & 0 & 0.00\\
+\multirow{-3}{*}{6} & \multirow{-3}{*}{58} & Fe  & [0.000000 $\sim$ 0.090000]  & 23 & 39.66\\ \hline
+\multicolumn{4}{c}{Total}                             &  188 & \\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
 \subfloat[Resultado de \citeonline{Lopes2016}]{
 \label{tab:comparativo:glass:lopes}
-\scalebox{0.8}{%
+\scalebox{0.6}{%
  \small\addtolength{\tabcolsep}{-2pt} 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\hline
-Cluster             & Num\_Elem              & Atributo     & Erro (qtd) & Erro (\%) \\ \hline
- &  & Ba & 0 & 0\\
- &  & K & 0 & 0\\
- &  & Si & 2 & 2,71\\
-\multirow{-2}{*}{1} &   \multirow{-2}{*}{74}& Na & 3 & 4,06\\ \hline
-  &  & Fe & 0 & 0\\
- \multirow{-2}{*}{2} &   \multirow{-2}{*}{5} & Ca & 0 & 0\\ \hline
-  &  & K & 0 & 0\\
- \multirow{-2}{*}{3} &   \multirow{-2}{*}{19} & Ba & 1 & 5,27 \\ \hline
-  &   & K & 0 & 0\\
- &  &  Ba & 1 & 3,13\\
-\multirow{-3}{*}{4} &   \multirow{-3}{*}{32} & Ca & 1 & 3,13\\ \hline
- &  & Ba & 0 & 0\\
- &  & K & 0 & 0\\
- &  &  Na & 2 & 3,58\\
- &  & Al & 4 & 7,15\\
-\multirow{-5}{*}{5} &   \multirow{-5}{*}{56}  & Mg & 6 & 10,72\\ \hline
-  &  & Fe & 0 & 0\\
- \multirow{-2}{*}{6} &   \multirow{-2}{*}{28} & K & 1 & 3,58 \\ \hline
-\multicolumn{3}{|c|}{Total}                             & 21   &\\ \hline
+\begin{tabular}{cclccc}
+  \hline\hline
+   \rowcolor[HTML]{EFEFEF} 
+                   &                        & \multicolumn{2}{c}{Rótulos}          &           &  \\ \cline{3-4}
+   \rowcolor[HTML]{EFEFEF}
+Cluster             & Num\_Elem              & Atributo  & Faixa   & Num\_Erro & Erro (\%)\\ \hline
+  &    &  Ba  &  0 $\sim$  0.7875 & 0 &  0\\
+  &    &  K  &   0 $\sim$  1.5525 & 0 &  0\\
+  &    &  Si  &   72.61 $\sim$  74.01 & 2 &  2,71\\
+\multirow{-4}{*}{1}  &    \multirow{-4}{*}{74} &  Na  &   12.3925 $\sim$  14.055 & 3 &  4,06\\ \hline
+   &    &  Fe  &   0 $\sim$  0.1275 & 0 &  0\\
+ \multirow{-2}{*}{2}  &    \multirow{-2}{*}{5}  &  Ca  &   5.43 $\sim$  8.12 & 0 &  0\\ \hline
+   &    &  K  &   0 $\sim$  1.5525 & 0 &  0\\
+ \multirow{-2}{*}{3}  &    \multirow{-2}{*}{19}  &  Ba  &   0 $\sim$  0.7875 & 1 &  5,27 \\ \hline
+   &     &  K  &   0 $\sim$  1.5525 & 0 &  0\\
+  &    &   Ba  &   0 $\sim$  0.7875 & 1 &  3,13\\
+\multirow{-3}{*}{4}  &    \multirow{-3}{*}{32}  &  Ca  &   8.12 $\sim$  10.81 & 1 &  3,13\\ \hline
+  &    &  Ba  &   0 $\sim$  0.7875 & 0 &  0\\
+  &    &  K  &   0 $\sim$  1.5525 & 0 &  0\\
+  &    &   Na  &   12.3925 $\sim$  14.055 & 2 &  3,58\\
+  &    &  Al  &   1.0925 $\sim$  1.895 & 4 &  7,15\\
+\multirow{-5}{*}{5}  &    \multirow{-5}{*}{56}   &  Mg  &   3.3675 $\sim$  4.49 & 6 &  10,72\\ \hline
+   &    &  Fe  &   0 $\sim$  0.1275 & 0 &  0\\
+ \multirow{-2}{*}{6}  &    \multirow{-2}{*}{28}  &  K  &   0 $\sim$  1.5525 & 1 &  3,58 \\ \hline
+\multicolumn{4}{c}{Total}                             & 21   &\\ \hline
 \end{tabular}
 } %fim scalebox
 } % fim subfloat
-\end{table}
 
-%\lipsum[50] % Texto qualquer. REMOVER!!
+
+
+
+ \end{table}
+
+ 
+ 
+ %\lipsum[50] % Texto qualquer. REMOVER!!
 
 % ----------------------------------------------------------
 \chapter{Características da Implementação}
@@ -347,10 +370,11 @@ Utilizando como referência o  trabalho de  \cite{Lopes2016} foi utilizado como 
 \caption{Informações retiradas da documentação do MATLAB v.2016a - Supervised Learning Workflow and Algorithms}
 \label{tab:matlab}
 \scalebox{0.6}{
-\begin{tabular}{p{3cm}|p{4cm}|p{3cm}|p{5cm}|p{5cm}|p{4.5cm}}%p{65}|p{70}|p{100}|p{100}|p{100}|p{100}
+\begin{tabular}{p{3cm}p{4cm}p{3cm}p{5cm}p{5cm}p{4.5cm}}%p{65}p{70}|p{100}|p{100}|p{100}|p{100}
 \hline
 \rowcolor[HTML]{EFEFEF}
-Classificador & Suporta multi-classes & Suporta Preditor Categórico & Velocidade de Predição & Utilização de Memória & Interpretabilidade\\ \hline
+Classifier & Multiclass Support & Categorical Predictor Support & Prediction Speed & Memory Usage & Interpretability
+\\ \hline
 Decision trees — fitctree & Yes & Yes & Fast & Small & Easy\\ \hline
 Discriminant analysis — fitcdiscr & Yes & No & Fast & Small for linear, large for quadratic & Easy\\ \hline
 SVM — fitcsvm & No. Combine multiple binary SVM classifiers using fitcecoc. & Yes & Medium for linear. Slow for others. & Medium for linear. All others: medium for multiclass, large for binary. & Easy for linear SVM. Hard for all other kernel types.\\ \hline
@@ -358,6 +382,7 @@ Naive Bayes — fitcnb & Yes & Yes & Medium for simple distributions. Slow for k
 Nearest neighbor — fitcknn & Yes & Yes & Slow for cubic. Medium for others. & Medium & Hard\\ \hline
 Ensembles — fitensemble & Yes & Yes & Fast to medium depending on choice of algorithm & Low to high depending on choice of algorithm. & Hard\\ \hline
 \end{tabular}}
+\legend{Fonte: https://la.mathworks.com/help/stats/supervised-learning-machine-learning-workflow-and-algorithms.html?lang=en }
 \end{table}
 
 Esta tabela exibe algoritmos de aprendizado  supervisionados e suas característica através de resultados  estudados de bases de dados com mais de 7000 observações e 50 classes.

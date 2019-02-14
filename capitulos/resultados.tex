@@ -5,7 +5,7 @@ Este estudo conta com a realização de testes nas bases de dados da UCI Machine
  
 
 
-As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine. Essas bases são bastante utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine, https://archive.ics.uci.edu/ml/datasets/seeds} e por meio delas há possibilidade de análise de seus comportamentos mediante  resultados dos mesmos. As bases selecionadas são todas classificadas, tendo em vista que este estudo são com  \textit{clusters} já contituídos e não na formação deles. Outro motivo desta seleção, é elaborar testes com bases de organização simple, \textit{i.e.}, não sejam necessárias empregar técnicas de manipulação de dados  \cite{Casari2018} na fase de preparação (inicial) para efetuar os testes.
+As bases de dados escolhidas para este trabalho foram: Seeds, Iris, Glass, Wine. Essas bases são bastante utilizadas em vários trabalhos\footnote{https://archive.ics.uci.edu/ml/datasets/glass+identificpation, https://archive.ics.uci.edu/ml/datasets/iris, https://archive.ics.uci.edu/ml/datasets/wine, https://archive.ics.uci.edu/ml/datasets/seeds} e por meio delas há possibilidade de análise de seus comportamentos mediante  resultados dos mesmos. As bases selecionadas são todas classificadas, tendo em vista que este estudo são com  \textit{clusters} já contituídos e não na formação deles. Outro motivo desta seleção, é elaborar testes com bases de organização simples, \textit{i.e.}, não sejam necessárias empregar técnicas de manipulação de dados  \cite{Casari2018} na fase de preparação (inicial) para efetuar os testes.
 
 Foram apresentadas em todos os resultados, tabelas com algumas informações da rotulação realizada pelos algoritmos nas determinadas bases,  com o seguinte formato: a primeira coluna (\textbf{Cluster}) é um número que representa cada \textit{cluster} de forma sequencial; a segunda coluna (\textbf{Rótulos}) é representada pelo par \textbf{Atributo} e \textbf{Faixa}, o qual define o rótulo do \textit{cluster} respectivo, podendo haver ou não mais atributos para compor o rótulo; a coluna \textbf{Elementos Fora da Faixa}, exibe o erro em quantidade de elementos que não estão naquela faixa definida naquele rótulo e, por último, a \textbf{Acurácia Parcial}, que exibe, em porcentagem, o valor de acertos dos elementos que são representados pelo atributo e faixa da respectiva linha. 
 
@@ -58,7 +58,7 @@ Os valores dos atributos são todos contínuos e não existem valores em branco,
 
 Para classificar as sementes como \textit{Kama}, \textit{Rosa} e \textit{Canadian}, foi utilizada uma técnica de raio X que é relativamente mais barata que outras técnicas de imagem, como microscopia ou tecnologia a laser. O material foi colhido de campos experimentais explorados no Instituto de Agrofísica da Academia Polonesa de Ciências em Lublin. 
 
-As tabelas com os resultados dos rótulos apresentadas a seguir (tabelas \ref{tab:rot:seeds:nb},\ref{tab:rot:seeds:cart}, \ref{tab:rot:seeds:knn}) exibem os resultados de rotulação dos algoritmos Naive Bayes, CART e KNN, respectivamente, e no caso dos \textit{clusters}, cada linha determina um grupo: (1) \textit{Kama}, (2) \textit{Rosa} e (3) \textit{Canadian}. Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo, algumas configurações são necessárias para executar o algoritmo, como a do método de discretização do tipo EFD ou EWD, e também a divisão dos valores dos atributos em faixas e variação ${v}$.
+As tabelas com os resultados dos rótulos apresentadas a seguir (tabelas \ref{tab:rot:seeds:nb},\ref{tab:rot:seeds:cart} e \ref{tab:rot:seeds:knn}) exibem os resultados de rotulação dos algoritmos Naive Bayes, CART e KNN, respectivamente, e no caso dos \textit{clusters}, cada linha determina um grupo: (1) \textit{Kama}, (2) \textit{Rosa} e (3) \textit{Canadian}. Como já mencionado neste capítulo, na seção \ref{cap:resultados:sec:implement}, antes de executar o algoritmo, algumas configurações são necessárias para executar o algoritmo, como a do método de discretização do tipo EFD ou EWD, e também a divisão dos valores dos atributos em faixas e variação ${V}$.
 
 \subsection{Rotulação através do algoritmo Naive Bayes} \label{cap:resultados:ssec:seed:nb}
 
@@ -73,7 +73,7 @@ Na tabela \ref{tab:rot:seeds:nb} pode-se verificar o resultado da aplicação do
 \scalebox{0.8}{
 \begin{tabular}{llccc}
 \hline \hline
-\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                & \multicolumn{1}{r}{}               &  \\ \cline{2-3}
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos} & \multicolumn{1}{r}{}  &  \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa} & Elementos Fora da Faixa & Acurácia Parcial(\%) \\ \hline \hline
 1                                            & Lkernel           & ] 5.357 $\sim$  5.826 ]   &  21 & 70\% \\  \hline
 2                                            & lkgroove           & ] 5.791 $\sim$  6.55 ]   &  9 & 87.15\%\\ \hline
@@ -110,7 +110,7 @@ Na tabela \ref{tab:rot:seeds:cart}, que segue o mesmo modelo da tabela visto ant
 \scalebox{0.8}{
 \begin{tabular}{llccc}\hline \hline
 
-\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{}            \\ \cline{2-3}
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}} & \multicolumn{2}{c}{Rótulos}                      & \multicolumn{1}{r}{} \\ \cline{2-3}
 Cluster                                      & Atributos      & \multicolumn{1}{c}{Faixa}       &  Elementos Fora da Faixa & Acurácia Parcial(\%)\\ \hline \hline
 %                                             & area           & ] 12.78 $\sim$  16.14 ]         & 91\%          & 14 \\  
 1                          & perimetro      & ] 13.73 $\sim$ 15.18 ]          &  14 & 80\%\\ \hline
@@ -427,7 +427,7 @@ Cluster                                      & Atributos      & \multicolumn{1}{
 Analisando-se a tabela \ref{tab:rot:glass:nb} percebe-se, através dos rótulos, que entre os \textit{clusters} 1 ao 6 o atributo \textbf{Ba} e \textbf{Fe} se repetem. No caso do resultado desse algoritmo aconteceu da tabela de atributos importantes coincidir estes dois atributos junto com as mesmas faixas nos \textit{clusters} 1, 3 e 5. Dessa forma, isso configura uma ambiguidade de rótulos entre três grupos, \textit{i.e.}, o mesmo rótulo está representando três grupos ao mesmo tempo. A solução para evitar a ambiguidade entre rótulos é agregar mais atributos de menores taxas de acerto do algoritmo, através da variância ${V}$ até que os rótulos se tornem únicos por grupo. 
 
 
-Sabe-se que, ao incluir atributos de com menores taxas de acerto nos rótulos para deixá-los únicos, isso resulta na diminuição da acurácia média do grupo, porém essa diminuição de confiança do rótulo é necessária para manter a representatividade dele. Essa situação ocorreu com o \textit{cluster} 6, que possuiu umas das menores acurácias médias por possuir todos os atributos como rótulo, e isso devido a dois fatores: i) os valores da tabela de atributos importantes, que mantém armazenados as taxas de acerto do algoritmo, contêm valores baixos; ii) o valor da variância ser maior que os valores armazenados na tabela do respectivo \textit{cluster}. Ao acontecer esses dois fatores acaba por  resultar em um rótulo com todos os atributos. 
+Sabe-se que, ao incluir atributos de com menores taxas de acerto nos rótulos para deixá-los únicos, resulta na diminuição da acurácia média do grupo. Porém essa diminuição de confiança do rótulo é necessária para manter a representatividade dele. Essa situação ocorreu com o \textit{cluster} 6, que possuiu umas das menores acurácias médias por possuir todos os atributos como rótulo, e isso devido a dois fatores: i) os valores da tabela de atributos importantes, que mantém armazenados as taxas de acerto do algoritmo, contêm valores baixos; ii) o valor da variância ser maior que os valores armazenados na tabela do respectivo \textit{cluster}. Ao acontecer esses dois fatores acaba por  resultar em um rótulo com todos os atributos. 
 
 Considerando-se a tabela \ref{tab:rot:glass:nb}, o \textit{cluster} 5 foi o único, mesmo com ${V=77\%}$, a apresentar um rótulo com valor de 100\% na acurácia média do grupo. As menores acurácias médias, por grupo, foi do \textit{cluster} 4 (\textbf{recipientes}) e \textit{cluster} 6 (\textbf{lâmpadas}), com 77\% e 77.06\% respectivamente. 
 
@@ -661,7 +661,7 @@ De acordo com a aplicação do KNN na base de dados \textbf{Glass}, os rótulos 
 
 Os valores que compõem a base Glass, por se tratarem de representações de elementos químicos através de atributos, possuem em cada um deles uma quantidade em porcentagem de óxido e como é um valor bastante complexo acaba por se tornar uma base com valores distintos em cada atributo. 
 
-A tabela \ref{tab:glass:cluster5} apresenta todos os nove registros do \textit{cluster} 5 - louças de mesa - possuindo os valores respectivos de cada elemento em suas colunas.
+A tabela \ref{tab:glass:cluster5} apresenta todos os nove registros do \textit{cluster} 5 - \textbf{louças de mesa} - possuindo os valores respectivos de cada elemento em suas colunas.
 
 
 \begin{table}[!ht]
@@ -687,7 +687,7 @@ A tabela \ref{tab:glass:cluster5} apresenta todos os nove registros do \textit{c
 \end{tabular}
 \end{table}
 
-No caso do cluster 5 apresentado na tabela \ref{tab:glass:cluster5}, percebe-se nessas amostras uma grande repetição de valores 0 (zero) em determinados atributos:  \textbf{K}, \textbf{Ba} e \textbf{Fe}. Posto isso, o \textit{cluster} 5 serve como exemplo prático para aferir a acurácia do rótulo, visto que com uma simples análise deste \textit{cluster} é possível perceber um rótulo que o representa. 
+No caso do \textit{cluster} 5 apresentado na tabela \ref{tab:glass:cluster5}, percebe-se nessas amostras uma grande repetição de valores 0 (zero) em determinados atributos:  \textbf{K}, \textbf{Ba} e \textbf{Fe}. Posto isso, o \textit{cluster} 5 serve como exemplo prático para aferir a acurácia do rótulo, visto que com uma simples análise deste \textit{cluster} é possível perceber um rótulo que o representa, i.e., os valores zerados destas colunas informam que para ser do tipo - \textbf{Louças de mesa} - os registros não podem possuir nenhuma porcentagem de óxido nos três elementos: K, Ba e Fe.
  
 
 Os algoritmos que sugeriram os mesmos rótulos foram Naive Bayes e KNN, encontrando 100\% de acurácia média no \textit{cluster} 5, rc5 = {(K,[0.0 ~ 2.0700]), (Ba,[0.0 ~ 1.0500]), (F e,[0.0 ~ 0.17000])}, e o CART teve um atributo a mais inserido em seu rótulo, que lhe custou uma acurácia média de 86.12\%, ${r_{c_5}}$ ${=\{ (Mg,[ 0.0 \sim  1.1225 ] ),}$ ${(K,[ 0.0 \sim 1.5525 ]  ),}$ ${(Ba,[ 0.0 \sim 0.7875 ] ), }$.
@@ -1074,7 +1074,7 @@ Foram testadas quatro bases de dados e dentre elas a base Wine, uma base de resu
 
 
 
-Outra pesquisa \cite{Lopes2016} também realizou testes com essas mesmas bases para realizar rotulação de dados, mas, diferente deste trabalho, o autor citado não considerou a classificação das bases, ou seja,  não utilizou os grupos já designados na origem das bases, e realizou  uma nova classificação através de um algoritmo não-supervisionado,\textit{ K-means}, e só assim aplicou um algoritmo de aprendizado  de máquina supervisionado (RNAs). Para esta pesquisa poder realizar uma comparação entre os resultados, é necessário recriar os grupos e em seguida aplicar os algoritmos supervisionados para obter os rótulo. 
+Em \cite{Lopes2016} também realizou testes com essas mesmas bases para realizar rotulação de dados mas, diferente deste trabalho, o autor não considerou a classificação das bases, ou seja,  não utilizou os grupos já designados na origem das bases e realizou  um novo agrupamento através do algoritmo não-supervisionado\textit{ K-means}. E só assim aplicou um algoritmo de aprendizado  de máquina supervisionado (RNAs). Para esta pesquisa poder realizar uma comparação entre os resultados, é necessário recriar os grupos e em seguida aplicar os algoritmos supervisionados para obter os rótulo. 
 
 A rotulação de grupos tem dependência direta dos registros pertencentes ao grupo e qualquer alteração destes registros implica em uma alteração nos resultados dos rótulos. Dessa maneira foram realizados testes para recriar os mesmos grupos que \citeonline{Lopes2016}, mas mesmo utilizando as mesmas técnicas as tentativas não lograram êxito em fazer grupos idênticos, pois mesmo configurando o número de grupos a ser encontrado pelo algoritmo, ao executá-lo, os resultados retornam grupos diferentes um do outro, de forma que uma comparação com grupos diferentes não retrataria uma comparação justa, pois os dados testados não seriam os mesmos\footnote{Resultados dos testes comparativos no Apêndice \ref{apendice:1}}.
 
